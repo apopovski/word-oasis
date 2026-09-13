@@ -246,7 +246,7 @@ const answers = [
       "The church is the community of believers united in Christ for worship, teaching, fellowship, encouragement, and mission. Scripture calls believers not to neglect gathering together as one body.",
     longAnswer:
       "The church is described as a body with many parts, each contributing different gifts for the good of the whole, held together by a shared faith in Christ rather than uniformity of personality or background. Gathering together for worship, teaching, prayer, and fellowship is not optional or old-fashioned; Hebrews specifically warns against neglecting this habit, especially as challenges increase. Beyond weekly worship, the early church modeled shared meals, mutual care, and active mission together, showing that spiritual growth happens best in community rather than in isolation.",
-    topics: ["The Church", "Christian Living", "Faith"],
+    topics: ["Church", "Christian Living", "Faith"],
     category: "Life and Relationships",
     scriptures: ["Hebrews 10:24-25", "Acts 2:42", "1 Corinthians 12:27"],
     keywords: ["church", "fellowship", "community", "body of Christ", "worship together"]
@@ -342,7 +342,7 @@ const answers = [
       "Spiritual gifts are abilities given by the Holy Spirit to build up the church. Every believer receives at least one, meant to be discovered and used in service to others.",
     longAnswer:
       "Spiritual gifts are Spirit-given abilities such as teaching, encouragement, service, leadership, mercy, or generosity, distributed to different believers so the whole church functions like a healthy body with many necessary parts. No one receives every gift, and no gift is more spiritually significant than another when used in love — the goal is mutual benefit, not personal status. Gifts are often discovered through serving, noticing what brings genuine fruit and joy, and receiving feedback from other believers, rather than through abstract self-reflection alone.",
-    topics: ["Holy Spirit", "The Church", "Christian Living"],
+    topics: ["Holy Spirit", "Church", "Christian Living"],
     category: "Knowing God",
     scriptures: ["1 Corinthians 12:4-7", "Romans 12:4-8", "1 Peter 4:10-11"],
     keywords: ["spiritual gifts", "gifts of the spirit", "serving", "talents", "calling"]
@@ -366,7 +366,7 @@ const answers = [
       "Jesus commissioned His followers to share the good news with everyone, everywhere, because the gospel is meant to be shared, not kept private, out of love for others.",
     longAnswer:
       "Before returning to heaven, Jesus gave His followers a clear commission: go and make disciples of all nations, teaching them to follow everything He commanded. This mission flows naturally from grace — those who have experienced forgiveness and hope want others to know it is available too. Sharing the gospel is not about pressure or manipulation; it includes living a visibly transformed life, serving practical needs, and speaking honestly about faith when opportunities arise. This mission is described as continuing until Christ's return, giving urgency and purpose to how believers live and relate to others.",
-    topics: ["The Church", "Christian Living", "Faith"],
+    topics: ["Church", "Christian Living", "Faith"],
     category: "Life and Relationships",
     scriptures: ["Matthew 28:18-20", "Matthew 24:14", "Romans 10:14-15"],
     keywords: ["evangelism", "great commission", "sharing faith", "mission", "witnessing"]
@@ -450,10 +450,34 @@ const answers = [
       "God promises never to leave or forsake His people, offering His presence, the support of Christian community, and purpose even in seasons of deep loneliness.",
     longAnswer:
       "Scripture repeatedly promises that believers are never truly alone, since God Himself promises to never leave or forsake His people, even in the most isolating circumstances. At the same time, God designed people for community, which is part of why the church is described as a body — meant to notice, include, and care for members who are struggling or isolated. Practical steps include being honest about loneliness rather than hiding it, actively seeking connection within a faith community, and serving others, which often reduces isolation while creating meaningful relationships over time.",
-    topics: ["Comfort", "The Church"],
+    topics: ["Comfort", "Church"],
     category: "Life and Relationships",
     scriptures: ["Deuteronomy 31:6", "Psalm 68:6", "Hebrews 10:24-25"],
     keywords: ["loneliness", "isolation", "alone", "community", "belonging"]
+  },
+  {
+    id: "answer-gods-law",
+    question: "What is the purpose of God's law?",
+    shortAnswer:
+      "God's law reveals His character, shows what love for God and others looks like, and helps us recognize sin. We are not saved by keeping the law; we obey because God's grace has already reached us.",
+    longAnswer:
+      "The law of God is a gracious expression of His holy and loving character. It points out sin, gives a trustworthy standard for right and wrong, and teaches believers how to love God and their neighbors in practical ways. The law cannot justify sinners or replace faith in Christ, but grace does not make obedience meaningless. Through the Spirit, believers learn to delight in God's instruction and live it out as a response of gratitude.",
+    topics: ["Law", "Faith", "Christian Living"],
+    category: "Faith and Salvation",
+    scriptures: ["Romans 3:20", "Matthew 22:37-40", "John 14:15"],
+    keywords: ["law", "commandments", "obedience", "sin", "God's character", "grace"]
+  },
+  {
+    id: "answer-sanctuary",
+    question: "What does the Bible teach about the sanctuary?",
+    shortAnswer:
+      "The biblical sanctuary illustrates God's plan to dwell with His people and deal with sin. Its services point forward to Jesus, whose sacrifice and heavenly ministry provide forgiveness, cleansing, and access to God.",
+    longAnswer:
+      "The sanctuary was designed as a visible lesson about God's presence, the seriousness of sin, and the way He restores sinners. Its sacrifices pointed to Christ's once-for-all death, while the priestly ministry anticipated Jesus as our compassionate High Priest in heaven. The sanctuary message assures believers that salvation is not only pardon for the past but also Christ's continuing work to cleanse, intercede, and prepare His people for His return.",
+    topics: ["Sanctuary", "Salvation", "Prophecy"],
+    category: "Hope and Prophecy",
+    scriptures: ["Exodus 25:8", "Hebrews 8:1-2", "Hebrews 9:11-14"],
+    keywords: ["sanctuary", "tabernacle", "high priest", "Jesus", "atonement", "heavenly ministry"]
   }
 ];
 
@@ -479,9 +503,8 @@ const topicIcons = {
     <path d="M5 8h14"></path>
   `,
   Faith: `
-    <path d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3"></path>
-    <path d="M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4"></path>
-    <path d="M5 21h14"></path>
+    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+    <path d="M12 22V2"></path>
   `,
   Prayer: `
     <g transform="scale(0.75)" fill="currentColor" stroke="none">
@@ -551,12 +574,12 @@ const topicIcons = {
     <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
     <circle cx="12" cy="14" r="1"></circle>
   `,
-  "The Church": `
-    <path d="M7.57574 7.42426C7.81005 7.18995 8.18995 7.18995 8.42426 7.42426L11.8243 10.8243C11.9368 10.9368 12 11.0894 12 11.2485V21.4C12 21.7314 11.7314 22 11.4 22H4.6C4.26863 22 4 21.7314 4 21.4V11.2485C4 11.0894 4.06321 10.9368 4.17574 10.8243L7.57574 7.42426Z"></path>
-    <path d="M8 7V4M8 2V4M8 4H6M8 4H10"></path>
-    <path d="M12 22H19.4C19.7314 22 20 21.7314 20 21.4V10.7485C20 10.5894 19.9368 10.4368 19.8243 10.3243L16.6757 7.17574C16.5632 7.06321 16.4106 7 16.2515 7H8"></path>
-    <path d="M8 22V17"></path>
-    <path d="M8 13.01L8.01 12.9989"></path>
+  Church: `
+    <path d="M10 9h4"></path>
+    <path d="M12 7v5"></path>
+    <path d="M14 21v-3a2 2 0 0 0-4 0v3"></path>
+    <path d="m18 9 3.52 2.147a1 1 0 0 1 .48.854V19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-6.999a1 1 0 0 1 .48-.854L6 9"></path>
+    <path d="M6 21V7a1 1 0 0 1 .376-.782l5-3.999a1 1 0 0 1 1.249.001l5 4A1 1 0 0 1 18 7v14"></path>
   `,
   Creation: `
     <circle cx="12" cy="12" r="10"></circle>
@@ -583,13 +606,27 @@ const topicIcons = {
   `
 };
 
+const topicIconFiles = {
+  Law: "icons/law.svg",
+  Sanctuary: "icons/sanctuary.svg"
+};
+
+function topicIconMarkup(topic, className) {
+  const file = topicIconFiles[topic];
+  if (file) {
+    return `<img src="${file}" alt="" class="${className}-image">`;
+  }
+
+  const content = topicIcons[topic] || topicIcons.Faith;
+  return `<svg viewBox="0 0 24 24" focusable="false">${content}</svg>`;
+}
+
 function addTopicIcons() {
   document.querySelectorAll(".topic-card").forEach((card) => {
     const topic = card.dataset.topic;
-    const content = topicIcons[topic] || topicIcons.Faith;
     card.insertAdjacentHTML(
       "afterbegin",
-      `<span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">${content}</svg></span>`
+      `<span class="topic-icon" aria-hidden="true">${topicIconMarkup(topic, "topic-icon")}</span>`
     );
   });
 }
@@ -599,7 +636,7 @@ function normalize(value) {
 }
 
 function allTopics() {
-  return ["All", ...new Set(answers.flatMap((answer) => answer.topics).sort())];
+  return ["All", ...new Set(["Law", "Sanctuary", ...answers.flatMap((answer) => answer.topics)].sort())];
 }
 
 function matchesQuery(answer, query) {
@@ -640,10 +677,10 @@ function renderTopicFilters() {
     button.type = "button";
     button.className = topic === state.topic ? "active" : "";
     button.dataset.topic = topic;
-    const icon = topic === "All" ? "" : topicIcons[topic] || topicIcons.Faith;
+    const icon = topic === "All" ? "" : topicIconMarkup(topic, "filter-topic-icon");
     button.innerHTML = `
       <span class="filter-topic-label">
-        ${icon ? `<span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">${icon}</svg></span>` : ""}
+        ${icon ? `<span class="filter-topic-icon" aria-hidden="true">${icon}</span>` : ""}
         <span>${topic}</span>
       </span>
       <strong>${count}</strong>

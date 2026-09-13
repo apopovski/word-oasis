@@ -605,6 +605,9 @@ h1 {
 .topic-icon {
   display: inline-flex;
   align-items: center;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
   margin-bottom: 18px;
   color: var(--brand);
 }
@@ -617,6 +620,35 @@ h1 {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 1.75;
+}
+
+.topic-icon img,
+.filter-topic-icon img {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+}
+
+.topic-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.topic-icon img {
+  max-width: 24px;
+  max-height: 24px;
+}
+
+.filter-topic-icon {
+  width: 18px;
+  height: 18px;
+  overflow: hidden;
+}
+
+.filter-topic-icon img {
+  max-width: 18px;
+  max-height: 18px;
 }
 
 .topic-card:hover {
@@ -668,6 +700,8 @@ h1 {
 .cta-link {
   display: inline-flex;
   flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
   align-items: center;
 }
 
