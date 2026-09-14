@@ -18,6 +18,10 @@
       rel="stylesheet"
     >
     <link rel="stylesheet" href="styles.css">
+<script>
+  window.WORD_OASIS_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZSB_Tf-MEbTUrmSkEqwNn2gjtxqF4cv16pMCDMmV3voJeJAFhIYBQ/exec";
+  window.WORD_OASIS_FORM_EMAIL_TO = "wordoasis7@gmail.com";
+</script>
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Word Oasis">
@@ -82,6 +86,7 @@
         </button>
         <ul id="primary-menu" class="nav-links">
           <li><a href="#answers">Answers</a></li>
+          <li><a href="#ask">Ask a question</a></li>
           <li><a href="#topics">Topics</a></li>
           <li><a href="#categories">Categories</a></li>
           <li><a href="#study">Study Guide</a></li>
@@ -109,8 +114,9 @@
             <p class="eyebrow">Scripture-based answers for everyday questions</p>
             <h1>Find clear Bible answers to the questions that matter most.</h1>
             <p class="hero-text">
-              Search trusted, concise Bible answers or browse by topics like faith, salvation, prayer,
-              suffering, Sabbath, prophecy, health, and Christian living.
+              Explore Bible answers rooted in Scripture and shaped by the hope of Christ's soon return.
+              Browse topics like faith, salvation, prayer, suffering, Sabbath, prophecy, health, and
+              Christian living.
             </p>
 
             <form class="search-card" id="search-form" role="search">
@@ -133,8 +139,7 @@
             <span class="panel-tag">Featured Answer</span>
             <h2>What is the gospel?</h2>
             <p>
-              The gospel is the good news that Jesus Christ died for our sins, was buried, and rose
-              again so that all who trust in Him receive forgiveness and eternal life.
+              The gospel is the good news of salvation from sin through Jesus Christ, proclaiming that all who trust in Him receive forgiveness and eternal life.
             </p>
             <a href="#answer-gospel">Read the answer</a>
           </aside>
@@ -155,6 +160,91 @@
             <strong>Clear &amp; practical</strong>
             <span>Direct answers for everyday life</span>
           </div>
+        </div>
+      </section>
+
+      <section id="ask" class="section ask-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Bring your question</p>
+            <h2>Ask a Bible question</h2>
+            <p>
+              Share a question in your own words. We will look for the closest answers in this
+              Scripture-based library and point you to passages for further study.
+            </p>
+          </div>
+          <div class="ask-layout">
+            <form class="ask-card" id="question-form">
+              <label for="question-input">Your question</label>
+              <textarea
+                id="question-input"
+                name="question"
+                rows="5"
+                maxlength="500"
+                placeholder="For example: How can I trust God when I am anxious?"
+                required
+              ></textarea>
+              <div class="ask-form-row">
+                <label for="question-topic">
+                  Topic (optional)
+                  <select id="question-topic" name="topic">
+                    <option value="">Choose a topic</option>
+                  </select>
+                </label>
+                <label for="question-email">
+                  Email (optional)
+                  <input id="question-email" name="email" type="email" placeholder="you@example.com">
+                </label>
+              </div>
+              <p class="ask-guidance">
+                Ask one question at a time and include the situation or Bible passage you are
+                wondering about. This form searches the public answer library in your browser. If
+                you connect a Google Apps Script endpoint in the site settings, it can also email
+                the question and log it to a Google Sheet.
+              </p>
+              <button type="submit" class="primary-button">Find a Bible answer</button>
+              <p class="ask-status" id="question-status" role="status" aria-live="polite"></p>
+            </form>
+            <aside class="ask-help">
+              <h3>Before you submit</h3>
+              <ul>
+                <li>Use clear, specific wording.</li>
+                <li>Include a reference if your question is about a verse.</li>
+                <li>Compare every answer with Scripture in context.</li>
+              </ul>
+              <p>
+                If the library does not cover your question yet, try a broader search or browse the
+                topics below.
+              </p>
+            </aside>
+          </div>
+          <div id="question-results" class="question-results" hidden>
+            <h3 id="question-results-title">Related answers</h3>
+            <div id="question-results-list" class="answers-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="promise-section" aria-label="Rotating Bible promises">
+        <div class="container">
+          <article class="promise-card" id="promise-card">
+            <div class="promise-copy">
+              <p class="eyebrow">Today's Bible promise</p>
+              <blockquote id="promise-text"></blockquote>
+              <p class="promise-reference" id="promise-reference"></p>
+            </div>
+            <div class="promise-actions">
+              <button type="button" class="promise-next" id="promise-previous" aria-label="Show previous promise">
+                <span aria-hidden="true">&larr;</span>
+              </button>
+              <button type="button" class="promise-next" id="promise-next" aria-label="Show next promise">
+                <span aria-hidden="true">&rarr;</span>
+              </button>
+              <button type="button" class="promise-share" id="promise-share">Share promise</button>
+              <button type="button" class="promise-copy" id="promise-copy">Copy text</button>
+            </div>
+            <p class="promise-status" id="promise-status" role="status" aria-live="polite"></p>
+          </article>
         </div>
       </section>
 
@@ -210,6 +300,10 @@
             <button type="button" class="topic-card" data-topic="Sanctuary">
               <span>Sanctuary</span>
               <small>Christ's ministry, redemption, and the plan of salvation</small>
+            </button>
+            <button type="button" class="topic-card" data-topic="Three Angels">
+              <span>Three Angels</span>
+              <small>God's final message of worship, warning, and hope</small>
             </button>
             <button type="button" class="topic-card" data-topic="Prayer">
               <span>Prayer</span>
@@ -322,7 +416,6 @@
               passages so visitors can keep studying in context.
             </p>
           </div>
-          <a class="cta-link" href="#answers">Start exploring</a>
         </div>
       </section>
     </main>

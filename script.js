@@ -478,6 +478,210 @@ const answers = [
     category: "Hope and Prophecy",
     scriptures: ["Exodus 25:8", "Hebrews 8:1-2", "Hebrews 9:11-14"],
     keywords: ["sanctuary", "tabernacle", "high priest", "Jesus", "atonement", "heavenly ministry"]
+  },
+  {
+    id: "answer-three-angels",
+    question: "What is the message of the three angels?",
+    shortAnswer:
+      "The three angels' messages in Revelation 14 call the world to worship the Creator, announce the fall of false religious systems, reject allegiance to the beast, and patiently remain faithful to Jesus.",
+    longAnswer:
+      "The three angels' messages are a final gospel proclamation before Christ's return. The first angel announces the eternal gospel and calls every nation to fear God, give Him glory, and worship Him as Creator. The second exposes the fall of Babylon, representing systems that turn people away from biblical truth. The third warns against worshiping the beast and receiving its mark, while Scripture highlights the endurance of God's people who keep His commandments and hold to faith in Jesus.",
+    topics: ["Three Angels", "Prophecy", "Faith"],
+    category: "Hope and Prophecy",
+    scriptures: ["Revelation 14:6-12", "Revelation 18:1-4", "Exodus 20:11"],
+    keywords: ["three angels", "first angel", "second angel", "third angel", "Babylon", "beast", "mark", "worship", "Revelation 14"]
+  },
+  {
+    id: "answer-women-ministry",
+    question: "Are women permitted to serve as pastors or elders according to scripture?",
+    shortAnswer:
+      "Scripture shows women prophesying, teaching, leading, and serving as deacons under the Spirit's gifting, while a few passages about church order have been understood differently regarding the ordained elder or pastor role. Sincere believers hold different convictions on this question.",
+    longAnswer:
+      "The Bible records women such as Deborah leading Israel as a judge and prophet, Phoebe serving as a deacon, Priscilla teaching Apollos alongside her husband, and Joel's promise — quoted at Pentecost — that God's Spirit would fall on sons and daughters alike, enabling both to prophesy. At the same time, Paul's instructions in 1 Corinthians 14 and 1 Timothy 2 about order in worship and the office of elder have been read by some as limiting the ordained pastoral role to men, while others read them as addressing specific local disruptions rather than a universal rule for every context. Galatians 3:28 affirms that in Christ there is no spiritual hierarchy between male and female. Given this range within Scripture, believers can affirm women serving fully in ministry, teaching, and leadership according to their spiritual gifts, while extending grace and humility toward fellow Christians who apply these specific passages differently regarding ordination.",
+    topics: ["Church", "Christian Living", "Holy Spirit"],
+    category: "Life and Relationships",
+    scriptures: ["Judges 4:4-5", "Romans 16:1-2", "Acts 2:17-18", "Galatians 3:28"],
+    keywords: ["women pastors", "women elders", "women in ministry", "ordination", "church leadership", "deborah", "phoebe"]
+  },
+  {
+    id: "answer-homosexuality",
+    question: "How does scripture view homosexuality, and is engaging in homosexual behavior considered sinful?",
+    shortAnswer:
+      "Scripture consistently presents marriage between a man and a woman as God's design for sexual intimacy, and identifies same-sex sexual behavior as outside that design. Temptation itself is not sin, and every person — regardless of their struggles — bears God's image and is offered the same grace and dignity.",
+    longAnswer:
+      "From creation, Scripture presents marriage as a covenant between a man and a woman becoming one flesh, and passages such as Romans 1 and 1 Corinthians 6 name same-sex sexual activity among behaviors that fall outside God's design for intimacy. It is important to distinguish attraction or temptation, which is not itself sin, from chosen behavior. Scripture is equally clear that no struggle places a person beyond grace: 1 Corinthians 6:11 tells believers who once lived in various sins, 'such were some of you,' before describing how they were washed, sanctified, and justified in Christ. Every person carries the image of God and deserves to be treated with compassion, respect, and welcome in the church community. Like every other believer, those who experience same-sex attraction are called to grow in Christlike character through the Spirit's ongoing, patient work, not to be singled out, shamed, or excluded.",
+    topics: ["Marriage and Family", "Christian Living"],
+    category: "Life and Relationships",
+    scriptures: ["Genesis 2:24", "Romans 1:26-27", "1 Corinthians 6:9-11"],
+    keywords: ["homosexuality", "same-sex", "lgbtq", "sexuality", "sin", "grace", "identity"]
+  },
+  {
+    id: "answer-tattoos",
+    question: "Does biblical text prohibit getting tattoos or body modifications?",
+    shortAnswer:
+      "The Old Testament's specific prohibition against cutting or marking the body was tied to pagan mourning rituals, not a timeless ban on all body art. The broader biblical principle is that the body belongs to God and should be honored with wisdom rather than treated as a matter of legalistic rule-keeping.",
+    longAnswer:
+      "Leviticus 19:28 forbids cutting the body for the dead or marking it with tattoos, a command given in the context of pagan mourning and idol-worship practices common among Israel's neighbors, rather than a general command applying to every era and culture. The New Testament shifts the emphasis from external rule-keeping to the underlying principle that the body is a temple of the Holy Spirit, bought at a price and meant to glorify God. This means decisions about tattoos or body modification are best weighed through wisdom rather than a flat rule: considering motive, permanence, message, health, and whether a choice reflects self-control and honors God, rather than treating ink itself as inherently sinful.",
+    topics: ["Christian Living", "Health"],
+    category: "Life and Relationships",
+    scriptures: ["Leviticus 19:28", "1 Corinthians 6:19-20", "1 Corinthians 10:31"],
+    keywords: ["tattoos", "body modification", "body art", "piercings", "temple of the holy spirit"]
+  },
+  {
+    id: "answer-eternal-security",
+    question: "Can a true believer ever lose their salvation, or is eternal security a solid biblical doctrine?",
+    shortAnswer:
+      "Salvation is secure for everyone who continues trusting and abiding in Christ, and nothing outside a person can snatch them from His hand. Scripture also warns that willful, persistent turning away from Christ — not ordinary struggle or weakness — can result in someone abandoning the faith they once professed.",
+    longAnswer:
+      "Romans 8 promises that nothing in all creation can separate believers from the love of God, and Jesus said no one can snatch His sheep out of His hand — powerful assurance for anyone who is trusting Him today. At the same time, Jesus described Himself as the vine and believers as branches, warning that a branch that does not abide in Him withers and is removed, and Hebrews and 2 Peter both warn soberly about those who deliberately, knowingly turn back from a genuine relationship with Christ. The consistent picture is not that salvation is earned or that momentary sin or doubt cancels it, but that salvation is kept secure through an ongoing, living faith relationship with Christ; security is real and trustworthy for all who continue to abide in Him by grace, while Scripture takes seriously the danger of deliberately, finally rejecting Him.",
+    topics: ["Salvation", "Faith"],
+    category: "Faith and Salvation",
+    scriptures: ["John 15:4-6", "Romans 8:38-39", "Hebrews 6:4-6"],
+    keywords: ["eternal security", "losing salvation", "once saved always saved", "apostasy", "assurance", "abiding in christ"]
+  },
+  {
+    id: "answer-masturbation",
+    question: "Is self-pleasure considered a sin in the eyes of biblical scripture?",
+    shortAnswer:
+      "Scripture never names this act directly, but it repeatedly calls believers to guard the heart and mind from lust, to practice self-control, and to honor the body as a temple of the Holy Spirit. This is an area for honest, grace-filled reflection rather than fear or shame.",
+    longAnswer:
+      "The Bible does not explicitly mention masturbation, so any application depends on broader biblical principles rather than a direct command. Jesus taught that lust itself, not only outward action, matters to God, which points believers toward examining the thoughts and desires connected to any behavior. Paul calls believers to sexual self-control and holiness, and to treat the body as belonging to God rather than being ruled by unchecked desire, especially where habits become compulsive or entangled with pornography. Rather than a legalistic rule, Scripture invites honest self-examination before God, freedom from shame through grace, and reliance on the Holy Spirit's help to grow in purity and self-control over time.",
+    topics: ["Christian Living", "Health"],
+    category: "Life and Relationships",
+    scriptures: ["Matthew 5:27-28", "1 Thessalonians 4:3-5", "1 Corinthians 6:19-20"],
+    keywords: ["masturbation", "self-pleasure", "lust", "purity", "self-control", "sexuality"]
+  },
+  {
+    id: "answer-interracial-marriage",
+    question: "Does the Bible address or restrict marriage between different racial or ethnic backgrounds?",
+    shortAnswer:
+      "Scripture does not prohibit marriage across racial or ethnic lines. All people descend from one common origin and are equally made in God's image, and the biblical concerns about intermarriage were about shared faith, not race.",
+    longAnswer:
+      "Acts 17:26 teaches that God made every nation of humanity 'from one man,' establishing a shared human origin that undercuts any notion of racial superiority or a biblical basis for restricting marriage by race. When Miriam and Aaron criticized Moses for marrying a Cushite woman, God rebuked their objection rather than Moses' marriage. The Old Testament warnings against intermarrying with certain surrounding nations were rooted in the danger of being drawn into idol worship, not ethnicity itself, and Galatians 3:28 affirms that in Christ, ethnic distinctions carry no spiritual hierarchy. What matters for a lasting, God-honoring marriage is shared faith, character, and commitment, not racial or ethnic background.",
+    topics: ["Marriage and Family", "Christian Living"],
+    category: "Life and Relationships",
+    scriptures: ["Acts 17:26", "Numbers 12:1-10", "Galatians 3:28"],
+    keywords: ["interracial marriage", "race", "ethnicity", "intermarriage", "marriage"]
+  },
+  {
+    id: "answer-cain-wife",
+    question: "Where did Cain find his wife after being banished?",
+    shortAnswer:
+      "Scripture does not name her directly, but Genesis records that Adam and Eve had many other sons and daughters, so Cain most likely married a close relative — a sister or niece — which was not yet prohibited at that early point in human history.",
+    longAnswer:
+      "Genesis 5:4 states that Adam lived many years after Seth's birth and had additional sons and daughters, indicating a growing human family beyond the individuals named in the early chapters of Genesis. Since Scripture teaches that the entire human race descended from a single first pair, Cain's wife would necessarily have been a close relative, most likely a sister or niece. This kind of marriage was not forbidden until much later, when the Mosaic law restricted close-relative marriage, likely both for moral order and because accumulated genetic effects had made such unions medically riskier by that time. Scripture is intentionally brief here, focused on the moral and spiritual lessons of Cain's story rather than exhaustive genealogical detail, so some uncertainty about the exact details remains appropriate.",
+    topics: ["Creation", "Bible Study"],
+    category: "Knowing God",
+    scriptures: ["Genesis 4:16-17", "Genesis 5:4", "Acts 17:26"],
+    keywords: ["cain's wife", "cain and abel", "genesis", "early humanity", "genealogy"]
+  },
+  {
+    id: "answer-suicide",
+    question: "How does Christian theology view suicide, and what is the eternal standing of a believer who takes their own life?",
+    shortAnswer:
+      "Suicide is a profound tragedy, not an automatic, unforgivable sin that overrides a person's relationship with Christ. Scripture teaches that final judgment belongs to God alone, who alone knows the full state of a person's heart and mind. Anyone in crisis should reach out immediately for help — you are not alone, and God is near.",
+    longAnswer:
+      "Scripture never singles out suicide as an unforgivable act, and it does not authorize any human being to declare another person's eternal destiny — that judgment belongs to God alone, who alone sees the full picture of pain, illness, and struggle behind such a moment. Salvation rests on a relationship with Christ sustained by grace, not on the circumstances of a person's final moment, and God is described as especially near to the brokenhearted and to those crushed in spirit. Rather than offering false certainty in either direction, Scripture calls the church to surround grieving families with compassion, and calls anyone experiencing thoughts of suicide to reach out immediately — to a trusted friend, pastor, counselor, or a crisis helpline — trusting that God's presence and help are available in the darkest moments, and that no situation is beyond His care.",
+    topics: ["Comfort", "Christian Living"],
+    category: "Life and Relationships",
+    scriptures: ["Psalm 34:18", "Romans 14:10-12", "Psalm 139:13-16"],
+    keywords: ["suicide", "self-harm", "mental health", "crisis", "grief", "hope", "eternal destiny"]
+  },
+  {
+    id: "answer-animals-afterlife",
+    question: "Do animals possess souls, and will pets exist in the afterlife?",
+    shortAnswer:
+      "Scripture describes both people and animals as sharing the 'breath of life,' but only humans are made in God's image with the hope of resurrection. The Bible does not explicitly promise pets in the afterlife, yet its pictures of the restored new earth include animals living in peace, offering real, though not fully detailed, hope.",
+    longAnswer:
+      "Genesis describes animals receiving the same 'breath of life' given to humanity, and Ecclesiastes 3 candidly admits that no one can be fully certain where the spirit of an animal goes compared to a human being. Scripture does not promise personal, individual reunions with pets the way it promises resurrection for people made in God's image. At the same time, the prophetic picture of the new earth in Isaiah 11 describes animals such as the wolf and lamb living together in peace, suggesting that animal life in general has a place in God's restored creation. Combined with the tenderness Scripture shows toward animals — from the righteous caring for the life of their animal to God's own attention to the sparrows — this gives comfort and hope, even where specific details are left unstated.",
+    topics: ["Creation", "Prophecy"],
+    category: "Hope and Prophecy",
+    scriptures: ["Ecclesiastes 3:19-21", "Isaiah 11:6-9", "Matthew 10:29"],
+    keywords: ["animals", "pets", "afterlife", "new earth", "souls", "animal souls"]
+  },
+  {
+    id: "answer-tongues",
+    question: "Is the spiritual gift of speaking and praying in tongues active for believers today?",
+    shortAnswer:
+      "At Pentecost, the gift of tongues enabled believers to proclaim the gospel in real, known languages they had not learned. Paul lists tongues among the Spirit's gifts, while also instructing that it must be exercised in order, with interpretation, and never above intelligible teaching that builds up the whole church.",
+    longAnswer:
+      "In Acts 2, tongues appear as actual human languages, allowing the gospel to be understood immediately by people from many nations without a language barrier. Paul confirms tongues as one of several genuine gifts distributed by the Spirit for the church's benefit, but in 1 Corinthians 14 he places clear guardrails on its use in public worship: it should be interpreted so the whole congregation can be built up, exercised in turn rather than chaos, and never elevated above intelligible teaching and prophecy, which edify the church far more directly. Whether or not the specific gift continues in exactly its New Testament form, the underlying principle stands: any spiritual gift, including tongues, is meant to build up the church in an orderly, understandable way, not to draw attention to the individual or create confusion.",
+    topics: ["Holy Spirit", "Church"],
+    category: "Knowing God",
+    scriptures: ["Acts 2:4-6", "1 Corinthians 12:7-11", "1 Corinthians 14:12-13, 40"],
+    keywords: ["tongues", "speaking in tongues", "gift of tongues", "pentecost", "spiritual gifts"]
+  },
+  {
+    id: "answer-dinosaurs",
+    question: "Does the Bible mention dinosaurs or ancient prehistoric creatures?",
+    shortAnswer:
+      "The word 'dinosaur' does not appear in the Bible, but Job describes massive land and water creatures, Behemoth and Leviathan, in vivid detail. Scripture places the creation of all land animals within the same creation week as humanity, rather than millions of years earlier.",
+    longAnswer:
+      "Because the term 'dinosaur' was coined in the nineteenth century, Scripture naturally does not use it, but Job 40-41 describes Behemoth and Leviathan as enormous, powerful creatures unlike anything commonly seen today, which many readers connect to large ancient animals. Genesis places the creation of land animals and humanity within the same sixth day of the creation week, rather than separated by long ages, so any such creatures would have existed alongside early humanity rather than millions of years before. Their disappearance is often understood in light of the global Flood described in Genesis 6-9 and the dramatic climate changes that followed it. Scripture does not give exhaustive detail here, so some humility about specifics is appropriate, but its consistent framework places these creatures within a relatively recent, unified creation history.",
+    topics: ["Creation", "Bible Study"],
+    category: "Knowing God",
+    scriptures: ["Job 40:15-24", "Job 41:1", "Genesis 1:24-25"],
+    keywords: ["dinosaurs", "prehistoric creatures", "behemoth", "leviathan", "creation", "flood"]
+  },
+  {
+    id: "answer-alcohol",
+    question: "Does scripture forbid consuming alcohol, or is moderate drinking acceptable for Christians?",
+    shortAnswer:
+      "Scripture consistently and strongly warns against drunkenness and the dangers wine and strong drink bring, and even commends avoiding alcohol altogether as the wisest path. Because the body is a temple of the Holy Spirit meant to stay clear-headed for prayer, service, and self-control, abstaining entirely is the safest and most consistent application of these principles.",
+    longAnswer:
+      "Proverbs vividly warns against the sorrow, danger, and deception that come with strong drink, going so far as to counsel not even looking at wine when it sparkles in the cup. Priests were forbidden from drinking before entering the tabernacle so their judgment and service to God would stay clear, and Ephesians commands believers not to be drunk with wine, contrasting it with being filled with the Spirit. Since the body belongs to God as a temple of the Holy Spirit, and since alcohol can cloud judgment, harm health, and lead others into destructive habits, choosing total abstinence honors both the clear biblical warnings against drunkenness and the broader call to full self-control, a clear mind, and a body kept fit for God's service.",
+    topics: ["Health", "Christian Living"],
+    category: "Life and Relationships",
+    scriptures: ["Proverbs 23:29-32", "Ephesians 5:18", "1 Corinthians 6:19-20"],
+    keywords: ["alcohol", "drinking", "wine", "drunkenness", "temperance", "self-control"]
+  },
+  {
+    id: "answer-gambling",
+    question: "Is participating in gambling or games of chance considered a sin?",
+    shortAnswer:
+      "The Bible never mentions gambling by name, but its consistent principles — trusting God's providence rather than chance, working honestly for what you have, contentment, and guarding against the love of money — all caution strongly against it.",
+    longAnswer:
+      "Scripture repeatedly warns that the love of money is a root of many kinds of evil, and that those eager to get rich fall into temptation and harmful desires. Gambling relies on chance and the hope of gaining at another person's loss rather than honest labor, and Proverbs observes that wealth gained quickly and carelessly tends to dwindle away. Ecclesiastes notes that those who love money are never satisfied by it, describing a restless cycle gambling often feeds. Instead, Scripture calls believers to trust God's provision, work diligently and honestly for their needs, hold money loosely with contentment, and avoid practices that stir greed or exploit others' losses for personal gain.",
+    topics: ["Stewardship", "Christian Living"],
+    category: "Life and Relationships",
+    scriptures: ["1 Timothy 6:9-10", "Proverbs 13:11", "Ecclesiastes 5:10"],
+    keywords: ["gambling", "lottery", "games of chance", "money", "greed", "stewardship"]
+  },
+  {
+    id: "answer-premarital-sex",
+    question: "What are the biblical boundaries regarding sexual intimacy before marriage?",
+    shortAnswer:
+      "Scripture reserves sexual intimacy for the covenant of marriage between husband and wife, calling unmarried believers to purity and self-control. Those who have crossed this boundary are offered genuine forgiveness and a renewed path of purity through grace.",
+    longAnswer:
+      "From the beginning, Genesis describes a man and woman becoming 'one flesh' within the covenant of marriage, and the New Testament reinforces this pattern by calling believers to abstain from sexual immorality and to control their bodies in holiness and honor rather than in the passion of uncontrolled desire. Hebrews states plainly that the marriage bed is undefiled but that God will judge sexual immorality outside of it, and Paul teaches that sexual union itself creates a profound, uniting bond meant to be reserved for marriage. This is never presented as a barrier to full acceptance for those who have already crossed this line; grace fully forgives, and believers are called forward into ongoing growth in purity, self-control, and honoring both their own body and a future spouse.",
+    topics: ["Marriage and Family", "Christian Living"],
+    category: "Life and Relationships",
+    scriptures: ["1 Corinthians 6:18-20", "1 Thessalonians 4:3-8", "Hebrews 13:4"],
+    keywords: ["premarital sex", "sexual purity", "fornication", "dating", "chastity", "marriage"]
+  },
+  {
+    id: "answer-christ-descended-dead",
+    question: "Did Christ descend into the realm of the dead during the period between His crucifixion and resurrection?",
+    shortAnswer:
+      "Scripture does not describe Jesus consciously journeying to a realm of the dead to preach between His crucifixion and resurrection. Passages sometimes read this way are better understood as describing His incarnation and burial, or His Spirit-empowered preaching through Noah generations earlier, consistent with death being an unconscious rest until the resurrection.",
+    longAnswer:
+      "Ephesians 4:9 describes Christ 'descending into the lower parts of the earth,' language most naturally understood as referring to His incarnation and burial — coming down to our mortal, earthly existence and the grave — rather than a literal journey to a place of conscious punishment. First Peter 3:18-20's mention of Christ preaching 'to the spirits in prison' fits naturally with Peter's own explanation elsewhere that the Spirit of Christ was at work through Noah, 'a preacher of righteousness,' warning the disobedient people of his day who are now, from our present vantage point, spirits awaiting final judgment. On the cross, Jesus committed His spirit to the Father and later told the thief he would be with Him 'in paradise,' language pointing to the certainty of the promise rather than a same-day conscious meeting, consistent with death being described elsewhere in Scripture as a sleep until the resurrection.",
+    topics: ["State of the Dead", "Prophecy"],
+    category: "Hope and Prophecy",
+    scriptures: ["Ephesians 4:9-10", "1 Peter 3:18-20", "Luke 23:43, 46"],
+    keywords: ["descended into hell", "harrowing of hell", "spirits in prison", "state of the dead", "crucifixion"]
+  },
+  {
+    id: "answer-divorce-remarriage",
+    question: "What are the scriptural grounds permitted for divorce and subsequent remarriage?",
+    shortAnswer:
+      "God's design is a lifelong marriage covenant, but Jesus permitted divorce in the case of sexual immorality breaking that covenant, and Paul added that a believer is not bound if an unbelieving spouse abandons the marriage. Beyond these narrow grounds, divorce is discouraged, though grace and restoration remain available to anyone who has been through one.",
+    longAnswer:
+      "Jesus taught that God's original design was for marriage to be a lifelong, one-flesh union, but He identified sexual immorality as grounds on which the marriage covenant could rightly be considered broken, permitting divorce in that situation. Paul, addressing a different scenario, taught that if an unbelieving spouse chooses to leave the marriage, the believing spouse is 'not bound' and is free, since God has called believers to peace rather than being forced to hold together what the other person has abandoned. Malachi's statement that God hates divorce reflects the real pain and brokenness divorce causes, not a condemnation of those who have suffered through it. Outside of these specific situations, Scripture consistently urges couples toward reconciliation, patience, and forgiveness, while also offering genuine grace, healing, and a renewed path forward to anyone who has already experienced divorce.",
+    topics: ["Marriage and Family", "Christian Living"],
+    category: "Life and Relationships",
+    scriptures: ["Matthew 19:3-9", "1 Corinthians 7:10-15", "Malachi 2:16"],
+    keywords: ["divorce", "remarriage", "marriage", "adultery", "abandonment", "separation"]
   }
 ];
 
@@ -496,6 +700,133 @@ const emptyState = document.querySelector("#empty-state");
 const topicFilters = document.querySelector("#topic-filters");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector("#primary-menu");
+const promiseText = document.querySelector("#promise-text");
+const promiseReference = document.querySelector("#promise-reference");
+const promisePrevious = document.querySelector("#promise-previous");
+const promiseNext = document.querySelector("#promise-next");
+const promiseShare = document.querySelector("#promise-share");
+const promiseCopy = document.querySelector("#promise-copy");
+const promiseStatus = document.querySelector("#promise-status");
+const questionForm = document.querySelector("#question-form");
+const questionInput = document.querySelector("#question-input");
+const questionTopic = document.querySelector("#question-topic");
+const questionEmail = document.querySelector("#question-email");
+const questionStatus = document.querySelector("#question-status");
+const questionResults = document.querySelector("#question-results");
+const questionResultsTitle = document.querySelector("#question-results-title");
+const questionResultsList = document.querySelector("#question-results-list");
+const questionSubmissionEndpoint = window.WORD_OASIS_FORM_ENDPOINT || "";
+const questionSubmissionEmailTo = window.WORD_OASIS_FORM_EMAIL_TO || "";
+
+const biblePromises = [
+  {
+    text: "I will never leave you nor forsake you.",
+    reference: "Hebrews 13:5"
+  },
+  {
+    text: "The Lord is my shepherd; I shall not want.",
+    reference: "Psalm 23:1"
+  },
+  {
+    text: "Come to me, all you who are weary and burdened, and I will give you rest.",
+    reference: "Matthew 11:28"
+  },
+  {
+    text: "My grace is sufficient for you, for my power is made perfect in weakness.",
+    reference: "2 Corinthians 12:9"
+  },
+  {
+    text: "I am with you always, even to the end of the age.",
+    reference: "Matthew 28:20"
+  },
+  {
+    text: "The Lord is near to the brokenhearted and saves the crushed in spirit.",
+    reference: "Psalm 34:18"
+  },
+  {
+    text: "Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go.",
+    reference: "Joshua 1:9"
+  },
+  {
+    text: "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.",
+    reference: "John 3:16"
+  },
+  {
+    text: "Cast all your anxiety on him because he cares for you.",
+    reference: "1 Peter 5:7"
+  },
+  {
+    text: "Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God.",
+    reference: "Philippians 4:6"
+  },
+  {
+    text: "He restores my soul; he leads me in paths of righteousness for his name's sake.",
+    reference: "Psalm 23:3"
+  },
+  {
+    text: "Peace I leave with you; my peace I give you. I do not give to you as the world gives. Do not let your hearts be troubled and do not be afraid.",
+    reference: "John 14:27"
+  },
+  {
+    text: "If God is for us, who can be against us?",
+    reference: "Romans 8:31"
+  },
+  {
+    text: "And we know that in all things God works for the good of those who love him, who have been called according to his purpose.",
+    reference: "Romans 8:28"
+  },
+  {
+    text: "The steadfast love of the Lord never ceases; his mercies never come to an end.",
+    reference: "Lamentations 3:22"
+  },
+  {
+    text: "Jesus Christ is the same yesterday and today and forever.",
+    reference: "Hebrews 13:8"
+  },
+  {
+    text: "I can do all this through him who gives me strength.",
+    reference: "Philippians 4:13"
+  },
+  {
+    text: "The Lord will fight for you; you need only to be still.",
+    reference: "Exodus 14:14"
+  },
+  {
+    text: "His divine power has given us everything we need for a godly life through our knowledge of him who called us by his own glory and goodness.",
+    reference: "2 Peter 1:3"
+  },
+  {
+    text: "Ask and it will be given to you; seek and you will find; knock and the door will be opened to you.",
+    reference: "Matthew 7:7"
+  },
+  {
+    text: "Let us hold unswervingly to the hope we profess, for he who promised is faithful.",
+    reference: "Hebrews 10:23"
+  },
+  {
+    text: "The Lord is my light and my salvation—whom shall I fear? The Lord is the stronghold of my life—of whom shall I be afraid?",
+    reference: "Psalm 27:1"
+  },
+  {
+    text: "For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future.",
+    reference: "Jeremiah 29:11"
+  },
+  {
+    text: "You are precious and honored in my sight, and I love you.",
+    reference: "Isaiah 43:4"
+  },
+  {
+    text: "The blood of Jesus, his Son, purifies us from all sin.",
+    reference: "1 John 1:7"
+  },
+  {
+    text: "Let the peace of Christ rule in your hearts, since as members of one body you were called to peace. And be thankful.",
+    reference: "Colossians 3:15"
+  }
+];
+
+let promiseIndex = 0;
+let promiseRotation;
 
 const topicIcons = {
   Salvation: `
@@ -570,9 +901,11 @@ const topicIcons = {
     <circle cx="9" cy="7" r="4"></circle>
   `,
   Stewardship: `
-    <rect width="20" height="14" x="2" y="7" rx="2"></rect>
-    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-    <circle cx="12" cy="14" r="1"></circle>
+    <path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17"></path>
+    <path d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"></path>
+    <path d="m2 16 6 6"></path>
+    <circle cx="16" cy="9" r="2.9"></circle>
+    <circle cx="6" cy="5" r="3"></circle>
   `,
   Church: `
     <path d="M10 9h4"></path>
@@ -608,7 +941,9 @@ const topicIcons = {
 
 const topicIconFiles = {
   Law: "icons/law.svg",
-  Sanctuary: "icons/sanctuary.svg"
+  Sanctuary: "icons/sanctuary.svg",
+  "Three Angels": "icons/three-angels.svg",
+  Prayer: "icons/praying.svg"
 };
 
 function topicIconMarkup(topic, className) {
@@ -636,7 +971,7 @@ function normalize(value) {
 }
 
 function allTopics() {
-  return ["All", ...new Set(["Law", "Sanctuary", ...answers.flatMap((answer) => answer.topics)].sort())];
+  return ["All", ...new Set(["Law", "Sanctuary", "Three Angels", ...answers.flatMap((answer) => answer.topics)].sort())];
 }
 
 function matchesQuery(answer, query) {
@@ -689,7 +1024,130 @@ function renderTopicFilters() {
   });
 }
 
+function populateQuestionTopics() {
+  allTopics()
+    .filter((topic) => topic !== "All")
+    .forEach((topic) => {
+      const option = document.createElement("option");
+      option.value = topic;
+      option.textContent = topic;
+      questionTopic.append(option);
+    });
+}
+
+function relatedAnswers(question, topic) {
+  const words = normalize(question)
+    .split(/[^a-z0-9']+/)
+    .filter((word) => word.length > 3);
+
+  return answers
+    .map((answer) => {
+      const searchable = [
+        answer.question,
+        answer.shortAnswer,
+        answer.longAnswer,
+        answer.category,
+        ...answer.topics,
+        ...answer.keywords
+      ]
+        .join(" ")
+        .toLowerCase();
+      const wordScore = words.reduce((score, word) => score + (searchable.includes(word) ? 1 : 0), 0);
+      const topicScore = topic && answer.topics.includes(topic) ? 2 : 0;
+      return { answer, score: wordScore + topicScore };
+    })
+    .filter((result) => result.score > 0)
+    .sort((left, right) => right.score - left.score)
+    .slice(0, 3)
+    .map((result) => result.answer);
+}
+
+async function submitQuestionToSheet(payload) {
+  if (!questionSubmissionEndpoint) {
+    return { enabled: false };
+  }
+
+  const response = await fetch(questionSubmissionEndpoint, {
+    method: "POST",
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json"
+    },
+    body: JSON.stringify(payload)
+  });
+
+  if (!response.ok) {
+    throw new Error(`Submission failed with status ${response.status}`);
+  }
+
+  const result = await response.json().catch(() => ({}));
+  return { enabled: true, result };
+}
+
+async function handleQuestionSubmit(event) {
+  event.preventDefault();
+  const question = questionInput.value.trim();
+  const email = questionEmail.value.trim();
+  const topic = questionTopic.value || "General";
+  const matches = relatedAnswers(question, questionTopic.value);
+
+  questionResults.hidden = false;
+  questionResultsList.innerHTML = matches.map(answerTemplate).join("");
+  if (matches.length) {
+    questionResultsTitle.textContent = `Related answers for "${question}"`;
+    questionStatus.textContent = `We found ${matches.length} related answer${matches.length === 1 ? "" : "s"} to start your study.`;
+  } else {
+    questionResultsTitle.textContent = "No close match yet";
+    questionResultsList.innerHTML = `
+      <div class="empty-state">
+        <h3>Keep exploring</h3>
+        <p>Try fewer keywords, choose a topic, or browse the answer library below.</p>
+      </div>
+    `;
+    questionStatus.textContent = "No close match was found, but your question is ready for a broader search.";
+  }
+
+  if (!question) {
+    questionStatus.textContent = "Please enter a question before submitting.";
+    questionResults.scrollIntoView({ behavior: "smooth", block: "start" });
+    return;
+  }
+
+  const payload = {
+    question,
+    topic,
+    email,
+    source: "word-oasis",
+    submittedAt: new Date().toISOString(),
+    relatedMatches: matches.map((answer) => answer.question),
+    notificationEmail: questionSubmissionEmailTo || ""
+  };
+
+  if (!questionSubmissionEndpoint) {
+    questionStatus.textContent = "Your question is ready for local search. Add a Google Apps Script endpoint in the site config to enable email and spreadsheet logging.";
+    questionResults.scrollIntoView({ behavior: "smooth", block: "start" });
+    return;
+  }
+
+  questionStatus.textContent = "Sending your question to the email and spreadsheet log…";
+
+  try {
+    const result = await submitQuestionToSheet(payload);
+    if (result.enabled) {
+      questionStatus.textContent = "Your question was sent for follow-up and recorded in the spreadsheet log.";
+    }
+  } catch (error) {
+    console.error("Question submission failed", error);
+    questionStatus.textContent = "Your question was found locally, but the email/spreadsheet log could not be sent right now.";
+  }
+
+  questionResults.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 function answerTemplate(answer) {
+  const scriptureInlineText = answer.scriptures.join(", ");
+
   return `
     <article class="answer-card" id="${answer.id}">
       <div class="answer-tags">
@@ -699,6 +1157,8 @@ function answerTemplate(answer) {
       <p class="answer-short">${answer.shortAnswer}</p>
       <div class="answer-long" hidden>
         <p>${answer.longAnswer}</p>
+        <p>${biblicalPerspective(answer)}</p>
+        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in ${scriptureInlineText}.</p>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -713,6 +1173,48 @@ function answerTemplate(answer) {
       </div>
     </article>
   `;
+}
+
+function currentPromise() {
+  return biblePromises[promiseIndex];
+}
+
+function renderPromise() {
+  const promise = currentPromise();
+  promiseText.textContent = promise.text;
+  promiseReference.textContent = promise.reference;
+  promiseStatus.textContent = "";
+}
+
+function advancePromise(direction = 1) {
+  promiseIndex = (promiseIndex + direction + biblePromises.length) % biblePromises.length;
+  renderPromise();
+}
+
+function promiseShareText() {
+  const promise = currentPromise();
+  return `"${promise.text}" — ${promise.reference}\n\nFind more Bible answers at ${window.location.href.split("#")[0]}`;
+}
+
+async function sharePromise() {
+  const text = promiseShareText();
+  if (navigator.share) {
+    await navigator.share({ title: "Bible Promise", text, url: window.location.href.split("#")[0] });
+    promiseStatus.textContent = "Promise ready to share.";
+    return;
+  }
+
+  await copyPromise();
+  promiseStatus.textContent = "Sharing is not available here, so the promise was copied instead.";
+}
+
+async function copyPromise() {
+  try {
+    await navigator.clipboard.writeText(promiseShareText());
+    promiseStatus.textContent = "Promise copied to your clipboard.";
+  } catch (error) {
+    promiseStatus.textContent = "Could not copy automatically. Select the promise text to copy it.";
+  }
 }
 
 function renderAnswers() {
@@ -740,6 +1242,48 @@ function setTopic(topic) {
   scrollToResults();
 }
 
+const perspectivesByCategory = {
+  "Faith and Salvation":
+    "Salvation is entirely by grace through faith in Christ. His atoning sacrifice, heavenly ministry, and intercession are the foundation of assurance; obedience, Sabbath faithfulness, and loving service are the fruit of a redeemed life, never a way to purchase acceptance with God.",
+  "Hope and Prophecy":
+    "The great controversy reveals God's character as Christ ministers as our High Priest in the heavenly sanctuary. The dead await the resurrection, Christ's return will be visible and personal, and prophecy calls believers to faithful mission rather than date-setting or fear.",
+  "Knowing God":
+    "These themes are best read through the whole testimony of Scripture, emphasizing God's self-revelation in Christ, the active ministry of the Holy Spirit, and the restoration of the whole person. Bible study should lead to a changed life, compassionate service, and a clearer picture of God's loving character.",
+  "Life and Relationships":
+    "Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others."
+};
+
+const perspectivesByAnswer = {
+  "answer-sabbath":
+    "The seventh-day Sabbath, from Friday sunset to Saturday sunset, is God's blessed memorial of creation and redemption. It is not a means of earning salvation, but a weekly sign of trust in the Creator, a time for worship, fellowship, mercy, rest, and delight in God.",
+  "answer-commandments":
+    "The Ten Commandments retain their moral significance, including the fourth commandment. The law is not a ladder by which sinners climb to God; it is a loving description of life with God, written on the heart by the Spirit and lived out through faith in Jesus.",
+  "answer-death":
+    "Human beings do not possess an inherently immortal soul. Immortality is God's gift in Christ, received at the resurrection, so Christian hope rests in Jesus' literal, bodily return rather than in communication with the dead or an immediately conscious afterlife.",
+  "answer-judgment":
+    "Daniel 7 and related passages teach a pre-Advent judgment. This heavenly judgment does not inform God of facts He lacks; it publicly reveals His justice, confirms the genuineness of faith, and shows the universe that God saves those who trust in Christ while respecting human freedom.",
+  "answer-sanctuary":
+    "The sanctuary unites the cross, Christ's present intercession, the judgment, and the final removal of sin. The earthly services pointed forward to Jesus, the true High Priest, whose once-for-all sacrifice provides forgiveness and whose heavenly ministry applies the benefits of redemption.",
+  "answer-three-angels":
+    "Revelation 14:6-12 is a present, worldwide gospel appeal: worship the Creator, leave Babylon's confusion, reject coercive false worship, and remain loyal to Jesus through faith that produces obedience. The message is urgent, but it is good news centered on the everlasting gospel.",
+  "answer-health":
+    "People are an inseparable unity of body, mind, and spirit. Rest, exercise, wholesome food, temperance, avoiding addictive substances, and care for mental health are invitations to greater usefulness and joy, not tests by which God decides who is worthy of salvation.",
+  "answer-stewardship":
+    "Stewardship begins with the truth that God owns everything and people are His managers. Tithes support gospel ministry, offerings express willing generosity, and time, abilities, possessions, and the body are all entrusted for mission and neighbor-love. Giving is worship and gratitude, not a transaction that obligates God.",
+  "answer-creation":
+    "Creation is a recent, literal, six-day work of God and the biblical foundation for human dignity, marriage, the seventh-day Sabbath, and worship of God as Creator. This conviction also gives the first angel's message its force: in a world of competing loyalties, worship belongs to the One who made heaven and earth.",
+  "answer-church":
+    "The church is a worldwide community raised up to proclaim the everlasting gospel, make disciples, care for people, and prepare the world for Christ's return. No congregation replaces a personal relationship with Jesus, but believers are called to worship, serve, practice spiritual gifts, and pursue unity together.",
+  "answer-second-coming":
+    "The Bible presents a visible, audible, and glorious second coming rather than a secret rapture. Jesus returns personally to resurrect the righteous, gather His people, and bring the long conflict with sin to its decisive close; readiness means faithful relationship and mission, not predicting a date.",
+  "answer-hell":
+    "The final fire is the second death: the complete and irreversible destruction of sin and unrepentant sinners, not eternal conscious torment. This preserves both God's justice and His character of love, and it leaves the universe truly free from pain, rebellion, and death."
+};
+
+function biblicalPerspective(answer) {
+  return perspectivesByAnswer[answer.id] || perspectivesByCategory[answer.category];
+}
+
 function scrollToResults() {
   // Jump straight to the results, skipping past the topic filter list on
   // mobile where it stacks above the answers instead of beside them.
@@ -761,6 +1305,8 @@ navSearchForm.addEventListener("submit", (event) => {
   navLinks.classList.remove("open");
   navToggle.setAttribute("aria-expanded", "false");
 });
+
+questionForm.addEventListener("submit", handleQuestionSubmit);
 
 searchInput.addEventListener("input", (event) => {
   state.query = event.target.value;
@@ -794,6 +1340,34 @@ document.addEventListener("click", (event) => {
     openVerseModal(scriptureButton.dataset.scripture);
   }
 });
+
+promiseNext.addEventListener("click", () => {
+  advancePromise();
+  restartPromiseRotation();
+});
+
+promisePrevious.addEventListener("click", () => {
+  advancePromise(-1);
+  restartPromiseRotation();
+});
+
+promiseShare.addEventListener("click", async () => {
+  try {
+    await sharePromise();
+  } catch (error) {
+    promiseStatus.textContent = "Sharing was canceled.";
+  }
+});
+
+promiseCopy.addEventListener("click", copyPromise);
+
+function restartPromiseRotation() {
+  window.clearInterval(promiseRotation);
+  promiseRotation = window.setInterval(() => advancePromise(), 10000);
+}
+
+renderPromise();
+restartPromiseRotation();
 
 function toggleReadMore(button) {
   const card = button.closest(".answer-card");
@@ -890,4 +1464,5 @@ if (initialQuery) {
 
 addTopicIcons();
 renderTopicFilters();
+populateQuestionTopics();
 renderAnswers();
