@@ -156,12 +156,12 @@ function injectContainerContent(html, containerId, marker, innerHtml) {
 
 function injectSelectOptions(html, marker, optionsHtml) {
   const regex = new RegExp(
-    `(<select id="question-topic" name="topic">\\s*<option value="">Choose a topic<\\/option>)([\\s\\S]*?)(<!-- ${marker} -->)`
+    `(<select id="question-topic" name="topic">\\s*<option value="">[^<]*<\\/option>)([\\s\\S]*?)(<!-- ${marker} -->)`
   );
   if (!regex.test(html)) {
     throw new Error("Could not locate #question-topic select for prerendering");
   }
-  return html.replace(regex, (_match, openPart, _old, markerComment) => `${openPart}\n                    ${optionsHtml}${markerComment}`);
+  return html.replace(regex, (_match, openPart, _old, markerComment) => `${openPart}\n                  ${optionsHtml}${markerComment}`);
 }
 
 function injectFaqJsonLd(html, faqJson) {

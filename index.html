@@ -609,61 +609,28 @@
             </form>
           </div>
 
-          <aside class="hero-panel" aria-label="Ask a Bible question">
+          <aside id="ask" class="hero-panel" aria-label="Ask a Bible question">
             <span class="panel-tag">Ask a Question</span>
-            <h2>Have a Bible question?</h2>
-            <p>
-              Share what's on your heart in your own words. We'll search this Scripture-based library for the closest answers and point you to passages for further study.
-            </p>
-            <a href="#ask">Ask your question</a>
-          </aside>
-        </div>
-      </section>
-
-      <section class="trust-strip" aria-label="Site highlights">
-        <div class="container trust-grid">
-          <div>
-            <strong>Scripture first</strong>
-            <span>Answers anchored in Bible passages</span>
-          </div>
-          <div>
-            <strong>Easy to browse</strong>
-            <span>Topics, categories, and quick filters</span>
-          </div>
-          <div>
-            <strong>Clear &amp; practical</strong>
-            <span>Direct answers for everyday life</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="ask" class="section ask-section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Bring your question</p>
             <h2>Ask a Bible question</h2>
             <p>
-              Share a question in your own words. We will look for the closest answers in this
-              Scripture-based library and point you to passages for further study.
+              Ask in your own words. We'll search our Scripture library and find the closest answers.
             </p>
-          </div>
-          <div class="ask-layout">
-            <form class="ask-card" id="question-form">
-              <label for="question-input">Your question</label>
+
+            <form class="hero-ask-form" id="question-form">
+              <label class="sr-only" for="question-input">Your question</label>
               <textarea
                 id="question-input"
                 name="question"
-                rows="5"
+                rows="3"
                 maxlength="500"
                 placeholder="For example: How can I trust God when I am anxious?"
                 required
               ></textarea>
-              <div class="ask-form-row">
-                <label for="question-topic">
-                  Topic (optional)
-                  <select id="question-topic" name="topic">
-                    <option value="">Choose a topic</option>
-                    <option value="Baptism">Baptism</option>
+              <div class="hero-ask-row">
+                <label class="sr-only" for="question-topic">Topic (optional)</label>
+                <select id="question-topic" name="topic">
+                  <option value="">Choose a topic (optional)</option>
+                  <option value="Baptism">Baptism</option>
                     <option value="Bible Study">Bible Study</option>
                     <option value="Christian Living">Christian Living</option>
                     <option value="Church">Church</option>
@@ -685,38 +652,41 @@
                     <option value="State of the Dead">State of the Dead</option>
                     <option value="Stewardship">Stewardship</option>
                     <option value="Three Angels">Three Angels</option><!-- prerender:question-topic -->
-                  </select>
-                </label>
-                <label for="question-email">
-                  Email (optional)
-                  <input id="question-email" name="email" type="email" placeholder="you@example.com">
-                </label>
+                </select>
+                <label class="sr-only" for="question-email">Email (optional)</label>
+                <input id="question-email" name="email" type="email" placeholder="Email (optional)">
               </div>
-              <p class="ask-guidance">
-                Ask one question at a time and include the situation or Bible passage you are
-                wondering about. This form searches the public answer library in your browser. If
-                you connect a Google Apps Script endpoint in the site settings, it can also email
-                the question and log it to a Google Sheet.
-              </p>
-              <button type="submit" class="primary-button">Find a Bible answer</button>
+              <button type="submit" class="hero-ask-button">Find a Bible answer</button>
               <p class="ask-status" id="question-status" role="status" aria-live="polite"></p>
             </form>
-            <aside class="ask-help">
-              <h3>Before you submit</h3>
-              <ul>
-                <li>Use clear, specific wording.</li>
-                <li>Include a reference if your question is about a verse.</li>
-                <li>Compare every answer with Scripture in context.</li>
-              </ul>
-              <p>
-                If the library does not cover your question yet, try a broader search or browse the
-                topics below.
-              </p>
-            </aside>
+          </aside>
+        </div>
+      </section>
+
+      <section id="question-results" class="section question-results-section" hidden>
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Search Results</p>
+            <h2 id="question-results-title">Related answers</h2>
+            <p>Scripture-based answers matching your question.</p>
           </div>
-          <div id="question-results" class="question-results" hidden>
-            <h3 id="question-results-title">Related answers</h3>
-            <div id="question-results-list" class="answers-list"></div>
+          <div id="question-results-list" class="answers-list"></div>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Site highlights">
+        <div class="container trust-grid">
+          <div>
+            <strong>Scripture first</strong>
+            <span>Answers anchored in Bible passages</span>
+          </div>
+          <div>
+            <strong>Easy to browse</strong>
+            <span>Topics, categories, and quick filters</span>
+          </div>
+          <div>
+            <strong>Clear &amp; practical</strong>
+            <span>Direct answers for everyday life</span>
           </div>
         </div>
       </section>
