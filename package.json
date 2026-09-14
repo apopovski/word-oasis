@@ -1,0 +1,12 @@
+{
+  "name": "word-oasis",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Word Oasis - clear, Scripture-based answers to Bible questions.",
+  "scripts": {
+    "prerender": "node scripts/prerender.js"
+  },
+  "devDependencies": {
+    "jsdom": "^30.0.1"
+  }
+}

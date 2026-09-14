@@ -46,3 +46,26 @@ You can add them in Apps Script by going to Project settings > Script properties
 
 - If the form endpoint is left blank, the site remains browser-only and still searches the local answer library.
 - This is the simplest no-backend option for a static website.
+
+# SEO: keeping content crawlable
+
+The Bible Q&A library, topic filters, and question-form topic list in
+`script.js` are rendered into the DOM at runtime. So that search engines and
+AI crawlers that do not execute JavaScript still see the full content, a
+build step (`scripts/prerender.js`) runs the site's own script inside a real
+DOM (via jsdom) and bakes the resulting markup into `index.html`, between
+`<!-- prerender:* -->` marker comments. It also regenerates the `FAQPage`
+JSON-LD block in `<head>` from the same answer data.
+
+**Whenever you add, edit, or remove a Bible Q&A entry in `script.js`,
+re-run the prerender step and commit the updated `index.html`:**
+
+```bash
+npm install   # first time only, installs jsdom as a dev dependency
+npm run prerender
+```
+
+This is safe to run repeatedly — it fully regenerates the static content
+between the markers each time, and `script.js` re-renders the identical
+markup on page load, so nothing changes for visitors.
+

@@ -958,6 +958,11 @@ function topicIconMarkup(topic, className) {
 
 function addTopicIcons() {
   document.querySelectorAll(".topic-card").forEach((card) => {
+    // Skip cards that were pre-rendered with an icon already (static SEO markup)
+    // so re-running this on load never inserts a duplicate icon.
+    if (card.querySelector(".topic-icon")) {
+      return;
+    }
     const topic = card.dataset.topic;
     card.insertAdjacentHTML(
       "afterbegin",
@@ -1025,6 +1030,9 @@ function renderTopicFilters() {
 }
 
 function populateQuestionTopics() {
+  // Reset to the placeholder option first so re-running this on top of
+  // pre-rendered static markup never duplicates <option> entries.
+  questionTopic.innerHTML = '<option value="">Choose a topic</option>';
   allTopics()
     .filter((topic) => topic !== "All")
     .forEach((topic) => {
