@@ -199,8 +199,8 @@ button {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
-  gap: 42px;
+  grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.85fr);
+  gap: 48px;
   align-items: center;
 }
 
@@ -303,57 +303,114 @@ h1 {
 }
 
 .hero-panel {
-  padding: 30px;
-  background: var(--text);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 34px 30px 28px;
+  scroll-margin-top: 100px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(37, 99, 235, 0.22) 0%, transparent 55%),
+    radial-gradient(circle at 0% 100%, rgba(245, 158, 11, 0.14) 0%, transparent 50%),
+    linear-gradient(165deg, #0f2438 0%, #0a1928 55%, #050f1a 100%);
   color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
+  box-shadow:
+    0 26px 64px -12px rgba(5, 15, 26, 0.55),
+    0 0 0 1px rgba(255, 255, 255, 0.06) inset,
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+.hero-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.65), rgba(59, 130, 246, 0.65), transparent);
+  pointer-events: none;
 }
 
 .hero-panel h2 {
   font-family: "Libre Baskerville", Georgia, serif;
-  font-size: clamp(1.4rem, 2vw, 1.7rem);
-  margin-bottom: 8px;
+  font-size: clamp(1.45rem, 2vw, 1.75rem);
+  font-weight: 700;
+  margin: 0 0 8px;
   color: #ffffff;
+  letter-spacing: -0.025em;
+  line-height: 1.22;
 }
 
 .hero-panel p {
-  margin: 0 0 16px;
-  color: #d8e4f0;
-  font-size: 0.95rem;
-  line-height: 1.45;
+  margin: 0 0 18px;
+  color: rgba(226, 232, 240, 0.85);
+  font-size: 0.94rem;
+  line-height: 1.5;
 }
 
 .hero-ask-form {
   display: grid;
-  gap: 10px;
+  gap: 12px;
 }
 
 .hero-ask-form textarea,
 .hero-ask-form input,
 .hero-ask-form select {
   width: 100%;
-  padding: 11px 14px;
-  color: var(--text);
-  background: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  background: rgba(15, 34, 56, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-sm);
   font: inherit;
   font-size: 0.92rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.hero-ask-form textarea::placeholder,
+.hero-ask-form input::placeholder {
+  color: rgba(203, 213, 225, 0.55);
 }
 
 .hero-ask-form textarea {
-  min-height: 86px;
-  resize: vertical;
-  line-height: 1.45;
+  min-height: 96px;
+  padding: 13px 15px;
+  resize: none;
+  line-height: 1.48;
+}
+
+.hero-ask-form input,
+.hero-ask-form select {
+  height: 46px;
+  padding: 0 14px;
+}
+
+.hero-ask-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 34px;
+  cursor: pointer;
+}
+
+.hero-ask-form select option {
+  background-color: #0b1a2b;
+  color: #f8fafc;
 }
 
 .hero-ask-form textarea:focus,
 .hero-ask-form input:focus,
 .hero-ask-form select:focus {
   outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.35);
+  background: rgba(18, 42, 70, 0.85);
+  border-color: rgba(251, 191, 36, 0.85);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.25), 0 8px 20px rgba(0, 0, 0, 0.22);
 }
 
 .hero-ask-row {
@@ -364,47 +421,107 @@ h1 {
 
 .hero-ask-button {
   width: 100%;
-  min-height: 48px;
-  padding: 11px 18px;
-  color: #102a43;
+  min-height: 50px;
+  padding: 12px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  color: #091a2b;
   font-weight: 800;
   font-size: 0.98rem;
-  background: linear-gradient(135deg, var(--accent), #d97706);
+  letter-spacing: -0.01em;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
   border: 0;
   border-radius: var(--radius-sm);
-  box-shadow: 0 10px 24px rgba(245, 158, 11, 0.3);
+  box-shadow:
+    0 12px 26px rgba(245, 158, 11, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
   cursor: pointer;
-  transition: transform 140ms ease, box-shadow 140ms ease, filter 140ms ease;
+  transition: transform 160ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 160ms cubic-bezier(0.16, 1, 0.3, 1), filter 160ms ease;
+}
+
+.hero-ask-button svg {
+  transition: transform 160ms ease;
 }
 
 .hero-ask-button:hover,
 .hero-ask-button:focus-visible {
-  filter: brightness(1.06);
-  transform: translateY(-1px);
-  box-shadow: 0 12px 28px rgba(245, 158, 11, 0.4);
+  filter: brightness(1.05);
+  transform: translateY(-2px);
+  box-shadow:
+    0 16px 32px rgba(245, 158, 11, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.hero-ask-button:hover svg {
+  transform: translateX(3px);
+}
+
+.hero-ask-button:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.3);
+}
+
+.hero-form-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px 12px;
+  margin-top: 6px;
+  color: rgba(203, 213, 225, 0.75);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.hero-form-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.hero-form-badge svg {
+  color: #fbbf24;
+  flex-shrink: 0;
+}
+
+.hero-form-dot {
+  opacity: 0.45;
 }
 
 .hero-panel .ask-status {
-  min-height: 1.3em;
-  margin: 6px 0 0;
-  color: #ffe7b3;
+  min-height: 1.2em;
+  margin: 4px 0 0;
+  color: #fde68a;
   font-weight: 700;
   font-size: 0.88rem;
   line-height: 1.4;
+  text-align: center;
 }
 
 .panel-tag {
   display: inline-flex;
-  margin-bottom: 16px;
-  padding: 6px 12px;
-  color: #ffe7b3;
-  font-size: 0.74rem;
+  align-items: center;
+  gap: 7px;
+  width: fit-content;
+  margin-bottom: 12px;
+  padding: 5px 12px;
+  color: #fbbf24;
+  font-size: 0.72rem;
   font-weight: 800;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  background: rgba(245, 158, 11, 0.18);
-  border: 1px solid rgba(245, 158, 11, 0.3);
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.32);
   border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.08);
+}
+
+.panel-tag svg {
+  color: #fbbf24;
+  flex-shrink: 0;
 }
 
 .hero-panel a {

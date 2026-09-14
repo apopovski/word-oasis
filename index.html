@@ -610,10 +610,13 @@
           </div>
 
           <aside id="ask" class="hero-panel" aria-label="Ask a Bible question">
-            <span class="panel-tag">Ask a Question</span>
-            <h2>Ask a Bible question</h2>
+            <span class="panel-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              <span>Ask a Question</span>
+            </span>
+            <h2>Ask a Bible Question</h2>
             <p>
-              Ask in your own words. We'll search our Scripture library and find the closest answers.
+              Have a Bible related question? We'll do our best to provide you with Scripture answers.
             </p>
 
             <form class="hero-ask-form" id="question-form">
@@ -623,13 +626,13 @@
                 name="question"
                 rows="3"
                 maxlength="500"
-                placeholder="For example: How can I trust God when I am anxious?"
+                placeholder="Type your question... (e.g. How can I trust God when I am anxious?)"
                 required
               ></textarea>
               <div class="hero-ask-row">
                 <label class="sr-only" for="question-topic">Topic (optional)</label>
                 <select id="question-topic" name="topic">
-                  <option value="">Choose a topic (optional)</option>
+                  <option value="">Topic (optional)</option>
                   <option value="Baptism">Baptism</option>
                     <option value="Bible Study">Bible Study</option>
                     <option value="Christian Living">Christian Living</option>
@@ -656,7 +659,21 @@
                 <label class="sr-only" for="question-email">Email (optional)</label>
                 <input id="question-email" name="email" type="email" placeholder="Email (optional)">
               </div>
-              <button type="submit" class="hero-ask-button">Find a Bible answer</button>
+              <button type="submit" class="hero-ask-button">
+                <span>Find a Bible answer</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+              <div class="hero-form-footer">
+                <span class="hero-form-badge">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                  Instant verse matching
+                </span>
+                <span class="hero-form-dot">•</span>
+                <span class="hero-form-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  Free &amp; private
+                </span>
+              </div>
               <p class="ask-status" id="question-status" role="status" aria-live="polite"></p>
             </form>
           </aside>

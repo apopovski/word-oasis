@@ -1032,7 +1032,7 @@ function renderTopicFilters() {
 function populateQuestionTopics() {
   // Reset to the placeholder option first so re-running this on top of
   // pre-rendered static markup never duplicates <option> entries.
-  questionTopic.innerHTML = '<option value="">Choose a topic (optional)</option>';
+  questionTopic.innerHTML = '<option value="">Topic (optional)</option>';
   allTopics()
     .filter((topic) => topic !== "All")
     .forEach((topic) => {
