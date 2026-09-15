@@ -24,7 +24,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260914">
 <script>
   window.WORD_OASIS_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZSB_Tf-MEbTUrmSkEqwNn2gjtxqF4cv16pMCDMmV3voJeJAFhIYBQ/exec";
   window.WORD_OASIS_FORM_EMAIL_TO = "wordoasis7@gmail.com";
@@ -560,10 +560,10 @@
         </button>
         <ul id="primary-menu" class="nav-links">
           <li><a href="#answers">Answers</a></li>
-          <li><a href="#ask">Ask a question</a></li>
           <li><a href="#topics">Topics</a></li>
           <li><a href="#categories">Categories</a></li>
           <li><a href="#study">Study Guide</a></li>
+          <li><a href="#ask">Ask a question</a></li>
           <li class="nav-search-item">
             <form class="nav-search" id="nav-search-form" role="search">
               <label class="sr-only" for="nav-search-input">Search Bible questions</label>
@@ -612,7 +612,7 @@
           <aside id="ask" class="hero-panel" aria-label="Ask a Bible question">
             <span class="panel-tag">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-              <span>Ask a Question</span>
+              <span>Find answers to your Bible questions</span>
             </span>
             <h2>Ask a Bible Question</h2>
             <p>
@@ -659,16 +659,28 @@
                 <label class="sr-only" for="question-email">Email (optional)</label>
                 <input id="question-email" name="email" type="email" placeholder="Email (optional)">
               </div>
+              <div class="hero-ask-row">
+                <label class="sr-only" for="question-gender">Gender (optional)</label>
+                <select id="question-gender" name="gender">
+                  <option value="">Gender (optional)</option>
+                  <option value="Male">Man</option>
+                  <option value="Female">Woman</option>
+                  
+                </select>
+                <label class="sr-only" for="question-location">Location (optional)</label>
+                <input id="question-location" name="location" type="text" placeholder="Location (optional)">
+              </div>
+              <div class="hero-ask-row">
+                <label class="sr-only" for="question-age">Age (optional)</label>
+                <input id="question-age" name="age" type="number" min="0" max="120" placeholder="Age (optional)">
+                <label class="sr-only" for="question-faith">Faith (optional)</label>
+                <input id="question-faith" name="faith" type="text" placeholder="Faith (optional)">
+              </div>
               <button type="submit" class="hero-ask-button">
                 <span>Find a Bible answer</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </button>
               <div class="hero-form-footer">
-                <span class="hero-form-badge">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-                  Instant verse matching
-                </span>
-                <span class="hero-form-dot">•</span>
                 <span class="hero-form-badge">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
                   Free &amp; private
@@ -691,48 +703,72 @@
         </div>
       </section>
 
-      <section class="trust-strip" aria-label="Site highlights">
-        <div class="container trust-grid">
-          <div>
-            <strong>Scripture first</strong>
-            <span>Answers anchored in Bible passages</span>
-          </div>
-          <div>
-            <strong>Easy to browse</strong>
-            <span>Topics, categories, and quick filters</span>
-          </div>
-          <div>
-            <strong>Clear &amp; practical</strong>
-            <span>Direct answers for everyday life</span>
-          </div>
-        </div>
-      </section>
 
       <section class="promise-section" aria-label="Rotating Bible promises">
         <div class="container">
           <article class="promise-card" id="promise-card">
             <div class="promise-copy">
-              <p class="eyebrow">Today's Bible promise</p>
+              <p class="eyebrow"><span aria-hidden="true">✦</span> Today's Bible promise</p>
               <blockquote id="promise-text"></blockquote>
               <p class="promise-reference" id="promise-reference"></p>
+              <p class="promise-attribution">A daily moment of hope from Word Oasis</p>
             </div>
             <div class="promise-actions">
-              <button type="button" class="promise-next" id="promise-previous" aria-label="Show previous promise">
-                <span aria-hidden="true">&larr;</span>
-              </button>
-              <button type="button" class="promise-next" id="promise-next" aria-label="Show next promise">
-                <span aria-hidden="true">&rarr;</span>
-              </button>
-              <button type="button" class="promise-share" id="promise-share">Share promise</button>
-              <button type="button" class="promise-copy" id="promise-copy">Copy text</button>
+              <div class="promise-navigation" aria-label="Browse promises">
+                <button type="button" class="promise-next" id="promise-previous" aria-label="Show previous promise">
+                  <span aria-hidden="true">&larr;</span>
+                </button>
+                <button type="button" class="promise-next" id="promise-next" aria-label="Show next promise">
+                  <span aria-hidden="true">&rarr;</span>
+                </button>
+              </div>
+              <div class="promise-share-actions">
+                <span class="promise-share-label">Share this hope</span>
+                <div class="promise-share-buttons">
+                  <a class="promise-social-share promise-social-facebook" id="promise-share-facebook" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share this promise on Facebook">f</a>
+                  <a class="promise-social-share promise-social-x" id="promise-share-x" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share this promise on X">𝕏</a>
+                  <a class="promise-social-share promise-social-linkedin" id="promise-share-linkedin" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share this promise on LinkedIn">in</a>
+                  <button type="button" class="promise-share" id="promise-share">More sharing options</button>
+                  <button type="button" class="promise-copy" id="promise-copy">Copy</button>
+                </div>
+              </div>
             </div>
             <p class="promise-status" id="promise-status" role="status" aria-live="polite"></p>
           </article>
         </div>
       </section>
 
-      <section id="answers" class="section">
-        <div class="container">
+      <section class="site-features" aria-label="Why readers use Word Oasis" style="padding: 2rem 0 0; background: linear-gradient(180deg, rgba(16,42,67,0.04), rgba(16,42,67,0.01));">
+        <div class="container" style="max-width: 1180px;">
+          <div class="section-heading" style="margin-bottom: 1.5rem;">
+            <p class="eyebrow">Why people visit Word Oasis</p>
+            <h2>Helpful answers for everyday faith and life</h2>
+            <p>Whether you are seeking hope in hard seasons, clarity on Scripture, or direction for Christian living, Word Oasis is built to make biblical truth easier to find and apply.</p>
+          </div>
+
+          <div class="feature-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem;">
+            <article style="background:#fff; border:1px solid rgba(16,42,67,0.12); border-radius:18px; padding:1.5rem; box-shadow:0 18px 40px rgba(10,23,43,.06);">
+              <p class="eyebrow" style="margin-bottom:.75rem;">Search by topic</p>
+              <h3 style="margin:0 0 .5rem; font-size:1.2rem;">Find what you need fast</h3>
+              <p style="margin:0; color:#48576b; line-height:1.7;">Browse by topic and filter answers on salvation, prayer, prophecy, church life, forgiveness, and more.</p>
+            </article>
+
+            <article style="background:#fff; border:1px solid rgba(16,42,67,0.12); border-radius:18px; padding:1.5rem; box-shadow:0 18px 40px rgba(10,23,43,.06);">
+              <p class="eyebrow" style="margin-bottom:.75rem;">Grounded in Scripture</p>
+              <h3 style="margin:0 0 .5rem; font-size:1.2rem;">Bible references for further study</h3>
+              <p style="margin:0; color:#48576b; line-height:1.7;">Every answer is anchored in passages from the Bible so you can keep reading and compare Scripture with Scripture.</p>
+            </article>
+
+            <article style="background:#fff; border:1px solid rgba(16,42,67,0.12); border-radius:18px; padding:1.5rem; box-shadow:0 18px 40px rgba(10,23,43,.06);">
+              <p class="eyebrow" style="margin-bottom:.75rem;">Practical wisdom</p>
+              <h3 style="margin:0 0 .5rem; font-size:1.2rem;">Guidance for daily life</h3>
+              <p style="margin:0; color:#48576b; line-height:1.7;">From anxiety and forgiveness to faith, marriage, and discipleship, the goal is clear and usable biblical guidance.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="answers" class="section">        <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Search results and latest answers</p>
             <h2>Bible questions and answers</h2>
@@ -985,7 +1021,7 @@
       <div class="answer-long" hidden="">
         <p>The gospel announces both a finished work and an ongoing one. Christ's death satisfied the penalty of sin so that no one needs to earn forgiveness, and His resurrection guarantees victory over death for everyone who trusts Him. At the same time, receiving the gospel is not the end of the story: the same grace that saves also transforms, producing a growing love for God and others, a desire to obey out of gratitude rather than fear, and a settled hope that looks forward to the day Christ returns to finish what He started.</p>
         <p>Salvation is entirely by grace through faith in Christ. His atoning sacrifice, heavenly ministry, and intercession are the foundation of assurance; obedience, Sabbath faithfulness, and loving service are the fruit of a redeemed life, never a way to purchase acceptance with God.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in 1 Corinthians 15:3-4, John 3:16, Ephesians 2:8-10.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%221%20Corinthians%2015%3A3-4%22%2C%22John%203%3A16%22%2C%22Ephesians%202%3A8-10%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1004,7 +1040,7 @@
       <div class="answer-long" hidden="">
         <p>Anxiety is a normal human response to an uncertain world, and Scripture meets it with practical, repeatable steps rather than empty reassurance. Philippians 4 pairs prayer with thanksgiving, teaching that gratitude reframes worry even before circumstances change. Peter's invitation to cast every care on God pictures a deliberate, repeated action, not a one-time decision. And the weekly rhythm of Sabbath rest gives a built-in reminder to set down burdens, remember God's faithfulness, and receive rest for the body and soul alongside the peace He promises for the mind.</p>
         <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Philippians 4:6-7, 1 Peter 5:7, Exodus 20:8-11.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Philippians%204%3A6-7%22%2C%221%20Peter%205%3A7%22%2C%22Exodus%2020%3A8-11%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1023,7 +1059,7 @@
       <div class="answer-long" hidden="">
         <p>Forgiveness is a decision to release the debt someone owes you, modeled on how completely God has forgiven us in Christ. It is not the same as instant trust, forgetting what happened, or pretending harm did not occur; Scripture allows for wise boundaries even while a heart lets go of bitterness. Romans 12 teaches believers to leave vengeance to God rather than repaying evil for evil, which frees the offended person from carrying a burden that was never theirs to punish. Reconciliation, where it is safe and possible, is the fuller goal, but forgiveness itself does not require the other person's cooperation.</p>
         <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Ephesians 4:32, Romans 12:18-19, Colossians 3:13.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Ephesians%204%3A32%22%2C%22Romans%2012%3A18-19%22%2C%22Colossians%203%3A13%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1042,7 +1078,7 @@
       <div class="answer-long" hidden="">
         <p>The Lord's Prayer gives a simple pattern: honoring God's name, seeking His kingdom and will, asking for daily needs, confessing sin while forgiving others, and asking for protection from temptation. Prayer works best as an honest conversation rather than a performance — it can include praise, thanksgiving, confession, and requests, offered boldly because believers can approach God's throne with confidence. Persistence matters, too; Scripture encourages continuing to pray even when answers are delayed, trusting that God hears and responds according to His will and timing rather than on demand.</p>
         <p>These themes are best read through the whole testimony of Scripture, emphasizing God's self-revelation in Christ, the active ministry of the Holy Spirit, and the restoration of the whole person. Bible study should lead to a changed life, compassionate service, and a clearer picture of God's loving character.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Matthew 6:9-13, Hebrews 4:16, 1 John 5:14.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Matthew%206%3A9-13%22%2C%22Hebrews%204%3A16%22%2C%221%20John%205%3A14%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1061,7 +1097,7 @@
       <div class="answer-long" hidden="">
         <p>God's love is not measured by easy circumstances but by what He was willing to give: His own Son, while people were still sinners and enemies of God. That love reaches into every area of life — forgiving guilt, healing shame, restoring broken relationships, and giving purpose for the future. It is also patient and pursuing, shown in the Holy Spirit's ongoing work to draw hearts back to God, and it will be fully displayed when Christ returns to make all things new and remove every trace of sin's damage.</p>
         <p>These themes are best read through the whole testimony of Scripture, emphasizing God's self-revelation in Christ, the active ministry of the Holy Spirit, and the restoration of the whole person. Bible study should lead to a changed life, compassionate service, and a clearer picture of God's loving character.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Romans 5:8, 1 John 4:9-10, John 15:13.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Romans%205%3A8%22%2C%221%20John%204%3A9-10%22%2C%22John%2015%3A13%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1080,7 +1116,7 @@
       <div class="answer-long" hidden="">
         <p>Suffering entered the world through sin, not from God's original design, and the Bible frames history as a great controversy between good and evil in which humanity is caught. God is not the author of suffering, but He enters into it: He is described as near to the brokenhearted, present in affliction, and able to work even painful circumstances toward good purposes for those who love Him. The cross is the clearest evidence that God takes suffering seriously enough to bear it Himself, and the promise of a coming new earth assures that suffering will not have the last word.</p>
         <p>The great controversy reveals God's character as Christ ministers as our High Priest in the heavenly sanctuary. The dead await the resurrection, Christ's return will be visible and personal, and prophecy calls believers to faithful mission rather than date-setting or fear.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Psalm 34:18, Romans 8:28, Revelation 21:4.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Psalm%2034%3A18%22%2C%22Romans%208%3A28%22%2C%22Revelation%2021%3A4%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1099,7 +1135,7 @@
       <div class="answer-long" hidden="">
         <p>Assurance of salvation is anchored in God's promises rather than shifting feelings, because faith and feelings are not the same thing. Jesus said His sheep hear His voice, follow Him, and that no one can snatch them from His hand, which points believers to His keeping power rather than their own performance. At the same time, Scripture invites honest self-examination — not to earn salvation, but to notice growing fruit of the Spirit as evidence that the relationship with Christ is real and active. Doubts can be brought honestly to God, who is able to complete the good work He began.</p>
         <p>Salvation is entirely by grace through faith in Christ. His atoning sacrifice, heavenly ministry, and intercession are the foundation of assurance; obedience, Sabbath faithfulness, and loving service are the fruit of a redeemed life, never a way to purchase acceptance with God.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in John 10:27-29, 1 John 5:11-13, Philippians 1:6.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22John%2010%3A27-29%22%2C%221%20John%205%3A11-13%22%2C%22Philippians%201%3A6%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1118,7 +1154,7 @@
       <div class="answer-long" hidden="">
         <p>Meaningful Bible study starts before you open the page, with a short prayer asking God to give understanding. From there, observation asks what a passage actually says, interpretation asks what it meant in its original context, and application asks how it applies to your life today. Comparing Scripture with Scripture — letting clearer passages shed light on harder ones — protects against taking a single verse out of context. Keeping a simple journal of insights, discussing questions with others, and returning to the same passages over time all deepen understanding far beyond a single reading.</p>
         <p>These themes are best read through the whole testimony of Scripture, emphasizing God's self-revelation in Christ, the active ministry of the Holy Spirit, and the restoration of the whole person. Bible study should lead to a changed life, compassionate service, and a clearer picture of God's loving character.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in 2 Timothy 3:16-17, Psalm 119:105, Acts 17:11.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%222%20Timothy%203%3A16-17%22%2C%22Psalm%20119%3A105%22%2C%22Acts%2017%3A11%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1137,7 +1173,7 @@
       <div class="answer-long" hidden="">
         <p>The Sabbath was established at creation, before sin entered the world, when God rested on the seventh day and blessed it — making it a gift for all humanity, not a rule invented later. It was reaffirmed in the Ten Commandments and consistently kept by Jesus, who described it as something made for people's good, not a burden. Practically, the Sabbath offers a weekly rhythm of setting aside ordinary work to focus on worship, rest, family, nature, and acts of mercy, echoing both the beginning of creation and pointing forward to the final, eternal rest God promises His people.</p>
         <p>The seventh-day Sabbath, from Friday sunset to Saturday sunset, is God's blessed memorial of creation and redemption. It is not a means of earning salvation, but a weekly sign of trust in the Creator, a time for worship, fellowship, mercy, rest, and delight in God.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Genesis 2:2-3, Exodus 20:8-11, Mark 2:27-28.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Genesis%202%3A2-3%22%2C%22Exodus%2020%3A8-11%22%2C%22Mark%202%3A27-28%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1156,7 +1192,7 @@
       <div class="answer-long" hidden="">
         <p>Salvation has always been by grace through faith, never by keeping rules well enough to earn it — no amount of obedience can pay a debt only Christ's sacrifice can cover. Yet Scripture is equally clear that faith does not make the law void; instead, God's commandments describe what love for God and others looks like in practice. Once the heart is transformed by grace, obedience becomes a natural response of gratitude rather than an attempt to be accepted, and the Holy Spirit empowers believers to live out what the law describes rather than merely demands.</p>
         <p>The Ten Commandments retain their moral significance, including the fourth commandment. The law is not a ladder by which sinners climb to God; it is a loving description of life with God, written on the heart by the Spirit and lived out through faith in Jesus.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in John 14:15, Romans 3:31, Revelation 14:12.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22John%2014%3A15%22%2C%22Romans%203%3A31%22%2C%22Revelation%2014%3A12%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1175,7 +1211,7 @@
       <div class="answer-long" hidden="">
         <p>Throughout Scripture, death is repeatedly compared to sleep — a state without awareness, thought, or activity, rather than immediate conscious existence somewhere else. Jesus used this same picture when He described Lazarus as asleep before raising him, and Paul comforted grieving believers not by describing the dead as already present with God, but by pointing them to the resurrection, when Christ returns and the dead in Him rise first. This understanding offers real comfort: those who have died in faith are, in a sense, resting safely, unaware of time passing, until they are reunited body and soul at the resurrection.</p>
         <p>Human beings do not possess an inherently immortal soul. Immortality is God's gift in Christ, received at the resurrection, so Christian hope rests in Jesus' literal, bodily return rather than in communication with the dead or an immediately conscious afterlife.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Ecclesiastes 9:5, John 11:11-14, 1 Thessalonians 4:16-17.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Ecclesiastes%209%3A5%22%2C%22John%2011%3A11-14%22%2C%221%20Thessalonians%204%3A16-17%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1194,7 +1230,7 @@
       <div class="answer-long" hidden="">
         <p>The Bible pictures the second coming as a public, worldwide event: Christ descending visibly from heaven, seen by every eye, accompanied by angels and unmistakable in its glory — nothing like a quiet or secret event only some people notice. Scripture warns against being misled by claims that Christ has returned secretly or in a hidden way. Instead, believers are called to a posture of watching and readiness, not through fearful speculation about dates, but through a faithful daily walk with God, trusting that His return will bring full reunion with loved ones and the restoration of everything sin has broken.</p>
         <p>The Bible presents a visible, audible, and glorious second coming rather than a secret rapture. Jesus returns personally to resurrect the righteous, gather His people, and bring the long conflict with sin to its decisive close; readiness means faithful relationship and mission, not predicting a date.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Acts 1:11, Matthew 24:30-31, Revelation 1:7.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Acts%201%3A11%22%2C%22Matthew%2024%3A30-31%22%2C%22Revelation%201%3A7%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1213,7 +1249,7 @@
       <div class="answer-long" hidden="">
         <p>The Bible describes a judgment in which books of record are opened and God's justice is displayed before the watching universe, answering every question raised about His fairness and character. Rather than something to dread, this judgment is good news for those who trust Christ, because Jesus serves as their Advocate, presenting His own righteousness on their behalf. Judgment ultimately demonstrates that God is both perfectly just and abundantly merciful — evil will not go unanswered forever, but for those in Christ, the outcome is already secure through His finished work.</p>
         <p>Daniel 7 and related passages teach a pre-Advent judgment. This heavenly judgment does not inform God of facts He lacks; it publicly reveals His justice, confirms the genuineness of faith, and shows the universe that God saves those who trust in Christ while respecting human freedom.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Daniel 7:9-10, Ecclesiastes 12:14, 1 John 2:1.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Daniel%207%3A9-10%22%2C%22Ecclesiastes%2012%3A14%22%2C%221%20John%202%3A1%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1232,7 +1268,7 @@
       <div class="answer-long" hidden="">
         <p>Scripture consistently describes the penalty for sin as death, not endless conscious torment — the wages of sin is death, not eternal life in agony. The imagery of a lake of fire represents complete and final destruction, consuming sin and its effects entirely rather than preserving them forever, which would make evil as immortal as good. This is consistent with God's character: His goal is not unending cruelty, but the full, final end of suffering, sin, and death, clearing the way for a new heaven and new earth where nothing harmful remains.</p>
         <p>The final fire is the second death: the complete and irreversible destruction of sin and unrepentant sinners, not eternal conscious torment. This preserves both God's justice and His character of love, and it leaves the universe truly free from pain, rebellion, and death.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Romans 6:23, Malachi 4:1, Revelation 21:4.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Romans%206%3A23%22%2C%22Malachi%204%3A1%22%2C%22Revelation%2021%3A4%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1251,7 +1287,7 @@
       <div class="answer-long" hidden="">
         <p>Because the body is described as a temple of the Holy Spirit, Scripture calls believers to care for it wisely — through rest, nourishing food, physical activity, and avoiding what harms the body or clouds the mind. This is never framed as a way to earn God's favor; it is a grateful, practical response to being bought at a price and belonging fully to God. Healthy choices also support a clear mind for prayer, service, and discernment, reflecting God's desire to restore the whole person — body, mind, and spirit — rather than treating physical health as separate from spiritual life.</p>
         <p>People are an inseparable unity of body, mind, and spirit. Rest, exercise, wholesome food, temperance, avoiding addictive substances, and care for mental health are invitations to greater usefulness and joy, not tests by which God decides who is worthy of salvation.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in 1 Corinthians 6:19-20, Romans 12:1, 3 John 1:2.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%221%20Corinthians%206%3A19-20%22%2C%22Romans%2012%3A1%22%2C%223%20John%201%3A2%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1270,7 +1306,7 @@
       <div class="answer-long" hidden="">
         <p>The Holy Spirit is fully God, sent to indwell believers, convict the world of sin, and guide them into truth. His work is both inward and practical: producing the fruit of the Spirit such as love, joy, peace, and self-control, and equipping believers with gifts for serving the church and others. Being filled with the Spirit is not a one-time event but an ongoing, daily surrender, as believers rely on His power for prayer, discernment, and the strength to live differently than they could on their own.</p>
         <p>These themes are best read through the whole testimony of Scripture, emphasizing God's self-revelation in Christ, the active ministry of the Holy Spirit, and the restoration of the whole person. Bible study should lead to a changed life, compassionate service, and a clearer picture of God's loving character.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in John 14:26, John 16:8, Galatians 5:22-23.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22John%2014%3A26%22%2C%22John%2016%3A8%22%2C%22Galatians%205%3A22-23%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1289,7 +1325,7 @@
       <div class="answer-long" hidden="">
         <p>Baptism by immersion pictures the gospel itself: going under the water symbolizes being buried with Christ, and rising out of the water symbolizes being raised to walk in newness of life. It is meant to follow genuine repentance and instruction, marking a conscious decision to follow Jesus rather than a ritual performed without understanding. Baptism does not cause salvation, but it publicly and meaningfully confirms it, and it becomes the starting point for an ongoing life of discipleship, growth, and participation in the church community.</p>
         <p>Salvation is entirely by grace through faith in Christ. His atoning sacrifice, heavenly ministry, and intercession are the foundation of assurance; obedience, Sabbath faithfulness, and loving service are the fruit of a redeemed life, never a way to purchase acceptance with God.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Romans 6:3-4, Acts 2:38, Matthew 28:19-20.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Romans%206%3A3-4%22%2C%22Acts%202%3A38%22%2C%22Matthew%2028%3A19-20%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1308,7 +1344,7 @@
       <div class="answer-long" hidden="">
         <p>From the beginning, marriage was designed as a lifelong covenant in which two people become one, built on companionship, faithfulness, and mutual commitment rather than convenience. Paul describes marriage as a living picture of Christ's sacrificial love for the church, calling husbands to lead with self-giving love and wives to respond with respect, in a relationship of mutual honor rather than domination. Because marriage reflects something bigger than the couple themselves, Scripture treats it seriously, encouraging couples to build their relationship on shared faith, ongoing forgiveness, and ongoing investment rather than treating it as easily disposable.</p>
         <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Genesis 2:24, Ephesians 5:25-33, Matthew 19:4-6.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Genesis%202%3A24%22%2C%22Ephesians%205%3A25-33%22%2C%22Matthew%2019%3A4-6%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1327,7 +1363,7 @@
       <div class="answer-long" hidden="">
         <p>Deuteronomy pictures teaching children about God as a constant, woven-in part of everyday life — talked about at home, on the road, at bedtime, and in the morning, not confined to a single lesson each week. Discipline is meant to shape the heart, not merely control behavior, and Paul specifically warns fathers against provoking children to anger, pointing instead toward instruction and correction rooted in love. Modeling authentic faith at home, admitting mistakes, and praying with and for children all shape a home environment where trust in God feels natural rather than forced.</p>
         <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Deuteronomy 6:6-7, Ephesians 6:4, Proverbs 22:6.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Deuteronomy%206%3A6-7%22%2C%22Ephesians%206%3A4%22%2C%22Proverbs%2022%3A6%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1346,7 +1382,7 @@
       <div class="answer-long" hidden="">
         <p>Scripture consistently teaches that everything ultimately belongs to God, and people are entrusted as managers, or stewards, of the time, abilities, and resources placed in their care. Faithful stewardship includes giving — such as the tithe and additional offerings — not as a transaction to gain God's blessing, but as an act of worship and trust. Contentment, honesty in finances, and generosity toward those in need flow naturally once ownership is understood correctly: everything is on loan from a generous God, and giving cheerfully reflects His own character.</p>
         <p>Stewardship begins with the truth that God owns everything and people are His managers. Tithes support gospel ministry, offerings express willing generosity, and time, abilities, possessions, and the body are all entrusted for mission and neighbor-love. Giving is worship and gratitude, not a transaction that obligates God.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Malachi 3:10, Matthew 6:19-21, 2 Corinthians 9:7.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Malachi%203%3A10%22%2C%22Matthew%206%3A19-21%22%2C%222%20Corinthians%209%3A7%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1365,7 +1401,7 @@
       <div class="answer-long" hidden="">
         <p>The church is described as a body with many parts, each contributing different gifts for the good of the whole, held together by a shared faith in Christ rather than uniformity of personality or background. Gathering together for worship, teaching, prayer, and fellowship is not optional or old-fashioned; Hebrews specifically warns against neglecting this habit, especially as challenges increase. Beyond weekly worship, the early church modeled shared meals, mutual care, and active mission together, showing that spiritual growth happens best in community rather than in isolation.</p>
         <p>The church is a worldwide community raised up to proclaim the everlasting gospel, make disciples, care for people, and prepare the world for Christ's return. No congregation replaces a personal relationship with Jesus, but believers are called to worship, serve, practice spiritual gifts, and pursue unity together.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Hebrews 10:24-25, Acts 2:42, 1 Corinthians 12:27.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Hebrews%2010%3A24-25%22%2C%22Acts%202%3A42%22%2C%221%20Corinthians%2012%3A27%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1384,7 +1420,7 @@
       <div class="answer-long" hidden="">
         <p>Genesis describes a deliberate, purposeful creation — not a random accident — in which God speaks the universe into existence and forms humanity in His own image, giving people inherent dignity and purpose. The created world itself testifies to God's power and character, as the heavens are said to declare His glory even without words. Creation is also the foundation for the Sabbath: God rested on the seventh day not because He was tired, but to establish a pattern of rest and worship that would remind every generation of who made them and why they matter.</p>
         <p>Creation is a recent, literal, six-day work of God and the biblical foundation for human dignity, marriage, the seventh-day Sabbath, and worship of God as Creator. This conviction also gives the first angel's message its force: in a world of competing loyalties, worship belongs to the One who made heaven and earth.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Genesis 1:1, Genesis 1:27, Psalm 19:1.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Genesis%201%3A1%22%2C%22Genesis%201%3A27%22%2C%22Psalm%2019%3A1%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1403,7 +1439,7 @@
       <div class="answer-long" hidden="">
         <p>Paul's promise that God will always provide a way of escape from temptation means no one faces an impossible situation — help is always available, even when it does not feel that way. Jesus modeled the pattern for resisting temptation Himself, responding to each test in the wilderness with Scripture rather than self-effort alone. Practically, this means knowing God's Word well enough to recall it under pressure, avoiding known triggers where possible, staying honest with trusted others for accountability, and depending on the Spirit's strength rather than relying solely on willpower, which tends to run out.</p>
         <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in 1 Corinthians 10:13, James 4:7, Hebrews 4:15-16.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%221%20Corinthians%2010%3A13%22%2C%22James%204%3A7%22%2C%22Hebrews%204%3A15-16%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1422,7 +1458,7 @@
       <div class="answer-long" hidden="">
         <p>Rather than a vague, disembodied existence, the Bible describes a renewed, physical new earth — restored to conditions even better than the original creation — where God's people live in resurrected bodies, free from sickness, sorrow, and death. Revelation pictures God dwelling personally among His people, wiping away every tear, with no more pain or crying because the old order of things has fully passed away. This future is described as beyond human imagination in its goodness, offering real hope that present suffering is temporary and that a tangible, joyful, eternal life is still ahead.</p>
         <p>The great controversy reveals God's character as Christ ministers as our High Priest in the heavenly sanctuary. The dead await the resurrection, Christ's return will be visible and personal, and prophecy calls believers to faithful mission rather than date-setting or fear.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Revelation 21:1-4, Isaiah 65:17, 1 Corinthians 2:9.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Revelation%2021%3A1-4%22%2C%22Isaiah%2065%3A17%22%2C%221%20Corinthians%202%3A9%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1441,7 +1477,7 @@
       <div class="answer-long" hidden="">
         <p>Scripture consistently affirms that there is only one God, yet it also presents Father, Son, and Holy Spirit each as fully divine, distinct in role, and inseparably united in love and purpose. At Jesus' baptism, all three are present together: the Son in the water, the Spirit descending like a dove, and the Father speaking from heaven. Jesus commanded baptism in the single name of the Father, Son, and Holy Spirit, and the Spirit is described with the same divine attributes as the Father and Son. This is a mystery beyond full human comprehension, but it shapes how believers understand God's nature as inherently relational and loving, even before creation existed.</p>
         <p>These themes are best read through the whole testimony of Scripture, emphasizing God's self-revelation in Christ, the active ministry of the Holy Spirit, and the restoration of the whole person. Bible study should lead to a changed life, compassionate service, and a clearer picture of God's loving character.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Matthew 28:19, Matthew 3:16-17, 2 Corinthians 13:14.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Matthew%2028%3A19%22%2C%22Matthew%203%3A16-17%22%2C%222%20Corinthians%2013%3A14%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1460,7 +1496,7 @@
       <div class="answer-long" hidden="">
         <p>John's Gospel opens by identifying Jesus as the Word who was with God, who was God, and through whom everything was created, then describes Him becoming flesh and living among us. Jesus accepted worship, claimed unity with the Father, and forgave sins — something Scripture reserves for God alone. At the same time, He hungered, wept, grew tired, and died, showing genuine humanity. This dual nature is essential to the gospel: only someone fully divine could pay an infinite debt, and only someone fully human could represent humanity as a substitute.</p>
         <p>These themes are best read through the whole testimony of Scripture, emphasizing God's self-revelation in Christ, the active ministry of the Holy Spirit, and the restoration of the whole person. Bible study should lead to a changed life, compassionate service, and a clearer picture of God's loving character.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in John 1:1-3, 14, Colossians 2:9, Philippians 2:6-8.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22John%201%3A1-3%2C%2014%22%2C%22Colossians%202%3A9%22%2C%22Philippians%202%3A6-8%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1479,7 +1515,7 @@
       <div class="answer-long" hidden="">
         <p>Many biblical figures, including John the Baptist and Thomas, expressed real doubt, and God met their honesty with patient answers rather than rejection. Bringing questions to God directly — through prayer, Scripture study, and honest conversation with trusted believers — is far healthier than suppressing doubt or hiding it out of shame. Remembering specific ways God has been faithful in the past builds a foundation for trusting Him with what is still unclear. Doubt handled honestly, rather than ignored, can actually deepen and mature genuine faith over time.</p>
         <p>These themes are best read through the whole testimony of Scripture, emphasizing God's self-revelation in Christ, the active ministry of the Holy Spirit, and the restoration of the whole person. Bible study should lead to a changed life, compassionate service, and a clearer picture of God's loving character.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Mark 9:24, John 20:27-29, Jude 1:22.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Mark%209%3A24%22%2C%22John%2020%3A27-29%22%2C%22Jude%201%3A22%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1498,7 +1534,7 @@
       <div class="answer-long" hidden="">
         <p>A large part of God's will is already clearly revealed in Scripture — to love God and others, live with integrity, and reflect Christ's character — so seeking direction starts there rather than waiting for a special sign. For specific decisions, Scripture models seeking wise counsel, praying for clarity, watching for how God provides or closes doors, and paying attention to the peace or conviction of the Holy Spirit. Trusting God's care means moving forward in faith on decisions that align with biblical wisdom, resting in the confidence that He directs the steps of those who commit their way to Him.</p>
         <p>These themes are best read through the whole testimony of Scripture, emphasizing God's self-revelation in Christ, the active ministry of the Holy Spirit, and the restoration of the whole person. Bible study should lead to a changed life, compassionate service, and a clearer picture of God's loving character.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Proverbs 3:5-6, Psalm 32:8, James 1:5.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Proverbs%203%3A5-6%22%2C%22Psalm%2032%3A8%22%2C%22James%201%3A5%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1517,7 +1553,7 @@
       <div class="answer-long" hidden="">
         <p>Spiritual gifts are Spirit-given abilities such as teaching, encouragement, service, leadership, mercy, or generosity, distributed to different believers so the whole church functions like a healthy body with many necessary parts. No one receives every gift, and no gift is more spiritually significant than another when used in love — the goal is mutual benefit, not personal status. Gifts are often discovered through serving, noticing what brings genuine fruit and joy, and receiving feedback from other believers, rather than through abstract self-reflection alone.</p>
         <p>These themes are best read through the whole testimony of Scripture, emphasizing God's self-revelation in Christ, the active ministry of the Holy Spirit, and the restoration of the whole person. Bible study should lead to a changed life, compassionate service, and a clearer picture of God's loving character.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in 1 Corinthians 12:4-7, Romans 12:4-8, 1 Peter 4:10-11.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%221%20Corinthians%2012%3A4-7%22%2C%22Romans%2012%3A4-8%22%2C%221%20Peter%204%3A10-11%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1536,7 +1572,7 @@
       <div class="answer-long" hidden="">
         <p>Throughout Scripture, fasting accompanies serious prayer — seeking guidance, repenting, or drawing near to God in times of crisis or decision. Jesus assumed His followers would fast and taught that it should be done sincerely, without seeking public attention or praise for the sacrifice. Fasting is not a technique to force God's hand or a means of earning spiritual credit; rather, it is a physical way of expressing humility and dependence, clearing space so attention can focus more fully on prayer and listening to God.</p>
         <p>These themes are best read through the whole testimony of Scripture, emphasizing God's self-revelation in Christ, the active ministry of the Holy Spirit, and the restoration of the whole person. Bible study should lead to a changed life, compassionate service, and a clearer picture of God's loving character.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Matthew 6:16-18, Joel 2:12-13, Acts 13:2-3.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Matthew%206%3A16-18%22%2C%22Joel%202%3A12-13%22%2C%22Acts%2013%3A2-3%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1555,7 +1591,7 @@
       <div class="answer-long" hidden="">
         <p>Before returning to heaven, Jesus gave His followers a clear commission: go and make disciples of all nations, teaching them to follow everything He commanded. This mission flows naturally from grace — those who have experienced forgiveness and hope want others to know it is available too. Sharing the gospel is not about pressure or manipulation; it includes living a visibly transformed life, serving practical needs, and speaking honestly about faith when opportunities arise. This mission is described as continuing until Christ's return, giving urgency and purpose to how believers live and relate to others.</p>
         <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Matthew 28:18-20, Matthew 24:14, Romans 10:14-15.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Matthew%2028%3A18-20%22%2C%22Matthew%2024%3A14%22%2C%22Romans%2010%3A14-15%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1574,7 +1610,7 @@
       <div class="answer-long" hidden="">
         <p>The Bible never treats grief as a sign of weak faith — Jesus Himself wept at the tomb of a friend, and the Psalms are full of raw, honest sorrow brought openly to God. At the same time, grief for believers is described as different from grief without hope, because death is temporary, not final, for those united to Christ. God is described as especially near to the brokenhearted and to those crushed in spirit, inviting honest lament rather than forced positivity. The promise of the resurrection, when God will reunite loved ones and wipe away every tear, offers a future hope that can hold real grief and real comfort together.</p>
         <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Psalm 34:18, John 11:33-35, 1 Thessalonians 4:13-14.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Psalm%2034%3A18%22%2C%22John%2011%3A33-35%22%2C%221%20Thessalonians%204%3A13-14%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1593,7 +1629,7 @@
       <div class="answer-long" hidden="">
         <p>Work existed before sin entered the world, given to humanity as a meaningful part of caring for creation, not as a punishment. Paul instructs believers to work heartily, as if working for the Lord rather than merely for human supervisors, which reframes even ordinary tasks as an act of worship. Honesty, diligence, and fair treatment of others are consistently emphasized, along with a caution against greed or defining identity entirely by career success. Rest is also built into the pattern of work through the Sabbath, protecting against the exhaustion of nonstop labor.</p>
         <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Colossians 3:23-24, Genesis 2:15, Proverbs 12:24.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Colossians%203%3A23-24%22%2C%22Genesis%202%3A15%22%2C%22Proverbs%2012%3A24%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1612,7 +1648,7 @@
       <div class="answer-long" hidden="">
         <p>Scripture acknowledges that anger is a real human emotion — even Jesus displayed righteous anger at injustice — but it draws a clear line between feeling anger and being controlled by it. Paul's instruction not to let the sun go down on anger points to resolving conflict promptly rather than letting resentment build. James urges believers to be slow to become angry, since human anger rarely produces the righteousness God desires. Practically, this means pausing before reacting, seeking to understand the other person, and pursuing reconciliation quickly rather than nursing a grudge.</p>
         <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Ephesians 4:26-27, James 1:19-20, Proverbs 15:1.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Ephesians%204%3A26-27%22%2C%22James%201%3A19-20%22%2C%22Proverbs%2015%3A1%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1631,7 +1667,7 @@
       <div class="answer-long" hidden="">
         <p>In the Olivet Discourse, Jesus described a range of signs — wars, earthquakes, famines, false teachers, increasing lawlessness, and the gospel being preached to the whole world — pointing to His return without giving an exact timeline. He explicitly said no one knows the day or hour, warning against confident date-setting, which Scripture consistently discourages. Instead of promoting fear or speculation, these signs are meant to encourage steady faithfulness: staying spiritually alert, continuing to love and serve others, and living each day ready to meet Christ rather than anxious about timing.</p>
         <p>The great controversy reveals God's character as Christ ministers as our High Priest in the heavenly sanctuary. The dead await the resurrection, Christ's return will be visible and personal, and prophecy calls believers to faithful mission rather than date-setting or fear.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Matthew 24:6-14, Matthew 24:36, Luke 21:34-36.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Matthew%2024%3A6-14%22%2C%22Matthew%2024%3A36%22%2C%22Luke%2021%3A34-36%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1650,7 +1686,7 @@
       <div class="answer-long" hidden="">
         <p>Daniel and Revelation are often called apocalyptic literature, using vivid symbols — beasts, horns, numbers, and visions — to communicate real historical and future events in a way meant to be interpreted symbolically rather than always literally. A reliable approach lets Scripture interpret Scripture, comparing similar symbols across both books and other prophetic passages rather than relying on outside speculation. The consistent message across these prophecies is reassurance: despite the rise of powerful, opposing forces throughout history, God remains sovereign, and the story ends with Christ's decisive victory and the full establishment of His kingdom.</p>
         <p>The great controversy reveals God's character as Christ ministers as our High Priest in the heavenly sanctuary. The dead await the resurrection, Christ's return will be visible and personal, and prophecy calls believers to faithful mission rather than date-setting or fear.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Daniel 2:44, Revelation 1:1-3, Revelation 19:11-16.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Daniel%202%3A44%22%2C%22Revelation%201%3A1-3%22%2C%22Revelation%2019%3A11-16%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1669,7 +1705,7 @@
       <div class="answer-long" hidden="">
         <p>The practice of tithing predates the law given at Sinai, appearing when Abraham gave a tenth to Melchizedek, and it continues through the Old Testament as a way of acknowledging God as the source of every blessing. Malachi describes tithing as a test of trust, with a promise of blessing tied to faithfulness in this area. In the New Testament, Jesus affirms tithing while emphasizing that justice, mercy, and faithfulness must not be neglected. Giving is meant to flow from a willing, cheerful heart rather than pressure or guilt, with tithing serving as a meaningful, tangible starting point for broader biblical generosity.</p>
         <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Malachi 3:8-10, Genesis 14:18-20, Matthew 23:23.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Malachi%203%3A8-10%22%2C%22Genesis%2014%3A18-20%22%2C%22Matthew%2023%3A23%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1688,7 +1724,7 @@
       <div class="answer-long" hidden="">
         <p>Scripture repeatedly promises that believers are never truly alone, since God Himself promises to never leave or forsake His people, even in the most isolating circumstances. At the same time, God designed people for community, which is part of why the church is described as a body — meant to notice, include, and care for members who are struggling or isolated. Practical steps include being honest about loneliness rather than hiding it, actively seeking connection within a faith community, and serving others, which often reduces isolation while creating meaningful relationships over time.</p>
         <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Deuteronomy 31:6, Psalm 68:6, Hebrews 10:24-25.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Deuteronomy%2031%3A6%22%2C%22Psalm%2068%3A6%22%2C%22Hebrews%2010%3A24-25%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1707,7 +1743,7 @@
       <div class="answer-long" hidden="">
         <p>The law of God is a gracious expression of His holy and loving character. It points out sin, gives a trustworthy standard for right and wrong, and teaches believers how to love God and their neighbors in practical ways. The law cannot justify sinners or replace faith in Christ, but grace does not make obedience meaningless. Through the Spirit, believers learn to delight in God's instruction and live it out as a response of gratitude.</p>
         <p>Salvation is entirely by grace through faith in Christ. His atoning sacrifice, heavenly ministry, and intercession are the foundation of assurance; obedience, Sabbath faithfulness, and loving service are the fruit of a redeemed life, never a way to purchase acceptance with God.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Romans 3:20, Matthew 22:37-40, John 14:15.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Romans%203%3A20%22%2C%22Matthew%2022%3A37-40%22%2C%22John%2014%3A15%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1726,7 +1762,7 @@
       <div class="answer-long" hidden="">
         <p>The sanctuary was designed as a visible lesson about God's presence, the seriousness of sin, and the way He restores sinners. Its sacrifices pointed to Christ's once-for-all death, while the priestly ministry anticipated Jesus as our compassionate High Priest in heaven. The sanctuary message assures believers that salvation is not only pardon for the past but also Christ's continuing work to cleanse, intercede, and prepare His people for His return.</p>
         <p>The sanctuary unites the cross, Christ's present intercession, the judgment, and the final removal of sin. The earthly services pointed forward to Jesus, the true High Priest, whose once-for-all sacrifice provides forgiveness and whose heavenly ministry applies the benefits of redemption.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Exodus 25:8, Hebrews 8:1-2, Hebrews 9:11-14.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Exodus%2025%3A8%22%2C%22Hebrews%208%3A1-2%22%2C%22Hebrews%209%3A11-14%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1745,7 +1781,7 @@
       <div class="answer-long" hidden="">
         <p>The three angels' messages are a final gospel proclamation before Christ's return. The first angel announces the eternal gospel and calls every nation to fear God, give Him glory, and worship Him as Creator. The second exposes the fall of Babylon, representing systems that turn people away from biblical truth. The third warns against worshiping the beast and receiving its mark, while Scripture highlights the endurance of God's people who keep His commandments and hold to faith in Jesus.</p>
         <p>Revelation 14:6-12 is a present, worldwide gospel appeal: worship the Creator, leave Babylon's confusion, reject coercive false worship, and remain loyal to Jesus through faith that produces obedience. The message is urgent, but it is good news centered on the everlasting gospel.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Revelation 14:6-12, Revelation 18:1-4, Exodus 20:11.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Revelation%2014%3A6-12%22%2C%22Revelation%2018%3A1-4%22%2C%22Exodus%2020%3A11%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1764,7 +1800,7 @@
       <div class="answer-long" hidden="">
         <p>The Bible records women such as Deborah leading Israel as a judge and prophet, Phoebe serving as a deacon, Priscilla teaching Apollos alongside her husband, and Joel's promise — quoted at Pentecost — that God's Spirit would fall on sons and daughters alike, enabling both to prophesy. At the same time, Paul's instructions in 1 Corinthians 14 and 1 Timothy 2 about order in worship and the office of elder have been read by some as limiting the ordained pastoral role to men, while others read them as addressing specific local disruptions rather than a universal rule for every context. Galatians 3:28 affirms that in Christ there is no spiritual hierarchy between male and female. Given this range within Scripture, believers can affirm women serving fully in ministry, teaching, and leadership according to their spiritual gifts, while extending grace and humility toward fellow Christians who apply these specific passages differently regarding ordination.</p>
         <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Judges 4:4-5, Romans 16:1-2, Acts 2:17-18, Galatians 3:28.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Judges%204%3A4-5%22%2C%22Romans%2016%3A1-2%22%2C%22Acts%202%3A17-18%22%2C%22Galatians%203%3A28%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1783,7 +1819,7 @@
       <div class="answer-long" hidden="">
         <p>From creation, Scripture presents marriage as a covenant between a man and a woman becoming one flesh, and passages such as Romans 1 and 1 Corinthians 6 name same-sex sexual activity among behaviors that fall outside God's design for intimacy. It is important to distinguish attraction or temptation, which is not itself sin, from chosen behavior. Scripture is equally clear that no struggle places a person beyond grace: 1 Corinthians 6:11 tells believers who once lived in various sins, 'such were some of you,' before describing how they were washed, sanctified, and justified in Christ. Every person carries the image of God and deserves to be treated with compassion, respect, and welcome in the church community. Like every other believer, those who experience same-sex attraction are called to grow in Christlike character through the Spirit's ongoing, patient work, not to be singled out, shamed, or excluded.</p>
         <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Genesis 2:24, Romans 1:26-27, 1 Corinthians 6:9-11.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Genesis%202%3A24%22%2C%22Romans%201%3A26-27%22%2C%221%20Corinthians%206%3A9-11%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1802,7 +1838,7 @@
       <div class="answer-long" hidden="">
         <p>Leviticus 19:28 forbids cutting the body for the dead or marking it with tattoos, a command given in the context of pagan mourning and idol-worship practices common among Israel's neighbors, rather than a general command applying to every era and culture. The New Testament shifts the emphasis from external rule-keeping to the underlying principle that the body is a temple of the Holy Spirit, bought at a price and meant to glorify God. This means decisions about tattoos or body modification are best weighed through wisdom rather than a flat rule: considering motive, permanence, message, health, and whether a choice reflects self-control and honors God, rather than treating ink itself as inherently sinful.</p>
         <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Leviticus 19:28, 1 Corinthians 6:19-20, 1 Corinthians 10:31.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Leviticus%2019%3A28%22%2C%221%20Corinthians%206%3A19-20%22%2C%221%20Corinthians%2010%3A31%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1821,7 +1857,7 @@
       <div class="answer-long" hidden="">
         <p>Romans 8 promises that nothing in all creation can separate believers from the love of God, and Jesus said no one can snatch His sheep out of His hand — powerful assurance for anyone who is trusting Him today. At the same time, Jesus described Himself as the vine and believers as branches, warning that a branch that does not abide in Him withers and is removed, and Hebrews and 2 Peter both warn soberly about those who deliberately, knowingly turn back from a genuine relationship with Christ. The consistent picture is not that salvation is earned or that momentary sin or doubt cancels it, but that salvation is kept secure through an ongoing, living faith relationship with Christ; security is real and trustworthy for all who continue to abide in Him by grace, while Scripture takes seriously the danger of deliberately, finally rejecting Him.</p>
         <p>Salvation is entirely by grace through faith in Christ. His atoning sacrifice, heavenly ministry, and intercession are the foundation of assurance; obedience, Sabbath faithfulness, and loving service are the fruit of a redeemed life, never a way to purchase acceptance with God.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in John 15:4-6, Romans 8:38-39, Hebrews 6:4-6.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22John%2015%3A4-6%22%2C%22Romans%208%3A38-39%22%2C%22Hebrews%206%3A4-6%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1840,7 +1876,7 @@
       <div class="answer-long" hidden="">
         <p>The Bible does not explicitly mention masturbation, so any application depends on broader biblical principles rather than a direct command. Jesus taught that lust itself, not only outward action, matters to God, which points believers toward examining the thoughts and desires connected to any behavior. Paul calls believers to sexual self-control and holiness, and to treat the body as belonging to God rather than being ruled by unchecked desire, especially where habits become compulsive or entangled with pornography. Rather than a legalistic rule, Scripture invites honest self-examination before God, freedom from shame through grace, and reliance on the Holy Spirit's help to grow in purity and self-control over time.</p>
         <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Matthew 5:27-28, 1 Thessalonians 4:3-5, 1 Corinthians 6:19-20.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Matthew%205%3A27-28%22%2C%221%20Thessalonians%204%3A3-5%22%2C%221%20Corinthians%206%3A19-20%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1859,7 +1895,7 @@
       <div class="answer-long" hidden="">
         <p>Acts 17:26 teaches that God made every nation of humanity 'from one man,' establishing a shared human origin that undercuts any notion of racial superiority or a biblical basis for restricting marriage by race. When Miriam and Aaron criticized Moses for marrying a Cushite woman, God rebuked their objection rather than Moses' marriage. The Old Testament warnings against intermarrying with certain surrounding nations were rooted in the danger of being drawn into idol worship, not ethnicity itself, and Galatians 3:28 affirms that in Christ, ethnic distinctions carry no spiritual hierarchy. What matters for a lasting, God-honoring marriage is shared faith, character, and commitment, not racial or ethnic background.</p>
         <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Acts 17:26, Numbers 12:1-10, Galatians 3:28.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Acts%2017%3A26%22%2C%22Numbers%2012%3A1-10%22%2C%22Galatians%203%3A28%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1878,7 +1914,7 @@
       <div class="answer-long" hidden="">
         <p>Genesis 5:4 states that Adam lived many years after Seth's birth and had additional sons and daughters, indicating a growing human family beyond the individuals named in the early chapters of Genesis. Since Scripture teaches that the entire human race descended from a single first pair, Cain's wife would necessarily have been a close relative, most likely a sister or niece. This kind of marriage was not forbidden until much later, when the Mosaic law restricted close-relative marriage, likely both for moral order and because accumulated genetic effects had made such unions medically riskier by that time. Scripture is intentionally brief here, focused on the moral and spiritual lessons of Cain's story rather than exhaustive genealogical detail, so some uncertainty about the exact details remains appropriate.</p>
         <p>These themes are best read through the whole testimony of Scripture, emphasizing God's self-revelation in Christ, the active ministry of the Holy Spirit, and the restoration of the whole person. Bible study should lead to a changed life, compassionate service, and a clearer picture of God's loving character.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Genesis 4:16-17, Genesis 5:4, Acts 17:26.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Genesis%204%3A16-17%22%2C%22Genesis%205%3A4%22%2C%22Acts%2017%3A26%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1897,7 +1933,7 @@
       <div class="answer-long" hidden="">
         <p>Scripture never singles out suicide as an unforgivable act, and it does not authorize any human being to declare another person's eternal destiny — that judgment belongs to God alone, who alone sees the full picture of pain, illness, and struggle behind such a moment. Salvation rests on a relationship with Christ sustained by grace, not on the circumstances of a person's final moment, and God is described as especially near to the brokenhearted and to those crushed in spirit. Rather than offering false certainty in either direction, Scripture calls the church to surround grieving families with compassion, and calls anyone experiencing thoughts of suicide to reach out immediately — to a trusted friend, pastor, counselor, or a crisis helpline — trusting that God's presence and help are available in the darkest moments, and that no situation is beyond His care.</p>
         <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Psalm 34:18, Romans 14:10-12, Psalm 139:13-16.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Psalm%2034%3A18%22%2C%22Romans%2014%3A10-12%22%2C%22Psalm%20139%3A13-16%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1916,7 +1952,7 @@
       <div class="answer-long" hidden="">
         <p>Genesis describes animals receiving the same 'breath of life' given to humanity, and Ecclesiastes 3 candidly admits that no one can be fully certain where the spirit of an animal goes compared to a human being. Scripture does not promise personal, individual reunions with pets the way it promises resurrection for people made in God's image. At the same time, the prophetic picture of the new earth in Isaiah 11 describes animals such as the wolf and lamb living together in peace, suggesting that animal life in general has a place in God's restored creation. Combined with the tenderness Scripture shows toward animals — from the righteous caring for the life of their animal to God's own attention to the sparrows — this gives comfort and hope, even where specific details are left unstated.</p>
         <p>The great controversy reveals God's character as Christ ministers as our High Priest in the heavenly sanctuary. The dead await the resurrection, Christ's return will be visible and personal, and prophecy calls believers to faithful mission rather than date-setting or fear.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Ecclesiastes 3:19-21, Isaiah 11:6-9, Matthew 10:29.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Ecclesiastes%203%3A19-21%22%2C%22Isaiah%2011%3A6-9%22%2C%22Matthew%2010%3A29%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1935,7 +1971,7 @@
       <div class="answer-long" hidden="">
         <p>In Acts 2, tongues appear as actual human languages, allowing the gospel to be understood immediately by people from many nations without a language barrier. Paul confirms tongues as one of several genuine gifts distributed by the Spirit for the church's benefit, but in 1 Corinthians 14 he places clear guardrails on its use in public worship: it should be interpreted so the whole congregation can be built up, exercised in turn rather than chaos, and never elevated above intelligible teaching and prophecy, which edify the church far more directly. Whether or not the specific gift continues in exactly its New Testament form, the underlying principle stands: any spiritual gift, including tongues, is meant to build up the church in an orderly, understandable way, not to draw attention to the individual or create confusion.</p>
         <p>These themes are best read through the whole testimony of Scripture, emphasizing God's self-revelation in Christ, the active ministry of the Holy Spirit, and the restoration of the whole person. Bible study should lead to a changed life, compassionate service, and a clearer picture of God's loving character.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Acts 2:4-6, 1 Corinthians 12:7-11, 1 Corinthians 14:12-13, 40.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Acts%202%3A4-6%22%2C%221%20Corinthians%2012%3A7-11%22%2C%221%20Corinthians%2014%3A12-13%2C%2040%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1954,7 +1990,7 @@
       <div class="answer-long" hidden="">
         <p>Because the term 'dinosaur' was coined in the nineteenth century, Scripture naturally does not use it, but Job 40-41 describes Behemoth and Leviathan as enormous, powerful creatures unlike anything commonly seen today, which many readers connect to large ancient animals. Genesis places the creation of land animals and humanity within the same sixth day of the creation week, rather than separated by long ages, so any such creatures would have existed alongside early humanity rather than millions of years before. Their disappearance is often understood in light of the global Flood described in Genesis 6-9 and the dramatic climate changes that followed it. Scripture does not give exhaustive detail here, so some humility about specifics is appropriate, but its consistent framework places these creatures within a relatively recent, unified creation history.</p>
         <p>These themes are best read through the whole testimony of Scripture, emphasizing God's self-revelation in Christ, the active ministry of the Holy Spirit, and the restoration of the whole person. Bible study should lead to a changed life, compassionate service, and a clearer picture of God's loving character.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Job 40:15-24, Job 41:1, Genesis 1:24-25.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Job%2040%3A15-24%22%2C%22Job%2041%3A1%22%2C%22Genesis%201%3A24-25%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1973,7 +2009,7 @@
       <div class="answer-long" hidden="">
         <p>Proverbs vividly warns against the sorrow, danger, and deception that come with strong drink, going so far as to counsel not even looking at wine when it sparkles in the cup. Priests were forbidden from drinking before entering the tabernacle so their judgment and service to God would stay clear, and Ephesians commands believers not to be drunk with wine, contrasting it with being filled with the Spirit. Since the body belongs to God as a temple of the Holy Spirit, and since alcohol can cloud judgment, harm health, and lead others into destructive habits, choosing total abstinence honors both the clear biblical warnings against drunkenness and the broader call to full self-control, a clear mind, and a body kept fit for God's service.</p>
         <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Proverbs 23:29-32, Ephesians 5:18, 1 Corinthians 6:19-20.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Proverbs%2023%3A29-32%22%2C%22Ephesians%205%3A18%22%2C%221%20Corinthians%206%3A19-20%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1992,7 +2028,7 @@
       <div class="answer-long" hidden="">
         <p>Scripture repeatedly warns that the love of money is a root of many kinds of evil, and that those eager to get rich fall into temptation and harmful desires. Gambling relies on chance and the hope of gaining at another person's loss rather than honest labor, and Proverbs observes that wealth gained quickly and carelessly tends to dwindle away. Ecclesiastes notes that those who love money are never satisfied by it, describing a restless cycle gambling often feeds. Instead, Scripture calls believers to trust God's provision, work diligently and honestly for their needs, hold money loosely with contentment, and avoid practices that stir greed or exploit others' losses for personal gain.</p>
         <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in 1 Timothy 6:9-10, Proverbs 13:11, Ecclesiastes 5:10.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%221%20Timothy%206%3A9-10%22%2C%22Proverbs%2013%3A11%22%2C%22Ecclesiastes%205%3A10%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -2011,7 +2047,7 @@
       <div class="answer-long" hidden="">
         <p>From the beginning, Genesis describes a man and woman becoming 'one flesh' within the covenant of marriage, and the New Testament reinforces this pattern by calling believers to abstain from sexual immorality and to control their bodies in holiness and honor rather than in the passion of uncontrolled desire. Hebrews states plainly that the marriage bed is undefiled but that God will judge sexual immorality outside of it, and Paul teaches that sexual union itself creates a profound, uniting bond meant to be reserved for marriage. This is never presented as a barrier to full acceptance for those who have already crossed this line; grace fully forgives, and believers are called forward into ongoing growth in purity, self-control, and honoring both their own body and a future spouse.</p>
         <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in 1 Corinthians 6:18-20, 1 Thessalonians 4:3-8, Hebrews 13:4.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%221%20Corinthians%206%3A18-20%22%2C%221%20Thessalonians%204%3A3-8%22%2C%22Hebrews%2013%3A4%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -2030,7 +2066,7 @@
       <div class="answer-long" hidden="">
         <p>Ephesians 4:9 describes Christ 'descending into the lower parts of the earth,' language most naturally understood as referring to His incarnation and burial — coming down to our mortal, earthly existence and the grave — rather than a literal journey to a place of conscious punishment. First Peter 3:18-20's mention of Christ preaching 'to the spirits in prison' fits naturally with Peter's own explanation elsewhere that the Spirit of Christ was at work through Noah, 'a preacher of righteousness,' warning the disobedient people of his day who are now, from our present vantage point, spirits awaiting final judgment. On the cross, Jesus committed His spirit to the Father and later told the thief he would be with Him 'in paradise,' language pointing to the certainty of the promise rather than a same-day conscious meeting, consistent with death being described elsewhere in Scripture as a sleep until the resurrection.</p>
         <p>The great controversy reveals God's character as Christ ministers as our High Priest in the heavenly sanctuary. The dead await the resurrection, Christ's return will be visible and personal, and prophecy calls believers to faithful mission rather than date-setting or fear.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Ephesians 4:9-10, 1 Peter 3:18-20, Luke 23:43, 46.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Ephesians%204%3A9-10%22%2C%221%20Peter%203%3A18-20%22%2C%22Luke%2023%3A43%2C%2046%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -2049,7 +2085,7 @@
       <div class="answer-long" hidden="">
         <p>Jesus taught that God's original design was for marriage to be a lifelong, one-flesh union, but He identified sexual immorality as grounds on which the marriage covenant could rightly be considered broken, permitting divorce in that situation. Paul, addressing a different scenario, taught that if an unbelieving spouse chooses to leave the marriage, the believing spouse is 'not bound' and is free, since God has called believers to peace rather than being forced to hold together what the other person has abandoned. Malachi's statement that God hates divorce reflects the real pain and brokenness divorce causes, not a condemnation of those who have suffered through it. Outside of these specific situations, Scripture consistently urges couples toward reconciliation, patience, and forgiveness, while also offering genuine grace, healing, and a renewed path forward to anyone who has already experienced divorce.</p>
         <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in Matthew 19:3-9, 1 Corinthians 7:10-15, Malachi 2:16.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Matthew%2019%3A3-9%22%2C%221%20Corinthians%207%3A10-15%22%2C%22Malachi%202%3A16%22%5D"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -2247,6 +2283,6 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20260914"></script>
   </body>
 </html>

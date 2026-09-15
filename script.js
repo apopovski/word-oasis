@@ -706,11 +706,18 @@ const promisePrevious = document.querySelector("#promise-previous");
 const promiseNext = document.querySelector("#promise-next");
 const promiseShare = document.querySelector("#promise-share");
 const promiseCopy = document.querySelector("#promise-copy");
+const promiseFacebookShare = document.querySelector("#promise-share-facebook");
+const promiseXShare = document.querySelector("#promise-share-x");
+const promiseLinkedInShare = document.querySelector("#promise-share-linkedin");
 const promiseStatus = document.querySelector("#promise-status");
 const questionForm = document.querySelector("#question-form");
 const questionInput = document.querySelector("#question-input");
 const questionTopic = document.querySelector("#question-topic");
 const questionEmail = document.querySelector("#question-email");
+const questionGender = document.querySelector("#question-gender");
+const questionLocation = document.querySelector("#question-location");
+const questionAge = document.querySelector("#question-age");
+const questionFaith = document.querySelector("#question-faith");
 const questionStatus = document.querySelector("#question-status");
 const questionResults = document.querySelector("#question-results");
 const questionResultsTitle = document.querySelector("#question-results-title");
@@ -1097,6 +1104,10 @@ async function handleQuestionSubmit(event) {
   event.preventDefault();
   const question = questionInput.value.trim();
   const email = questionEmail.value.trim();
+  const gender = questionGender ? questionGender.value.trim() : "";
+  const location = questionLocation ? questionLocation.value.trim() : "";
+  const age = questionAge && questionAge.value ? Number(questionAge.value) : "";
+  const faith = questionFaith ? questionFaith.value.trim() : "";
   const topic = questionTopic.value || "General";
   const matches = relatedAnswers(question, questionTopic.value);
 
@@ -1126,6 +1137,10 @@ async function handleQuestionSubmit(event) {
     question,
     topic,
     email,
+    gender,
+    location,
+    age,
+    faith,
     source: "word-oasis",
     submittedAt: new Date().toISOString(),
     relatedMatches: matches.map((answer) => answer.question),
@@ -1154,8 +1169,6 @@ async function handleQuestionSubmit(event) {
 }
 
 function answerTemplate(answer) {
-  const scriptureInlineText = answer.scriptures.join(", ");
-
   return `
     <article class="answer-card" id="${answer.id}">
       <div class="answer-tags">
@@ -1166,7 +1179,7 @@ function answerTemplate(answer) {
       <div class="answer-long" hidden>
         <p>${answer.longAnswer}</p>
         <p>${biblicalPerspective(answer)}</p>
-        <p class="scripture-in-text">This conclusion is grounded in the Bible, especially in ${scriptureInlineText}.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="${encodeURIComponent(JSON.stringify(answer.scriptures))}"></section>
       </div>
       <button type="button" class="read-more" aria-expanded="false">
         Read the full answer
@@ -1191,6 +1204,7 @@ function renderPromise() {
   const promise = currentPromise();
   promiseText.textContent = promise.text;
   promiseReference.textContent = promise.reference;
+  updatePromiseShareLinks();
   promiseStatus.textContent = "";
 }
 
@@ -1201,7 +1215,23 @@ function advancePromise(direction = 1) {
 
 function promiseShareText() {
   const promise = currentPromise();
-  return `"${promise.text}" — ${promise.reference}\n\nFind more Bible answers at ${window.location.href.split("#")[0]}`;
+  return `"${promise.text}" — ${promise.reference}\n\nShared from Word Oasis: ${promiseShareUrl()}`;
+}
+
+function promiseShareUrl() {
+  const url = new URL("https://wordoasis.org/");
+  url.searchParams.set("utm_source", "social");
+  url.searchParams.set("utm_medium", "share");
+  url.searchParams.set("utm_campaign", "daily_promise");
+  return url.href;
+}
+
+function updatePromiseShareLinks() {
+  const text = promiseShareText();
+  const url = promiseShareUrl();
+  promiseFacebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+  promiseXShare.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
+  promiseLinkedInShare.href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
 }
 
 async function sharePromise() {
@@ -1385,6 +1415,10 @@ function toggleReadMore(button) {
   longAnswer.hidden = isOpen;
   button.setAttribute("aria-expanded", String(!isOpen));
   button.textContent = isOpen ? "Read the full answer" : "Show shorter answer";
+
+  if (!isOpen) {
+    loadScriptureQuotes(card);
+  }
 }
 
 /* Bible verse modal: fetches public-domain verse text (World English Bible)
@@ -1436,6 +1470,47 @@ async function fetchVerseText(reference) {
   const text = data.text.trim().replace(/\s+/g, " ");
   verseCache.set(reference, text);
   return text;
+}
+
+async function loadScriptureQuotes(card) {
+  const quotes = card.querySelector(".scripture-quotes");
+  if (quotes.dataset.loaded || quotes.dataset.loading) {
+    return;
+  }
+
+  const references = JSON.parse(decodeURIComponent(quotes.dataset.scriptures));
+  quotes.dataset.loading = "true";
+  quotes.innerHTML = `<p class="scripture-quotes-heading">Bible passages</p><p class="verse-status">Loading passage text...</p>`;
+
+  try {
+    const passages = await Promise.all(
+      references.map(async (reference) => ({
+        reference,
+        text: await fetchVerseText(reference)
+      }))
+    );
+    quotes.innerHTML = `
+      <p class="scripture-quotes-heading">Bible passages</p>
+      ${passages
+        .map(
+          ({ reference, text }) => `
+            <blockquote class="scripture-quote">
+              <p>${text}</p>
+              <cite>${reference} (WEB)</cite>
+            </blockquote>
+          `
+        )
+        .join("")}
+    `;
+    quotes.dataset.loaded = "true";
+  } catch (error) {
+    quotes.innerHTML = `
+      <p class="scripture-quotes-heading">Bible passages</p>
+      <p class="verse-status">Could not load the passage text right now. Please check your connection and try again.</p>
+    `;
+  } finally {
+    delete quotes.dataset.loading;
+  }
 }
 
 verseModalClose.addEventListener("click", closeVerseModal);

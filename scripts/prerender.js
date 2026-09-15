@@ -86,7 +86,7 @@ function renderWithJsdom(html, scriptSource) {
   // Strip the external script tag; we eval script.js directly into the
   // window context below so no network access or file resolution is needed.
   const htmlWithoutAppScript = html.replace(
-    /\s*<script src="script\.js"><\/script>\s*/,
+    /\s*<script src="script\.js(?:\?[^"]*)?"><\/script>\s*/,
     "\n"
   );
 
