@@ -682,6 +682,90 @@ const answers = [
     category: "Life and Relationships",
     scriptures: ["Matthew 19:3-9", "1 Corinthians 7:10-15", "Malachi 2:16"],
     keywords: ["divorce", "remarriage", "marriage", "adultery", "abandonment", "separation"]
+  },
+  {
+    id: "answer-baptism-meaning",
+    question: "What does baptism symbolize in the Bible?",
+    shortAnswer:
+      "Baptism is a public confession of faith in Jesus, symbolizing death to the old life, burial with Christ, and rising to walk in newness of life.",
+    longAnswer:
+      "The New Testament presents baptism as a meaningful response to the gospel rather than a casual religious ritual. Going down into the water pictures burial with Christ, and coming up from the water pictures resurrection into a new life shaped by His grace. Baptism does not earn salvation, but it publicly identifies a believer with Jesus, His death and resurrection, and His people. In Acts, baptism follows repentance and faith as people receive the message of Christ and openly begin the life of discipleship.",
+    topics: ["Baptism", "Salvation", "Faith"],
+    category: "Faith and Salvation",
+    scriptures: ["Romans 6:3-4", "Acts 2:38", "Matthew 28:19-20"],
+    keywords: ["baptism meaning", "immersion", "new life", "repentance", "discipleship"]
+  },
+  {
+    id: "answer-forgiving-yourself",
+    question: "How can I forgive myself after I have sinned?",
+    shortAnswer:
+      "Self-forgiveness begins by trusting that God's forgiveness in Christ is greater than guilt. Confession, repentance, and receiving grace allow a believer to move forward without denying the seriousness of sin.",
+    longAnswer:
+      "Many people continue punishing themselves long after they have confessed sin to God, but Scripture directs the repentant heart to the sufficiency of Christ's mercy. Genuine repentance does not minimize wrongdoing; it agrees with God about sin and turns toward Him for cleansing. First John promises that God is faithful and just to forgive and cleanse those who confess. When God forgives, continuing to live under condemnation can become a refusal to trust His grace. Healthy self-forgiveness means making things right where possible, learning from failure, accepting needed accountability, and walking forward in the freedom Christ gives.",
+    topics: ["Forgiveness", "Salvation", "Comfort", "Christian Living"],
+    category: "Life and Relationships",
+    scriptures: ["1 John 1:9", "Romans 8:1", "Psalm 103:12"],
+    keywords: ["forgive myself", "guilt", "shame", "confession", "repentance", "grace"]
+  },
+  {
+    id: "answer-great-controversy-meaning",
+    question: "What is the great controversy in the Bible?",
+    shortAnswer:
+      "The great controversy is the Bible's picture of the conflict between Christ and Satan, truth and deception, love and rebellion, with God's character ultimately vindicated before the universe.",
+    longAnswer:
+      "Scripture describes more than isolated human struggles; it reveals a larger conflict behind history. Satan's rebellion began with pride and accusation against God's character, and earth became the place where sin's consequences are exposed and God's love is revealed most clearly in Christ. The cross shows that God wins not by coercion but by self-sacrificing love. Until evil is finally removed, believers are called to faithfulness, discernment, prayer, and confidence that Christ has already secured the outcome. This framework helps explain suffering without blaming God as the author of evil.",
+    topics: ["Great Controversy", "Prophecy", "Faith"],
+    category: "Hope and Prophecy",
+    scriptures: ["Revelation 12:7-12", "Genesis 3:15", "John 12:31-32"],
+    keywords: ["great controversy", "cosmic conflict", "satan", "evil", "spiritual warfare", "god's character"]
+  },
+  {
+    id: "answer-law-and-grace",
+    question: "How do law and grace work together in the Christian life?",
+    shortAnswer:
+      "Grace saves sinners through faith in Christ, while God's law shows what love looks like. Obedience is the fruit of salvation, not the price paid to receive it.",
+    longAnswer:
+      "The Bible never presents God's grace and God's law as enemies. Grace forgives, restores, and writes God's will on the heart; the law reveals God's character and shows what love for God and neighbor looks like in practical life. Legalism tries to use obedience as a ladder to earn acceptance, but the gospel teaches that acceptance comes through Christ alone. At the same time, grace does not make rebellion desirable. The Spirit leads believers into willing obedience because they have already been loved, rescued, and made new.",
+    topics: ["Law", "Salvation", "Christian Living", "Faith"],
+    category: "Faith and Salvation",
+    scriptures: ["Ephesians 2:8-10", "Romans 3:31", "John 14:15"],
+    keywords: ["law and grace", "obedience", "legalism", "commandments", "faith", "gospel"]
+  },
+  {
+    id: "answer-sanctuary-today",
+    question: "Why does the sanctuary message matter today?",
+    shortAnswer:
+      "The sanctuary message matters because it shows how God deals with sin through Christ's sacrifice, priestly ministry, judgment, cleansing, and final restoration.",
+    longAnswer:
+      "The earthly sanctuary was a living illustration of the gospel. Its sacrifices pointed forward to Jesus' death, its priestly ministry pointed to His intercession, and its Day of Atonement pointed to God's final work of cleansing and judgment. This message matters today because it gives believers assurance that Christ's ministry did not end at the cross; He continues to apply the benefits of His sacrifice, represent His people, and prepare the universe for the complete end of sin. The sanctuary keeps salvation centered on Jesus from beginning to end.",
+    topics: ["Sanctuary", "Salvation", "Prophecy"],
+    category: "Hope and Prophecy",
+    scriptures: ["Hebrews 4:14-16", "Hebrews 8:1-2", "Daniel 8:14"],
+    keywords: ["sanctuary message", "atonement", "high priest", "heavenly sanctuary", "judgment", "cleansing"]
+  },
+  {
+    id: "answer-ready-for-second-coming",
+    question: "How can I be ready for the Second Coming of Jesus?",
+    shortAnswer:
+      "Readiness for Jesus' return is not date-setting or fear. It is an active relationship with Christ that shows itself in faith, watchfulness, obedience, service, and hope.",
+    longAnswer:
+      "Jesus repeatedly warned His followers to stay awake, not because they should live in panic, but because discipleship can become sleepy, distracted, or careless. Readiness begins with trusting Christ now, receiving His grace, and staying connected to Him daily. It also includes practical faithfulness: forgiving others, serving people in need, sharing the gospel, and living with eternity in view. Prophecy is meant to strengthen hope and loyalty, not produce speculation. The safest preparation for Christ's return is a surrendered life with Him today.",
+    topics: ["Second Coming", "Prophecy", "Christian Living", "Faith"],
+    category: "Hope and Prophecy",
+    scriptures: ["Matthew 24:42-44", "Luke 21:34-36", "Titus 2:11-13"],
+    keywords: ["ready for second coming", "watchfulness", "Jesus return", "end times", "prepared", "hope"]
+  },
+  {
+    id: "answer-three-angels-everlasting-gospel",
+    question: "Why are the three angels' messages called the everlasting gospel?",
+    shortAnswer:
+      "The three angels' messages are called the everlasting gospel because their warnings are centered on the good news of worshiping the Creator, trusting Jesus, and remaining faithful before He returns.",
+    longAnswer:
+      "Revelation 14 begins with the everlasting gospel going to every nation, tribe, language, and people. The messages include urgent warnings, but they are not disconnected from grace. They call the world away from false worship and confusion because God desires people to receive truth, freedom, and salvation in Christ. The first angel points to the Creator, the second exposes Babylon's spiritual deception, and the third warns against coerced allegiance to powers opposed to God. The closing picture is a faithful people who keep God's commandments and hold to faith in Jesus, showing that the final message is both truth-filled and Christ-centered.",
+    topics: ["Three Angels", "Prophecy", "Faith", "Law"],
+    category: "Hope and Prophecy",
+    scriptures: ["Revelation 14:6-12", "Matthew 24:14", "John 14:6"],
+    keywords: ["everlasting gospel", "three angels messages", "Revelation 14", "worship", "Babylon", "faith of Jesus"]
   }
 ];
 
@@ -689,6 +773,19 @@ const state = {
   query: "",
   topic: "All"
 };
+
+function slugify(value) {
+  return value
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/['’]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function answerUrl(answer) {
+  return `/answers/${slugify(answer.question)}/`;
+}
 
 const searchInput = document.querySelector("#search-input");
 const searchForm = document.querySelector("#search-form");
@@ -709,6 +806,7 @@ const promiseCopy = document.querySelector("#promise-copy");
 const promiseFacebookShare = document.querySelector("#promise-share-facebook");
 const promiseXShare = document.querySelector("#promise-share-x");
 const promiseLinkedInShare = document.querySelector("#promise-share-linkedin");
+const promiseWhatsAppShare = document.querySelector("#promise-share-whatsapp");
 const promiseStatus = document.querySelector("#promise-status");
 const questionForm = document.querySelector("#question-form");
 const questionInput = document.querySelector("#question-input");
@@ -834,6 +932,7 @@ const biblePromises = [
 
 let promiseIndex = 0;
 let promiseRotation;
+let promiseHeightResizeTimer;
 
 const topicIcons = {
   Salvation: `
@@ -1174,7 +1273,7 @@ function answerTemplate(answer) {
       <div class="answer-tags">
         ${answer.topics.map((topic) => `<button type="button" class="tag-link" data-topic="${topic}">${topic}</button>`).join("")}
       </div>
-      <h3>${answer.question}</h3>
+      <h3><a href="${answerUrl(answer)}">${answer.question}</a></h3>
       <p class="answer-short">${answer.shortAnswer}</p>
       <div class="answer-long" hidden>
         <p>${answer.longAnswer}</p>
@@ -1202,10 +1301,43 @@ function currentPromise() {
 
 function renderPromise() {
   const promise = currentPromise();
+  updatePromiseTextHeight();
   promiseText.textContent = promise.text;
   promiseReference.textContent = promise.reference;
   updatePromiseShareLinks();
   promiseStatus.textContent = "";
+}
+
+function updatePromiseTextHeight() {
+  if (!promiseText || !promiseText.parentElement) {
+    return;
+  }
+
+  const width = promiseText.getBoundingClientRect().width;
+  if (!width) {
+    return;
+  }
+
+  const measurement = promiseText.cloneNode(false);
+  measurement.classList.add("promise-measure");
+  measurement.style.width = `${width}px`;
+  promiseText.parentElement.appendChild(measurement);
+
+  const maxHeight = biblePromises.reduce((height, promise) => {
+    measurement.textContent = promise.text;
+    return Math.max(height, measurement.scrollHeight);
+  }, 0);
+
+  measurement.remove();
+
+  if (maxHeight) {
+    promiseText.style.setProperty("--promise-text-height", `${Math.ceil(maxHeight)}px`);
+  }
+}
+
+function schedulePromiseTextHeightUpdate() {
+  window.clearTimeout(promiseHeightResizeTimer);
+  promiseHeightResizeTimer = window.setTimeout(updatePromiseTextHeight, 120);
 }
 
 function advancePromise(direction = 1) {
@@ -1215,7 +1347,7 @@ function advancePromise(direction = 1) {
 
 function promiseShareText() {
   const promise = currentPromise();
-  return `"${promise.text}" — ${promise.reference}\n\nShared from Word Oasis: ${promiseShareUrl()}`;
+  return `"${promise.text}" — ${promise.reference}`;
 }
 
 function promiseShareUrl() {
@@ -1229,16 +1361,35 @@ function promiseShareUrl() {
 function updatePromiseShareLinks() {
   const text = promiseShareText();
   const url = promiseShareUrl();
-  promiseFacebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
-  promiseXShare.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
+  const textWithUrl = `${text}\n\nShared from Word Oasis: ${url}`;
+  promiseFacebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`;
+  promiseXShare.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(textWithUrl)}`;
   promiseLinkedInShare.href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+  promiseWhatsAppShare.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(textWithUrl)}`;
+}
+
+function openPromiseShareWindow(url) {
+  const shareWindow = window.open(
+    url,
+    "wordOasisPromiseShare",
+    "width=720,height=720,left=120,top=80,menubar=no,toolbar=no,location=no,status=no"
+  );
+
+  if (shareWindow) {
+    shareWindow.focus();
+    promiseStatus.textContent = "A share composer opened. Choose Post or Share there to publish.";
+    return;
+  }
+
+  promiseStatus.textContent = "Your browser blocked the share window. Please allow pop-ups or use Copy.";
 }
 
 async function sharePromise() {
   const text = promiseShareText();
+  const url = promiseShareUrl();
   if (navigator.share) {
-    await navigator.share({ title: "Bible Promise", text, url: window.location.href.split("#")[0] });
-    promiseStatus.textContent = "Promise ready to share.";
+    await navigator.share({ title: "Today's Bible Promise", text, url });
+    promiseStatus.textContent = "Promise shared.";
     return;
   }
 
@@ -1248,7 +1399,7 @@ async function sharePromise() {
 
 async function copyPromise() {
   try {
-    await navigator.clipboard.writeText(promiseShareText());
+    await navigator.clipboard.writeText(`${promiseShareText()}\n\nShared from Word Oasis: ${promiseShareUrl()}`);
     promiseStatus.textContent = "Promise copied to your clipboard.";
   } catch (error) {
     promiseStatus.textContent = "Could not copy automatically. Select the promise text to copy it.";
@@ -1399,11 +1550,25 @@ promiseShare.addEventListener("click", async () => {
 
 promiseCopy.addEventListener("click", copyPromise);
 
+[promiseFacebookShare, promiseXShare, promiseLinkedInShare, promiseWhatsAppShare].forEach((shareLink) => {
+  shareLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    openPromiseShareWindow(shareLink.href);
+  });
+});
+
+window.addEventListener("resize", schedulePromiseTextHeightUpdate);
+
+if (document.fonts) {
+  document.fonts.ready.then(updatePromiseTextHeight);
+}
+
 function restartPromiseRotation() {
   window.clearInterval(promiseRotation);
   promiseRotation = window.setInterval(() => advancePromise(), 10000);
 }
 
+updatePromiseTextHeight();
 renderPromise();
 restartPromiseRotation();
 
