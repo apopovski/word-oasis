@@ -1439,10 +1439,19 @@ function currentPromise() {
 function renderPromise() {
   const promise = currentPromise();
   updatePromiseTextHeight();
-  promiseText.textContent = promise.text;
+  promiseText.replaceChildren(promiseQuoteSpan(promise.text));
   promiseReference.textContent = promise.reference;
   updatePromiseShareLinks();
   promiseStatus.textContent = "";
+}
+
+// The quote marks live on this inner span rather than the blockquote so they
+// hug the verse itself instead of pinning to the fixed-height card corners.
+function promiseQuoteSpan(text) {
+  const span = document.createElement("span");
+  span.className = "promise-quote";
+  span.textContent = text;
+  return span;
 }
 
 function updatePromiseTextHeight() {
@@ -1461,7 +1470,7 @@ function updatePromiseTextHeight() {
   promiseText.parentElement.appendChild(measurement);
 
   const maxHeight = biblePromises.reduce((height, promise) => {
-    measurement.textContent = promise.text;
+    measurement.replaceChildren(promiseQuoteSpan(promise.text));
     return Math.max(height, measurement.scrollHeight);
   }, 0);
 
@@ -1508,12 +1517,19 @@ function updatePromiseShareLinks() {
   promiseWhatsAppShare.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(content)}`;
 }
 
+function prefersNativeShare() {
+  // Mobile browsers block sized pop-ups, and tapping a facebook.com link inside
+  // the Facebook in-app browser drops the share payload and lands on the feed.
+  // The native sheet hands the text and URL straight to the chosen app instead.
+  return Boolean(navigator.share) && window.matchMedia("(max-width: 900px), (pointer: coarse)").matches;
+}
+
 function openPromiseShareWindow(url) {
-  const shareWindow = window.open(
-    url,
-    "wordOasisPromiseShare",
-    "width=720,height=720,left=120,top=80,menubar=no,toolbar=no,location=no,status=no"
-  );
+  // Pop-up geometry is desktop-only; on mobile it triggers the blocker.
+  const features = prefersNativeShare()
+    ? "noopener"
+    : "width=720,height=720,left=120,top=80,menubar=no,toolbar=no,location=no,status=no";
+  const shareWindow = window.open(url, "wordOasisPromiseShare", features);
 
   if (shareWindow) {
     shareWindow.focus();
@@ -1525,7 +1541,29 @@ function openPromiseShareWindow(url) {
   return false;
 }
 
+async function sharePromiseViaSystemSheet(platform) {
+  try {
+    await navigator.share({
+      title: "Today's Bible Promise",
+      text: promiseShareText(),
+      url: promiseShareUrl()
+    });
+    promiseStatus.textContent = `Promise shared${platform ? ` to ${platform}` : ""}.`;
+    return true;
+  } catch (error) {
+    if (error && error.name === "AbortError") {
+      promiseStatus.textContent = "Sharing was canceled.";
+      return true;
+    }
+    return false;
+  }
+}
+
 async function sharePromiseWithClipboard(shareLink, platform) {
+  if (prefersNativeShare() && (await sharePromiseViaSystemSheet(platform))) {
+    return;
+  }
+
   const copyOperation = navigator.clipboard?.writeText(promiseShareContent());
   const composerOpened = openPromiseShareWindow(shareLink.href);
 
@@ -1549,11 +1587,7 @@ async function sharePromiseWithClipboard(shareLink, platform) {
 }
 
 async function sharePromise() {
-  const text = promiseShareText();
-  const url = promiseShareUrl();
-  if (navigator.share) {
-    await navigator.share({ title: "Today's Bible Promise", text, url });
-    promiseStatus.textContent = "Promise shared.";
+  if (navigator.share && (await sharePromiseViaSystemSheet(""))) {
     return;
   }
 
@@ -1725,6 +1759,8 @@ promiseCopy.addEventListener("click", copyPromise);
 [promiseXShare, promiseWhatsAppShare].forEach((shareLink) => {
   shareLink.addEventListener("click", (event) => {
     event.preventDefault();
+    // X and WhatsApp honour prefilled text in their own web intents, so keep
+    // sending users straight to the platform they tapped.
     openPromiseShareWindow(shareLink.href);
   });
 });

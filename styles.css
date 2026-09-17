@@ -753,7 +753,7 @@ h1 {
   max-width: 760px;
   min-height: var(--promise-text-height, clamp(8rem, 16vw, 11rem));
   margin: 0 0 16px;
-  padding: 18px 56px;
+  padding: 18px 8px;
   color: #ffffff;
   font-family: "Libre Baskerville", Georgia, serif;
   font-size: clamp(1.42rem, 2.7vw, 2.18rem);
@@ -773,26 +773,25 @@ h1 {
   pointer-events: none;
 }
 
-.promise-card blockquote::before {
-  position: absolute;
-  top: -8px;
-  left: 0;
-  content: "\201C";
+/* Inline pseudo-elements so the marks flow with the verse and sit against the
+   first and last words, whatever the length. */
+.promise-quote::before,
+.promise-quote::after {
   color: #fbbf24;
-  font-size: clamp(3.4rem, 7vw, 5.2rem);
-  line-height: 1;
-  opacity: 0.9;
+  font-size: 1.35em;
+  line-height: 0;
+  opacity: 0.92;
+  vertical-align: -0.22em;
 }
 
-.promise-card blockquote::after {
-  position: absolute;
-  right: 0;
-  bottom: -28px;
+.promise-quote::before {
+  content: "\201C";
+  margin-right: 0.04em;
+}
+
+.promise-quote::after {
   content: "\201D";
-  color: #fbbf24;
-  font-size: clamp(3.4rem, 7vw, 5.2rem);
-  line-height: 1;
-  opacity: 0.9;
+  margin-left: 0.04em;
 }
 
 .promise-reference {
@@ -2009,7 +2008,7 @@ body.modal-open {
 
   .promise-card blockquote {
     width: 100%;
-    padding: 18px 34px;
+    padding: 18px 4px;
   }
 
   .promise-actions {
