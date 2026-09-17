@@ -899,6 +899,7 @@ const promisePrevious = document.querySelector("#promise-previous");
 const promiseNext = document.querySelector("#promise-next");
 const promiseShare = document.querySelector("#promise-share");
 const promiseCopy = document.querySelector("#promise-copy");
+const promiseSaveImage = document.querySelector("#promise-save-image");
 const promiseFacebookShare = document.querySelector("#promise-share-facebook");
 const promiseXShare = document.querySelector("#promise-share-x");
 const promiseLinkedInShare = document.querySelector("#promise-share-linkedin");
@@ -1440,6 +1441,7 @@ function renderPromise() {
   promiseReference.textContent = promise.reference;
   updatePromiseShareLinks();
   promiseStatus.textContent = "";
+  preparePromiseImage();
 }
 
 // The quote marks live on this inner span rather than the blockquote so they
@@ -1506,6 +1508,345 @@ function promiseShareContent() {
   return `${promiseShareText()}\n\nShared from Word Oasis: ${promiseShareUrl()}`;
 }
 
+/* ------------------------------------------------------------------ *
+ * Shareable promise graphic
+ *
+ * Social networks strip prefilled text, so the verse travels as a PNG
+ * instead: a branded 1080x1350 card drawn on a canvas at share time.
+ * ------------------------------------------------------------------ */
+
+const PROMISE_IMAGE_WIDTH = 1080;
+const PROMISE_IMAGE_HEIGHT = 1350;
+const PROMISE_IMAGE_MARGIN = 130;
+const PROMISE_LOGO_SOURCE_COLOR = "#102a43";
+const PROMISE_LOGO_SHARE_COLOR = "#cfe3fa";
+const PROMISE_LOGO_RATIO = 179.3 / 250;
+
+let promiseLogoImagePromise = null;
+let promiseImageFontsPromise = null;
+
+// The logo ships as a single-colour navy lockup, so it is recoloured to the
+// light blue used on dark surfaces before being painted onto the canvas.
+function loadPromiseLogoImage() {
+  if (promiseLogoImagePromise) {
+    return promiseLogoImagePromise;
+  }
+
+  promiseLogoImagePromise = fetch("/word-oasis.svg")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Logo request failed with ${response.status}`);
+      }
+      return response.text();
+    })
+    .then((markup) => {
+      const tinted = markup
+        .replace(new RegExp(PROMISE_LOGO_SOURCE_COLOR, "gi"), PROMISE_LOGO_SHARE_COLOR)
+        // Without explicit dimensions the SVG has no intrinsic size, which makes
+        // some browsers letterbox it when it is drawn at a chosen width.
+        .replace(/<svg\b(?![^>]*\bwidth=)/i, '<svg width="1000" height="717.2" ');
+
+      const url = URL.createObjectURL(new Blob([tinted], { type: "image/svg+xml" }));
+      const image = new Image();
+      image.decoding = "async";
+
+      return new Promise((resolve, reject) => {
+        image.onload = () => {
+          URL.revokeObjectURL(url);
+          resolve(image);
+        };
+        image.onerror = () => {
+          URL.revokeObjectURL(url);
+          reject(new Error("Logo image could not be decoded"));
+        };
+        image.src = url;
+      });
+    })
+    .catch((error) => {
+      // Let a later share retry the fetch rather than caching the failure.
+      promiseLogoImagePromise = null;
+      throw error;
+    });
+
+  return promiseLogoImagePromise;
+}
+
+// Canvas silently falls back to a default face if a web font has not loaded, so
+// the exact weights used below are requested before any drawing happens.
+function loadPromiseImageFonts() {
+  if (!document.fonts) {
+    return Promise.resolve();
+  }
+
+  if (!promiseImageFontsPromise) {
+    promiseImageFontsPromise = Promise.all([
+      document.fonts.load('700 64px "Libre Baskerville"'),
+      document.fonts.load('800 28px "Inter"'),
+      document.fonts.load('600 26px "Inter"')
+    ]).catch(() => undefined);
+  }
+
+  return promiseImageFontsPromise;
+}
+
+function traceRoundedRect(ctx, x, y, width, height, radius) {
+  const limit = Math.min(radius, width / 2, height / 2);
+  ctx.beginPath();
+  ctx.moveTo(x + limit, y);
+  ctx.arcTo(x + width, y, x + width, y + height, limit);
+  ctx.arcTo(x + width, y + height, x, y + height, limit);
+  ctx.arcTo(x, y + height, x, y, limit);
+  ctx.arcTo(x, y, x + width, y, limit);
+  ctx.closePath();
+}
+
+// ctx.letterSpacing is not available everywhere, so tracked text is positioned
+// glyph by glyph to keep the eyebrow and reference looking consistent.
+function drawTrackedText(ctx, text, centerX, y, spacing) {
+  const characters = Array.from(text);
+  const widths = characters.map((character) => ctx.measureText(character).width);
+  const total = widths.reduce((sum, width) => sum + width, 0) + spacing * Math.max(characters.length - 1, 0);
+  const previousAlign = ctx.textAlign;
+
+  ctx.textAlign = "left";
+  let x = centerX - total / 2;
+  characters.forEach((character, index) => {
+    ctx.fillText(character, x, y);
+    x += widths[index] + spacing;
+  });
+  ctx.textAlign = previousAlign;
+
+  return total;
+}
+
+function wrapCanvasText(ctx, text, maxWidth) {
+  const lines = [];
+  let line = "";
+
+  text.split(/\s+/).forEach((word) => {
+    const candidate = line ? `${line} ${word}` : word;
+    if (line && ctx.measureText(candidate).width > maxWidth) {
+      lines.push(line);
+      line = word;
+      return;
+    }
+    line = candidate;
+  });
+
+  if (line) {
+    lines.push(line);
+  }
+
+  return lines;
+}
+
+// Promises range from one line to a full paragraph, so the type size steps down
+// until the wrapped verse fits the space reserved for it.
+function fitPromiseVerse(ctx, text, maxWidth, maxHeight) {
+  let fitted = null;
+
+  for (let size = 68; size >= 26; size -= 2) {
+    ctx.font = `700 ${size}px "Libre Baskerville", Georgia, serif`;
+    const lines = wrapCanvasText(ctx, text, maxWidth);
+    const lineHeight = Math.round(size * 1.42);
+    fitted = { size, lines, lineHeight, height: lines.length * lineHeight };
+
+    if (fitted.height <= maxHeight) {
+      break;
+    }
+  }
+
+  return fitted;
+}
+
+function drawPromiseImageBackground(ctx) {
+  const base = ctx.createLinearGradient(0, 0, PROMISE_IMAGE_WIDTH, PROMISE_IMAGE_HEIGHT);
+  base.addColorStop(0, "#1c3350");
+  base.addColorStop(0.55, "#12243a");
+  base.addColorStop(1, "#0a1522");
+  ctx.fillStyle = base;
+  ctx.fillRect(0, 0, PROMISE_IMAGE_WIDTH, PROMISE_IMAGE_HEIGHT);
+
+  const topGlow = ctx.createRadialGradient(250, 180, 0, 250, 180, 760);
+  topGlow.addColorStop(0, "rgba(96, 152, 214, 0.26)");
+  topGlow.addColorStop(1, "rgba(96, 152, 214, 0)");
+  ctx.fillStyle = topGlow;
+  ctx.fillRect(0, 0, PROMISE_IMAGE_WIDTH, PROMISE_IMAGE_HEIGHT);
+
+  const bottomGlow = ctx.createRadialGradient(900, 1180, 0, 900, 1180, 620);
+  bottomGlow.addColorStop(0, "rgba(128, 178, 236, 0.2)");
+  bottomGlow.addColorStop(1, "rgba(128, 178, 236, 0)");
+  ctx.fillStyle = bottomGlow;
+  ctx.fillRect(0, 0, PROMISE_IMAGE_WIDTH, PROMISE_IMAGE_HEIGHT);
+
+  ctx.save();
+  ctx.strokeStyle = "rgba(255, 255, 255, 0.05)";
+  ctx.lineWidth = 2;
+  [320, 460, 600].forEach((radius) => {
+    ctx.beginPath();
+    ctx.arc(980, 1240, radius, 0, Math.PI * 2);
+    ctx.stroke();
+  });
+  ctx.restore();
+
+  ctx.strokeStyle = "rgba(255, 255, 255, 0.14)";
+  ctx.lineWidth = 2;
+  traceRoundedRect(ctx, 44, 44, PROMISE_IMAGE_WIDTH - 88, PROMISE_IMAGE_HEIGHT - 88, 52);
+  ctx.stroke();
+}
+
+async function renderPromiseImage(promise) {
+  await loadPromiseImageFonts();
+
+  const canvas = document.createElement("canvas");
+  canvas.width = PROMISE_IMAGE_WIDTH;
+  canvas.height = PROMISE_IMAGE_HEIGHT;
+
+  const ctx = canvas.getContext("2d");
+  if (!ctx) {
+    throw new Error("Canvas is not available");
+  }
+
+  drawPromiseImageBackground(ctx);
+
+  const centerX = PROMISE_IMAGE_WIDTH / 2;
+  const textWidth = PROMISE_IMAGE_WIDTH - PROMISE_IMAGE_MARGIN * 2;
+  let eyebrowY = 260;
+
+  try {
+    const logo = await loadPromiseLogoImage();
+    const logoWidth = 200;
+    const logoHeight = logoWidth * PROMISE_LOGO_RATIO;
+    ctx.drawImage(logo, centerX - logoWidth / 2, 126, logoWidth, logoHeight);
+    eyebrowY = 126 + logoHeight + 92;
+  } catch (error) {
+    // The verse still reads perfectly without the lockup, so a failed logo
+    // fetch should never block the share.
+  }
+
+  ctx.textBaseline = "alphabetic";
+  ctx.fillStyle = "#f3c86a";
+  ctx.font = '800 26px Inter, system-ui, sans-serif';
+  drawTrackedText(ctx, "TODAY'S BIBLE PROMISE", centerX, eyebrowY, 7);
+
+  const verseTop = eyebrowY + 96;
+  const verseBottom = PROMISE_IMAGE_HEIGHT - 250;
+  const referenceGap = 74;
+  const referenceHeight = 36;
+  const verse = fitPromiseVerse(ctx, `\u201C${promise.text}\u201D`, textWidth, verseBottom - verseTop - referenceGap - referenceHeight);
+
+  const blockHeight = verse.height + referenceGap + referenceHeight;
+  let y = verseTop + Math.max((verseBottom - verseTop - blockHeight) / 2, 0);
+
+  ctx.fillStyle = "#ffffff";
+  ctx.textAlign = "center";
+  ctx.font = `700 ${verse.size}px "Libre Baskerville", Georgia, serif`;
+  verse.lines.forEach((line) => {
+    y += verse.lineHeight;
+    ctx.fillText(line, centerX, y);
+  });
+
+  y += referenceGap;
+  ctx.fillStyle = "#bcd9f5";
+  ctx.font = '700 32px Inter, system-ui, sans-serif';
+  drawTrackedText(ctx, promise.reference.toUpperCase(), centerX, y, 4);
+
+  ctx.strokeStyle = "rgba(255, 255, 255, 0.16)";
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(centerX - 60, PROMISE_IMAGE_HEIGHT - 196);
+  ctx.lineTo(centerX + 60, PROMISE_IMAGE_HEIGHT - 196);
+  ctx.stroke();
+
+  ctx.fillStyle = "rgba(255, 255, 255, 0.62)";
+  ctx.font = '600 26px Inter, system-ui, sans-serif';
+  drawTrackedText(ctx, "WORDOASIS.ORG", centerX, PROMISE_IMAGE_HEIGHT - 136, 5);
+
+  return canvas;
+}
+
+function promiseImageFileName(promise) {
+  const slug = promise.reference
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+  return `word-oasis-${slug || "promise"}.png`;
+}
+
+async function createPromiseImageBlob(promise) {
+  const canvas = await renderPromiseImage(promise);
+  const blob = await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+
+  if (!blob) {
+    throw new Error("The promise image could not be encoded");
+  }
+
+  return blob;
+}
+
+async function createPromiseImageFile() {
+  const promise = currentPromise();
+  const blob = await createPromiseImageBlob(promise);
+  return new File([blob], promiseImageFileName(promise), { type: "image/png" });
+}
+
+// Safari drops the user-gesture grant while a canvas is being encoded, which
+// makes navigator.share reject. Rendering the graphic ahead of the tap keeps a
+// finished File on hand so the share sheet can open immediately.
+let promiseImageCache = { index: -1, file: null };
+
+function readyPromiseImageFile() {
+  return promiseImageCache.index === promiseIndex ? promiseImageCache.file : null;
+}
+
+function preparePromiseImage() {
+  const index = promiseIndex;
+  if (promiseImageCache.index === index) {
+    return;
+  }
+
+  promiseImageCache = { index, file: null };
+
+  const build = () => {
+    createPromiseImageFile()
+      .then((file) => {
+        if (promiseImageCache.index === index) {
+          promiseImageCache.file = file;
+        }
+      })
+      .catch(() => undefined);
+  };
+
+  if (typeof window.requestIdleCallback === "function") {
+    window.requestIdleCallback(build, { timeout: 1200 });
+    return;
+  }
+
+  window.setTimeout(build, 200);
+}
+
+async function downloadPromiseImage() {
+  promiseStatus.textContent = "Creating your promise graphic…";
+
+  try {
+    const promise = currentPromise();
+    const blob = await createPromiseImageBlob(promise);
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+
+    link.href = url;
+    link.download = promiseImageFileName(promise);
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+
+    promiseStatus.textContent = "Promise graphic saved. Attach it to your post to share the verse.";
+  } catch (error) {
+    promiseStatus.textContent = "The promise graphic could not be created. Please use Copy instead.";
+  }
+}
+
 function updatePromiseShareLinks() {
   const url = promiseShareUrl();
   const content = promiseShareContent();
@@ -1540,12 +1881,23 @@ function openPromiseShareWindow(url) {
 }
 
 async function sharePromiseViaSystemSheet(platform) {
+  const payload = {
+    title: "Today's Bible Promise",
+    text: promiseShareText(),
+    url: promiseShareUrl()
+  };
+
+  const file = readyPromiseImageFile();
+  if (file && navigator.canShare?.({ files: [file] })) {
+    // Several targets accept either a file or a link but not both, so the link
+    // rides along inside the text instead of as a separate field.
+    payload.files = [file];
+    payload.text = promiseShareContent();
+    delete payload.url;
+  }
+
   try {
-    await navigator.share({
-      title: "Today's Bible Promise",
-      text: promiseShareText(),
-      url: promiseShareUrl()
-    });
+    await navigator.share(payload);
     promiseStatus.textContent = `Promise shared${platform ? ` to ${platform}` : ""}.`;
     return true;
   } catch (error) {
@@ -1553,6 +1905,26 @@ async function sharePromiseViaSystemSheet(platform) {
       promiseStatus.textContent = "Sharing was canceled.";
       return true;
     }
+
+    // A target that advertises file support can still refuse the attachment, so
+    // retry once with the plain text payload before giving up.
+    if (payload.files) {
+      try {
+        await navigator.share({
+          title: payload.title,
+          text: promiseShareText(),
+          url: promiseShareUrl()
+        });
+        promiseStatus.textContent = `Promise shared${platform ? ` to ${platform}` : ""}.`;
+        return true;
+      } catch (retryError) {
+        if (retryError && retryError.name === "AbortError") {
+          promiseStatus.textContent = "Sharing was canceled.";
+          return true;
+        }
+      }
+    }
+
     return false;
   }
 }
@@ -1589,8 +1961,11 @@ async function sharePromise() {
     return;
   }
 
+  // Desktop browsers without a share sheet get the graphic as a download plus
+  // the verse on the clipboard, which is everything a post needs.
   await copyPromise();
-  promiseStatus.textContent = "Sharing is not available here, so the promise was copied instead.";
+  await downloadPromiseImage();
+  promiseStatus.textContent = "The promise graphic was saved and the verse copied. Attach both to your post.";
 }
 
 async function copyPromise() {
@@ -1745,6 +2120,8 @@ promiseShare.addEventListener("click", async () => {
 });
 
 promiseCopy.addEventListener("click", copyPromise);
+
+promiseSaveImage.addEventListener("click", downloadPromiseImage);
 
 [promiseFacebookShare, promiseLinkedInShare].forEach((shareLink) => {
   shareLink.addEventListener("click", (event) => {
