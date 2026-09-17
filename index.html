@@ -6,11 +6,22 @@
     <title>Word Oasis | Bible Answers to Life's Toughest Questions</title>
     <meta
       name="description"
-      content="Search 60+ Scripture-based answers to real Bible questions about salvation, prayer, anxiety, the Sabbath, prophecy, and Christian living. Every answer points back to Scripture."
+      content="Search 70+ Scripture-based answers to real Bible questions about salvation, prayer, anxiety, the Sabbath, prophecy, and Christian living. Every answer points back to Scripture."
     >
     <meta name="author" content="Word Oasis">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="theme-color" content="#102a43">
+    <script>
+      (() => {
+        let saved = null;
+        try {
+          saved = localStorage.getItem("word-oasis-theme");
+        } catch (error) {}
+        const systemDark = typeof matchMedia === "function" && matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = saved === "dark" || saved === "light" ? saved : systemDark ? "dark" : "light";
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
     <link rel="canonical" href="https://wordoasis.org/">
     <link rel="icon" href="word-oasis.svg" type="image/svg+xml">
     <link rel="alternate icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
@@ -24,7 +35,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="styles.css?v=20260915">
+    <link rel="stylesheet" href="styles.css?v=20260920">
 <script>
   window.WORD_OASIS_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZSB_Tf-MEbTUrmSkEqwNn2gjtxqF4cv16pMCDMmV3voJeJAFhIYBQ/exec";
   window.WORD_OASIS_FORM_EMAIL_TO = "wordoasis7@gmail.com";
@@ -34,23 +45,23 @@
     <meta property="og:title" content="Word Oasis | Bible Answers to Life's Toughest Questions">
     <meta
       property="og:description"
-      content="Search 60+ Scripture-based answers to real Bible questions about salvation, prayer, anxiety, the Sabbath, prophecy, and Christian living."
+      content="Search 70+ Scripture-based answers to real Bible questions about salvation, prayer, anxiety, the Sabbath, prophecy, and Christian living."
     >
     <meta property="og:url" content="https://wordoasis.org/">
     <meta property="og:site_name" content="Word Oasis">
     <meta property="og:locale" content="en_US">
-    <meta property="og:image" content="https://wordoasis.org/og-image.png">
+    <meta property="og:image" content="https://wordoasis.org/og-image.png?v=20260920">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Word Oasis - Clear Biblical Answers to Life's Questions">
+    <meta property="og:image:alt" content="Word Oasis logo with a daily Scripture, hope, and encouragement message">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Word Oasis | Bible Answers to Life's Toughest Questions">
     <meta
       name="twitter:description"
-      content="Search 60+ Scripture-based answers to real Bible questions about salvation, prayer, anxiety, the Sabbath, prophecy, and Christian living."
+      content="Search 70+ Scripture-based answers to real Bible questions about salvation, prayer, anxiety, the Sabbath, prophecy, and Christian living."
     >
-    <meta name="twitter:image" content="https://wordoasis.org/og-image.png">
-    <meta name="twitter:image:alt" content="Word Oasis - Clear Biblical Answers to Life's Questions">
+    <meta name="twitter:image" content="https://wordoasis.org/og-image.png?v=20260920">
+    <meta name="twitter:image:alt" content="Word Oasis logo with a daily Scripture, hope, and encouragement message">
 
     <script type="application/ld+json">
       {
@@ -597,6 +608,70 @@
         "@type": "Answer",
         "text": "The three angels' messages are called the everlasting gospel because their warnings are centered on the good news of worshiping the Creator, trusting Jesus, and remaining faithful before He returns. (Revelation 14:6-12, Matthew 24:14, John 14:6)"
       }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the Bible say to someone struggling with depression?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Scripture gives room for deep sorrow while pointing the hurting person toward God's nearness, honest prayer, supportive community, and patient hope. (Psalm 34:18, 1 Kings 19:4-8, Psalm 42:11)"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does God sometimes seem silent when I pray?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "God's silence does not mean absence or rejection. Scripture teaches believers to keep praying, examine the heart, trust God's timing, and rest in His wisdom. (Psalm 13:1-2, Luke 18:1, 1 John 5:14)"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the meaning of the Lord's Supper or Communion?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Communion remembers Christ's sacrifice, proclaims His death, renews faith in His grace, and points forward to His return. (Luke 22:19-20, 1 Corinthians 11:23-26, John 6:35)"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the Bible still distinguish between clean and unclean foods?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Scripture identifies clean and unclean animals before Sinai and connects wise eating with holiness, health, and honoring God with the body. (Genesis 7:2, Leviticus 11:1-8, 1 Corinthians 10:31)"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can a family worship God together at home?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Family worship can be simple: read Scripture, pray together, sing or share gratitude, and talk about how God's Word applies to daily life. (Deuteronomy 6:6-7, Joshua 24:15, Psalm 78:4)"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should Christians understand spiritual warfare?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Spiritual warfare is real, but believers stand in Christ through truth, righteousness, faith, Scripture, prayer, and dependence on God's strength. (Ephesians 6:10-18, James 4:7, Revelation 12:11)"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the mark of the beast in Revelation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The mark of the beast represents final allegiance to false worship and human authority in opposition to God's commandments and faith in Jesus. (Revelation 13:16-17, Revelation 14:9-12, Revelation 7:2-3)"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is daily Bible reading important?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Daily Bible reading keeps the heart rooted in God's voice, renews the mind, strengthens faith, and gives wisdom for ordinary decisions. (Psalm 119:105, Matthew 4:4, 2 Timothy 3:16-17)"
+      }
     }
   ]
 }
@@ -634,6 +709,25 @@
             </form>
           </li>
         </ul>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color mode" aria-pressed="false">
+          <span class="theme-toggle-icon" aria-hidden="true">
+            <svg class="theme-icon-moon" viewBox="0 0 24 24" focusable="false">
+              <path d="M20.1 14.6A8.4 8.4 0 0 1 9.4 3.9a8.4 8.4 0 1 0 10.7 10.7Z"></path>
+            </svg>
+            <svg class="theme-icon-sun" viewBox="0 0 24 24" focusable="false">
+              <circle cx="12" cy="12" r="4.1"></circle>
+              <path d="M12 2.4v2.2"></path>
+              <path d="M12 19.4v2.2"></path>
+              <path d="M4.8 4.8l1.6 1.6"></path>
+              <path d="M17.6 17.6l1.6 1.6"></path>
+              <path d="M2.4 12h2.2"></path>
+              <path d="M19.4 12h2.2"></path>
+              <path d="M4.8 19.2l1.6-1.6"></path>
+              <path d="M17.6 6.4l1.6-1.6"></path>
+            </svg>
+          </span>
+          <span data-theme-label>Dark</span>
+        </button>
       </nav>
     </header>
 
@@ -781,9 +875,9 @@
               <div class="promise-share-actions">
                 <span class="promise-share-label">Share this hope</span>
                 <div class="promise-share-buttons">
-                  <a class="promise-social-share promise-social-facebook" id="promise-share-facebook" href="#" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook share composer for this promise">f</a>
+                  <a class="promise-social-share promise-social-facebook" id="promise-share-facebook" href="#" target="_blank" rel="noopener noreferrer" aria-label="Copy this promise and open the Facebook share composer">f</a>
                   <a class="promise-social-share promise-social-x" id="promise-share-x" href="#" target="_blank" rel="noopener noreferrer" aria-label="Open X share composer for this promise">𝕏</a>
-                  <a class="promise-social-share promise-social-linkedin" id="promise-share-linkedin" href="#" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn share composer for this promise">in</a>
+                  <a class="promise-social-share promise-social-linkedin" id="promise-share-linkedin" href="#" target="_blank" rel="noopener noreferrer" aria-label="Copy this promise and open the LinkedIn share composer">in</a>
                   <a class="promise-social-share promise-social-whatsapp" id="promise-share-whatsapp" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share this promise on WhatsApp">wa</a>
                   <button type="button" class="promise-share" id="promise-share">Share</button>
                   <button type="button" class="promise-copy-button" id="promise-copy">Copy</button>
@@ -845,7 +939,7 @@
         
         <span>All</span>
       </span>
-      <strong>64</strong>
+      <strong>72</strong>
     </button><button type="button" class="" data-topic="Baptism">
       <span class="filter-topic-label">
         <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
@@ -860,16 +954,16 @@
     </button><button type="button" class="" data-topic="Bible Study">
       <span class="filter-topic-label">
         <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
-    <path d="M12 21V7C12 5.89543 12.8954 5 14 5H21.4C21.7314 5 22 5.26863 22 5.6V18.7143"></path>
-    <path d="M12 21V7C12 5.89543 11.1046 5 10 5H2.6C2.26863 5 2 5.26863 2 5.6V18.7143"></path>
-    <path d="M14 19L22 19"></path>
-    <path d="M10 19L2 19"></path>
-    <path d="M12 21C12 19.8954 12.8954 19 14 19"></path>
-    <path d="M12 21C12 19.8954 11.1046 19 10 19"></path>
+    <path d="M12 5v16"></path>
+    <path d="M16 13h2"></path>
+    <path d="M16 9h2"></path>
+    <path d="M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"></path>
+    <path d="M6 13h2"></path>
+    <path d="M6 9h2"></path>
   </svg></span>
         <span>Bible Study</span>
       </span>
-      <strong>3</strong>
+      <strong>5</strong>
     </button><button type="button" class="" data-topic="Christian Living">
       <span class="filter-topic-label">
         <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
@@ -880,7 +974,7 @@
   </svg></span>
         <span>Christian Living</span>
       </span>
-      <strong>36</strong>
+      <strong>41</strong>
     </button><button type="button" class="" data-topic="Church">
       <span class="filter-topic-label">
         <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
@@ -892,7 +986,7 @@
   </svg></span>
         <span>Church</span>
       </span>
-      <strong>6</strong>
+      <strong>7</strong>
     </button><button type="button" class="" data-topic="Comfort">
       <span class="filter-topic-label">
         <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
@@ -903,7 +997,7 @@
   </svg></span>
         <span>Comfort</span>
       </span>
-      <strong>12</strong>
+      <strong>14</strong>
     </button><button type="button" class="" data-topic="Creation">
       <span class="filter-topic-label">
         <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
@@ -922,7 +1016,7 @@
   </svg></span>
         <span>Faith</span>
       </span>
-      <strong>32</strong>
+      <strong>37</strong>
     </button><button type="button" class="" data-topic="Forgiveness">
       <span class="filter-topic-label">
         <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
@@ -949,7 +1043,7 @@
   </svg></span>
         <span>Great Controversy</span>
       </span>
-      <strong>2</strong>
+      <strong>3</strong>
     </button><button type="button" class="" data-topic="Health">
       <span class="filter-topic-label">
         <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
@@ -957,7 +1051,7 @@
   </svg></span>
         <span>Health</span>
       </span>
-      <strong>4</strong>
+      <strong>6</strong>
     </button><button type="button" class="" data-topic="Holy Spirit">
       <span class="filter-topic-label">
         <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
@@ -968,27 +1062,41 @@
       <strong>5</strong>
     </button><button type="button" class="" data-topic="Law">
       <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><img src="icons/law.svg" alt="" class="filter-topic-icon-image"></span>
+        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+    <path d="M4 21V8a4 4 0 0 1 8 0v13"></path>
+    <path d="M12 21V8a4 4 0 0 1 8 0v13"></path>
+    <path d="M2.5 21h19"></path>
+    <path d="M6.5 11h3"></path>
+    <path d="M6.5 14.5h3"></path>
+    <path d="M14.5 11h3"></path>
+    <path d="M14.5 14.5h3"></path>
+  </svg></span>
         <span>Law</span>
       </span>
-      <strong>3</strong>
+      <strong>5</strong>
     </button><button type="button" class="" data-topic="Marriage and Family">
       <span class="filter-topic-label">
         <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
-    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-    <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
-    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-    <circle cx="9" cy="7" r="4"></circle>
+    <circle cx="4.3" cy="7" r="2.2"></circle>
+    <path d="M.8 21v-2.1a3.5 3.5 0 0 1 7 0V21"></path>
+    <path d="M10.2 6a2.2 2.2 0 0 1 4.4 0c0 1.9.4 3.3.9 4.5H9.3c.5-1.2.9-2.6.9-4.5z"></path>
+    <path d="M8.6 21v-2.3a3.6 3.6 0 0 1 7.2 0V21"></path>
+    <circle cx="20.5" cy="11.4" r="1.6"></circle>
+    <path d="M18 21v-1.6a2.5 2.5 0 0 1 5 0V21"></path>
   </svg></span>
         <span>Marriage and Family</span>
       </span>
-      <strong>6</strong>
+      <strong>7</strong>
     </button><button type="button" class="" data-topic="Prayer">
       <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><img src="icons/praying.svg" alt="" class="filter-topic-icon-image"></span>
+        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+    <g transform="translate(-1.549 -3.6264) scale(0.8464)" fill="currentColor" stroke="none">
+      <path d="M25.063 15.214c-0.458-1.030-0.941-1.905-1.49-2.732l0.043 0.068c-0.174-0.282-0.348-0.563-0.518-0.849-0.807-1.36-1.51-2.448-2.215-3.425-0.342-0.479-0.679-0.897-1.037-1.294l0.011 0.013c-0.267-0.326-0.6-0.587-0.981-0.763l-0.017-0.007c-0.081-0.031-0.175-0.050-0.274-0.050-0.055 0-0.108 0.006-0.159 0.016l0.005-0.001c-0.88 0.128-1.615 0.658-2.021 1.395l-0.007 0.014c-0.155 0.365-0.245 0.79-0.245 1.236 0 0.496 0.111 0.967 0.311 1.387l-0.008-0.020 2.077 4.622c-1.166 0.027-2.102 0.979-2.102 2.149 0 0.057 0.002 0.113 0.007 0.169l-0-0.007v3.11l-0.435 1.485-0.435-1.485v-3.11c0.004-0.048 0.006-0.104 0.006-0.16 0-1.171-0.936-2.123-2.1-2.148l-0.002-0 2.072-4.613c0.194-0.404 0.307-0.878 0.307-1.379 0-0.445-0.090-0.87-0.252-1.256l0.008 0.021c-0.413-0.751-1.148-1.282-2.013-1.408l-0.015-0.002c-0.047-0.010-0.1-0.015-0.155-0.015-0.099 0-0.193 0.018-0.28 0.051l0.005-0.002c-0.405 0.189-0.744 0.457-1.010 0.787l-0.004 0.005c-0.342 0.379-0.672 0.79-0.979 1.22l-0.028 0.042c-0.707 0.977-1.411 2.064-2.216 3.424-0.167 0.281-0.34 0.561-0.512 0.84-0.509 0.762-0.994 1.639-1.406 2.557l-0.047 0.116c-0.459 1.106-0.726 2.39-0.726 3.737 0 1.178 0.204 2.309 0.579 3.358l-0.022-0.070c0.452 1.090 0.82 2.367 1.044 3.692l0.015 0.107h-0.69c-0.414 0-0.75 0.336-0.75 0.75v0 3.211c0 0.414 0.336 0.75 0.75 0.75h17.712c0.414-0 0.75-0.336 0.75-0.75v0-3.211c-0-0.414-0.336-0.75-0.75-0.75h-0.691c0.244-1.444 0.616-2.731 1.114-3.951l-0.045 0.123c0.347-0.971 0.548-2.092 0.548-3.259 0-1.347-0.267-2.632-0.752-3.805l0.024 0.066zM8.187 21.715c-0.289-0.823-0.456-1.771-0.456-2.758 0-1.143 0.224-2.234 0.63-3.231l-0.021 0.057c0.424-0.948 0.871-1.753 1.379-2.514l-0.039 0.062c0.178-0.287 0.355-0.575 0.527-0.865 0.78-1.318 1.461-2.369 2.139-3.307 0.305-0.429 0.606-0.804 0.926-1.16l-0.010 0.011c0.083-0.089 0.184-0.199 0.276-0.28 0.31 0.075 0.566 0.267 0.724 0.525l0.003 0.005c0.059 0.168 0.092 0.363 0.092 0.565 0 0.277-0.064 0.539-0.177 0.773l0.005-0.011-2.892 6.436c-0.041 0.090-0.065 0.196-0.065 0.308v0 6.437c0 0.414 0.336 0.75 0.75 0.75s0.75-0.336 0.75-0.75v0-5.632c0-1.271 1.343-1.268 1.345 0v3.218c0 0.001 0 0.002 0 0.003 0 0.074 0.011 0.146 0.032 0.213l-0.001-0.005 1.147 3.918v1.557h-5.902c-0.236-1.618-0.642-3.074-1.207-4.449l0.045 0.124zM24.113 29.25h-16.212v-1.711h16.212zM23.838 21.686c-0.522 1.258-0.931 2.724-1.158 4.25l-0.013 0.104h-5.902v-1.557l1.147-3.918c0.019-0.062 0.030-0.134 0.030-0.208 0-0.001 0-0.002 0-0.003v0-3.218c-0.001-0.969 0.784-1.019 1.118-0.678 0.142 0.163 0.229 0.378 0.229 0.613 0 0.023-0.001 0.045-0.002 0.067l0-0.003v5.632c0 0.414 0.336 0.75 0.75 0.75s0.75-0.336 0.75-0.75v0-6.437c-0-0.111-0.025-0.217-0.068-0.312l0.002 0.005-2.896-6.446c-0.104-0.221-0.165-0.481-0.165-0.754 0-0.199 0.032-0.391 0.092-0.57l-0.004 0.013c0.16-0.266 0.418-0.46 0.721-0.534l0.008-0.002c0.094 0.084 0.201 0.199 0.295 0.303 0.303 0.337 0.597 0.704 0.871 1.087l0.026 0.038c0.676 0.938 1.357 1.988 2.139 3.309 0.174 0.293 0.354 0.582 0.531 0.872 0.467 0.697 0.914 1.5 1.294 2.338l0.044 0.107c0.386 0.939 0.61 2.029 0.61 3.172 0 0.977-0.164 1.916-0.466 2.791l0.018-0.060z"></path>
+    </g>
+  </svg></span>
         <span>Prayer</span>
       </span>
-      <strong>4</strong>
+      <strong>8</strong>
     </button><button type="button" class="" data-topic="Prophecy">
       <span class="filter-topic-label">
         <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
@@ -999,7 +1107,7 @@
   </svg></span>
         <span>Prophecy</span>
       </span>
-      <strong>16</strong>
+      <strong>17</strong>
     </button><button type="button" class="" data-topic="Sabbath">
       <span class="filter-topic-label">
         <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
@@ -1018,10 +1126,18 @@
   </svg></span>
         <span>Salvation</span>
       </span>
-      <strong>14</strong>
+      <strong>15</strong>
     </button><button type="button" class="" data-topic="Sanctuary">
       <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><img src="icons/sanctuary.svg" alt="" class="filter-topic-icon-image"></span>
+        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+    <path d="M3 9.75 12 4l9 5.75"></path>
+    <path d="M5.5 10.5v7.5"></path>
+    <path d="M10 10.5v7.5"></path>
+    <path d="M14 10.5v7.5"></path>
+    <path d="M18.5 10.5v7.5"></path>
+    <path d="M3.5 18h17"></path>
+    <path d="M2.5 21h19"></path>
+  </svg></span>
         <span>Sanctuary</span>
       </span>
       <strong>2</strong>
@@ -1059,16 +1175,31 @@
       <strong>4</strong>
     </button><button type="button" class="" data-topic="Three Angels">
       <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><img src="icons/three-angels.svg" alt="" class="filter-topic-icon-image"></span>
+        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+    <g fill="currentColor" stroke="none">
+      <circle cx="4.3" cy="6.68" r="1.28"></circle>
+      <path d="M4.3 8.4C3.46 10.2 2.63 13.8 2.63 20.4L5.97 20.4C5.97 13.8 5.14 10.2 4.3 8.4Z"></path>
+      <path d="M3.1 9.3C1.64 6.6 0.5 7.86 0.73 13.2C2.02 11.1 2.46 12 3 14.1Z"></path>
+      <path d="M5.5 9.3C6.96 6.6 8.1 7.86 7.87 13.2C6.58 11.1 6.14 12 5.6 14.1Z"></path>
+      <circle cx="12" cy="4.3" r="1.5"></circle>
+      <path d="M12 6.32C11.12 8.43 10.24 12.66 10.24 20.4L13.76 20.4C13.76 12.66 12.88 8.43 12 6.32Z"></path>
+      <path d="M10.73 7.38C9.2 4.21 8 5.69 8.24 11.95C9.6 9.49 10.06 10.54 10.63 13.01Z"></path>
+      <path d="M13.27 7.38C14.8 4.21 16 5.69 15.76 11.95C14.4 9.49 13.94 10.54 13.37 13.01Z"></path>
+      <circle cx="19.7" cy="6.68" r="1.28"></circle>
+      <path d="M19.7 8.4C18.86 10.2 18.03 13.8 18.03 20.4L21.37 20.4C21.37 13.8 20.54 10.2 19.7 8.4Z"></path>
+      <path d="M18.5 9.3C17.04 6.6 15.9 7.86 16.13 13.2C17.42 11.1 17.86 12 18.4 14.1Z"></path>
+      <path d="M20.9 9.3C22.36 6.6 23.5 7.86 23.27 13.2C21.98 11.1 21.54 12 21 14.1Z"></path>
+    </g>
+  </svg></span>
         <span>Three Angels</span>
       </span>
-      <strong>2</strong>
+      <strong>3</strong>
     </button>
               <!-- prerender:topic-filters --></div>
             </aside>
 
             <div id="results-panel">
-              <div class="result-meta" id="result-meta" aria-live="polite">64 answers in all topics<!-- prerender:result-meta --></div>
+              <div class="result-meta" id="result-meta" aria-live="polite">72 answers in all topics<!-- prerender:result-meta --></div>
               <div id="answers-list" class="answers-list">
 <article class="answer-card" id="answer-gospel">
       <div class="answer-tags">
@@ -2285,6 +2416,158 @@
         <button type="button" class="scripture-link" data-scripture="Revelation 14:6-12">Revelation 14:6-12</button><button type="button" class="scripture-link" data-scripture="Matthew 24:14">Matthew 24:14</button><button type="button" class="scripture-link" data-scripture="John 14:6">John 14:6</button>
       </div>
     </article>
+  
+    <article class="answer-card" id="answer-depression">
+      <div class="answer-tags">
+        <button type="button" class="tag-link" data-topic="Comfort">Comfort</button><button type="button" class="tag-link" data-topic="Prayer">Prayer</button><button type="button" class="tag-link" data-topic="Health">Health</button><button type="button" class="tag-link" data-topic="Christian Living">Christian Living</button>
+      </div>
+      <h3><a href="/answers/what-does-the-bible-say-to-someone-struggling-with-depression/">What does the Bible say to someone struggling with depression?</a></h3>
+      <p class="answer-short">Scripture gives room for deep sorrow while pointing the hurting person toward God's nearness, honest prayer, supportive community, and patient hope.</p>
+      <div class="answer-long" hidden="">
+        <p>The Bible does not pretend that faithful people never experience darkness. Elijah, David, Jeremiah, and others expressed exhaustion, grief, and despair honestly before God. Scripture invites lament rather than denial, reminding the suffering person that God is near to the brokenhearted and attentive to cries for help. Depression should never be treated as a simple spiritual failure; wise care may include prayer, Scripture, trusted friends, pastoral support, counseling, and medical help when needed. Hope often returns gradually, but God's presence is not limited to seasons when emotions feel strong.</p>
+        <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Psalm%2034%3A18%22%2C%221%20Kings%2019%3A4-8%22%2C%22Psalm%2042%3A11%22%5D"></section>
+      </div>
+      <button type="button" class="read-more" aria-expanded="false">
+        Read the full answer
+      </button>
+      <div class="scriptures" aria-label="Bible references">
+        <button type="button" class="scripture-link" data-scripture="Psalm 34:18">Psalm 34:18</button><button type="button" class="scripture-link" data-scripture="1 Kings 19:4-8">1 Kings 19:4-8</button><button type="button" class="scripture-link" data-scripture="Psalm 42:11">Psalm 42:11</button>
+      </div>
+    </article>
+  
+    <article class="answer-card" id="answer-unanswered-prayer">
+      <div class="answer-tags">
+        <button type="button" class="tag-link" data-topic="Prayer">Prayer</button><button type="button" class="tag-link" data-topic="Faith">Faith</button><button type="button" class="tag-link" data-topic="Comfort">Comfort</button>
+      </div>
+      <h3><a href="/answers/why-does-god-sometimes-seem-silent-when-i-pray/">Why does God sometimes seem silent when I pray?</a></h3>
+      <p class="answer-short">God's silence does not mean absence or rejection. Scripture teaches believers to keep praying, examine the heart, trust God's timing, and rest in His wisdom.</p>
+      <div class="answer-long" hidden="">
+        <p>Many prayers in Scripture include seasons of waiting, confusion, and apparent silence. The Psalms often ask how long God will delay, showing that honest questions can be part of real faith. Sometimes prayer is hindered by cherished sin, selfish motives, or broken relationships that need attention; other times the delay is not explained, and believers are simply invited to trust God's character. Jesus Himself prayed in agony and surrendered to the Father's will. God's answers may be yes, no, wait, or a deeper work than the person first asked for, but His silence is never proof that He has stopped caring.</p>
+        <p>These themes are best read through the whole testimony of Scripture, emphasizing God's self-revelation in Christ, the active ministry of the Holy Spirit, and the restoration of the whole person. Bible study should lead to a changed life, compassionate service, and a clearer picture of God's loving character.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Psalm%2013%3A1-2%22%2C%22Luke%2018%3A1%22%2C%221%20John%205%3A14%22%5D"></section>
+      </div>
+      <button type="button" class="read-more" aria-expanded="false">
+        Read the full answer
+      </button>
+      <div class="scriptures" aria-label="Bible references">
+        <button type="button" class="scripture-link" data-scripture="Psalm 13:1-2">Psalm 13:1-2</button><button type="button" class="scripture-link" data-scripture="Luke 18:1">Luke 18:1</button><button type="button" class="scripture-link" data-scripture="1 John 5:14">1 John 5:14</button>
+      </div>
+    </article>
+  
+    <article class="answer-card" id="answer-communion">
+      <div class="answer-tags">
+        <button type="button" class="tag-link" data-topic="Church">Church</button><button type="button" class="tag-link" data-topic="Salvation">Salvation</button><button type="button" class="tag-link" data-topic="Faith">Faith</button>
+      </div>
+      <h3><a href="/answers/what-is-the-meaning-of-the-lords-supper-or-communion/">What is the meaning of the Lord's Supper or Communion?</a></h3>
+      <p class="answer-short">Communion remembers Christ's sacrifice, proclaims His death, renews faith in His grace, and points forward to His return.</p>
+      <div class="answer-long" hidden="">
+        <p>Jesus gave the bread and cup as a memorial of His body given and His blood poured out for sinners. Communion is not an empty tradition; it invites believers to remember the cost of salvation, receive again the assurance of grace, examine the heart, and renew unity with other believers. Paul says that every time Christians eat the bread and drink the cup, they proclaim the Lord's death until He comes. This means Communion looks backward to the cross, inward to repentance and faith, outward to fellowship, and forward to Christ's return.</p>
+        <p>Salvation is entirely by grace through faith in Christ. His atoning sacrifice, heavenly ministry, and intercession are the foundation of assurance; obedience, Sabbath faithfulness, and loving service are the fruit of a redeemed life, never a way to purchase acceptance with God.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Luke%2022%3A19-20%22%2C%221%20Corinthians%2011%3A23-26%22%2C%22John%206%3A35%22%5D"></section>
+      </div>
+      <button type="button" class="read-more" aria-expanded="false">
+        Read the full answer
+      </button>
+      <div class="scriptures" aria-label="Bible references">
+        <button type="button" class="scripture-link" data-scripture="Luke 22:19-20">Luke 22:19-20</button><button type="button" class="scripture-link" data-scripture="1 Corinthians 11:23-26">1 Corinthians 11:23-26</button><button type="button" class="scripture-link" data-scripture="John 6:35">John 6:35</button>
+      </div>
+    </article>
+  
+    <article class="answer-card" id="answer-clean-unclean-foods">
+      <div class="answer-tags">
+        <button type="button" class="tag-link" data-topic="Health">Health</button><button type="button" class="tag-link" data-topic="Law">Law</button><button type="button" class="tag-link" data-topic="Christian Living">Christian Living</button>
+      </div>
+      <h3><a href="/answers/does-the-bible-still-distinguish-between-clean-and-unclean-foods/">Does the Bible still distinguish between clean and unclean foods?</a></h3>
+      <p class="answer-short">Scripture identifies clean and unclean animals before Sinai and connects wise eating with holiness, health, and honoring God with the body.</p>
+      <div class="answer-long" hidden="">
+        <p>The clean and unclean distinction appears as early as Noah, long before the ceremonial laws given through Moses. Leviticus later gives detailed instruction about which animals were considered clean for food, and the New Testament never presents unclean animals as newly healthy or spiritually beneficial to eat. Passages sometimes used to erase the distinction are better read in context as addressing human traditions, Gentile inclusion, or food offered to idols rather than redefining unclean animals as clean. Christians are not saved by diet, but caring for the body as God's temple makes food choices part of grateful stewardship.</p>
+        <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Genesis%207%3A2%22%2C%22Leviticus%2011%3A1-8%22%2C%221%20Corinthians%2010%3A31%22%5D"></section>
+      </div>
+      <button type="button" class="read-more" aria-expanded="false">
+        Read the full answer
+      </button>
+      <div class="scriptures" aria-label="Bible references">
+        <button type="button" class="scripture-link" data-scripture="Genesis 7:2">Genesis 7:2</button><button type="button" class="scripture-link" data-scripture="Leviticus 11:1-8">Leviticus 11:1-8</button><button type="button" class="scripture-link" data-scripture="1 Corinthians 10:31">1 Corinthians 10:31</button>
+      </div>
+    </article>
+  
+    <article class="answer-card" id="answer-family-worship">
+      <div class="answer-tags">
+        <button type="button" class="tag-link" data-topic="Marriage and Family">Marriage and Family</button><button type="button" class="tag-link" data-topic="Prayer">Prayer</button><button type="button" class="tag-link" data-topic="Bible Study">Bible Study</button><button type="button" class="tag-link" data-topic="Christian Living">Christian Living</button>
+      </div>
+      <h3><a href="/answers/how-can-a-family-worship-god-together-at-home/">How can a family worship God together at home?</a></h3>
+      <p class="answer-short">Family worship can be simple: read Scripture, pray together, sing or share gratitude, and talk about how God's Word applies to daily life.</p>
+      <div class="answer-long" hidden="">
+        <p>The Bible pictures faith being taught in the ordinary rhythms of home life, not only during formal worship services. Family worship does not need to be long or complicated to be meaningful. A short passage, a question everyone can answer, prayer for real needs, and a moment of thanksgiving can shape the atmosphere of a home over time. Parents are called to teach diligently, but children also learn from seeing humility, forgiveness, and consistency. The goal is not performance; it is creating regular space for the family to remember God together.</p>
+        <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Deuteronomy%206%3A6-7%22%2C%22Joshua%2024%3A15%22%2C%22Psalm%2078%3A4%22%5D"></section>
+      </div>
+      <button type="button" class="read-more" aria-expanded="false">
+        Read the full answer
+      </button>
+      <div class="scriptures" aria-label="Bible references">
+        <button type="button" class="scripture-link" data-scripture="Deuteronomy 6:6-7">Deuteronomy 6:6-7</button><button type="button" class="scripture-link" data-scripture="Joshua 24:15">Joshua 24:15</button><button type="button" class="scripture-link" data-scripture="Psalm 78:4">Psalm 78:4</button>
+      </div>
+    </article>
+  
+    <article class="answer-card" id="answer-spiritual-warfare">
+      <div class="answer-tags">
+        <button type="button" class="tag-link" data-topic="Great Controversy">Great Controversy</button><button type="button" class="tag-link" data-topic="Faith">Faith</button><button type="button" class="tag-link" data-topic="Prayer">Prayer</button><button type="button" class="tag-link" data-topic="Christian Living">Christian Living</button>
+      </div>
+      <h3><a href="/answers/how-should-christians-understand-spiritual-warfare/">How should Christians understand spiritual warfare?</a></h3>
+      <p class="answer-short">Spiritual warfare is real, but believers stand in Christ through truth, righteousness, faith, Scripture, prayer, and dependence on God's strength.</p>
+      <div class="answer-long" hidden="">
+        <p>The Bible teaches that Christian life takes place within a real conflict against spiritual forces of evil, but it does not encourage fear or fascination with darkness. Ephesians points believers to the armor of God: truth, righteousness, the gospel of peace, faith, salvation, the Word of God, and prayer. The center of spiritual warfare is loyalty to Christ in ordinary life: resisting temptation, rejecting deception, forgiving others, praying faithfully, and trusting God's promises. Christians fight from Christ's victory, not for a victory they must create on their own.</p>
+        <p>The great controversy reveals God's character as Christ ministers as our High Priest in the heavenly sanctuary. The dead await the resurrection, Christ's return will be visible and personal, and prophecy calls believers to faithful mission rather than date-setting or fear.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Ephesians%206%3A10-18%22%2C%22James%204%3A7%22%2C%22Revelation%2012%3A11%22%5D"></section>
+      </div>
+      <button type="button" class="read-more" aria-expanded="false">
+        Read the full answer
+      </button>
+      <div class="scriptures" aria-label="Bible references">
+        <button type="button" class="scripture-link" data-scripture="Ephesians 6:10-18">Ephesians 6:10-18</button><button type="button" class="scripture-link" data-scripture="James 4:7">James 4:7</button><button type="button" class="scripture-link" data-scripture="Revelation 12:11">Revelation 12:11</button>
+      </div>
+    </article>
+  
+    <article class="answer-card" id="answer-mark-of-beast">
+      <div class="answer-tags">
+        <button type="button" class="tag-link" data-topic="Prophecy">Prophecy</button><button type="button" class="tag-link" data-topic="Three Angels">Three Angels</button><button type="button" class="tag-link" data-topic="Law">Law</button><button type="button" class="tag-link" data-topic="Faith">Faith</button>
+      </div>
+      <h3><a href="/answers/what-is-the-mark-of-the-beast-in-revelation/">What is the mark of the beast in Revelation?</a></h3>
+      <p class="answer-short">The mark of the beast represents final allegiance to false worship and human authority in opposition to God's commandments and faith in Jesus.</p>
+      <div class="answer-long" hidden="">
+        <p>Revelation describes a final conflict over worship, loyalty, and authority. The mark of the beast should be understood in contrast with the seal of God: one reflects allegiance to a system opposed to God's authority, while the other reflects loyalty to the Creator. The issue is not a random barcode, microchip, or secret technology; it is worship shaped by coercion, deception, and rejection of God's commandments. Revelation's warning is serious, but it is given in mercy so people can choose Christ, receive the everlasting gospel, and stand faithful through His power.</p>
+        <p>The great controversy reveals God's character as Christ ministers as our High Priest in the heavenly sanctuary. The dead await the resurrection, Christ's return will be visible and personal, and prophecy calls believers to faithful mission rather than date-setting or fear.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Revelation%2013%3A16-17%22%2C%22Revelation%2014%3A9-12%22%2C%22Revelation%207%3A2-3%22%5D"></section>
+      </div>
+      <button type="button" class="read-more" aria-expanded="false">
+        Read the full answer
+      </button>
+      <div class="scriptures" aria-label="Bible references">
+        <button type="button" class="scripture-link" data-scripture="Revelation 13:16-17">Revelation 13:16-17</button><button type="button" class="scripture-link" data-scripture="Revelation 14:9-12">Revelation 14:9-12</button><button type="button" class="scripture-link" data-scripture="Revelation 7:2-3">Revelation 7:2-3</button>
+      </div>
+    </article>
+  
+    <article class="answer-card" id="answer-daily-bible-reading">
+      <div class="answer-tags">
+        <button type="button" class="tag-link" data-topic="Bible Study">Bible Study</button><button type="button" class="tag-link" data-topic="Faith">Faith</button><button type="button" class="tag-link" data-topic="Christian Living">Christian Living</button>
+      </div>
+      <h3><a href="/answers/why-is-daily-bible-reading-important/">Why is daily Bible reading important?</a></h3>
+      <p class="answer-short">Daily Bible reading keeps the heart rooted in God's voice, renews the mind, strengthens faith, and gives wisdom for ordinary decisions.</p>
+      <div class="answer-long" hidden="">
+        <p>Scripture describes God's Word as light, food, seed, and a sword because it shapes the inner life in ways people cannot produce by willpower alone. Regular Bible reading helps believers recognize God's character, test ideas, resist temptation, and remember promises when feelings shift. The goal is not checking off a spiritual task, but listening to God with a teachable heart. Even a small daily portion, read prayerfully and applied honestly, can build long-term spiritual stability and deepen love for Christ.</p>
+        <p>These themes are best read through the whole testimony of Scripture, emphasizing God's self-revelation in Christ, the active ministry of the Holy Spirit, and the restoration of the whole person. Bible study should lead to a changed life, compassionate service, and a clearer picture of God's loving character.</p>
+        <section class="scripture-quotes" aria-label="Bible passages" data-scriptures="%5B%22Psalm%20119%3A105%22%2C%22Matthew%204%3A4%22%2C%222%20Timothy%203%3A16-17%22%5D"></section>
+      </div>
+      <button type="button" class="read-more" aria-expanded="false">
+        Read the full answer
+      </button>
+      <div class="scriptures" aria-label="Bible references">
+        <button type="button" class="scripture-link" data-scripture="Psalm 119:105">Psalm 119:105</button><button type="button" class="scripture-link" data-scripture="Matthew 4:4">Matthew 4:4</button><button type="button" class="scripture-link" data-scripture="2 Timothy 3:16-17">2 Timothy 3:16-17</button>
+      </div>
+    </article>
               <!-- prerender:answers-list --></div>
               <div id="empty-state" class="empty-state" hidden>
                 <h3>No answers found</h3>
@@ -2439,25 +2722,59 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <a class="brand footer-brand" href="#top" aria-label="Word Oasis home">
-            <img src="word-oasis.svg" alt="Word Oasis" class="brand-mark">
-          </a>
-          <p>“And the Spirit and the bride say, Come! And let the one hearing say, Come! And let the one who is thirsty come. And he willing, let him take of the Water of Life freely.”  – Revelation 22:17</p>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand-col">
+            <a class="brand footer-brand" href="#top" aria-label="Word Oasis home">
+              <img src="word-oasis.svg" alt="Word Oasis" class="brand-mark">
+            </a>
+            <p class="footer-tagline">
+              Clear, Scripture-based answers to real questions about faith, hope, prophecy, and
+              Christian living.
+            </p>
+            <blockquote class="footer-verse">
+              “And let the one who is thirsty come. And he willing, let him take of the Water of
+              Life freely.”
+              <cite>Revelation 22:17</cite>
+            </blockquote>
+          </div>
+
+          <nav class="footer-col" aria-label="Explore Word Oasis">
+            <h2>Explore</h2>
+            <ul class="footer-list">
+              <li><a href="/answers/">All answers</a></li>
+              <li><a href="/topics/">Browse topics</a></li>
+              <li><a href="#categories">Categories</a></li>
+              <li><a href="#study">Study guide</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer-col" aria-label="Popular topics">
+            <h2>Popular topics</h2>
+            <ul class="footer-list">
+              <li><a href="/topics/salvation/">Salvation</a></li>
+              <li><a href="/topics/prayer/">Prayer</a></li>
+              <li><a href="/topics/faith/">Faith</a></li>
+              <li><a href="/topics/forgiveness/">Forgiveness</a></li>
+              <li><a href="/topics/prophecy/">Prophecy</a></li>
+              <li><a href="/topics/sabbath/">Sabbath</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer-col" aria-label="Connect with Word Oasis">
+            <h2>Connect</h2>
+            <ul class="footer-list">
+              <li><a href="#ask">Ask a question</a></li>
+              <li><a href="mailto:wordoasis7@gmail.com">Email us</a></li>
+              <li><a href="/sitemap.xml">Sitemap</a></li>
+              <li><a href="#top">Back to top</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-bottom">
           <p class="footer-copyright">&copy; 2026 Word Oasis. All rights reserved.</p>
-        </div>
-        <div>
-          <h2>Topics</h2>
-          <a href="#answers" data-search="faith">Faith</a>
-          <a href="#answers" data-search="forgiveness">Forgiveness</a>
-          <a href="#answers" data-search="hope">Hope</a>
-        </div>
-        <div>
-          <h2>Site</h2>
-          <a href="#answers">Bible Answers</a>
-          <a href="#topics">Topics</a>
-          <a href="#categories">Categories</a>
+          <p class="footer-note">Scripture quotations are shared for study and personal encouragement.</p>
         </div>
       </div>
     </footer>
@@ -2474,6 +2791,7 @@
       </div>
     </div>
 
-    <script src="script.js?v=20260914"></script>
+    <script src="theme.js?v=20260920"></script>
+    <script src="script.js?v=20260920"></script>
   </body>
 </html>

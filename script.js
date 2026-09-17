@@ -766,6 +766,102 @@ const answers = [
     category: "Hope and Prophecy",
     scriptures: ["Revelation 14:6-12", "Matthew 24:14", "John 14:6"],
     keywords: ["everlasting gospel", "three angels messages", "Revelation 14", "worship", "Babylon", "faith of Jesus"]
+  },
+  {
+    id: "answer-depression",
+    question: "What does the Bible say to someone struggling with depression?",
+    shortAnswer:
+      "Scripture gives room for deep sorrow while pointing the hurting person toward God's nearness, honest prayer, supportive community, and patient hope.",
+    longAnswer:
+      "The Bible does not pretend that faithful people never experience darkness. Elijah, David, Jeremiah, and others expressed exhaustion, grief, and despair honestly before God. Scripture invites lament rather than denial, reminding the suffering person that God is near to the brokenhearted and attentive to cries for help. Depression should never be treated as a simple spiritual failure; wise care may include prayer, Scripture, trusted friends, pastoral support, counseling, and medical help when needed. Hope often returns gradually, but God's presence is not limited to seasons when emotions feel strong.",
+    topics: ["Comfort", "Prayer", "Health", "Christian Living"],
+    category: "Life and Relationships",
+    scriptures: ["Psalm 34:18", "1 Kings 19:4-8", "Psalm 42:11"],
+    keywords: ["depression", "sadness", "mental health", "despair", "hope", "emotional pain"]
+  },
+  {
+    id: "answer-unanswered-prayer",
+    question: "Why does God sometimes seem silent when I pray?",
+    shortAnswer:
+      "God's silence does not mean absence or rejection. Scripture teaches believers to keep praying, examine the heart, trust God's timing, and rest in His wisdom.",
+    longAnswer:
+      "Many prayers in Scripture include seasons of waiting, confusion, and apparent silence. The Psalms often ask how long God will delay, showing that honest questions can be part of real faith. Sometimes prayer is hindered by cherished sin, selfish motives, or broken relationships that need attention; other times the delay is not explained, and believers are simply invited to trust God's character. Jesus Himself prayed in agony and surrendered to the Father's will. God's answers may be yes, no, wait, or a deeper work than the person first asked for, but His silence is never proof that He has stopped caring.",
+    topics: ["Prayer", "Faith", "Comfort"],
+    category: "Knowing God",
+    scriptures: ["Psalm 13:1-2", "Luke 18:1", "1 John 5:14"],
+    keywords: ["unanswered prayer", "God silent", "waiting", "prayer delay", "trust", "faith"]
+  },
+  {
+    id: "answer-communion",
+    question: "What is the meaning of the Lord's Supper or Communion?",
+    shortAnswer:
+      "Communion remembers Christ's sacrifice, proclaims His death, renews faith in His grace, and points forward to His return.",
+    longAnswer:
+      "Jesus gave the bread and cup as a memorial of His body given and His blood poured out for sinners. Communion is not an empty tradition; it invites believers to remember the cost of salvation, receive again the assurance of grace, examine the heart, and renew unity with other believers. Paul says that every time Christians eat the bread and drink the cup, they proclaim the Lord's death until He comes. This means Communion looks backward to the cross, inward to repentance and faith, outward to fellowship, and forward to Christ's return.",
+    topics: ["Church", "Salvation", "Faith"],
+    category: "Faith and Salvation",
+    scriptures: ["Luke 22:19-20", "1 Corinthians 11:23-26", "John 6:35"],
+    keywords: ["communion", "lord's supper", "bread and cup", "foot washing", "church", "cross"]
+  },
+  {
+    id: "answer-clean-unclean-foods",
+    question: "Does the Bible still distinguish between clean and unclean foods?",
+    shortAnswer:
+      "Scripture identifies clean and unclean animals before Sinai and connects wise eating with holiness, health, and honoring God with the body.",
+    longAnswer:
+      "The clean and unclean distinction appears as early as Noah, long before the ceremonial laws given through Moses. Leviticus later gives detailed instruction about which animals were considered clean for food, and the New Testament never presents unclean animals as newly healthy or spiritually beneficial to eat. Passages sometimes used to erase the distinction are better read in context as addressing human traditions, Gentile inclusion, or food offered to idols rather than redefining unclean animals as clean. Christians are not saved by diet, but caring for the body as God's temple makes food choices part of grateful stewardship.",
+    topics: ["Health", "Law", "Christian Living"],
+    category: "Life and Relationships",
+    scriptures: ["Genesis 7:2", "Leviticus 11:1-8", "1 Corinthians 10:31"],
+    keywords: ["clean and unclean foods", "diet", "pork", "health message", "Leviticus 11", "food laws"]
+  },
+  {
+    id: "answer-family-worship",
+    question: "How can a family worship God together at home?",
+    shortAnswer:
+      "Family worship can be simple: read Scripture, pray together, sing or share gratitude, and talk about how God's Word applies to daily life.",
+    longAnswer:
+      "The Bible pictures faith being taught in the ordinary rhythms of home life, not only during formal worship services. Family worship does not need to be long or complicated to be meaningful. A short passage, a question everyone can answer, prayer for real needs, and a moment of thanksgiving can shape the atmosphere of a home over time. Parents are called to teach diligently, but children also learn from seeing humility, forgiveness, and consistency. The goal is not performance; it is creating regular space for the family to remember God together.",
+    topics: ["Marriage and Family", "Prayer", "Bible Study", "Christian Living"],
+    category: "Life and Relationships",
+    scriptures: ["Deuteronomy 6:6-7", "Joshua 24:15", "Psalm 78:4"],
+    keywords: ["family worship", "home worship", "children", "parents", "devotions", "prayer"]
+  },
+  {
+    id: "answer-spiritual-warfare",
+    question: "How should Christians understand spiritual warfare?",
+    shortAnswer:
+      "Spiritual warfare is real, but believers stand in Christ through truth, righteousness, faith, Scripture, prayer, and dependence on God's strength.",
+    longAnswer:
+      "The Bible teaches that Christian life takes place within a real conflict against spiritual forces of evil, but it does not encourage fear or fascination with darkness. Ephesians points believers to the armor of God: truth, righteousness, the gospel of peace, faith, salvation, the Word of God, and prayer. The center of spiritual warfare is loyalty to Christ in ordinary life: resisting temptation, rejecting deception, forgiving others, praying faithfully, and trusting God's promises. Christians fight from Christ's victory, not for a victory they must create on their own.",
+    topics: ["Great Controversy", "Faith", "Prayer", "Christian Living"],
+    category: "Hope and Prophecy",
+    scriptures: ["Ephesians 6:10-18", "James 4:7", "Revelation 12:11"],
+    keywords: ["spiritual warfare", "armor of God", "devil", "temptation", "prayer", "victory"]
+  },
+  {
+    id: "answer-mark-of-beast",
+    question: "What is the mark of the beast in Revelation?",
+    shortAnswer:
+      "The mark of the beast represents final allegiance to false worship and human authority in opposition to God's commandments and faith in Jesus.",
+    longAnswer:
+      "Revelation describes a final conflict over worship, loyalty, and authority. The mark of the beast should be understood in contrast with the seal of God: one reflects allegiance to a system opposed to God's authority, while the other reflects loyalty to the Creator. The issue is not a random barcode, microchip, or secret technology; it is worship shaped by coercion, deception, and rejection of God's commandments. Revelation's warning is serious, but it is given in mercy so people can choose Christ, receive the everlasting gospel, and stand faithful through His power.",
+    topics: ["Prophecy", "Three Angels", "Law", "Faith"],
+    category: "Hope and Prophecy",
+    scriptures: ["Revelation 13:16-17", "Revelation 14:9-12", "Revelation 7:2-3"],
+    keywords: ["mark of the beast", "seal of God", "Revelation 13", "false worship", "end times", "commandments"]
+  },
+  {
+    id: "answer-daily-bible-reading",
+    question: "Why is daily Bible reading important?",
+    shortAnswer:
+      "Daily Bible reading keeps the heart rooted in God's voice, renews the mind, strengthens faith, and gives wisdom for ordinary decisions.",
+    longAnswer:
+      "Scripture describes God's Word as light, food, seed, and a sword because it shapes the inner life in ways people cannot produce by willpower alone. Regular Bible reading helps believers recognize God's character, test ideas, resist temptation, and remember promises when feelings shift. The goal is not checking off a spiritual task, but listening to God with a teachable heart. Even a small daily portion, read prayerfully and applied honestly, can build long-term spiritual stability and deepen love for Christ.",
+    topics: ["Bible Study", "Faith", "Christian Living"],
+    category: "Knowing God",
+    scriptures: ["Psalm 119:105", "Matthew 4:4", "2 Timothy 3:16-17"],
+    keywords: ["daily Bible reading", "devotions", "Scripture study", "spiritual growth", "God's Word"]
   }
 ];
 
@@ -943,11 +1039,6 @@ const topicIcons = {
     <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
     <path d="M12 22V2"></path>
   `,
-  Prayer: `
-    <g transform="scale(0.75)" fill="currentColor" stroke="none">
-      <path d="M25.063 15.214c-.458-1.03-.941-1.905-1.49-2.732l.043.068c-.174-.282-.348-.563-.518-.849-.807-1.36-1.51-2.448-2.215-3.425-.342-.479-.679-.897-1.037-1.294l.011.013c-.267-.326-.6-.587-.981-.763l-.017-.007a1.18 1.18 0 0 0-.433-.034l.005-.001c-.88.128-1.615.658-2.021 1.395l-.007.014c-.155.365-.245.79-.245 1.236 0 .496.111.967.311 1.387l-.008-.02 2.077 4.622c-1.166.027-2.102.979-2.102 2.149 0 .057.002.113.007.169v3.11l-.435 1.485-.435-1.485v-3.11c.004-.048.006-.104.006-.16 0-1.171-.936-2.123-2.1-2.148h-.002l2.072-4.613c.194-.404.307-.878.307-1.379 0-.445-.09-.87-.252-1.256l.008.021c-.413-.751-1.148-1.282-2.013-1.408l-.015-.002a1.18 1.18 0 0 0-.435.034l.005-.002c-.405.189-.744.457-1.01.787l-.004.005c-.342.379-.672.79-.979 1.22l-.028.042c-.707.977-1.411 2.064-2.216 3.424-.167.281-.34.561-.512.84-.509.762-.994 1.639-1.406 2.557l-.047.116c-.459 1.106-.726 2.39-.726 3.737 0 1.178.204 2.309.579 3.358l-.022-.07c.452 1.09.82 2.367 1.044 3.692l.015.107h-.69a.75.75 0 0 0-.75.75v3.211c0 .414.336.75.75.75h17.712a.75.75 0 0 0 .75-.75v-3.211a.75.75 0 0 0-.75-.75h-.691c.244-1.444.616-2.731 1.114-3.951l-.045.123c.347-.971.548-2.092.548-3.259 0-1.347-.267-2.632-.752-3.805l.024.066zM8.187 21.715c-.289-.823-.456-1.771-.456-2.758 0-1.143.224-2.234.63-3.231l-.021.057c.424-.948.871-1.753 1.379-2.514l-.039.062c.178-.287.355-.575.527-.865.78-1.318 1.461-2.369 2.139-3.307.305-.429.606-.804.926-1.16l-.01.011c.083-.089.184-.199.276-.28.31.075.566.267.724.525l.003.005c.059.168.092.363.092.565 0 .277-.064.539-.177.773l.005-.011-2.892 6.436a.75.75 0 0 0-.065.308v6.437a.75.75 0 0 0 1.5 0v-5.632c0-1.271 1.343-1.268 1.345 0v3.218c0 .074.011.146.032.213l-.001-.005 1.147 3.918v1.557H9.442c-.236-1.618-.642-3.074-1.207-4.449l.045.124zM24.113 21.686c-.522 1.258-.931 2.724-1.158 4.25l-.013.104h-5.902v-1.557l1.147-3.918a.75.75 0 0 0 .03-.208v-3.218c-.001-.969.784-1.019 1.118-.678.142.163.229.378.229.613 0 .023-.001.045-.002.067v5.632a.75.75 0 0 0 1.5 0v-6.437a.75.75 0 0 0-.066-.307l.002.005-2.896-6.446a1.8 1.8 0 0 1-.073-1.311l-.004.013c.16-.266.418-.46.721-.534l.008-.002c.094.084.201.199.295.303.303.337.597.704.871 1.087l.026.038c.676.938 1.357 1.988 2.139 3.309.174.293.354.582.531.872.467.697.914 1.5 1.294 2.338l.044.107c.386.939.61 2.029.61 3.172 0 .977-.164 1.916-.466 2.791l.018-.06z"></path>
-    </g>
-  `,
   Comfort: `
     <path d="M15 10V9"></path>
     <path d="M16.472 15a6 6 0 0 1-8.943 0"></path>
@@ -1001,10 +1092,12 @@ const topicIcons = {
     <path d="M2 21C2.6 21.5 3.2 22 4.5 22C7 22 7 20 9.5 20C12.1 20 11.9 22 14.5 22C17 22 17 20 19.5 20C20.8 20 21.4 20.5 22 21"></path>
   `,
   "Marriage and Family": `
-    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-    <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
-    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-    <circle cx="9" cy="7" r="4"></circle>
+    <circle cx="4.3" cy="7" r="2.2"></circle>
+    <path d="M.8 21v-2.1a3.5 3.5 0 0 1 7 0V21"></path>
+    <path d="M10.2 6a2.2 2.2 0 0 1 4.4 0c0 1.9.4 3.3.9 4.5H9.3c.5-1.2.9-2.6.9-4.5z"></path>
+    <path d="M8.6 21v-2.3a3.6 3.6 0 0 1 7.2 0V21"></path>
+    <circle cx="20.5" cy="11.4" r="1.6"></circle>
+    <path d="M18 21v-1.6a2.5 2.5 0 0 1 5 0V21"></path>
   `,
   Stewardship: `
     <path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17"></path>
@@ -1033,31 +1126,58 @@ const topicIcons = {
     <path d="M3 4h8"></path>
   `,
   "Bible Study": `
-    <path d="M12 21V7C12 5.89543 12.8954 5 14 5H21.4C21.7314 5 22 5.26863 22 5.6V18.7143"></path>
-    <path d="M12 21V7C12 5.89543 11.1046 5 10 5H2.6C2.26863 5 2 5.26863 2 5.6V18.7143"></path>
-    <path d="M14 19L22 19"></path>
-    <path d="M10 19L2 19"></path>
-    <path d="M12 21C12 19.8954 12.8954 19 14 19"></path>
-    <path d="M12 21C12 19.8954 11.1046 19 10 19"></path>
+    <path d="M12 5v16"></path>
+    <path d="M16 13h2"></path>
+    <path d="M16 9h2"></path>
+    <path d="M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"></path>
+    <path d="M6 13h2"></path>
+    <path d="M6 9h2"></path>
   `,
   Health: `
     <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path>
+  `,
+  Law: `
+    <path d="M4 21V8a4 4 0 0 1 8 0v13"></path>
+    <path d="M12 21V8a4 4 0 0 1 8 0v13"></path>
+    <path d="M2.5 21h19"></path>
+    <path d="M6.5 11h3"></path>
+    <path d="M6.5 14.5h3"></path>
+    <path d="M14.5 11h3"></path>
+    <path d="M14.5 14.5h3"></path>
+  `,
+  Sanctuary: `
+    <path d="M3 9.75 12 4l9 5.75"></path>
+    <path d="M5.5 10.5v7.5"></path>
+    <path d="M10 10.5v7.5"></path>
+    <path d="M14 10.5v7.5"></path>
+    <path d="M18.5 10.5v7.5"></path>
+    <path d="M3.5 18h17"></path>
+    <path d="M2.5 21h19"></path>
+  `,
+  "Three Angels": `
+    <g fill="currentColor" stroke="none">
+      <circle cx="4.3" cy="6.68" r="1.28"></circle>
+      <path d="M4.3 8.4C3.46 10.2 2.63 13.8 2.63 20.4L5.97 20.4C5.97 13.8 5.14 10.2 4.3 8.4Z"></path>
+      <path d="M3.1 9.3C1.64 6.6 0.5 7.86 0.73 13.2C2.02 11.1 2.46 12 3 14.1Z"></path>
+      <path d="M5.5 9.3C6.96 6.6 8.1 7.86 7.87 13.2C6.58 11.1 6.14 12 5.6 14.1Z"></path>
+      <circle cx="12" cy="4.3" r="1.5"></circle>
+      <path d="M12 6.32C11.12 8.43 10.24 12.66 10.24 20.4L13.76 20.4C13.76 12.66 12.88 8.43 12 6.32Z"></path>
+      <path d="M10.73 7.38C9.2 4.21 8 5.69 8.24 11.95C9.6 9.49 10.06 10.54 10.63 13.01Z"></path>
+      <path d="M13.27 7.38C14.8 4.21 16 5.69 15.76 11.95C14.4 9.49 13.94 10.54 13.37 13.01Z"></path>
+      <circle cx="19.7" cy="6.68" r="1.28"></circle>
+      <path d="M19.7 8.4C18.86 10.2 18.03 13.8 18.03 20.4L21.37 20.4C21.37 13.8 20.54 10.2 19.7 8.4Z"></path>
+      <path d="M18.5 9.3C17.04 6.6 15.9 7.86 16.13 13.2C17.42 11.1 17.86 12 18.4 14.1Z"></path>
+      <path d="M20.9 9.3C22.36 6.6 23.5 7.86 23.27 13.2C21.98 11.1 21.54 12 21 14.1Z"></path>
+    </g>
+  `,
+  Prayer: `
+    <g transform="translate(-1.549 -3.6264) scale(0.8464)" fill="currentColor" stroke="none">
+      <path d="M25.063 15.214c-0.458-1.030-0.941-1.905-1.49-2.732l0.043 0.068c-0.174-0.282-0.348-0.563-0.518-0.849-0.807-1.36-1.51-2.448-2.215-3.425-0.342-0.479-0.679-0.897-1.037-1.294l0.011 0.013c-0.267-0.326-0.6-0.587-0.981-0.763l-0.017-0.007c-0.081-0.031-0.175-0.050-0.274-0.050-0.055 0-0.108 0.006-0.159 0.016l0.005-0.001c-0.88 0.128-1.615 0.658-2.021 1.395l-0.007 0.014c-0.155 0.365-0.245 0.79-0.245 1.236 0 0.496 0.111 0.967 0.311 1.387l-0.008-0.020 2.077 4.622c-1.166 0.027-2.102 0.979-2.102 2.149 0 0.057 0.002 0.113 0.007 0.169l-0-0.007v3.11l-0.435 1.485-0.435-1.485v-3.11c0.004-0.048 0.006-0.104 0.006-0.16 0-1.171-0.936-2.123-2.1-2.148l-0.002-0 2.072-4.613c0.194-0.404 0.307-0.878 0.307-1.379 0-0.445-0.090-0.87-0.252-1.256l0.008 0.021c-0.413-0.751-1.148-1.282-2.013-1.408l-0.015-0.002c-0.047-0.010-0.1-0.015-0.155-0.015-0.099 0-0.193 0.018-0.28 0.051l0.005-0.002c-0.405 0.189-0.744 0.457-1.010 0.787l-0.004 0.005c-0.342 0.379-0.672 0.79-0.979 1.22l-0.028 0.042c-0.707 0.977-1.411 2.064-2.216 3.424-0.167 0.281-0.34 0.561-0.512 0.84-0.509 0.762-0.994 1.639-1.406 2.557l-0.047 0.116c-0.459 1.106-0.726 2.39-0.726 3.737 0 1.178 0.204 2.309 0.579 3.358l-0.022-0.070c0.452 1.090 0.82 2.367 1.044 3.692l0.015 0.107h-0.69c-0.414 0-0.75 0.336-0.75 0.75v0 3.211c0 0.414 0.336 0.75 0.75 0.75h17.712c0.414-0 0.75-0.336 0.75-0.75v0-3.211c-0-0.414-0.336-0.75-0.75-0.75h-0.691c0.244-1.444 0.616-2.731 1.114-3.951l-0.045 0.123c0.347-0.971 0.548-2.092 0.548-3.259 0-1.347-0.267-2.632-0.752-3.805l0.024 0.066zM8.187 21.715c-0.289-0.823-0.456-1.771-0.456-2.758 0-1.143 0.224-2.234 0.63-3.231l-0.021 0.057c0.424-0.948 0.871-1.753 1.379-2.514l-0.039 0.062c0.178-0.287 0.355-0.575 0.527-0.865 0.78-1.318 1.461-2.369 2.139-3.307 0.305-0.429 0.606-0.804 0.926-1.16l-0.010 0.011c0.083-0.089 0.184-0.199 0.276-0.28 0.31 0.075 0.566 0.267 0.724 0.525l0.003 0.005c0.059 0.168 0.092 0.363 0.092 0.565 0 0.277-0.064 0.539-0.177 0.773l0.005-0.011-2.892 6.436c-0.041 0.090-0.065 0.196-0.065 0.308v0 6.437c0 0.414 0.336 0.75 0.75 0.75s0.75-0.336 0.75-0.75v0-5.632c0-1.271 1.343-1.268 1.345 0v3.218c0 0.001 0 0.002 0 0.003 0 0.074 0.011 0.146 0.032 0.213l-0.001-0.005 1.147 3.918v1.557h-5.902c-0.236-1.618-0.642-3.074-1.207-4.449l0.045 0.124zM24.113 29.25h-16.212v-1.711h16.212zM23.838 21.686c-0.522 1.258-0.931 2.724-1.158 4.25l-0.013 0.104h-5.902v-1.557l1.147-3.918c0.019-0.062 0.030-0.134 0.030-0.208 0-0.001 0-0.002 0-0.003v0-3.218c-0.001-0.969 0.784-1.019 1.118-0.678 0.142 0.163 0.229 0.378 0.229 0.613 0 0.023-0.001 0.045-0.002 0.067l0-0.003v5.632c0 0.414 0.336 0.75 0.75 0.75s0.75-0.336 0.75-0.75v0-6.437c-0-0.111-0.025-0.217-0.068-0.312l0.002 0.005-2.896-6.446c-0.104-0.221-0.165-0.481-0.165-0.754 0-0.199 0.032-0.391 0.092-0.57l-0.004 0.013c0.16-0.266 0.418-0.46 0.721-0.534l0.008-0.002c0.094 0.084 0.201 0.199 0.295 0.303 0.303 0.337 0.597 0.704 0.871 1.087l0.026 0.038c0.676 0.938 1.357 1.988 2.139 3.309 0.174 0.293 0.354 0.582 0.531 0.872 0.467 0.697 0.914 1.5 1.294 2.338l0.044 0.107c0.386 0.939 0.61 2.029 0.61 3.172 0 0.977-0.164 1.916-0.466 2.791l0.018-0.060z"></path>
+    </g>
   `
 };
 
-const topicIconFiles = {
-  Law: "icons/law.svg",
-  Sanctuary: "icons/sanctuary.svg",
-  "Three Angels": "icons/three-angels.svg",
-  Prayer: "icons/praying.svg"
-};
-
-function topicIconMarkup(topic, className) {
-  const file = topicIconFiles[topic];
-  if (file) {
-    return `<img src="${file}" alt="" class="${className}-image">`;
-  }
-
+function topicIconMarkup(topic) {
   const content = topicIcons[topic] || topicIcons.Faith;
   return `<svg viewBox="0 0 24 24" focusable="false">${content}</svg>`;
 }
@@ -1072,7 +1192,7 @@ function addTopicIcons() {
     const topic = card.dataset.topic;
     card.insertAdjacentHTML(
       "afterbegin",
-      `<span class="topic-icon" aria-hidden="true">${topicIconMarkup(topic, "topic-icon")}</span>`
+      `<span class="topic-icon" aria-hidden="true">${topicIconMarkup(topic)}</span>`
     );
   });
 }
@@ -1123,7 +1243,7 @@ function renderTopicFilters() {
     button.type = "button";
     button.className = topic === state.topic ? "active" : "";
     button.dataset.topic = topic;
-    const icon = topic === "All" ? "" : topicIconMarkup(topic, "filter-topic-icon");
+    const icon = topic === "All" ? "" : topicIconMarkup(topic);
     button.innerHTML = `
       <span class="filter-topic-label">
         ${icon ? `<span class="filter-topic-icon" aria-hidden="true">${icon}</span>` : ""}
@@ -1358,14 +1478,17 @@ function promiseShareUrl() {
   return url.href;
 }
 
+function promiseShareContent() {
+  return `${promiseShareText()}\n\nShared from Word Oasis: ${promiseShareUrl()}`;
+}
+
 function updatePromiseShareLinks() {
-  const text = promiseShareText();
   const url = promiseShareUrl();
-  const textWithUrl = `${text}\n\nShared from Word Oasis: ${url}`;
-  promiseFacebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`;
-  promiseXShare.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(textWithUrl)}`;
+  const content = promiseShareContent();
+  promiseFacebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+  promiseXShare.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(content)}`;
   promiseLinkedInShare.href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
-  promiseWhatsAppShare.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(textWithUrl)}`;
+  promiseWhatsAppShare.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(content)}`;
 }
 
 function openPromiseShareWindow(url) {
@@ -1378,10 +1501,34 @@ function openPromiseShareWindow(url) {
   if (shareWindow) {
     shareWindow.focus();
     promiseStatus.textContent = "A share composer opened. Choose Post or Share there to publish.";
-    return;
+    return true;
   }
 
   promiseStatus.textContent = "Your browser blocked the share window. Please allow pop-ups or use Copy.";
+  return false;
+}
+
+async function sharePromiseWithClipboard(shareLink, platform) {
+  const copyOperation = navigator.clipboard?.writeText(promiseShareContent());
+  const composerOpened = openPromiseShareWindow(shareLink.href);
+
+  if (!copyOperation) {
+    if (composerOpened) {
+      promiseStatus.textContent = `${platform} opened with the Word Oasis preview. Add the promise text there before publishing.`;
+    }
+    return;
+  }
+
+  try {
+    await copyOperation;
+    if (composerOpened) {
+      promiseStatus.textContent = `The promise was copied. Paste it into the ${platform} composer, then publish.`;
+    }
+  } catch (error) {
+    if (composerOpened) {
+      promiseStatus.textContent = `${platform} opened with the Word Oasis preview. Add the promise text there before publishing.`;
+    }
+  }
 }
 
 async function sharePromise() {
@@ -1399,7 +1546,7 @@ async function sharePromise() {
 
 async function copyPromise() {
   try {
-    await navigator.clipboard.writeText(`${promiseShareText()}\n\nShared from Word Oasis: ${promiseShareUrl()}`);
+    await navigator.clipboard.writeText(promiseShareContent());
     promiseStatus.textContent = "Promise copied to your clipboard.";
   } catch (error) {
     promiseStatus.textContent = "Could not copy automatically. Select the promise text to copy it.";
@@ -1550,7 +1697,15 @@ promiseShare.addEventListener("click", async () => {
 
 promiseCopy.addEventListener("click", copyPromise);
 
-[promiseFacebookShare, promiseXShare, promiseLinkedInShare, promiseWhatsAppShare].forEach((shareLink) => {
+[promiseFacebookShare, promiseLinkedInShare].forEach((shareLink) => {
+  shareLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    const platform = shareLink === promiseFacebookShare ? "Facebook" : "LinkedIn";
+    sharePromiseWithClipboard(shareLink, platform);
+  });
+});
+
+[promiseXShare, promiseWhatsAppShare].forEach((shareLink) => {
   shareLink.addEventListener("click", (event) => {
     event.preventDefault();
     openPromiseShareWindow(shareLink.href);
