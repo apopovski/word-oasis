@@ -1,98 +1,197 @@
+/**
+ * Word Oasis question form endpoint (Google Apps Script).
+ *
+ * Deploy: Extensions > Apps Script > Deploy > New deployment > Web app
+ *   - Execute as: Me
+ *   - Who has access: Anyone
+ * Re-deploy after every edit, then copy the /exec URL into
+ * window.WORD_OASIS_FORM_ENDPOINT in index.html.
+ *
+ * ContentService cannot set custom response headers, so CORS headers cannot be
+ * added here. Anonymous web apps already return Access-Control-Allow-Origin: *,
+ * and the client posts as text/plain so the browser never sends a preflight.
+ */
+
+var HEADER_ROW = [
+  'Timestamp',
+  'Question',
+  'Topic',
+  'Email',
+  'Gender',
+  'Location',
+  'Age',
+  'Faith Background',
+  'Source',
+  'Related Matches',
+  'Submitted From'
+];
+
 function jsonResponse(payload) {
-  const output = ContentService.createTextOutput(JSON.stringify(payload));
-  output.setMimeType(ContentService.MimeType.JSON);
-  output.setHeader('Access-Control-Allow-Origin', '*');
-  output.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  output.setHeader('Access-Control-Allow-Headers', 'Content-Type, Accept');
-  return output;
+  return ContentService.createTextOutput(JSON.stringify(payload)).setMimeType(
+    ContentService.MimeType.JSON
+  );
 }
 
-function doOptions() {
-  const output = ContentService.createTextOutput('');
-  output.setHeader('Access-Control-Allow-Origin', '*');
-  output.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  output.setHeader('Access-Control-Allow-Headers', 'Content-Type, Accept');
-  return output;
+function ensureHeaderRow(sheet) {
+  var lastColumn = sheet.getLastColumn();
+  var existing =
+    lastColumn > 0 ? sheet.getRange(1, 1, 1, lastColumn).getValues()[0] : [];
+
+  if (String(existing[0] || '').trim() === HEADER_ROW[0]) {
+    if (existing.length < HEADER_ROW.length) {
+      sheet
+        .getRange(1, 1, 1, HEADER_ROW.length)
+        .setValues([HEADER_ROW])
+        .setFontWeight('bold');
+    }
+    return;
+  }
+
+  if (sheet.getLastRow() > 0) {
+    sheet.insertRowBefore(1);
+  }
+
+  sheet
+    .getRange(1, 1, 1, HEADER_ROW.length)
+    .setValues([HEADER_ROW])
+    .setFontWeight('bold');
+  sheet.setFrozenRows(1);
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
 }
 
 function doPost(e) {
   try {
-    const payload = JSON.parse(e.postData && e.postData.contents ? e.postData.contents : '{}');
-    const question = String(payload.question || '').trim();
-    const topic = String(payload.topic || 'General').trim();
-    const email = String(payload.email || '').trim();
-    const submittedAt = payload.submittedAt || new Date().toISOString();
-    const source = payload.source || 'word-oasis';
-    const relatedMatches = Array.isArray(payload.relatedMatches) ? payload.relatedMatches : [];
-    const notificationEmail = String(payload.notificationEmail || '').trim();
+    var raw = e && e.postData && e.postData.contents ? e.postData.contents : '{}';
+    var payload = JSON.parse(raw);
 
+    var question = String(payload.question || '').trim();
     if (!question) {
       return jsonResponse({ success: false, error: 'Missing question' });
     }
 
-    const sheetId = PropertiesService.getScriptProperties().getProperty('SHEET_ID');
-    const sheetName = PropertiesService.getScriptProperties().getProperty('SHEET_NAME') || 'Questions';
-    const emailTo = PropertiesService.getScriptProperties().getProperty('EMAIL_TO') || notificationEmail || 'wordoasis7@gmail.com';
+    var topic = String(payload.topic || 'General').trim();
+    var email = String(payload.email || '').trim();
+    var gender = String(payload.gender || '').trim();
+    var location = String(payload.location || '').trim();
+    var age = payload.age === 0 || payload.age ? String(payload.age).trim() : '';
+    var faith = String(payload.faith || '').trim();
+    var submittedAt = payload.submittedAt || new Date().toISOString();
+    var source = payload.source || 'word-oasis';
+    var relatedMatches = Array.isArray(payload.relatedMatches)
+      ? payload.relatedMatches
+      : [];
+    var notificationEmail = String(payload.notificationEmail || '').trim();
 
-    let spreadsheetLogged = false;
+    var properties = PropertiesService.getScriptProperties();
+    var sheetId = properties.getProperty('SHEET_ID');
+    var sheetName = properties.getProperty('SHEET_NAME') || 'Questions';
+    var emailTo =
+      properties.getProperty('EMAIL_TO') ||
+      notificationEmail ||
+      'wordoasis7@gmail.com';
+
+    var spreadsheetLogged = false;
+    var warnings = [];
 
     if (sheetId) {
-      const spreadsheet = SpreadsheetApp.openById(sheetId);
-      let sheet = spreadsheet.getSheetByName(sheetName) || spreadsheet.getSheets()[0];
+      try {
+        var spreadsheet = SpreadsheetApp.openById(sheetId);
+        var sheet =
+          spreadsheet.getSheetByName(sheetName) || spreadsheet.getSheets()[0];
 
-      if (!sheet) {
-        throw new Error('No spreadsheet sheet found for storing submissions.');
-      }
+        if (!sheet) {
+          throw new Error('No sheet found in the target spreadsheet.');
+        }
 
-      const headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
-      const needsHeaderRow = headers.length === 0 || headers[0] !== 'Timestamp';
-
-      if (needsHeaderRow) {
-        sheet.insertRowBefore(1);
-        sheet.getRange(1, 1, 1, 7).setValues([
-          ['Timestamp', 'Question', 'Topic', 'Email', 'Source', 'Related Matches', 'Submitted From']
+        ensureHeaderRow(sheet);
+        sheet.appendRow([
+          submittedAt,
+          question,
+          topic,
+          email || 'Not provided',
+          gender || 'Not provided',
+          location || 'Not provided',
+          age || 'Not provided',
+          faith || 'Not provided',
+          source,
+          relatedMatches.join(' | '),
+          'Word Oasis site'
         ]);
+        spreadsheetLogged = true;
+      } catch (sheetError) {
+        warnings.push('Spreadsheet logging failed: ' + sheetError);
       }
-
-      const row = [
-        submittedAt,
-        question,
-        topic,
-        email || 'Not provided',
-        source,
-        relatedMatches.join(' | '),
-        'Word Oasis site'
-      ];
-
-      sheet.appendRow(row);
-      spreadsheetLogged = true;
     }
 
-    if (emailTo) {
-      const subject = `New Bible question: ${topic}`;
-      const body = `
-        <p>A new Bible question was submitted through Word Oasis.</p>
-        <p><strong>Question:</strong> ${question}</p>
-        <p><strong>Topic:</strong> ${topic}</p>
-        <p><strong>Email:</strong> ${email || 'Not provided'}</p>
-        <p><strong>Submitted at:</strong> ${submittedAt}</p>
-        <p><strong>Related matches:</strong> ${relatedMatches.length ? relatedMatches.join(', ') : 'None'}</p>
-      `;
+    var emailSent = false;
 
-      MailApp.sendEmail({
-        to: emailTo,
-        subject,
-        htmlBody: body
+    if (emailTo) {
+      try {
+        var rows = [
+          ['Question', question],
+          ['Topic', topic],
+          ['Email', email || 'Not provided'],
+          ['Gender', gender || 'Not provided'],
+          ['Location', location || 'Not provided'],
+          ['Age', age || 'Not provided'],
+          ['Faith background', faith || 'Not provided'],
+          ['Submitted at', submittedAt],
+          [
+            'Related matches',
+            relatedMatches.length ? relatedMatches.join(', ') : 'None'
+          ]
+        ];
+
+        var body =
+          '<p>A new Bible question was submitted through Word Oasis.</p>' +
+          '<table cellpadding="6" style="border-collapse:collapse">' +
+          rows
+            .map(function (row) {
+              return (
+                '<tr><td style="border:1px solid #ddd"><strong>' +
+                escapeHtml(row[0]) +
+                '</strong></td><td style="border:1px solid #ddd">' +
+                escapeHtml(row[1]) +
+                '</td></tr>'
+              );
+            })
+            .join('') +
+          '</table>';
+
+        MailApp.sendEmail({
+          to: emailTo,
+          subject: 'New Bible question: ' + topic,
+          htmlBody: body,
+          replyTo: email || undefined
+        });
+        emailSent = true;
+      } catch (mailError) {
+        warnings.push('Email delivery failed: ' + mailError);
+      }
+    }
+
+    if (!spreadsheetLogged && !emailSent) {
+      return jsonResponse({
+        success: false,
+        error: warnings.join(' | ') || 'Nothing was logged or emailed.'
       });
     }
 
     return jsonResponse({
       success: true,
-      message: spreadsheetLogged ? 'Question logged successfully' : 'Question emailed successfully; spreadsheet logging is not configured yet.',
-      spreadsheetLogged
+      spreadsheetLogged: spreadsheetLogged,
+      emailSent: emailSent,
+      warnings: warnings
     });
   } catch (error) {
-    return jsonResponse({ success: false, error: error.toString() });
+    return jsonResponse({ success: false, error: String(error) });
   }
 }
 

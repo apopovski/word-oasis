@@ -1301,12 +1301,14 @@ async function submitQuestionToSheet(payload) {
     return { enabled: false };
   }
 
+  // text/plain keeps this a "simple" CORS request. Apps Script web apps do not
+  // answer preflight OPTIONS requests, so anything that triggers one fails.
   const response = await fetch(questionSubmissionEndpoint, {
     method: "POST",
     mode: "cors",
+    redirect: "follow",
     headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json"
+      "Content-Type": "text/plain;charset=utf-8"
     },
     body: JSON.stringify(payload)
   });
@@ -1315,7 +1317,19 @@ async function submitQuestionToSheet(payload) {
     throw new Error(`Submission failed with status ${response.status}`);
   }
 
-  const result = await response.json().catch(() => ({}));
+  const text = await response.text();
+  let result;
+
+  try {
+    result = JSON.parse(text);
+  } catch (error) {
+    throw new Error("Endpoint did not return JSON. Re-deploy the Apps Script web app with access set to Anyone.");
+  }
+
+  if (result && result.success === false) {
+    throw new Error(result.error || "Endpoint reported a failure.");
+  }
+
   return { enabled: true, result };
 }
 
@@ -1377,7 +1391,10 @@ async function handleQuestionSubmit(event) {
   try {
     const result = await submitQuestionToSheet(payload);
     if (result.enabled) {
-      questionStatus.textContent = "Your question was sent for follow-up and recorded in the spreadsheet log.";
+      const logged = result.result && result.result.spreadsheetLogged;
+      questionStatus.textContent = logged
+        ? "Your question was sent for follow-up and recorded in the spreadsheet log."
+        : "Your question was sent for follow-up.";
     }
   } catch (error) {
     console.error("Question submission failed", error);

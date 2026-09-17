@@ -10,8 +10,16 @@ This site can still work as a fully local browser-only Bible Q&A page. To also e
 4. Save the project.
 5. In the Apps Script editor, click Deploy > New deployment.
 6. Choose Web app.
-7. Set the access to "Anyone" or "Anyone with a Google account" depending on your needs.
-8. Copy the web app URL.
+7. Set **Execute as** to "Me" and **Who has access** to **"Anyone"**.
+8. Copy the web app URL (it ends in `/exec`).
+
+> **"Anyone with a Google account" will not work.** The site posts from a
+> browser with no Google session, so anything other than "Anyone" makes Google
+> return a sign-in page instead of running the script, and the submission fails.
+
+> **Re-deploy after every code change.** Editing and saving the script in the
+> editor does not update the live web app. Use Deploy > Manage deployments >
+> edit (pencil) > Version: New version > Deploy. The `/exec` URL stays the same.
 
 ## 2) Add the web app URL to the site
 
@@ -24,7 +32,9 @@ Open `index.html` and update the config values near the top:
 </script>
 ```
 
-The form will submit the question, topic, email, and timestamp to that endpoint. The script then sends an email and appends the data to the spreadsheet you configure.
+The form submits the question, topic, email, gender, location, age, faith
+background, timestamp, and related matches to that endpoint. The script then
+sends an email and appends the data to the spreadsheet you configure.
 
 ## 3) Configure Google Sheet and email
 
@@ -42,10 +52,40 @@ You can add them in Apps Script by going to Project settings > Script properties
 - Confirm the row appears in the Google Sheet.
 - Confirm the email notification arrives in the target inbox.
 
+## Troubleshooting
+
+**"Your question was found locally, but the email/spreadsheet log could not be
+sent right now."**
+
+The browser could not reach the endpoint. Open the browser console for the real
+cause; it is almost always one of these:
+
+- *A CORS error mentioning no `Access-Control-Allow-Origin` header.* The Apps
+  Script threw an error, and Google's error page carries no CORS headers. Visit
+  the `/exec` URL directly in a browser tab to read the actual script error.
+- *A sign-in page is returned.* The deployment's access is not set to "Anyone".
+- *The deployed code is stale.* Re-deploy as a new version (see step 1).
+
+To check the endpoint independently of the site:
+
+```bash
+curl -L -X POST "https://script.google.com/macros/s/YOUR_ID/exec" \
+  -H "Content-Type: text/plain;charset=utf-8" \
+  --data '{"question":"test","topic":"General"}'
+```
+
+A healthy endpoint returns JSON such as `{"success":true,...}`. Anything else
+(HTML, a sign-in page, an error trace) explains the failure.
+
 ## Notes
 
 - If the form endpoint is left blank, the site remains browser-only and still searches the local answer library.
 - This is the simplest no-backend option for a static website.
+- The form posts with `Content-Type: text/plain` on purpose. That keeps it a
+  "simple" CORS request, so the browser skips the preflight `OPTIONS` call that
+  Apps Script cannot answer. The script still parses the body as JSON.
+- Apps Script's `ContentService` cannot set custom response headers, so the
+  script must not call `setHeader`. Doing so throws and breaks every request.
 
 # SEO: keeping content crawlable
 
