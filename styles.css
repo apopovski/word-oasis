@@ -294,6 +294,11 @@ button {
   transform: rotate(70deg) scale(0.45);
 }
 
+.nav-theme-item {
+  display: flex;
+  align-items: center;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .theme-toggle-icon svg {
     transition: none;
@@ -674,11 +679,11 @@ h1 {
   position: relative;
   overflow: hidden;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 30px 52px;
-  align-items: center;
+  justify-items: center;
+  gap: 18px;
   isolation: isolate;
-  padding: 54px 56px;
+  padding: 46px 56px 26px;
+  text-align: center;
   background:
     radial-gradient(circle at 86% 0%, rgba(251, 191, 36, 0.35), transparent 17rem),
     radial-gradient(circle at 7% 100%, rgba(96, 165, 250, 0.24), transparent 24rem),
@@ -721,9 +726,16 @@ h1 {
 
 .promise-copy,
 .promise-actions,
-.promise-status {
+.promise-status,
+.promise-navigation {
   position: relative;
   z-index: 1;
+}
+
+.promise-copy {
+  display: grid;
+  justify-items: center;
+  width: 100%;
 }
 
 .promise-card .eyebrow {
@@ -750,15 +762,18 @@ h1 {
   position: relative;
   display: flex;
   align-items: center;
-  max-width: 760px;
+  justify-content: center;
+  width: 100%;
+  max-width: 720px;
   min-height: var(--promise-text-height, clamp(8rem, 16vw, 11rem));
-  margin: 0 0 16px;
-  padding: 18px 8px;
+  margin: 0 0 14px;
+  padding: 4px 0;
   color: #ffffff;
   font-family: "Libre Baskerville", Georgia, serif;
-  font-size: clamp(1.42rem, 2.7vw, 2.18rem);
-  line-height: 1.45;
+  font-size: clamp(1.3rem, 2.15vw, 1.85rem);
+  line-height: 1.5;
   letter-spacing: -0.035em;
+  text-align: center;
   text-wrap: balance;
 }
 
@@ -808,26 +823,20 @@ h1 {
   font-weight: 600;
 }
 
-.promise-actions {
-  min-width: 0;
-  display: grid;
-  justify-items: end;
-  gap: 20px;
-}
-
 .promise-actions button {
-  min-height: 42px;
-  padding: 8px 14px;
+  min-height: 44px;
+  padding: 8px 18px;
   color: #ffffff;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 999px;
-  font-size: 0.88rem;
-  font-weight: 800;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: none;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  transition: transform 140ms ease, box-shadow 140ms ease, background 140ms ease;
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease, color 160ms ease;
 }
 
 .promise-actions button:hover,
@@ -835,90 +844,140 @@ h1 {
   color: #071424;
   background: #fbbf24;
   border-color: #fbbf24;
-  box-shadow: 0 12px 28px rgba(251, 191, 36, 0.28);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 .promise-navigation,
 .promise-share-buttons {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 8px;
+  justify-content: center;
+  gap: 10px;
   max-width: 100%;
 }
 
-.promise-share-actions {
+.promise-actions {
   display: grid;
-  gap: 8px;
-  justify-items: end;
+  justify-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.promise-share-primary {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
 }
 
 .promise-share-label {
-  color: rgba(226, 232, 240, 0.78);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  color: rgba(226, 232, 240, 0.7);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
 .promise-social-share {
   display: inline-grid;
   place-items: center;
-  width: 42px;
-  min-height: 42px;
+  width: 44px;
+  height: 44px;
+  min-height: 44px;
   color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 50%;
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
-  font-size: 0.94rem;
-  font-weight: 800;
+  box-shadow: none;
   text-decoration: none;
-  transition: transform 140ms ease, box-shadow 140ms ease, filter 140ms ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.promise-social-share svg {
+  width: 19px;
+  height: 19px;
+  fill: currentColor;
 }
 
 .promise-social-share:hover,
 .promise-social-share:focus-visible {
   color: #ffffff;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
-  filter: brightness(1.08);
   transform: translateY(-2px);
 }
 
-.promise-social-facebook {
+/* Brand colour appears on hover only, so the resting row stays calm and
+   monochrome instead of four competing logos. */
+.promise-social-facebook:hover,
+.promise-social-facebook:focus-visible {
   background: #1877f2;
-  font-family: Arial, sans-serif;
-  font-size: 1.2rem;
+  border-color: #1877f2;
 }
 
-.promise-social-x {
-  background: #111827;
+.promise-social-x:hover,
+.promise-social-x:focus-visible {
+  background: #000000;
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
-.promise-social-linkedin {
+.promise-social-linkedin:hover,
+.promise-social-linkedin:focus-visible {
   background: #0a66c2;
-  font-family: Arial, sans-serif;
+  border-color: #0a66c2;
 }
 
-.promise-social-whatsapp {
+.promise-social-whatsapp:hover,
+.promise-social-whatsapp:focus-visible {
+  color: #071424;
   background: #25d366;
-  font-family: Arial, sans-serif;
-  font-size: 0.72rem;
-  letter-spacing: -0.05em;
-  text-transform: uppercase;
+  border-color: #25d366;
 }
 
-.promise-next {
-  width: 42px;
-  padding: 8px !important;
-  font-size: 1.2rem !important;
+.promise-navigation {
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.promise-nav-button {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  min-height: 38px;
+  padding: 0;
+  color: rgba(226, 232, 240, 0.55);
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: none;
+  transition: color 160ms ease, background 160ms ease;
+}
+
+.promise-nav-button svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.promise-nav-button:hover,
+.promise-nav-button:focus-visible {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 0;
+  box-shadow: none;
+  transform: none;
 }
 
 .promise-status {
-  grid-column: 1 / -1;
   min-height: 1.4em;
   margin: 0;
   color: rgba(226, 232, 240, 0.78);
   font-size: 0.85rem;
+  text-align: center;
 }
 
 .section {
@@ -1946,6 +2005,15 @@ body.modal-open {
     padding: 4px 0 8px;
   }
 
+  /* The theme control is a button, not a link, so it gets its own row at the
+     bottom of the menu with a divider to separate it from the navigation. */
+  .nav-theme-item {
+    order: 1;
+    margin-top: 4px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+  }
+
   .nav-search {
     width: 100%;
   }
@@ -1966,23 +2034,6 @@ body.modal-open {
     position: static;
   }
 
-  .promise-card {
-    grid-template-columns: 1fr;
-  }
-
-  .promise-actions {
-    justify-items: start;
-  }
-
-  .promise-share-actions {
-    justify-items: start;
-  }
-
-  .promise-navigation,
-  .promise-share-buttons {
-    justify-content: flex-start;
-  }
-
   .related-card {
     position: static;
   }
@@ -1999,7 +2050,7 @@ body.modal-open {
   }
 
   .promise-card {
-    padding: 34px 28px;
+    padding: 38px 22px 26px;
   }
 
   .promise-copy {
@@ -2008,15 +2059,11 @@ body.modal-open {
 
   .promise-card blockquote {
     width: 100%;
-    padding: 18px 4px;
+    padding: 10px 0;
   }
 
   .promise-actions {
     width: 100%;
-  }
-
-  .promise-share-buttons {
-    justify-content: flex-start;
   }
 
   .search-row {

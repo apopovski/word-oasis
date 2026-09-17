@@ -54,8 +54,8 @@ You can add them in Apps Script by going to Project settings > Script properties
 
 ## Troubleshooting
 
-**"Your question was found locally, but the email/spreadsheet log could not be
-sent right now."**
+**"Your question was found locally, but it could not be sent for follow-up
+right now."**
 
 The browser could not reach the endpoint. Open the browser console for the real
 cause; it is almost always one of these:

@@ -1386,19 +1386,16 @@ async function handleQuestionSubmit(event) {
     return;
   }
 
-  questionStatus.textContent = "Sending your question to the email and spreadsheet log…";
+  questionStatus.textContent = "Sending your question…";
 
   try {
     const result = await submitQuestionToSheet(payload);
     if (result.enabled) {
-      const logged = result.result && result.result.spreadsheetLogged;
-      questionStatus.textContent = logged
-        ? "Your question was sent for follow-up and recorded in the spreadsheet log."
-        : "Your question was sent for follow-up.";
+      questionStatus.textContent = "Your question was sent for follow-up.";
     }
   } catch (error) {
     console.error("Question submission failed", error);
-    questionStatus.textContent = "Your question was found locally, but the email/spreadsheet log could not be sent right now.";
+    questionStatus.textContent = "Your question was found locally, but it could not be sent for follow-up right now.";
   }
 
   questionResults.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -1465,6 +1462,7 @@ function updatePromiseTextHeight() {
   }
 
   const measurement = promiseText.cloneNode(false);
+  measurement.removeAttribute("id");
   measurement.classList.add("promise-measure");
   measurement.style.width = `${width}px`;
   promiseText.parentElement.appendChild(measurement);
