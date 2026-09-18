@@ -35,7 +35,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="styles.css?v=20260929">
+    <link rel="stylesheet" href="styles.css?v=20261002">
 <script>
   window.WORD_OASIS_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZSB_Tf-MEbTUrmSkEqwNn2gjtxqF4cv16pMCDMmV3voJeJAFhIYBQ/exec";
   window.WORD_OASIS_FORM_EMAIL_TO = "wordoasis7@gmail.com";
@@ -50,7 +50,7 @@
     <meta property="og:url" content="https://wordoasis.org/">
     <meta property="og:site_name" content="Word Oasis">
     <meta property="og:locale" content="en_US">
-    <meta property="og:image" content="https://wordoasis.org/og-image.png?v=20260929">
+    <meta property="og:image" content="https://wordoasis.org/og-image.png?v=20261002">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Word Oasis logo with a daily Scripture, hope, and encouragement message">
@@ -60,7 +60,7 @@
       name="twitter:description"
       content="Search 70+ Scripture-based answers to real Bible questions about salvation, prayer, anxiety, the Sabbath, prophecy, and Christian living."
     >
-    <meta name="twitter:image" content="https://wordoasis.org/og-image.png?v=20260929">
+    <meta name="twitter:image" content="https://wordoasis.org/og-image.png?v=20261002">
     <meta name="twitter:image:alt" content="Word Oasis logo with a daily Scripture, hope, and encouragement message">
 
     <script type="application/ld+json">
@@ -1009,18 +1009,25 @@
             </form>
           </div>
 
-          <aside id="ask" class="hero-panel" aria-label="Ask a Bible question">
+          <aside id="ask" class="hero-panel" aria-label="Ask a Bible question or contact us">
             <span class="panel-tag">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-              <span>Find answers to your Bible questions</span>
+              <span id="ask-eyebrow-text">Find answers to your Bible questions</span>
             </span>
-            <h2>Ask a Bible Question</h2>
-            <p>
+            <h2 id="ask-heading">Ask a Bible Question</h2>
+            <p id="ask-intro">
               Have a Bible related question? We'll do our best to provide you with Scripture answers.
             </p>
 
+            <div class="ask-mode-toggle" role="radiogroup" aria-label="What can we help with?">
+              <input type="radio" id="ask-mode-question" name="ask-mode" value="question" checked>
+              <label for="ask-mode-question">Bible question</label>
+              <input type="radio" id="ask-mode-general" name="ask-mode" value="general">
+              <label for="ask-mode-general">General inquiry</label>
+            </div>
+
             <form class="hero-ask-form" id="question-form">
-              <label class="sr-only" for="question-input">Your question</label>
+              <label class="sr-only" for="question-input" id="question-input-label">Your question</label>
               <textarea
                 id="question-input"
                 name="question"
@@ -1030,9 +1037,10 @@
                 required
               ></textarea>
               <div class="hero-ask-row">
-                <label class="sr-only" for="question-topic">Topic (optional)</label>
-                <select id="question-topic" name="topic">
-                  <option value="">Topic (optional)</option>
+                <span id="question-topic-row">
+                  <label class="sr-only" for="question-topic">Topic (optional)</label>
+                  <select id="question-topic" name="topic">
+                    <option value="">Topic (optional)</option>
                   <option value="Baptism">Baptism</option>
                     <option value="Bible Study">Bible Study</option>
                     <option value="Christian Living">Christian Living</option>
@@ -1055,7 +1063,8 @@
                     <option value="State of the Dead">State of the Dead</option>
                     <option value="Stewardship">Stewardship</option>
                     <option value="Three Angels">Three Angels</option><!-- prerender:question-topic -->
-                </select>
+                  </select>
+                </span>
                 <label class="sr-only" for="question-email">Email (required)</label>
                 <input id="question-email" name="email" type="email" placeholder="Email (required)" required>
               </div>
@@ -1076,8 +1085,8 @@
                 <label class="sr-only" for="question-faith">Faith (optional)</label>
                 <input id="question-faith" name="faith" type="text" placeholder="Faith (optional)">
               </div>
-              <button type="submit" class="hero-ask-button">
-                <span>Find a Bible answer</span>
+              <button type="submit" class="hero-ask-button" id="question-submit">
+                <span id="question-submit-label">Find a Bible answer</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </button>
               <div class="hero-form-footer">
@@ -1198,10 +1207,10 @@
               <p class="eyebrow"><span aria-hidden="true">&#10022;</span> Bible Answers</p>
             </div>
             <div id="spotlight-body">
-              <div class="answer-tags" id="spotlight-tags"><button type="button" class="tag-link" data-topic="Forgiveness">Forgiveness</button><button type="button" class="tag-link" data-topic="Salvation">Salvation</button></div>
-              <h3><a id="spotlight-link" href="/answers/is-forgiving-gods-forgiveness-of-me-different-from-me-forgiving-other-people/">Is forgiving God's forgiveness of me different from me forgiving other people?</a></h3>
-              <p id="spotlight-short">God's forgiveness is the perfect model and the source of ours, but Scripture ties the two together directly, calling believers to forgive others because they have been forgiven so much themselves.</p>
-              <a class="spotlight-cta" id="spotlight-cta" href="/answers/is-forgiving-gods-forgiveness-of-me-different-from-me-forgiving-other-people/">
+              <div class="answer-tags" id="spotlight-tags"><button type="button" class="tag-link" data-topic="Marriage and Family">Marriage and Family</button><button type="button" class="tag-link" data-topic="Prayer">Prayer</button></div>
+              <h3><a id="spotlight-link" href="/answers/how-can-a-family-worship-god-together-at-home/">How can a family worship God together at home?</a></h3>
+              <p id="spotlight-short">Family worship can be simple: read Scripture, pray together, sing or share gratitude, and talk about how God's Word applies to daily life.</p>
+              <a class="spotlight-cta" id="spotlight-cta" href="/answers/how-can-a-family-worship-god-together-at-home/">
                 Read the full answer
               </a>
               <!-- prerender:spotlight-body --></div>
@@ -1591,7 +1600,7 @@
       </div>
     </div>
 
-    <script src="theme.js?v=20260929"></script>
-    <script src="script.js?v=20260929"></script>
+    <script src="theme.js?v=20261002"></script>
+    <script src="script.js?v=20261002"></script>
   </body>
 </html>

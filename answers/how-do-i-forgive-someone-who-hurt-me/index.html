@@ -29,20 +29,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20260929">
+    <link rel="stylesheet" href="/styles.css?v=20261002">
     <meta property="og:type" content="article">
     <meta property="og:title" content="How do I forgive someone who hurt me? | Word Oasis">
     <meta property="og:description" content="Biblical forgiveness begins with remembering how God has forgiven us in Christ. Forgiveness releases vengeance to God, pursues peace where possible,...">
     <meta property="og:url" content="https://wordoasis.org/answers/how-do-i-forgive-someone-who-hurt-me/">
     <meta property="og:site_name" content="Word Oasis">
-    <meta property="og:image" content="https://wordoasis.org/og-image.png?v=20260929">
+    <meta property="og:image" content="https://wordoasis.org/og-image.png?v=20261002">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Word Oasis logo with a daily Scripture, hope, and encouragement message">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="How do I forgive someone who hurt me? | Word Oasis">
     <meta name="twitter:description" content="Biblical forgiveness begins with remembering how God has forgiven us in Christ. Forgiveness releases vengeance to God, pursues peace where possible,...">
-    <meta name="twitter:image" content="https://wordoasis.org/og-image.png?v=20260929">
+    <meta name="twitter:image" content="https://wordoasis.org/og-image.png?v=20261002">
     <meta name="twitter:image:alt" content="Word Oasis logo with a daily Scripture, hope, and encouragement message">
     <script type="application/ld+json">
 {
@@ -65,32 +65,53 @@
         <a class="brand" href="/" aria-label="Word Oasis home">
           <img src="/word-oasis.svg" alt="Word Oasis" class="brand-mark">
         </a>
-        <ul id="primary-menu" class="nav-links nav-links-static">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+          <span class="sr-only">Open menu</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul id="primary-menu" class="nav-links">
           <li><a href="/answers/">Answers</a></li>
           <li><a href="/topics/">Topics</a></li>
           <li><a href="/#categories">Categories</a></li>
           <li><a href="/#study">Study Guide</a></li>
           <li><a href="/#ask">Ask a question</a></li>
+          <li class="nav-search-item">
+            <form class="nav-search" action="/" method="get" role="search">
+              <label class="sr-only" for="nav-search-input">Search Bible questions</label>
+              <input
+                id="nav-search-input"
+                type="search"
+                name="q"
+                placeholder="Search"
+                autocomplete="off"
+              >
+              <button type="submit" aria-label="Submit search">Search</button>
+            </form>
+          </li>
+          <li class="nav-theme-item">
+            <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color mode" aria-pressed="false">
+              <span class="theme-toggle-icon" aria-hidden="true">
+                <svg class="theme-icon-moon" viewBox="0 0 24 24" focusable="false">
+                  <path d="M20.1 14.6A8.4 8.4 0 0 1 9.4 3.9a8.4 8.4 0 1 0 10.7 10.7Z"></path>
+                </svg>
+                <svg class="theme-icon-sun" viewBox="0 0 24 24" focusable="false">
+                  <circle cx="12" cy="12" r="4.1"></circle>
+                  <path d="M12 2.4v2.2"></path>
+                  <path d="M12 19.4v2.2"></path>
+                  <path d="M4.8 4.8l1.6 1.6"></path>
+                  <path d="M17.6 17.6l1.6 1.6"></path>
+                  <path d="M2.4 12h2.2"></path>
+                  <path d="M19.4 12h2.2"></path>
+                  <path d="M4.8 19.2l1.6-1.6"></path>
+                  <path d="M17.6 6.4l1.6-1.6"></path>
+                </svg>
+              </span>
+              <span class="theme-toggle-text" data-theme-label>Dark</span>
+            </button>
+          </li>
         </ul>
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color mode" aria-pressed="false">
-          <span class="theme-toggle-icon" aria-hidden="true">
-            <svg class="theme-icon-moon" viewBox="0 0 24 24" focusable="false">
-              <path d="M20.1 14.6A8.4 8.4 0 0 1 9.4 3.9a8.4 8.4 0 1 0 10.7 10.7Z"></path>
-            </svg>
-            <svg class="theme-icon-sun" viewBox="0 0 24 24" focusable="false">
-              <circle cx="12" cy="12" r="4.1"></circle>
-              <path d="M12 2.4v2.2"></path>
-              <path d="M12 19.4v2.2"></path>
-              <path d="M4.8 4.8l1.6 1.6"></path>
-              <path d="M17.6 17.6l1.6 1.6"></path>
-              <path d="M2.4 12h2.2"></path>
-              <path d="M19.4 12h2.2"></path>
-              <path d="M4.8 19.2l1.6-1.6"></path>
-              <path d="M17.6 6.4l1.6-1.6"></path>
-            </svg>
-          </span>
-          <span data-theme-label>Dark</span>
-        </button>
       </nav>
     </header>
     
@@ -190,7 +211,7 @@
       </div>
     </div>
 
-    <script src="/theme.js?v=20260929"></script>
-    <script src="/verse-modal.js?v=20260929"></script>
+    <script src="/theme.js?v=20261002"></script>
+    <script src="/verse-modal.js?v=20261002"></script>
   </body>
 </html>

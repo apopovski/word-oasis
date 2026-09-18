@@ -61,4 +61,33 @@
   } else if (typeof mediaQuery.addListener === "function") {
     mediaQuery.addListener(syncSystemTheme);
   }
+
+  // Mobile burger menu toggle. Lives here (rather than script.js) so every
+  // page shares identical nav behavior, since theme.js loads site-wide while
+  // script.js only loads on the homepage.
+  const navToggle = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelector("#primary-menu");
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      navToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navLinks.addEventListener("click", (event) => {
+      // Ignore clicks on the search input/field itself so typing a query
+      // doesn't immediately collapse the open menu.
+      if (event.target.closest("input")) {
+        return;
+      }
+      navLinks.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && navLinks.classList.contains("open")) {
+        navLinks.classList.remove("open");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
 })();

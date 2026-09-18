@@ -1274,8 +1274,6 @@ const spotlightTags = document.querySelector("#spotlight-tags");
 const spotlightLink = document.querySelector("#spotlight-link");
 const spotlightShort = document.querySelector("#spotlight-short");
 const spotlightCta = document.querySelector("#spotlight-cta");
-const navToggle = document.querySelector(".nav-toggle");
-const navLinks = document.querySelector("#primary-menu");
 const promiseText = document.querySelector("#promise-text");
 const promiseReference = document.querySelector("#promise-reference");
 const promisePrevious = document.querySelector("#promise-previous");
@@ -1290,7 +1288,9 @@ const promiseWhatsAppShare = document.querySelector("#promise-share-whatsapp");
 const promiseStatus = document.querySelector("#promise-status");
 const questionForm = document.querySelector("#question-form");
 const questionInput = document.querySelector("#question-input");
+const questionInputLabel = document.querySelector("#question-input-label");
 const questionTopic = document.querySelector("#question-topic");
+const questionTopicRow = document.querySelector("#question-topic-row");
 const questionEmail = document.querySelector("#question-email");
 const questionGender = document.querySelector("#question-gender");
 const questionLocation = document.querySelector("#question-location");
@@ -1300,8 +1300,63 @@ const questionStatus = document.querySelector("#question-status");
 const questionResults = document.querySelector("#question-results");
 const questionResultsTitle = document.querySelector("#question-results-title");
 const questionResultsList = document.querySelector("#question-results-list");
+const questionSubmit = document.querySelector("#question-submit");
+const questionSubmitLabel = document.querySelector("#question-submit-label");
+const askModeInputs = document.querySelectorAll('input[name="ask-mode"]');
+const askEyebrowText = document.querySelector("#ask-eyebrow-text");
+const askHeading = document.querySelector("#ask-heading");
+const askIntro = document.querySelector("#ask-intro");
 const questionSubmissionEndpoint = window.WORD_OASIS_FORM_ENDPOINT || "";
 const questionSubmissionEmailTo = window.WORD_OASIS_FORM_EMAIL_TO || "";
+
+const askModeContent = {
+  question: {
+    eyebrow: "Find answers to your Bible questions",
+    heading: "Ask a Bible Question",
+    intro: "Have a Bible related question? We'll do our best to provide you with Scripture answers.",
+    inputLabel: "Your question",
+    placeholder: "Type your question... (e.g. How can I trust God when I am anxious?)",
+    submitLabel: "Find a Bible answer"
+  },
+  general: {
+    eyebrow: "Reach out to the Word Oasis team",
+    heading: "General Inquiry",
+    intro: "Have feedback, a prayer request, or a general question about the site? Send us a message.",
+    inputLabel: "Your message",
+    placeholder: "Type your message... (e.g. feedback, a prayer request, or a question about the site)",
+    submitLabel: "Send message"
+  }
+};
+
+function currentAskMode() {
+  const checked = document.querySelector('input[name="ask-mode"]:checked');
+  return checked ? checked.value : "question";
+}
+
+function applyAskMode(mode) {
+  const content = askModeContent[mode] || askModeContent.question;
+  if (askEyebrowText) askEyebrowText.textContent = content.eyebrow;
+  if (askHeading) askHeading.textContent = content.heading;
+  if (askIntro) askIntro.textContent = content.intro;
+  if (questionInputLabel) questionInputLabel.textContent = content.inputLabel;
+  if (questionInput) questionInput.placeholder = content.placeholder;
+  if (questionSubmitLabel) questionSubmitLabel.textContent = content.submitLabel;
+  if (questionTopicRow) {
+    questionTopicRow.hidden = mode === "general";
+  }
+  if (questionEmail) {
+    questionEmail.classList.toggle("full-width", mode === "general");
+  }
+  questionStatus.textContent = "";
+}
+
+askModeInputs.forEach((input) => {
+  input.addEventListener("change", () => {
+    if (input.checked) {
+      applyAskMode(input.value);
+    }
+  });
+});
 
 const biblePromises = [
   {
@@ -1844,40 +1899,49 @@ async function submitQuestionToSheet(payload) {
 
 async function handleQuestionSubmit(event) {
   event.preventDefault();
+  const mode = currentAskMode();
   const question = questionInput.value.trim();
   const email = questionEmail.value.trim();
   const gender = questionGender ? questionGender.value.trim() : "";
   const location = questionLocation ? questionLocation.value.trim() : "";
   const age = questionAge && questionAge.value ? Number(questionAge.value) : "";
   const faith = questionFaith ? questionFaith.value.trim() : "";
-  const topic = questionTopic.value || "General";
-  const matches = relatedAnswers(question, questionTopic.value);
-
-  questionResults.hidden = false;
-  questionResultsList.innerHTML = matches.map(answerTemplate).join("");
-  if (matches.length) {
-    questionResultsTitle.textContent = `Related answers for "${question}"`;
-    questionStatus.textContent = `We found ${matches.length} related answer${matches.length === 1 ? "" : "s"} to start your study.`;
-  } else {
-    questionResultsTitle.textContent = "No close match yet";
-    questionResultsList.innerHTML = `
-      <div class="empty-state">
-        <h3>Keep exploring</h3>
-        <p>Try fewer keywords, choose a topic, or browse the answer library below.</p>
-      </div>
-    `;
-    questionStatus.textContent = "No close match was found, but your question is ready for a broader search.";
-  }
+  const topic = mode === "general" ? "General Inquiry" : questionTopic.value || "General";
 
   if (!question) {
-    questionStatus.textContent = "Please enter a question before submitting.";
-    questionResults.scrollIntoView({ behavior: "smooth", block: "start" });
+    questionStatus.textContent =
+      mode === "general" ? "Please enter a message before submitting." : "Please enter a question before submitting.";
     return;
+  }
+
+  let matches = [];
+  if (mode === "question") {
+    matches = relatedAnswers(question, questionTopic.value);
+
+    questionResults.hidden = false;
+    questionResultsList.innerHTML = matches.map(answerTemplate).join("");
+    if (matches.length) {
+      questionResultsTitle.textContent = `Related answers for "${question}"`;
+      questionStatus.textContent = `We found ${matches.length} related answer${matches.length === 1 ? "" : "s"} to start your study.`;
+    } else {
+      questionResultsTitle.textContent = "No close match yet";
+      questionResultsList.innerHTML = `
+        <div class="empty-state">
+          <h3>Keep exploring</h3>
+          <p>Try fewer keywords, choose a topic, or browse the answer library below.</p>
+        </div>
+      `;
+      questionStatus.textContent = "No close match was found, but your question is ready for a broader search.";
+    }
+  } else {
+    questionResults.hidden = true;
+    questionStatus.textContent = "Sending your message…";
   }
 
   const payload = {
     question,
     topic,
+    inquiryType: mode,
     email,
     gender,
     location,
@@ -1890,24 +1954,37 @@ async function handleQuestionSubmit(event) {
   };
 
   if (!questionSubmissionEndpoint) {
-    questionStatus.textContent = "Your question is ready for local search. Add a Google Apps Script endpoint in the site config to enable email and spreadsheet logging.";
-    questionResults.scrollIntoView({ behavior: "smooth", block: "start" });
+    questionStatus.textContent =
+      mode === "general"
+        ? "Your message is ready. Add a Google Apps Script endpoint in the site config to enable email and spreadsheet logging."
+        : "Your question is ready for local search. Add a Google Apps Script endpoint in the site config to enable email and spreadsheet logging.";
+    if (mode === "question") {
+      questionResults.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
     return;
   }
 
-  questionStatus.textContent = "Sending your question…";
+  if (mode === "question") {
+    questionStatus.textContent = "Sending your question…";
+  }
 
   try {
     const result = await submitQuestionToSheet(payload);
     if (result.enabled) {
-      questionStatus.textContent = "Your question was sent for follow-up.";
+      questionStatus.textContent =
+        mode === "general" ? "Thanks! Your message was sent to our team." : "Your question was sent for follow-up.";
     }
   } catch (error) {
     console.error("Question submission failed", error);
-    questionStatus.textContent = "Your question was found locally, but it could not be sent for follow-up right now.";
+    questionStatus.textContent =
+      mode === "general"
+        ? "Your message could not be sent right now. Please try again shortly."
+        : "Your question was found locally, but it could not be sent for follow-up right now.";
   }
 
-  questionResults.scrollIntoView({ behavior: "smooth", block: "start" });
+  if (mode === "question") {
+    questionResults.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 }
 
 function answerTemplate(answer) {
@@ -2167,28 +2244,104 @@ function fitPromiseVerse(ctx, text, maxWidth, maxHeight) {
   return fitted;
 }
 
-function drawPromiseImageBackground(ctx) {
-  const base = ctx.createLinearGradient(0, 0, PROMISE_IMAGE_WIDTH, PROMISE_IMAGE_HEIGHT);
-  base.addColorStop(0, "#1c3350");
-  base.addColorStop(0.55, "#12243a");
-  base.addColorStop(1, "#0a1522");
-  ctx.fillStyle = base;
-  ctx.fillRect(0, 0, PROMISE_IMAGE_WIDTH, PROMISE_IMAGE_HEIGHT);
+// A handful of palettes so shared verses don't all look identical, while every
+// one stays inside the site's dark, elegant look (deep gradient, soft glow,
+// gold eyebrow, thin corner frame). Each promise is assigned a theme by a
+// stable hash of its reference, so the same verse always renders the same way.
+const PROMISE_IMAGE_THEMES = [
+  {
+    id: "aurora",
+    gradient: ["#1c3350", "#12243a", "#0a1522"],
+    glowTop: "rgba(96, 152, 214, 0.26)",
+    glowBottom: "rgba(128, 178, 236, 0.2)",
+    eyebrow: "#f3c86a",
+    reference: "#bcd9f5",
+    divider: "rgba(255, 255, 255, 0.16)",
+    frame: "rgba(255, 255, 255, 0.14)",
+    motif: "rings",
+    motifColor: "rgba(255, 255, 255, 0.05)"
+  },
+  {
+    id: "dusk",
+    gradient: ["#2d2050", "#1c1536", "#0d0a1c"],
+    glowTop: "rgba(168, 132, 224, 0.24)",
+    glowBottom: "rgba(140, 110, 214, 0.18)",
+    eyebrow: "#f0c96a",
+    reference: "#d9c9f7",
+    divider: "rgba(255, 255, 255, 0.16)",
+    frame: "rgba(255, 255, 255, 0.14)",
+    motif: "arcs",
+    motifColor: "rgba(216, 190, 250, 0.09)"
+  },
+  {
+    id: "forest",
+    gradient: ["#173a2c", "#0f261d", "#081711"],
+    glowTop: "rgba(110, 200, 150, 0.22)",
+    glowBottom: "rgba(140, 214, 168, 0.16)",
+    eyebrow: "#e8c56d",
+    reference: "#bfe8d0",
+    divider: "rgba(255, 255, 255, 0.16)",
+    frame: "rgba(255, 255, 255, 0.14)",
+    motif: "dots",
+    motifColor: "rgba(191, 232, 208, 0.14)"
+  },
+  {
+    id: "ember",
+    gradient: ["#3d1f28", "#26141c", "#130a0e"],
+    glowTop: "rgba(224, 130, 120, 0.2)",
+    glowBottom: "rgba(214, 150, 118, 0.16)",
+    eyebrow: "#f3c86a",
+    reference: "#f2c9c4",
+    divider: "rgba(255, 255, 255, 0.16)",
+    frame: "rgba(255, 255, 255, 0.14)",
+    motif: "diagonal",
+    motifColor: "rgba(255, 214, 190, 0.055)"
+  },
+  {
+    id: "midnight-gold",
+    gradient: ["#22232f", "#16171f", "#0a0a10"],
+    glowTop: "rgba(228, 186, 110, 0.16)",
+    glowBottom: "rgba(200, 158, 92, 0.14)",
+    eyebrow: "#f6ce74",
+    reference: "#e8d9b0",
+    divider: "rgba(255, 255, 255, 0.16)",
+    frame: "rgba(255, 255, 255, 0.14)",
+    motif: "rings",
+    motifColor: "rgba(246, 206, 116, 0.08)"
+  },
+  {
+    id: "sapphire-teal",
+    gradient: ["#123244", "#0d2733", "#061318"],
+    glowTop: "rgba(94, 196, 210, 0.22)",
+    glowBottom: "rgba(120, 200, 208, 0.16)",
+    eyebrow: "#f3c86a",
+    reference: "#bfe7f2",
+    divider: "rgba(255, 255, 255, 0.16)",
+    frame: "rgba(255, 255, 255, 0.14)",
+    motif: "waves",
+    motifColor: "rgba(191, 231, 242, 0.1)"
+  }
+];
 
-  const topGlow = ctx.createRadialGradient(250, 180, 0, 250, 180, 760);
-  topGlow.addColorStop(0, "rgba(96, 152, 214, 0.26)");
-  topGlow.addColorStop(1, "rgba(96, 152, 214, 0)");
-  ctx.fillStyle = topGlow;
-  ctx.fillRect(0, 0, PROMISE_IMAGE_WIDTH, PROMISE_IMAGE_HEIGHT);
+// Small, stable string hash (djb2) so the same verse always maps to the same
+// theme index instead of jumping around between shares.
+function hashPromiseKey(key) {
+  let hash = 5381;
+  for (let i = 0; i < key.length; i += 1) {
+    hash = ((hash << 5) + hash + key.charCodeAt(i)) >>> 0;
+  }
+  return hash;
+}
 
-  const bottomGlow = ctx.createRadialGradient(900, 1180, 0, 900, 1180, 620);
-  bottomGlow.addColorStop(0, "rgba(128, 178, 236, 0.2)");
-  bottomGlow.addColorStop(1, "rgba(128, 178, 236, 0)");
-  ctx.fillStyle = bottomGlow;
-  ctx.fillRect(0, 0, PROMISE_IMAGE_WIDTH, PROMISE_IMAGE_HEIGHT);
+function pickPromiseImageTheme(promise) {
+  const key = `${promise.reference || ""}|${promise.text || ""}`;
+  const index = hashPromiseKey(key) % PROMISE_IMAGE_THEMES.length;
+  return PROMISE_IMAGE_THEMES[index];
+}
 
+function drawPromiseMotifRings(ctx, color) {
   ctx.save();
-  ctx.strokeStyle = "rgba(255, 255, 255, 0.05)";
+  ctx.strokeStyle = color;
   ctx.lineWidth = 2;
   [320, 460, 600].forEach((radius) => {
     ctx.beginPath();
@@ -2196,8 +2349,116 @@ function drawPromiseImageBackground(ctx) {
     ctx.stroke();
   });
   ctx.restore();
+}
 
-  ctx.strokeStyle = "rgba(255, 255, 255, 0.14)";
+function drawPromiseMotifArcs(ctx, color) {
+  ctx.save();
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 3;
+  [260, 400, 540, 680].forEach((radius) => {
+    ctx.beginPath();
+    ctx.arc(-40, -40, radius, 0, Math.PI / 2);
+    ctx.stroke();
+  });
+  ctx.restore();
+}
+
+function drawPromiseMotifDots(ctx, color) {
+  ctx.save();
+  ctx.fillStyle = color;
+  const spacing = 46;
+  for (let row = 0; row < 6; row += 1) {
+    for (let col = 0; col < 6; col += 1) {
+      const x = PROMISE_IMAGE_WIDTH - 70 - col * spacing;
+      const y = 70 + row * spacing;
+      ctx.beginPath();
+      ctx.arc(x, y, 3.4, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+  ctx.restore();
+}
+
+function drawPromiseMotifDiagonal(ctx, color) {
+  ctx.save();
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 6;
+  ctx.beginPath();
+  ctx.rect(0, 0, PROMISE_IMAGE_WIDTH, PROMISE_IMAGE_HEIGHT);
+  ctx.clip();
+  for (let x = -PROMISE_IMAGE_HEIGHT; x < PROMISE_IMAGE_WIDTH + PROMISE_IMAGE_HEIGHT; x += 96) {
+    ctx.beginPath();
+    ctx.moveTo(x, PROMISE_IMAGE_HEIGHT);
+    ctx.lineTo(x + PROMISE_IMAGE_HEIGHT, 0);
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+
+function drawPromiseMotifWaves(ctx, color) {
+  ctx.save();
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 3;
+  [PROMISE_IMAGE_HEIGHT - 160, PROMISE_IMAGE_HEIGHT - 110, PROMISE_IMAGE_HEIGHT - 60].forEach((baseY, waveIndex) => {
+    ctx.beginPath();
+    const amplitude = 18 + waveIndex * 4;
+    const wavelength = 260;
+    for (let x = -40; x <= PROMISE_IMAGE_WIDTH + 40; x += 8) {
+      const y = baseY + Math.sin((x / wavelength) * Math.PI * 2) * amplitude;
+      if (x === -40) {
+        ctx.moveTo(x, y);
+      } else {
+        ctx.lineTo(x, y);
+      }
+    }
+    ctx.stroke();
+  });
+  ctx.restore();
+}
+
+function drawPromiseImageMotif(ctx, theme) {
+  switch (theme.motif) {
+    case "arcs":
+      drawPromiseMotifArcs(ctx, theme.motifColor);
+      return;
+    case "dots":
+      drawPromiseMotifDots(ctx, theme.motifColor);
+      return;
+    case "diagonal":
+      drawPromiseMotifDiagonal(ctx, theme.motifColor);
+      return;
+    case "waves":
+      drawPromiseMotifWaves(ctx, theme.motifColor);
+      return;
+    case "rings":
+    default:
+      drawPromiseMotifRings(ctx, theme.motifColor);
+  }
+}
+
+function drawPromiseImageBackground(ctx, theme) {
+  const base = ctx.createLinearGradient(0, 0, PROMISE_IMAGE_WIDTH, PROMISE_IMAGE_HEIGHT);
+  base.addColorStop(0, theme.gradient[0]);
+  base.addColorStop(0.55, theme.gradient[1]);
+  base.addColorStop(1, theme.gradient[2]);
+  ctx.fillStyle = base;
+  ctx.fillRect(0, 0, PROMISE_IMAGE_WIDTH, PROMISE_IMAGE_HEIGHT);
+
+  const topGlow = ctx.createRadialGradient(250, 180, 0, 250, 180, 760);
+  topGlow.addColorStop(0, theme.glowTop);
+  topGlow.addColorStop(1, "rgba(0, 0, 0, 0)");
+  ctx.fillStyle = topGlow;
+  ctx.fillRect(0, 0, PROMISE_IMAGE_WIDTH, PROMISE_IMAGE_HEIGHT);
+
+  const bottomGlow = ctx.createRadialGradient(900, 1180, 0, 900, 1180, 620);
+  bottomGlow.addColorStop(0, theme.glowBottom);
+  bottomGlow.addColorStop(1, "rgba(0, 0, 0, 0)");
+  ctx.fillStyle = bottomGlow;
+  ctx.fillRect(0, 0, PROMISE_IMAGE_WIDTH, PROMISE_IMAGE_HEIGHT);
+
+  drawPromiseImageMotif(ctx, theme);
+
+  ctx.strokeStyle = theme.frame;
   ctx.lineWidth = 2;
   traceRoundedRect(ctx, 44, 44, PROMISE_IMAGE_WIDTH - 88, PROMISE_IMAGE_HEIGHT - 88, 52);
   ctx.stroke();
@@ -2215,7 +2476,8 @@ async function renderPromiseImage(promise) {
     throw new Error("Canvas is not available");
   }
 
-  drawPromiseImageBackground(ctx);
+  const theme = pickPromiseImageTheme(promise);
+  drawPromiseImageBackground(ctx, theme);
 
   const centerX = PROMISE_IMAGE_WIDTH / 2;
   const textWidth = PROMISE_IMAGE_WIDTH - PROMISE_IMAGE_MARGIN * 2;
@@ -2233,7 +2495,7 @@ async function renderPromiseImage(promise) {
   }
 
   ctx.textBaseline = "alphabetic";
-  ctx.fillStyle = "#f3c86a";
+  ctx.fillStyle = theme.eyebrow;
   ctx.font = '800 26px Inter, system-ui, sans-serif';
   drawTrackedText(ctx, "TODAY'S BIBLE PROMISE", centerX, eyebrowY, 7);
 
@@ -2255,11 +2517,11 @@ async function renderPromiseImage(promise) {
   });
 
   y += referenceGap;
-  ctx.fillStyle = "#bcd9f5";
+  ctx.fillStyle = theme.reference;
   ctx.font = '700 32px Inter, system-ui, sans-serif';
   drawTrackedText(ctx, promise.reference.toUpperCase(), centerX, y, 4);
 
-  ctx.strokeStyle = "rgba(255, 255, 255, 0.16)";
+  ctx.strokeStyle = theme.divider;
   ctx.lineWidth = 2;
   ctx.beginPath();
   ctx.moveTo(centerX - 60, PROMISE_IMAGE_HEIGHT - 196);
@@ -2635,8 +2897,6 @@ searchForm.addEventListener("submit", (event) => {
 navSearchForm.addEventListener("submit", (event) => {
   event.preventDefault();
   setSearch(navSearchInput.value);
-  navLinks.classList.remove("open");
-  navToggle.setAttribute("aria-expanded", "false");
 });
 
 questionForm.addEventListener("submit", handleQuestionSubmit);
@@ -2849,16 +3109,6 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && !verseModal.hidden) {
     closeVerseModal();
   }
-});
-
-navToggle.addEventListener("click", () => {
-  const isOpen = navLinks.classList.toggle("open");
-  navToggle.setAttribute("aria-expanded", String(isOpen));
-});
-
-navLinks.addEventListener("click", () => {
-  navLinks.classList.remove("open");
-  navToggle.setAttribute("aria-expanded", "false");
 });
 
 const params = new URLSearchParams(window.location.search);
