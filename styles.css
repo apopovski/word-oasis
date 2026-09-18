@@ -1643,6 +1643,20 @@ h1 {
   font-weight: 700;
 }
 
+.inline-topic-link {
+  color: var(--brand);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(37, 99, 235, 0.35);
+  text-underline-offset: 2px;
+  transition: text-decoration-color 140ms ease;
+}
+
+.inline-topic-link:hover,
+.inline-topic-link:focus-visible {
+  text-decoration-color: currentColor;
+}
+
 .related-card {
   position: sticky;
   top: 98px;

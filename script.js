@@ -1066,6 +1066,174 @@ const answers = [
     category: "Knowing God",
     scriptures: ["Genesis 1:31-2:3", "Exodus 20:11", "Hebrews 11:3"],
     keywords: ["creation", "six days", "literal week", "Genesis", "origins"]
+  },
+  {
+    id: "answer-baptism-mode-immersion",
+    question: "Does baptism have to be by full immersion, or is sprinkling enough?",
+    shortAnswer:
+      "Every New Testament example of baptism describes going down into water and coming up out of it, matching the biblical picture of burial and resurrection with Christ.",
+    longAnswer:
+      "The Greek word behind \"baptize\" means to dip or immerse, and the New Testament's baptism scenes consistently describe candidates going down into the water and coming back up, such as Philip and the Ethiopian official both entering and leaving the water together. This matters because immersion is the visual heart of the symbol: burial with Christ under the water and rising to new life as the person emerges, a picture that sprinkling or pouring does not fully convey. Choosing immersion is not about ritual precision for its own sake, but about letting the physical act preach the same gospel truth Paul described in Romans.",
+    topics: ["Baptism", "Salvation", "Bible Study"],
+    category: "Faith and Salvation",
+    scriptures: ["Acts 8:38-39", "Romans 6:4", "Matthew 3:16"],
+    keywords: ["baptism mode", "immersion", "sprinkling", "burial with Christ", "Acts 8"]
+  },
+  {
+    id: "answer-baptism-before-communion",
+    question: "Do I need to be baptized before taking communion?",
+    shortAnswer:
+      "Communion in the New Testament is shared among believers who have already publicly identified with Christ, so baptism naturally comes first as the entry point into that shared fellowship.",
+    longAnswer:
+      "The Lord's Supper was instituted among Jesus' committed disciples, and the early church's pattern in Acts shows new believers being baptized and then continuing steadfastly in the apostles' teaching, fellowship, and the breaking of bread. Baptism marks a person's public entrance into the family of faith, while communion renews and celebrates that same covenant relationship together as a community. Someone still exploring faith is warmly welcome to attend and observe, but taking communion works best as a next step after baptism, not before it, so both symbols keep their full meaning.",
+    topics: ["Baptism", "Church", "Christian Living"],
+    category: "Faith and Salvation",
+    scriptures: ["Acts 2:41-42", "1 Corinthians 11:23-26", "Acts 2:38"],
+    keywords: ["communion", "Lord's supper", "baptism first", "church membership", "fellowship"]
+  },
+  {
+    id: "answer-forgiveness-without-apology",
+    question: "Can I forgive someone who never apologizes or admits wrong?",
+    shortAnswer:
+      "Yes — biblical forgiveness is something the offended person can extend regardless of whether the other person ever apologizes, though full reconciliation still requires two willing sides.",
+    longAnswer:
+      "Jesus forgave from the cross before anyone asked for it, praying for those who had not repented, which shows that forgiveness does not have to wait on someone else's apology. Releasing bitterness and the desire for revenge is a decision the wounded person can make before God even when the offender never acknowledges the harm done. This kind of forgiveness protects the heart from being controlled by resentment, though it is different from reconciliation, which requires honesty and change from both people and may never fully happen if the other person remains unrepentant.",
+    topics: ["Forgiveness", "Comfort", "Christian Living"],
+    category: "Life and Relationships",
+    scriptures: ["Luke 23:34", "Mark 11:25", "Romans 12:19"],
+    keywords: ["forgiveness without apology", "unrepentant", "bitterness", "letting go", "reconciliation"]
+  },
+  {
+    id: "answer-forgiveness-god-vs-people",
+    question: "Is forgiving God's forgiveness of me different from me forgiving other people?",
+    shortAnswer:
+      "God's forgiveness is the perfect model and the source of ours, but Scripture ties the two together directly, calling believers to forgive others because they have been forgiven so much themselves.",
+    longAnswer:
+      "God's forgiveness is uniquely complete: it cancels a debt no one could ever repay and is offered freely through Christ's sacrifice. Human forgiveness is patterned after that gift rather than equal to it, since people forgiving one another are finite and imperfect, and forgiveness between people does not remove guilt before God the way Christ's atonement does. Even so, Jesus links the two closely, teaching that those who have received God's mercy should extend mercy to others, and warning that an unforgiving spirit reveals a heart that has not truly grasped how much it has been forgiven.",
+    topics: ["Forgiveness", "Salvation", "Faith"],
+    category: "Life and Relationships",
+    scriptures: ["Matthew 18:32-33", "Colossians 3:13", "Matthew 6:14-15"],
+    keywords: ["God's forgiveness", "human forgiveness", "mercy", "unforgiving servant", "grace"]
+  },
+  {
+    id: "answer-stewardship-time-talents",
+    question: "What does biblical stewardship mean beyond just money?",
+    shortAnswer:
+      "Stewardship covers everything entrusted to us — time, abilities, health, relationships, and possessions — and calls believers to manage all of it faithfully as caretakers, not owners.",
+    longAnswer:
+      "The parable of the talents pictures a master entrusting differing amounts of resources to his servants and later evaluating how faithfully, not how much, they managed what they were given. This principle extends stewardship far beyond a checkbook: time is a limited gift that can be spent wisely or wasted, spiritual gifts and abilities are meant to serve the community rather than sit unused, and even health and relationships are entrusted responsibilities. Recognizing that everything ultimately belongs to God frees people from either hoarding out of fear or wasting resources carelessly, and instead invites purposeful, grateful management of a life that is not fully one's own.",
+    topics: ["Stewardship", "Christian Living", "Church"],
+    category: "Life and Relationships",
+    scriptures: ["Matthew 25:14-30", "1 Peter 4:10", "Psalm 24:1"],
+    keywords: ["stewardship", "talents", "time management", "spiritual gifts", "faithfulness"]
+  },
+  {
+    id: "answer-sanctuary-daily-service",
+    question: "What happened in the daily sanctuary service, and why does it matter?",
+    shortAnswer:
+      "The daily sacrifices in the sanctuary let individual Israelites confess sin and receive forgiveness through a substitute, foreshadowing Christ's continual ministry on behalf of every believer.",
+    longAnswer:
+      "Each day, individuals who had sinned brought an animal to the sanctuary, confessed their sin over it, and watched it die in their place, a vivid picture that sin's penalty is death and that forgiveness comes through a substitute. The priest would then carry the record of that sin, symbolically, into the Holy Place, showing that confessed sin was forgiven but still recorded until final cleansing. This daily rhythm points forward to Christ, who does not simply forgive once at the cross but continually intercedes for confessing believers, applying His sacrifice moment by moment as their eternal High Priest.",
+    topics: ["Sanctuary", "Salvation", "Prayer"],
+    category: "Hope and Prophecy",
+    scriptures: ["Leviticus 4:27-31", "Hebrews 7:25", "1 John 2:1-2"],
+    keywords: ["daily sacrifice", "sanctuary service", "substitute", "intercession", "high priest"]
+  },
+  {
+    id: "answer-great-controversy-job",
+    question: "What does the book of Job teach about the great controversy between good and evil?",
+    shortAnswer:
+      "Job reveals a heavenly courtroom scene where Satan accuses God's servant of serving God only for personal benefit, and Job's faithfulness through suffering answers that accusation.",
+    longAnswer:
+      "The opening chapters of Job pull back a curtain rarely seen elsewhere in Scripture, showing Satan appearing before God and challenging whether Job's loyalty is genuine or simply bought with blessing. God permits a test, within limits, and Job's continued trust through devastating loss demonstrates that love for God can be real even when circumstances turn painful. The book does not fully explain every reason for suffering, but it reframes the question: the great controversy is not only about human happiness, but about whether God's character and government deserve trust regardless of immediate circumstances.",
+    topics: ["Great Controversy", "Comfort", "Faith"],
+    category: "Hope and Prophecy",
+    scriptures: ["Job 1:6-12", "Job 2:3-6", "Job 42:10-12"],
+    keywords: ["book of Job", "great controversy", "suffering", "Satan's accusation", "trust in God"]
+  },
+  {
+    id: "answer-bible-study-methods",
+    question: "What is a good method for studying the Bible on my own?",
+    shortAnswer:
+      "Reliable Bible study combines prayerful dependence on the Holy Spirit with practical steps like reading in context, comparing Scripture with Scripture, and asking what a passage reveals about God and how to respond.",
+    longAnswer:
+      "Helpful Bible study starts with prayer, asking God to open understanding before opening the page, since Scripture is meant to be read in dependence on the Spirit who inspired it. Reading a passage in its context — the verses around it, the type of writing it is, and its place in the larger biblical story — protects against pulling a phrase out to mean something it never intended. Comparing Scripture with Scripture, letting clearer passages shed light on harder ones, guards against building a whole belief on a single ambiguous verse. Finally, good study always moves toward response: what does this passage show about God's character, and what does it ask of me today?",
+    topics: ["Bible Study", "Holy Spirit", "Faith"],
+    category: "Knowing God",
+    scriptures: ["2 Timothy 2:15", "Acts 17:11", "Psalm 119:18"],
+    keywords: ["Bible study methods", "hermeneutics", "context", "compare Scripture with Scripture", "personal devotions"]
+  },
+  {
+    id: "answer-state-of-dead-spiritism",
+    question: "Why does the Bible warn against consulting mediums or trying to contact the dead?",
+    shortAnswer:
+      "Scripture forbids consulting mediums because the dead are unconscious and cannot communicate, meaning such contact is either deception or a counterfeit spiritual encounter, not genuine contact with a departed loved one.",
+    longAnswer:
+      "The law given through Moses explicitly forbade consulting mediums or spiritists, and King Saul's disastrous attempt to contact Samuel through a medium is presented as an act of unfaithfulness that hastened his downfall. Because Scripture describes the dead as sleeping, unaware of anything happening in the world of the living, any voice or presence claiming to be a deceased person is not what it appears to be. This warning protects grieving people from being exploited or deceived, and it points them instead toward genuine comfort found in prayer, Scripture's promises, and the sure hope of the resurrection when loved ones in Christ will be reunited.",
+    topics: ["State of the Dead", "Great Controversy", "Comfort"],
+    category: "Hope and Prophecy",
+    scriptures: ["Deuteronomy 18:10-12", "1 Samuel 28:6-7", "Isaiah 8:19-20"],
+    keywords: ["mediums", "spiritism", "contacting the dead", "necromancy", "deception"]
+  },
+  {
+    id: "answer-holy-spirit-gifts",
+    question: "What are spiritual gifts, and how do I know mine?",
+    shortAnswer:
+      "Spiritual gifts are Spirit-given abilities distributed to believers to build up the church, discovered through serving, prayerful reflection, and the confirmation of a faith community.",
+    longAnswer:
+      "Paul describes a variety of spiritual gifts — teaching, encouragement, service, leadership, generosity, and more — given by the same Spirit to different people for the common good, like parts of one body serving a shared purpose. No believer receives every gift, and no gift is more \"spiritual\" than another when it is used to serve rather than to gain status. Discovering a gift usually happens through practice rather than abstract guessing: trying different forms of service, noticing where genuine fruit and encouragement follow, and listening to trusted believers who can recognize gifts that may be harder to see in oneself.",
+    topics: ["Holy Spirit", "Church", "Christian Living"],
+    category: "Knowing God",
+    scriptures: ["1 Corinthians 12:4-11", "Romans 12:4-8", "1 Peter 4:10-11"],
+    keywords: ["spiritual gifts", "Holy Spirit", "serving the church", "discovering your gift", "body of Christ"]
+  },
+  {
+    id: "answer-church-leadership-structure",
+    question: "Why does the church need organization and leadership if faith is personal?",
+    shortAnswer:
+      "Scripture treats the church as a body with different members and roles working together, so structure and leadership exist to serve unity and mission, not to replace a believer's personal relationship with God.",
+    longAnswer:
+      "Even in the New Testament's earliest days, the church quickly appointed leaders, elders, and deacons to care for practical needs, teach sound doctrine, and guard against confusion as the movement grew. Paul compares the church to a body with many parts, each serving a distinct function, which requires some coordination to work well together rather than in chaos. Organization is never meant to control someone's private walk with God; personal faith, prayer, and Bible study remain irreplaceable. Instead, healthy structure protects the community from division, supports consistent teaching, and multiplies the church's ability to serve and reach others.",
+    topics: ["Church", "Christian Living", "Stewardship"],
+    category: "Life and Relationships",
+    scriptures: ["Acts 6:1-6", "1 Corinthians 12:12-14", "Titus 1:5"],
+    keywords: ["church organization", "church leadership", "elders and deacons", "unity", "body of Christ"]
+  },
+  {
+    id: "answer-sabbath-vs-sunday",
+    question: "Why do some Christians worship on Saturday instead of Sunday?",
+    shortAnswer:
+      "Some Christians keep the seventh-day Sabbath because Scripture never records God changing it to Sunday, and Saturday remains the actual seventh day established at creation and reaffirmed in the Ten Commandments.",
+    longAnswer:
+      "The Bible consistently identifies the Sabbath as the seventh day of the week, corresponding to Saturday on the modern calendar, established at creation and written into the Ten Commandments as a memorial of God as Creator. Sunday observance developed gradually in later church history, but no New Testament passage records Christ or the apostles commanding believers to transfer worship to the first day. Choosing to keep the seventh-day Sabbath is, for many believers, less about calendar precision and more about honoring what Scripture actually establishes rather than what later tradition assumed, while still respecting fellow believers who gather on Sunday out of sincere conviction.",
+    topics: ["Sabbath", "Law", "Bible Study"],
+    category: "Knowing God",
+    scriptures: ["Exodus 20:8-11", "Genesis 2:2-3", "Mark 2:27-28"],
+    keywords: ["seventh-day Sabbath", "Sunday worship", "Saturday Sabbath", "day of rest", "Ten Commandments"]
+  },
+  {
+    id: "answer-second-coming-imminent",
+    question: "How can I live with hope if I do not know when Jesus will return?",
+    shortAnswer:
+      "Scripture encourages readiness rather than date-setting, teaching believers to live faithfully each day so that whenever Christ returns, they are found watching rather than caught off guard.",
+    longAnswer:
+      "Jesus deliberately said that no one knows the day or hour of His return, redirecting attention away from speculation and toward consistent, faithful living. The parables of the ten virgins and the faithful servant both picture readiness as an ongoing lifestyle of trust and obedience, not a last-minute scramble triggered by a predicted date. This uncertainty is actually presented as merciful: it keeps every generation living with expectant hope rather than either despair or complacency, trusting that God's timing is perfect even when the waiting feels long.",
+    topics: ["Second Coming", "Faith", "Comfort"],
+    category: "Hope and Prophecy",
+    scriptures: ["Matthew 24:36", "Matthew 25:1-13", "1 Thessalonians 5:1-6"],
+    keywords: ["waiting for Jesus", "readiness", "date-setting", "parable of ten virgins", "living with hope"]
+  },
+  {
+    id: "answer-health-mental-emotional",
+    question: "Does the Bible have anything to say about mental and emotional health?",
+    shortAnswer:
+      "Scripture takes emotional struggle seriously, offering honest examples of depression and despair alongside practical patterns of rest, community, prayer, and hope that support emotional well-being.",
+    longAnswer:
+      "Biblical figures like Elijah and David openly described despair, exhaustion, and even a wish to die, and God responded with practical care — rest, food, and companionship — before addressing deeper spiritual matters, modeling a whole-person approach to emotional struggle. The Psalms give language for lament, allowing raw honesty before God rather than forced positivity. Community also matters deeply; believers are called to bear one another's burdens and to weep with those who weep rather than isolate the hurting. None of this replaces wise professional care when needed, but it affirms that emotional pain is not a sign of spiritual failure and that God meets people in it with genuine compassion.",
+    topics: ["Health", "Comfort", "Prayer"],
+    category: "Life and Relationships",
+    scriptures: ["1 Kings 19:4-8", "Psalm 42:5", "Galatians 6:2"],
+    keywords: ["mental health", "depression", "emotional health", "lament", "Elijah despair"]
   }
 ];
 

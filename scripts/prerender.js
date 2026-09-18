@@ -243,20 +243,20 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20260927">
+    <link rel="stylesheet" href="/styles.css?v=20260928">
     <meta property="og:type" content="${ogType}">
     <meta property="og:title" content="${escapeAttribute(title)}">
     <meta property="og:description" content="${escapeAttribute(description)}">
     <meta property="og:url" content="${canonical}">
     <meta property="og:site_name" content="Word Oasis">
-    <meta property="og:image" content="${SITE_URL}/og-image.png?v=20260927">
+    <meta property="og:image" content="${SITE_URL}/og-image.png?v=20260928">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Word Oasis logo with a daily Scripture, hope, and encouragement message">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${escapeAttribute(title)}">
     <meta name="twitter:description" content="${escapeAttribute(description)}">
-    <meta name="twitter:image" content="${SITE_URL}/og-image.png?v=20260927">
+    <meta name="twitter:image" content="${SITE_URL}/og-image.png?v=20260928">
     <meta name="twitter:image:alt" content="Word Oasis logo with a daily Scripture, hope, and encouragement message">
     ${jsonLd}
   </head>
@@ -364,8 +364,8 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
       </div>
     </div>
 
-    <script src="/theme.js?v=20260927"></script>
-    <script src="/verse-modal.js?v=20260927"></script>
+    <script src="/theme.js?v=20260928"></script>
+    <script src="/verse-modal.js?v=20260928"></script>
   </body>
 </html>
 `;
@@ -386,6 +386,63 @@ function scripturesHtml(scriptures) {
     .join("");
 }
 
+/**
+ * Cross-links topic keywords found inside answer body text to the matching
+ * /topics/<slug>/ page, so a mention of "prayer" inside an answer whose main
+ * subject is something else (e.g. anxiety) still helps readers discover the
+ * Prayer topic hub. Each topic is only linked once per answer, and topics the
+ * answer is already tagged with are left as plain text (they are already
+ * shown as tag pills above the body).
+ */
+const TOPIC_KEYWORDS = {
+  Baptism: ["baptism", "baptized", "baptize"],
+  "Bible Study": ["Bible study", "studying Scripture"],
+  "Christian Living": ["Christian living"],
+  Church: ["the church", "local church"],
+  Comfort: ["comfort", "comforted"],
+  Creation: ["creation", "the Creator", "creation week"],
+  Faith: ["faith"],
+  Forgiveness: ["forgiveness", "forgive", "forgiving"],
+  "Great Controversy": ["great controversy"],
+  Health: ["physical health", "health"],
+  "Holy Spirit": ["Holy Spirit"],
+  Law: ["Ten Commandments", "God's law", "commandments"],
+  "Marriage and Family": ["marriage", "family"],
+  Prayer: ["prayer", "praying", "pray"],
+  Prophecy: ["prophecy", "prophetic", "prophecies"],
+  Sabbath: ["Sabbath"],
+  Salvation: ["salvation"],
+  Sanctuary: ["sanctuary"],
+  "Second Coming": ["second coming", "Christ's return", "return of Christ"],
+  "State of the Dead": ["state of the dead"],
+  Stewardship: ["stewardship", "tithing", "tithe"],
+  "Three Angels": ["three angels' messages", "three angels"]
+};
+
+const KEYWORD_TOPIC_MAP = new Map();
+Object.entries(TOPIC_KEYWORDS).forEach(([topic, phrases]) => {
+  phrases.forEach((phrase) => KEYWORD_TOPIC_MAP.set(phrase.toLowerCase(), topic));
+});
+
+const TOPIC_KEYWORD_PATTERN = new RegExp(
+  `\\b(${Array.from(KEYWORD_TOPIC_MAP.keys())
+    .sort((a, b) => b.length - a.length)
+    .map((phrase) => escapeRegExp(phrase))
+    .join("|")})\\b`,
+  "gi"
+);
+
+function linkifyKeywords(text, currentTopics, usedTopics) {
+  return text.replace(TOPIC_KEYWORD_PATTERN, (match) => {
+    const topic = KEYWORD_TOPIC_MAP.get(match.toLowerCase());
+    if (!topic || currentTopics.includes(topic) || usedTopics.has(topic)) {
+      return match;
+    }
+    usedTopics.add(topic);
+    return `<a class="inline-topic-link" href="${topicPath(topic)}">${match}</a>`;
+  });
+}
+
 function relatedAnswers(currentAnswer, answers) {
   return answers
     .filter((answer) => answer.id !== currentAnswer.id && answer.topics.some((topic) => currentAnswer.topics.includes(topic)))
@@ -398,6 +455,7 @@ function answerPage(answer, answers, perspectivesByCategory, perspectivesByAnswe
   const canonicalPath = answerPath(answer);
   const title = `${answer.question} | Word Oasis`;
   const description = metaDescription(answer);
+  const usedTopics = new Set();
 
   return pageShell({
     title,
@@ -431,8 +489,8 @@ function answerPage(answer, answers, perspectivesByCategory, perspectivesByAnswe
         <div class="container answer-page-layout">
           <article class="answer-page-card">
             <div class="answer-tags">${tagsHtml(answer.topics)}</div>
-            <p class="lead-answer">${escapeHtml(answer.longAnswer)}</p>
-            <p>${escapeHtml(perspective)}</p>
+            <p class="lead-answer">${linkifyKeywords(escapeHtml(answer.longAnswer), answer.topics, usedTopics)}</p>
+            <p>${linkifyKeywords(escapeHtml(perspective), answer.topics, usedTopics)}</p>
             <h2>Bible references</h2>
             <div class="scriptures">${scripturesHtml(answer.scriptures)}</div>
           </article>
