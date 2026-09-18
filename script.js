@@ -862,6 +862,210 @@ const answers = [
     category: "Knowing God",
     scriptures: ["Psalm 119:105", "Matthew 4:4", "2 Timothy 3:16-17"],
     keywords: ["daily Bible reading", "devotions", "Scripture study", "spiritual growth", "God's Word"]
+  },
+  {
+    id: "answer-why-get-baptized",
+    question: "Why should I be baptized if I already believe in Jesus?",
+    shortAnswer:
+      "Baptism is not a substitute for faith but its public expression — a burial of the old life and a rising to walk in newness of life with Christ.",
+    longAnswer:
+      "Belief and baptism work together rather than competing for importance. Jesus Himself was baptized to fulfill righteousness, and He commanded His followers to baptize disciples as part of making them. Paul describes baptism by immersion as a picture of the gospel itself: going under the water pictures being buried with Christ, and coming up pictures rising to a new life empowered by the Spirit. It is a public, obedient response to faith already at work in the heart, not a private feeling kept to oneself, and it marks the believer's identity as belonging to Christ.",
+    topics: ["Baptism", "Faith", "Christian Living"],
+    category: "Faith and Salvation",
+    scriptures: ["Romans 6:3-4", "Matthew 28:19", "Acts 2:38"],
+    keywords: ["baptism", "immersion", "new life", "public profession", "obedience"]
+  },
+  {
+    id: "answer-baptism-age",
+    question: "Is there a right age to be baptized?",
+    shortAnswer:
+      "Scripture does not set a fixed age; baptism follows a personal, understood decision to repent and trust Christ, whether that comes early or later in life.",
+    longAnswer:
+      "The New Testament pattern for baptism follows belief, not birth or family tradition alone. Every baptism recorded in Acts follows a person hearing the gospel, understanding it, and choosing to respond. Because of this, readiness matters more than a specific number: a child, teen, or adult can be baptized once they grasp what it means to repent, trust Jesus as Savior, and commit to following Him. Parents, mentors, and church leaders can help someone weigh that decision honestly rather than rushing it or delaying it out of fear.",
+    topics: ["Baptism", "Church", "Faith"],
+    category: "Faith and Salvation",
+    scriptures: ["Acts 8:36-37", "Acts 16:31-33", "Mark 16:16"],
+    keywords: ["baptism age", "children", "believer's baptism", "decision", "commitment"]
+  },
+  {
+    id: "answer-sanctuary-meaning",
+    question: "What is the meaning of the sanctuary in the Bible?",
+    shortAnswer:
+      "The Old Testament sanctuary was a visual gospel, teaching how sin is confessed, atoned for, and ultimately removed through the work of Jesus Christ.",
+    longAnswer:
+      "God instructed Israel to build a sanctuary so He could dwell among His people and teach them, in pictures they could see and touch, how salvation works. Its furniture, sacrifices, and priestly service illustrated substitution, cleansing, mediation, and final judgment. The New Testament identifies Jesus as the reality behind every sanctuary symbol: He is the sacrifice, the High Priest, and the one who ministers on behalf of sinners. Understanding the sanctuary helps believers see the gospel as an unfolding story rather than an isolated event, one that moves toward the final removal of sin altogether.",
+    topics: ["Sanctuary", "Salvation", "Prophecy"],
+    category: "Hope and Prophecy",
+    scriptures: ["Hebrews 8:1-2", "Hebrews 9:11-12", "Exodus 25:8"],
+    keywords: ["sanctuary", "tabernacle", "high priest", "sacrifice", "atonement"]
+  },
+  {
+    id: "answer-day-of-atonement",
+    question: "What was the Day of Atonement and why does it matter today?",
+    shortAnswer:
+      "The Day of Atonement pictured a final cleansing of sin's record, pointing forward to the judgment and to Christ's ongoing work of removing sin completely.",
+    longAnswer:
+      "Once a year, Israel's high priest entered the Most Holy Place to complete the cleansing of the sanctuary, removing the accumulated record of confessed sin from the camp. This yearly ceremony pictured something larger than a ritual: a coming day when sin's record would be fully and finally dealt with. The New Testament connects this pattern to Christ's ministry in heaven and to a future judgment, reminding believers that confessed sin is not just forgiven but will be completely blotted out, and calling for genuine repentance rather than casual religion.",
+    topics: ["Sanctuary", "Prophecy", "Second Coming"],
+    category: "Hope and Prophecy",
+    scriptures: ["Leviticus 16:29-30", "Daniel 8:14", "Hebrews 9:23-24"],
+    keywords: ["day of atonement", "judgment", "cleansing", "sanctuary", "Daniel 8"]
+  },
+  {
+    id: "answer-forgive-myself",
+    question: "How can I forgive myself after making a serious mistake?",
+    shortAnswer:
+      "Self-forgiveness grows out of receiving God's forgiveness fully — trusting that His pardon in Christ is complete, even when guilty feelings linger.",
+    longAnswer:
+      "Many people find it easier to believe God forgives others than to believe He has truly forgiven them. Scripture insists that confessed sin is genuinely removed, compared to a debt fully paid, not partially excused. Struggling to forgive yourself often means trusting your own judgment of your worth more than God's finished work on the cross. Practical steps include confessing specifically, receiving Scripture's promises as true regardless of feelings, making amends where possible, and refusing to let shame define an identity that God has already declared forgiven and renewed.",
+    topics: ["Forgiveness", "Comfort", "Salvation"],
+    category: "Life and Relationships",
+    scriptures: ["1 John 1:9", "Psalm 103:12", "Romans 8:1"],
+    keywords: ["self-forgiveness", "guilt", "shame", "grace", "past mistakes"]
+  },
+  {
+    id: "answer-forgive-repeatedly",
+    question: "Do I have to forgive someone who keeps hurting me?",
+    shortAnswer:
+      "Jesus calls believers to a forgiving heart without limit, while Scripture also allows wisdom, honest confrontation, and protective boundaries.",
+    longAnswer:
+      "When Peter asked whether forgiving seven times was enough, Jesus answered with a number meant to remove any ceiling on forgiveness. This does not mean ignoring harm or pretending a pattern of abuse is healthy; Scripture also commends confronting sin honestly and, where needed, limiting access to protect oneself or others. Forgiveness releases personal vengeance to God and refuses to let bitterness take root, but it can coexist with firm boundaries, seeking outside help, and waiting for evidence of real change before rebuilding trust.",
+    topics: ["Forgiveness", "Christian Living", "Marriage and Family"],
+    category: "Life and Relationships",
+    scriptures: ["Matthew 18:21-22", "Luke 17:3-4", "Proverbs 4:23"],
+    keywords: ["forgiveness", "boundaries", "repeated offense", "bitterness", "trust"]
+  },
+  {
+    id: "answer-second-coming-signs",
+    question: "What are the biblical signs that Jesus is coming soon?",
+    shortAnswer:
+      "Jesus described spiritual, social, and global signs — false christs, wars, disasters, and the gospel reaching the whole world — as markers that His return is near.",
+    longAnswer:
+      "In the Olivet Discourse, Jesus warned against being deceived by false messiahs while pointing to broader patterns: wars, famines, earthquakes, persecution, increasing lawlessness, and love growing cold. He also gave a positive sign of hope: the gospel being preached to the whole world as a witness before the end comes. These signs are meant to prepare hearts rather than fuel date-setting or fear; Jesus repeatedly emphasized watching, staying spiritually awake, and living faithfully rather than trying to calculate an exact time.",
+    topics: ["Second Coming", "Prophecy", "Faith"],
+    category: "Hope and Prophecy",
+    scriptures: ["Matthew 24:6-14", "Luke 21:25-28", "2 Timothy 3:1-5"],
+    keywords: ["signs of the times", "second coming", "end times", "Olivet Discourse", "watching"]
+  },
+  {
+    id: "answer-second-coming-how",
+    question: "How will Jesus return according to the Bible?",
+    shortAnswer:
+      "Scripture describes Christ's return as literal, visible, audible, and glorious — every eye will see Him, unlike any secret or symbolic coming.",
+    longAnswer:
+      "The Bible consistently describes the second coming in concrete, public terms rather than a quiet or hidden event. Jesus will descend from heaven with a shout, the voice of an archangel, and the trumpet of God, and every eye will see Him, including those who rejected Him. This is the same Jesus who ascended visibly, and He will return in the same visible way, gathering His people and putting a final end to sin's reign on earth. Because it is so unmistakable, believers do not need to fear being fooled by counterfeit, secret, or localized claims of His arrival.",
+    topics: ["Second Coming", "Prophecy", "Comfort"],
+    category: "Hope and Prophecy",
+    scriptures: ["1 Thessalonians 4:16-17", "Revelation 1:7", "Acts 1:11"],
+    keywords: ["second coming", "return of Christ", "rapture", "trumpet", "every eye shall see"]
+  },
+  {
+    id: "answer-great-controversy-theme",
+    question: "What is the great controversy between good and evil?",
+    shortAnswer:
+      "The great controversy is the Bible's larger story of a conflict between Christ and Satan over God's character, love, and government, resolved fully at the cross and consummated at Christ's return.",
+    longAnswer:
+      "Scripture frames history as more than isolated events; it tells one long story of a challenge to God's character and government, begun with rebellion in heaven and continued through the fall, the flood, the exodus, the cross, and into the present. Satan's accusations claim that God's law is unjust and that His love cannot be trusted. The cross answers that challenge decisively, revealing both God's justice and His self-giving love, and it guarantees the eventual, complete end of evil when Christ returns and sin is no longer permitted to rise again.",
+    topics: ["Great Controversy", "Prophecy", "Faith"],
+    category: "Hope and Prophecy",
+    scriptures: ["Revelation 12:7-9", "Job 1:6-12", "1 John 3:8"],
+    keywords: ["great controversy", "Satan", "problem of evil", "cosmic conflict", "God's character"]
+  },
+  {
+    id: "answer-how-did-sin-begin",
+    question: "How did sin and evil begin, according to the Bible?",
+    shortAnswer:
+      "Sin began with pride and rebellion in heaven, when a created angel desired God's authority for himself, and it spread to earth through the same temptation to distrust God.",
+    longAnswer:
+      "Scripture traces evil's origin not to God's creation but to the choice of a created being. Isaiah and Ezekiel describe, in poetic language layered over historical kings, the fall of a covering angel whose heart was lifted up with pride and who sought to exalt himself above God. That same rebellion reached earth in Eden, when the serpent tempted humanity with the identical lie: that God's authority and word could not be trusted. Understanding sin's origin as a moral choice rather than a divine flaw helps explain why God tolerates evil for a time — to fully expose its results — while still guaranteeing its final, complete end.",
+    topics: ["Great Controversy", "Faith", "Prophecy"],
+    category: "Hope and Prophecy",
+    scriptures: ["Isaiah 14:12-14", "Ezekiel 28:14-17", "Genesis 3:1-5"],
+    keywords: ["origin of sin", "fall of Lucifer", "rebellion", "great controversy", "evil"]
+  },
+  {
+    id: "answer-state-of-dead-soul-sleep",
+    question: "What happens to a person immediately after death, according to the Bible?",
+    shortAnswer:
+      "Scripture describes death as a sleep, an unconscious rest until the resurrection, rather than an immediate conscious journey to heaven or hell.",
+    longAnswer:
+      "The Bible repeatedly uses sleep as the picture for death: the dead \"know nothing,\" their thoughts perish, and Jesus described Lazarus's death as sleep before raising him. This does not diminish the reality of loss or grief, but it does reframe the timeline of the afterlife: the next conscious moment a believer experiences is the resurrection at Christ's return, when the dead in Christ rise first. This teaching offers comfort rather than fear, removing anxiety about the dead being tormented or watching over the living, and it points hope forward to a real, bodily reunion at the resurrection.",
+    topics: ["State of the Dead", "Comfort", "Second Coming"],
+    category: "Hope and Prophecy",
+    scriptures: ["Ecclesiastes 9:5-6", "John 11:11-14", "1 Thessalonians 4:16"],
+    keywords: ["state of the dead", "soul sleep", "death", "resurrection", "afterlife"]
+  },
+  {
+    id: "answer-heaven-hell-timing",
+    question: "Do people go to heaven or hell right when they die?",
+    shortAnswer:
+      "The Bible ties final rewards to the resurrection and judgment at Christ's return, not to an immediate transfer to eternal reward or punishment at death.",
+    longAnswer:
+      "Popular tradition often pictures souls going straight to heaven or hell at the moment of death, but Scripture consistently links reward and punishment to specific future events: the resurrection, the judgment, and Christ's return. Paul describes believers receiving their reward \"at that day,\" meaning Christ's appearing, not the moment of death. This framework protects a central biblical truth — final destinies are settled by God's righteous judgment, openly and fairly, rather than happening invisibly and immediately, and it keeps the resurrection, not death, as the true moment of transition.",
+    topics: ["State of the Dead", "Second Coming", "Prophecy"],
+    category: "Hope and Prophecy",
+    scriptures: ["2 Timothy 4:8", "1 Corinthians 15:51-52", "Revelation 20:12-13"],
+    keywords: ["heaven", "hell", "afterlife", "judgment day", "resurrection"]
+  },
+  {
+    id: "answer-three-angels-first",
+    question: "What is the message of the first angel in Revelation 14?",
+    shortAnswer:
+      "The first angel calls the world to fear God, give Him glory, and worship the Creator, announcing that the hour of judgment has arrived.",
+    longAnswer:
+      "Revelation 14 pictures an angel flying with the everlasting gospel to preach to every nation, tribe, tongue, and people. Its core call is worship: fearing God, giving Him glory, and recognizing Him as Creator of heaven, earth, sea, and springs of water. This message directly echoes the fourth commandment's language about the Sabbath as a memorial of creation, tying true worship to acknowledging God's authority as Maker rather than any substitute authority. The announcement that judgment has come is a call to take eternity seriously and choose loyalty to God before probation closes.",
+    topics: ["Three Angels", "Prophecy", "Sabbath"],
+    category: "Hope and Prophecy",
+    scriptures: ["Revelation 14:6-7", "Exodus 20:11", "Psalm 96:9"],
+    keywords: ["three angels messages", "first angel", "everlasting gospel", "worship the creator", "judgment hour"]
+  },
+  {
+    id: "answer-three-angels-second-third",
+    question: "What do the second and third angels' messages mean?",
+    shortAnswer:
+      "The second angel warns against corrupted worship systems called \"Babylon,\" and the third warns against the coming mark of the beast, calling people to patient faithfulness to Jesus.",
+    longAnswer:
+      "The second angel announces the fall of \"Babylon,\" a symbol for systems of worship and doctrine that mix truth with human tradition and reject God's authority. The third angel gives the most solemn warning in Scripture, cautioning against worshiping the beast or receiving its mark, and pairing that warning with a picture of God's patience and justice. Together, these three messages end with a description of God's faithful people: those who keep His commandments and hold to faith in Jesus, portraying steady loyalty to Christ as the true alternative to compromised worship.",
+    topics: ["Three Angels", "Prophecy", "Law"],
+    category: "Hope and Prophecy",
+    scriptures: ["Revelation 14:8-12", "Revelation 18:4", "Revelation 12:17"],
+    keywords: ["three angels messages", "babylon", "mark of the beast", "commandments of God", "faith of Jesus"]
+  },
+  {
+    id: "answer-sabbath-still-for-today",
+    question: "Is the Sabbath still meant to be kept today?",
+    shortAnswer:
+      "The Sabbath was established at creation for all humanity, kept by Jesus, and never revoked in Scripture — it remains a weekly gift of rest and worship.",
+    longAnswer:
+      "The Sabbath's origin predates the nation of Israel; God rested on the seventh day at creation and blessed it for humanity in general, long before the Ten Commandments were given at Sinai. Jesus kept the Sabbath as His regular custom and clarified its purpose as a gift for people, not a burden. Nothing in the New Testament records the Sabbath being moved to another day or abolished; instead, it continues to picture rest in God's finished work of creation and, ultimately, in Christ's finished work of redemption, offering a weekly rhythm of trust rather than restless self-reliance.",
+    topics: ["Sabbath", "Law", "Creation"],
+    category: "Knowing God",
+    scriptures: ["Genesis 2:2-3", "Luke 4:16", "Mark 2:27-28"],
+    keywords: ["sabbath", "seventh day", "rest", "creation", "Lord's day"]
+  },
+  {
+    id: "answer-health-body-temple",
+    question: "Why does the Bible call the body a temple, and does it affect daily choices?",
+    shortAnswer:
+      "Because the Holy Spirit dwells within believers, Scripture calls the body a temple, inviting care for physical health as part of honoring God, not as a means of earning salvation.",
+    longAnswer:
+      "Paul's description of the body as a temple of the Holy Spirit reframes ordinary choices — diet, rest, exercise, and substance use — as spiritual matters rather than purely personal preferences. This is never presented as a system for earning God's favor; salvation remains a gift received by faith. Instead, caring for physical health flows from gratitude, recognizing that a clear mind and a well-cared-for body support a life of service, worship, and discernment. Scripture's health principles, such as the original diet given at creation and rest built into the weekly rhythm, still offer wisdom for whole-person well-being today.",
+    topics: ["Health", "Christian Living", "Creation"],
+    category: "Life and Relationships",
+    scriptures: ["1 Corinthians 6:19-20", "3 John 1:2", "Genesis 1:29"],
+    keywords: ["health", "body as temple", "wellness", "diet", "stewardship of the body"]
+  },
+  {
+    id: "answer-creation-six-days",
+    question: "Did God really create the world in six literal days?",
+    shortAnswer:
+      "Scripture describes creation as six literal days followed by a seventh day of rest, a pattern later memorialized in the weekly Sabbath commandment.",
+    longAnswer:
+      "Genesis records creation using the same Hebrew word for \"day\" paired with \"evening and morning,\" the same pattern used elsewhere in Scripture for literal 24-hour days. The fourth commandment reinforces this reading by grounding the seven-day week in God's literal creation week, not in a symbolic or extended process. Believing in a recent, literal creation shapes more than a science debate; it affirms that human life has inherent dignity as God's direct handiwork, that death entered through sin rather than being part of God's original design, and that the weekly Sabbath rests on a real historical foundation.",
+    topics: ["Creation", "Sabbath", "Faith"],
+    category: "Knowing God",
+    scriptures: ["Genesis 1:31-2:3", "Exodus 20:11", "Hebrews 11:3"],
+    keywords: ["creation", "six days", "literal week", "Genesis", "origins"]
   }
 ];
 
@@ -1035,6 +1239,106 @@ const biblePromises = [
   {
     text: "Let the peace of Christ rule in your hearts, since as members of one body you were called to peace. And be thankful.",
     reference: "Colossians 3:15"
+  },
+  {
+    text: "Trust in the Lord with all your heart and lean not on your own understanding.",
+    reference: "Proverbs 3:5"
+  },
+  {
+    text: "The name of the Lord is a fortified tower; the righteous run to it and are safe.",
+    reference: "Proverbs 18:10"
+  },
+  {
+    text: "Delight yourself in the Lord, and he will give you the desires of your heart.",
+    reference: "Psalm 37:4"
+  },
+  {
+    text: "But those who hope in the Lord will renew their strength. They will soar on wings like eagles.",
+    reference: "Isaiah 40:31"
+  },
+  {
+    text: "Fear not, for I am with you; be not dismayed, for I am your God. I will strengthen you, I will help you.",
+    reference: "Isaiah 41:10"
+  },
+  {
+    text: "For God has not given us a spirit of fear, but of power and of love and of a sound mind.",
+    reference: "2 Timothy 1:7"
+  },
+  {
+    text: "Do not fear, for I have redeemed you; I have called you by name, you are mine.",
+    reference: "Isaiah 43:1"
+  },
+  {
+    text: "The Lord your God is with you, the Mighty Warrior who saves. He will take great delight in you; he will rejoice over you with singing.",
+    reference: "Zephaniah 3:17"
+  },
+  {
+    text: "Weeping may stay for the night, but rejoicing comes in the morning.",
+    reference: "Psalm 30:5"
+  },
+  {
+    text: "Draw near to God, and he will draw near to you.",
+    reference: "James 4:8"
+  },
+  {
+    text: "The Lord is good, a stronghold in the day of trouble; and he knows those who take refuge in him.",
+    reference: "Nahum 1:7"
+  },
+  {
+    text: "Blessed are those who mourn, for they will be comforted.",
+    reference: "Matthew 5:4"
+  },
+  {
+    text: "God is our refuge and strength, an ever-present help in trouble.",
+    reference: "Psalm 46:1"
+  },
+  {
+    text: "Even though I walk through the darkest valley, I will fear no evil, for you are with me.",
+    reference: "Psalm 23:4"
+  },
+  {
+    text: "Rejoice in hope, be patient in tribulation, be constant in prayer.",
+    reference: "Romans 12:12"
+  },
+  {
+    text: "And my God will meet all your needs according to the riches of his glory in Christ Jesus.",
+    reference: "Philippians 4:19"
+  },
+  {
+    text: "There is now no condemnation for those who are in Christ Jesus.",
+    reference: "Romans 8:1"
+  },
+  {
+    text: "If we confess our sins, he is faithful and just to forgive us our sins and to cleanse us from all unrighteousness.",
+    reference: "1 John 1:9"
+  },
+  {
+    text: "Therefore, if anyone is in Christ, the new creation has come: The old has gone, the new is here!",
+    reference: "2 Corinthians 5:17"
+  },
+  {
+    text: "For it is by grace you have been saved, through faith, and this is not from yourselves, it is the gift of God.",
+    reference: "Ephesians 2:8"
+  },
+  {
+    text: "Whoever believes in the Son has eternal life.",
+    reference: "John 3:36"
+  },
+  {
+    text: "Blessed is the man who remains steadfast under trial, for when he has stood the test he will receive the crown of life.",
+    reference: "James 1:12"
+  },
+  {
+    text: "The joy of the Lord is your strength.",
+    reference: "Nehemiah 8:10"
+  },
+  {
+    text: "Every good gift and every perfect gift is from above, coming down from the Father of lights.",
+    reference: "James 1:17"
+  },
+  {
+    text: "In all these things we are more than conquerors through him who loved us.",
+    reference: "Romans 8:37"
   }
 ];
 
