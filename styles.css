@@ -1888,13 +1888,62 @@ h1 {
   transform: translateY(-1px);
 }
 
-.bible-source-note {
-  margin: 0;
+.bible-text-size-control {
+  display: grid;
+  gap: 8px;
+  padding-top: 2px;
+}
+
+.bible-text-size-control > span {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.bible-text-size-buttons {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) 58px;
+  gap: 8px;
+  align-items: center;
+}
+
+.bible-text-size-buttons button,
+.bible-text-size-buttons output {
+  min-height: 42px;
+  border-radius: 12px;
+}
+
+.bible-text-size-buttons button {
+  color: var(--brand);
+  font-weight: 900;
+  background: color-mix(in srgb, var(--brand) 9%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--brand) 24%, var(--border));
+}
+
+.bible-text-size-buttons button:not(:disabled):hover,
+.bible-text-size-buttons button:not(:disabled):focus-visible {
+  color: #ffffff;
+  background: var(--brand);
+}
+
+.bible-text-size-buttons button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.bible-text-size-buttons output {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+  font-weight: 800;
+  background: var(--field-bg);
+  border: 1px solid var(--border);
 }
 
 .bible-reader-card {
+  --bible-text-size: 1.08rem;
   min-width: 0;
   padding: 32px;
 }
@@ -1959,8 +2008,9 @@ h1 {
 .bible-verse {
   margin: 0;
   color: var(--text);
-  font-family: "Libre Baskerville", Georgia, serif;
-  font-size: 1.08rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: var(--bible-text-size);
+  font-weight: 400;
   line-height: 1.85;
 }
 

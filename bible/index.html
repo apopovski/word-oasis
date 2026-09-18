@@ -137,7 +137,7 @@
         <div class="container bible-reader-layout">
           <aside class="bible-controls-card" aria-label="Bible reader controls">
             <div class="bible-control-field">
-              <label for="bible-translation">Translation</label>
+              <label for="bible-translation">Versions</label>
               <select id="bible-translation"></select>
             </div>
             <div class="bible-control-field">
@@ -152,13 +152,17 @@
               <button class="bible-nav-button" type="button" id="bible-prev">Previous</button>
               <button class="bible-nav-button" type="button" id="bible-next">Next</button>
             </div>
+            <div class="bible-text-size-control" aria-label="Bible text size">
+              <span>Text size</span>
+              <div class="bible-text-size-buttons">
+                <button type="button" id="bible-text-smaller" aria-label="Decrease Bible text size">A-</button>
+                <output id="bible-text-size-label" aria-live="polite">Regular</output>
+                <button type="button" id="bible-text-larger" aria-label="Increase Bible text size">A+</button>
+              </div>
+            </div>
             <a class="bible-listen-link" id="bible-listen-link" href="https://live.bible.is/bible/ENGESV/JHN/3" target="_blank" rel="noopener">
               Listen on Bible.is
             </a>
-            <p class="bible-source-note">
-              Text is loaded from public-domain translations through bible-api.com. Audio opens in a
-              new tab through Bible.is.
-            </p>
           </aside>
 
           <article class="bible-reader-card" aria-live="polite">

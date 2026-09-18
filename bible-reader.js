@@ -2,23 +2,34 @@
   const translations = [
     {
       id: "web",
+      apiId: "WEB",
       label: "World English Bible",
       shortLabel: "WEB",
       note: "Modern public-domain English"
     },
     {
       id: "kjv",
+      apiId: "KJV",
       label: "King James Version",
       shortLabel: "KJV",
       note: "Classic public-domain English"
     },
     {
       id: "asv",
+      apiId: "ASV",
       label: "American Standard Version",
       shortLabel: "ASV",
       note: "Public-domain English, 1901"
     }
   ];
+
+  const textSizes = [
+    { label: "Small", value: "1rem" },
+    { label: "Regular", value: "1.08rem" },
+    { label: "Large", value: "1.22rem" },
+    { label: "Extra large", value: "1.36rem" }
+  ];
+  const textSizeStorageKey = "word-oasis-bible-text-size";
 
   const books = [
     { name: "Genesis", chapters: 50, audioCode: "GEN" },
@@ -96,16 +107,48 @@
   const readerTitle = document.querySelector("#bible-reader-title");
   const readerMeta = document.querySelector("#bible-reader-meta");
   const readerBody = document.querySelector("#bible-reader-body");
+  const readerCard = document.querySelector(".bible-reader-card");
   const prevButton = document.querySelector("#bible-prev");
   const nextButton = document.querySelector("#bible-next");
   const listenLink = document.querySelector("#bible-listen-link");
+  const smallerTextButton = document.querySelector("#bible-text-smaller");
+  const largerTextButton = document.querySelector("#bible-text-larger");
+  const textSizeLabel = document.querySelector("#bible-text-size-label");
 
-  if (!bookSelect || !chapterSelect || !translationSelect || !chapterGrid || !readerTitle || !readerMeta || !readerBody || !prevButton || !nextButton || !listenLink) {
+  if (!bookSelect || !chapterSelect || !translationSelect || !chapterGrid || !readerTitle || !readerMeta || !readerBody || !readerCard || !prevButton || !nextButton || !listenLink || !smallerTextButton || !largerTextButton || !textSizeLabel) {
     return;
   }
 
   const chapterCache = new Map();
   let currentRequest = null;
+  let textSizeIndex = 1;
+
+  function storedTextSizeIndex() {
+    try {
+      const stored = Number.parseInt(window.localStorage.getItem(textSizeStorageKey), 10);
+      return Number.isInteger(stored) && stored >= 0 && stored < textSizes.length ? stored : 1;
+    } catch (error) {
+      return 1;
+    }
+  }
+
+  function saveTextSizeIndex(index) {
+    try {
+      window.localStorage.setItem(textSizeStorageKey, String(index));
+    } catch (error) {
+      return;
+    }
+  }
+
+  function applyTextSize(index) {
+    textSizeIndex = Math.max(0, Math.min(index, textSizes.length - 1));
+    const size = textSizes[textSizeIndex];
+    readerCard.style.setProperty("--bible-text-size", size.value);
+    textSizeLabel.value = size.label;
+    smallerTextButton.disabled = textSizeIndex === 0;
+    largerTextButton.disabled = textSizeIndex === textSizes.length - 1;
+    saveTextSizeIndex(textSizeIndex);
+  }
 
   function findTranslation(id) {
     return translations.find((translation) => translation.id === id) || translations[0];
@@ -144,6 +187,14 @@
     readerBody.append(status);
   }
 
+  function cleanVerseText(text) {
+    return text
+      .replace(/<S>.*?<\/S>/gi, "")
+      .replace(/<[^>]*>/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
   function renderChapterButtons(book, activeChapter) {
     chapterGrid.innerHTML = "";
     for (let chapter = 1; chapter <= book.chapters; chapter += 1) {
@@ -175,7 +226,7 @@
       verseNumber.textContent = String(verse.verse);
 
       const verseText = document.createElement("span");
-      verseText.textContent = verse.text.replace(/\s+/g, " ").trim();
+      verseText.textContent = cleanVerseText(verse.text);
 
       verseRow.append(verseNumber, " ", verseText);
       readerBody.append(verseRow);
@@ -215,17 +266,18 @@
       return chapterCache.get(cacheKey);
     }
 
-    const reference = encodeURIComponent(`${book.name} ${chapter}`);
-    const response = await fetch(`https://bible-api.com/${reference}?translation=${translation.id}`, { signal });
+    const bookId = books.indexOf(book) + 1;
+    const response = await fetch(`https://bolls.life/get-text/${translation.apiId}/${bookId}/${chapter}/`, { signal });
     if (!response.ok) {
       throw new Error(`Bible API request failed with status ${response.status}`);
     }
 
-    const data = await response.json();
-    if (!Array.isArray(data.verses) || data.verses.length === 0) {
+    const verses = await response.json();
+    if (!Array.isArray(verses) || verses.length === 0) {
       throw new Error("Bible API response did not include verses");
     }
 
+    const data = { verses };
     chapterCache.set(cacheKey, data);
     return data;
   }
@@ -299,6 +351,7 @@
   }
 
   populateSelectors();
+  applyTextSize(storedTextSizeIndex());
   applyInitialState();
   loadSelectedChapter();
 
@@ -312,4 +365,6 @@
   translationSelect.addEventListener("change", loadSelectedChapter);
   prevButton.addEventListener("click", () => moveChapter(-1));
   nextButton.addEventListener("click", () => moveChapter(1));
+  smallerTextButton.addEventListener("click", () => applyTextSize(textSizeIndex - 1));
+  largerTextButton.addEventListener("click", () => applyTextSize(textSizeIndex + 1));
 })();
