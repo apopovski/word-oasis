@@ -1266,7 +1266,7 @@ const navSearchForm = document.querySelector("#nav-search-form");
 const answersList = document.querySelector("#answers-list");
 const resultMeta = document.querySelector("#result-meta");
 const emptyState = document.querySelector("#empty-state");
-const topicFilters = document.querySelector("#topic-filters");
+const topicGrid = document.querySelector("#topic-grid");
 const resultsPanel = document.querySelector("#results-panel");
 const resultsClear = document.querySelector("#results-clear");
 const answerSpotlight = document.querySelector("#answer-spotlight");
@@ -1515,6 +1515,12 @@ let promiseRotation;
 let promiseHeightResizeTimer;
 
 const topicIcons = {
+  All: `
+    <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+    <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+    <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+    <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+  `,
   Salvation: `
     <path d="M12 2v20"></path>
     <path d="M5 8h14"></path>
@@ -1666,20 +1672,31 @@ function topicIconMarkup(topic) {
   return `<svg viewBox="0 0 24 24" focusable="false">${content}</svg>`;
 }
 
-function addTopicIcons() {
-  document.querySelectorAll(".topic-card").forEach((card) => {
-    // Skip cards that were pre-rendered with an icon already (static SEO markup)
-    // so re-running this on load never inserts a duplicate icon.
-    if (card.querySelector(".topic-icon")) {
-      return;
-    }
-    const topic = card.dataset.topic;
-    card.insertAdjacentHTML(
-      "afterbegin",
-      `<span class="topic-icon" aria-hidden="true">${topicIconMarkup(topic)}</span>`
-    );
-  });
-}
+const topicDescriptions = {
+  All: "View every Bible answer in the library",
+  Salvation: "Grace, faith, repentance, eternal life",
+  Faith: "Trusting God, growing through doubt, and living by His promises",
+  Law: "God's commandments, obedience, and faithful living",
+  Sanctuary: "Christ's ministry, redemption, and the plan of salvation",
+  "Three Angels": "God's final message of worship, warning, and hope",
+  Prayer: "How to pray, unanswered prayer, worship",
+  Comfort: "Hope in suffering, grief, anxiety, and difficult seasons",
+  "Christian Living": "Obedience, holiness, daily discipleship",
+  Sabbath: "Rest, worship, creation, and God's commandments",
+  Prophecy: "Second coming, judgment, hope, and restoration",
+  "Second Coming": "Jesus' return, readiness, resurrection, and lasting hope",
+  "State of the Dead": "What happens at death and the hope of resurrection",
+  "Great Controversy": "The conflict between good and evil, and why it matters",
+  "Holy Spirit": "The Comforter, spiritual fruit, and power for living",
+  Baptism: "New life in Christ and public commitment to Him",
+  "Marriage and Family": "Marriage, parenting, and home life God's way",
+  Stewardship: "Money, giving, time, and faithful living",
+  Church: "Fellowship, worship, and life together as believers",
+  Creation: "Origins, God as Creator, and the foundation of Sabbath",
+  Forgiveness: "Releasing resentment, healing relationships, and wise boundaries",
+  "Bible Study": "Understanding Scripture, context, and practical application",
+  Health: "Honoring God with the body, mind, and everyday choices"
+};
 
 function normalize(value) {
   return value.trim().toLowerCase();
@@ -1726,25 +1743,24 @@ function hasActiveFilter() {
 }
 
 function renderTopicFilters() {
-  topicFilters.innerHTML = "";
+  topicGrid.innerHTML = "";
 
   allTopics().forEach((topic) => {
     const count = topic === "All" ? answers.length : answers.filter((answer) => answer.topics.includes(topic)).length;
     // Real links keep topics reachable without JavaScript; the click handler
     // below intercepts them to filter in place when scripting is available.
-    const link = document.createElement("a");
-    link.href = topic === "All" ? "/answers/" : topicUrl(topic);
-    link.className = topic === state.topic ? "active" : "";
-    link.dataset.topic = topic;
-    const icon = topic === "All" ? "" : topicIconMarkup(topic);
-    link.innerHTML = `
-      <span class="filter-topic-label">
-        ${icon ? `<span class="filter-topic-icon" aria-hidden="true">${icon}</span>` : ""}
-        <span>${topic}</span>
-      </span>
-      <strong>${count}</strong>
+    const card = document.createElement("a");
+    card.href = topic === "All" ? "/answers/" : topicUrl(topic);
+    card.className = `topic-card${topic === state.topic ? " active" : ""}`;
+    card.dataset.topic = topic;
+    const description = topicDescriptions[topic] || "";
+    card.innerHTML = `
+      <span class="topic-icon" aria-hidden="true">${topicIconMarkup(topic)}</span>
+      <span class="topic-card-title">${topic}</span>
+      <small>${description}</small>
+      <strong class="topic-card-count">${count}</strong>
     `;
-    topicFilters.append(link);
+    topicGrid.append(card);
   });
 }
 
@@ -2598,7 +2614,7 @@ function scrollToResults() {
   // mobile where it stacks above the answers instead of beside them. If a
   // search was cleared back to "no filter", scroll to the topic grid instead
   // since the results panel is hidden again.
-  const target = resultsPanel.hidden ? topicFilters.closest(".filter-card") : resultsPanel;
+  const target = resultsPanel.hidden ? document.querySelector("#topics") : resultsPanel;
   target.scrollIntoView({ behavior: "smooth", block: "start" });
 
   if (resultsPanel.hidden) {
@@ -2853,7 +2869,6 @@ if (initialQuery) {
   navSearchInput.value = initialQuery;
 }
 
-addTopicIcons();
 renderTopicFilters();
 populateQuestionTopics();
 renderAnswers();

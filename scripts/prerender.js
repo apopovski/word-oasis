@@ -150,7 +150,7 @@ function renderWithJsdom(html, scriptSource) {
 
   window.eval(scriptSource);
 
-  const topicFiltersHtml = window.document.querySelector("#topic-filters").innerHTML.trim();
+  const topicGridHtml = window.document.querySelector("#topic-grid").innerHTML.trim();
   const answersListHtml = window.document.querySelector("#answers-list").innerHTML.trim();
   const resultMetaText = window.document.querySelector("#result-meta").textContent.trim();
   const spotlightBodyHtml = window.document
@@ -164,7 +164,7 @@ function renderWithJsdom(html, scriptSource) {
 
   window.close();
 
-  return { topicFiltersHtml, answersListHtml, resultMetaText, spotlightBodyHtml, questionTopicOptions };
+  return { topicGridHtml, answersListHtml, resultMetaText, spotlightBodyHtml, questionTopicOptions };
 }
 
 function injectContainerContent(html, containerId, marker, innerHtml) {
@@ -243,20 +243,20 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20260928">
+    <link rel="stylesheet" href="/styles.css?v=20260929">
     <meta property="og:type" content="${ogType}">
     <meta property="og:title" content="${escapeAttribute(title)}">
     <meta property="og:description" content="${escapeAttribute(description)}">
     <meta property="og:url" content="${canonical}">
     <meta property="og:site_name" content="Word Oasis">
-    <meta property="og:image" content="${SITE_URL}/og-image.png?v=20260928">
+    <meta property="og:image" content="${SITE_URL}/og-image.png?v=20260929">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Word Oasis logo with a daily Scripture, hope, and encouragement message">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${escapeAttribute(title)}">
     <meta name="twitter:description" content="${escapeAttribute(description)}">
-    <meta name="twitter:image" content="${SITE_URL}/og-image.png?v=20260928">
+    <meta name="twitter:image" content="${SITE_URL}/og-image.png?v=20260929">
     <meta name="twitter:image:alt" content="Word Oasis logo with a daily Scripture, hope, and encouragement message">
     ${jsonLd}
   </head>
@@ -364,8 +364,8 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
       </div>
     </div>
 
-    <script src="/theme.js?v=20260928"></script>
-    <script src="/verse-modal.js?v=20260928"></script>
+    <script src="/theme.js?v=20260929"></script>
+    <script src="/verse-modal.js?v=20260929"></script>
   </body>
 </html>
 `;
@@ -690,13 +690,13 @@ function main() {
   const perspectivesByCategory = extractConstData(scriptSource, "perspectivesByCategory");
   const perspectivesByAnswer = extractConstData(scriptSource, "perspectivesByAnswer");
 
-  const { topicFiltersHtml, answersListHtml, resultMetaText, spotlightBodyHtml, questionTopicOptions } = renderWithJsdom(
+  const { topicGridHtml, answersListHtml, resultMetaText, spotlightBodyHtml, questionTopicOptions } = renderWithJsdom(
     html,
     scriptSource
   );
 
   let output = html;
-  output = injectContainerContent(output, "topic-filters", "prerender:topic-filters", `\n${topicFiltersHtml}\n              `);
+  output = injectContainerContent(output, "topic-grid", "prerender:topic-grid", `\n${topicGridHtml}\n          `);
   output = injectContainerContent(output, "answers-list", "prerender:answers-list", `\n${answersListHtml}\n              `);
   output = injectContainerContent(output, "result-meta", "prerender:result-meta", resultMetaText);
   output = injectContainerContent(output, "spotlight-body", "prerender:spotlight-body", `\n              ${spotlightBodyHtml}\n              `);

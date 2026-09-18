@@ -35,7 +35,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="styles.css?v=20260928">
+    <link rel="stylesheet" href="styles.css?v=20260929">
 <script>
   window.WORD_OASIS_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZSB_Tf-MEbTUrmSkEqwNn2gjtxqF4cv16pMCDMmV3voJeJAFhIYBQ/exec";
   window.WORD_OASIS_FORM_EMAIL_TO = "wordoasis7@gmail.com";
@@ -50,7 +50,7 @@
     <meta property="og:url" content="https://wordoasis.org/">
     <meta property="og:site_name" content="Word Oasis">
     <meta property="og:locale" content="en_US">
-    <meta property="og:image" content="https://wordoasis.org/og-image.png?v=20260928">
+    <meta property="og:image" content="https://wordoasis.org/og-image.png?v=20260929">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Word Oasis logo with a daily Scripture, hope, and encouragement message">
@@ -60,7 +60,7 @@
       name="twitter:description"
       content="Search 70+ Scripture-based answers to real Bible questions about salvation, prayer, anxiety, the Sabbath, prophecy, and Christian living."
     >
-    <meta name="twitter:image" content="https://wordoasis.org/og-image.png?v=20260928">
+    <meta name="twitter:image" content="https://wordoasis.org/og-image.png?v=20260929">
     <meta name="twitter:image:alt" content="Word Oasis logo with a daily Scripture, hope, and encouragement message">
 
     <script type="application/ld+json">
@@ -1198,39 +1198,62 @@
               <p class="eyebrow"><span aria-hidden="true">&#10022;</span> Bible Answers</p>
             </div>
             <div id="spotlight-body">
-              <div class="answer-tags" id="spotlight-tags"><button type="button" class="tag-link" data-topic="Faith">Faith</button><button type="button" class="tag-link" data-topic="Prayer">Prayer</button></div>
-              <h3><a id="spotlight-link" href="/answers/how-can-i-know-gods-will-for-my-life/">How can I know God's will for my life?</a></h3>
-              <p id="spotlight-short">God guides through Scripture, prayer, wise counsel, and the quiet leading of the Holy Spirit. Most of His will is already revealed; specific decisions are made trusting His care.</p>
-              <a class="spotlight-cta" id="spotlight-cta" href="/answers/how-can-i-know-gods-will-for-my-life/">
+              <div class="answer-tags" id="spotlight-tags"><button type="button" class="tag-link" data-topic="Forgiveness">Forgiveness</button><button type="button" class="tag-link" data-topic="Salvation">Salvation</button></div>
+              <h3><a id="spotlight-link" href="/answers/is-forgiving-gods-forgiveness-of-me-different-from-me-forgiving-other-people/">Is forgiving God's forgiveness of me different from me forgiving other people?</a></h3>
+              <p id="spotlight-short">God's forgiveness is the perfect model and the source of ours, but Scripture ties the two together directly, calling believers to forgive others because they have been forgiven so much themselves.</p>
+              <a class="spotlight-cta" id="spotlight-cta" href="/answers/is-forgiving-gods-forgiveness-of-me-different-from-me-forgiving-other-people/">
                 Read the full answer
               </a>
               <!-- prerender:spotlight-body --></div>
           </article>
 
-          <div class="answer-layout">
-            <aside class="filter-card" aria-label="Filter answers">
-              <h3>Browse topics</h3>
-              <div id="topic-filters" class="filter-list">
-<a href="/answers/" class="active" data-topic="All">
-      <span class="filter-topic-label">
-        
-        <span>All</span>
-      </span>
-      <strong>103</strong>
-    </a><a href="/topics/baptism/" class="" data-topic="Baptism">
-      <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+          <div id="results-panel" hidden>
+            <div class="results-panel-head">
+              <div class="result-meta" id="result-meta" aria-live="polite"><!-- prerender:result-meta --></div>
+              <button type="button" class="results-clear" id="results-clear">Back to featured question</button>
+            </div>
+            <div id="answers-list" class="answers-list">
+
+              <!-- prerender:answers-list --></div>
+            <div id="empty-state" class="empty-state" hidden>
+              <h3>No answers found</h3>
+              <p>Try a different keyword or choose a broader topic.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="topics" class="section section-soft">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Explore by topic</p>
+            <h2>Browse Bible topics</h2>
+            <p>Tap a topic to filter Bible answers instantly, or start with the themes people search for most.</p>
+          </div>
+          <div id="topic-grid" class="topic-grid">
+<a href="/answers/" class="topic-card active" data-topic="All">
+      <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+    <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+    <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+    <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+    <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+  </svg></span>
+      <span class="topic-card-title">All</span>
+      <small>View every Bible answer in the library</small>
+      <strong class="topic-card-count">103</strong>
+    </a><a href="/topics/baptism/" class="topic-card" data-topic="Baptism">
+      <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
     <path d="M12 10L12 2"></path>
     <path d="M16 6L12 10L8 6"></path>
     <path d="M2 15C2.6 15.5 3.2 16 4.5 16C7 16 7 14 9.5 14C12.1 14 11.9 16 14.5 16C17 16 17 14 19.5 14C20.8 14 21.4 14.5 22 15"></path>
     <path d="M2 21C2.6 21.5 3.2 22 4.5 22C7 22 7 20 9.5 20C12.1 20 11.9 22 14.5 22C17 22 17 20 19.5 20C20.8 20 21.4 20.5 22 21"></path>
   </svg></span>
-        <span>Baptism</span>
-      </span>
-      <strong>6</strong>
-    </a><a href="/topics/bible-study/" class="" data-topic="Bible Study">
-      <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+      <span class="topic-card-title">Baptism</span>
+      <small>New life in Christ and public commitment to Him</small>
+      <strong class="topic-card-count">6</strong>
+    </a><a href="/topics/bible-study/" class="topic-card" data-topic="Bible Study">
+      <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
     <path d="M12 5v16"></path>
     <path d="M16 13h2"></path>
     <path d="M16 9h2"></path>
@@ -1238,77 +1261,70 @@
     <path d="M6 13h2"></path>
     <path d="M6 9h2"></path>
   </svg></span>
-        <span>Bible Study</span>
-      </span>
-      <strong>8</strong>
-    </a><a href="/topics/christian-living/" class="" data-topic="Christian Living">
-      <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+      <span class="topic-card-title">Bible Study</span>
+      <small>Understanding Scripture, context, and practical application</small>
+      <strong class="topic-card-count">8</strong>
+    </a><a href="/topics/christian-living/" class="topic-card" data-topic="Christian Living">
+      <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
     <path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"></path>
     <path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"></path>
     <path d="M16 17h4"></path>
     <path d="M4 13h4"></path>
   </svg></span>
-        <span>Christian Living</span>
-      </span>
-      <strong>49</strong>
-    </a><a href="/topics/church/" class="" data-topic="Church">
-      <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+      <span class="topic-card-title">Christian Living</span>
+      <small>Obedience, holiness, daily discipleship</small>
+      <strong class="topic-card-count">49</strong>
+    </a><a href="/topics/church/" class="topic-card" data-topic="Church">
+      <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
     <path d="M10 9h4"></path>
     <path d="M12 7v5"></path>
     <path d="M14 21v-3a2 2 0 0 0-4 0v3"></path>
     <path d="m18 9 3.52 2.147a1 1 0 0 1 .48.854V19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-6.999a1 1 0 0 1 .48-.854L6 9"></path>
     <path d="M6 21V7a1 1 0 0 1 .376-.782l5-3.999a1 1 0 0 1 1.249.001l5 4A1 1 0 0 1 18 7v14"></path>
   </svg></span>
-        <span>Church</span>
-      </span>
-      <strong>12</strong>
-    </a><a href="/topics/comfort/" class="" data-topic="Comfort">
-      <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+      <span class="topic-card-title">Church</span>
+      <small>Fellowship, worship, and life together as believers</small>
+      <strong class="topic-card-count">12</strong>
+    </a><a href="/topics/comfort/" class="topic-card" data-topic="Comfort">
+      <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
     <path d="M15 10V9"></path>
     <path d="M16.472 15a6 6 0 0 1-8.943 0"></path>
     <path d="M9 10V9"></path>
     <circle cx="12" cy="12" r="10"></circle>
   </svg></span>
-        <span>Comfort</span>
-      </span>
-      <strong>22</strong>
-    </a><a href="/topics/creation/" class="" data-topic="Creation">
-      <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+      <span class="topic-card-title">Comfort</span>
+      <small>Hope in suffering, grief, anxiety, and difficult seasons</small>
+      <strong class="topic-card-count">22</strong>
+    </a><a href="/topics/creation/" class="topic-card" data-topic="Creation">
+      <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
     <circle cx="12" cy="12" r="10"></circle>
     <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
     <path d="M2 12h20"></path>
   </svg></span>
-        <span>Creation</span>
-      </span>
-      <strong>7</strong>
-    </a><a href="/topics/faith/" class="" data-topic="Faith">
-      <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+      <span class="topic-card-title">Creation</span>
+      <small>Origins, God as Creator, and the foundation of Sabbath</small>
+      <strong class="topic-card-count">7</strong>
+    </a><a href="/topics/faith/" class="topic-card" data-topic="Faith">
+      <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
     <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
     <path d="M12 22V2"></path>
   </svg></span>
-        <span>Faith</span>
-      </span>
-      <strong>47</strong>
-    </a><a href="/topics/forgiveness/" class="" data-topic="Forgiveness">
-      <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+      <span class="topic-card-title">Faith</span>
+      <small>Trusting God, growing through doubt, and living by His promises</small>
+      <strong class="topic-card-count">47</strong>
+    </a><a href="/topics/forgiveness/" class="topic-card" data-topic="Forgiveness">
+      <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
     <path d="m11 17 2 2a1 1 0 1 0 3-3"></path>
     <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"></path>
     <path d="m21 3 1 11h-2"></path>
     <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"></path>
     <path d="M3 4h8"></path>
   </svg></span>
-        <span>Forgiveness</span>
-      </span>
-      <strong>6</strong>
-    </a><a href="/topics/great-controversy/" class="" data-topic="Great Controversy">
-      <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+      <span class="topic-card-title">Forgiveness</span>
+      <small>Releasing resentment, healing relationships, and wise boundaries</small>
+      <strong class="topic-card-count">6</strong>
+    </a><a href="/topics/great-controversy/" class="topic-card" data-topic="Great Controversy">
+      <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
     <path d="m13 19 6-6"></path>
     <path d="M14.5 17.5 3.586 6.586A2 2 0 0 1 3 5.172V3h2.172a2 2 0 0 1 1.414.586L17.5 14.5"></path>
     <path d="m14.828 6.172 2.586-2.586A2 2 0 0 1 18.828 3H21v2.172a2 2 0 0 1-.586 1.414l-2.586 2.586"></path>
@@ -1318,28 +1334,25 @@
     <path d="m5 21-2-2"></path>
     <path d="M7.5 16.5 4 20"></path>
   </svg></span>
-        <span>Great Controversy</span>
-      </span>
-      <strong>7</strong>
-    </a><a href="/topics/health/" class="" data-topic="Health">
-      <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+      <span class="topic-card-title">Great Controversy</span>
+      <small>The conflict between good and evil, and why it matters</small>
+      <strong class="topic-card-count">7</strong>
+    </a><a href="/topics/health/" class="topic-card" data-topic="Health">
+      <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
     <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path>
   </svg></span>
-        <span>Health</span>
-      </span>
-      <strong>8</strong>
-    </a><a href="/topics/holy-spirit/" class="" data-topic="Holy Spirit">
-      <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+      <span class="topic-card-title">Health</span>
+      <small>Honoring God with the body, mind, and everyday choices</small>
+      <strong class="topic-card-count">8</strong>
+    </a><a href="/topics/holy-spirit/" class="topic-card" data-topic="Holy Spirit">
+      <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
     <path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4"></path>
   </svg></span>
-        <span>Holy Spirit</span>
-      </span>
-      <strong>7</strong>
-    </a><a href="/topics/law/" class="" data-topic="Law">
-      <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+      <span class="topic-card-title">Holy Spirit</span>
+      <small>The Comforter, spiritual fruit, and power for living</small>
+      <strong class="topic-card-count">7</strong>
+    </a><a href="/topics/law/" class="topic-card" data-topic="Law">
+      <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
     <path d="M4 21V8a4 4 0 0 1 8 0v13"></path>
     <path d="M12 21V8a4 4 0 0 1 8 0v13"></path>
     <path d="M2.5 21h19"></path>
@@ -1348,12 +1361,11 @@
     <path d="M14.5 11h3"></path>
     <path d="M14.5 14.5h3"></path>
   </svg></span>
-        <span>Law</span>
-      </span>
-      <strong>8</strong>
-    </a><a href="/topics/marriage-and-family/" class="" data-topic="Marriage and Family">
-      <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+      <span class="topic-card-title">Law</span>
+      <small>God's commandments, obedience, and faithful living</small>
+      <strong class="topic-card-count">8</strong>
+    </a><a href="/topics/marriage-and-family/" class="topic-card" data-topic="Marriage and Family">
+      <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
     <circle cx="4.3" cy="7" r="2.2"></circle>
     <path d="M.8 21v-2.1a3.5 3.5 0 0 1 7 0V21"></path>
     <path d="M10.2 6a2.2 2.2 0 0 1 4.4 0c0 1.9.4 3.3.9 4.5H9.3c.5-1.2.9-2.6.9-4.5z"></path>
@@ -1361,52 +1373,47 @@
     <circle cx="20.5" cy="11.4" r="1.6"></circle>
     <path d="M18 21v-1.6a2.5 2.5 0 0 1 5 0V21"></path>
   </svg></span>
-        <span>Marriage and Family</span>
-      </span>
-      <strong>8</strong>
-    </a><a href="/topics/prayer/" class="" data-topic="Prayer">
-      <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+      <span class="topic-card-title">Marriage and Family</span>
+      <small>Marriage, parenting, and home life God's way</small>
+      <strong class="topic-card-count">8</strong>
+    </a><a href="/topics/prayer/" class="topic-card" data-topic="Prayer">
+      <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
     <g transform="translate(-1.549 -3.6264) scale(0.8464)" fill="currentColor" stroke="none">
       <path d="M25.063 15.214c-0.458-1.030-0.941-1.905-1.49-2.732l0.043 0.068c-0.174-0.282-0.348-0.563-0.518-0.849-0.807-1.36-1.51-2.448-2.215-3.425-0.342-0.479-0.679-0.897-1.037-1.294l0.011 0.013c-0.267-0.326-0.6-0.587-0.981-0.763l-0.017-0.007c-0.081-0.031-0.175-0.050-0.274-0.050-0.055 0-0.108 0.006-0.159 0.016l0.005-0.001c-0.88 0.128-1.615 0.658-2.021 1.395l-0.007 0.014c-0.155 0.365-0.245 0.79-0.245 1.236 0 0.496 0.111 0.967 0.311 1.387l-0.008-0.020 2.077 4.622c-1.166 0.027-2.102 0.979-2.102 2.149 0 0.057 0.002 0.113 0.007 0.169l-0-0.007v3.11l-0.435 1.485-0.435-1.485v-3.11c0.004-0.048 0.006-0.104 0.006-0.16 0-1.171-0.936-2.123-2.1-2.148l-0.002-0 2.072-4.613c0.194-0.404 0.307-0.878 0.307-1.379 0-0.445-0.090-0.87-0.252-1.256l0.008 0.021c-0.413-0.751-1.148-1.282-2.013-1.408l-0.015-0.002c-0.047-0.010-0.1-0.015-0.155-0.015-0.099 0-0.193 0.018-0.28 0.051l0.005-0.002c-0.405 0.189-0.744 0.457-1.010 0.787l-0.004 0.005c-0.342 0.379-0.672 0.79-0.979 1.22l-0.028 0.042c-0.707 0.977-1.411 2.064-2.216 3.424-0.167 0.281-0.34 0.561-0.512 0.84-0.509 0.762-0.994 1.639-1.406 2.557l-0.047 0.116c-0.459 1.106-0.726 2.39-0.726 3.737 0 1.178 0.204 2.309 0.579 3.358l-0.022-0.070c0.452 1.090 0.82 2.367 1.044 3.692l0.015 0.107h-0.69c-0.414 0-0.75 0.336-0.75 0.75v0 3.211c0 0.414 0.336 0.75 0.75 0.75h17.712c0.414-0 0.75-0.336 0.75-0.75v0-3.211c-0-0.414-0.336-0.75-0.75-0.75h-0.691c0.244-1.444 0.616-2.731 1.114-3.951l-0.045 0.123c0.347-0.971 0.548-2.092 0.548-3.259 0-1.347-0.267-2.632-0.752-3.805l0.024 0.066zM8.187 21.715c-0.289-0.823-0.456-1.771-0.456-2.758 0-1.143 0.224-2.234 0.63-3.231l-0.021 0.057c0.424-0.948 0.871-1.753 1.379-2.514l-0.039 0.062c0.178-0.287 0.355-0.575 0.527-0.865 0.78-1.318 1.461-2.369 2.139-3.307 0.305-0.429 0.606-0.804 0.926-1.16l-0.010 0.011c0.083-0.089 0.184-0.199 0.276-0.28 0.31 0.075 0.566 0.267 0.724 0.525l0.003 0.005c0.059 0.168 0.092 0.363 0.092 0.565 0 0.277-0.064 0.539-0.177 0.773l0.005-0.011-2.892 6.436c-0.041 0.090-0.065 0.196-0.065 0.308v0 6.437c0 0.414 0.336 0.75 0.75 0.75s0.75-0.336 0.75-0.75v0-5.632c0-1.271 1.343-1.268 1.345 0v3.218c0 0.001 0 0.002 0 0.003 0 0.074 0.011 0.146 0.032 0.213l-0.001-0.005 1.147 3.918v1.557h-5.902c-0.236-1.618-0.642-3.074-1.207-4.449l0.045 0.124zM24.113 29.25h-16.212v-1.711h16.212zM23.838 21.686c-0.522 1.258-0.931 2.724-1.158 4.25l-0.013 0.104h-5.902v-1.557l1.147-3.918c0.019-0.062 0.030-0.134 0.030-0.208 0-0.001 0-0.002 0-0.003v0-3.218c-0.001-0.969 0.784-1.019 1.118-0.678 0.142 0.163 0.229 0.378 0.229 0.613 0 0.023-0.001 0.045-0.002 0.067l0-0.003v5.632c0 0.414 0.336 0.75 0.75 0.75s0.75-0.336 0.75-0.75v0-6.437c-0-0.111-0.025-0.217-0.068-0.312l0.002 0.005-2.896-6.446c-0.104-0.221-0.165-0.481-0.165-0.754 0-0.199 0.032-0.391 0.092-0.57l-0.004 0.013c0.16-0.266 0.418-0.46 0.721-0.534l0.008-0.002c0.094 0.084 0.201 0.199 0.295 0.303 0.303 0.337 0.597 0.704 0.871 1.087l0.026 0.038c0.676 0.938 1.357 1.988 2.139 3.309 0.174 0.293 0.354 0.582 0.531 0.872 0.467 0.697 0.914 1.5 1.294 2.338l0.044 0.107c0.386 0.939 0.61 2.029 0.61 3.172 0 0.977-0.164 1.916-0.466 2.791l0.018-0.060z"></path>
     </g>
   </svg></span>
-        <span>Prayer</span>
-      </span>
-      <strong>10</strong>
-    </a><a href="/topics/prophecy/" class="" data-topic="Prophecy">
-      <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+      <span class="topic-card-title">Prayer</span>
+      <small>How to pray, unanswered prayer, worship</small>
+      <strong class="topic-card-count">10</strong>
+    </a><a href="/topics/prophecy/" class="topic-card" data-topic="Prophecy">
+      <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
     <path d="M15 12h-5"></path>
     <path d="M15 8h-5"></path>
     <path d="M19 17V5a2 2 0 0 0-2-2H4"></path>
     <path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"></path>
   </svg></span>
-        <span>Prophecy</span>
-      </span>
-      <strong>26</strong>
-    </a><a href="/topics/sabbath/" class="" data-topic="Sabbath">
-      <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+      <span class="topic-card-title">Prophecy</span>
+      <small>Second coming, judgment, hope, and restoration</small>
+      <strong class="topic-card-count">26</strong>
+    </a><a href="/topics/sabbath/" class="topic-card" data-topic="Sabbath">
+      <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
     <path d="M6.75 3v2.25M17.25 3v2.25"></path>
     <path d="M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"></path>
     <text x="12" y="17.4" fill="currentColor" stroke="none" text-anchor="middle" font-size="8" font-weight="800" font-family="Arial, sans-serif">7</text>
   </svg></span>
-        <span>Sabbath</span>
-      </span>
-      <strong>8</strong>
-    </a><a href="/topics/salvation/" class="" data-topic="Salvation">
-      <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+      <span class="topic-card-title">Sabbath</span>
+      <small>Rest, worship, creation, and God's commandments</small>
+      <strong class="topic-card-count">8</strong>
+    </a><a href="/topics/salvation/" class="topic-card" data-topic="Salvation">
+      <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
     <path d="M12 2v20"></path>
     <path d="M5 8h14"></path>
   </svg></span>
-        <span>Salvation</span>
-      </span>
-      <strong>20</strong>
-    </a><a href="/topics/sanctuary/" class="" data-topic="Sanctuary">
-      <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+      <span class="topic-card-title">Salvation</span>
+      <small>Grace, faith, repentance, eternal life</small>
+      <strong class="topic-card-count">20</strong>
+    </a><a href="/topics/sanctuary/" class="topic-card" data-topic="Sanctuary">
+      <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
     <path d="M3 9.75 12 4l9 5.75"></path>
     <path d="M5.5 10.5v7.5"></path>
     <path d="M10 10.5v7.5"></path>
@@ -1415,44 +1422,40 @@
     <path d="M3.5 18h17"></path>
     <path d="M2.5 21h19"></path>
   </svg></span>
-        <span>Sanctuary</span>
-      </span>
-      <strong>5</strong>
-    </a><a href="/topics/second-coming/" class="" data-topic="Second Coming">
-      <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+      <span class="topic-card-title">Sanctuary</span>
+      <small>Christ's ministry, redemption, and the plan of salvation</small>
+      <strong class="topic-card-count">5</strong>
+    </a><a href="/topics/second-coming/" class="topic-card" data-topic="Second Coming">
+      <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
     <path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.204a1 1 0 0 1-.962.733H5.815a1 1 0 0 1-.962-.733L2.019 6.019a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"></path>
     <path d="M5 21h14"></path>
   </svg></span>
-        <span>Second Coming</span>
-      </span>
-      <strong>8</strong>
-    </a><a href="/topics/state-of-the-dead/" class="" data-topic="State of the Dead">
-      <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+      <span class="topic-card-title">Second Coming</span>
+      <small>Jesus' return, readiness, resurrection, and lasting hope</small>
+      <strong class="topic-card-count">8</strong>
+    </a><a href="/topics/state-of-the-dead/" class="topic-card" data-topic="State of the Dead">
+      <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
     <g transform="scale(0.046875)" fill="currentColor" stroke="none">
       <path d="M428.466 386.01V164.97C428.451 73.851 354.608.008 263.493 0H248.51C157.392.008 83.548 73.851 83.541 164.97v221.04H44.166V512h423.668v-14.997V386.01H428.466zM113.535 164.97c.008-37.318 15.086-70.974 39.529-95.446 24.473-24.444 58.129-39.521 95.446-39.529h14.983c37.32.008 70.962 15.085 95.435 39.529 24.459 24.473 39.529 58.129 39.544 95.446v221.04H113.535V164.97zM74.161 416.004h363.679v66.001H74.161V416.004z"></path>
       <polygon points="275.297,149.504 236.706,149.504 236.706,203.092 181.799,203.092 181.799,241.823 236.706,241.823 236.706,327.596 275.297,327.596 275.297,241.823 330.208,241.823 330.208,203.092 275.297,203.092"></polygon>
     </g>
   </svg></span>
-        <span>State of the Dead</span>
-      </span>
-      <strong>6</strong>
-    </a><a href="/topics/stewardship/" class="" data-topic="Stewardship">
-      <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+      <span class="topic-card-title">State of the Dead</span>
+      <small>What happens at death and the hope of resurrection</small>
+      <strong class="topic-card-count">6</strong>
+    </a><a href="/topics/stewardship/" class="topic-card" data-topic="Stewardship">
+      <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
     <path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17"></path>
     <path d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"></path>
     <path d="m2 16 6 6"></path>
     <circle cx="16" cy="9" r="2.9"></circle>
     <circle cx="6" cy="5" r="3"></circle>
   </svg></span>
-        <span>Stewardship</span>
-      </span>
-      <strong>6</strong>
-    </a><a href="/topics/three-angels/" class="" data-topic="Three Angels">
-      <span class="filter-topic-label">
-        <span class="filter-topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+      <span class="topic-card-title">Stewardship</span>
+      <small>Money, giving, time, and faithful living</small>
+      <strong class="topic-card-count">6</strong>
+    </a><a href="/topics/three-angels/" class="topic-card" data-topic="Three Angels">
+      <span class="topic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
     <g fill="currentColor" stroke="none">
       <circle cx="4.3" cy="6.68" r="1.28"></circle>
       <path d="M4.3 8.4C3.46 10.2 2.63 13.8 2.63 20.4L5.97 20.4C5.97 13.8 5.14 10.2 4.3 8.4Z"></path>
@@ -1468,128 +1471,11 @@
       <path d="M20.9 9.3C22.36 6.6 23.5 7.86 23.27 13.2C21.98 11.1 21.54 12 21 14.1Z"></path>
     </g>
   </svg></span>
-        <span>Three Angels</span>
-      </span>
-      <strong>5</strong>
+      <span class="topic-card-title">Three Angels</span>
+      <small>God's final message of worship, warning, and hope</small>
+      <strong class="topic-card-count">5</strong>
     </a>
-              <!-- prerender:topic-filters --></div>
-            </aside>
-
-            <div id="results-panel" hidden>
-              <div class="results-panel-head">
-                <div class="result-meta" id="result-meta" aria-live="polite"><!-- prerender:result-meta --></div>
-                <button type="button" class="results-clear" id="results-clear">Back to featured question</button>
-              </div>
-              <div id="answers-list" class="answers-list">
-
-              <!-- prerender:answers-list --></div>
-              <div id="empty-state" class="empty-state" hidden>
-                <h3>No answers found</h3>
-                <p>Try a different keyword or choose a broader topic.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <section id="topics" class="section section-soft">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Explore by topic</p>
-            <h2>Popular Bible topics</h2>
-            <p>Start with the themes people search for most when looking for biblical guidance.</p>
-          </div>
-          <div class="topic-grid">
-            <button type="button" class="topic-card" data-topic="Salvation">
-              <span>Salvation</span>
-              <small>Grace, faith, repentance, eternal life</small>
-            </button>
-            <button type="button" class="topic-card" data-topic="Faith">
-              <span>Faith</span>
-              <small>Trusting God, growing through doubt, and living by His promises</small>
-            </button>
-            <button type="button" class="topic-card" data-topic="Law">
-              <span>Law</span>
-              <small>God's commandments, obedience, and faithful living</small>
-            </button>
-            <button type="button" class="topic-card" data-topic="Sanctuary">
-              <span>Sanctuary</span>
-              <small>Christ's ministry, redemption, and the plan of salvation</small>
-            </button>
-            <button type="button" class="topic-card" data-topic="Three Angels">
-              <span>Three Angels</span>
-              <small>God's final message of worship, warning, and hope</small>
-            </button>
-            <button type="button" class="topic-card" data-topic="Prayer">
-              <span>Prayer</span>
-              <small>How to pray, unanswered prayer, worship</small>
-            </button>
-            <button type="button" class="topic-card" data-topic="Comfort">
-              <span>Comfort</span>
-              <small>Hope in suffering, grief, anxiety, and difficult seasons</small>
-            </button>
-            <button type="button" class="topic-card" data-topic="Christian Living">
-              <span>Christian Living</span>
-              <small>Obedience, holiness, daily discipleship</small>
-            </button>
-            <button type="button" class="topic-card" data-topic="Sabbath">
-              <span>Sabbath</span>
-              <small>Rest, worship, creation, and God's commandments</small>
-            </button>
-            <button type="button" class="topic-card" data-topic="Prophecy">
-              <span>Prophecy</span>
-              <small>Second coming, judgment, hope, and restoration</small>
-            </button>
-            <button type="button" class="topic-card" data-topic="Second Coming">
-              <span>Second Coming</span>
-              <small>Jesus' return, readiness, resurrection, and lasting hope</small>
-            </button>
-            <button type="button" class="topic-card" data-topic="State of the Dead">
-              <span>State of the Dead</span>
-              <small>What happens at death and the hope of resurrection</small>
-            </button>
-            <button type="button" class="topic-card" data-topic="Great Controversy">
-              <span>Great Controversy</span>
-              <small>The conflict between good and evil, and why it matters</small>
-            </button>
-            <button type="button" class="topic-card" data-topic="Holy Spirit">
-              <span>Holy Spirit</span>
-              <small>The Comforter, spiritual fruit, and power for living</small>
-            </button>
-            <button type="button" class="topic-card" data-topic="Baptism">
-              <span>Baptism</span>
-              <small>New life in Christ and public commitment to Him</small>
-            </button>
-            <button type="button" class="topic-card" data-topic="Marriage and Family">
-              <span>Marriage &amp; Family</span>
-              <small>Marriage, parenting, and home life God's way</small>
-            </button>
-            <button type="button" class="topic-card" data-topic="Stewardship">
-              <span>Stewardship</span>
-              <small>Money, giving, time, and faithful living</small>
-            </button>
-            <button type="button" class="topic-card" data-topic="Church">
-              <span>Church</span>
-              <small>Fellowship, worship, and life together as believers</small>
-            </button>
-            <button type="button" class="topic-card" data-topic="Creation">
-              <span>Creation</span>
-              <small>Origins, God as Creator, and the foundation of Sabbath</small>
-            </button>
-            <button type="button" class="topic-card" data-topic="Forgiveness">
-              <span>Forgiveness</span>
-              <small>Releasing resentment, healing relationships, and wise boundaries</small>
-            </button>
-            <button type="button" class="topic-card" data-topic="Bible Study">
-              <span>Bible Study</span>
-              <small>Understanding Scripture, context, and practical application</small>
-            </button>
-            <button type="button" class="topic-card" data-topic="Health">
-              <span>Health</span>
-              <small>Honoring God with the body, mind, and everyday choices</small>
-            </button>
-          </div>
+          <!-- prerender:topic-grid --></div>
         </div>
       </section>
 
@@ -1705,7 +1591,7 @@
       </div>
     </div>
 
-    <script src="theme.js?v=20260928"></script>
-    <script src="script.js?v=20260928"></script>
+    <script src="theme.js?v=20260929"></script>
+    <script src="script.js?v=20260929"></script>
   </body>
 </html>
