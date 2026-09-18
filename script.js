@@ -2244,37 +2244,18 @@ function fitPromiseVerse(ctx, text, maxWidth, maxHeight) {
   return fitted;
 }
 
-// A handful of palettes so shared verses don't all look identical, while every
-// one stays inside the site's dark, elegant look (deep gradient, soft glow,
-// gold eyebrow, thin corner frame). Each promise is assigned a theme by a
-// stable hash of its reference, so the same verse always renders the same way.
-const PROMISE_IMAGE_THEMES = [
+// Each promise is matched to a palette + a hand-drawn biblical icon based on
+// the *content* of the verse (its keywords), so the decorative element on the
+// shared graphic always relates to what the verse is actually about -
+// shepherd verses get a shepherd's crook, refuge verses get a fortress tower,
+// grace/salvation verses get a cross, and so on. Categories are checked in
+// order and the first keyword match wins, so more specific themes (like the
+// Psalm 23 "shepherd" verses) are listed before broader ones.
+const PROMISE_IMAGE_CATEGORIES = [
   {
-    id: "aurora",
-    gradient: ["#1c3350", "#12243a", "#0a1522"],
-    glowTop: "rgba(96, 152, 214, 0.26)",
-    glowBottom: "rgba(128, 178, 236, 0.2)",
-    eyebrow: "#f3c86a",
-    reference: "#bcd9f5",
-    divider: "rgba(255, 255, 255, 0.16)",
-    frame: "rgba(255, 255, 255, 0.14)",
-    motif: "rings",
-    motifColor: "rgba(255, 255, 255, 0.05)"
-  },
-  {
-    id: "dusk",
-    gradient: ["#2d2050", "#1c1536", "#0d0a1c"],
-    glowTop: "rgba(168, 132, 224, 0.24)",
-    glowBottom: "rgba(140, 110, 214, 0.18)",
-    eyebrow: "#f0c96a",
-    reference: "#d9c9f7",
-    divider: "rgba(255, 255, 255, 0.16)",
-    frame: "rgba(255, 255, 255, 0.14)",
-    motif: "arcs",
-    motifColor: "rgba(216, 190, 250, 0.09)"
-  },
-  {
-    id: "forest",
+    id: "shepherd",
+    icon: "shepherd",
+    keywords: ["psalm 23", "shepherd", "restores my soul", "green pastures", "paths of righteousness", "darkest valley"],
     gradient: ["#173a2c", "#0f261d", "#081711"],
     glowTop: "rgba(110, 200, 150, 0.22)",
     glowBottom: "rgba(140, 214, 168, 0.16)",
@@ -2282,23 +2263,12 @@ const PROMISE_IMAGE_THEMES = [
     reference: "#bfe8d0",
     divider: "rgba(255, 255, 255, 0.16)",
     frame: "rgba(255, 255, 255, 0.14)",
-    motif: "dots",
-    motifColor: "rgba(191, 232, 208, 0.14)"
+    motifColor: "rgba(191, 232, 208, 0.16)"
   },
   {
-    id: "ember",
-    gradient: ["#3d1f28", "#26141c", "#130a0e"],
-    glowTop: "rgba(224, 130, 120, 0.2)",
-    glowBottom: "rgba(214, 150, 118, 0.16)",
-    eyebrow: "#f3c86a",
-    reference: "#f2c9c4",
-    divider: "rgba(255, 255, 255, 0.16)",
-    frame: "rgba(255, 255, 255, 0.14)",
-    motif: "diagonal",
-    motifColor: "rgba(255, 214, 190, 0.055)"
-  },
-  {
-    id: "midnight-gold",
+    id: "joy",
+    icon: "crown",
+    keywords: ["rejoice", "rejoicing", "rejoiced", "crown of life", "crown", "conquerors", "joy of the lord", "singing", "victor", "victory"],
     gradient: ["#22232f", "#16171f", "#0a0a10"],
     glowTop: "rgba(228, 186, 110, 0.16)",
     glowBottom: "rgba(200, 158, 92, 0.14)",
@@ -2306,11 +2276,103 @@ const PROMISE_IMAGE_THEMES = [
     reference: "#e8d9b0",
     divider: "rgba(255, 255, 255, 0.16)",
     frame: "rgba(255, 255, 255, 0.14)",
-    motif: "rings",
-    motifColor: "rgba(246, 206, 116, 0.08)"
+    motifColor: "rgba(246, 206, 116, 0.16)"
   },
   {
-    id: "sapphire-teal",
+    id: "light",
+    icon: "sunburst",
+    keywords: ["light", "salvation", "father of lights", "shine", "radiant"],
+    gradient: ["#3a2a12", "#241a0c", "#120d05"],
+    glowTop: "rgba(246, 200, 120, 0.28)",
+    glowBottom: "rgba(250, 214, 150, 0.2)",
+    eyebrow: "#ffe08a",
+    reference: "#f6d9a0",
+    divider: "rgba(255, 255, 255, 0.16)",
+    frame: "rgba(255, 255, 255, 0.14)",
+    motifColor: "rgba(255, 224, 150, 0.16)"
+  },
+  {
+    id: "grace",
+    icon: "cross",
+    keywords: ["grace", "blood", "sin", "sins", "saved", "condemnation", "redeemed", "new creation", "eternal life", "jesus christ", "forgive", "cleanse"],
+    gradient: ["#2d2050", "#1c1536", "#0d0a1c"],
+    glowTop: "rgba(168, 132, 224, 0.24)",
+    glowBottom: "rgba(140, 110, 214, 0.18)",
+    eyebrow: "#f0c96a",
+    reference: "#d9c9f7",
+    divider: "rgba(255, 255, 255, 0.16)",
+    frame: "rgba(255, 255, 255, 0.14)",
+    motifColor: "rgba(216, 190, 250, 0.14)"
+  },
+  {
+    id: "peace",
+    icon: "dove",
+    keywords: ["rest", "weary", "burdened", "brokenhearted", "crushed in spirit", "peace", "troubled", "anxious", "anxiety", "cares for you", "mourn", "comforted"],
+    gradient: ["#1c3350", "#12243a", "#0a1522"],
+    glowTop: "rgba(96, 152, 214, 0.26)",
+    glowBottom: "rgba(128, 178, 236, 0.2)",
+    eyebrow: "#f3c86a",
+    reference: "#bcd9f5",
+    divider: "rgba(255, 255, 255, 0.16)",
+    frame: "rgba(255, 255, 255, 0.14)",
+    motifColor: "rgba(255, 255, 255, 0.14)"
+  },
+  {
+    id: "provision",
+    icon: "wheat",
+    keywords: ["needs", "riches", "gift", "everything we need", "godly life"],
+    gradient: ["#3a2e14", "#241d0c", "#100c05"],
+    glowTop: "rgba(214, 176, 96, 0.22)",
+    glowBottom: "rgba(196, 160, 92, 0.16)",
+    eyebrow: "#f3c86a",
+    reference: "#e8d8a8",
+    divider: "rgba(255, 255, 255, 0.16)",
+    frame: "rgba(255, 255, 255, 0.14)",
+    motifColor: "rgba(232, 210, 150, 0.16)"
+  },
+  {
+    id: "prayer",
+    icon: "door",
+    keywords: ["ask", "seek", "knock", "petition", "prayer", "draw near", "requests"],
+    gradient: ["#20204a", "#15152f", "#0a0a18"],
+    glowTop: "rgba(126, 132, 224, 0.22)",
+    glowBottom: "rgba(140, 150, 220, 0.16)",
+    eyebrow: "#f0c96a",
+    reference: "#c8cdf5",
+    divider: "rgba(255, 255, 255, 0.16)",
+    frame: "rgba(255, 255, 255, 0.14)",
+    motifColor: "rgba(200, 205, 245, 0.16)"
+  },
+  {
+    id: "refuge",
+    icon: "tower",
+    keywords: ["refuge", "stronghold", "fortified tower", "fortress", "fight for you", "safe"],
+    gradient: ["#28323c", "#1a222a", "#0c1116"],
+    glowTop: "rgba(150, 178, 200, 0.2)",
+    glowBottom: "rgba(140, 168, 190, 0.16)",
+    eyebrow: "#f3c86a",
+    reference: "#c6d8e4",
+    divider: "rgba(255, 255, 255, 0.16)",
+    frame: "rgba(255, 255, 255, 0.14)",
+    motifColor: "rgba(198, 216, 228, 0.16)"
+  },
+  {
+    id: "strength",
+    icon: "eagle",
+    keywords: ["strong and courageous", "strength", "eagles", "wings", "soar", "strengthen you", "power"],
+    gradient: ["#1c3a4a", "#12262f", "#081319"],
+    glowTop: "rgba(120, 200, 224, 0.24)",
+    glowBottom: "rgba(150, 210, 230, 0.18)",
+    eyebrow: "#f3c86a",
+    reference: "#bfe6f2",
+    divider: "rgba(255, 255, 255, 0.16)",
+    frame: "rgba(255, 255, 255, 0.14)",
+    motifColor: "rgba(191, 230, 242, 0.16)"
+  },
+  {
+    id: "hope",
+    icon: "anchor",
+    keywords: ["forsake", "never leave", "always", "hope", "plans", "future", "trust", "faithful", "purpose", "against us"],
     gradient: ["#123244", "#0d2733", "#061318"],
     glowTop: "rgba(94, 196, 210, 0.22)",
     glowBottom: "rgba(120, 200, 208, 0.16)",
@@ -2318,28 +2380,74 @@ const PROMISE_IMAGE_THEMES = [
     reference: "#bfe7f2",
     divider: "rgba(255, 255, 255, 0.16)",
     frame: "rgba(255, 255, 255, 0.14)",
-    motif: "waves",
-    motifColor: "rgba(191, 231, 242, 0.1)"
+    motifColor: "rgba(191, 231, 242, 0.16)"
+  },
+  {
+    id: "love",
+    icon: "heart",
+    keywords: ["precious", "love you", "delight", "heart", "cherish"],
+    gradient: ["#3d1f28", "#26141c", "#130a0e"],
+    glowTop: "rgba(224, 130, 120, 0.2)",
+    glowBottom: "rgba(214, 150, 118, 0.16)",
+    eyebrow: "#f3c86a",
+    reference: "#f2c9c4",
+    divider: "rgba(255, 255, 255, 0.16)",
+    frame: "rgba(255, 255, 255, 0.14)",
+    motifColor: "rgba(255, 214, 190, 0.14)"
+  },
+  {
+    id: "covenant",
+    icon: "rainbow",
+    keywords: ["steadfast love", "mercies", "forever", "never ceases"],
+    gradient: ["#3d2436", "#261622", "#130b11"],
+    glowTop: "rgba(230, 160, 150, 0.22)",
+    glowBottom: "rgba(240, 190, 140, 0.18)",
+    eyebrow: "#f6ce74",
+    reference: "#f0c9c4",
+    divider: "rgba(255, 255, 255, 0.16)",
+    frame: "rgba(255, 255, 255, 0.14)",
+    motifColor: "rgba(240, 200, 180, 0.14)"
   }
 ];
 
-// Small, stable string hash (djb2) so the same verse always maps to the same
-// theme index instead of jumping around between shares.
-function hashPromiseKey(key) {
-  let hash = 5381;
-  for (let i = 0; i < key.length; i += 1) {
-    hash = ((hash << 5) + hash + key.charCodeAt(i)) >>> 0;
+// Falls back to a neutral, generic look for any verse that doesn't match a
+// more specific category above.
+const DEFAULT_PROMISE_IMAGE_CATEGORY = {
+  id: "default",
+  icon: "rings",
+  gradient: ["#1c3350", "#12243a", "#0a1522"],
+  glowTop: "rgba(96, 152, 214, 0.26)",
+  glowBottom: "rgba(128, 178, 236, 0.2)",
+  eyebrow: "#f3c86a",
+  reference: "#bcd9f5",
+  divider: "rgba(255, 255, 255, 0.16)",
+  frame: "rgba(255, 255, 255, 0.14)",
+  motifColor: "rgba(255, 255, 255, 0.05)"
+};
+
+// Whole-word match for single words (so "sin" doesn't fire on "singing"),
+// plain substring match for multi-word phrases.
+function promiseTextMatchesKeyword(haystack, keyword) {
+  if (keyword.includes(" ")) {
+    return haystack.includes(keyword);
   }
-  return hash;
+  return new RegExp(`\\b${keyword}\\b`).test(haystack);
 }
 
 function pickPromiseImageTheme(promise) {
-  const key = `${promise.reference || ""}|${promise.text || ""}`;
-  const index = hashPromiseKey(key) % PROMISE_IMAGE_THEMES.length;
-  return PROMISE_IMAGE_THEMES[index];
+  const haystack = `${promise.text || ""} ${promise.reference || ""}`.toLowerCase();
+  const match = PROMISE_IMAGE_CATEGORIES.find((category) =>
+    category.keywords.some((keyword) => promiseTextMatchesKeyword(haystack, keyword))
+  );
+  return match || DEFAULT_PROMISE_IMAGE_CATEGORY;
 }
 
-function drawPromiseMotifRings(ctx, color) {
+// Every icon is anchored in the same bottom-right zone so the safe area for
+// the verse text stays consistent no matter which symbol is drawn.
+const PROMISE_ICON_CX = 940;
+const PROMISE_ICON_CY = 1120;
+
+function drawIconRings(ctx, color) {
   ctx.save();
   ctx.strokeStyle = color;
   ctx.lineWidth = 2;
@@ -2351,7 +2459,311 @@ function drawPromiseMotifRings(ctx, color) {
   ctx.restore();
 }
 
-function drawPromiseMotifArcs(ctx, color) {
+// A latin cross, for verses about grace, the blood of Christ, and salvation.
+function drawIconCross(ctx, color) {
+  ctx.save();
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 28;
+  ctx.lineCap = "round";
+  const cx = PROMISE_ICON_CX;
+  ctx.beginPath();
+  ctx.moveTo(cx, 940);
+  ctx.lineTo(cx, 1300);
+  ctx.moveTo(cx - 90, 1030);
+  ctx.lineTo(cx + 90, 1030);
+  ctx.stroke();
+  ctx.restore();
+}
+
+// An anchor, for verses about hope and steadfast faithfulness.
+function drawIconAnchor(ctx, color) {
+  ctx.save();
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 20;
+  ctx.lineCap = "round";
+  ctx.lineJoin = "round";
+  const cx = PROMISE_ICON_CX;
+  ctx.beginPath();
+  ctx.arc(cx, 960, 42, 0, Math.PI * 2);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(cx, 1002);
+  ctx.lineTo(cx, 1280);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(cx - 70, 1040);
+  ctx.lineTo(cx + 70, 1040);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(cx, 1280);
+  ctx.quadraticCurveTo(cx - 140, 1280, cx - 140, 1160);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(cx, 1280);
+  ctx.quadraticCurveTo(cx + 140, 1280, cx + 140, 1160);
+  ctx.stroke();
+  ctx.restore();
+}
+
+// A crenellated fortress tower, for verses about refuge and stronghold.
+function drawIconTower(ctx, color) {
+  ctx.save();
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 8;
+  const left = 800;
+  const right = 1080;
+  const top = 930;
+  const bottom = 1300;
+  const merlonWidth = 32;
+  const merlonHeight = 36;
+  const merlonCount = 4;
+  ctx.strokeRect(left, top + merlonHeight, right - left, bottom - (top + merlonHeight));
+  const gap = (right - left - merlonCount * merlonWidth) / (merlonCount + 1);
+  let x = left + gap;
+  for (let i = 0; i < merlonCount; i += 1) {
+    ctx.strokeRect(x, top, merlonWidth, merlonHeight);
+    x += merlonWidth + gap;
+  }
+  const doorCx = (left + right) / 2;
+  ctx.beginPath();
+  ctx.arc(doorCx, bottom - 70, 32, Math.PI, 0);
+  ctx.lineTo(doorCx + 32, bottom);
+  ctx.lineTo(doorCx - 32, bottom);
+  ctx.closePath();
+  ctx.stroke();
+  ctx.restore();
+}
+
+// A radiant sunburst, for verses about light, glory, and salvation.
+function drawIconSunburst(ctx, color) {
+  ctx.save();
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 6;
+  const cx = PROMISE_ICON_CX;
+  const cy = PROMISE_ICON_CY;
+  ctx.beginPath();
+  ctx.arc(cx, cy, 56, 0, Math.PI * 2);
+  ctx.stroke();
+  const rayCount = 14;
+  for (let i = 0; i < rayCount; i += 1) {
+    const angle = (i / rayCount) * Math.PI * 2;
+    const x1 = cx + Math.cos(angle) * 78;
+    const y1 = cy + Math.sin(angle) * 78;
+    const x2 = cx + Math.cos(angle) * 168;
+    const y2 = cy + Math.sin(angle) * 168;
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    ctx.lineTo(x2, y2);
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+
+// A dove in flight, for verses about peace and comfort.
+function drawIconDove(ctx, color) {
+  ctx.save();
+  const cx = PROMISE_ICON_CX - 20;
+  const cy = PROMISE_ICON_CY - 10;
+
+  ctx.fillStyle = color;
+
+  // Body: a small rounded breast leading back to a tapered tail.
+  ctx.beginPath();
+  ctx.moveTo(cx - 66, cy + 6);
+  ctx.quadraticCurveTo(cx - 30, cy - 18, cx + 6, cy - 4);
+  ctx.quadraticCurveTo(cx + 30, cy + 4, cx + 46, cy + 26);
+  ctx.quadraticCurveTo(cx + 10, cy + 16, cx - 24, cy + 20);
+  ctx.quadraticCurveTo(cx - 50, cy + 22, cx - 66, cy + 6);
+  ctx.closePath();
+  ctx.fill();
+
+  // Head and beak.
+  ctx.beginPath();
+  ctx.arc(cx - 62, cy - 4, 15, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.beginPath();
+  ctx.moveTo(cx - 76, cy - 8);
+  ctx.lineTo(cx - 96, cy - 4);
+  ctx.lineTo(cx - 76, cy + 2);
+  ctx.closePath();
+  ctx.fill();
+
+  // Raised wing: a single leaf-shaped fill so it reads as one solid wing.
+  ctx.beginPath();
+  ctx.moveTo(cx - 4, cy - 6);
+  ctx.quadraticCurveTo(cx + 40, cy - 96, cx + 150, cy - 70);
+  ctx.quadraticCurveTo(cx + 70, cy - 46, cx + 30, cy - 18);
+  ctx.quadraticCurveTo(cx + 10, cy - 8, cx - 4, cy - 6);
+  ctx.closePath();
+  ctx.fill();
+
+  // Tail feathers.
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 8;
+  ctx.lineCap = "round";
+  ctx.beginPath();
+  ctx.moveTo(cx + 30, cy + 18);
+  ctx.lineTo(cx + 84, cy + 40);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(cx + 22, cy + 26);
+  ctx.lineTo(cx + 72, cy + 58);
+  ctx.stroke();
+
+  ctx.restore();
+}
+
+// A simple heart, for verses about love and being cherished.
+function drawIconHeart(ctx, color) {
+  ctx.save();
+  ctx.fillStyle = color;
+  const cx = PROMISE_ICON_CX;
+  const top = 1000;
+  const half = 110;
+  ctx.beginPath();
+  ctx.moveTo(cx, top + 60);
+  ctx.bezierCurveTo(cx, top, cx - half, top, cx - half, top + 60);
+  ctx.bezierCurveTo(cx - half, top + 130, cx, top + 170, cx, top + 240);
+  ctx.bezierCurveTo(cx, top + 170, cx + half, top + 130, cx + half, top + 60);
+  ctx.bezierCurveTo(cx + half, top, cx, top, cx, top + 60);
+  ctx.closePath();
+  ctx.fill();
+  ctx.restore();
+}
+
+// A royal crown, for verses about joy, victory, and the crown of life.
+function drawIconCrown(ctx, color) {
+  ctx.save();
+  ctx.fillStyle = color;
+  const cx = PROMISE_ICON_CX;
+  const baseY = 1220;
+  ctx.beginPath();
+  ctx.moveTo(cx - 150, baseY);
+  ctx.lineTo(cx - 150, baseY - 40);
+  ctx.lineTo(cx - 90, baseY - 140);
+  ctx.lineTo(cx - 30, baseY - 60);
+  ctx.lineTo(cx, baseY - 150);
+  ctx.lineTo(cx + 30, baseY - 60);
+  ctx.lineTo(cx + 90, baseY - 140);
+  ctx.lineTo(cx + 150, baseY - 40);
+  ctx.lineTo(cx + 150, baseY);
+  ctx.closePath();
+  ctx.fill();
+  ctx.fillRect(cx - 150, baseY, 300, 26);
+  ctx.restore();
+}
+
+// Wheat stalks tied in a sheaf, for verses about provision and God meeting
+// every need.
+function drawIconWheat(ctx, color) {
+  ctx.save();
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 5;
+  ctx.lineCap = "round";
+  const topY = 1000;
+  const bottomY = 1300;
+  [860, 940, 1020].forEach((x, index) => {
+    const stalkTop = topY - (index % 2 === 0 ? 0 : 30);
+    ctx.beginPath();
+    ctx.moveTo(x, bottomY);
+    ctx.lineTo(x, stalkTop);
+    ctx.stroke();
+    for (let y = stalkTop + 24; y < bottomY - 50; y += 28) {
+      ctx.beginPath();
+      ctx.moveTo(x, y);
+      ctx.lineTo(x - 20, y - 16);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(x, y + 14);
+      ctx.lineTo(x + 20, y - 2);
+      ctx.stroke();
+    }
+  });
+  ctx.beginPath();
+  ctx.moveTo(830, bottomY - 40);
+  ctx.lineTo(1050, bottomY - 40);
+  ctx.stroke();
+  ctx.restore();
+}
+
+// Wings spread wide, for verses about renewed strength and soaring like an
+// eagle.
+function drawIconEagleWings(ctx, color) {
+  ctx.save();
+  ctx.fillStyle = color;
+  const cx = PROMISE_ICON_CX;
+  const cy = PROMISE_ICON_CY + 30;
+  ctx.beginPath();
+  ctx.moveTo(cx, cy);
+  ctx.quadraticCurveTo(cx - 150, cy - 170, cx - 270, cy - 60);
+  ctx.quadraticCurveTo(cx - 150, cy - 40, cx - 20, cy + 30);
+  ctx.closePath();
+  ctx.fill();
+  ctx.beginPath();
+  ctx.moveTo(cx, cy);
+  ctx.quadraticCurveTo(cx + 150, cy - 170, cx + 270, cy - 60);
+  ctx.quadraticCurveTo(cx + 150, cy - 40, cx + 20, cy + 30);
+  ctx.closePath();
+  ctx.fill();
+  ctx.restore();
+}
+
+// An arched door, for verses about asking, seeking, and knocking in prayer.
+function drawIconDoorArch(ctx, color) {
+  ctx.save();
+  ctx.strokeStyle = color;
+  ctx.fillStyle = color;
+  ctx.lineWidth = 8;
+  const cx = PROMISE_ICON_CX;
+  const width = 150;
+  const topY = 960;
+  const bottomY = 1290;
+  const radius = width / 2;
+  ctx.beginPath();
+  ctx.moveTo(cx - radius, bottomY);
+  ctx.lineTo(cx - radius, topY + radius);
+  ctx.arc(cx, topY + radius, radius, Math.PI, 0);
+  ctx.lineTo(cx + radius, bottomY);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(cx + 42, (topY + bottomY) / 2 + 40, 7, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.restore();
+}
+
+// A shepherd's crook with a small flock, for the Psalm 23 family of verses.
+function drawIconShepherdCrook(ctx, color) {
+  ctx.save();
+  ctx.strokeStyle = color;
+  ctx.fillStyle = color;
+  ctx.lineWidth = 14;
+  ctx.lineCap = "round";
+  const cx = PROMISE_ICON_CX + 10;
+  const topY = 950;
+  const bottomY = 1290;
+  const hookRadius = 50;
+  ctx.beginPath();
+  ctx.moveTo(cx, bottomY);
+  ctx.lineTo(cx, topY + hookRadius);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(cx - hookRadius * 0.3, topY + hookRadius, hookRadius, -Math.PI * 0.1, Math.PI * 1.3);
+  ctx.stroke();
+  [
+    [cx - 110, bottomY - 8, 17],
+    [cx - 170, bottomY + 10, 13],
+    [cx + 70, bottomY + 4, 15]
+  ].forEach(([x, y, r]) => {
+    ctx.beginPath();
+    ctx.arc(x, y, r, 0, Math.PI * 2);
+    ctx.fill();
+  });
+  ctx.restore();
+}
+
+// Sweeping bands from the corner, echoing the rainbow of God's covenant
+// promise, for verses about steadfast love and mercies that never end.
+function drawIconRainbow(ctx, color) {
   ctx.save();
   ctx.strokeStyle = color;
   ctx.lineWidth = 3;
@@ -2363,76 +2775,47 @@ function drawPromiseMotifArcs(ctx, color) {
   ctx.restore();
 }
 
-function drawPromiseMotifDots(ctx, color) {
-  ctx.save();
-  ctx.fillStyle = color;
-  const spacing = 46;
-  for (let row = 0; row < 6; row += 1) {
-    for (let col = 0; col < 6; col += 1) {
-      const x = PROMISE_IMAGE_WIDTH - 70 - col * spacing;
-      const y = 70 + row * spacing;
-      ctx.beginPath();
-      ctx.arc(x, y, 3.4, 0, Math.PI * 2);
-      ctx.fill();
-    }
-  }
-  ctx.restore();
-}
-
-function drawPromiseMotifDiagonal(ctx, color) {
-  ctx.save();
-  ctx.strokeStyle = color;
-  ctx.lineWidth = 6;
-  ctx.beginPath();
-  ctx.rect(0, 0, PROMISE_IMAGE_WIDTH, PROMISE_IMAGE_HEIGHT);
-  ctx.clip();
-  for (let x = -PROMISE_IMAGE_HEIGHT; x < PROMISE_IMAGE_WIDTH + PROMISE_IMAGE_HEIGHT; x += 96) {
-    ctx.beginPath();
-    ctx.moveTo(x, PROMISE_IMAGE_HEIGHT);
-    ctx.lineTo(x + PROMISE_IMAGE_HEIGHT, 0);
-    ctx.stroke();
-  }
-  ctx.restore();
-}
-
-function drawPromiseMotifWaves(ctx, color) {
-  ctx.save();
-  ctx.strokeStyle = color;
-  ctx.lineWidth = 3;
-  [PROMISE_IMAGE_HEIGHT - 160, PROMISE_IMAGE_HEIGHT - 110, PROMISE_IMAGE_HEIGHT - 60].forEach((baseY, waveIndex) => {
-    ctx.beginPath();
-    const amplitude = 18 + waveIndex * 4;
-    const wavelength = 260;
-    for (let x = -40; x <= PROMISE_IMAGE_WIDTH + 40; x += 8) {
-      const y = baseY + Math.sin((x / wavelength) * Math.PI * 2) * amplitude;
-      if (x === -40) {
-        ctx.moveTo(x, y);
-      } else {
-        ctx.lineTo(x, y);
-      }
-    }
-    ctx.stroke();
-  });
-  ctx.restore();
-}
-
-function drawPromiseImageMotif(ctx, theme) {
-  switch (theme.motif) {
-    case "arcs":
-      drawPromiseMotifArcs(ctx, theme.motifColor);
+function drawPromiseImageMotif(ctx, category) {
+  switch (category.icon) {
+    case "cross":
+      drawIconCross(ctx, category.motifColor);
       return;
-    case "dots":
-      drawPromiseMotifDots(ctx, theme.motifColor);
+    case "anchor":
+      drawIconAnchor(ctx, category.motifColor);
       return;
-    case "diagonal":
-      drawPromiseMotifDiagonal(ctx, theme.motifColor);
+    case "tower":
+      drawIconTower(ctx, category.motifColor);
       return;
-    case "waves":
-      drawPromiseMotifWaves(ctx, theme.motifColor);
+    case "sunburst":
+      drawIconSunburst(ctx, category.motifColor);
+      return;
+    case "dove":
+      drawIconDove(ctx, category.motifColor);
+      return;
+    case "heart":
+      drawIconHeart(ctx, category.motifColor);
+      return;
+    case "crown":
+      drawIconCrown(ctx, category.motifColor);
+      return;
+    case "wheat":
+      drawIconWheat(ctx, category.motifColor);
+      return;
+    case "eagle":
+      drawIconEagleWings(ctx, category.motifColor);
+      return;
+    case "door":
+      drawIconDoorArch(ctx, category.motifColor);
+      return;
+    case "shepherd":
+      drawIconShepherdCrook(ctx, category.motifColor);
+      return;
+    case "rainbow":
+      drawIconRainbow(ctx, category.motifColor);
       return;
     case "rings":
     default:
-      drawPromiseMotifRings(ctx, theme.motifColor);
+      drawIconRings(ctx, category.motifColor);
   }
 }
 
