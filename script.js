@@ -883,6 +883,10 @@ function answerUrl(answer) {
   return `/answers/${slugify(answer.question)}/`;
 }
 
+function topicUrl(topic) {
+  return `/topics/${slugify(topic)}/`;
+}
+
 const searchInput = document.querySelector("#search-input");
 const searchForm = document.querySelector("#search-form");
 const navSearchInput = document.querySelector("#nav-search-input");
@@ -891,6 +895,13 @@ const answersList = document.querySelector("#answers-list");
 const resultMeta = document.querySelector("#result-meta");
 const emptyState = document.querySelector("#empty-state");
 const topicFilters = document.querySelector("#topic-filters");
+const resultsPanel = document.querySelector("#results-panel");
+const resultsClear = document.querySelector("#results-clear");
+const answerSpotlight = document.querySelector("#answer-spotlight");
+const spotlightTags = document.querySelector("#spotlight-tags");
+const spotlightLink = document.querySelector("#spotlight-link");
+const spotlightShort = document.querySelector("#spotlight-short");
+const spotlightCta = document.querySelector("#spotlight-cta");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector("#primary-menu");
 const promiseText = document.querySelector("#promise-text");
@@ -1235,24 +1246,33 @@ function filteredAnswers() {
   });
 }
 
+// The homepage keeps every answer's data client-side for instant search, but
+// only renders the full list once a visitor asks for it (a topic or a
+// search), rather than dumping all 72 cards on first paint.
+function hasActiveFilter() {
+  return state.topic !== "All" || state.query.trim() !== "";
+}
+
 function renderTopicFilters() {
   topicFilters.innerHTML = "";
 
   allTopics().forEach((topic) => {
     const count = topic === "All" ? answers.length : answers.filter((answer) => answer.topics.includes(topic)).length;
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = topic === state.topic ? "active" : "";
-    button.dataset.topic = topic;
+    // Real links keep topics reachable without JavaScript; the click handler
+    // below intercepts them to filter in place when scripting is available.
+    const link = document.createElement("a");
+    link.href = topic === "All" ? "/answers/" : topicUrl(topic);
+    link.className = topic === state.topic ? "active" : "";
+    link.dataset.topic = topic;
     const icon = topic === "All" ? "" : topicIconMarkup(topic);
-    button.innerHTML = `
+    link.innerHTML = `
       <span class="filter-topic-label">
         ${icon ? `<span class="filter-topic-icon" aria-hidden="true">${icon}</span>` : ""}
         <span>${topic}</span>
       </span>
       <strong>${count}</strong>
     `;
-    topicFilters.append(button);
+    topicFilters.append(link);
   });
 }
 
@@ -1889,10 +1909,10 @@ async function sharePromiseViaSystemSheet(platform) {
 
   const file = readyPromiseImageFile();
   if (file && navigator.canShare?.({ files: [file] })) {
-    // Several targets accept either a file or a link but not both, so the link
-    // rides along inside the text instead of as a separate field.
+    // The graphic already carries the verse, reference, and wordoasis.org, so
+    // keep the accompanying text minimal (no link) to avoid a competing link
+    // preview card next to the image on platforms that render one.
     payload.files = [file];
-    payload.text = promiseShareContent();
     delete payload.url;
   }
 
@@ -1962,10 +1982,19 @@ async function sharePromise() {
   }
 
   // Desktop browsers without a share sheet get the graphic as a download plus
-  // the verse on the clipboard, which is everything a post needs.
-  await copyPromise();
+  // the verse (no link) on the clipboard, since the graphic itself already
+  // carries the site name and shouldn't compete with a separate link preview.
+  await copyPromiseVerseOnly();
   await downloadPromiseImage();
   promiseStatus.textContent = "The promise graphic was saved and the verse copied. Attach both to your post.";
+}
+
+async function copyPromiseVerseOnly() {
+  try {
+    await navigator.clipboard.writeText(promiseShareText());
+  } catch (error) {
+    // Non-fatal: the caller sets its own status message afterward.
+  }
 }
 
 async function copyPromise() {
@@ -1978,6 +2007,17 @@ async function copyPromise() {
 }
 
 function renderAnswers() {
+  const active = hasActiveFilter();
+  resultsPanel.hidden = !active;
+
+  if (!active) {
+    // Nothing to filter, so skip building 70+ cards that will not be shown.
+    answersList.innerHTML = "";
+    emptyState.hidden = true;
+    resultMeta.textContent = "";
+    return;
+  }
+
   const results = filteredAnswers();
   answersList.innerHTML = results.map(answerTemplate).join("");
   emptyState.hidden = results.length > 0;
@@ -2000,6 +2040,43 @@ function setTopic(topic) {
   renderTopicFilters();
   renderAnswers();
   scrollToResults();
+}
+
+function clearAnswerFilters() {
+  state.topic = "All";
+  state.query = "";
+  searchInput.value = "";
+  navSearchInput.value = "";
+  renderTopicFilters();
+  renderAnswers();
+  answerSpotlight.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+let spotlightAnswerIndex = -1;
+
+function renderSpotlightAnswer() {
+  if (!answers.length) {
+    return;
+  }
+
+  // Avoid repeating the same question twice in a row when shuffling.
+  let index = spotlightAnswerIndex;
+  while (index === spotlightAnswerIndex && answers.length > 1) {
+    index = Math.floor(Math.random() * answers.length);
+  }
+  spotlightAnswerIndex = index === spotlightAnswerIndex ? 0 : index;
+
+  const answer = answers[spotlightAnswerIndex];
+  const url = answerUrl(answer);
+
+  spotlightTags.innerHTML = answer.topics
+    .slice(0, 2)
+    .map((topic) => `<button type="button" class="tag-link" data-topic="${topic}">${topic}</button>`)
+    .join("");
+  spotlightLink.textContent = answer.question;
+  spotlightLink.href = url;
+  spotlightShort.textContent = answer.shortAnswer;
+  spotlightCta.href = url;
 }
 
 const perspectivesByCategory = {
@@ -2046,8 +2123,16 @@ function biblicalPerspective(answer) {
 
 function scrollToResults() {
   // Jump straight to the results, skipping past the topic filter list on
-  // mobile where it stacks above the answers instead of beside them.
-  document.querySelector("#results-panel").scrollIntoView({ behavior: "smooth", block: "start" });
+  // mobile where it stacks above the answers instead of beside them. If a
+  // search was cleared back to "no filter", scroll to the topic grid instead
+  // since the results panel is hidden again.
+  const target = resultsPanel.hidden ? topicFilters.closest(".filter-card") : resultsPanel;
+  target.scrollIntoView({ behavior: "smooth", block: "start" });
+
+  if (resultsPanel.hidden) {
+    return;
+  }
+
   resultMeta.classList.remove("flash");
   // Force reflow so the animation can restart on repeated clicks.
   void resultMeta.offsetWidth;
@@ -2089,6 +2174,9 @@ document.addEventListener("click", (event) => {
   }
 
   if (topicButton) {
+    // Topic pills are real links to /topics/<slug>/ for no-JS visitors; once
+    // scripting runs, intercept the click and filter in place instead.
+    event.preventDefault();
     setTopic(topicButton.dataset.topic);
   }
 
@@ -2297,3 +2385,10 @@ addTopicIcons();
 renderTopicFilters();
 populateQuestionTopics();
 renderAnswers();
+renderSpotlightAnswer();
+
+resultsClear.addEventListener("click", clearAnswerFilters);
+
+// Rotates the featured question automatically since the manual shuffle
+// control was removed in favor of a simple "Bible Answers" label.
+window.setInterval(renderSpotlightAnswer, 10000);

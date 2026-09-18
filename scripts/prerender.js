@@ -153,6 +153,10 @@ function renderWithJsdom(html, scriptSource) {
   const topicFiltersHtml = window.document.querySelector("#topic-filters").innerHTML.trim();
   const answersListHtml = window.document.querySelector("#answers-list").innerHTML.trim();
   const resultMetaText = window.document.querySelector("#result-meta").textContent.trim();
+  const spotlightBodyHtml = window.document
+    .querySelector("#spotlight-body")
+    .innerHTML.replace(/<!--\s*prerender:spotlight-body\s*-->/g, "")
+    .trim();
   const questionTopicOptions = Array.from(window.document.querySelectorAll("#question-topic option"))
     .filter((option) => option.value !== "")
     .map((option) => `<option value="${escapeAttribute(option.value)}">${escapeHtml(option.textContent)}</option>`)
@@ -160,7 +164,7 @@ function renderWithJsdom(html, scriptSource) {
 
   window.close();
 
-  return { topicFiltersHtml, answersListHtml, resultMetaText, questionTopicOptions };
+  return { topicFiltersHtml, answersListHtml, resultMetaText, spotlightBodyHtml, questionTopicOptions };
 }
 
 function injectContainerContent(html, containerId, marker, innerHtml) {
@@ -239,20 +243,20 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20260925">
+    <link rel="stylesheet" href="/styles.css?v=20260926">
     <meta property="og:type" content="${ogType}">
     <meta property="og:title" content="${escapeAttribute(title)}">
     <meta property="og:description" content="${escapeAttribute(description)}">
     <meta property="og:url" content="${canonical}">
     <meta property="og:site_name" content="Word Oasis">
-    <meta property="og:image" content="${SITE_URL}/og-image.png?v=20260925">
+    <meta property="og:image" content="${SITE_URL}/og-image.png?v=20260926">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Word Oasis logo with a daily Scripture, hope, and encouragement message">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${escapeAttribute(title)}">
     <meta name="twitter:description" content="${escapeAttribute(description)}">
-    <meta name="twitter:image" content="${SITE_URL}/og-image.png?v=20260925">
+    <meta name="twitter:image" content="${SITE_URL}/og-image.png?v=20260926">
     <meta name="twitter:image:alt" content="Word Oasis logo with a daily Scripture, hope, and encouragement message">
     ${jsonLd}
   </head>
@@ -348,7 +352,7 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
         </div>
       </div>
     </footer>
-    <script src="/theme.js?v=20260925"></script>
+    <script src="/theme.js?v=20260926"></script>
   </body>
 </html>
 `;
@@ -611,7 +615,7 @@ function main() {
   const perspectivesByCategory = extractConstData(scriptSource, "perspectivesByCategory");
   const perspectivesByAnswer = extractConstData(scriptSource, "perspectivesByAnswer");
 
-  const { topicFiltersHtml, answersListHtml, resultMetaText, questionTopicOptions } = renderWithJsdom(
+  const { topicFiltersHtml, answersListHtml, resultMetaText, spotlightBodyHtml, questionTopicOptions } = renderWithJsdom(
     html,
     scriptSource
   );
@@ -620,6 +624,7 @@ function main() {
   output = injectContainerContent(output, "topic-filters", "prerender:topic-filters", `\n${topicFiltersHtml}\n              `);
   output = injectContainerContent(output, "answers-list", "prerender:answers-list", `\n${answersListHtml}\n              `);
   output = injectContainerContent(output, "result-meta", "prerender:result-meta", resultMetaText);
+  output = injectContainerContent(output, "spotlight-body", "prerender:spotlight-body", `\n              ${spotlightBodyHtml}\n              `);
   output = injectSelectOptions(output, "prerender:question-topic", questionTopicOptions);
   output = injectFaqJsonLd(output, buildFaqJsonLd(answers));
 
