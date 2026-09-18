@@ -233,6 +233,13 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
         document.documentElement.dataset.theme = theme;
       })();
     </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5WRW513RFW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-5WRW513RFW");
+    </script>
     <link rel="canonical" href="${canonical}">
     <link rel="icon" href="/word-oasis.svg" type="image/svg+xml">
     <link rel="alternate icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">

@@ -179,6 +179,12 @@
     return `https://live.bible.is/bible/ENGESV/${book.audioCode}/${chapter}`;
   }
 
+  function trackAnalyticsEvent(name, params) {
+    if (typeof window.gtag === "function") {
+      window.gtag("event", name, params);
+    }
+  }
+
   function setReaderStatus(message) {
     readerBody.innerHTML = "";
     const status = document.createElement("p");
@@ -367,4 +373,12 @@
   nextButton.addEventListener("click", () => moveChapter(1));
   smallerTextButton.addEventListener("click", () => applyTextSize(textSizeIndex - 1));
   largerTextButton.addEventListener("click", () => applyTextSize(textSizeIndex + 1));
+  listenLink.addEventListener("click", () => {
+    const { book, chapter, translation } = selectedState();
+    trackAnalyticsEvent("bible_audio_click", {
+      bible_book: book.name,
+      bible_chapter: chapter,
+      bible_version: translation.shortLabel
+    });
+  });
 })();
