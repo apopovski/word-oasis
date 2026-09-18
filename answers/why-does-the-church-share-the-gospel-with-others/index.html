@@ -103,15 +103,14 @@
           <p class="page-intro">Jesus commissioned His followers to share the good news with everyone, everywhere, because the gospel is meant to be shared, not kept private, out of love for others.</p>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-answer">
         <div class="container answer-page-layout">
           <article class="answer-page-card">
             <div class="answer-tags"><a class="tag-link" href="/topics/church/">Church</a><a class="tag-link" href="/topics/christian-living/">Christian Living</a><a class="tag-link" href="/topics/faith/">Faith</a></div>
-            <p class="lead-answer">Jesus commissioned His followers to share the good news with everyone, everywhere, because the gospel is meant to be shared, not kept private, out of love for others.</p>
-            <p>Before returning to heaven, Jesus gave His followers a clear commission: go and make disciples of all nations, teaching them to follow everything He commanded. This mission flows naturally from grace — those who have experienced forgiveness and hope want others to know it is available too. Sharing the gospel is not about pressure or manipulation; it includes living a visibly transformed life, serving practical needs, and speaking honestly about faith when opportunities arise. This mission is described as continuing until Christ's return, giving urgency and purpose to how believers live and relate to others.</p>
+            <p class="lead-answer">Before returning to heaven, Jesus gave His followers a clear commission: go and make disciples of all nations, teaching them to follow everything He commanded. This mission flows naturally from grace — those who have experienced forgiveness and hope want others to know it is available too. Sharing the gospel is not about pressure or manipulation; it includes living a visibly transformed life, serving practical needs, and speaking honestly about faith when opportunities arise. This mission is described as continuing until Christ's return, giving urgency and purpose to how believers live and relate to others.</p>
             <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
             <h2>Bible references</h2>
-            <div class="scriptures"><span>Matthew 28:18-20</span><span>Matthew 24:14</span><span>Romans 10:14-15</span></div>
+            <div class="scriptures"><button type="button" class="scripture-link" data-scripture="Matthew 28:18-20">Matthew 28:18-20</button><button type="button" class="scripture-link" data-scripture="Matthew 24:14">Matthew 24:14</button><button type="button" class="scripture-link" data-scripture="Romans 10:14-15">Romans 10:14-15</button></div>
           </article>
           <aside class="related-card" aria-label="Related answers">
             <h2>Related answers</h2>
@@ -178,6 +177,20 @@
         </div>
       </div>
     </footer>
+
+    <div class="verse-modal" id="verse-modal" role="dialog" aria-modal="true" aria-labelledby="verse-modal-title" hidden>
+      <div class="verse-modal-card">
+        <div class="verse-modal-header">
+          <h2 id="verse-modal-title">Reference</h2>
+          <button type="button" class="verse-modal-close" id="verse-modal-close" aria-label="Close verse">
+            &times;
+          </button>
+        </div>
+        <div class="verse-modal-body" id="verse-modal-body"></div>
+      </div>
+    </div>
+
     <script src="/theme.js?v=20260927"></script>
+    <script src="/verse-modal.js?v=20260927"></script>
   </body>
 </html>

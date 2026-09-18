@@ -351,7 +351,21 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
         </div>
       </div>
     </footer>
+
+    <div class="verse-modal" id="verse-modal" role="dialog" aria-modal="true" aria-labelledby="verse-modal-title" hidden>
+      <div class="verse-modal-card">
+        <div class="verse-modal-header">
+          <h2 id="verse-modal-title">Reference</h2>
+          <button type="button" class="verse-modal-close" id="verse-modal-close" aria-label="Close verse">
+            &times;
+          </button>
+        </div>
+        <div class="verse-modal-body" id="verse-modal-body"></div>
+      </div>
+    </div>
+
     <script src="/theme.js?v=20260927"></script>
+    <script src="/verse-modal.js?v=20260927"></script>
   </body>
 </html>
 `;
@@ -364,7 +378,12 @@ function tagsHtml(topics) {
 }
 
 function scripturesHtml(scriptures) {
-  return scriptures.map((scripture) => `<span>${escapeHtml(scripture)}</span>`).join("");
+  return scriptures
+    .map(
+      (scripture) =>
+        `<button type="button" class="scripture-link" data-scripture="${escapeAttribute(scripture)}">${escapeHtml(scripture)}</button>`
+    )
+    .join("");
 }
 
 function relatedAnswers(currentAnswer, answers) {
@@ -408,12 +427,11 @@ function answerPage(answer, answers, perspectivesByCategory, perspectivesByAnswe
           <p class="page-intro">${escapeHtml(answer.shortAnswer)}</p>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-answer">
         <div class="container answer-page-layout">
           <article class="answer-page-card">
             <div class="answer-tags">${tagsHtml(answer.topics)}</div>
-            <p class="lead-answer">${escapeHtml(answer.shortAnswer)}</p>
-            <p>${escapeHtml(answer.longAnswer)}</p>
+            <p class="lead-answer">${escapeHtml(answer.longAnswer)}</p>
             <p>${escapeHtml(perspective)}</p>
             <h2>Bible references</h2>
             <div class="scriptures">${scripturesHtml(answer.scriptures)}</div>

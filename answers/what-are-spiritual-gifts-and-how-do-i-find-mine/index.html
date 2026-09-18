@@ -103,15 +103,14 @@
           <p class="page-intro">Spiritual gifts are abilities given by the Holy Spirit to build up the church. Every believer receives at least one, meant to be discovered and used in service to others.</p>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-answer">
         <div class="container answer-page-layout">
           <article class="answer-page-card">
             <div class="answer-tags"><a class="tag-link" href="/topics/holy-spirit/">Holy Spirit</a><a class="tag-link" href="/topics/church/">Church</a><a class="tag-link" href="/topics/christian-living/">Christian Living</a></div>
-            <p class="lead-answer">Spiritual gifts are abilities given by the Holy Spirit to build up the church. Every believer receives at least one, meant to be discovered and used in service to others.</p>
-            <p>Spiritual gifts are Spirit-given abilities such as teaching, encouragement, service, leadership, mercy, or generosity, distributed to different believers so the whole church functions like a healthy body with many necessary parts. No one receives every gift, and no gift is more spiritually significant than another when used in love — the goal is mutual benefit, not personal status. Gifts are often discovered through serving, noticing what brings genuine fruit and joy, and receiving feedback from other believers, rather than through abstract self-reflection alone.</p>
+            <p class="lead-answer">Spiritual gifts are Spirit-given abilities such as teaching, encouragement, service, leadership, mercy, or generosity, distributed to different believers so the whole church functions like a healthy body with many necessary parts. No one receives every gift, and no gift is more spiritually significant than another when used in love — the goal is mutual benefit, not personal status. Gifts are often discovered through serving, noticing what brings genuine fruit and joy, and receiving feedback from other believers, rather than through abstract self-reflection alone.</p>
             <p>These themes are best read through the whole testimony of Scripture, emphasizing God's self-revelation in Christ, the active ministry of the Holy Spirit, and the restoration of the whole person. Bible study should lead to a changed life, compassionate service, and a clearer picture of God's loving character.</p>
             <h2>Bible references</h2>
-            <div class="scriptures"><span>1 Corinthians 12:4-7</span><span>Romans 12:4-8</span><span>1 Peter 4:10-11</span></div>
+            <div class="scriptures"><button type="button" class="scripture-link" data-scripture="1 Corinthians 12:4-7">1 Corinthians 12:4-7</button><button type="button" class="scripture-link" data-scripture="Romans 12:4-8">Romans 12:4-8</button><button type="button" class="scripture-link" data-scripture="1 Peter 4:10-11">1 Peter 4:10-11</button></div>
           </article>
           <aside class="related-card" aria-label="Related answers">
             <h2>Related answers</h2>
@@ -178,6 +177,20 @@
         </div>
       </div>
     </footer>
+
+    <div class="verse-modal" id="verse-modal" role="dialog" aria-modal="true" aria-labelledby="verse-modal-title" hidden>
+      <div class="verse-modal-card">
+        <div class="verse-modal-header">
+          <h2 id="verse-modal-title">Reference</h2>
+          <button type="button" class="verse-modal-close" id="verse-modal-close" aria-label="Close verse">
+            &times;
+          </button>
+        </div>
+        <div class="verse-modal-body" id="verse-modal-body"></div>
+      </div>
+    </div>
+
     <script src="/theme.js?v=20260927"></script>
+    <script src="/verse-modal.js?v=20260927"></script>
   </body>
 </html>

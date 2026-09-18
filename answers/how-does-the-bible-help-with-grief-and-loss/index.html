@@ -103,15 +103,14 @@
           <p class="page-intro">Scripture allows honest grief while offering real comfort: God is near to the brokenhearted, and death is not the final word for those who trust in the resurrection.</p>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-answer">
         <div class="container answer-page-layout">
           <article class="answer-page-card">
             <div class="answer-tags"><a class="tag-link" href="/topics/comfort/">Comfort</a><a class="tag-link" href="/topics/state-of-the-dead/">State of the Dead</a><a class="tag-link" href="/topics/prophecy/">Prophecy</a></div>
-            <p class="lead-answer">Scripture allows honest grief while offering real comfort: God is near to the brokenhearted, and death is not the final word for those who trust in the resurrection.</p>
-            <p>The Bible never treats grief as a sign of weak faith — Jesus Himself wept at the tomb of a friend, and the Psalms are full of raw, honest sorrow brought openly to God. At the same time, grief for believers is described as different from grief without hope, because death is temporary, not final, for those united to Christ. God is described as especially near to the brokenhearted and to those crushed in spirit, inviting honest lament rather than forced positivity. The promise of the resurrection, when God will reunite loved ones and wipe away every tear, offers a future hope that can hold real grief and real comfort together.</p>
+            <p class="lead-answer">The Bible never treats grief as a sign of weak faith — Jesus Himself wept at the tomb of a friend, and the Psalms are full of raw, honest sorrow brought openly to God. At the same time, grief for believers is described as different from grief without hope, because death is temporary, not final, for those united to Christ. God is described as especially near to the brokenhearted and to those crushed in spirit, inviting honest lament rather than forced positivity. The promise of the resurrection, when God will reunite loved ones and wipe away every tear, offers a future hope that can hold real grief and real comfort together.</p>
             <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
             <h2>Bible references</h2>
-            <div class="scriptures"><span>Psalm 34:18</span><span>John 11:33-35</span><span>1 Thessalonians 4:13-14</span></div>
+            <div class="scriptures"><button type="button" class="scripture-link" data-scripture="Psalm 34:18">Psalm 34:18</button><button type="button" class="scripture-link" data-scripture="John 11:33-35">John 11:33-35</button><button type="button" class="scripture-link" data-scripture="1 Thessalonians 4:13-14">1 Thessalonians 4:13-14</button></div>
           </article>
           <aside class="related-card" aria-label="Related answers">
             <h2>Related answers</h2>
@@ -178,6 +177,20 @@
         </div>
       </div>
     </footer>
+
+    <div class="verse-modal" id="verse-modal" role="dialog" aria-modal="true" aria-labelledby="verse-modal-title" hidden>
+      <div class="verse-modal-card">
+        <div class="verse-modal-header">
+          <h2 id="verse-modal-title">Reference</h2>
+          <button type="button" class="verse-modal-close" id="verse-modal-close" aria-label="Close verse">
+            &times;
+          </button>
+        </div>
+        <div class="verse-modal-body" id="verse-modal-body"></div>
+      </div>
+    </div>
+
     <script src="/theme.js?v=20260927"></script>
+    <script src="/verse-modal.js?v=20260927"></script>
   </body>
 </html>

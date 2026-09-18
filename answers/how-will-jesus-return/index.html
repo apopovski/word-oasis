@@ -103,15 +103,14 @@
           <p class="page-intro">The return of Jesus will be visible, personal, glorious, and unmistakable — seen by every eye, not secret or hidden. The Bible calls believers to watch, be ready, and live faithfully while looking forward to His coming kingdom.</p>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-answer">
         <div class="container answer-page-layout">
           <article class="answer-page-card">
             <div class="answer-tags"><a class="tag-link" href="/topics/prophecy/">Prophecy</a><a class="tag-link" href="/topics/second-coming/">Second Coming</a><a class="tag-link" href="/topics/faith/">Faith</a><a class="tag-link" href="/topics/christian-living/">Christian Living</a></div>
-            <p class="lead-answer">The return of Jesus will be visible, personal, glorious, and unmistakable — seen by every eye, not secret or hidden. The Bible calls believers to watch, be ready, and live faithfully while looking forward to His coming kingdom.</p>
-            <p>The Bible pictures the second coming as a public, worldwide event: Christ descending visibly from heaven, seen by every eye, accompanied by angels and unmistakable in its glory — nothing like a quiet or secret event only some people notice. Scripture warns against being misled by claims that Christ has returned secretly or in a hidden way. Instead, believers are called to a posture of watching and readiness, not through fearful speculation about dates, but through a faithful daily walk with God, trusting that His return will bring full reunion with loved ones and the restoration of everything sin has broken.</p>
+            <p class="lead-answer">The Bible pictures the second coming as a public, worldwide event: Christ descending visibly from heaven, seen by every eye, accompanied by angels and unmistakable in its glory — nothing like a quiet or secret event only some people notice. Scripture warns against being misled by claims that Christ has returned secretly or in a hidden way. Instead, believers are called to a posture of watching and readiness, not through fearful speculation about dates, but through a faithful daily walk with God, trusting that His return will bring full reunion with loved ones and the restoration of everything sin has broken.</p>
             <p>The Bible presents a visible, audible, and glorious second coming rather than a secret rapture. Jesus returns personally to resurrect the righteous, gather His people, and bring the long conflict with sin to its decisive close; readiness means faithful relationship and mission, not predicting a date.</p>
             <h2>Bible references</h2>
-            <div class="scriptures"><span>Acts 1:11</span><span>Matthew 24:30-31</span><span>Revelation 1:7</span></div>
+            <div class="scriptures"><button type="button" class="scripture-link" data-scripture="Acts 1:11">Acts 1:11</button><button type="button" class="scripture-link" data-scripture="Matthew 24:30-31">Matthew 24:30-31</button><button type="button" class="scripture-link" data-scripture="Revelation 1:7">Revelation 1:7</button></div>
           </article>
           <aside class="related-card" aria-label="Related answers">
             <h2>Related answers</h2>
@@ -178,6 +177,20 @@
         </div>
       </div>
     </footer>
+
+    <div class="verse-modal" id="verse-modal" role="dialog" aria-modal="true" aria-labelledby="verse-modal-title" hidden>
+      <div class="verse-modal-card">
+        <div class="verse-modal-header">
+          <h2 id="verse-modal-title">Reference</h2>
+          <button type="button" class="verse-modal-close" id="verse-modal-close" aria-label="Close verse">
+            &times;
+          </button>
+        </div>
+        <div class="verse-modal-body" id="verse-modal-body"></div>
+      </div>
+    </div>
+
     <script src="/theme.js?v=20260927"></script>
+    <script src="/verse-modal.js?v=20260927"></script>
   </body>
 </html>

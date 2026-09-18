@@ -103,15 +103,14 @@
           <p class="page-intro">The Old Testament sanctuary was a visual gospel, teaching how sin is confessed, atoned for, and ultimately removed through the work of Jesus Christ.</p>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-answer">
         <div class="container answer-page-layout">
           <article class="answer-page-card">
             <div class="answer-tags"><a class="tag-link" href="/topics/sanctuary/">Sanctuary</a><a class="tag-link" href="/topics/salvation/">Salvation</a><a class="tag-link" href="/topics/prophecy/">Prophecy</a></div>
-            <p class="lead-answer">The Old Testament sanctuary was a visual gospel, teaching how sin is confessed, atoned for, and ultimately removed through the work of Jesus Christ.</p>
-            <p>God instructed Israel to build a sanctuary so He could dwell among His people and teach them, in pictures they could see and touch, how salvation works. Its furniture, sacrifices, and priestly service illustrated substitution, cleansing, mediation, and final judgment. The New Testament identifies Jesus as the reality behind every sanctuary symbol: He is the sacrifice, the High Priest, and the one who ministers on behalf of sinners. Understanding the sanctuary helps believers see the gospel as an unfolding story rather than an isolated event, one that moves toward the final removal of sin altogether.</p>
+            <p class="lead-answer">God instructed Israel to build a sanctuary so He could dwell among His people and teach them, in pictures they could see and touch, how salvation works. Its furniture, sacrifices, and priestly service illustrated substitution, cleansing, mediation, and final judgment. The New Testament identifies Jesus as the reality behind every sanctuary symbol: He is the sacrifice, the High Priest, and the one who ministers on behalf of sinners. Understanding the sanctuary helps believers see the gospel as an unfolding story rather than an isolated event, one that moves toward the final removal of sin altogether.</p>
             <p>The great controversy reveals God's character as Christ ministers as our High Priest in the heavenly sanctuary. The dead await the resurrection, Christ's return will be visible and personal, and prophecy calls believers to faithful mission rather than date-setting or fear.</p>
             <h2>Bible references</h2>
-            <div class="scriptures"><span>Hebrews 8:1-2</span><span>Hebrews 9:11-12</span><span>Exodus 25:8</span></div>
+            <div class="scriptures"><button type="button" class="scripture-link" data-scripture="Hebrews 8:1-2">Hebrews 8:1-2</button><button type="button" class="scripture-link" data-scripture="Hebrews 9:11-12">Hebrews 9:11-12</button><button type="button" class="scripture-link" data-scripture="Exodus 25:8">Exodus 25:8</button></div>
           </article>
           <aside class="related-card" aria-label="Related answers">
             <h2>Related answers</h2>
@@ -178,6 +177,20 @@
         </div>
       </div>
     </footer>
+
+    <div class="verse-modal" id="verse-modal" role="dialog" aria-modal="true" aria-labelledby="verse-modal-title" hidden>
+      <div class="verse-modal-card">
+        <div class="verse-modal-header">
+          <h2 id="verse-modal-title">Reference</h2>
+          <button type="button" class="verse-modal-close" id="verse-modal-close" aria-label="Close verse">
+            &times;
+          </button>
+        </div>
+        <div class="verse-modal-body" id="verse-modal-body"></div>
+      </div>
+    </div>
+
     <script src="/theme.js?v=20260927"></script>
+    <script src="/verse-modal.js?v=20260927"></script>
   </body>
 </html>

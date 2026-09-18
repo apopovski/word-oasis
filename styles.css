@@ -985,6 +985,10 @@ h1 {
   padding: 86px 0;
 }
 
+.section-answer {
+  padding-top: 28px;
+}
+
 .section-soft {
   background: var(--surface-soft);
 }

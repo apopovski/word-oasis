@@ -103,15 +103,14 @@
           <p class="page-intro">Baptism is a public confession of faith in Jesus, symbolizing death to the old life, burial with Christ, and rising to walk in newness of life.</p>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-answer">
         <div class="container answer-page-layout">
           <article class="answer-page-card">
             <div class="answer-tags"><a class="tag-link" href="/topics/baptism/">Baptism</a><a class="tag-link" href="/topics/salvation/">Salvation</a><a class="tag-link" href="/topics/faith/">Faith</a></div>
-            <p class="lead-answer">Baptism is a public confession of faith in Jesus, symbolizing death to the old life, burial with Christ, and rising to walk in newness of life.</p>
-            <p>The New Testament presents baptism as a meaningful response to the gospel rather than a casual religious ritual. Going down into the water pictures burial with Christ, and coming up from the water pictures resurrection into a new life shaped by His grace. Baptism does not earn salvation, but it publicly identifies a believer with Jesus, His death and resurrection, and His people. In Acts, baptism follows repentance and faith as people receive the message of Christ and openly begin the life of discipleship.</p>
+            <p class="lead-answer">The New Testament presents baptism as a meaningful response to the gospel rather than a casual religious ritual. Going down into the water pictures burial with Christ, and coming up from the water pictures resurrection into a new life shaped by His grace. Baptism does not earn salvation, but it publicly identifies a believer with Jesus, His death and resurrection, and His people. In Acts, baptism follows repentance and faith as people receive the message of Christ and openly begin the life of discipleship.</p>
             <p>Salvation is entirely by grace through faith in Christ. His atoning sacrifice, heavenly ministry, and intercession are the foundation of assurance; obedience, Sabbath faithfulness, and loving service are the fruit of a redeemed life, never a way to purchase acceptance with God.</p>
             <h2>Bible references</h2>
-            <div class="scriptures"><span>Romans 6:3-4</span><span>Acts 2:38</span><span>Matthew 28:19-20</span></div>
+            <div class="scriptures"><button type="button" class="scripture-link" data-scripture="Romans 6:3-4">Romans 6:3-4</button><button type="button" class="scripture-link" data-scripture="Acts 2:38">Acts 2:38</button><button type="button" class="scripture-link" data-scripture="Matthew 28:19-20">Matthew 28:19-20</button></div>
           </article>
           <aside class="related-card" aria-label="Related answers">
             <h2>Related answers</h2>
@@ -178,6 +177,20 @@
         </div>
       </div>
     </footer>
+
+    <div class="verse-modal" id="verse-modal" role="dialog" aria-modal="true" aria-labelledby="verse-modal-title" hidden>
+      <div class="verse-modal-card">
+        <div class="verse-modal-header">
+          <h2 id="verse-modal-title">Reference</h2>
+          <button type="button" class="verse-modal-close" id="verse-modal-close" aria-label="Close verse">
+            &times;
+          </button>
+        </div>
+        <div class="verse-modal-body" id="verse-modal-body"></div>
+      </div>
+    </div>
+
     <script src="/theme.js?v=20260927"></script>
+    <script src="/verse-modal.js?v=20260927"></script>
   </body>
 </html>

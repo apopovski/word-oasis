@@ -103,15 +103,14 @@
           <p class="page-intro">Scripture describes creation as six literal days followed by a seventh day of rest, a pattern later memorialized in the weekly Sabbath commandment.</p>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-answer">
         <div class="container answer-page-layout">
           <article class="answer-page-card">
             <div class="answer-tags"><a class="tag-link" href="/topics/creation/">Creation</a><a class="tag-link" href="/topics/sabbath/">Sabbath</a><a class="tag-link" href="/topics/faith/">Faith</a></div>
-            <p class="lead-answer">Scripture describes creation as six literal days followed by a seventh day of rest, a pattern later memorialized in the weekly Sabbath commandment.</p>
-            <p>Genesis records creation using the same Hebrew word for "day" paired with "evening and morning," the same pattern used elsewhere in Scripture for literal 24-hour days. The fourth commandment reinforces this reading by grounding the seven-day week in God's literal creation week, not in a symbolic or extended process. Believing in a recent, literal creation shapes more than a science debate; it affirms that human life has inherent dignity as God's direct handiwork, that death entered through sin rather than being part of God's original design, and that the weekly Sabbath rests on a real historical foundation.</p>
+            <p class="lead-answer">Genesis records creation using the same Hebrew word for "day" paired with "evening and morning," the same pattern used elsewhere in Scripture for literal 24-hour days. The fourth commandment reinforces this reading by grounding the seven-day week in God's literal creation week, not in a symbolic or extended process. Believing in a recent, literal creation shapes more than a science debate; it affirms that human life has inherent dignity as God's direct handiwork, that death entered through sin rather than being part of God's original design, and that the weekly Sabbath rests on a real historical foundation.</p>
             <p>These themes are best read through the whole testimony of Scripture, emphasizing God's self-revelation in Christ, the active ministry of the Holy Spirit, and the restoration of the whole person. Bible study should lead to a changed life, compassionate service, and a clearer picture of God's loving character.</p>
             <h2>Bible references</h2>
-            <div class="scriptures"><span>Genesis 1:31-2:3</span><span>Exodus 20:11</span><span>Hebrews 11:3</span></div>
+            <div class="scriptures"><button type="button" class="scripture-link" data-scripture="Genesis 1:31-2:3">Genesis 1:31-2:3</button><button type="button" class="scripture-link" data-scripture="Exodus 20:11">Exodus 20:11</button><button type="button" class="scripture-link" data-scripture="Hebrews 11:3">Hebrews 11:3</button></div>
           </article>
           <aside class="related-card" aria-label="Related answers">
             <h2>Related answers</h2>
@@ -178,6 +177,20 @@
         </div>
       </div>
     </footer>
+
+    <div class="verse-modal" id="verse-modal" role="dialog" aria-modal="true" aria-labelledby="verse-modal-title" hidden>
+      <div class="verse-modal-card">
+        <div class="verse-modal-header">
+          <h2 id="verse-modal-title">Reference</h2>
+          <button type="button" class="verse-modal-close" id="verse-modal-close" aria-label="Close verse">
+            &times;
+          </button>
+        </div>
+        <div class="verse-modal-body" id="verse-modal-body"></div>
+      </div>
+    </div>
+
     <script src="/theme.js?v=20260927"></script>
+    <script src="/verse-modal.js?v=20260927"></script>
   </body>
 </html>

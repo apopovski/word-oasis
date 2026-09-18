@@ -103,15 +103,14 @@
           <p class="page-intro">The Bible teaches that sin leads to death, and that final judgment ends evil completely. God's purpose is not endless cruelty but the full destruction of sin and the restoration of a new creation.</p>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-answer">
         <div class="container answer-page-layout">
           <article class="answer-page-card">
             <div class="answer-tags"><a class="tag-link" href="/topics/prophecy/">Prophecy</a><a class="tag-link" href="/topics/salvation/">Salvation</a><a class="tag-link" href="/topics/comfort/">Comfort</a></div>
-            <p class="lead-answer">The Bible teaches that sin leads to death, and that final judgment ends evil completely. God's purpose is not endless cruelty but the full destruction of sin and the restoration of a new creation.</p>
-            <p>Scripture consistently describes the penalty for sin as death, not endless conscious torment — the wages of sin is death, not eternal life in agony. The imagery of a lake of fire represents complete and final destruction, consuming sin and its effects entirely rather than preserving them forever, which would make evil as immortal as good. This is consistent with God's character: His goal is not unending cruelty, but the full, final end of suffering, sin, and death, clearing the way for a new heaven and new earth where nothing harmful remains.</p>
+            <p class="lead-answer">Scripture consistently describes the penalty for sin as death, not endless conscious torment — the wages of sin is death, not eternal life in agony. The imagery of a lake of fire represents complete and final destruction, consuming sin and its effects entirely rather than preserving them forever, which would make evil as immortal as good. This is consistent with God's character: His goal is not unending cruelty, but the full, final end of suffering, sin, and death, clearing the way for a new heaven and new earth where nothing harmful remains.</p>
             <p>The final fire is the second death: the complete and irreversible destruction of sin and unrepentant sinners, not eternal conscious torment. This preserves both God's justice and His character of love, and it leaves the universe truly free from pain, rebellion, and death.</p>
             <h2>Bible references</h2>
-            <div class="scriptures"><span>Romans 6:23</span><span>Malachi 4:1</span><span>Revelation 21:4</span></div>
+            <div class="scriptures"><button type="button" class="scripture-link" data-scripture="Romans 6:23">Romans 6:23</button><button type="button" class="scripture-link" data-scripture="Malachi 4:1">Malachi 4:1</button><button type="button" class="scripture-link" data-scripture="Revelation 21:4">Revelation 21:4</button></div>
           </article>
           <aside class="related-card" aria-label="Related answers">
             <h2>Related answers</h2>
@@ -178,6 +177,20 @@
         </div>
       </div>
     </footer>
+
+    <div class="verse-modal" id="verse-modal" role="dialog" aria-modal="true" aria-labelledby="verse-modal-title" hidden>
+      <div class="verse-modal-card">
+        <div class="verse-modal-header">
+          <h2 id="verse-modal-title">Reference</h2>
+          <button type="button" class="verse-modal-close" id="verse-modal-close" aria-label="Close verse">
+            &times;
+          </button>
+        </div>
+        <div class="verse-modal-body" id="verse-modal-body"></div>
+      </div>
+    </div>
+
     <script src="/theme.js?v=20260927"></script>
+    <script src="/verse-modal.js?v=20260927"></script>
   </body>
 </html>

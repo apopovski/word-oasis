@@ -103,15 +103,14 @@
           <p class="page-intro">Jesus described signs such as wars, natural disasters, moral decline, and the gospel reaching the whole world, while warning against date-setting and urging constant readiness.</p>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-answer">
         <div class="container answer-page-layout">
           <article class="answer-page-card">
             <div class="answer-tags"><a class="tag-link" href="/topics/prophecy/">Prophecy</a><a class="tag-link" href="/topics/faith/">Faith</a></div>
-            <p class="lead-answer">Jesus described signs such as wars, natural disasters, moral decline, and the gospel reaching the whole world, while warning against date-setting and urging constant readiness.</p>
-            <p>In the Olivet Discourse, Jesus described a range of signs — wars, earthquakes, famines, false teachers, increasing lawlessness, and the gospel being preached to the whole world — pointing to His return without giving an exact timeline. He explicitly said no one knows the day or hour, warning against confident date-setting, which Scripture consistently discourages. Instead of promoting fear or speculation, these signs are meant to encourage steady faithfulness: staying spiritually alert, continuing to love and serve others, and living each day ready to meet Christ rather than anxious about timing.</p>
+            <p class="lead-answer">In the Olivet Discourse, Jesus described a range of signs — wars, earthquakes, famines, false teachers, increasing lawlessness, and the gospel being preached to the whole world — pointing to His return without giving an exact timeline. He explicitly said no one knows the day or hour, warning against confident date-setting, which Scripture consistently discourages. Instead of promoting fear or speculation, these signs are meant to encourage steady faithfulness: staying spiritually alert, continuing to love and serve others, and living each day ready to meet Christ rather than anxious about timing.</p>
             <p>The great controversy reveals God's character as Christ ministers as our High Priest in the heavenly sanctuary. The dead await the resurrection, Christ's return will be visible and personal, and prophecy calls believers to faithful mission rather than date-setting or fear.</p>
             <h2>Bible references</h2>
-            <div class="scriptures"><span>Matthew 24:6-14</span><span>Matthew 24:36</span><span>Luke 21:34-36</span></div>
+            <div class="scriptures"><button type="button" class="scripture-link" data-scripture="Matthew 24:6-14">Matthew 24:6-14</button><button type="button" class="scripture-link" data-scripture="Matthew 24:36">Matthew 24:36</button><button type="button" class="scripture-link" data-scripture="Luke 21:34-36">Luke 21:34-36</button></div>
           </article>
           <aside class="related-card" aria-label="Related answers">
             <h2>Related answers</h2>
@@ -178,6 +177,20 @@
         </div>
       </div>
     </footer>
+
+    <div class="verse-modal" id="verse-modal" role="dialog" aria-modal="true" aria-labelledby="verse-modal-title" hidden>
+      <div class="verse-modal-card">
+        <div class="verse-modal-header">
+          <h2 id="verse-modal-title">Reference</h2>
+          <button type="button" class="verse-modal-close" id="verse-modal-close" aria-label="Close verse">
+            &times;
+          </button>
+        </div>
+        <div class="verse-modal-body" id="verse-modal-body"></div>
+      </div>
+    </div>
+
     <script src="/theme.js?v=20260927"></script>
+    <script src="/verse-modal.js?v=20260927"></script>
   </body>
 </html>

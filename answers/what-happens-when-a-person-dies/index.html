@@ -103,15 +103,14 @@
           <p class="page-intro">Scripture often describes death as sleep. The dead are not conscious, and the believer's hope is the resurrection at Christ's return, when God will raise His people to eternal life.</p>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-answer">
         <div class="container answer-page-layout">
           <article class="answer-page-card">
             <div class="answer-tags"><a class="tag-link" href="/topics/prophecy/">Prophecy</a><a class="tag-link" href="/topics/comfort/">Comfort</a><a class="tag-link" href="/topics/faith/">Faith</a><a class="tag-link" href="/topics/state-of-the-dead/">State of the Dead</a></div>
-            <p class="lead-answer">Scripture often describes death as sleep. The dead are not conscious, and the believer's hope is the resurrection at Christ's return, when God will raise His people to eternal life.</p>
-            <p>Throughout Scripture, death is repeatedly compared to sleep — a state without awareness, thought, or activity, rather than immediate conscious existence somewhere else. Jesus used this same picture when He described Lazarus as asleep before raising him, and Paul comforted grieving believers not by describing the dead as already present with God, but by pointing them to the resurrection, when Christ returns and the dead in Him rise first. This understanding offers real comfort: those who have died in faith are, in a sense, resting safely, unaware of time passing, until they are reunited body and soul at the resurrection.</p>
+            <p class="lead-answer">Throughout Scripture, death is repeatedly compared to sleep — a state without awareness, thought, or activity, rather than immediate conscious existence somewhere else. Jesus used this same picture when He described Lazarus as asleep before raising him, and Paul comforted grieving believers not by describing the dead as already present with God, but by pointing them to the resurrection, when Christ returns and the dead in Him rise first. This understanding offers real comfort: those who have died in faith are, in a sense, resting safely, unaware of time passing, until they are reunited body and soul at the resurrection.</p>
             <p>Human beings do not possess an inherently immortal soul. Immortality is God's gift in Christ, received at the resurrection, so Christian hope rests in Jesus' literal, bodily return rather than in communication with the dead or an immediately conscious afterlife.</p>
             <h2>Bible references</h2>
-            <div class="scriptures"><span>Ecclesiastes 9:5</span><span>John 11:11-14</span><span>1 Thessalonians 4:16-17</span></div>
+            <div class="scriptures"><button type="button" class="scripture-link" data-scripture="Ecclesiastes 9:5">Ecclesiastes 9:5</button><button type="button" class="scripture-link" data-scripture="John 11:11-14">John 11:11-14</button><button type="button" class="scripture-link" data-scripture="1 Thessalonians 4:16-17">1 Thessalonians 4:16-17</button></div>
           </article>
           <aside class="related-card" aria-label="Related answers">
             <h2>Related answers</h2>
@@ -178,6 +177,20 @@
         </div>
       </div>
     </footer>
+
+    <div class="verse-modal" id="verse-modal" role="dialog" aria-modal="true" aria-labelledby="verse-modal-title" hidden>
+      <div class="verse-modal-card">
+        <div class="verse-modal-header">
+          <h2 id="verse-modal-title">Reference</h2>
+          <button type="button" class="verse-modal-close" id="verse-modal-close" aria-label="Close verse">
+            &times;
+          </button>
+        </div>
+        <div class="verse-modal-body" id="verse-modal-body"></div>
+      </div>
+    </div>
+
     <script src="/theme.js?v=20260927"></script>
+    <script src="/verse-modal.js?v=20260927"></script>
   </body>
 </html>

@@ -103,15 +103,14 @@
           <p class="page-intro">Daily Bible reading keeps the heart rooted in God's voice, renews the mind, strengthens faith, and gives wisdom for ordinary decisions.</p>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-answer">
         <div class="container answer-page-layout">
           <article class="answer-page-card">
             <div class="answer-tags"><a class="tag-link" href="/topics/bible-study/">Bible Study</a><a class="tag-link" href="/topics/faith/">Faith</a><a class="tag-link" href="/topics/christian-living/">Christian Living</a></div>
-            <p class="lead-answer">Daily Bible reading keeps the heart rooted in God's voice, renews the mind, strengthens faith, and gives wisdom for ordinary decisions.</p>
-            <p>Scripture describes God's Word as light, food, seed, and a sword because it shapes the inner life in ways people cannot produce by willpower alone. Regular Bible reading helps believers recognize God's character, test ideas, resist temptation, and remember promises when feelings shift. The goal is not checking off a spiritual task, but listening to God with a teachable heart. Even a small daily portion, read prayerfully and applied honestly, can build long-term spiritual stability and deepen love for Christ.</p>
+            <p class="lead-answer">Scripture describes God's Word as light, food, seed, and a sword because it shapes the inner life in ways people cannot produce by willpower alone. Regular Bible reading helps believers recognize God's character, test ideas, resist temptation, and remember promises when feelings shift. The goal is not checking off a spiritual task, but listening to God with a teachable heart. Even a small daily portion, read prayerfully and applied honestly, can build long-term spiritual stability and deepen love for Christ.</p>
             <p>These themes are best read through the whole testimony of Scripture, emphasizing God's self-revelation in Christ, the active ministry of the Holy Spirit, and the restoration of the whole person. Bible study should lead to a changed life, compassionate service, and a clearer picture of God's loving character.</p>
             <h2>Bible references</h2>
-            <div class="scriptures"><span>Psalm 119:105</span><span>Matthew 4:4</span><span>2 Timothy 3:16-17</span></div>
+            <div class="scriptures"><button type="button" class="scripture-link" data-scripture="Psalm 119:105">Psalm 119:105</button><button type="button" class="scripture-link" data-scripture="Matthew 4:4">Matthew 4:4</button><button type="button" class="scripture-link" data-scripture="2 Timothy 3:16-17">2 Timothy 3:16-17</button></div>
           </article>
           <aside class="related-card" aria-label="Related answers">
             <h2>Related answers</h2>
@@ -178,6 +177,20 @@
         </div>
       </div>
     </footer>
+
+    <div class="verse-modal" id="verse-modal" role="dialog" aria-modal="true" aria-labelledby="verse-modal-title" hidden>
+      <div class="verse-modal-card">
+        <div class="verse-modal-header">
+          <h2 id="verse-modal-title">Reference</h2>
+          <button type="button" class="verse-modal-close" id="verse-modal-close" aria-label="Close verse">
+            &times;
+          </button>
+        </div>
+        <div class="verse-modal-body" id="verse-modal-body"></div>
+      </div>
+    </div>
+
     <script src="/theme.js?v=20260927"></script>
+    <script src="/verse-modal.js?v=20260927"></script>
   </body>
 </html>

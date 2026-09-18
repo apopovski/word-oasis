@@ -103,15 +103,14 @@
           <p class="page-intro">Self-forgiveness grows out of receiving God's forgiveness fully — trusting that His pardon in Christ is complete, even when guilty feelings linger.</p>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-answer">
         <div class="container answer-page-layout">
           <article class="answer-page-card">
             <div class="answer-tags"><a class="tag-link" href="/topics/forgiveness/">Forgiveness</a><a class="tag-link" href="/topics/comfort/">Comfort</a><a class="tag-link" href="/topics/salvation/">Salvation</a></div>
-            <p class="lead-answer">Self-forgiveness grows out of receiving God's forgiveness fully — trusting that His pardon in Christ is complete, even when guilty feelings linger.</p>
-            <p>Many people find it easier to believe God forgives others than to believe He has truly forgiven them. Scripture insists that confessed sin is genuinely removed, compared to a debt fully paid, not partially excused. Struggling to forgive yourself often means trusting your own judgment of your worth more than God's finished work on the cross. Practical steps include confessing specifically, receiving Scripture's promises as true regardless of feelings, making amends where possible, and refusing to let shame define an identity that God has already declared forgiven and renewed.</p>
+            <p class="lead-answer">Many people find it easier to believe God forgives others than to believe He has truly forgiven them. Scripture insists that confessed sin is genuinely removed, compared to a debt fully paid, not partially excused. Struggling to forgive yourself often means trusting your own judgment of your worth more than God's finished work on the cross. Practical steps include confessing specifically, receiving Scripture's promises as true regardless of feelings, making amends where possible, and refusing to let shame define an identity that God has already declared forgiven and renewed.</p>
             <p>Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
             <h2>Bible references</h2>
-            <div class="scriptures"><span>1 John 1:9</span><span>Psalm 103:12</span><span>Romans 8:1</span></div>
+            <div class="scriptures"><button type="button" class="scripture-link" data-scripture="1 John 1:9">1 John 1:9</button><button type="button" class="scripture-link" data-scripture="Psalm 103:12">Psalm 103:12</button><button type="button" class="scripture-link" data-scripture="Romans 8:1">Romans 8:1</button></div>
           </article>
           <aside class="related-card" aria-label="Related answers">
             <h2>Related answers</h2>
@@ -178,6 +177,20 @@
         </div>
       </div>
     </footer>
+
+    <div class="verse-modal" id="verse-modal" role="dialog" aria-modal="true" aria-labelledby="verse-modal-title" hidden>
+      <div class="verse-modal-card">
+        <div class="verse-modal-header">
+          <h2 id="verse-modal-title">Reference</h2>
+          <button type="button" class="verse-modal-close" id="verse-modal-close" aria-label="Close verse">
+            &times;
+          </button>
+        </div>
+        <div class="verse-modal-body" id="verse-modal-body"></div>
+      </div>
+    </div>
+
     <script src="/theme.js?v=20260927"></script>
+    <script src="/verse-modal.js?v=20260927"></script>
   </body>
 </html>
