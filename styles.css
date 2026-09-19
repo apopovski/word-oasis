@@ -868,14 +868,30 @@ h1 {
   max-width: 720px;
   min-height: var(--promise-text-height, clamp(8rem, 16vw, 11rem));
   margin: 0 0 14px;
-  padding: 4px 0;
+  padding: 10px clamp(24px, 5vw, 54px);
   color: #ffffff;
-  font-family: "Libre Baskerville", Georgia, serif;
-  font-size: clamp(1.3rem, 2.15vw, 1.85rem);
-  line-height: 1.5;
-  letter-spacing: -0.035em;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: clamp(1.35rem, 2.25vw, 1.95rem);
+  font-weight: 600;
+  line-height: 1.38;
+  letter-spacing: -0.028em;
   text-align: center;
   text-wrap: balance;
+}
+
+.promise-card blockquote::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "\201C";
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(12rem, 30vw, 22rem);
+  font-weight: 700;
+  line-height: 0.7;
+  opacity: 0.1;
+  pointer-events: none;
+  transform: translate(-50%, -42%);
 }
 
 .promise-measure {
@@ -889,25 +905,9 @@ h1 {
   pointer-events: none;
 }
 
-/* Inline pseudo-elements so the marks flow with the verse and sit against the
-   first and last words, whatever the length. */
-.promise-quote::before,
-.promise-quote::after {
-  color: #fbbf24;
-  font-size: 1.35em;
-  line-height: 0;
-  opacity: 0.92;
-  vertical-align: -0.22em;
-}
-
-.promise-quote::before {
-  content: "\201C";
-  margin-right: 0.04em;
-}
-
-.promise-quote::after {
-  content: "\201D";
-  margin-left: 0.04em;
+.promise-quote {
+  position: relative;
+  z-index: 1;
 }
 
 .promise-reference {

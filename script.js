@@ -7853,32 +7853,33 @@ const PROMISE_IMAGE_WIDTH = 1080;
 const PROMISE_IMAGE_HEIGHT = 1350;
 const PROMISE_IMAGE_MARGIN = 130;
 const PROMISE_LOGO_SOURCE_COLOR = "#102a43";
-const PROMISE_LOGO_SHARE_COLOR = "#cfe3fa";
 const PROMISE_LOGO_RATIO = 179.3 / 250;
+const PROMISE_MARK_RATIO = 77.77 / 212.76;
 
-let promiseLogoImagePromise = null;
+const promiseSvgImageCache = new Map();
 let promiseImageFontsPromise = null;
 
-// The logo ships as a single-colour navy lockup, so it is recoloured to the
-// light blue used on dark surfaces before being painted onto the canvas.
-function loadPromiseLogoImage() {
-  if (promiseLogoImagePromise) {
-    return promiseLogoImagePromise;
+// The brand assets ship as single-colour navy SVGs, so each promise graphic
+// recolours them to harmonize with its generated palette.
+function loadTintedPromiseSvg(path, color, dimensions) {
+  const cacheKey = `${path}:${color}`;
+  if (promiseSvgImageCache.has(cacheKey)) {
+    return promiseSvgImageCache.get(cacheKey);
   }
 
-  promiseLogoImagePromise = fetch("/word-oasis.svg")
+  const imagePromise = fetch(path)
     .then((response) => {
       if (!response.ok) {
-        throw new Error(`Logo request failed with ${response.status}`);
+        throw new Error(`Brand asset request failed with ${response.status}`);
       }
       return response.text();
     })
     .then((markup) => {
       const tinted = markup
-        .replace(new RegExp(PROMISE_LOGO_SOURCE_COLOR, "gi"), PROMISE_LOGO_SHARE_COLOR)
+        .replace(new RegExp(PROMISE_LOGO_SOURCE_COLOR, "gi"), color)
         // Without explicit dimensions the SVG has no intrinsic size, which makes
         // some browsers letterbox it when it is drawn at a chosen width.
-        .replace(/<svg\b(?![^>]*\bwidth=)/i, '<svg width="1000" height="717.2" ');
+        .replace(/<svg\b(?![^>]*\bwidth=)/i, `<svg width="${dimensions.width}" height="${dimensions.height}" `);
 
       const url = URL.createObjectURL(new Blob([tinted], { type: "image/svg+xml" }));
       const image = new Image();
@@ -7898,11 +7899,20 @@ function loadPromiseLogoImage() {
     })
     .catch((error) => {
       // Let a later share retry the fetch rather than caching the failure.
-      promiseLogoImagePromise = null;
+      promiseSvgImageCache.delete(cacheKey);
       throw error;
     });
 
-  return promiseLogoImagePromise;
+  promiseSvgImageCache.set(cacheKey, imagePromise);
+  return imagePromise;
+}
+
+function loadPromiseLogoImage(color) {
+  return loadTintedPromiseSvg("/word-oasis.svg", color, { width: 1000, height: 717.2 });
+}
+
+function loadPromiseMarkImage(color) {
+  return loadTintedPromiseSvg("/SVG/wordoasis-mark.svg", color, { width: 1000, height: 365.53 });
 }
 
 // Canvas silently falls back to a default face if a web font has not loaded, so
@@ -7914,7 +7924,7 @@ function loadPromiseImageFonts() {
 
   if (!promiseImageFontsPromise) {
     promiseImageFontsPromise = Promise.all([
-      document.fonts.load('700 64px "Libre Baskerville"'),
+      document.fonts.load('600 72px "Inter"'),
       document.fonts.load('800 28px "Inter"'),
       document.fonts.load('600 26px "Inter"')
     ]).catch(() => undefined);
@@ -7979,10 +7989,10 @@ function wrapCanvasText(ctx, text, maxWidth) {
 function fitPromiseVerse(ctx, text, maxWidth, maxHeight) {
   let fitted = null;
 
-  for (let size = 68; size >= 26; size -= 2) {
-    ctx.font = `700 ${size}px "Libre Baskerville", Georgia, serif`;
+  for (let size = 74; size >= 28; size -= 2) {
+    ctx.font = `600 ${size}px "Inter", system-ui, sans-serif`;
     const lines = wrapCanvasText(ctx, text, maxWidth);
-    const lineHeight = Math.round(size * 1.42);
+    const lineHeight = Math.round(size * 1.28);
     fitted = { size, lines, lineHeight, height: lines.length * lineHeight };
 
     if (fitted.height <= maxHeight) {
@@ -8289,6 +8299,42 @@ function drawPromiseImageMotif(ctx, category) {
   }
 }
 
+function hexToRgb(hex) {
+  const normalized = hex.replace("#", "");
+  if (!/^[\da-f]{6}$/i.test(normalized)) {
+    return null;
+  }
+  return {
+    r: Number.parseInt(normalized.slice(0, 2), 16),
+    g: Number.parseInt(normalized.slice(2, 4), 16),
+    b: Number.parseInt(normalized.slice(4, 6), 16)
+  };
+}
+
+function rgbaFromHex(hex, alpha) {
+  const rgb = hexToRgb(hex);
+  if (!rgb) {
+    return `rgba(255, 255, 255, ${alpha})`;
+  }
+  return `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${alpha})`;
+}
+
+function drawPromiseCheerfulWash(ctx, theme) {
+  const warmWash = ctx.createRadialGradient(150, 170, 0, 150, 170, 640);
+  warmWash.addColorStop(0, rgbaFromHex(theme.eyebrow, 0.22));
+  warmWash.addColorStop(0.52, rgbaFromHex(theme.eyebrow, 0.08));
+  warmWash.addColorStop(1, "rgba(0, 0, 0, 0)");
+  ctx.fillStyle = warmWash;
+  ctx.fillRect(0, 0, PROMISE_IMAGE_WIDTH, PROMISE_IMAGE_HEIGHT);
+
+  const colorWash = ctx.createRadialGradient(920, 260, 0, 920, 260, 720);
+  colorWash.addColorStop(0, rgbaFromHex(theme.reference, 0.2));
+  colorWash.addColorStop(0.48, rgbaFromHex(theme.reference, 0.07));
+  colorWash.addColorStop(1, "rgba(0, 0, 0, 0)");
+  ctx.fillStyle = colorWash;
+  ctx.fillRect(0, 0, PROMISE_IMAGE_WIDTH, PROMISE_IMAGE_HEIGHT);
+}
+
 function drawPromiseImageBackground(ctx, theme) {
   const base = ctx.createLinearGradient(0, 0, PROMISE_IMAGE_WIDTH, PROMISE_IMAGE_HEIGHT);
   base.addColorStop(0, theme.gradient[0]);
@@ -8309,12 +8355,29 @@ function drawPromiseImageBackground(ctx, theme) {
   ctx.fillStyle = bottomGlow;
   ctx.fillRect(0, 0, PROMISE_IMAGE_WIDTH, PROMISE_IMAGE_HEIGHT);
 
+  drawPromiseCheerfulWash(ctx, theme);
   drawPromiseImageMotif(ctx, theme);
 
   ctx.strokeStyle = theme.frame;
   ctx.lineWidth = 2;
   traceRoundedRect(ctx, 44, 44, PROMISE_IMAGE_WIDTH - 88, PROMISE_IMAGE_HEIGHT - 88, 52);
   ctx.stroke();
+}
+
+async function drawPromiseBrandMark(ctx, theme) {
+  try {
+    const mark = await loadPromiseMarkImage(theme.reference);
+    const markWidth = 1380;
+    const markHeight = markWidth * PROMISE_MARK_RATIO;
+    ctx.save();
+    ctx.globalAlpha = 0.055;
+    const markX = PROMISE_IMAGE_WIDTH - markWidth * 0.6;
+    const markY = PROMISE_IMAGE_HEIGHT - markHeight + 50;
+    ctx.drawImage(mark, markX, markY, markWidth, markHeight);
+    ctx.restore();
+  } catch (error) {
+    // Decorative only; the share graphic should still render without it.
+  }
 }
 
 async function renderPromiseImage(promise) {
@@ -8331,16 +8394,20 @@ async function renderPromiseImage(promise) {
 
   const theme = pickPromiseImageTheme(promise);
   drawPromiseImageBackground(ctx, theme);
+  await drawPromiseBrandMark(ctx, theme);
 
   const centerX = PROMISE_IMAGE_WIDTH / 2;
   const textWidth = PROMISE_IMAGE_WIDTH - PROMISE_IMAGE_MARGIN * 2;
   let eyebrowY = 260;
 
   try {
-    const logo = await loadPromiseLogoImage();
+    const logo = await loadPromiseLogoImage("#ffffff");
     const logoWidth = 200;
     const logoHeight = logoWidth * PROMISE_LOGO_RATIO;
+    ctx.save();
+    ctx.globalAlpha = 0.4;
     ctx.drawImage(logo, centerX - logoWidth / 2, 126, logoWidth, logoHeight);
+    ctx.restore();
     eyebrowY = 126 + logoHeight + 92;
   } catch (error) {
     // The verse still reads perfectly without the lockup, so a failed logo
@@ -8356,14 +8423,24 @@ async function renderPromiseImage(promise) {
   const verseBottom = PROMISE_IMAGE_HEIGHT - 250;
   const referenceGap = 74;
   const referenceHeight = 36;
-  const verse = fitPromiseVerse(ctx, `\u201C${promise.text}\u201D`, textWidth, verseBottom - verseTop - referenceGap - referenceHeight);
+  const verse = fitPromiseVerse(ctx, promise.text, textWidth, verseBottom - verseTop - referenceGap - referenceHeight);
 
   const blockHeight = verse.height + referenceGap + referenceHeight;
   let y = verseTop + Math.max((verseBottom - verseTop - blockHeight) / 2, 0);
 
+  ctx.save();
+  ctx.globalAlpha = 0.12;
   ctx.fillStyle = "#ffffff";
   ctx.textAlign = "center";
-  ctx.font = `700 ${verse.size}px "Libre Baskerville", Georgia, serif`;
+  ctx.textBaseline = "middle";
+  ctx.font = '700 520px Georgia, "Times New Roman", serif';
+  ctx.fillText("\u201C", centerX, y + verse.height / 2 + 90);
+  ctx.restore();
+
+  ctx.textBaseline = "alphabetic";
+  ctx.fillStyle = "#ffffff";
+  ctx.textAlign = "center";
+  ctx.font = `600 ${verse.size}px "Inter", system-ui, sans-serif`;
   verse.lines.forEach((line) => {
     y += verse.lineHeight;
     ctx.fillText(line, centerX, y);
