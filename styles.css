@@ -2710,6 +2710,153 @@ h1 {
   font-weight: 700;
 }
 
+.bible-memory-lab {
+  display: grid;
+  gap: 14px;
+  margin-top: 4px;
+  padding-top: 14px;
+  border-top: 1px solid color-mix(in srgb, var(--brand) 18%, var(--border));
+}
+
+.bible-memory-lab[hidden] {
+  display: none;
+}
+
+.bible-memory-controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.bible-memory-controls label {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bible-memory-controls select {
+  width: 100%;
+  min-height: 42px;
+  padding: 8px 12px;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.bible-memory-card {
+  position: relative;
+  display: grid;
+  min-height: 230px;
+  padding: 0;
+  color: var(--text);
+  text-align: left;
+  background: transparent;
+  border: 0;
+  border-radius: 22px;
+  perspective: 1200px;
+}
+
+.bible-memory-face {
+  grid-area: 1 / 1;
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  min-height: 230px;
+  padding: clamp(22px, 4vw, 34px);
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--surface) 92%, var(--brand) 8%), var(--surface));
+  border: 1px solid color-mix(in srgb, var(--brand) 24%, var(--border));
+  border-radius: 22px;
+  box-shadow: 0 20px 48px rgba(16, 42, 67, 0.12);
+  backface-visibility: hidden;
+  transition: transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bible-memory-front {
+  justify-items: center;
+  text-align: center;
+}
+
+.bible-memory-front strong {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: clamp(1.35rem, 3vw, 2.1rem);
+}
+
+.bible-memory-front small {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.bible-memory-back {
+  transform: rotateY(180deg);
+}
+
+.bible-memory-card.is-flipped .bible-memory-front {
+  transform: rotateY(180deg);
+}
+
+.bible-memory-card.is-flipped .bible-memory-back {
+  transform: rotateY(360deg);
+}
+
+.bible-memory-label {
+  width: fit-content;
+  padding: 5px 10px;
+  color: var(--brand-dark);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: color-mix(in srgb, var(--brand) 12%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--brand) 22%, var(--border));
+  border-radius: 999px;
+}
+
+#bible-memory-text {
+  white-space: pre-wrap;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: clamp(1.12rem, 2.2vw, 1.45rem);
+  line-height: 1.85;
+}
+
+.bible-memory-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.bible-memory-actions button {
+  min-height: 40px;
+  padding: 0 12px;
+  color: var(--brand);
+  font-weight: 900;
+  background: var(--surface);
+  border: 1px solid color-mix(in srgb, var(--brand) 24%, var(--border));
+  border-radius: 12px;
+}
+
+.bible-memory-actions button:hover,
+.bible-memory-actions button:focus-visible {
+  color: #ffffff;
+  background: var(--brand);
+}
+
+.bible-memory-status {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
 .bible-verse {
   position: relative;
   margin: 0;
@@ -3402,6 +3549,19 @@ body.modal-open {
   .bible-selection-actions {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .bible-memory-controls,
+  .bible-memory-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .bible-memory-controls {
+    display: grid;
+  }
+
+  .bible-memory-actions {
+    display: grid;
   }
 
   .bible-bottom-nav {

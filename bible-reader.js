@@ -141,9 +141,43 @@
     <div class="bible-selection-actions">
       <button type="button" id="bible-copy-selection" disabled>Copy passage</button>
       <button type="button" id="bible-share-selection" disabled>Share</button>
+      <button type="button" id="bible-memorize-selection" disabled>Memorize</button>
       <a id="bible-text-selection" aria-disabled="true">Text</a>
       <a id="bible-x-selection" target="_blank" rel="noopener" aria-disabled="true">X</a>
       <a id="bible-facebook-selection" target="_blank" rel="noopener" aria-disabled="true">Facebook</a>
+    </div>
+    <div class="bible-memory-lab" id="bible-memory-lab" hidden>
+      <div class="bible-memory-controls">
+        <label>
+          Version
+          <select id="bible-memory-version"></select>
+        </label>
+        <label>
+          Practice mode
+          <select id="bible-memory-mode">
+            <option value="full">Show full passage</option>
+            <option value="keywords">Show key words only</option>
+            <option value="initials">Show first letters</option>
+            <option value="hidden">Hide the passage</option>
+          </select>
+        </label>
+      </div>
+      <button class="bible-memory-card" id="bible-memory-card" type="button" aria-pressed="false">
+        <span class="bible-memory-face bible-memory-front">
+          <span class="bible-memory-label">Memorize</span>
+          <strong id="bible-memory-reference">Select a passage</strong>
+          <small>Tap to reveal your practice prompt.</small>
+        </span>
+        <span class="bible-memory-face bible-memory-back">
+          <span class="bible-memory-label">Practice prompt</span>
+          <span id="bible-memory-text"></span>
+        </span>
+      </button>
+      <div class="bible-memory-actions">
+        <button type="button" id="bible-memory-flip">Flip card</button>
+        <button type="button" id="bible-memory-reset">Show reference first</button>
+      </div>
+      <p class="bible-memory-status" id="bible-memory-status" aria-live="polite"></p>
     </div>
     <p class="bible-selection-status" id="bible-selection-status" aria-live="polite"></p>
   `;
@@ -152,10 +186,20 @@
   const includeSourceCheckbox = selectionPanel.querySelector("#bible-include-source");
   const copySelectionButton = selectionPanel.querySelector("#bible-copy-selection");
   const shareSelectionButton = selectionPanel.querySelector("#bible-share-selection");
+  const memorizeSelectionButton = selectionPanel.querySelector("#bible-memorize-selection");
   const textSelectionLink = selectionPanel.querySelector("#bible-text-selection");
   const xSelectionLink = selectionPanel.querySelector("#bible-x-selection");
   const facebookSelectionLink = selectionPanel.querySelector("#bible-facebook-selection");
   const selectionStatus = selectionPanel.querySelector("#bible-selection-status");
+  const memoryLab = selectionPanel.querySelector("#bible-memory-lab");
+  const memoryVersionSelect = selectionPanel.querySelector("#bible-memory-version");
+  const memoryModeSelect = selectionPanel.querySelector("#bible-memory-mode");
+  const memoryCard = selectionPanel.querySelector("#bible-memory-card");
+  const memoryReference = selectionPanel.querySelector("#bible-memory-reference");
+  const memoryText = selectionPanel.querySelector("#bible-memory-text");
+  const memoryFlipButton = selectionPanel.querySelector("#bible-memory-flip");
+  const memoryResetButton = selectionPanel.querySelector("#bible-memory-reset");
+  const memoryStatus = selectionPanel.querySelector("#bible-memory-status");
 
   const chapterCache = new Map();
   let currentRequest = null;
@@ -165,6 +209,7 @@
   let selectedVerseEnd = null;
   let textSizeValue = defaultTextSize;
   let initialSearchQuery = "";
+  let memoryIsFlipped = false;
 
   function clampTextSize(value) {
     return Math.max(minTextSize, Math.min(value, maxTextSize));
@@ -368,11 +413,89 @@
     return `${book.name} ${chapter}:${verses} (${translation.shortLabel})`;
   }
 
-  function passageForRange(range) {
-    return currentChapterVerses
+  function passageForRangeFromVerses(range, verses) {
+    return verses
       .filter((verse) => verse.verse >= range.start && verse.verse <= range.end)
       .map((verse) => `${verse.verse}. ${cleanVerseText(verse.text)}`)
       .join("\n");
+  }
+
+  function passageForRange(range) {
+    return passageForRangeFromVerses(range, currentChapterVerses);
+  }
+
+  function plainPassageForRange(range, verses) {
+    return verses
+      .filter((verse) => verse.verse >= range.start && verse.verse <= range.end)
+      .map((verse) => cleanVerseText(verse.text))
+      .join(" ");
+  }
+
+  function keyWordPrompt(text) {
+    let wordIndex = 0;
+    return text.replace(/\b[\w’'-]+\b/g, (word) => {
+      wordIndex += 1;
+      const isKeyWord = word.length >= 7 || wordIndex % 6 === 1;
+      return isKeyWord ? word : "_____";
+    });
+  }
+
+  function initialsPrompt(text) {
+    return text.replace(/\b[\w’'-]+\b/g, (word) => `${word.charAt(0) || ""}.`);
+  }
+
+  function memoryPromptText(text, mode) {
+    if (mode === "keywords") {
+      return keyWordPrompt(text);
+    }
+    if (mode === "initials") {
+      return initialsPrompt(text);
+    }
+    if (mode === "hidden") {
+      return "Passage hidden. Recite it from memory, then switch modes or flip again to review.";
+    }
+    return text;
+  }
+
+  function setMemoryFlipped(isFlipped) {
+    memoryIsFlipped = isFlipped;
+    memoryCard.classList.toggle("is-flipped", memoryIsFlipped);
+    memoryCard.setAttribute("aria-pressed", String(memoryIsFlipped));
+    memoryFlipButton.textContent = memoryIsFlipped ? "Show reference" : "Reveal prompt";
+  }
+
+  async function updateMemoryCard() {
+    const range = selectedRange();
+    if (!range || memoryLab.hidden) {
+      return;
+    }
+    const { book, chapter } = selectedState();
+    const memoryTranslation = findTranslation(memoryVersionSelect.value || translationSelect.value);
+    memoryStatus.textContent = "Preparing memory card...";
+    try {
+      const data = memoryTranslation.id === translationSelect.value
+        ? { verses: currentChapterVerses }
+        : await fetchChapter(book, chapter, memoryTranslation);
+      const reference = referenceForRange(book, chapter, range, memoryTranslation);
+      const passageText = plainPassageForRange(range, data.verses);
+      memoryReference.textContent = reference;
+      memoryText.textContent = memoryPromptText(passageText, memoryModeSelect.value);
+      memoryStatus.textContent = `Practicing ${reference}.`;
+    } catch (error) {
+      memoryStatus.textContent = "Could not load that version for memorization. Try another version.";
+    }
+  }
+
+  function openMemoryCard() {
+    const range = selectedRange();
+    if (!range) {
+      return;
+    }
+    memoryLab.hidden = false;
+    memoryVersionSelect.value = translationSelect.value;
+    setMemoryFlipped(false);
+    updateMemoryCard();
+    trackAnalyticsEvent("bible_memorize_open", selectedAnalyticsPayload());
   }
 
   function setShareLinkState(link, enabled, href) {
@@ -424,6 +547,7 @@
       : "Click a verse number to select it. Click another verse number to select a range.";
     copySelectionButton.disabled = !hasSelection;
     shareSelectionButton.disabled = !hasSelection;
+    memorizeSelectionButton.disabled = !hasSelection;
     setShareLinkState(textSelectionLink, hasSelection, `sms:?&body=${encodeURIComponent(text)}`);
     setShareLinkState(xSelectionLink, hasSelection, `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`);
     setShareLinkState(facebookSelectionLink, hasSelection, `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(text)}`);
@@ -434,7 +558,12 @@
       if (endRow) {
         readerBody.insertBefore(selectionPanel, endRow.nextSibling);
       }
+      if (!memoryLab.hidden) {
+        updateMemoryCard();
+      }
     } else {
+      memoryLab.hidden = true;
+      setMemoryFlipped(false);
       selectionHome.append(selectionPanel);
     }
   }
@@ -600,6 +729,11 @@
       option.value = translation.id;
       option.textContent = `${translation.shortLabel} - ${translation.label}`;
       translationSelect.append(option);
+
+      const memoryOption = document.createElement("option");
+      memoryOption.value = translation.id;
+      memoryOption.textContent = `${translation.shortLabel} - ${translation.label}`;
+      memoryVersionSelect.append(memoryOption);
     });
 
     books.forEach((book) => {
@@ -902,4 +1036,10 @@
   includeSourceCheckbox.addEventListener("change", updateSelectionTools);
   copySelectionButton.addEventListener("click", copySelectedPassage);
   shareSelectionButton.addEventListener("click", shareSelectedPassage);
+  memorizeSelectionButton.addEventListener("click", openMemoryCard);
+  memoryVersionSelect.addEventListener("change", updateMemoryCard);
+  memoryModeSelect.addEventListener("change", updateMemoryCard);
+  memoryCard.addEventListener("click", () => setMemoryFlipped(!memoryIsFlipped));
+  memoryFlipButton.addEventListener("click", () => setMemoryFlipped(!memoryIsFlipped));
+  memoryResetButton.addEventListener("click", () => setMemoryFlipped(false));
 })();

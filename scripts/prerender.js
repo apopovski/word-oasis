@@ -250,20 +250,20 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261014">
+    <link rel="stylesheet" href="/styles.css?v=20261015">
     <meta property="og:type" content="${ogType}">
     <meta property="og:title" content="${escapeAttribute(title)}">
     <meta property="og:description" content="${escapeAttribute(description)}">
     <meta property="og:url" content="${canonical}">
     <meta property="og:site_name" content="Word Oasis">
-    <meta property="og:image" content="${SITE_URL}/og-image.png?v=20261014">
+    <meta property="og:image" content="${SITE_URL}/og-image.png?v=20261015">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Word Oasis logo with a daily Scripture, hope, and encouragement message">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${escapeAttribute(title)}">
     <meta name="twitter:description" content="${escapeAttribute(description)}">
-    <meta name="twitter:image" content="${SITE_URL}/og-image.png?v=20261014">
+    <meta name="twitter:image" content="${SITE_URL}/og-image.png?v=20261015">
     <meta name="twitter:image:alt" content="Word Oasis logo with a daily Scripture, hope, and encouragement message">
     ${jsonLd}
   </head>
@@ -391,8 +391,8 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
       </div>
     </div>
 
-    <script src="/theme.js?v=20261014"></script>
-    <script src="/verse-modal.js?v=20261014"></script>
+    <script src="/theme.js?v=20261015"></script>
+    <script src="/verse-modal.js?v=20261015"></script>
   </body>
 </html>
 `;
