@@ -3,12 +3,12 @@ const answers = [
     id: "answer-gospel",
     question: "What is the gospel?",
     shortAnswer:
-      "The gospel is the good news that Jesus Christ died for our sins, was buried, and rose again. Salvation is God's gift, received by faith, and it leads to a transformed life of love, obedience, and hope in Christ's soon return.",
+      "The gospel is the good news of God's infinite love to humanity, through the life, sacrifice, and righteousness of Jesus Christ as our only hope of eternal life. It restores the image of God in the soul and offers salvation as a free gift received by faith.",
     longAnswer:
-      "The gospel announces both a finished work and an ongoing one. Christ's death satisfied the penalty of sin so that no one needs to earn forgiveness, and His resurrection guarantees victory over death for everyone who trusts Him. At the same time, receiving the gospel is not the end of the story: the same grace that saves also transforms, producing a growing love for God and others, a desire to obey out of gratitude rather than fear, and a settled hope that looks forward to the day Christ returns to finish what He started.",
+      "The gospel is the good news of God's infinite love to humanity, through the life, the sacrifice, and the righteousness of Jesus Christ as our only hope of eternal life. The gospel restores the image of God in the soul. The plan of salvation was not an afterthought; it was an eternal purpose of love formulated before the world began. When humanity fell, Jesus stepped forward as our Substitute and Surety, offering to bear the weight of the sins of the whole world so that we might be reconciled to the Father. The gospel is the \"counsel of peace\" between the Father and the Son, proving that God's law is as immutable as His throne, while His mercy is deep enough to reach the lowest sinner. Salvation is a free gift. We cannot earn it through any merit or good works, for it is received wholly by faith.",
     topics: ["Salvation", "Faith", "Christian Living"],
     category: "Faith and Salvation",
-    scriptures: ["1 Corinthians 15:3-4", "John 3:16", "Ephesians 2:8-10"],
+    scriptures: ["John 3:16", "2 Corinthians 4:7", "Revelation 13:8", "2 Corinthians 5:19", "Zechariah 6:13", "John 1:12"],
     keywords: ["good news", "Jesus", "cross", "resurrection", "saved", "grace", "obedience"]
   },
   {
