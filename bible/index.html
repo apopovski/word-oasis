@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Read and Listen to the Bible | Word Oasis</title>
-    <meta name="description" content="Read the Bible online in WEB, KJV, or ASV and listen to Bible chapters through Faith Comes By Hearing on Bible.is.">
+    <title>Read the Bible Online | WEB, KJV, ASV with Search | Word Oasis</title>
+    <meta name="description" content="Read and search the Bible online in WEB, KJV, or ASV. Browse every book and chapter, search the whole Bible or selected sections, and copy or share verse ranges.">
     <meta name="author" content="Word Oasis">
+    <meta name="keywords" content="read the Bible online, Bible search, KJV Bible, WEB Bible, ASV Bible, Bible verses, Old Testament, New Testament">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <meta name="theme-color" content="#102a43">
     <script>
@@ -27,7 +28,7 @@
       gtag("config", "G-5WRW513RFW");
     </script>
     <link rel="canonical" href="https://wordoasis.org/bible/">
-    <link rel="icon" href="/word-oasis.svg" type="image/svg+xml">
+    <link rel="icon" href="/SVG/wordoasis-mark.svg" type="image/svg+xml">
     <link rel="alternate icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -36,28 +37,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261005">
+    <link rel="stylesheet" href="/styles.css?v=20261014">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Read and Listen to the Bible | Word Oasis">
-    <meta property="og:description" content="Read Scripture online and open audio Bible chapters through Faith Comes By Hearing on Bible.is.">
+    <meta property="og:title" content="Read the Bible Online | Word Oasis">
+    <meta property="og:description" content="Read and search WEB, KJV, and ASV Bible chapters, filter by Testament or book, and copy or share verse ranges.">
     <meta property="og:url" content="https://wordoasis.org/bible/">
     <meta property="og:site_name" content="Word Oasis">
-    <meta property="og:image" content="https://wordoasis.org/og-image.png?v=20261005">
+    <meta property="og:image" content="https://wordoasis.org/og-image.png?v=20261014">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Word Oasis logo with a daily Scripture, hope, and encouragement message">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Read and Listen to the Bible | Word Oasis">
-    <meta name="twitter:description" content="Read Scripture online and open audio Bible chapters through Faith Comes By Hearing on Bible.is.">
-    <meta name="twitter:image" content="https://wordoasis.org/og-image.png?v=20261005">
+    <meta name="twitter:title" content="Read the Bible Online | Word Oasis">
+    <meta name="twitter:description" content="Read and search WEB, KJV, and ASV Bible chapters, filter by Testament or book, and copy or share verse ranges.">
+    <meta name="twitter:image" content="https://wordoasis.org/og-image.png?v=20261014">
     <meta name="twitter:image:alt" content="Word Oasis logo with a daily Scripture, hope, and encouragement message">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Read and Listen to the Bible",
-  "description": "Read the Bible online in WEB, KJV, or ASV and listen through Bible.is.",
-  "url": "https://wordoasis.org/bible/"
+  "@type": "CollectionPage",
+  "name": "Read the Bible Online",
+  "description": "Read and search the Bible online in WEB, KJV, or ASV, filter by Testament or book, copy verse ranges, and share passages.",
+  "url": "https://wordoasis.org/bible/",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Word Oasis",
+    "url": "https://wordoasis.org/"
+  },
+  "about": {
+    "@type": "Book",
+    "name": "The Bible"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://wordoasis.org/bible/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
 }
     </script>
   </head>
@@ -122,21 +137,13 @@
         <div class="container bible-hero-grid">
           <div>
             <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / Bible</nav>
-            <p class="eyebrow">Read and listen</p>
-            <h1>Read the Bible online.</h1>
+            <p class="eyebrow">Read and search</p>
+            <h1>Read and search the Bible online.</h1>
             <p class="page-intro">
-              Browse all 66 books in WEB, KJV, or ASV, then open
-              the matching chapter audio through Faith Comes By Hearing on Bible.is.
+              Browse all 66 books in WEB, KJV, or ASV, search Scripture across the whole
+              Bible or selected sections, and copy or share selected verse ranges.
             </p>
           </div>
-          <aside class="bible-audio-card" aria-label="Audio Bible note">
-            <p class="bible-audio-kicker">Audio Bible</p>
-            <h2>Listen chapter by chapter</h2>
-            <p>
-              The Listen button opens the selected chapter on Bible.is, a ministry of Faith Comes By
-              Hearing. Audio availability and translation options are provided by Bible.is.
-            </p>
-          </aside>
         </div>
       </section>
 
@@ -156,20 +163,45 @@
               <select id="bible-chapter"></select>
             </div>
             <div class="bible-control-actions">
-              <button class="bible-nav-button" type="button" id="bible-prev">Previous</button>
-              <button class="bible-nav-button" type="button" id="bible-next">Next</button>
+              <button class="bible-nav-button" type="button" id="bible-prev" aria-label="Previous chapter">←</button>
+              <button class="bible-nav-button" type="button" id="bible-next" aria-label="Next chapter">→</button>
             </div>
             <div class="bible-text-size-control" aria-label="Bible text size">
               <span>Text size</span>
               <div class="bible-text-size-buttons">
                 <button type="button" id="bible-text-smaller" aria-label="Decrease Bible text size">A-</button>
+                <input id="bible-text-size-range" type="range" min="0.9" max="1.8" step="0.02" value="1.08" aria-label="Custom Bible text size">
                 <output id="bible-text-size-label" aria-live="polite">Regular</output>
                 <button type="button" id="bible-text-larger" aria-label="Increase Bible text size">A+</button>
               </div>
             </div>
-            <a class="bible-listen-link" id="bible-listen-link" href="https://live.bible.is/bible/ENGESV/JHN/3" target="_blank" rel="noopener">
-              Listen on Bible.is
-            </a>
+            <form class="bible-search-form" id="bible-search-form" role="search">
+              <label for="bible-search-input">Search the Bible</label>
+              <div class="bible-search-row">
+                <input id="bible-search-input" type="search" placeholder='Try "mercy and truth" or kindness & truth' autocomplete="off">
+                <button type="submit">Search</button>
+              </div>
+              <p class="bible-search-help">Use quotes for exact phrases. Use &amp; to require multiple words.</p>
+              <details class="bible-advanced-search">
+                <summary>Advanced search</summary>
+                <div class="bible-control-field">
+                  <label for="bible-search-scope">Search in</label>
+                  <select id="bible-search-scope">
+                    <option value="all">Entire Bible</option>
+                    <option value="ot">Old Testament</option>
+                    <option value="nt">New Testament</option>
+                    <option value="current">Current book</option>
+                    <option value="selected">Selected books</option>
+                  </select>
+                </div>
+                <div class="bible-control-field bible-search-books-field" id="bible-search-books-field" hidden>
+                  <label for="bible-search-books">Books to search</label>
+                  <select id="bible-search-books" multiple size="8"></select>
+                  <p class="bible-search-help">Hold Command or Ctrl to choose multiple books.</p>
+                </div>
+              </details>
+            </form>
+            <div class="bible-search-results" id="bible-search-results" aria-live="polite"></div>
           </aside>
 
           <article class="bible-reader-card" aria-live="polite">
@@ -179,10 +211,20 @@
                 <h2 id="bible-reader-title">John 3</h2>
                 <p id="bible-reader-meta">World English Bible (WEB)</p>
               </div>
+              <div class="bible-reader-arrows" aria-label="Chapter navigation">
+                <button type="button" id="bible-reader-prev" aria-label="Previous chapter">←</button>
+                <button type="button" id="bible-reader-next" aria-label="Next chapter">→</button>
+              </div>
             </div>
             <div class="bible-chapter-grid" id="bible-chapter-grid" aria-label="Choose a chapter"></div>
+            <p class="bible-selection-hint">Click a verse number to select it. Click another verse number to select a range.</p>
+            <div id="bible-selection-home"></div>
             <div class="bible-reader-body" id="bible-reader-body">
               <p class="bible-reader-status">Loading Bible chapter...</p>
+            </div>
+            <div class="bible-bottom-nav" aria-label="Bottom chapter navigation">
+              <button class="bible-nav-button" type="button" id="bible-bottom-prev" aria-label="Previous chapter">←</button>
+              <button class="bible-nav-button" type="button" id="bible-bottom-next" aria-label="Next chapter">→</button>
             </div>
           </article>
         </div>
@@ -245,7 +287,7 @@
       </div>
     </footer>
 
-    <script src="/theme.js?v=20261005"></script>
-    <script src="/bible-reader.js?v=20261005"></script>
+    <script src="/theme.js?v=20261014"></script>
+    <script src="/bible-reader.js?v=20261014"></script>
   </body>
 </html>

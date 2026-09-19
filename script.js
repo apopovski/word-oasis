@@ -1,1239 +1,6982 @@
 const answers = [
   {
-    id: "answer-gospel",
-    question: "What is the gospel?",
-    shortAnswer:
-      "The gospel is the good news of God's infinite love to humanity, through the life, sacrifice, and righteousness of Jesus Christ as our only hope of eternal life. It restores the image of God in the soul and offers salvation as a free gift received by faith.",
-    longAnswer:
-      "The gospel is the good news of God's infinite love to humanity, through the life, the sacrifice, and the righteousness of Jesus Christ as our only hope of eternal life. The gospel restores the image of God in the soul. The plan of salvation was not an afterthought; it was an eternal purpose of love formulated before the world began. When humanity fell, Jesus stepped forward as our Substitute and Surety, offering to bear the weight of the sins of the whole world so that we might be reconciled to the Father. The gospel is the \"counsel of peace\" between the Father and the Son, proving that God's law is as immutable as His throne, while His mercy is deep enough to reach the lowest sinner. Salvation is a free gift. We cannot earn it through any merit or good works, for it is received wholly by faith.",
-    topics: ["Salvation", "Faith", "Christian Living"],
-    category: "Faith and Salvation",
-    scriptures: ["John 3:16", "2 Corinthians 4:7", "Revelation 13:8", "2 Corinthians 5:19", "Zechariah 6:13", "John 1:12"],
-    keywords: ["good news", "Jesus", "cross", "resurrection", "saved", "grace", "obedience"]
-  },
-  {
-    id: "answer-anxiety",
-    question: "What does the Bible say about anxiety?",
-    shortAnswer:
-      "The Bible does not shame people for feeling anxiety. It invites us to bring every care to God in prayer, trust His Fatherly care, receive His peace, and remember the weekly gift of Sabbath rest.",
-    longAnswer:
-      "Anxiety is a normal human response to an uncertain world, and Scripture meets it with practical, repeatable steps rather than empty reassurance. Philippians 4 pairs prayer with thanksgiving, teaching that gratitude reframes worry even before circumstances change. Peter's invitation to cast every care on God pictures a deliberate, repeated action, not a one-time decision. And the weekly rhythm of Sabbath rest gives a built-in reminder to set down burdens, remember God's faithfulness, and receive rest for the body and soul alongside the peace He promises for the mind.",
-    topics: ["Comfort", "Prayer", "Christian Living", "Sabbath"],
-    category: "Life and Relationships",
-    scriptures: ["Philippians 4:6-7", "1 Peter 5:7", "Exodus 20:8-11"],
-    keywords: ["worry", "fear", "stress", "peace", "mental health", "rest"]
-  },
-  {
-    id: "answer-forgiveness",
-    question: "How do I forgive someone who hurt me?",
-    shortAnswer:
-      "Biblical forgiveness begins with remembering how God has forgiven us in Christ. Forgiveness releases vengeance to God, pursues peace where possible, and can coexist with wise boundaries.",
-    longAnswer:
-      "Forgiveness is a decision to release the debt someone owes you, modeled on how completely God has forgiven us in Christ. It is not the same as instant trust, forgetting what happened, or pretending harm did not occur; Scripture allows for wise boundaries even while a heart lets go of bitterness. Romans 12 teaches believers to leave vengeance to God rather than repaying evil for evil, which frees the offended person from carrying a burden that was never theirs to punish. Reconciliation, where it is safe and possible, is the fuller goal, but forgiveness itself does not require the other person's cooperation.",
-    topics: ["Christian Living", "Comfort", "Forgiveness"],
-    category: "Life and Relationships",
-    scriptures: ["Ephesians 4:32", "Romans 12:18-19", "Colossians 3:13"],
-    keywords: ["hurt", "bitterness", "relationships", "enemy", "healing"]
-  },
-  {
-    id: "answer-prayer",
-    question: "How should I pray according to the Bible?",
-    shortAnswer:
-      "Jesus taught His followers to pray with reverence, dependence, confession, and trust. Prayer is not performance; it is communion with the Father through faith and a daily surrender of the heart to God.",
-    longAnswer:
-      "The Lord's Prayer gives a simple pattern: honoring God's name, seeking His kingdom and will, asking for daily needs, confessing sin while forgiving others, and asking for protection from temptation. Prayer works best as an honest conversation rather than a performance — it can include praise, thanksgiving, confession, and requests, offered boldly because believers can approach God's throne with confidence. Persistence matters, too; Scripture encourages continuing to pray even when answers are delayed, trusting that God hears and responds according to His will and timing rather than on demand.",
-    topics: ["Prayer", "Faith"],
-    category: "Knowing God",
-    scriptures: ["Matthew 6:9-13", "Hebrews 4:16", "1 John 5:14"],
-    keywords: ["Lord's prayer", "ask", "worship", "confession", "Father"]
-  },
-  {
-    id: "answer-gods-love",
-    question: "How can I know God loves me?",
-    shortAnswer:
-      "The clearest demonstration of God's love is the death and resurrection of Jesus Christ for sinners. God's love is also seen in His desire to restore people fully: heart, mind, body, relationships, and future.",
-    longAnswer:
-      "God's love is not measured by easy circumstances but by what He was willing to give: His own Son, while people were still sinners and enemies of God. That love reaches into every area of life — forgiving guilt, healing shame, restoring broken relationships, and giving purpose for the future. It is also patient and pursuing, shown in the Holy Spirit's ongoing work to draw hearts back to God, and it will be fully displayed when Christ returns to make all things new and remove every trace of sin's damage.",
-    topics: ["Faith", "Comfort", "Salvation"],
-    category: "Knowing God",
-    scriptures: ["Romans 5:8", "1 John 4:9-10", "John 15:13"],
-    keywords: ["love", "God's love", "cross", "grace", "assurance"]
-  },
-  {
-    id: "answer-suffering",
-    question: "Why does God allow suffering?",
-    shortAnswer:
-      "The Bible presents suffering as part of a larger conflict between good and evil, while showing that God is compassionate, near to the brokenhearted, and able to work even suffering toward eternal good.",
-    longAnswer:
-      "Suffering entered the world through sin, not from God's original design, and the Bible frames history as a great controversy between good and evil in which humanity is caught. God is not the author of suffering, but He enters into it: He is described as near to the brokenhearted, present in affliction, and able to work even painful circumstances toward good purposes for those who love Him. The cross is the clearest evidence that God takes suffering seriously enough to bear it Himself, and the promise of a coming new earth assures that suffering will not have the last word.",
-    topics: ["Comfort", "Faith", "Great Controversy"],
-    category: "Hope and Prophecy",
-    scriptures: ["Psalm 34:18", "Romans 8:28", "Revelation 21:4"],
-    keywords: ["pain", "evil", "grief", "trial", "hard times", "great controversy", "conflict between good and evil"]
-  },
-  {
-    id: "answer-assurance",
-    question: "Can I be sure that I am saved?",
-    shortAnswer:
-      "Assurance rests on the promise and finished work of Christ, not on the strength of our emotions. Scripture encourages believers to trust Christ, examine spiritual fruit, and rest in God's keeping power.",
-    longAnswer:
-      "Assurance of salvation is anchored in God's promises rather than shifting feelings, because faith and feelings are not the same thing. Jesus said His sheep hear His voice, follow Him, and that no one can snatch them from His hand, which points believers to His keeping power rather than their own performance. At the same time, Scripture invites honest self-examination — not to earn salvation, but to notice growing fruit of the Spirit as evidence that the relationship with Christ is real and active. Doubts can be brought honestly to God, who is able to complete the good work He began.",
-    topics: ["Salvation", "Faith"],
-    category: "Faith and Salvation",
-    scriptures: ["John 10:27-29", "1 John 5:11-13", "Philippians 1:6"],
-    keywords: ["assurance", "eternal security", "doubt", "saved", "confidence"]
-  },
-  {
-    id: "answer-bible-study",
-    question: "How can I understand the Bible better?",
-    shortAnswer:
-      "Read prayerfully, pay attention to context, compare Scripture with Scripture, and apply what you learn. A helpful pattern is observation, interpretation, and application.",
-    longAnswer:
-      "Meaningful Bible study starts before you open the page, with a short prayer asking God to give understanding. From there, observation asks what a passage actually says, interpretation asks what it meant in its original context, and application asks how it applies to your life today. Comparing Scripture with Scripture — letting clearer passages shed light on harder ones — protects against taking a single verse out of context. Keeping a simple journal of insights, discussing questions with others, and returning to the same passages over time all deepen understanding far beyond a single reading.",
-    topics: ["Christian Living", "Faith", "Bible Study"],
-    category: "Knowing God",
-    scriptures: ["2 Timothy 3:16-17", "Psalm 119:105", "Acts 17:11"],
-    keywords: ["study", "interpretation", "devotions", "scripture", "context"]
-  },
-  {
-    id: "answer-sabbath",
-    question: "Is the Sabbath still important for Christians?",
-    shortAnswer:
-      "The Sabbath points back to creation, honors God's commandments, and offers a weekly rhythm of worship, rest, mercy, and delight in the Lord. Jesus kept the Sabbath and taught that it was made as a blessing for humanity.",
-    longAnswer:
-      "The Sabbath was established at creation, before sin entered the world, when God rested on the seventh day and blessed it — making it a gift for all humanity, not a rule invented later. It was reaffirmed in the Ten Commandments and consistently kept by Jesus, who described it as something made for people's good, not a burden. Practically, the Sabbath offers a weekly rhythm of setting aside ordinary work to focus on worship, rest, family, nature, and acts of mercy, echoing both the beginning of creation and pointing forward to the final, eternal rest God promises His people.",
-    topics: ["Sabbath", "Christian Living", "Faith"],
-    category: "Life and Relationships",
-    scriptures: ["Genesis 2:2-3", "Exodus 20:8-11", "Mark 2:27-28"],
-    keywords: ["seventh day", "rest", "commandments", "law", "Saturday", "worship"]
-  },
-  {
-    id: "answer-commandments",
-    question: "What role do God's commandments have in the Christian life?",
-    shortAnswer:
-      "The Bible teaches that we are saved by grace through faith, not by earning God's favor. At the same time, God's commandments reveal His character and guide the grateful obedience of those who love Him.",
-    longAnswer:
-      "Salvation has always been by grace through faith, never by keeping rules well enough to earn it — no amount of obedience can pay a debt only Christ's sacrifice can cover. Yet Scripture is equally clear that faith does not make the law void; instead, God's commandments describe what love for God and others looks like in practice. Once the heart is transformed by grace, obedience becomes a natural response of gratitude rather than an attempt to be accepted, and the Holy Spirit empowers believers to live out what the law describes rather than merely demands.",
-    topics: ["Christian Living", "Faith", "Salvation", "Sabbath"],
-    category: "Faith and Salvation",
-    scriptures: ["John 14:15", "Romans 3:31", "Revelation 14:12"],
-    keywords: ["law", "obedience", "ten commandments", "grace", "faith", "love"]
-  },
-  {
-    id: "answer-death",
-    question: "What happens when a person dies?",
-    shortAnswer:
-      "Scripture often describes death as sleep. The dead are not conscious, and the believer's hope is the resurrection at Christ's return, when God will raise His people to eternal life.",
-    longAnswer:
-      "Throughout Scripture, death is repeatedly compared to sleep — a state without awareness, thought, or activity, rather than immediate conscious existence somewhere else. Jesus used this same picture when He described Lazarus as asleep before raising him, and Paul comforted grieving believers not by describing the dead as already present with God, but by pointing them to the resurrection, when Christ returns and the dead in Him rise first. This understanding offers real comfort: those who have died in faith are, in a sense, resting safely, unaware of time passing, until they are reunited body and soul at the resurrection.",
-    topics: ["Prophecy", "Comfort", "Faith", "State of the Dead"],
-    category: "Hope and Prophecy",
-    scriptures: ["Ecclesiastes 9:5", "John 11:11-14", "1 Thessalonians 4:16-17"],
-    keywords: ["death", "sleep", "resurrection", "afterlife", "heaven", "grief", "conscious", "soul"]
-  },
-  {
-    id: "answer-second-coming",
-    question: "How will Jesus return?",
-    shortAnswer:
-      "The return of Jesus will be visible, personal, glorious, and unmistakable — seen by every eye, not secret or hidden. The Bible calls believers to watch, be ready, and live faithfully while looking forward to His coming kingdom.",
-    longAnswer:
-      "The Bible pictures the second coming as a public, worldwide event: Christ descending visibly from heaven, seen by every eye, accompanied by angels and unmistakable in its glory — nothing like a quiet or secret event only some people notice. Scripture warns against being misled by claims that Christ has returned secretly or in a hidden way. Instead, believers are called to a posture of watching and readiness, not through fearful speculation about dates, but through a faithful daily walk with God, trusting that His return will bring full reunion with loved ones and the restoration of everything sin has broken.",
-    topics: ["Prophecy", "Second Coming", "Faith", "Christian Living"],
-    category: "Hope and Prophecy",
-    scriptures: ["Acts 1:11", "Matthew 24:30-31", "Revelation 1:7"],
-    keywords: ["second coming", "return of Jesus", "end times", "visible return", "kingdom"]
-  },
-  {
-    id: "answer-judgment",
-    question: "What does the Bible teach about judgment?",
-    shortAnswer:
-      "Judgment shows that God takes evil seriously, vindicates His character, and brings justice with mercy. Believers can face judgment with confidence because Jesus is both Savior and Advocate.",
-    longAnswer:
-      "The Bible describes a judgment in which books of record are opened and God's justice is displayed before the watching universe, answering every question raised about His fairness and character. Rather than something to dread, this judgment is good news for those who trust Christ, because Jesus serves as their Advocate, presenting His own righteousness on their behalf. Judgment ultimately demonstrates that God is both perfectly just and abundantly merciful — evil will not go unanswered forever, but for those in Christ, the outcome is already secure through His finished work.",
-    topics: ["Prophecy", "Salvation", "Faith"],
-    category: "Hope and Prophecy",
-    scriptures: ["Daniel 7:9-10", "Ecclesiastes 12:14", "1 John 2:1"],
-    keywords: ["judgment", "advocate", "justice", "mercy", "Daniel", "sanctuary"]
-  },
-  {
-    id: "answer-hell",
-    question: "Does the Bible teach eternal torment?",
-    shortAnswer:
-      "The Bible teaches that sin leads to death, and that final judgment ends evil completely. God's purpose is not endless cruelty but the full destruction of sin and the restoration of a new creation.",
-    longAnswer:
-      "Scripture consistently describes the penalty for sin as death, not endless conscious torment — the wages of sin is death, not eternal life in agony. The imagery of a lake of fire represents complete and final destruction, consuming sin and its effects entirely rather than preserving them forever, which would make evil as immortal as good. This is consistent with God's character: His goal is not unending cruelty, but the full, final end of suffering, sin, and death, clearing the way for a new heaven and new earth where nothing harmful remains.",
-    topics: ["Prophecy", "Salvation", "Comfort"],
-    category: "Hope and Prophecy",
-    scriptures: ["Romans 6:23", "Malachi 4:1", "Revelation 21:4"],
-    keywords: ["hell", "lake of fire", "judgment", "death", "destruction", "new earth"]
-  },
-  {
-    id: "answer-health",
-    question: "Does God care about my physical health?",
-    shortAnswer:
-      "The Bible presents the body as belonging to God and calls believers to honor Him in every part of life. Caring for health is not a way to earn salvation; it is a grateful response to God's desire to restore the whole person.",
-    longAnswer:
-      "Because the body is described as a temple of the Holy Spirit, Scripture calls believers to care for it wisely — through rest, nourishing food, physical activity, and avoiding what harms the body or clouds the mind. This is never framed as a way to earn God's favor; it is a grateful, practical response to being bought at a price and belonging fully to God. Healthy choices also support a clear mind for prayer, service, and discernment, reflecting God's desire to restore the whole person — body, mind, and spirit — rather than treating physical health as separate from spiritual life.",
-    topics: ["Christian Living", "Faith", "Health"],
-    category: "Life and Relationships",
-    scriptures: ["1 Corinthians 6:19-20", "Romans 12:1", "3 John 1:2"],
-    keywords: ["health", "body", "temperance", "food", "whole person", "wellness"]
-  },
-  {
-    id: "answer-holy-spirit",
-    question: "Who is the Holy Spirit and what does He do?",
-    shortAnswer:
-      "The Holy Spirit is God at work in the believer's life, convicting of sin, teaching truth, comforting, and producing spiritual fruit. He empowers Christians for godly living, prayer, and service.",
-    longAnswer:
-      "The Holy Spirit is fully God, sent to indwell believers, convict the world of sin, and guide them into truth. His work is both inward and practical: producing the fruit of the Spirit such as love, joy, peace, and self-control, and equipping believers with gifts for serving the church and others. Being filled with the Spirit is not a one-time event but an ongoing, daily surrender, as believers rely on His power for prayer, discernment, and the strength to live differently than they could on their own.",
-    topics: ["Holy Spirit", "Faith", "Christian Living"],
-    category: "Knowing God",
-    scriptures: ["John 14:26", "John 16:8", "Galatians 5:22-23"],
-    keywords: ["holy spirit", "comforter", "fruit of the spirit", "conviction", "power"]
-  },
-  {
-    id: "answer-baptism",
-    question: "Why is baptism important?",
-    shortAnswer:
-      "Baptism is a public expression of faith in Christ, symbolizing His death, burial, and resurrection, and the believer's new life in Him. It follows repentance and a decision to walk with Jesus.",
-    longAnswer:
-      "Baptism by immersion pictures the gospel itself: going under the water symbolizes being buried with Christ, and rising out of the water symbolizes being raised to walk in newness of life. It is meant to follow genuine repentance and instruction, marking a conscious decision to follow Jesus rather than a ritual performed without understanding. Baptism does not cause salvation, but it publicly and meaningfully confirms it, and it becomes the starting point for an ongoing life of discipleship, growth, and participation in the church community.",
-    topics: ["Baptism", "Salvation", "Faith"],
-    category: "Faith and Salvation",
-    scriptures: ["Romans 6:3-4", "Acts 2:38", "Matthew 28:19-20"],
-    keywords: ["baptism", "immersion", "new life", "repentance", "public confession"]
-  },
-  {
-    id: "answer-marriage",
-    question: "What does the Bible teach about marriage?",
-    shortAnswer:
-      "Marriage is God's design for a man and woman to become one in a lifelong covenant marked by love, faithfulness, and mutual respect, reflecting the relationship between Christ and His church.",
-    longAnswer:
-      "From the beginning, marriage was designed as a lifelong covenant in which two people become one, built on companionship, faithfulness, and mutual commitment rather than convenience. Paul describes marriage as a living picture of Christ's sacrificial love for the church, calling husbands to lead with self-giving love and wives to respond with respect, in a relationship of mutual honor rather than domination. Because marriage reflects something bigger than the couple themselves, Scripture treats it seriously, encouraging couples to build their relationship on shared faith, ongoing forgiveness, and ongoing investment rather than treating it as easily disposable.",
-    topics: ["Marriage and Family", "Christian Living"],
-    category: "Life and Relationships",
-    scriptures: ["Genesis 2:24", "Ephesians 5:25-33", "Matthew 19:4-6"],
-    keywords: ["marriage", "husband", "wife", "family", "covenant", "relationships"]
-  },
-  {
-    id: "answer-parenting",
-    question: "How should parents raise their children according to the Bible?",
-    shortAnswer:
-      "Scripture calls parents to teach children about God consistently, discipline with love rather than anger, and model a life of faith at home so children grow up knowing and trusting the Lord.",
-    longAnswer:
-      "Deuteronomy pictures teaching children about God as a constant, woven-in part of everyday life — talked about at home, on the road, at bedtime, and in the morning, not confined to a single lesson each week. Discipline is meant to shape the heart, not merely control behavior, and Paul specifically warns fathers against provoking children to anger, pointing instead toward instruction and correction rooted in love. Modeling authentic faith at home, admitting mistakes, and praying with and for children all shape a home environment where trust in God feels natural rather than forced.",
-    topics: ["Marriage and Family", "Christian Living"],
-    category: "Life and Relationships",
-    scriptures: ["Deuteronomy 6:6-7", "Ephesians 6:4", "Proverbs 22:6"],
-    keywords: ["parenting", "children", "family", "discipline", "raising kids"]
-  },
-  {
-    id: "answer-stewardship",
-    question: "What does the Bible say about money and stewardship?",
-    shortAnswer:
-      "The Bible teaches that everything belongs to God and believers are stewards, not owners, of their time, talents, and resources. Faithful giving, honesty, and contentment flow from trusting God's provision.",
-    longAnswer:
-      "Scripture consistently teaches that everything ultimately belongs to God, and people are entrusted as managers, or stewards, of the time, abilities, and resources placed in their care. Faithful stewardship includes giving — such as the tithe and additional offerings — not as a transaction to gain God's blessing, but as an act of worship and trust. Contentment, honesty in finances, and generosity toward those in need flow naturally once ownership is understood correctly: everything is on loan from a generous God, and giving cheerfully reflects His own character.",
-    topics: ["Stewardship", "Christian Living"],
-    category: "Life and Relationships",
-    scriptures: ["Malachi 3:10", "Matthew 6:19-21", "2 Corinthians 9:7"],
-    keywords: ["money", "tithe", "giving", "finances", "stewardship", "generosity"]
-  },
-  {
-    id: "answer-church",
-    question: "Why is the church important?",
-    shortAnswer:
-      "The church is the community of believers united in Christ for worship, teaching, fellowship, encouragement, and mission. Scripture calls believers not to neglect gathering together as one body.",
-    longAnswer:
-      "The church is described as a body with many parts, each contributing different gifts for the good of the whole, held together by a shared faith in Christ rather than uniformity of personality or background. Gathering together for worship, teaching, prayer, and fellowship is not optional or old-fashioned; Hebrews specifically warns against neglecting this habit, especially as challenges increase. Beyond weekly worship, the early church modeled shared meals, mutual care, and active mission together, showing that spiritual growth happens best in community rather than in isolation.",
-    topics: ["Church", "Christian Living", "Faith"],
-    category: "Life and Relationships",
-    scriptures: ["Hebrews 10:24-25", "Acts 2:42", "1 Corinthians 12:27"],
-    keywords: ["church", "fellowship", "community", "body of Christ", "worship together"]
-  },
-  {
-    id: "answer-creation",
-    question: "What does the Bible teach about creation?",
-    shortAnswer:
-      "The Bible presents God as the intentional Creator of the heavens, the earth, and humanity in His own image. Creation reveals God's power and care, and it is the foundation for the Sabbath rest.",
-    longAnswer:
-      "Genesis describes a deliberate, purposeful creation — not a random accident — in which God speaks the universe into existence and forms humanity in His own image, giving people inherent dignity and purpose. The created world itself testifies to God's power and character, as the heavens are said to declare His glory even without words. Creation is also the foundation for the Sabbath: God rested on the seventh day not because He was tired, but to establish a pattern of rest and worship that would remind every generation of who made them and why they matter.",
-    topics: ["Creation", "Faith", "Sabbath"],
-    category: "Knowing God",
-    scriptures: ["Genesis 1:1", "Genesis 1:27", "Psalm 19:1"],
-    keywords: ["creation", "creator", "genesis", "origins", "image of god"]
-  },
-  {
-    id: "answer-temptation",
-    question: "How can I overcome temptation?",
-    shortAnswer:
-      "The Bible promises that God provides a way of escape from every temptation and that His strength, not willpower alone, enables believers to resist sin and grow in godliness.",
-    longAnswer:
-      "Paul's promise that God will always provide a way of escape from temptation means no one faces an impossible situation — help is always available, even when it does not feel that way. Jesus modeled the pattern for resisting temptation Himself, responding to each test in the wilderness with Scripture rather than self-effort alone. Practically, this means knowing God's Word well enough to recall it under pressure, avoiding known triggers where possible, staying honest with trusted others for accountability, and depending on the Spirit's strength rather than relying solely on willpower, which tends to run out.",
-    topics: ["Christian Living", "Faith"],
-    category: "Life and Relationships",
-    scriptures: ["1 Corinthians 10:13", "James 4:7", "Hebrews 4:15-16"],
-    keywords: ["temptation", "sin", "overcome", "willpower", "victory", "self-control"]
-  },
-  {
-    id: "answer-heaven",
-    question: "What will heaven and the new earth be like?",
-    shortAnswer:
-      "The Bible describes a coming new heaven and new earth where God dwells with His people, sorrow and death are no more, and believers enjoy perfect fellowship with God forever.",
-    longAnswer:
-      "Rather than a vague, disembodied existence, the Bible describes a renewed, physical new earth — restored to conditions even better than the original creation — where God's people live in resurrected bodies, free from sickness, sorrow, and death. Revelation pictures God dwelling personally among His people, wiping away every tear, with no more pain or crying because the old order of things has fully passed away. This future is described as beyond human imagination in its goodness, offering real hope that present suffering is temporary and that a tangible, joyful, eternal life is still ahead.",
-    topics: ["Prophecy", "Comfort", "Faith"],
-    category: "Hope and Prophecy",
-    scriptures: ["Revelation 21:1-4", "Isaiah 65:17", "1 Corinthians 2:9"],
-    keywords: ["heaven", "new earth", "new creation", "eternal life", "hope"]
-  },
-  {
-    id: "answer-trinity",
-    question: "Who is God? Is the Trinity biblical?",
-    shortAnswer:
-      "The Bible reveals one God who exists as Father, Son, and Holy Spirit — three distinct persons, fully united in purpose, character, and eternal love, not three separate gods.",
-    longAnswer:
-      "Scripture consistently affirms that there is only one God, yet it also presents Father, Son, and Holy Spirit each as fully divine, distinct in role, and inseparably united in love and purpose. At Jesus' baptism, all three are present together: the Son in the water, the Spirit descending like a dove, and the Father speaking from heaven. Jesus commanded baptism in the single name of the Father, Son, and Holy Spirit, and the Spirit is described with the same divine attributes as the Father and Son. This is a mystery beyond full human comprehension, but it shapes how believers understand God's nature as inherently relational and loving, even before creation existed.",
-    topics: ["Faith", "Holy Spirit"],
-    category: "Knowing God",
-    scriptures: ["Matthew 28:19", "Matthew 3:16-17", "2 Corinthians 13:14"],
-    keywords: ["trinity", "godhead", "father son spirit", "one god", "three persons"]
-  },
-  {
-    id: "answer-jesus-divinity",
-    question: "Is Jesus really God?",
-    shortAnswer:
-      "The Bible presents Jesus as fully God and fully human — eternal, the Creator, worshiped as divine, yet born as a man to live, die, and rise again for humanity's salvation.",
-    longAnswer:
-      "John's Gospel opens by identifying Jesus as the Word who was with God, who was God, and through whom everything was created, then describes Him becoming flesh and living among us. Jesus accepted worship, claimed unity with the Father, and forgave sins — something Scripture reserves for God alone. At the same time, He hungered, wept, grew tired, and died, showing genuine humanity. This dual nature is essential to the gospel: only someone fully divine could pay an infinite debt, and only someone fully human could represent humanity as a substitute.",
-    topics: ["Faith", "Salvation"],
-    category: "Knowing God",
-    scriptures: ["John 1:1-3, 14", "Colossians 2:9", "Philippians 2:6-8"],
-    keywords: ["jesus christ", "deity of christ", "incarnation", "god the son", "fully god fully man"]
-  },
-  {
-    id: "answer-doubt",
-    question: "What should I do when I struggle with doubt?",
-    shortAnswer:
-      "Doubt is not condemned in Scripture; honest questions can be brought to God. Faith grows through seeking answers, remembering God's past faithfulness, and staying in community.",
-    longAnswer:
-      "Many biblical figures, including John the Baptist and Thomas, expressed real doubt, and God met their honesty with patient answers rather than rejection. Bringing questions to God directly — through prayer, Scripture study, and honest conversation with trusted believers — is far healthier than suppressing doubt or hiding it out of shame. Remembering specific ways God has been faithful in the past builds a foundation for trusting Him with what is still unclear. Doubt handled honestly, rather than ignored, can actually deepen and mature genuine faith over time.",
-    topics: ["Faith", "Christian Living"],
-    category: "Knowing God",
-    scriptures: ["Mark 9:24", "John 20:27-29", "Jude 1:22"],
-    keywords: ["doubt", "questions", "unbelief", "struggling faith", "uncertainty"]
-  },
-  {
-    id: "answer-guidance",
-    question: "How can I know God's will for my life?",
-    shortAnswer:
-      "God guides through Scripture, prayer, wise counsel, and the quiet leading of the Holy Spirit. Most of His will is already revealed; specific decisions are made trusting His care.",
-    longAnswer:
-      "A large part of God's will is already clearly revealed in Scripture — to love God and others, live with integrity, and reflect Christ's character — so seeking direction starts there rather than waiting for a special sign. For specific decisions, Scripture models seeking wise counsel, praying for clarity, watching for how God provides or closes doors, and paying attention to the peace or conviction of the Holy Spirit. Trusting God's care means moving forward in faith on decisions that align with biblical wisdom, resting in the confidence that He directs the steps of those who commit their way to Him.",
-    topics: ["Faith", "Prayer", "Christian Living"],
-    category: "Knowing God",
-    scriptures: ["Proverbs 3:5-6", "Psalm 32:8", "James 1:5"],
-    keywords: ["god's will", "guidance", "decisions", "direction", "calling"]
-  },
-  {
-    id: "answer-spiritual-gifts",
-    question: "What are spiritual gifts and how do I find mine?",
-    shortAnswer:
-      "Spiritual gifts are abilities given by the Holy Spirit to build up the church. Every believer receives at least one, meant to be discovered and used in service to others.",
-    longAnswer:
-      "Spiritual gifts are Spirit-given abilities such as teaching, encouragement, service, leadership, mercy, or generosity, distributed to different believers so the whole church functions like a healthy body with many necessary parts. No one receives every gift, and no gift is more spiritually significant than another when used in love — the goal is mutual benefit, not personal status. Gifts are often discovered through serving, noticing what brings genuine fruit and joy, and receiving feedback from other believers, rather than through abstract self-reflection alone.",
-    topics: ["Holy Spirit", "Church", "Christian Living"],
-    category: "Knowing God",
-    scriptures: ["1 Corinthians 12:4-7", "Romans 12:4-8", "1 Peter 4:10-11"],
-    keywords: ["spiritual gifts", "gifts of the spirit", "serving", "talents", "calling"]
-  },
-  {
-    id: "answer-fasting",
-    question: "What does the Bible teach about fasting?",
-    shortAnswer:
-      "Fasting is voluntarily setting aside food (or other things) for a time to focus more fully on prayer and seeking God, not a way to manipulate God or earn favor.",
-    longAnswer:
-      "Throughout Scripture, fasting accompanies serious prayer — seeking guidance, repenting, or drawing near to God in times of crisis or decision. Jesus assumed His followers would fast and taught that it should be done sincerely, without seeking public attention or praise for the sacrifice. Fasting is not a technique to force God's hand or a means of earning spiritual credit; rather, it is a physical way of expressing humility and dependence, clearing space so attention can focus more fully on prayer and listening to God.",
-    topics: ["Prayer", "Christian Living"],
-    category: "Knowing God",
-    scriptures: ["Matthew 6:16-18", "Joel 2:12-13", "Acts 13:2-3"],
-    keywords: ["fasting", "prayer and fasting", "self-denial", "seeking god"]
-  },
-  {
-    id: "answer-mission",
-    question: "Why does the church share the gospel with others?",
-    shortAnswer:
-      "Jesus commissioned His followers to share the good news with everyone, everywhere, because the gospel is meant to be shared, not kept private, out of love for others.",
-    longAnswer:
-      "Before returning to heaven, Jesus gave His followers a clear commission: go and make disciples of all nations, teaching them to follow everything He commanded. This mission flows naturally from grace — those who have experienced forgiveness and hope want others to know it is available too. Sharing the gospel is not about pressure or manipulation; it includes living a visibly transformed life, serving practical needs, and speaking honestly about faith when opportunities arise. This mission is described as continuing until Christ's return, giving urgency and purpose to how believers live and relate to others.",
-    topics: ["Church", "Christian Living", "Faith"],
-    category: "Life and Relationships",
-    scriptures: ["Matthew 28:18-20", "Matthew 24:14", "Romans 10:14-15"],
-    keywords: ["evangelism", "great commission", "sharing faith", "mission", "witnessing"]
-  },
-  {
-    id: "answer-grief",
-    question: "How does the Bible help with grief and loss?",
-    shortAnswer:
-      "Scripture allows honest grief while offering real comfort: God is near to the brokenhearted, and death is not the final word for those who trust in the resurrection.",
-    longAnswer:
-      "The Bible never treats grief as a sign of weak faith — Jesus Himself wept at the tomb of a friend, and the Psalms are full of raw, honest sorrow brought openly to God. At the same time, grief for believers is described as different from grief without hope, because death is temporary, not final, for those united to Christ. God is described as especially near to the brokenhearted and to those crushed in spirit, inviting honest lament rather than forced positivity. The promise of the resurrection, when God will reunite loved ones and wipe away every tear, offers a future hope that can hold real grief and real comfort together.",
-    topics: ["Comfort", "State of the Dead", "Prophecy"],
-    category: "Life and Relationships",
-    scriptures: ["Psalm 34:18", "John 11:33-35", "1 Thessalonians 4:13-14"],
-    keywords: ["grief", "loss", "mourning", "death of loved one", "comfort"]
-  },
-  {
-    id: "answer-work",
-    question: "Does the Bible say anything about work and career?",
-    shortAnswer:
-      "Work is part of God's original design, meant to be done with integrity and diligence as service to God, not merely to people, regardless of the type of job.",
-    longAnswer:
-      "Work existed before sin entered the world, given to humanity as a meaningful part of caring for creation, not as a punishment. Paul instructs believers to work heartily, as if working for the Lord rather than merely for human supervisors, which reframes even ordinary tasks as an act of worship. Honesty, diligence, and fair treatment of others are consistently emphasized, along with a caution against greed or defining identity entirely by career success. Rest is also built into the pattern of work through the Sabbath, protecting against the exhaustion of nonstop labor.",
-    topics: ["Christian Living", "Stewardship"],
-    category: "Life and Relationships",
-    scriptures: ["Colossians 3:23-24", "Genesis 2:15", "Proverbs 12:24"],
-    keywords: ["work", "career", "job", "labor", "workplace"]
-  },
-  {
-    id: "answer-anger",
-    question: "How should I handle anger according to the Bible?",
-    shortAnswer:
-      "Anger itself is not automatically sinful, but Scripture warns against letting it control actions or linger unresolved, urging quick reconciliation and self-control instead.",
-    longAnswer:
-      "Scripture acknowledges that anger is a real human emotion — even Jesus displayed righteous anger at injustice — but it draws a clear line between feeling anger and being controlled by it. Paul's instruction not to let the sun go down on anger points to resolving conflict promptly rather than letting resentment build. James urges believers to be slow to become angry, since human anger rarely produces the righteousness God desires. Practically, this means pausing before reacting, seeking to understand the other person, and pursuing reconciliation quickly rather than nursing a grudge.",
-    topics: ["Christian Living", "Comfort"],
-    category: "Life and Relationships",
-    scriptures: ["Ephesians 4:26-27", "James 1:19-20", "Proverbs 15:1"],
-    keywords: ["anger", "self-control", "conflict", "resentment", "emotions"]
-  },
-  {
-    id: "answer-end-times-signs",
-    question: "What are the signs that Jesus is coming soon?",
-    shortAnswer:
-      "Jesus described signs such as wars, natural disasters, moral decline, and the gospel reaching the whole world, while warning against date-setting and urging constant readiness.",
-    longAnswer:
-      "In the Olivet Discourse, Jesus described a range of signs — wars, earthquakes, famines, false teachers, increasing lawlessness, and the gospel being preached to the whole world — pointing to His return without giving an exact timeline. He explicitly said no one knows the day or hour, warning against confident date-setting, which Scripture consistently discourages. Instead of promoting fear or speculation, these signs are meant to encourage steady faithfulness: staying spiritually alert, continuing to love and serve others, and living each day ready to meet Christ rather than anxious about timing.",
-    topics: ["Prophecy", "Faith"],
-    category: "Hope and Prophecy",
-    scriptures: ["Matthew 24:6-14", "Matthew 24:36", "Luke 21:34-36"],
-    keywords: ["signs of the end", "last days", "end times", "olivet discourse", "readiness"]
-  },
-  {
-    id: "answer-daniel-revelation",
-    question: "How should I understand prophecy in Daniel and Revelation?",
-    shortAnswer:
-      "Daniel and Revelation use symbolic language to reveal God's control over history, the rise and fall of powers, and the certainty of Christ's ultimate victory over evil.",
-    longAnswer:
-      "Daniel and Revelation are often called apocalyptic literature, using vivid symbols — beasts, horns, numbers, and visions — to communicate real historical and future events in a way meant to be interpreted symbolically rather than always literally. A reliable approach lets Scripture interpret Scripture, comparing similar symbols across both books and other prophetic passages rather than relying on outside speculation. The consistent message across these prophecies is reassurance: despite the rise of powerful, opposing forces throughout history, God remains sovereign, and the story ends with Christ's decisive victory and the full establishment of His kingdom.",
-    topics: ["Prophecy"],
-    category: "Hope and Prophecy",
-    scriptures: ["Daniel 2:44", "Revelation 1:1-3", "Revelation 19:11-16"],
-    keywords: ["daniel", "revelation", "apocalyptic", "bible prophecy", "symbols"]
-  },
-  {
-    id: "answer-tithing",
-    question: "Is tithing required for Christians today?",
-    shortAnswer:
-      "Tithing — returning a tenth — reflects a long biblical pattern of honoring God first with material blessings, offered willingly out of trust rather than compulsion or fear.",
-    longAnswer:
-      "The practice of tithing predates the law given at Sinai, appearing when Abraham gave a tenth to Melchizedek, and it continues through the Old Testament as a way of acknowledging God as the source of every blessing. Malachi describes tithing as a test of trust, with a promise of blessing tied to faithfulness in this area. In the New Testament, Jesus affirms tithing while emphasizing that justice, mercy, and faithfulness must not be neglected. Giving is meant to flow from a willing, cheerful heart rather than pressure or guilt, with tithing serving as a meaningful, tangible starting point for broader biblical generosity.",
-    topics: ["Stewardship", "Christian Living"],
-    category: "Life and Relationships",
-    scriptures: ["Malachi 3:8-10", "Genesis 14:18-20", "Matthew 23:23"],
-    keywords: ["tithing", "tenth", "giving", "offerings", "money"]
-  },
-  {
-    id: "answer-loneliness",
-    question: "What does the Bible say to someone feeling lonely?",
-    shortAnswer:
-      "God promises never to leave or forsake His people, offering His presence, the support of Christian community, and purpose even in seasons of deep loneliness.",
-    longAnswer:
-      "Scripture repeatedly promises that believers are never truly alone, since God Himself promises to never leave or forsake His people, even in the most isolating circumstances. At the same time, God designed people for community, which is part of why the church is described as a body — meant to notice, include, and care for members who are struggling or isolated. Practical steps include being honest about loneliness rather than hiding it, actively seeking connection within a faith community, and serving others, which often reduces isolation while creating meaningful relationships over time.",
-    topics: ["Comfort", "Church"],
-    category: "Life and Relationships",
-    scriptures: ["Deuteronomy 31:6", "Psalm 68:6", "Hebrews 10:24-25"],
-    keywords: ["loneliness", "isolation", "alone", "community", "belonging"]
-  },
-  {
-    id: "answer-gods-law",
-    question: "What is the purpose of God's law?",
-    shortAnswer:
-      "God's law reveals His character, shows what love for God and others looks like, and helps us recognize sin. We are not saved by keeping the law; we obey because God's grace has already reached us.",
-    longAnswer:
-      "The law of God is a gracious expression of His holy and loving character. It points out sin, gives a trustworthy standard for right and wrong, and teaches believers how to love God and their neighbors in practical ways. The law cannot justify sinners or replace faith in Christ, but grace does not make obedience meaningless. Through the Spirit, believers learn to delight in God's instruction and live it out as a response of gratitude.",
-    topics: ["Law", "Faith", "Christian Living"],
-    category: "Faith and Salvation",
-    scriptures: ["Romans 3:20", "Matthew 22:37-40", "John 14:15"],
-    keywords: ["law", "commandments", "obedience", "sin", "God's character", "grace"]
-  },
-  {
-    id: "answer-sanctuary",
-    question: "What does the Bible teach about the sanctuary?",
-    shortAnswer:
-      "The biblical sanctuary illustrates God's plan to dwell with His people and deal with sin. Its services point forward to Jesus, whose sacrifice and heavenly ministry provide forgiveness, cleansing, and access to God.",
-    longAnswer:
-      "The sanctuary was designed as a visible lesson about God's presence, the seriousness of sin, and the way He restores sinners. Its sacrifices pointed to Christ's once-for-all death, while the priestly ministry anticipated Jesus as our compassionate High Priest in heaven. The sanctuary message assures believers that salvation is not only pardon for the past but also Christ's continuing work to cleanse, intercede, and prepare His people for His return.",
-    topics: ["Sanctuary", "Salvation", "Prophecy"],
-    category: "Hope and Prophecy",
-    scriptures: ["Exodus 25:8", "Hebrews 8:1-2", "Hebrews 9:11-14"],
-    keywords: ["sanctuary", "tabernacle", "high priest", "Jesus", "atonement", "heavenly ministry"]
-  },
-  {
-    id: "answer-three-angels",
-    question: "What is the message of the three angels?",
-    shortAnswer:
-      "The three angels' messages in Revelation 14 call the world to worship the Creator, announce the fall of false religious systems, reject allegiance to the beast, and patiently remain faithful to Jesus.",
-    longAnswer:
-      "The three angels' messages are a final gospel proclamation before Christ's return. The first angel announces the eternal gospel and calls every nation to fear God, give Him glory, and worship Him as Creator. The second exposes the fall of Babylon, representing systems that turn people away from biblical truth. The third warns against worshiping the beast and receiving its mark, while Scripture highlights the endurance of God's people who keep His commandments and hold to faith in Jesus.",
-    topics: ["Three Angels", "Prophecy", "Faith"],
-    category: "Hope and Prophecy",
-    scriptures: ["Revelation 14:6-12", "Revelation 18:1-4", "Exodus 20:11"],
-    keywords: ["three angels", "first angel", "second angel", "third angel", "Babylon", "beast", "mark", "worship", "Revelation 14"]
-  },
-  {
-    id: "answer-women-ministry",
-    question: "Are women permitted to serve as pastors or elders according to scripture?",
-    shortAnswer:
-      "Scripture shows women prophesying, teaching, leading, and serving as deacons under the Spirit's gifting, while a few passages about church order have been understood differently regarding the ordained elder or pastor role. Sincere believers hold different convictions on this question.",
-    longAnswer:
-      "The Bible records women such as Deborah leading Israel as a judge and prophet, Phoebe serving as a deacon, Priscilla teaching Apollos alongside her husband, and Joel's promise — quoted at Pentecost — that God's Spirit would fall on sons and daughters alike, enabling both to prophesy. At the same time, Paul's instructions in 1 Corinthians 14 and 1 Timothy 2 about order in worship and the office of elder have been read by some as limiting the ordained pastoral role to men, while others read them as addressing specific local disruptions rather than a universal rule for every context. Galatians 3:28 affirms that in Christ there is no spiritual hierarchy between male and female. Given this range within Scripture, believers can affirm women serving fully in ministry, teaching, and leadership according to their spiritual gifts, while extending grace and humility toward fellow Christians who apply these specific passages differently regarding ordination.",
-    topics: ["Church", "Christian Living", "Holy Spirit"],
-    category: "Life and Relationships",
-    scriptures: ["Judges 4:4-5", "Romans 16:1-2", "Acts 2:17-18", "Galatians 3:28"],
-    keywords: ["women pastors", "women elders", "women in ministry", "ordination", "church leadership", "deborah", "phoebe"]
-  },
-  {
-    id: "answer-homosexuality",
-    question: "How does scripture view homosexuality, and is engaging in homosexual behavior considered sinful?",
-    shortAnswer:
-      "Scripture consistently presents marriage between a man and a woman as God's design for sexual intimacy, and identifies same-sex sexual behavior as outside that design. Temptation itself is not sin, and every person — regardless of their struggles — bears God's image and is offered the same grace and dignity.",
-    longAnswer:
-      "From creation, Scripture presents marriage as a covenant between a man and a woman becoming one flesh, and passages such as Romans 1 and 1 Corinthians 6 name same-sex sexual activity among behaviors that fall outside God's design for intimacy. It is important to distinguish attraction or temptation, which is not itself sin, from chosen behavior. Scripture is equally clear that no struggle places a person beyond grace: 1 Corinthians 6:11 tells believers who once lived in various sins, 'such were some of you,' before describing how they were washed, sanctified, and justified in Christ. Every person carries the image of God and deserves to be treated with compassion, respect, and welcome in the church community. Like every other believer, those who experience same-sex attraction are called to grow in Christlike character through the Spirit's ongoing, patient work, not to be singled out, shamed, or excluded.",
-    topics: ["Marriage and Family", "Christian Living"],
-    category: "Life and Relationships",
-    scriptures: ["Genesis 2:24", "Romans 1:26-27", "1 Corinthians 6:9-11"],
-    keywords: ["homosexuality", "same-sex", "lgbtq", "sexuality", "sin", "grace", "identity"]
-  },
-  {
-    id: "answer-tattoos",
-    question: "Does biblical text prohibit getting tattoos or body modifications?",
-    shortAnswer:
-      "The Old Testament's specific prohibition against cutting or marking the body was tied to pagan mourning rituals, not a timeless ban on all body art. The broader biblical principle is that the body belongs to God and should be honored with wisdom rather than treated as a matter of legalistic rule-keeping.",
-    longAnswer:
-      "Leviticus 19:28 forbids cutting the body for the dead or marking it with tattoos, a command given in the context of pagan mourning and idol-worship practices common among Israel's neighbors, rather than a general command applying to every era and culture. The New Testament shifts the emphasis from external rule-keeping to the underlying principle that the body is a temple of the Holy Spirit, bought at a price and meant to glorify God. This means decisions about tattoos or body modification are best weighed through wisdom rather than a flat rule: considering motive, permanence, message, health, and whether a choice reflects self-control and honors God, rather than treating ink itself as inherently sinful.",
-    topics: ["Christian Living", "Health"],
-    category: "Life and Relationships",
-    scriptures: ["Leviticus 19:28", "1 Corinthians 6:19-20", "1 Corinthians 10:31"],
-    keywords: ["tattoos", "body modification", "body art", "piercings", "temple of the holy spirit"]
-  },
-  {
-    id: "answer-eternal-security",
-    question: "Can a true believer ever lose their salvation, or is eternal security a solid biblical doctrine?",
-    shortAnswer:
-      "Salvation is secure for everyone who continues trusting and abiding in Christ, and nothing outside a person can snatch them from His hand. Scripture also warns that willful, persistent turning away from Christ — not ordinary struggle or weakness — can result in someone abandoning the faith they once professed.",
-    longAnswer:
-      "Romans 8 promises that nothing in all creation can separate believers from the love of God, and Jesus said no one can snatch His sheep out of His hand — powerful assurance for anyone who is trusting Him today. At the same time, Jesus described Himself as the vine and believers as branches, warning that a branch that does not abide in Him withers and is removed, and Hebrews and 2 Peter both warn soberly about those who deliberately, knowingly turn back from a genuine relationship with Christ. The consistent picture is not that salvation is earned or that momentary sin or doubt cancels it, but that salvation is kept secure through an ongoing, living faith relationship with Christ; security is real and trustworthy for all who continue to abide in Him by grace, while Scripture takes seriously the danger of deliberately, finally rejecting Him.",
-    topics: ["Salvation", "Faith"],
-    category: "Faith and Salvation",
-    scriptures: ["John 15:4-6", "Romans 8:38-39", "Hebrews 6:4-6"],
-    keywords: ["eternal security", "losing salvation", "once saved always saved", "apostasy", "assurance", "abiding in christ"]
-  },
-  {
-    id: "answer-masturbation",
-    question: "Is self-pleasure considered a sin in the eyes of biblical scripture?",
-    shortAnswer:
-      "Scripture never names this act directly, but it repeatedly calls believers to guard the heart and mind from lust, to practice self-control, and to honor the body as a temple of the Holy Spirit. This is an area for honest, grace-filled reflection rather than fear or shame.",
-    longAnswer:
-      "The Bible does not explicitly mention masturbation, so any application depends on broader biblical principles rather than a direct command. Jesus taught that lust itself, not only outward action, matters to God, which points believers toward examining the thoughts and desires connected to any behavior. Paul calls believers to sexual self-control and holiness, and to treat the body as belonging to God rather than being ruled by unchecked desire, especially where habits become compulsive or entangled with pornography. Rather than a legalistic rule, Scripture invites honest self-examination before God, freedom from shame through grace, and reliance on the Holy Spirit's help to grow in purity and self-control over time.",
-    topics: ["Christian Living", "Health"],
-    category: "Life and Relationships",
-    scriptures: ["Matthew 5:27-28", "1 Thessalonians 4:3-5", "1 Corinthians 6:19-20"],
-    keywords: ["masturbation", "self-pleasure", "lust", "purity", "self-control", "sexuality"]
-  },
-  {
-    id: "answer-interracial-marriage",
-    question: "Does the Bible address or restrict marriage between different racial or ethnic backgrounds?",
-    shortAnswer:
-      "Scripture does not prohibit marriage across racial or ethnic lines. All people descend from one common origin and are equally made in God's image, and the biblical concerns about intermarriage were about shared faith, not race.",
-    longAnswer:
-      "Acts 17:26 teaches that God made every nation of humanity 'from one man,' establishing a shared human origin that undercuts any notion of racial superiority or a biblical basis for restricting marriage by race. When Miriam and Aaron criticized Moses for marrying a Cushite woman, God rebuked their objection rather than Moses' marriage. The Old Testament warnings against intermarrying with certain surrounding nations were rooted in the danger of being drawn into idol worship, not ethnicity itself, and Galatians 3:28 affirms that in Christ, ethnic distinctions carry no spiritual hierarchy. What matters for a lasting, God-honoring marriage is shared faith, character, and commitment, not racial or ethnic background.",
-    topics: ["Marriage and Family", "Christian Living"],
-    category: "Life and Relationships",
-    scriptures: ["Acts 17:26", "Numbers 12:1-10", "Galatians 3:28"],
-    keywords: ["interracial marriage", "race", "ethnicity", "intermarriage", "marriage"]
-  },
-  {
-    id: "answer-cain-wife",
-    question: "Where did Cain find his wife after being banished?",
-    shortAnswer:
-      "Scripture does not name her directly, but Genesis records that Adam and Eve had many other sons and daughters, so Cain most likely married a close relative — a sister or niece — which was not yet prohibited at that early point in human history.",
-    longAnswer:
-      "Genesis 5:4 states that Adam lived many years after Seth's birth and had additional sons and daughters, indicating a growing human family beyond the individuals named in the early chapters of Genesis. Since Scripture teaches that the entire human race descended from a single first pair, Cain's wife would necessarily have been a close relative, most likely a sister or niece. This kind of marriage was not forbidden until much later, when the Mosaic law restricted close-relative marriage, likely both for moral order and because accumulated genetic effects had made such unions medically riskier by that time. Scripture is intentionally brief here, focused on the moral and spiritual lessons of Cain's story rather than exhaustive genealogical detail, so some uncertainty about the exact details remains appropriate.",
-    topics: ["Creation", "Bible Study"],
-    category: "Knowing God",
-    scriptures: ["Genesis 4:16-17", "Genesis 5:4", "Acts 17:26"],
-    keywords: ["cain's wife", "cain and abel", "genesis", "early humanity", "genealogy"]
-  },
-  {
-    id: "answer-suicide",
-    question: "How does Christian theology view suicide, and what is the eternal standing of a believer who takes their own life?",
-    shortAnswer:
-      "Suicide is a profound tragedy, not an automatic, unforgivable sin that overrides a person's relationship with Christ. Scripture teaches that final judgment belongs to God alone, who alone knows the full state of a person's heart and mind. Anyone in crisis should reach out immediately for help — you are not alone, and God is near.",
-    longAnswer:
-      "Scripture never singles out suicide as an unforgivable act, and it does not authorize any human being to declare another person's eternal destiny — that judgment belongs to God alone, who alone sees the full picture of pain, illness, and struggle behind such a moment. Salvation rests on a relationship with Christ sustained by grace, not on the circumstances of a person's final moment, and God is described as especially near to the brokenhearted and to those crushed in spirit. Rather than offering false certainty in either direction, Scripture calls the church to surround grieving families with compassion, and calls anyone experiencing thoughts of suicide to reach out immediately — to a trusted friend, pastor, counselor, or a crisis helpline — trusting that God's presence and help are available in the darkest moments, and that no situation is beyond His care.",
-    topics: ["Comfort", "Christian Living"],
-    category: "Life and Relationships",
-    scriptures: ["Psalm 34:18", "Romans 14:10-12", "Psalm 139:13-16"],
-    keywords: ["suicide", "self-harm", "mental health", "crisis", "grief", "hope", "eternal destiny"]
-  },
-  {
-    id: "answer-animals-afterlife",
-    question: "Do animals possess souls, and will pets exist in the afterlife?",
-    shortAnswer:
-      "Scripture describes both people and animals as sharing the 'breath of life,' but only humans are made in God's image with the hope of resurrection. The Bible does not explicitly promise pets in the afterlife, yet its pictures of the restored new earth include animals living in peace, offering real, though not fully detailed, hope.",
-    longAnswer:
-      "Genesis describes animals receiving the same 'breath of life' given to humanity, and Ecclesiastes 3 candidly admits that no one can be fully certain where the spirit of an animal goes compared to a human being. Scripture does not promise personal, individual reunions with pets the way it promises resurrection for people made in God's image. At the same time, the prophetic picture of the new earth in Isaiah 11 describes animals such as the wolf and lamb living together in peace, suggesting that animal life in general has a place in God's restored creation. Combined with the tenderness Scripture shows toward animals — from the righteous caring for the life of their animal to God's own attention to the sparrows — this gives comfort and hope, even where specific details are left unstated.",
-    topics: ["Creation", "Prophecy"],
-    category: "Hope and Prophecy",
-    scriptures: ["Ecclesiastes 3:19-21", "Isaiah 11:6-9", "Matthew 10:29"],
-    keywords: ["animals", "pets", "afterlife", "new earth", "souls", "animal souls"]
-  },
-  {
-    id: "answer-tongues",
-    question: "Is the spiritual gift of speaking and praying in tongues active for believers today?",
-    shortAnswer:
-      "At Pentecost, the gift of tongues enabled believers to proclaim the gospel in real, known languages they had not learned. Paul lists tongues among the Spirit's gifts, while also instructing that it must be exercised in order, with interpretation, and never above intelligible teaching that builds up the whole church.",
-    longAnswer:
-      "In Acts 2, tongues appear as actual human languages, allowing the gospel to be understood immediately by people from many nations without a language barrier. Paul confirms tongues as one of several genuine gifts distributed by the Spirit for the church's benefit, but in 1 Corinthians 14 he places clear guardrails on its use in public worship: it should be interpreted so the whole congregation can be built up, exercised in turn rather than chaos, and never elevated above intelligible teaching and prophecy, which edify the church far more directly. Whether or not the specific gift continues in exactly its New Testament form, the underlying principle stands: any spiritual gift, including tongues, is meant to build up the church in an orderly, understandable way, not to draw attention to the individual or create confusion.",
-    topics: ["Holy Spirit", "Church"],
-    category: "Knowing God",
-    scriptures: ["Acts 2:4-6", "1 Corinthians 12:7-11", "1 Corinthians 14:12-13, 40"],
-    keywords: ["tongues", "speaking in tongues", "gift of tongues", "pentecost", "spiritual gifts"]
-  },
-  {
-    id: "answer-dinosaurs",
-    question: "Does the Bible mention dinosaurs or ancient prehistoric creatures?",
-    shortAnswer:
-      "The word 'dinosaur' does not appear in the Bible, but Job describes massive land and water creatures, Behemoth and Leviathan, in vivid detail. Scripture places the creation of all land animals within the same creation week as humanity, rather than millions of years earlier.",
-    longAnswer:
-      "Because the term 'dinosaur' was coined in the nineteenth century, Scripture naturally does not use it, but Job 40-41 describes Behemoth and Leviathan as enormous, powerful creatures unlike anything commonly seen today, which many readers connect to large ancient animals. Genesis places the creation of land animals and humanity within the same sixth day of the creation week, rather than separated by long ages, so any such creatures would have existed alongside early humanity rather than millions of years before. Their disappearance is often understood in light of the global Flood described in Genesis 6-9 and the dramatic climate changes that followed it. Scripture does not give exhaustive detail here, so some humility about specifics is appropriate, but its consistent framework places these creatures within a relatively recent, unified creation history.",
-    topics: ["Creation", "Bible Study"],
-    category: "Knowing God",
-    scriptures: ["Job 40:15-24", "Job 41:1", "Genesis 1:24-25"],
-    keywords: ["dinosaurs", "prehistoric creatures", "behemoth", "leviathan", "creation", "flood"]
-  },
-  {
-    id: "answer-alcohol",
-    question: "Does scripture forbid consuming alcohol, or is moderate drinking acceptable for Christians?",
-    shortAnswer:
-      "Scripture consistently and strongly warns against drunkenness and the dangers wine and strong drink bring, and even commends avoiding alcohol altogether as the wisest path. Because the body is a temple of the Holy Spirit meant to stay clear-headed for prayer, service, and self-control, abstaining entirely is the safest and most consistent application of these principles.",
-    longAnswer:
-      "Proverbs vividly warns against the sorrow, danger, and deception that come with strong drink, going so far as to counsel not even looking at wine when it sparkles in the cup. Priests were forbidden from drinking before entering the tabernacle so their judgment and service to God would stay clear, and Ephesians commands believers not to be drunk with wine, contrasting it with being filled with the Spirit. Since the body belongs to God as a temple of the Holy Spirit, and since alcohol can cloud judgment, harm health, and lead others into destructive habits, choosing total abstinence honors both the clear biblical warnings against drunkenness and the broader call to full self-control, a clear mind, and a body kept fit for God's service.",
-    topics: ["Health", "Christian Living"],
-    category: "Life and Relationships",
-    scriptures: ["Proverbs 23:29-32", "Ephesians 5:18", "1 Corinthians 6:19-20"],
-    keywords: ["alcohol", "drinking", "wine", "drunkenness", "temperance", "self-control"]
-  },
-  {
-    id: "answer-gambling",
-    question: "Is participating in gambling or games of chance considered a sin?",
-    shortAnswer:
-      "The Bible never mentions gambling by name, but its consistent principles — trusting God's providence rather than chance, working honestly for what you have, contentment, and guarding against the love of money — all caution strongly against it.",
-    longAnswer:
-      "Scripture repeatedly warns that the love of money is a root of many kinds of evil, and that those eager to get rich fall into temptation and harmful desires. Gambling relies on chance and the hope of gaining at another person's loss rather than honest labor, and Proverbs observes that wealth gained quickly and carelessly tends to dwindle away. Ecclesiastes notes that those who love money are never satisfied by it, describing a restless cycle gambling often feeds. Instead, Scripture calls believers to trust God's provision, work diligently and honestly for their needs, hold money loosely with contentment, and avoid practices that stir greed or exploit others' losses for personal gain.",
-    topics: ["Stewardship", "Christian Living"],
-    category: "Life and Relationships",
-    scriptures: ["1 Timothy 6:9-10", "Proverbs 13:11", "Ecclesiastes 5:10"],
-    keywords: ["gambling", "lottery", "games of chance", "money", "greed", "stewardship"]
-  },
-  {
-    id: "answer-premarital-sex",
-    question: "What are the biblical boundaries regarding sexual intimacy before marriage?",
-    shortAnswer:
-      "Scripture reserves sexual intimacy for the covenant of marriage between husband and wife, calling unmarried believers to purity and self-control. Those who have crossed this boundary are offered genuine forgiveness and a renewed path of purity through grace.",
-    longAnswer:
-      "From the beginning, Genesis describes a man and woman becoming 'one flesh' within the covenant of marriage, and the New Testament reinforces this pattern by calling believers to abstain from sexual immorality and to control their bodies in holiness and honor rather than in the passion of uncontrolled desire. Hebrews states plainly that the marriage bed is undefiled but that God will judge sexual immorality outside of it, and Paul teaches that sexual union itself creates a profound, uniting bond meant to be reserved for marriage. This is never presented as a barrier to full acceptance for those who have already crossed this line; grace fully forgives, and believers are called forward into ongoing growth in purity, self-control, and honoring both their own body and a future spouse.",
-    topics: ["Marriage and Family", "Christian Living"],
-    category: "Life and Relationships",
-    scriptures: ["1 Corinthians 6:18-20", "1 Thessalonians 4:3-8", "Hebrews 13:4"],
-    keywords: ["premarital sex", "sexual purity", "fornication", "dating", "chastity", "marriage"]
-  },
-  {
-    id: "answer-christ-descended-dead",
-    question: "Did Christ descend into the realm of the dead during the period between His crucifixion and resurrection?",
-    shortAnswer:
-      "Scripture does not describe Jesus consciously journeying to a realm of the dead to preach between His crucifixion and resurrection. Passages sometimes read this way are better understood as describing His incarnation and burial, or His Spirit-empowered preaching through Noah generations earlier, consistent with death being an unconscious rest until the resurrection.",
-    longAnswer:
-      "Ephesians 4:9 describes Christ 'descending into the lower parts of the earth,' language most naturally understood as referring to His incarnation and burial — coming down to our mortal, earthly existence and the grave — rather than a literal journey to a place of conscious punishment. First Peter 3:18-20's mention of Christ preaching 'to the spirits in prison' fits naturally with Peter's own explanation elsewhere that the Spirit of Christ was at work through Noah, 'a preacher of righteousness,' warning the disobedient people of his day who are now, from our present vantage point, spirits awaiting final judgment. On the cross, Jesus committed His spirit to the Father and later told the thief he would be with Him 'in paradise,' language pointing to the certainty of the promise rather than a same-day conscious meeting, consistent with death being described elsewhere in Scripture as a sleep until the resurrection.",
-    topics: ["State of the Dead", "Prophecy"],
-    category: "Hope and Prophecy",
-    scriptures: ["Ephesians 4:9-10", "1 Peter 3:18-20", "Luke 23:43, 46"],
-    keywords: ["descended into hell", "harrowing of hell", "spirits in prison", "state of the dead", "crucifixion"]
-  },
-  {
-    id: "answer-divorce-remarriage",
-    question: "What are the scriptural grounds permitted for divorce and subsequent remarriage?",
-    shortAnswer:
-      "God's design is a lifelong marriage covenant, but Jesus permitted divorce in the case of sexual immorality breaking that covenant, and Paul added that a believer is not bound if an unbelieving spouse abandons the marriage. Beyond these narrow grounds, divorce is discouraged, though grace and restoration remain available to anyone who has been through one.",
-    longAnswer:
-      "Jesus taught that God's original design was for marriage to be a lifelong, one-flesh union, but He identified sexual immorality as grounds on which the marriage covenant could rightly be considered broken, permitting divorce in that situation. Paul, addressing a different scenario, taught that if an unbelieving spouse chooses to leave the marriage, the believing spouse is 'not bound' and is free, since God has called believers to peace rather than being forced to hold together what the other person has abandoned. Malachi's statement that God hates divorce reflects the real pain and brokenness divorce causes, not a condemnation of those who have suffered through it. Outside of these specific situations, Scripture consistently urges couples toward reconciliation, patience, and forgiveness, while also offering genuine grace, healing, and a renewed path forward to anyone who has already experienced divorce.",
-    topics: ["Marriage and Family", "Christian Living"],
-    category: "Life and Relationships",
-    scriptures: ["Matthew 19:3-9", "1 Corinthians 7:10-15", "Malachi 2:16"],
-    keywords: ["divorce", "remarriage", "marriage", "adultery", "abandonment", "separation"]
-  },
-  {
-    id: "answer-baptism-meaning",
-    question: "What does baptism symbolize in the Bible?",
-    shortAnswer:
-      "Baptism is a public confession of faith in Jesus, symbolizing death to the old life, burial with Christ, and rising to walk in newness of life.",
-    longAnswer:
-      "The New Testament presents baptism as a meaningful response to the gospel rather than a casual religious ritual. Going down into the water pictures burial with Christ, and coming up from the water pictures resurrection into a new life shaped by His grace. Baptism does not earn salvation, but it publicly identifies a believer with Jesus, His death and resurrection, and His people. In Acts, baptism follows repentance and faith as people receive the message of Christ and openly begin the life of discipleship.",
-    topics: ["Baptism", "Salvation", "Faith"],
-    category: "Faith and Salvation",
-    scriptures: ["Romans 6:3-4", "Acts 2:38", "Matthew 28:19-20"],
-    keywords: ["baptism meaning", "immersion", "new life", "repentance", "discipleship"]
-  },
-  {
-    id: "answer-forgiving-yourself",
-    question: "How can I forgive myself after I have sinned?",
-    shortAnswer:
-      "Self-forgiveness begins by trusting that God's forgiveness in Christ is greater than guilt. Confession, repentance, and receiving grace allow a believer to move forward without denying the seriousness of sin.",
-    longAnswer:
-      "Many people continue punishing themselves long after they have confessed sin to God, but Scripture directs the repentant heart to the sufficiency of Christ's mercy. Genuine repentance does not minimize wrongdoing; it agrees with God about sin and turns toward Him for cleansing. First John promises that God is faithful and just to forgive and cleanse those who confess. When God forgives, continuing to live under condemnation can become a refusal to trust His grace. Healthy self-forgiveness means making things right where possible, learning from failure, accepting needed accountability, and walking forward in the freedom Christ gives.",
-    topics: ["Forgiveness", "Salvation", "Comfort", "Christian Living"],
-    category: "Life and Relationships",
-    scriptures: ["1 John 1:9", "Romans 8:1", "Psalm 103:12"],
-    keywords: ["forgive myself", "guilt", "shame", "confession", "repentance", "grace"]
-  },
-  {
-    id: "answer-great-controversy-meaning",
-    question: "What is the great controversy in the Bible?",
-    shortAnswer:
-      "The great controversy is the Bible's picture of the conflict between Christ and Satan, truth and deception, love and rebellion, with God's character ultimately vindicated before the universe.",
-    longAnswer:
-      "Scripture describes more than isolated human struggles; it reveals a larger conflict behind history. Satan's rebellion began with pride and accusation against God's character, and earth became the place where sin's consequences are exposed and God's love is revealed most clearly in Christ. The cross shows that God wins not by coercion but by self-sacrificing love. Until evil is finally removed, believers are called to faithfulness, discernment, prayer, and confidence that Christ has already secured the outcome. This framework helps explain suffering without blaming God as the author of evil.",
-    topics: ["Great Controversy", "Prophecy", "Faith"],
-    category: "Hope and Prophecy",
-    scriptures: ["Revelation 12:7-12", "Genesis 3:15", "John 12:31-32"],
-    keywords: ["great controversy", "cosmic conflict", "satan", "evil", "spiritual warfare", "god's character"]
-  },
-  {
-    id: "answer-law-and-grace",
-    question: "How do law and grace work together in the Christian life?",
-    shortAnswer:
-      "Grace saves sinners through faith in Christ, while God's law shows what love looks like. Obedience is the fruit of salvation, not the price paid to receive it.",
-    longAnswer:
-      "The Bible never presents God's grace and God's law as enemies. Grace forgives, restores, and writes God's will on the heart; the law reveals God's character and shows what love for God and neighbor looks like in practical life. Legalism tries to use obedience as a ladder to earn acceptance, but the gospel teaches that acceptance comes through Christ alone. At the same time, grace does not make rebellion desirable. The Spirit leads believers into willing obedience because they have already been loved, rescued, and made new.",
-    topics: ["Law", "Salvation", "Christian Living", "Faith"],
-    category: "Faith and Salvation",
-    scriptures: ["Ephesians 2:8-10", "Romans 3:31", "John 14:15"],
-    keywords: ["law and grace", "obedience", "legalism", "commandments", "faith", "gospel"]
-  },
-  {
-    id: "answer-sanctuary-today",
-    question: "Why does the sanctuary message matter today?",
-    shortAnswer:
-      "The sanctuary message matters because it shows how God deals with sin through Christ's sacrifice, priestly ministry, judgment, cleansing, and final restoration.",
-    longAnswer:
-      "The earthly sanctuary was a living illustration of the gospel. Its sacrifices pointed forward to Jesus' death, its priestly ministry pointed to His intercession, and its Day of Atonement pointed to God's final work of cleansing and judgment. This message matters today because it gives believers assurance that Christ's ministry did not end at the cross; He continues to apply the benefits of His sacrifice, represent His people, and prepare the universe for the complete end of sin. The sanctuary keeps salvation centered on Jesus from beginning to end.",
-    topics: ["Sanctuary", "Salvation", "Prophecy"],
-    category: "Hope and Prophecy",
-    scriptures: ["Hebrews 4:14-16", "Hebrews 8:1-2", "Daniel 8:14"],
-    keywords: ["sanctuary message", "atonement", "high priest", "heavenly sanctuary", "judgment", "cleansing"]
-  },
-  {
-    id: "answer-ready-for-second-coming",
-    question: "How can I be ready for the Second Coming of Jesus?",
-    shortAnswer:
-      "Readiness for Jesus' return is not date-setting or fear. It is an active relationship with Christ that shows itself in faith, watchfulness, obedience, service, and hope.",
-    longAnswer:
-      "Jesus repeatedly warned His followers to stay awake, not because they should live in panic, but because discipleship can become sleepy, distracted, or careless. Readiness begins with trusting Christ now, receiving His grace, and staying connected to Him daily. It also includes practical faithfulness: forgiving others, serving people in need, sharing the gospel, and living with eternity in view. Prophecy is meant to strengthen hope and loyalty, not produce speculation. The safest preparation for Christ's return is a surrendered life with Him today.",
-    topics: ["Second Coming", "Prophecy", "Christian Living", "Faith"],
-    category: "Hope and Prophecy",
-    scriptures: ["Matthew 24:42-44", "Luke 21:34-36", "Titus 2:11-13"],
-    keywords: ["ready for second coming", "watchfulness", "Jesus return", "end times", "prepared", "hope"]
-  },
-  {
-    id: "answer-three-angels-everlasting-gospel",
-    question: "Why are the three angels' messages called the everlasting gospel?",
-    shortAnswer:
-      "The three angels' messages are called the everlasting gospel because their warnings are centered on the good news of worshiping the Creator, trusting Jesus, and remaining faithful before He returns.",
-    longAnswer:
-      "Revelation 14 begins with the everlasting gospel going to every nation, tribe, language, and people. The messages include urgent warnings, but they are not disconnected from grace. They call the world away from false worship and confusion because God desires people to receive truth, freedom, and salvation in Christ. The first angel points to the Creator, the second exposes Babylon's spiritual deception, and the third warns against coerced allegiance to powers opposed to God. The closing picture is a faithful people who keep God's commandments and hold to faith in Jesus, showing that the final message is both truth-filled and Christ-centered.",
-    topics: ["Three Angels", "Prophecy", "Faith", "Law"],
-    category: "Hope and Prophecy",
-    scriptures: ["Revelation 14:6-12", "Matthew 24:14", "John 14:6"],
-    keywords: ["everlasting gospel", "three angels messages", "Revelation 14", "worship", "Babylon", "faith of Jesus"]
-  },
-  {
-    id: "answer-depression",
-    question: "What does the Bible say to someone struggling with depression?",
-    shortAnswer:
-      "Scripture gives room for deep sorrow while pointing the hurting person toward God's nearness, honest prayer, supportive community, and patient hope.",
-    longAnswer:
-      "The Bible does not pretend that faithful people never experience darkness. Elijah, David, Jeremiah, and others expressed exhaustion, grief, and despair honestly before God. Scripture invites lament rather than denial, reminding the suffering person that God is near to the brokenhearted and attentive to cries for help. Depression should never be treated as a simple spiritual failure; wise care may include prayer, Scripture, trusted friends, pastoral support, counseling, and medical help when needed. Hope often returns gradually, but God's presence is not limited to seasons when emotions feel strong.",
-    topics: ["Comfort", "Prayer", "Health", "Christian Living"],
-    category: "Life and Relationships",
-    scriptures: ["Psalm 34:18", "1 Kings 19:4-8", "Psalm 42:11"],
-    keywords: ["depression", "sadness", "mental health", "despair", "hope", "emotional pain"]
-  },
-  {
-    id: "answer-unanswered-prayer",
-    question: "Why does God sometimes seem silent when I pray?",
-    shortAnswer:
-      "God's silence does not mean absence or rejection. Scripture teaches believers to keep praying, examine the heart, trust God's timing, and rest in His wisdom.",
-    longAnswer:
-      "Many prayers in Scripture include seasons of waiting, confusion, and apparent silence. The Psalms often ask how long God will delay, showing that honest questions can be part of real faith. Sometimes prayer is hindered by cherished sin, selfish motives, or broken relationships that need attention; other times the delay is not explained, and believers are simply invited to trust God's character. Jesus Himself prayed in agony and surrendered to the Father's will. God's answers may be yes, no, wait, or a deeper work than the person first asked for, but His silence is never proof that He has stopped caring.",
-    topics: ["Prayer", "Faith", "Comfort"],
-    category: "Knowing God",
-    scriptures: ["Psalm 13:1-2", "Luke 18:1", "1 John 5:14"],
-    keywords: ["unanswered prayer", "God silent", "waiting", "prayer delay", "trust", "faith"]
-  },
-  {
-    id: "answer-communion",
-    question: "What is the meaning of the Lord's Supper or Communion?",
-    shortAnswer:
-      "Communion remembers Christ's sacrifice, proclaims His death, renews faith in His grace, and points forward to His return.",
-    longAnswer:
-      "Jesus gave the bread and cup as a memorial of His body given and His blood poured out for sinners. Communion is not an empty tradition; it invites believers to remember the cost of salvation, receive again the assurance of grace, examine the heart, and renew unity with other believers. Paul says that every time Christians eat the bread and drink the cup, they proclaim the Lord's death until He comes. This means Communion looks backward to the cross, inward to repentance and faith, outward to fellowship, and forward to Christ's return.",
-    topics: ["Church", "Salvation", "Faith"],
-    category: "Faith and Salvation",
-    scriptures: ["Luke 22:19-20", "1 Corinthians 11:23-26", "John 6:35"],
-    keywords: ["communion", "lord's supper", "bread and cup", "foot washing", "church", "cross"]
-  },
-  {
-    id: "answer-clean-unclean-foods",
-    question: "Does the Bible still distinguish between clean and unclean foods?",
-    shortAnswer:
-      "Scripture identifies clean and unclean animals before Sinai and connects wise eating with holiness, health, and honoring God with the body.",
-    longAnswer:
-      "The clean and unclean distinction appears as early as Noah, long before the ceremonial laws given through Moses. Leviticus later gives detailed instruction about which animals were considered clean for food, and the New Testament never presents unclean animals as newly healthy or spiritually beneficial to eat. Passages sometimes used to erase the distinction are better read in context as addressing human traditions, Gentile inclusion, or food offered to idols rather than redefining unclean animals as clean. Christians are not saved by diet, but caring for the body as God's temple makes food choices part of grateful stewardship.",
-    topics: ["Health", "Law", "Christian Living"],
-    category: "Life and Relationships",
-    scriptures: ["Genesis 7:2", "Leviticus 11:1-8", "1 Corinthians 10:31"],
-    keywords: ["clean and unclean foods", "diet", "pork", "health message", "Leviticus 11", "food laws"]
-  },
-  {
-    id: "answer-family-worship",
-    question: "How can a family worship God together at home?",
-    shortAnswer:
-      "Family worship can be simple: read Scripture, pray together, sing or share gratitude, and talk about how God's Word applies to daily life.",
-    longAnswer:
-      "The Bible pictures faith being taught in the ordinary rhythms of home life, not only during formal worship services. Family worship does not need to be long or complicated to be meaningful. A short passage, a question everyone can answer, prayer for real needs, and a moment of thanksgiving can shape the atmosphere of a home over time. Parents are called to teach diligently, but children also learn from seeing humility, forgiveness, and consistency. The goal is not performance; it is creating regular space for the family to remember God together.",
-    topics: ["Marriage and Family", "Prayer", "Bible Study", "Christian Living"],
-    category: "Life and Relationships",
-    scriptures: ["Deuteronomy 6:6-7", "Joshua 24:15", "Psalm 78:4"],
-    keywords: ["family worship", "home worship", "children", "parents", "devotions", "prayer"]
-  },
-  {
-    id: "answer-spiritual-warfare",
-    question: "How should Christians understand spiritual warfare?",
-    shortAnswer:
-      "Spiritual warfare is real, but believers stand in Christ through truth, righteousness, faith, Scripture, prayer, and dependence on God's strength.",
-    longAnswer:
-      "The Bible teaches that Christian life takes place within a real conflict against spiritual forces of evil, but it does not encourage fear or fascination with darkness. Ephesians points believers to the armor of God: truth, righteousness, the gospel of peace, faith, salvation, the Word of God, and prayer. The center of spiritual warfare is loyalty to Christ in ordinary life: resisting temptation, rejecting deception, forgiving others, praying faithfully, and trusting God's promises. Christians fight from Christ's victory, not for a victory they must create on their own.",
-    topics: ["Great Controversy", "Faith", "Prayer", "Christian Living"],
-    category: "Hope and Prophecy",
-    scriptures: ["Ephesians 6:10-18", "James 4:7", "Revelation 12:11"],
-    keywords: ["spiritual warfare", "armor of God", "devil", "temptation", "prayer", "victory"]
-  },
-  {
-    id: "answer-mark-of-beast",
-    question: "What is the mark of the beast in Revelation?",
-    shortAnswer:
-      "The mark of the beast represents final allegiance to false worship and human authority in opposition to God's commandments and faith in Jesus.",
-    longAnswer:
-      "Revelation describes a final conflict over worship, loyalty, and authority. The mark of the beast should be understood in contrast with the seal of God: one reflects allegiance to a system opposed to God's authority, while the other reflects loyalty to the Creator. The issue is not a random barcode, microchip, or secret technology; it is worship shaped by coercion, deception, and rejection of God's commandments. Revelation's warning is serious, but it is given in mercy so people can choose Christ, receive the everlasting gospel, and stand faithful through His power.",
-    topics: ["Prophecy", "Three Angels", "Law", "Faith"],
-    category: "Hope and Prophecy",
-    scriptures: ["Revelation 13:16-17", "Revelation 14:9-12", "Revelation 7:2-3"],
-    keywords: ["mark of the beast", "seal of God", "Revelation 13", "false worship", "end times", "commandments"]
-  },
-  {
-    id: "answer-daily-bible-reading",
-    question: "Why is daily Bible reading important?",
-    shortAnswer:
-      "Daily Bible reading keeps the heart rooted in God's voice, renews the mind, strengthens faith, and gives wisdom for ordinary decisions.",
-    longAnswer:
-      "Scripture describes God's Word as light, food, seed, and a sword because it shapes the inner life in ways people cannot produce by willpower alone. Regular Bible reading helps believers recognize God's character, test ideas, resist temptation, and remember promises when feelings shift. The goal is not checking off a spiritual task, but listening to God with a teachable heart. Even a small daily portion, read prayerfully and applied honestly, can build long-term spiritual stability and deepen love for Christ.",
-    topics: ["Bible Study", "Faith", "Christian Living"],
-    category: "Knowing God",
-    scriptures: ["Psalm 119:105", "Matthew 4:4", "2 Timothy 3:16-17"],
-    keywords: ["daily Bible reading", "devotions", "Scripture study", "spiritual growth", "God's Word"]
-  },
-  {
-    id: "answer-why-get-baptized",
-    question: "Why should I be baptized if I already believe in Jesus?",
-    shortAnswer:
-      "Baptism is not a substitute for faith but its public expression — a burial of the old life and a rising to walk in newness of life with Christ.",
-    longAnswer:
-      "Belief and baptism work together rather than competing for importance. Jesus Himself was baptized to fulfill righteousness, and He commanded His followers to baptize disciples as part of making them. Paul describes baptism by immersion as a picture of the gospel itself: going under the water pictures being buried with Christ, and coming up pictures rising to a new life empowered by the Spirit. It is a public, obedient response to faith already at work in the heart, not a private feeling kept to oneself, and it marks the believer's identity as belonging to Christ.",
-    topics: ["Baptism", "Faith", "Christian Living"],
-    category: "Faith and Salvation",
-    scriptures: ["Romans 6:3-4", "Matthew 28:19", "Acts 2:38"],
-    keywords: ["baptism", "immersion", "new life", "public profession", "obedience"]
-  },
-  {
-    id: "answer-baptism-age",
-    question: "Is there a right age to be baptized?",
-    shortAnswer:
-      "Scripture does not set a fixed age; baptism follows a personal, understood decision to repent and trust Christ, whether that comes early or later in life.",
-    longAnswer:
-      "The New Testament pattern for baptism follows belief, not birth or family tradition alone. Every baptism recorded in Acts follows a person hearing the gospel, understanding it, and choosing to respond. Because of this, readiness matters more than a specific number: a child, teen, or adult can be baptized once they grasp what it means to repent, trust Jesus as Savior, and commit to following Him. Parents, mentors, and church leaders can help someone weigh that decision honestly rather than rushing it or delaying it out of fear.",
-    topics: ["Baptism", "Church", "Faith"],
-    category: "Faith and Salvation",
-    scriptures: ["Acts 8:36-37", "Acts 16:31-33", "Mark 16:16"],
-    keywords: ["baptism age", "children", "believer's baptism", "decision", "commitment"]
-  },
-  {
-    id: "answer-sanctuary-meaning",
-    question: "What is the meaning of the sanctuary in the Bible?",
-    shortAnswer:
-      "The Old Testament sanctuary was a visual gospel, teaching how sin is confessed, atoned for, and ultimately removed through the work of Jesus Christ.",
-    longAnswer:
-      "God instructed Israel to build a sanctuary so He could dwell among His people and teach them, in pictures they could see and touch, how salvation works. Its furniture, sacrifices, and priestly service illustrated substitution, cleansing, mediation, and final judgment. The New Testament identifies Jesus as the reality behind every sanctuary symbol: He is the sacrifice, the High Priest, and the one who ministers on behalf of sinners. Understanding the sanctuary helps believers see the gospel as an unfolding story rather than an isolated event, one that moves toward the final removal of sin altogether.",
-    topics: ["Sanctuary", "Salvation", "Prophecy"],
-    category: "Hope and Prophecy",
-    scriptures: ["Hebrews 8:1-2", "Hebrews 9:11-12", "Exodus 25:8"],
-    keywords: ["sanctuary", "tabernacle", "high priest", "sacrifice", "atonement"]
-  },
-  {
-    id: "answer-day-of-atonement",
-    question: "What was the Day of Atonement and why does it matter today?",
-    shortAnswer:
-      "The Day of Atonement pictured a final cleansing of sin's record, pointing forward to the judgment and to Christ's ongoing work of removing sin completely.",
-    longAnswer:
-      "Once a year, Israel's high priest entered the Most Holy Place to complete the cleansing of the sanctuary, removing the accumulated record of confessed sin from the camp. This yearly ceremony pictured something larger than a ritual: a coming day when sin's record would be fully and finally dealt with. The New Testament connects this pattern to Christ's ministry in heaven and to a future judgment, reminding believers that confessed sin is not just forgiven but will be completely blotted out, and calling for genuine repentance rather than casual religion.",
-    topics: ["Sanctuary", "Prophecy", "Second Coming"],
-    category: "Hope and Prophecy",
-    scriptures: ["Leviticus 16:29-30", "Daniel 8:14", "Hebrews 9:23-24"],
-    keywords: ["day of atonement", "judgment", "cleansing", "sanctuary", "Daniel 8"]
-  },
-  {
-    id: "answer-forgive-myself",
-    question: "How can I forgive myself after making a serious mistake?",
-    shortAnswer:
-      "Self-forgiveness grows out of receiving God's forgiveness fully — trusting that His pardon in Christ is complete, even when guilty feelings linger.",
-    longAnswer:
-      "Many people find it easier to believe God forgives others than to believe He has truly forgiven them. Scripture insists that confessed sin is genuinely removed, compared to a debt fully paid, not partially excused. Struggling to forgive yourself often means trusting your own judgment of your worth more than God's finished work on the cross. Practical steps include confessing specifically, receiving Scripture's promises as true regardless of feelings, making amends where possible, and refusing to let shame define an identity that God has already declared forgiven and renewed.",
-    topics: ["Forgiveness", "Comfort", "Salvation"],
-    category: "Life and Relationships",
-    scriptures: ["1 John 1:9", "Psalm 103:12", "Romans 8:1"],
-    keywords: ["self-forgiveness", "guilt", "shame", "grace", "past mistakes"]
-  },
-  {
-    id: "answer-forgive-repeatedly",
-    question: "Do I have to forgive someone who keeps hurting me?",
-    shortAnswer:
-      "Jesus calls believers to a forgiving heart without limit, while Scripture also allows wisdom, honest confrontation, and protective boundaries.",
-    longAnswer:
-      "When Peter asked whether forgiving seven times was enough, Jesus answered with a number meant to remove any ceiling on forgiveness. This does not mean ignoring harm or pretending a pattern of abuse is healthy; Scripture also commends confronting sin honestly and, where needed, limiting access to protect oneself or others. Forgiveness releases personal vengeance to God and refuses to let bitterness take root, but it can coexist with firm boundaries, seeking outside help, and waiting for evidence of real change before rebuilding trust.",
-    topics: ["Forgiveness", "Christian Living", "Marriage and Family"],
-    category: "Life and Relationships",
-    scriptures: ["Matthew 18:21-22", "Luke 17:3-4", "Proverbs 4:23"],
-    keywords: ["forgiveness", "boundaries", "repeated offense", "bitterness", "trust"]
-  },
-  {
-    id: "answer-second-coming-signs",
-    question: "What are the biblical signs that Jesus is coming soon?",
-    shortAnswer:
-      "Jesus described spiritual, social, and global signs — false christs, wars, disasters, and the gospel reaching the whole world — as markers that His return is near.",
-    longAnswer:
-      "In the Olivet Discourse, Jesus warned against being deceived by false messiahs while pointing to broader patterns: wars, famines, earthquakes, persecution, increasing lawlessness, and love growing cold. He also gave a positive sign of hope: the gospel being preached to the whole world as a witness before the end comes. These signs are meant to prepare hearts rather than fuel date-setting or fear; Jesus repeatedly emphasized watching, staying spiritually awake, and living faithfully rather than trying to calculate an exact time.",
-    topics: ["Second Coming", "Prophecy", "Faith"],
-    category: "Hope and Prophecy",
-    scriptures: ["Matthew 24:6-14", "Luke 21:25-28", "2 Timothy 3:1-5"],
-    keywords: ["signs of the times", "second coming", "end times", "Olivet Discourse", "watching"]
-  },
-  {
-    id: "answer-second-coming-how",
-    question: "How will Jesus return according to the Bible?",
-    shortAnswer:
-      "Scripture describes Christ's return as literal, visible, audible, and glorious — every eye will see Him, unlike any secret or symbolic coming.",
-    longAnswer:
-      "The Bible consistently describes the second coming in concrete, public terms rather than a quiet or hidden event. Jesus will descend from heaven with a shout, the voice of an archangel, and the trumpet of God, and every eye will see Him, including those who rejected Him. This is the same Jesus who ascended visibly, and He will return in the same visible way, gathering His people and putting a final end to sin's reign on earth. Because it is so unmistakable, believers do not need to fear being fooled by counterfeit, secret, or localized claims of His arrival.",
-    topics: ["Second Coming", "Prophecy", "Comfort"],
-    category: "Hope and Prophecy",
-    scriptures: ["1 Thessalonians 4:16-17", "Revelation 1:7", "Acts 1:11"],
-    keywords: ["second coming", "return of Christ", "rapture", "trumpet", "every eye shall see"]
-  },
-  {
-    id: "answer-great-controversy-theme",
-    question: "What is the great controversy between good and evil?",
-    shortAnswer:
-      "The great controversy is the Bible's larger story of a conflict between Christ and Satan over God's character, love, and government, resolved fully at the cross and consummated at Christ's return.",
-    longAnswer:
-      "Scripture frames history as more than isolated events; it tells one long story of a challenge to God's character and government, begun with rebellion in heaven and continued through the fall, the flood, the exodus, the cross, and into the present. Satan's accusations claim that God's law is unjust and that His love cannot be trusted. The cross answers that challenge decisively, revealing both God's justice and His self-giving love, and it guarantees the eventual, complete end of evil when Christ returns and sin is no longer permitted to rise again.",
-    topics: ["Great Controversy", "Prophecy", "Faith"],
-    category: "Hope and Prophecy",
-    scriptures: ["Revelation 12:7-9", "Job 1:6-12", "1 John 3:8"],
-    keywords: ["great controversy", "Satan", "problem of evil", "cosmic conflict", "God's character"]
-  },
-  {
-    id: "answer-how-did-sin-begin",
-    question: "How did sin and evil begin, according to the Bible?",
-    shortAnswer:
-      "Sin began with pride and rebellion in heaven, when a created angel desired God's authority for himself, and it spread to earth through the same temptation to distrust God.",
-    longAnswer:
-      "Scripture traces evil's origin not to God's creation but to the choice of a created being. Isaiah and Ezekiel describe, in poetic language layered over historical kings, the fall of a covering angel whose heart was lifted up with pride and who sought to exalt himself above God. That same rebellion reached earth in Eden, when the serpent tempted humanity with the identical lie: that God's authority and word could not be trusted. Understanding sin's origin as a moral choice rather than a divine flaw helps explain why God tolerates evil for a time — to fully expose its results — while still guaranteeing its final, complete end.",
-    topics: ["Great Controversy", "Faith", "Prophecy"],
-    category: "Hope and Prophecy",
-    scriptures: ["Isaiah 14:12-14", "Ezekiel 28:14-17", "Genesis 3:1-5"],
-    keywords: ["origin of sin", "fall of Lucifer", "rebellion", "great controversy", "evil"]
-  },
-  {
-    id: "answer-state-of-dead-soul-sleep",
-    question: "What happens to a person immediately after death, according to the Bible?",
-    shortAnswer:
-      "Scripture describes death as a sleep, an unconscious rest until the resurrection, rather than an immediate conscious journey to heaven or hell.",
-    longAnswer:
-      "The Bible repeatedly uses sleep as the picture for death: the dead \"know nothing,\" their thoughts perish, and Jesus described Lazarus's death as sleep before raising him. This does not diminish the reality of loss or grief, but it does reframe the timeline of the afterlife: the next conscious moment a believer experiences is the resurrection at Christ's return, when the dead in Christ rise first. This teaching offers comfort rather than fear, removing anxiety about the dead being tormented or watching over the living, and it points hope forward to a real, bodily reunion at the resurrection.",
-    topics: ["State of the Dead", "Comfort", "Second Coming"],
-    category: "Hope and Prophecy",
-    scriptures: ["Ecclesiastes 9:5-6", "John 11:11-14", "1 Thessalonians 4:16"],
-    keywords: ["state of the dead", "soul sleep", "death", "resurrection", "afterlife"]
-  },
-  {
-    id: "answer-heaven-hell-timing",
-    question: "Do people go to heaven or hell right when they die?",
-    shortAnswer:
-      "The Bible ties final rewards to the resurrection and judgment at Christ's return, not to an immediate transfer to eternal reward or punishment at death.",
-    longAnswer:
-      "Popular tradition often pictures souls going straight to heaven or hell at the moment of death, but Scripture consistently links reward and punishment to specific future events: the resurrection, the judgment, and Christ's return. Paul describes believers receiving their reward \"at that day,\" meaning Christ's appearing, not the moment of death. This framework protects a central biblical truth — final destinies are settled by God's righteous judgment, openly and fairly, rather than happening invisibly and immediately, and it keeps the resurrection, not death, as the true moment of transition.",
-    topics: ["State of the Dead", "Second Coming", "Prophecy"],
-    category: "Hope and Prophecy",
-    scriptures: ["2 Timothy 4:8", "1 Corinthians 15:51-52", "Revelation 20:12-13"],
-    keywords: ["heaven", "hell", "afterlife", "judgment day", "resurrection"]
-  },
-  {
-    id: "answer-three-angels-first",
-    question: "What is the message of the first angel in Revelation 14?",
-    shortAnswer:
-      "The first angel calls the world to fear God, give Him glory, and worship the Creator, announcing that the hour of judgment has arrived.",
-    longAnswer:
-      "Revelation 14 pictures an angel flying with the everlasting gospel to preach to every nation, tribe, tongue, and people. Its core call is worship: fearing God, giving Him glory, and recognizing Him as Creator of heaven, earth, sea, and springs of water. This message directly echoes the fourth commandment's language about the Sabbath as a memorial of creation, tying true worship to acknowledging God's authority as Maker rather than any substitute authority. The announcement that judgment has come is a call to take eternity seriously and choose loyalty to God before probation closes.",
-    topics: ["Three Angels", "Prophecy", "Sabbath"],
-    category: "Hope and Prophecy",
-    scriptures: ["Revelation 14:6-7", "Exodus 20:11", "Psalm 96:9"],
-    keywords: ["three angels messages", "first angel", "everlasting gospel", "worship the creator", "judgment hour"]
-  },
-  {
-    id: "answer-three-angels-second-third",
-    question: "What do the second and third angels' messages mean?",
-    shortAnswer:
-      "The second angel warns against corrupted worship systems called \"Babylon,\" and the third warns against the coming mark of the beast, calling people to patient faithfulness to Jesus.",
-    longAnswer:
-      "The second angel announces the fall of \"Babylon,\" a symbol for systems of worship and doctrine that mix truth with human tradition and reject God's authority. The third angel gives the most solemn warning in Scripture, cautioning against worshiping the beast or receiving its mark, and pairing that warning with a picture of God's patience and justice. Together, these three messages end with a description of God's faithful people: those who keep His commandments and hold to faith in Jesus, portraying steady loyalty to Christ as the true alternative to compromised worship.",
-    topics: ["Three Angels", "Prophecy", "Law"],
-    category: "Hope and Prophecy",
-    scriptures: ["Revelation 14:8-12", "Revelation 18:4", "Revelation 12:17"],
-    keywords: ["three angels messages", "babylon", "mark of the beast", "commandments of God", "faith of Jesus"]
-  },
-  {
-    id: "answer-sabbath-still-for-today",
-    question: "Is the Sabbath still meant to be kept today?",
-    shortAnswer:
-      "The Sabbath was established at creation for all humanity, kept by Jesus, and never revoked in Scripture — it remains a weekly gift of rest and worship.",
-    longAnswer:
-      "The Sabbath's origin predates the nation of Israel; God rested on the seventh day at creation and blessed it for humanity in general, long before the Ten Commandments were given at Sinai. Jesus kept the Sabbath as His regular custom and clarified its purpose as a gift for people, not a burden. Nothing in the New Testament records the Sabbath being moved to another day or abolished; instead, it continues to picture rest in God's finished work of creation and, ultimately, in Christ's finished work of redemption, offering a weekly rhythm of trust rather than restless self-reliance.",
-    topics: ["Sabbath", "Law", "Creation"],
-    category: "Knowing God",
-    scriptures: ["Genesis 2:2-3", "Luke 4:16", "Mark 2:27-28"],
-    keywords: ["sabbath", "seventh day", "rest", "creation", "Lord's day"]
-  },
-  {
-    id: "answer-health-body-temple",
-    question: "Why does the Bible call the body a temple, and does it affect daily choices?",
-    shortAnswer:
-      "Because the Holy Spirit dwells within believers, Scripture calls the body a temple, inviting care for physical health as part of honoring God, not as a means of earning salvation.",
-    longAnswer:
-      "Paul's description of the body as a temple of the Holy Spirit reframes ordinary choices — diet, rest, exercise, and substance use — as spiritual matters rather than purely personal preferences. This is never presented as a system for earning God's favor; salvation remains a gift received by faith. Instead, caring for physical health flows from gratitude, recognizing that a clear mind and a well-cared-for body support a life of service, worship, and discernment. Scripture's health principles, such as the original diet given at creation and rest built into the weekly rhythm, still offer wisdom for whole-person well-being today.",
-    topics: ["Health", "Christian Living", "Creation"],
-    category: "Life and Relationships",
-    scriptures: ["1 Corinthians 6:19-20", "3 John 1:2", "Genesis 1:29"],
-    keywords: ["health", "body as temple", "wellness", "diet", "stewardship of the body"]
-  },
-  {
-    id: "answer-creation-six-days",
-    question: "Did God really create the world in six literal days?",
-    shortAnswer:
-      "Scripture describes creation as six literal days followed by a seventh day of rest, a pattern later memorialized in the weekly Sabbath commandment.",
-    longAnswer:
-      "Genesis records creation using the same Hebrew word for \"day\" paired with \"evening and morning,\" the same pattern used elsewhere in Scripture for literal 24-hour days. The fourth commandment reinforces this reading by grounding the seven-day week in God's literal creation week, not in a symbolic or extended process. Believing in a recent, literal creation shapes more than a science debate; it affirms that human life has inherent dignity as God's direct handiwork, that death entered through sin rather than being part of God's original design, and that the weekly Sabbath rests on a real historical foundation.",
-    topics: ["Creation", "Sabbath", "Faith"],
-    category: "Knowing God",
-    scriptures: ["Genesis 1:31-2:3", "Exodus 20:11", "Hebrews 11:3"],
-    keywords: ["creation", "six days", "literal week", "Genesis", "origins"]
-  },
-  {
-    id: "answer-baptism-mode-immersion",
-    question: "Does baptism have to be by full immersion, or is sprinkling enough?",
-    shortAnswer:
-      "Every New Testament example of baptism describes going down into water and coming up out of it, matching the biblical picture of burial and resurrection with Christ.",
-    longAnswer:
-      "The Greek word behind \"baptize\" means to dip or immerse, and the New Testament's baptism scenes consistently describe candidates going down into the water and coming back up, such as Philip and the Ethiopian official both entering and leaving the water together. This matters because immersion is the visual heart of the symbol: burial with Christ under the water and rising to new life as the person emerges, a picture that sprinkling or pouring does not fully convey. Choosing immersion is not about ritual precision for its own sake, but about letting the physical act preach the same gospel truth Paul described in Romans.",
-    topics: ["Baptism", "Salvation", "Bible Study"],
-    category: "Faith and Salvation",
-    scriptures: ["Acts 8:38-39", "Romans 6:4", "Matthew 3:16"],
-    keywords: ["baptism mode", "immersion", "sprinkling", "burial with Christ", "Acts 8"]
-  },
-  {
-    id: "answer-baptism-before-communion",
-    question: "Do I need to be baptized before taking communion?",
-    shortAnswer:
-      "Communion in the New Testament is shared among believers who have already publicly identified with Christ, so baptism naturally comes first as the entry point into that shared fellowship.",
-    longAnswer:
-      "The Lord's Supper was instituted among Jesus' committed disciples, and the early church's pattern in Acts shows new believers being baptized and then continuing steadfastly in the apostles' teaching, fellowship, and the breaking of bread. Baptism marks a person's public entrance into the family of faith, while communion renews and celebrates that same covenant relationship together as a community. Someone still exploring faith is warmly welcome to attend and observe, but taking communion works best as a next step after baptism, not before it, so both symbols keep their full meaning.",
-    topics: ["Baptism", "Church", "Christian Living"],
-    category: "Faith and Salvation",
-    scriptures: ["Acts 2:41-42", "1 Corinthians 11:23-26", "Acts 2:38"],
-    keywords: ["communion", "Lord's supper", "baptism first", "church membership", "fellowship"]
-  },
-  {
-    id: "answer-forgiveness-without-apology",
-    question: "Can I forgive someone who never apologizes or admits wrong?",
-    shortAnswer:
-      "Yes — biblical forgiveness is something the offended person can extend regardless of whether the other person ever apologizes, though full reconciliation still requires two willing sides.",
-    longAnswer:
-      "Jesus forgave from the cross before anyone asked for it, praying for those who had not repented, which shows that forgiveness does not have to wait on someone else's apology. Releasing bitterness and the desire for revenge is a decision the wounded person can make before God even when the offender never acknowledges the harm done. This kind of forgiveness protects the heart from being controlled by resentment, though it is different from reconciliation, which requires honesty and change from both people and may never fully happen if the other person remains unrepentant.",
-    topics: ["Forgiveness", "Comfort", "Christian Living"],
-    category: "Life and Relationships",
-    scriptures: ["Luke 23:34", "Mark 11:25", "Romans 12:19"],
-    keywords: ["forgiveness without apology", "unrepentant", "bitterness", "letting go", "reconciliation"]
-  },
-  {
-    id: "answer-forgiveness-god-vs-people",
-    question: "Is forgiving God's forgiveness of me different from me forgiving other people?",
-    shortAnswer:
-      "God's forgiveness is the perfect model and the source of ours, but Scripture ties the two together directly, calling believers to forgive others because they have been forgiven so much themselves.",
-    longAnswer:
-      "God's forgiveness is uniquely complete: it cancels a debt no one could ever repay and is offered freely through Christ's sacrifice. Human forgiveness is patterned after that gift rather than equal to it, since people forgiving one another are finite and imperfect, and forgiveness between people does not remove guilt before God the way Christ's atonement does. Even so, Jesus links the two closely, teaching that those who have received God's mercy should extend mercy to others, and warning that an unforgiving spirit reveals a heart that has not truly grasped how much it has been forgiven.",
-    topics: ["Forgiveness", "Salvation", "Faith"],
-    category: "Life and Relationships",
-    scriptures: ["Matthew 18:32-33", "Colossians 3:13", "Matthew 6:14-15"],
-    keywords: ["God's forgiveness", "human forgiveness", "mercy", "unforgiving servant", "grace"]
-  },
-  {
-    id: "answer-stewardship-time-talents",
-    question: "What does biblical stewardship mean beyond just money?",
-    shortAnswer:
-      "Stewardship covers everything entrusted to us — time, abilities, health, relationships, and possessions — and calls believers to manage all of it faithfully as caretakers, not owners.",
-    longAnswer:
-      "The parable of the talents pictures a master entrusting differing amounts of resources to his servants and later evaluating how faithfully, not how much, they managed what they were given. This principle extends stewardship far beyond a checkbook: time is a limited gift that can be spent wisely or wasted, spiritual gifts and abilities are meant to serve the community rather than sit unused, and even health and relationships are entrusted responsibilities. Recognizing that everything ultimately belongs to God frees people from either hoarding out of fear or wasting resources carelessly, and instead invites purposeful, grateful management of a life that is not fully one's own.",
-    topics: ["Stewardship", "Christian Living", "Church"],
-    category: "Life and Relationships",
-    scriptures: ["Matthew 25:14-30", "1 Peter 4:10", "Psalm 24:1"],
-    keywords: ["stewardship", "talents", "time management", "spiritual gifts", "faithfulness"]
-  },
-  {
-    id: "answer-sanctuary-daily-service",
-    question: "What happened in the daily sanctuary service, and why does it matter?",
-    shortAnswer:
-      "The daily sacrifices in the sanctuary let individual Israelites confess sin and receive forgiveness through a substitute, foreshadowing Christ's continual ministry on behalf of every believer.",
-    longAnswer:
-      "Each day, individuals who had sinned brought an animal to the sanctuary, confessed their sin over it, and watched it die in their place, a vivid picture that sin's penalty is death and that forgiveness comes through a substitute. The priest would then carry the record of that sin, symbolically, into the Holy Place, showing that confessed sin was forgiven but still recorded until final cleansing. This daily rhythm points forward to Christ, who does not simply forgive once at the cross but continually intercedes for confessing believers, applying His sacrifice moment by moment as their eternal High Priest.",
-    topics: ["Sanctuary", "Salvation", "Prayer"],
-    category: "Hope and Prophecy",
-    scriptures: ["Leviticus 4:27-31", "Hebrews 7:25", "1 John 2:1-2"],
-    keywords: ["daily sacrifice", "sanctuary service", "substitute", "intercession", "high priest"]
-  },
-  {
-    id: "answer-great-controversy-job",
-    question: "What does the book of Job teach about the great controversy between good and evil?",
-    shortAnswer:
-      "Job reveals a heavenly courtroom scene where Satan accuses God's servant of serving God only for personal benefit, and Job's faithfulness through suffering answers that accusation.",
-    longAnswer:
-      "The opening chapters of Job pull back a curtain rarely seen elsewhere in Scripture, showing Satan appearing before God and challenging whether Job's loyalty is genuine or simply bought with blessing. God permits a test, within limits, and Job's continued trust through devastating loss demonstrates that love for God can be real even when circumstances turn painful. The book does not fully explain every reason for suffering, but it reframes the question: the great controversy is not only about human happiness, but about whether God's character and government deserve trust regardless of immediate circumstances.",
-    topics: ["Great Controversy", "Comfort", "Faith"],
-    category: "Hope and Prophecy",
-    scriptures: ["Job 1:6-12", "Job 2:3-6", "Job 42:10-12"],
-    keywords: ["book of Job", "great controversy", "suffering", "Satan's accusation", "trust in God"]
-  },
-  {
-    id: "answer-bible-study-methods",
-    question: "What is a good method for studying the Bible on my own?",
-    shortAnswer:
-      "Reliable Bible study combines prayerful dependence on the Holy Spirit with practical steps like reading in context, comparing Scripture with Scripture, and asking what a passage reveals about God and how to respond.",
-    longAnswer:
-      "Helpful Bible study starts with prayer, asking God to open understanding before opening the page, since Scripture is meant to be read in dependence on the Spirit who inspired it. Reading a passage in its context — the verses around it, the type of writing it is, and its place in the larger biblical story — protects against pulling a phrase out to mean something it never intended. Comparing Scripture with Scripture, letting clearer passages shed light on harder ones, guards against building a whole belief on a single ambiguous verse. Finally, good study always moves toward response: what does this passage show about God's character, and what does it ask of me today?",
-    topics: ["Bible Study", "Holy Spirit", "Faith"],
-    category: "Knowing God",
-    scriptures: ["2 Timothy 2:15", "Acts 17:11", "Psalm 119:18"],
-    keywords: ["Bible study methods", "hermeneutics", "context", "compare Scripture with Scripture", "personal devotions"]
-  },
-  {
-    id: "answer-state-of-dead-spiritism",
-    question: "Why does the Bible warn against consulting mediums or trying to contact the dead?",
-    shortAnswer:
-      "Scripture forbids consulting mediums because the dead are unconscious and cannot communicate, meaning such contact is either deception or a counterfeit spiritual encounter, not genuine contact with a departed loved one.",
-    longAnswer:
-      "The law given through Moses explicitly forbade consulting mediums or spiritists, and King Saul's disastrous attempt to contact Samuel through a medium is presented as an act of unfaithfulness that hastened his downfall. Because Scripture describes the dead as sleeping, unaware of anything happening in the world of the living, any voice or presence claiming to be a deceased person is not what it appears to be. This warning protects grieving people from being exploited or deceived, and it points them instead toward genuine comfort found in prayer, Scripture's promises, and the sure hope of the resurrection when loved ones in Christ will be reunited.",
-    topics: ["State of the Dead", "Great Controversy", "Comfort"],
-    category: "Hope and Prophecy",
-    scriptures: ["Deuteronomy 18:10-12", "1 Samuel 28:6-7", "Isaiah 8:19-20"],
-    keywords: ["mediums", "spiritism", "contacting the dead", "necromancy", "deception"]
-  },
-  {
-    id: "answer-holy-spirit-gifts",
-    question: "What are spiritual gifts, and how do I know mine?",
-    shortAnswer:
-      "Spiritual gifts are Spirit-given abilities distributed to believers to build up the church, discovered through serving, prayerful reflection, and the confirmation of a faith community.",
-    longAnswer:
-      "Paul describes a variety of spiritual gifts — teaching, encouragement, service, leadership, generosity, and more — given by the same Spirit to different people for the common good, like parts of one body serving a shared purpose. No believer receives every gift, and no gift is more \"spiritual\" than another when it is used to serve rather than to gain status. Discovering a gift usually happens through practice rather than abstract guessing: trying different forms of service, noticing where genuine fruit and encouragement follow, and listening to trusted believers who can recognize gifts that may be harder to see in oneself.",
-    topics: ["Holy Spirit", "Church", "Christian Living"],
-    category: "Knowing God",
-    scriptures: ["1 Corinthians 12:4-11", "Romans 12:4-8", "1 Peter 4:10-11"],
-    keywords: ["spiritual gifts", "Holy Spirit", "serving the church", "discovering your gift", "body of Christ"]
-  },
-  {
-    id: "answer-church-leadership-structure",
-    question: "Why does the church need organization and leadership if faith is personal?",
-    shortAnswer:
-      "Scripture treats the church as a body with different members and roles working together, so structure and leadership exist to serve unity and mission, not to replace a believer's personal relationship with God.",
-    longAnswer:
-      "Even in the New Testament's earliest days, the church quickly appointed leaders, elders, and deacons to care for practical needs, teach sound doctrine, and guard against confusion as the movement grew. Paul compares the church to a body with many parts, each serving a distinct function, which requires some coordination to work well together rather than in chaos. Organization is never meant to control someone's private walk with God; personal faith, prayer, and Bible study remain irreplaceable. Instead, healthy structure protects the community from division, supports consistent teaching, and multiplies the church's ability to serve and reach others.",
-    topics: ["Church", "Christian Living", "Stewardship"],
-    category: "Life and Relationships",
-    scriptures: ["Acts 6:1-6", "1 Corinthians 12:12-14", "Titus 1:5"],
-    keywords: ["church organization", "church leadership", "elders and deacons", "unity", "body of Christ"]
-  },
-  {
-    id: "answer-sabbath-vs-sunday",
-    question: "Why do some Christians worship on Saturday instead of Sunday?",
-    shortAnswer:
-      "Some Christians keep the seventh-day Sabbath because Scripture never records God changing it to Sunday, and Saturday remains the actual seventh day established at creation and reaffirmed in the Ten Commandments.",
-    longAnswer:
-      "The Bible consistently identifies the Sabbath as the seventh day of the week, corresponding to Saturday on the modern calendar, established at creation and written into the Ten Commandments as a memorial of God as Creator. Sunday observance developed gradually in later church history, but no New Testament passage records Christ or the apostles commanding believers to transfer worship to the first day. Choosing to keep the seventh-day Sabbath is, for many believers, less about calendar precision and more about honoring what Scripture actually establishes rather than what later tradition assumed, while still respecting fellow believers who gather on Sunday out of sincere conviction.",
-    topics: ["Sabbath", "Law", "Bible Study"],
-    category: "Knowing God",
-    scriptures: ["Exodus 20:8-11", "Genesis 2:2-3", "Mark 2:27-28"],
-    keywords: ["seventh-day Sabbath", "Sunday worship", "Saturday Sabbath", "day of rest", "Ten Commandments"]
-  },
-  {
-    id: "answer-second-coming-imminent",
-    question: "How can I live with hope if I do not know when Jesus will return?",
-    shortAnswer:
-      "Scripture encourages readiness rather than date-setting, teaching believers to live faithfully each day so that whenever Christ returns, they are found watching rather than caught off guard.",
-    longAnswer:
-      "Jesus deliberately said that no one knows the day or hour of His return, redirecting attention away from speculation and toward consistent, faithful living. The parables of the ten virgins and the faithful servant both picture readiness as an ongoing lifestyle of trust and obedience, not a last-minute scramble triggered by a predicted date. This uncertainty is actually presented as merciful: it keeps every generation living with expectant hope rather than either despair or complacency, trusting that God's timing is perfect even when the waiting feels long.",
-    topics: ["Second Coming", "Faith", "Comfort"],
-    category: "Hope and Prophecy",
-    scriptures: ["Matthew 24:36", "Matthew 25:1-13", "1 Thessalonians 5:1-6"],
-    keywords: ["waiting for Jesus", "readiness", "date-setting", "parable of ten virgins", "living with hope"]
-  },
-  {
-    id: "answer-health-mental-emotional",
-    question: "Does the Bible have anything to say about mental and emotional health?",
-    shortAnswer:
-      "Scripture takes emotional struggle seriously, offering honest examples of depression and despair alongside practical patterns of rest, community, prayer, and hope that support emotional well-being.",
-    longAnswer:
-      "Biblical figures like Elijah and David openly described despair, exhaustion, and even a wish to die, and God responded with practical care — rest, food, and companionship — before addressing deeper spiritual matters, modeling a whole-person approach to emotional struggle. The Psalms give language for lament, allowing raw honesty before God rather than forced positivity. Community also matters deeply; believers are called to bear one another's burdens and to weep with those who weep rather than isolate the hurting. None of this replaces wise professional care when needed, but it affirms that emotional pain is not a sign of spiritual failure and that God meets people in it with genuine compassion.",
-    topics: ["Health", "Comfort", "Prayer"],
-    category: "Life and Relationships",
-    scriptures: ["1 Kings 19:4-8", "Psalm 42:5", "Galatians 6:2"],
-    keywords: ["mental health", "depression", "emotional health", "lament", "Elijah despair"]
+    "id": "answer-animals-afterlife",
+    "question": "Does God Exist?",
+    "shortAnswer": "Yes. The Bible presents the existence of God as the foundation of everything else it teaches. It does not attempt to prove God's existence through philosophical argument. Instead, it begins with the declaration, \"In the beginning God created the heaven and the earth\" (Genesis 1:1). Scripture teaches that God's existence can also be recognized through His creation.",
+    "longAnswer": "The Bible presents God as the Creator, Sustainer, and rightful ruler of all things. Everything that exists ultimately depends upon Him. Genesis 1:1 establishes God before creation itself. John 1:1-3 similarly teaches that all things were made through the Word, and that \"without him was not any thing made that was made.\" Creation therefore points beyond itself to a Creator. Psalm 14:1 describes the fool as saying in his heart, \"There is no God,\" while Hebrews 11:6 teaches that anyone who comes to God must believe that He is and that He rewards those who diligently seek Him. Faith in God is not presented as blind acceptance of an unknowable idea. Scripture repeatedly invites people to observe God's works, His creation, His character, His fulfilled promises, and His dealings with humanity. The Bible also teaches that God has revealed Himself personally. Jesus Christ is described as the revelation of God to humanity (John 1:14, 18; John 14:9). Scripture clearly teaches that God exists and that He created all things. It does not give a scientific formula proving God's existence. Instead, it presents God's existence as foundational truth and gives multiple lines of testimony through creation, revelation, prophecy, and the life of Jesus Christ.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Great Controversy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Genesis 1:1",
+      "Psalm 19:1-4",
+      "Psalm 14:1",
+      "Isaiah 45:18",
+      "John 1:1-3",
+      "Romans 1:19-20",
+      "Hebrews 11:6"
+    ],
+    "keywords": [
+      "exist",
+      "bible study",
+      "creation",
+      "faith",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-forgiveness",
+    "question": "Who Is God?",
+    "shortAnswer": "The Bible teaches that God is the eternal Creator, the source of life, the sovereign ruler of the universe, and the embodiment of perfect love, holiness, righteousness, wisdom, and truth. God is not merely a force or abstract power. Scripture presents Him as personal, intelligent, loving, and capable of communicating with His creatures.",
+    "longAnswer": "God revealed His name to Moses as \"I AM THAT I AM\" (Exodus 3:14). This points to God's unique and self-existent nature. He is not dependent upon another being for His existence. Deuteronomy 6:4 declares, \"The LORD our God is one LORD.\" Scripture consistently teaches that there is one true God (Isaiah 45:5-6; 1 Corinthians 8:4-6). The Bible also describes God's character. \"God is love\" (1 John 4:8). He is holy (Isaiah 6:3), righteous (Psalm 145:17), merciful (Exodus 34:6), faithful (Deuteronomy 7:9), and truthful (Titus 1:2). God is also the Creator. Revelation 4:11 declares that all things exist because He created them. At the same time, Scripture reveals Father, Son, and Holy Spirit in connection with the one God (Matthew 28:19; 2 Corinthians 13:14). Jesus is called God (John 1:1; John 20:28), and the Holy Spirit is described in divine terms (Acts 5:3-4). The greatest revelation of God's character is found in Jesus Christ. Jesus said, \"He that hath seen me hath seen the Father\" (John 14:9). Scripture gives substantial information about God's character and works, but it does not explain every mystery concerning God's eternal nature. Deuteronomy 29:29 reminds us that some things belong to God and have not been revealed to humanity.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Holy Spirit"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "Exodus 3:13-15",
+      "Deuteronomy 6:4",
+      "Isaiah 45:5-6",
+      "Matthew 28:19",
+      "John 1:1-3",
+      "John 14:9",
+      "1 John 4:8",
+      "Revelation 4:11"
+    ],
+    "keywords": [
+      "bible study",
+      "creation",
+      "faith",
+      "holy spirit"
+    ]
+  },
+  {
+    "id": "answer-is-god-real",
+    "question": "Is God Real?",
+    "shortAnswer": "Yes. Scripture teaches that God is real, living, personal, and active in His creation. The Bible presents God's reality through creation, revelation, prophecy, His dealings with humanity, and especially through Jesus Christ.",
+    "longAnswer": "The opening verse of Scripture assumes God's reality: \"In the beginning God created the heaven and the earth\" (Genesis 1:1). God identifies Himself as the living God. Jeremiah 10:10 says, \"But the LORD is the true God, he is the living God, and an everlasting king.\" Unlike idols, which are human-made objects incapable of acting or speaking, the God of the Bible acts in history. He speaks, creates, judges, forgives, answers prayer, and enters into covenant with people. Jesus Christ provides the central revelation of God. John 1:18 says that the Son has declared Him. Hebrews 1:1-3 describes Christ as the express image of God's person. God's reality is also connected with prophecy. Isaiah 46:9-10 describes God's ability to declare the end from the beginning, something Scripture repeatedly presents as evidence of His unique divine authority. The Bible does not claim that God can be placed under laboratory observation like a physical object. It presents Him as the Creator who stands above creation and reveals Himself to humanity.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Forgiveness"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Genesis 1:1",
+      "Jeremiah 10:10",
+      "Isaiah 46:9-10",
+      "John 1:18",
+      "John 14:9",
+      "Hebrews 1:1-3",
+      "Hebrews 11:6"
+    ],
+    "keywords": [
+      "real",
+      "bible study",
+      "creation",
+      "faith",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "answer-suffering",
+    "question": "Why Does God Allow Suffering?",
+    "shortAnswer": "The Bible teaches that suffering exists because sin entered God's creation, but it also teaches that God has not abandoned humanity to suffering. God permits human beings freedom, and Scripture describes a real conflict between good and evil. God ultimately promises to destroy sin, suffering, and death.",
+    "longAnswer": "Genesis 1 repeatedly describes creation as good (Genesis 1:31). Death and suffering are introduced after humanity's fall into sin (Genesis 3:1-19). Scripture does not portray God as the author of sin. James 1:13 says that God does not tempt people with evil. First John 1:5 says, \"God is light, and in him is no darkness at all.\" The Bible also presents genuine freedom as important. Joshua 24:15 says, \"Choose you this day whom ye will serve.\" Love cannot be genuine if obedience is forced. The book of Job provides one of Scripture's clearest examinations of suffering. Job's suffering was not presented as punishment for some secret sin. Instead, the opening chapters reveal a conflict involving Satan and God's character (Job 1-2). God does not always immediately explain why an individual suffers. Job eventually receives a larger revelation of God's wisdom and sovereignty rather than a simple explanation for every event (Job 38-42). The greatest answer to suffering is found in Christ. Jesus entered a world of pain, suffered Himself, and died for humanity. Isaiah 53:3-5 describes the suffering Servant, while Hebrews 4:15 says that Christ can sympathize with our weaknesses. The Bible ends with God's promise to remove suffering permanently: \"God shall wipe away all tears from their eyes; and there shall be no more death, neither sorrow, nor crying\" (Revelation 21:4). The Bible does not explain the specific reason behind every individual tragedy. It does, however, give a broad explanation for the entrance of sin and death, reveal God's response to evil, and promise its ultimate destruction.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Creation",
+      "Faith"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Genesis 1:31",
+      "Genesis 3:1-19",
+      "Job 1-2",
+      "Isaiah 53:3-5",
+      "James 1:13",
+      "Romans 5:12",
+      "Revelation 21:4"
+    ],
+    "keywords": [
+      "allow",
+      "suffering",
+      "bible study",
+      "comfort",
+      "creation",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-why-does-god-allow-evil",
+    "question": "Why Does God Allow Evil?",
+    "shortAnswer": "The Bible teaches that evil exists because God's creatures were given meaningful freedom, and that some chose rebellion against God. God has permitted evil for a time, but Scripture promises that evil will ultimately be judged and destroyed.",
+    "longAnswer": "God's original creation was \"very good\" (Genesis 1:31). Evil was not presented as part of God's original design. The Bible identifies Satan as a rebel against God. Revelation 12:7-9 describes a conflict in heaven and identifies the devil and Satan as the deceiver of the whole world. Isaiah 14 and Ezekiel 28 contain passages describing pride, rebellion, and the downfall of a heavenly being, although their immediate historical contexts also concern earthly kings. Human rebellion followed. Genesis 3 records the entrance of sin into human experience. Why did God not immediately destroy the rebels? Scripture indicates that God's government is based upon truth, love, and justice. The story of Job shows Satan making accusations concerning God's motives and the loyalty of His servants (Job 1:9-11). The larger biblical narrative therefore involves not merely God's power to destroy evil, but the revelation of His character and the truth about sin. At the cross, God's character and the destructive nature of sin are dramatically revealed. Romans 3:25-26 presents God's justice and mercy together. God will eventually end evil completely. Nahum 1:9 says that affliction will not rise up a second time, and Revelation 20:10-15 describes the final destruction of Satan, sin, death, and those who persist in rebellion. Scripture reveals the origin, nature, and ultimate destiny of evil, but it does not answer every philosophical question about why God permits every particular event.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Creation",
+      "Faith"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Genesis 1:31",
+      "Genesis 3",
+      "Job 1-2",
+      "John 8:44",
+      "Revelation 12:7-9",
+      "Romans 3:25-26",
+      "Revelation 20:10-15",
+      "Revelation 21:4"
+    ],
+    "keywords": [
+      "allow",
+      "evil",
+      "bible study",
+      "comfort",
+      "creation",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-does-god-love-everyone",
+    "question": "Does God Love Everyone?",
+    "shortAnswer": "Yes. Scripture teaches that God's love extends to the entire human race. \"For God so loved the world\" is one of the Bible's clearest statements of this truth (John 3:16). God's love does not mean that He approves of everything people do. Scripture distinguishes between loving people and approving of sin.",
+    "longAnswer": "John 3:16 says God loved \"the world\" and gave His Son so that whoever believes in Him might have eternal life. Romans 5:8 demonstrates the depth of this love: Christ died for us \"while we were yet sinners.\" God's goodness extends even to those who do not acknowledge Him. Jesus said that God makes His sun rise on the evil and on the good and sends rain on the just and unjust (Matthew 5:45). Jesus also commanded His followers to love their enemies (Matthew 5:44). This command reflects God's own character. At the same time, God's love does not eliminate judgment. God is both merciful and just (Exodus 34:6-7). He calls people to repentance because sin destroys. The cross demonstrates both God's love and His opposition to sin. God does not save people by declaring sin harmless. He provides forgiveness and transformation through Christ. God's love is universal in its offer, but Scripture does not teach universal salvation regardless of human response. God invites everyone to salvation, while people are called to respond in faith and repentance.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Faith",
+      "Forgiveness"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Exodus 34:6-7",
+      "Matthew 5:44-45",
+      "John 3:16-17",
+      "Romans 5:8",
+      "1 Timothy 2:3-6",
+      "1 John 4:8-10"
+    ],
+    "keywords": [
+      "love",
+      "everyone",
+      "bible study",
+      "comfort",
+      "faith",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "answer-heaven",
+    "question": "What Is God Like?",
+    "shortAnswer": "The Bible describes God as holy, loving, just, merciful, patient, faithful, wise, powerful, and truthful. His character is perfectly consistent. Scripture's clearest revelation of what God is like is found in Jesus Christ.",
+    "longAnswer": "When Moses asked God to reveal His glory, God proclaimed His character: \"The LORD, The LORD God, merciful and gracious, longsuffering, and abundant in goodness and truth\" (Exodus 34:6). This is one of the most important descriptions of God's character in Scripture. God is holy (Isaiah 6:3), meaning He is completely pure and separated from sin. He is righteous and just (Psalm 145:17). He is merciful and gracious (Psalm 103:8). He is faithful (Deuteronomy 7:9). Above all, Scripture says, \"God is love\" (1 John 4:8). Jesus Christ provides the clearest human revelation of this character. Jesus said, \"he that hath seen me hath seen the Father\" (John 14:9). The actions of Christ therefore help us understand God's character. Jesus healed the sick, welcomed sinners, defended the vulnerable, taught truth, confronted hypocrisy, forgave His enemies, and gave His life for humanity (Matthew 9:35-36; Luke 19:10; Luke 23:34). God's character is revealed progressively throughout Scripture, but the Bible does not suggest that God changed from being an angry Old Testament God into a loving New Testament God. Both Testaments describe God's mercy and judgment.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Faith",
+      "Forgiveness"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Exodus 34:6-7",
+      "Psalm 103:8-13",
+      "Psalm 145:17",
+      "Isaiah 6:3",
+      "John 14:9",
+      "1 John 4:8",
+      "Revelation 4:8"
+    ],
+    "keywords": [
+      "like",
+      "bible study",
+      "comfort",
+      "faith",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "answer-great-controversy-theme",
+    "question": "Is God Good?",
+    "shortAnswer": "Yes. Scripture consistently describes God as good, righteous, merciful, and faithful. Even when God's actions involve judgment, the Bible presents Him as acting according to justice rather than arbitrary cruelty.",
+    "longAnswer": "Psalm 34:8 says, \"O taste and see that the LORD is good.\" Psalm 145:9 says, \"The LORD is good to all: and his tender mercies are over all his works.\" God's goodness is demonstrated in creation, providence, mercy, and salvation. Genesis 1 describes creation as good, and James 1:17 says every good and perfect gift comes from above. God's goodness does not mean that He never judges. Scripture repeatedly connects divine judgment with righteousness. Abraham recognized this principle when he asked, \"Shall not the Judge of all the earth do right?\" (Genesis 18:25). God's judgments are also connected with persistent rebellion and wrongdoing. Before the Flood, Genesis 6:5 describes widespread human wickedness. Before Israel entered Canaan, God told Abraham that the iniquity of the Amorites was not yet complete (Genesis 15:16). At the cross, God's goodness is demonstrated through self-sacrificial love. Romans 5:8 says God demonstrated His love by Christ dying for sinners.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Forgiveness"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Genesis 18:25",
+      "Psalm 34:8",
+      "Psalm 145:9,17",
+      "James 1:17",
+      "Romans 5:8",
+      "1 John 4:8-10"
+    ],
+    "keywords": [
+      "good",
+      "bible study",
+      "creation",
+      "faith",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "answer-why-doesn-t-god-stop-evil",
+    "question": "Why Doesn't God Stop Evil?",
+    "shortAnswer": "The Bible teaches that God will ultimately stop evil, but He has permitted sin and rebellion for a limited time. Scripture presents this period as connected with human freedom, the revelation of truth, God's patience, and the eventual demonstration of His justice.",
+    "longAnswer": "God could destroy evil immediately, but Scripture shows that He has chosen to allow the conflict to continue for a time. The book of Job provides an important example. Satan challenged Job's motives and accused God of protecting him unfairly (Job 1:9-11). The conflict therefore involved questions about God's character and human loyalty. God's patience also gives people opportunity to repent. Second Peter 3:9 says God is \"not willing that any should perish, but that all should come to repentance.\" This patience should not be confused with indifference. God sees injustice and promises judgment. Ecclesiastes 12:14 says God will bring every work into judgment. The cross is central to understanding God's approach to evil. Christ did not merely condemn sin from a distance. He entered humanity, suffered its consequences, and gave Himself for sinners. Ultimately, evil will end. Revelation 21:4 promises that death, sorrow, crying, and pain will no longer exist. The Bible gives principles for understanding God's patience with evil, but it does not explain why every individual act of evil is permitted at the particular moment it occurs.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Faith",
+      "Forgiveness"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Job 1-2",
+      "Ecclesiastes 12:14",
+      "Romans 2:4",
+      "2 Peter 3:9",
+      "Revelation 20:10-15",
+      "Revelation 21:4"
+    ],
+    "keywords": [
+      "doesn't",
+      "stop",
+      "evil",
+      "bible study",
+      "comfort",
+      "faith",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "answer-does-god-answer-prayers",
+    "question": "Does God Answer Prayers?",
+    "shortAnswer": "Yes. The Bible teaches that God hears and answers prayer. However, an answer does not always mean receiving exactly what we requested. Scripture describes God's answers as sometimes \"yes,\" sometimes \"wait,\" and sometimes a different response according to His wisdom and will.",
+    "longAnswer": "First John 5:14 gives an important principle: \"if we ask any thing according to his will, he heareth us.\" Jesus repeatedly encouraged His followers to pray. Matthew 7:7 says, \"Ask, and it shall be given you; seek, and ye shall find.\" Yet Scripture also shows that faithful people sometimes prayed for something and did not receive the answer they initially wanted. Paul prayed three times concerning his \"thorn in the flesh,\" but God's answer was, \"My grace is sufficient for thee\" (2 Corinthians 12:7-9). Jesus Himself prayed in Gethsemane that the cup might pass from Him, yet submitted to the Father's will: \"nevertheless not my will, but thine, be done\" (Luke 22:42). Prayer therefore is not a mechanism for forcing God to fulfill human desires. It is communication with God and submission to His wisdom.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Law",
+      "Prayer"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Psalm 66:18-20",
+      "Matthew 7:7-11",
+      "Matthew 6:9-13",
+      "Luke 22:41-42",
+      "John 15:7",
+      "1 John 5:14-15",
+      "2 Corinthians 12:7-9"
+    ],
+    "keywords": [
+      "answer",
+      "prayers",
+      "bible study",
+      "faith",
+      "law",
+      "prayer"
+    ]
+  },
+  {
+    "id": "answer-forgiveness-2",
+    "question": "Who Is Jesus?",
+    "shortAnswer": "Jesus Christ is the Son of God, the promised Messiah, the Creator, Savior, and coming King. He became human, lived a sinless life, died for humanity's sins, rose from the dead, and will return to establish His eternal kingdom.",
+    "longAnswer": "Jesus is introduced as the eternal Word who \"was with God\" and \"was God\" (John 1:1). John 1:3 says all things were made through Him. The Old Testament promised the coming Messiah. Isaiah 9:6 speaks of a child who would be called \"The mighty God, The everlasting Father, The Prince of Peace.\" Micah 5:2 foretold a ruler whose origins are \"from everlasting.\" Jesus identified Himself as the fulfillment of Scripture. In Luke 4:16-21, He applied Isaiah's prophecy concerning the Messiah to Himself. Jesus' mission was ultimately centered on salvation. Matthew 1:21 says, \"thou shalt call his name JESUS: for he shall save his people from their sins.\" He died on the cross as the sacrifice for sin (Isaiah 53:4-6; 1 Corinthians 15:3). He then rose from the dead (Luke 24:1-7; 1 Corinthians 15:3-8). Jesus is now described as our High Priest and advocate (Hebrews 4:14-16; 1 John 2:1). Scripture also promises His visible return (Acts 1:11; Revelation 1:7).",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Law",
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Isaiah 9:6",
+      "Micah 5:2",
+      "Matthew 1:21",
+      "John 1:1-14",
+      "John 20:28-31",
+      "Acts 1:11",
+      "Hebrews 4:14-16",
+      "Revelation 19:11-16"
+    ],
+    "keywords": [
+      "bible study",
+      "creation",
+      "law",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-jesus-divinity",
+    "question": "Is Jesus God?",
+    "shortAnswer": "Yes. The Bible directly identifies Jesus Christ with divine titles, attributes, works, and worship. At the same time, Scripture distinguishes Jesus from the Father. The biblical picture is that the Father and the Son are distinct persons while both are truly divine.",
+    "longAnswer": "John 1:1 says of the Word, \"the Word was God.\" John 1:14 identifies this Word as the One who \"was made flesh.\" Thomas addressed the resurrected Jesus as \"My Lord and my God\" (John 20:28), and Jesus did not correct him. Hebrews 1:8 records the Father speaking of the Son: \"Thy throne, O God, is for ever and ever.\" Jesus also possesses divine attributes and performs divine works. John 1:3 says creation itself occurred through Him. Colossians 1:16 says all things were created by Him and for Him. Jesus forgave sins (Mark 2:5-12), exercised authority over nature (Mark 4:39-41), and accepted worship (Matthew 14:33; Matthew 28:9,17). At the same time, Jesus prayed to the Father and distinguished Himself from the Father (John 17:1-5). Scripture therefore does not teach that Jesus simply is the Father. Matthew 28:19 places Father, Son, and Holy Spirit together in the one baptismal name.",
+    "topics": [
+      "Baptism",
+      "Bible Study",
+      "Creation",
+      "Holy Spirit"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Isaiah 9:6",
+      "John 1:1-3,14",
+      "John 8:58",
+      "John 20:28",
+      "Colossians 1:15-20",
+      "Hebrews 1:8",
+      "Philippians 2:5-11",
+      "Matthew 28:19"
+    ],
+    "keywords": [
+      "baptism",
+      "bible study",
+      "creation",
+      "holy spirit"
+    ]
+  },
+  {
+    "id": "answer-was-jesus-god-in-the-old-testament",
+    "question": "Was Jesus God in the Old Testament?",
+    "shortAnswer": "Yes. The New Testament identifies Jesus as the eternal Word through whom creation occurred and presents Him as the fulfillment of Old Testament descriptions of the coming Messiah. Several Old Testament passages also describe the Messiah in divine terms.",
+    "longAnswer": "John 1:1-3 teaches that the Word existed in the beginning, was with God, was God, and created all things. Verse 14 identifies this Word as Jesus becoming flesh. Jesus Himself claimed preexistence. In John 8:58 He said, \"Before Abraham was, I am.\" His audience understood this as an extraordinary claim and attempted to stone Him. Jesus also said that Abraham rejoiced to see His day (John 8:56). Old Testament prophecy contains striking descriptions of the Messiah. Isaiah 9:6 calls the promised child \"The mighty God.\" Micah 5:2 describes the ruler coming from Bethlehem whose origins are \"from everlasting.\" Psalm 110 presents the Messiah as David's Lord, while Jesus Himself used this passage to demonstrate that the Messiah was more than merely David's descendant (Matthew 22:41-46). The New Testament repeatedly applies Old Testament passages about the LORD to Jesus. Compare Isaiah 40:3 with Matthew 3:3 and Isaiah 45:23 with Philippians 2:10-11.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Great Controversy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Psalm 110:1",
+      "Isaiah 9:6",
+      "Micah 5:2",
+      "John 1:1-3",
+      "John 8:56-58",
+      "Philippians 2:5-11",
+      "Hebrews 1:5-12"
+    ],
+    "keywords": [
+      "testament",
+      "bible study",
+      "creation",
+      "faith",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-did-jesus-exist-before-his-birth",
+    "question": "Did Jesus Exist Before His Birth?",
+    "shortAnswer": "Yes. Scripture clearly teaches that Jesus existed before His human birth in Bethlehem. His birth was not the beginning of His existence. He existed with the Father before becoming human.",
+    "longAnswer": "John 1:1 says the Word was already present \"in the beginning.\" John 1:14 then says that this Word \"was made flesh.\" The sequence is important: the Word existed first, then became human. Jesus explicitly spoke of His prehuman glory in John 17:5: \"glorify thou me with thine own self with the glory which I had with thee before the world was.\" He also said, \"Before Abraham was, I am\" (John 8:58). Philippians 2:5-8 describes Christ as existing in the \"form of God\" before taking \"the form of a servant\" and becoming human. Colossians 1:16-17 says all things were created by Him and that \"he is before all things.\" Therefore, Bethlehem was not the beginning of Jesus' existence. It was the beginning of His incarnation as a human being.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "John 1:1-3,14",
+      "John 8:56-58",
+      "John 17:5",
+      "Philippians 2:5-8",
+      "Colossians 1:15-17",
+      "Hebrews 1:1-3"
+    ],
+    "keywords": [
+      "exist",
+      "birth",
+      "bible study",
+      "creation",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-heaven-hell-timing",
+    "question": "Why Did Jesus Die?",
+    "shortAnswer": "Jesus died to save humanity from sin. Scripture teaches that His death was a sacrifice for our sins, demonstrated God's love, satisfied the demands of justice, reconciled sinners to God, and opened the way to eternal life.",
+    "longAnswer": "The Bible describes sin as the fundamental human problem. \"All have sinned, and come short of the glory of God\" (Romans 3:23). Sin leads to death (Romans 6:23). Humanity therefore needed salvation from both sin and its consequences. Isaiah 53 predicted that the Messiah would be wounded for our transgressions and that \"the LORD hath laid on him the iniquity of us all.\" Jesus Himself explained His mission: \"The Son of man came not to be ministered unto, but to minister, and to give his life a ransom for many\" (Mark 10:45). At the Last Supper, Jesus connected His blood with the forgiveness of sins (Matthew 26:28). The cross also reveals God's love. Romans 5:8 says that God demonstrated His love toward us because Christ died for us while we were sinners. First Peter 2:24 says Christ \"bare our sins in his own body on the tree.\" The cross therefore cannot be reduced to an example of suffering. Scripture presents it as central to God's plan of redemption.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Forgiveness",
+      "Great Controversy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Isaiah 53:4-6",
+      "Matthew 26:28",
+      "Mark 10:45",
+      "John 3:16",
+      "Romans 3:23-26",
+      "Romans 5:6-8",
+      "1 Peter 2:24",
+      "1 Corinthians 15:3"
+    ],
+    "keywords": [
+      "bible study",
+      "comfort",
+      "forgiveness",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-why-did-jesus-have-to-die",
+    "question": "Why Did Jesus Have to Die?",
+    "shortAnswer": "Jesus' death was necessary because sin brings death, God's law reveals the seriousness of sin, and humanity could not save itself. Christ voluntarily took upon Himself the consequences of sin and provided redemption for sinners.",
+    "longAnswer": "Romans 6:23 states, \"the wages of sin is death.\" Scripture does not portray sin as a harmless mistake. Sin separates humanity from God and brings death. God's law is described as holy, just, and good (Romans 7:12). The problem is not God's law but humanity's sinfulness. Jesus came to fulfill the redemptive purpose represented throughout the Scriptures. Isaiah 53 describes the Messiah bearing human iniquity. Hebrews 9:22 explains the connection between sacrifice and forgiveness under the biblical system. Jesus willingly gave His life. He said, \"No man taketh it from me, but I lay it down of myself\" (John 10:18). The cross also demonstrated God's justice and mercy together. Romans 3:25-26 says God set forth Christ as a propitiation through faith in His blood, demonstrating His righteousness while justifying the believer. The resurrection confirms that Christ's sacrifice accomplished its purpose (Romans 4:25; 1 Corinthians 15:17).",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Forgiveness",
+      "Great Controversy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Isaiah 53:5-6",
+      "Matthew 20:28",
+      "John 10:17-18",
+      "Romans 3:23-26",
+      "Romans 6:23",
+      "Romans 7:12",
+      "Hebrews 9:22-28",
+      "1 Peter 3:18"
+    ],
+    "keywords": [
+      "bible study",
+      "faith",
+      "forgiveness",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-what-did-jesus-accomplish-on-the-cross",
+    "question": "What Did Jesus Accomplish on the Cross?",
+    "shortAnswer": "At the cross, Jesus bore the sins of humanity, provided the basis for forgiveness, demonstrated God's love and righteousness, defeated Satan's accusations, reconciled sinners to God, and opened the way to eternal life.",
+    "longAnswer": "The cross is the central event of the gospel. First Corinthians 15:3 summarizes the gospel: \"Christ died for our sins according to the scriptures.\" Isaiah 53 had already predicted that the Messiah would bear human iniquity. The cross demonstrates God's love. Romans 5:8 says Christ died for us while we were still sinners. It also demonstrates God's righteousness. Romans 3:25-26 connects Christ's sacrifice with God's justice and His ability to forgive sinners while remaining righteous. Colossians 2:14-15 describes Christ's victory through the cross, including His triumph over hostile spiritual powers. The cross also opened reconciliation with God. Second Corinthians 5:18-19 says God reconciled us to Himself through Christ. Jesus' final cry, \"It is finished\" (John 19:30), indicates the completion of the work He had been given to accomplish. However, the cross is not separated from the resurrection and heavenly ministry of Christ. The risen Christ remains our living High Priest and intercessor (Hebrews 7:25; 8:1-2).",
+    "topics": [
+      "Bible Study",
+      "Forgiveness",
+      "Great Controversy",
+      "Holy Spirit"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Isaiah 53:4-6",
+      "John 19:30",
+      "Romans 3:25-26",
+      "Romans 5:8-11",
+      "2 Corinthians 5:18-21",
+      "Colossians 2:13-15",
+      "Hebrews 7:25"
+    ],
+    "keywords": [
+      "accomplish",
+      "cross",
+      "bible study",
+      "forgiveness",
+      "great controversy",
+      "holy spirit"
+    ]
+  },
+  {
+    "id": "answer-did-jesus-really-rise-from-the-dead",
+    "question": "Did Jesus Really Rise From the Dead?",
+    "shortAnswer": "Yes. The Bible presents the resurrection of Jesus as a literal historical event and as the foundation of Christian faith. Jesus was crucified, buried, and physically raised from the dead on the third day.",
+    "longAnswer": "The resurrection was predicted beforehand. Jesus repeatedly told His disciples that He would be killed and rise again on the third day (Matthew 16:21; 17:22-23; 20:17-19). After His crucifixion, the women found His tomb empty (Luke 24:1-7). Jesus then appeared to His disciples. The resurrection appearances were not limited to one person. Paul records that Christ appeared to Peter, the Twelve, more than five hundred believers, James, and finally Paul himself (1 Corinthians 15:3-8). Jesus also demonstrated that His resurrected body was real. In Luke 24:39 He told His disciples, \"a spirit hath not flesh and bones, as ye see me have.\" He invited Thomas to examine His wounds (John 20:24-29). The resurrection is essential to salvation. Paul writes that if Christ has not been raised, Christian faith is futile (1 Corinthians 15:14,17). Because Christ rose, Scripture promises resurrection to those who belong to Him (1 Corinthians 15:20-23).",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Great Controversy",
+      "Health"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 28:1-10",
+      "Luke 24:1-49",
+      "John 20:1-29",
+      "Acts 2:22-32",
+      "Romans 10:9",
+      "1 Corinthians 15:3-8,12-23"
+    ],
+    "keywords": [
+      "really",
+      "rise",
+      "dead",
+      "bible study",
+      "faith",
+      "great controversy",
+      "health"
+    ]
+  },
+  {
+    "id": "answer-why-did-jesus-pray-if-he-is-god",
+    "question": "Why Did Jesus Pray If He Is God?",
+    "shortAnswer": "Jesus prayed because the Bible presents the Father and the Son as distinct persons who have an eternal relationship. During His incarnation, Jesus lived as a genuine human being, depended upon the Father, communicated with Him, and submitted Himself to the Father's will.",
+    "longAnswer": "The fact that Jesus prayed does not prove that He was not divine. Scripture simultaneously teaches His divinity and His distinction from the Father. Jesus prayed frequently. He prayed at His baptism (Luke 3:21), withdrew to pray privately (Luke 5:16), prayed before choosing the apostles (Luke 6:12-13), and prayed before His crucifixion (Luke 22:39-46). His prayer in Gethsemane reveals His submission: \"not my will, but thine, be done\" (Luke 22:42). Jesus also spoke with the Father about the glory they shared before the world existed. In John 17:5 He prayed, \"glorify thou me with thine own self with the glory which I had with thee before the world was.\" Philippians 2:5-8 explains that Christ humbled Himself and took the form of a servant. Hebrews 5:7 describes Him offering prayers and supplications during His earthly life. Jesus therefore prayed because He truly became human and lived in dependence upon the Father while accomplishing His mission. His prayer life also provides an example for His followers. If Jesus regularly prayed, His disciples should likewise cultivate continual communion with God.",
+    "topics": [
+      "Baptism",
+      "Bible Study",
+      "Creation",
+      "Faith"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Luke 3:21",
+      "Luke 5:16",
+      "Luke 6:12-13",
+      "Luke 22:41-42",
+      "John 17:1-5",
+      "Philippians 2:5-8",
+      "Hebrews 5:7"
+    ],
+    "keywords": [
+      "pray",
+      "baptism",
+      "bible study",
+      "creation",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-trinity",
+    "question": "What Does the Bible Say About the Trinity?",
+    "shortAnswer": "The Bible teaches that there is one God while revealing the Father, Son, and Holy Spirit as distinct and divine. Scripture does not use the word \"Trinity,\" but the concept is derived by bringing together what the Bible says about God's unity and about the Father, Son, and Holy Spirit.",
+    "longAnswer": "The Bible strongly teaches that there is one God. Deuteronomy 6:4 says, \"Hear, O Israel: The LORD our God is one LORD.\" First Corinthians 8:4 likewise says, \"there is none other God but one.\" At the same time, Scripture identifies the Father as God (1 Corinthians 8:6), the Son as God (John 1:1; John 20:28), and the Holy Spirit in divine terms (Acts 5:3-4). The Father, Son, and Holy Spirit are also distinguished from one another. At Jesus' baptism, the Son is baptized, the Spirit descends like a dove, and the Father's voice comes from heaven (Matthew 3:16-17). Jesus commanded baptism \"in the name of the Father, and of the Son, and of the Holy Ghost\" (Matthew 28:19). Second Corinthians 13:14 similarly places all three together: \"The grace of the Lord Jesus Christ, and the love of God, and the communion of the Holy Ghost.\" Jesus also spoke of the Father sending another Comforter, the Holy Spirit (John 14:16-17,26). The Bible therefore presents three distinct divine persons while maintaining the truth that God is one. Scripture gives us the essential truths needed to understand God, but it does not provide a philosophical explanation of every aspect of God's eternal nature. The biblical emphasis is on who God is and how He has revealed Himself rather than on explaining every mystery concerning His existence.",
+    "topics": [
+      "Baptism",
+      "Bible Study",
+      "Faith",
+      "Holy Spirit"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Deuteronomy 6:4",
+      "Matthew 3:16-17",
+      "Matthew 28:19",
+      "John 1:1-3",
+      "John 14:16-17,26",
+      "John 20:28",
+      "Acts 5:3-4",
+      "2 Corinthians 13:14"
+    ],
+    "keywords": [
+      "trinity",
+      "baptism",
+      "bible study",
+      "faith",
+      "holy spirit"
+    ]
+  },
+  {
+    "id": "answer-assurance",
+    "question": "How Can I Be Saved?",
+    "shortAnswer": "You are saved by God's grace through faith in Jesus Christ. Scripture calls you to believe in Christ, repent of your sins, confess Him, receive His forgiveness, and follow Him in a life of faith and obedience. Salvation is God's gift. It cannot be earned by human merit or good works.",
+    "longAnswer": "When the Philippian jailer asked, \"What must I do to be saved?\" Paul and Silas answered: \"Believe on the Lord Jesus Christ, and thou shalt be saved\" (Acts 16:30-31). Ephesians 2:8-9 explains that salvation is \"by grace\" through faith and \"not of works.\" Titus 3:5 likewise says that God saves us \"not by works of righteousness which we have done, but according to his mercy.\" But biblical faith is more than merely agreeing that Jesus exists. Jesus calls people to repentance and discipleship (Mark 1:15; Luke 9:23). Genuine faith produces a changed life. Acts 2:38 connects repentance with forgiveness: \"Repent, and be baptized every one of you in the name of Jesus Christ for the remission of sins.\" This does not mean that repentance or baptism purchases salvation. Rather, they are responses to God's saving grace. Ephesians 2:10 immediately follows the statement about salvation by grace by saying that believers are created in Christ \"unto good works.\" The basic biblical pattern is therefore: Grace → faith in Christ → repentance → forgiveness → new life → obedience and good works. Scripture does not teach that a person earns salvation by becoming good enough. It teaches that salvation begins with God's grace and produces a transformed life.",
+    "topics": [
+      "Baptism",
+      "Bible Study",
+      "Creation",
+      "Faith"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Acts 2:37-38",
+      "Acts 16:30-31",
+      "Romans 3:23-26",
+      "Romans 10:9-10",
+      "Ephesians 2:8-10",
+      "Titus 3:5-7",
+      "1 John 5:11-13"
+    ],
+    "keywords": [
+      "saved",
+      "baptism",
+      "bible study",
+      "creation",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-what-must-i-do-to-be-saved",
+    "question": "What Must I Do to Be Saved?",
+    "shortAnswer": "The Bible answers this question by pointing to Jesus Christ. We are called to believe in Him, repent, receive His forgiveness, confess Him, and follow Him. When asked this exact question, Paul answered, \"Believe on the Lord Jesus Christ\" (Acts 16:30-31).",
+    "longAnswer": "The question was asked by a jailer who had witnessed God's power when Paul and Silas were miraculously freed from prison. Paul did not tell him to earn salvation through religious works. He directed him to Christ. Yet the jailer's response included action. He listened to the word of God, cared for the apostles, and was baptized (Acts 16:32-34). Peter gave a similar answer on Pentecost. When people asked what they should do, he said: \"Repent, and be baptized every one of you in the name of Jesus Christ for the remission of sins\" (Acts 2:38). Jesus Himself summarized the beginning of His ministry with the call, \"Repent ye, and believe the gospel\" (Mark 1:15). Therefore, Scripture presents salvation as involving a genuine response to God's grace. We trust Christ rather than ourselves, turn from sin, receive forgiveness, and begin walking with Him.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Forgiveness",
+      "Law"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Mark 1:15",
+      "Acts 2:37-38",
+      "Acts 16:30-34",
+      "Acts 17:30",
+      "Romans 10:9-10",
+      "Ephesians 2:8-10"
+    ],
+    "keywords": [
+      "must",
+      "saved",
+      "bible study",
+      "faith",
+      "forgiveness",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-eternal-security",
+    "question": "What Is Salvation?",
+    "shortAnswer": "Biblical salvation is God's rescue of humanity from sin, its consequences, and ultimately death. Salvation includes forgiveness, justification, reconciliation with God, transformation of character, and ultimately eternal life in God's kingdom.",
+    "longAnswer": "The name Jesus itself is connected with salvation. The angel told Joseph, \"thou shalt call his name JESUS: for he shall save his people from their sins\" (Matthew 1:21). This is important because biblical salvation is not merely rescue from unpleasant circumstances. The deepest human problem is sin. Romans 3:23 says all have sinned. Romans 6:23 says the wages of sin are death, but \"the gift of God is eternal life through Jesus Christ our Lord.\" Salvation therefore begins with forgiveness and reconciliation to God. Romans 5:1 says, \"Therefore being justified by faith, we have peace with God through our Lord Jesus Christ.\" But salvation also involves transformation. Second Corinthians 5:17 says that anyone who is in Christ is \"a new creature.\" Finally, salvation has a future dimension. Jesus will return, the dead will be raised, and God's people will receive immortality (1 Corinthians 15:51-54; 1 Thessalonians 4:16-17). Thus Scripture speaks of salvation as something believers have received, something God is accomplishing in them, and something that will be fully realized at Christ's return.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Forgiveness",
+      "Law"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 1:21",
+      "John 3:16",
+      "Romans 3:23-26",
+      "Romans 5:1-10",
+      "Romans 6:23",
+      "2 Corinthians 5:17",
+      "1 Peter 1:3-5",
+      "Revelation 21:1-4"
+    ],
+    "keywords": [
+      "salvation",
+      "bible study",
+      "faith",
+      "forgiveness",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-how-do-i-get-to-heaven",
+    "question": "How Do I Get to Heaven?",
+    "shortAnswer": "The Bible teaches that eternal life comes through Jesus Christ, not through human merit. We receive salvation by God's grace through faith in Christ, and genuine faith produces a transformed life of obedience.",
+    "longAnswer": "Jesus said, \"I am the way, the truth, and the life: no man cometh unto the Father, but by me\" (John 14:6). The way to eternal life therefore begins with Christ. John 3:16 promises eternal life to those who believe in Him. Ephesians 2:8-9 teaches that salvation is by grace through faith rather than works. However, Scripture does not describe heaven as a reward for merely making a verbal profession. Jesus said, \"Not every one that saith unto me, Lord, Lord, shall enter into the kingdom of heaven\" (Matthew 7:21). The same passage emphasizes doing the Father's will. This does not contradict salvation by grace. Good works are not the price of salvation. They are the fruit of a genuine relationship with Christ. Ephesians 2:10 says believers are created in Christ \"unto good works.\" Jesus also taught that eternal life involves knowing God and Jesus Christ (John 17:3). Ultimately, Scripture's focus is not simply \"getting to heaven.\" God's final purpose is to restore humanity to His presence in a renewed creation (Revelation 21:1-4).",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Law"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "John 3:16",
+      "John 14:1-6",
+      "John 17:3",
+      "Ephesians 2:8-10",
+      "Matthew 7:21-23",
+      "Revelation 21:1-4"
+    ],
+    "keywords": [
+      "heaven",
+      "bible study",
+      "creation",
+      "faith",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-what-does-it-mean-to-be-born-again",
+    "question": "What Does It Mean to Be Born Again?",
+    "shortAnswer": "To be born again means to experience spiritual renewal through the Holy Spirit. Jesus taught that entrance into God's kingdom requires a new birth that is spiritual rather than merely physical.",
+    "longAnswer": "Jesus explained the new birth to Nicodemus in John 3. Nicodemus initially understood Jesus' words in physical terms. Jesus clarified: \"Except a man be born of water and of the Spirit, he cannot enter into the kingdom of God\" (John 3:5). Physical birth gives physical life. The new birth gives spiritual life. Jesus then explained that the Spirit works invisibly, like the wind (John 3:8). The new birth involves a transformation of the heart. Ezekiel had previously prophesied that God would give His people a new heart and put His Spirit within them (Ezekiel 36:25-27). Paul describes this transformation as becoming a \"new creature\" in Christ (2 Corinthians 5:17). The new birth therefore is not simply joining a church, changing one's external behavior, or adopting a religious identity. It is the work of God in the heart. At the same time, the new birth produces visible results. First John 3:9-10 connects the new life with a changed relationship to sin and righteousness.",
+    "topics": [
+      "Church",
+      "Holy Spirit",
+      "Law",
+      "State of the Dead"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "John 3:1-8",
+      "Ezekiel 36:25-27",
+      "Romans 6:4",
+      "2 Corinthians 5:17",
+      "Titus 3:5",
+      "1 Peter 1:23"
+    ],
+    "keywords": [
+      "mean",
+      "born",
+      "again",
+      "church",
+      "holy spirit",
+      "law",
+      "state of the dead"
+    ]
+  },
+  {
+    "id": "answer-are-we-saved-by-faith-or-works",
+    "question": "Are We Saved by Faith or Works?",
+    "shortAnswer": "Scripture teaches that we are saved by grace through faith, not by earning salvation through works. At the same time, genuine faith produces obedience and good works. Faith and works therefore have different roles.",
+    "longAnswer": "Ephesians 2:8-9 is explicit: \"For by grace are ye saved through faith... not of works.\" Paul repeatedly teaches that people are justified by faith rather than by \"works of the law\" (Romans 3:28; Galatians 2:16). However, Paul does not conclude that works are irrelevant. The very next verse after Ephesians 2:8-9 says believers are \"created in Christ Jesus unto good works\" (Ephesians 2:10). James addresses the opposite error. He asks, \"What doth it profit, my brethren, though a man say he hath faith, and have not works?\" (James 2:14). James is not teaching that humans can purchase salvation by good deeds. He is showing that a faith that produces no obedience is not living faith. A dead faith is merely an intellectual claim. Genuine faith changes the person. Jesus described the same principle when He said, \"Ye shall know them by their fruits\" (Matthew 7:16). Therefore: We are not saved because we have good works. We are saved by God's grace through faith, and the faith that receives God's grace produces good works. Scripture rejects salvation by human merit, but it does not reject obedience. It rejects using obedience as the basis for boasting while affirming obedience as the fruit of faith.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Law"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Romans 3:28",
+      "Galatians 2:16",
+      "Ephesians 2:8-10",
+      "James 2:14-26",
+      "Matthew 7:16-20",
+      "Titus 2:11-14"
+    ],
+    "keywords": [
+      "saved",
+      "faith",
+      "works",
+      "bible study",
+      "creation",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-what-does-saved-by-grace-mean",
+    "question": "What Does \"Saved by Grace\" Mean?",
+    "shortAnswer": "Being saved by grace means that salvation is God's undeserved gift. We cannot earn forgiveness or eternal life through our own goodness. God saves us because of His mercy and the work of Jesus Christ, and we receive that salvation through faith.",
+    "longAnswer": "Ephesians 2:8 says, \"For by grace are ye saved through faith; and that not of yourselves: it is the gift of God.\" Grace means that salvation originates with God rather than human achievement. Titus 3:5 makes the same point: God saved us \"not by works of righteousness which we have done, but according to his mercy.\" This eliminates boasting. No one can stand before God and claim that eternal life was earned through personal goodness. But grace does not mean that sin does not matter. Paul immediately asks in Romans 6:1-2 whether believers should continue in sin so that grace may increase. His answer is emphatic: \"God forbid.\" Grace forgives sin and transforms the sinner. Titus 2:11-12 says God's grace teaches believers to deny ungodliness and live \"soberly, righteously, and godly.\" Grace therefore does not merely pardon the past. It produces a new way of living.",
+    "topics": [
+      "Faith",
+      "Forgiveness",
+      "Law",
+      "Salvation"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "John 1:14-17",
+      "Romans 3:23-24",
+      "Romans 6:1-2",
+      "Ephesians 2:8-10",
+      "Titus 2:11-14",
+      "Titus 3:5-7"
+    ],
+    "keywords": [
+      "saved",
+      "grace",
+      "mean",
+      "faith",
+      "forgiveness",
+      "law",
+      "salvation"
+    ]
+  },
+  {
+    "id": "answer-can-i-lose-my-salvation",
+    "question": "Can I Lose My Salvation?",
+    "shortAnswer": "Scripture gives strong promises of God's keeping power, but it also repeatedly warns believers against turning away from Christ. The Bible therefore calls believers to continue in faith rather than treating salvation as permission to abandon Christ.",
+    "longAnswer": "Jesus promised eternal life to His sheep and said that no one could snatch them from His hand (John 10:27-29). Paul likewise expressed confidence that God would complete the good work begun in believers (Philippians 1:6). These passages emphasize God's faithfulness and power. At the same time, Scripture contains serious warnings. Hebrews 3:12 warns believers: \"Take heed, brethren, lest there be in any of you an evil heart of unbelief, in departing from the living God.\" Hebrews 10:26-29 also warns against deliberate, persistent rejection of truth after receiving knowledge of it. Jesus' parable of the sower describes people who initially receive the word but later fall away (Luke 8:13). Jesus also repeatedly calls His followers to endure to the end (Matthew 24:13; Revelation 2:10). The biblical emphasis is therefore not on living in constant fear that God is looking for an opportunity to reject us. It is on remaining connected to Christ. Jesus said, \"Abide in me, and I in you\" (John 15:4). Scripture does not teach that a sincere believer loses salvation every time he commits a sin. It does teach the seriousness of persistent unbelief, deliberate rejection, and turning away from Christ.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Faith",
+      "Great Controversy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "John 10:27-29",
+      "John 15:1-6",
+      "Philippians 1:6",
+      "Hebrews 3:12-14",
+      "Hebrews 10:26-29",
+      "2 Peter 2:20-22",
+      "Revelation 2:10"
+    ],
+    "keywords": [
+      "lose",
+      "salvation",
+      "bible study",
+      "comfort",
+      "faith",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-is-once-saved-always-saved-biblical",
+    "question": "Is \"Once Saved, Always Saved\" Biblical?",
+    "shortAnswer": "The phrase \"once saved, always saved\" does not appear in Scripture. The Bible gives strong assurance of God's ability to preserve believers, but it also contains warnings against abandoning faith in Christ. The biblical emphasis is perseverance in faith and continued dependence upon Christ.",
+    "longAnswer": "Some passages emphasize security. Jesus said His sheep hear His voice, follow Him, and receive eternal life (John 10:27-29). Other passages emphasize the necessity of continuing in faith. Colossians 1:21-23 speaks of being presented holy \"if ye continue in the faith grounded and settled.\" Hebrews 3:14 says, \"we are made partakers of Christ, if we hold the beginning of our confidence stedfast unto the end.\" Jesus' teaching in John 15 is particularly important. He describes believers as branches connected to the vine and tells them to \"abide\" in Him (John 15:1-6). A branch that does not remain connected eventually withers. Paul also warned believers not to become proud but to \"continue in his goodness\" (Romans 11:20-22). These warnings do not undermine God's grace. They emphasize the reality of human choice and the necessity of continuing relationship with Christ. The Christian's confidence is therefore not confidence in oneself. It is confidence in Christ while continuing to abide in Him.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Law",
+      "Salvation"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "John 10:27-29",
+      "John 15:1-6",
+      "Romans 11:20-22",
+      "Colossians 1:21-23",
+      "Hebrews 3:12-14",
+      "Hebrews 10:35-39",
+      "Revelation 2:10"
+    ],
+    "keywords": [
+      "once",
+      "saved",
+      "always",
+      "bible study",
+      "faith",
+      "law",
+      "salvation"
+    ]
+  },
+  {
+    "id": "answer-how-do-i-know-i-am-saved",
+    "question": "How Do I Know I Am Saved?",
+    "shortAnswer": "The Bible points believers to faith in Jesus Christ, the promises of God's Word, the witness of the Holy Spirit, and the transforming fruit of a relationship with Christ. Assurance is based primarily on Christ and God's promises, not on fluctuating emotions.",
+    "longAnswer": "First John was written in part so believers could know that they have eternal life. John says: \"These things have I written unto you that believe on the name of the Son of God; that ye may know that ye have eternal life\" (1 John 5:13). Assurance begins with believing God's testimony concerning His Son. John 3:16 promises eternal life to the believer. Jesus said that whoever hears His word and believes the Father \"hath everlasting life\" (John 5:24). The Holy Spirit also bears witness with believers that they are children of God (Romans 8:16). At the same time, Scripture gives evidence of genuine faith. First John 2:3 says, \"And hereby we do know that we know him, if we keep his commandments.\" This does not mean that perfect obedience is the basis of assurance. Rather, a changed life provides evidence that faith is genuine. When believers fall, they are called to confess their sins and receive forgiveness (1 John 1:9).",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Forgiveness",
+      "Holy Spirit"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "John 3:16",
+      "John 5:24",
+      "Romans 8:14-16",
+      "1 John 1:9",
+      "1 John 2:3-6",
+      "1 John 5:11-13"
+    ],
+    "keywords": [
+      "know",
+      "saved",
+      "bible study",
+      "faith",
+      "forgiveness",
+      "holy spirit"
+    ]
+  },
+  {
+    "id": "answer-can-god-forgive-my-sins",
+    "question": "Can God Forgive My Sins?",
+    "shortAnswer": "Yes. Scripture repeatedly promises forgiveness to those who confess and turn to God. No sin is beyond God's ability to forgive when a person genuinely comes to Him in repentance and faith.",
+    "longAnswer": "First John 1:9 gives a direct promise: \"If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.\" David experienced this personally after his sin with Bathsheba. In Psalm 51 he confessed his sin and pleaded for God's mercy and cleansing. Isaiah 1:18 gives the promise that sins which are like scarlet can become \"white as snow.\" God's forgiveness is based upon His mercy and the sacrifice of Christ. Ephesians 1:7 says, \"In whom we have redemption through his blood, the forgiveness of sins.\" Jesus also demonstrated His willingness to forgive sinners. He forgave the paralytic (Mark 2:5), forgave Peter after his denial, and prayed for His executioners (Luke 23:34). Forgiveness does not mean that sin has no consequences. David's experience demonstrates that forgiveness and consequences can coexist (2 Samuel 12:9-14). Nevertheless, God's forgiveness restores the sinner to fellowship with Him.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Forgiveness",
+      "Great Controversy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Psalm 32:1-5",
+      "Psalm 51:1-17",
+      "Isaiah 1:18",
+      "Mark 2:5-12",
+      "Acts 10:43",
+      "Ephesians 1:7",
+      "1 John 1:9"
+    ],
+    "keywords": [
+      "forgive",
+      "sins",
+      "bible study",
+      "faith",
+      "forgiveness",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-what-is-repentance",
+    "question": "What Is Repentance?",
+    "shortAnswer": "Biblical repentance means turning away from sin and turning toward God. It involves recognizing sin, experiencing genuine sorrow over it, confessing it, and choosing to follow God.",
+    "longAnswer": "John the Baptist preached, \"Repent ye: for the kingdom of heaven is at hand\" (Matthew 3:2). Jesus preached the same fundamental message: \"Repent ye, and believe the gospel\" (Mark 1:15). Repentance is therefore not merely feeling bad. Paul distinguishes godly sorrow from worldly sorrow in 2 Corinthians 7:10. Godly sorrow produces repentance that leads to salvation. David's prayer in Psalm 51 demonstrates genuine repentance. He acknowledges his sin, asks God for cleansing, and asks for a renewed heart. Repentance also produces fruit. John the Baptist told people to \"bring forth therefore fruits meet for repentance\" (Matthew 3:8). This does not mean a person must make himself perfect before coming to Christ. Rather, coming to Christ includes a willingness to turn from known sin and submit to God's transforming work. Acts 3:19 summarizes the biblical pattern: \"Repent ye therefore, and be converted, that your sins may be blotted out.\"",
+    "topics": [
+      "Baptism",
+      "Bible Study",
+      "Faith",
+      "Forgiveness"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Psalm 51",
+      "Matthew 3:2,8",
+      "Mark 1:15",
+      "Luke 13:3",
+      "Acts 2:38",
+      "Acts 3:19",
+      "2 Corinthians 7:10"
+    ],
+    "keywords": [
+      "repentance",
+      "baptism",
+      "bible study",
+      "faith",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "answer-what-does-it-mean-to-repent",
+    "question": "What Does It Mean to Repent?",
+    "shortAnswer": "To repent means to turn from sin toward God. Biblical repentance involves a change of heart and direction, not merely regret over getting caught or suffering consequences.",
+    "longAnswer": "The Bible gives a clear example in the story of the prodigal son. After recognizing the consequences of his rebellion, he \"came to himself\" and decided to return to his father (Luke 15:17-20). True repentance involves returning to God. Peter's message at Pentecost was, \"Repent, and be baptized every one of you in the name of Jesus Christ for the remission of sins\" (Acts 2:38). Repentance also involves confession. Proverbs 28:13 says the person who confesses and forsakes sin receives mercy. This distinction is important. Biblical repentance is not simply saying, \"I am sorry.\" It involves a willingness to leave the sinful path. However, repentance itself is not a human achievement that earns salvation. Acts 5:31 says Christ was exalted to give \"repentance\" as well as forgiveness. God calls people to repentance, and His goodness leads them toward it (Romans 2:4).",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Faith",
+      "Forgiveness"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Proverbs 28:13",
+      "Matthew 3:8",
+      "Luke 15:17-24",
+      "Acts 2:38",
+      "Acts 5:31",
+      "Acts 17:30",
+      "Romans 2:4"
+    ],
+    "keywords": [
+      "mean",
+      "repent",
+      "bible study",
+      "comfort",
+      "faith",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "answer-what-is-conversion",
+    "question": "What Is Conversion?",
+    "shortAnswer": "Conversion is the turning of a person from sin and rebellion toward God through faith in Jesus Christ. It involves a changed heart, a changed direction, and a new relationship with God.",
+    "longAnswer": "The Bible uses the language of turning to describe conversion. Peter told the people, \"Repent ye therefore, and be converted\" (Acts 3:19). Paul described his mission as calling people \"to turn from darkness to light, and from the power of Satan unto God\" (Acts 26:18). Conversion therefore involves a change of allegiance. It begins with God's grace and the work of the Holy Spirit. Jesus told Nicodemus that the Spirit gives new birth (John 3:5-8). Conversion also affects conduct. Paul told the Ephesians that those who learned Christ should \"put off\" the former manner of life and \"put on the new man\" (Ephesians 4:20-24). This means conversion is more than changing religious affiliation. A person may identify with Christianity outwardly without experiencing genuine spiritual transformation. The converted person begins learning to think, speak, and live according to God's will.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Forgiveness",
+      "Great Controversy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Acts 3:19",
+      "Acts 26:18",
+      "Romans 12:1-2",
+      "2 Corinthians 5:17",
+      "Ephesians 4:20-24",
+      "Colossians 3:1-10"
+    ],
+    "keywords": [
+      "conversion",
+      "bible study",
+      "faith",
+      "forgiveness",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-what-is-the-new-birth",
+    "question": "What Is the New Birth?",
+    "shortAnswer": "The new birth is the spiritual transformation God produces through the Holy Spirit. Jesus taught that a person must be \"born again\" to see or enter the kingdom of God.",
+    "longAnswer": "Jesus introduced this teaching in His conversation with Nicodemus: \"Except a man be born again, he cannot see the kingdom of God\" (John 3:3). Nicodemus initially interpreted the statement literally, but Jesus explained that He was speaking about spiritual birth. \"Except a man be born of water and of the Spirit, he cannot enter into the kingdom of God\" (John 3:5). The Holy Spirit produces this new life. Titus 3:5 describes salvation as involving \"the washing of regeneration, and renewing of the Holy Ghost.\" Peter similarly says believers are \"born again\" through the living Word of God (1 Peter 1:23). The new birth changes the direction of a person's life. Paul describes the result as becoming a \"new creature\" (2 Corinthians 5:17). The new birth therefore does not mean becoming physically different. It means receiving a new spiritual orientation through God's grace and the work of the Holy Spirit.",
+    "topics": [
+      "Faith",
+      "Holy Spirit",
+      "Law",
+      "Salvation"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "John 3:1-8",
+      "Ezekiel 36:25-27",
+      "Titus 3:5",
+      "2 Corinthians 5:17",
+      "1 Peter 1:23",
+      "James 1:18"
+    ],
+    "keywords": [
+      "birth",
+      "faith",
+      "holy spirit",
+      "law",
+      "salvation"
+    ]
+  },
+  {
+    "id": "answer-is-baptism-necessary-for-salvation",
+    "question": "Is Baptism Necessary for Salvation?",
+    "shortAnswer": "The Bible clearly commands baptism as the normal public response of a believer to the gospel. However, Scripture does not present the water itself as a magical substance that saves. Salvation comes through Christ and is received by faith, while baptism is an important expression of that faith and obedience.",
+    "longAnswer": "Jesus commanded His disciples to baptize those who become disciples (Matthew 28:19-20). Peter told those who accepted the gospel, \"Repent, and be baptized\" (Acts 2:38). Acts repeatedly presents baptism as the immediate response of those who believe (Acts 8:12,36-38; Acts 16:30-34). At the same time, Scripture explicitly teaches salvation by grace through faith rather than human works (Ephesians 2:8-9). The thief on the cross provides an example of someone who expressed faith in Christ but had no opportunity for baptism (Luke 23:39-43). First Peter 3:21 requires careful reading. Peter says baptism saves, but immediately clarifies that he is not referring merely to washing physical dirt from the body. The emphasis is on the believer's appeal to God through the resurrection of Jesus Christ. Baptism therefore should never be treated as an alternative to faith. It is the biblical outward expression of identification with Christ's death and resurrection (Romans 6:3-4). Scripture clearly commands baptism and closely connects it with conversion. It does not teach that water itself has magical power to forgive sin independently of faith in Christ.",
+    "topics": [
+      "Baptism",
+      "Bible Study",
+      "Faith",
+      "Forgiveness"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 28:19-20",
+      "Mark 16:16",
+      "Acts 2:38-41",
+      "Acts 8:36-38",
+      "Acts 16:30-34",
+      "Romans 6:3-4",
+      "Ephesians 2:8-9",
+      "1 Peter 3:21"
+    ],
+    "keywords": [
+      "baptism",
+      "necessary",
+      "salvation",
+      "bible study",
+      "faith",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "answer-can-you-be-saved-without-baptism",
+    "question": "Can You Be Saved Without Baptism?",
+    "shortAnswer": "Yes, Scripture provides circumstances in which salvation is not dependent upon a person's ability to receive baptism. However, the Bible also clearly commands baptism for believers who have the opportunity to obey Christ.",
+    "longAnswer": "The clearest example is the thief who was crucified beside Jesus. The man acknowledged his guilt, recognized Jesus as the Messiah, and asked Jesus to remember him. Jesus responded with a promise of salvation (Luke 23:39-43). The thief had no realistic opportunity to receive Christian baptism before his death. Another important example is Cornelius. He and his household received the Holy Spirit before Peter baptized them (Acts 10:44-48). Baptism followed God's acceptance of them rather than functioning as a prerequisite that earned that acceptance. Nevertheless, baptism is not optional for a believer simply because salvation is by grace. Jesus commanded baptism (Matthew 28:19-20), and the early believers consistently practiced it. The biblical distinction is therefore important: Baptism does not earn salvation, but a person who has accepted Christ should willingly obey Christ's command to be baptized.",
+    "topics": [
+      "Baptism",
+      "Bible Study",
+      "Faith",
+      "Holy Spirit"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Luke 23:39-43",
+      "Matthew 28:19-20",
+      "Acts 2:38-41",
+      "Acts 10:44-48",
+      "Acts 16:30-34",
+      "Ephesians 2:8-9"
+    ],
+    "keywords": [
+      "saved",
+      "without",
+      "baptism",
+      "bible study",
+      "faith",
+      "holy spirit"
+    ]
+  },
+  {
+    "id": "answer-what-is-the-unpardonable-sin",
+    "question": "What Is the Unpardonable Sin?",
+    "shortAnswer": "The unpardonable sin is commonly called blasphemy against the Holy Spirit. Jesus described it as attributing the work of God's Spirit to Satan. The context indicates persistent, willful resistance to the Spirit's testimony rather than an accidental statement or isolated sinful act.",
+    "longAnswer": "In Matthew 12, Jesus performed a miracle through the Spirit of God. Religious leaders witnessed the evidence but claimed that Jesus cast out demons by the power of Satan. Jesus responded: \"Blasphemy against the Holy Ghost shall not be forgiven unto men\" (Matthew 12:31). Why is this sin different? The Holy Spirit is the One who convicts people of sin and points them toward truth (John 16:8-13). If a person continually rejects that conviction and deliberately calls God's work evil, he is closing himself against the very means by which repentance becomes possible. This helps explain why the sin is \"unpardonable.\" It is not that God's mercy has a limit for a repentant sinner. Rather, the person has persistently rejected the Spirit's testimony and refuses repentance. The apostle John also distinguishes between sin that can be forgiven and a \"sin unto death\" (1 John 5:16), although that passage does not provide a complete definition of the unpardonable sin. The Bible does not say that accidentally using certain words, having a disturbing thought, or committing a particular ordinary sin automatically makes forgiveness impossible. A person who is genuinely concerned that he has committed the unpardonable sin should recognize that such concern itself can indicate that his conscience has not become completely hardened.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Forgiveness",
+      "Great Controversy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 12:22-32",
+      "Mark 3:22-30",
+      "Luke 12:8-10",
+      "John 16:8-13",
+      "Ephesians 4:30",
+      "Hebrews 3:7-8"
+    ],
+    "keywords": [
+      "unpardonable",
+      "bible study",
+      "comfort",
+      "forgiveness",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-what-is-blasphemy-against-the-holy-spirit",
+    "question": "What Is Blasphemy Against the Holy Spirit?",
+    "shortAnswer": "Blasphemy against the Holy Spirit is the deliberate rejection and malicious misrepresentation of the Spirit's work, especially when someone knowingly attributes God's work to Satan. Jesus gave this warning after religious leaders witnessed His works and attributed them to demonic power.",
+    "longAnswer": "Matthew 12:22-32 provides the primary context. Jesus healed a demon-possessed man who was blind and unable to speak. The people wondered whether Jesus was the Son of David. The Pharisees responded by claiming that Jesus cast out demons through \"Beelzebub\" (Matthew 12:24). Jesus explained that their accusation was fundamentally false. He was performing the work through the Spirit of God. He then warned that speaking against the Holy Spirit would not be forgiven. The parallel account in Mark is even more explicit. Mark 3:30 says Jesus gave this warning \"because they said, He hath an unclean spirit.\" The issue was therefore not a careless word. The religious leaders were confronted with divine evidence and deliberately labeled God's work satanic. The Holy Spirit convicts the world of sin, righteousness, and judgment (John 16:8). Persistent rejection of that conviction eventually hardens the heart. The Bible does not define the unpardonable sin as one specific curse word, accidental statement, intrusive thought, or ordinary moral failure. The immediate context is deliberate resistance to the Holy Spirit's revealed work.",
+    "topics": [
+      "Bible Study",
+      "Forgiveness",
+      "Great Controversy",
+      "Health"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 12:22-32",
+      "Mark 3:22-30",
+      "Luke 12:10",
+      "John 16:8-13",
+      "Ephesians 4:30",
+      "Hebrews 3:7-8"
+    ],
+    "keywords": [
+      "blasphemy",
+      "against",
+      "holy",
+      "spirit",
+      "bible study",
+      "forgiveness",
+      "great controversy",
+      "health"
+    ]
+  },
+  {
+    "id": "answer-can-god-forgive-every-sin",
+    "question": "Can God Forgive Every Sin?",
+    "shortAnswer": "The Bible teaches that God is willing to forgive every repentant sinner. The only sin Jesus specifically identifies as \"unpardonable\" is blasphemy against the Holy Spirit, understood in its biblical context as persistent rejection of the Spirit's testimony.",
+    "longAnswer": "Isaiah 55:7 gives a powerful invitation: \"Let the wicked forsake his way, and the unrighteous man his thoughts: and let him return unto the LORD, and he will have mercy upon him.\" The apostle John gives a direct promise: \"If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness\" (1 John 1:9). The apostle Paul provides an especially powerful example. Before his conversion, he persecuted Christians and attempted to destroy the church (Acts 8:3; 1 Timothy 1:13-16). Yet he received mercy and became a servant of Christ. Jesus also forgave people who had committed serious sins. Peter denied Jesus three times, yet Christ restored him (John 21:15-19). David committed adultery and arranged the death of Bathsheba's husband, yet after genuine repentance he received forgiveness (2 Samuel 12:13; Psalm 51). The gospel is therefore not a message that certain ordinary sins are too terrible for God to forgive. The central question is whether a person will turn to Christ in repentance and faith. God's forgiveness is not permission to continue deliberately in sin. Paul asks, \"Shall we continue in sin, that grace may abound?\" and answers, \"God forbid\" (Romans 6:1-2). Forgiveness and transformation belong together. God not only pardons the repentant sinner but calls that person into a new life.",
+    "topics": [
+      "Bible Study",
+      "Church",
+      "Faith",
+      "Forgiveness"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Psalm 32:1-5",
+      "Psalm 51",
+      "Isaiah 1:18",
+      "Isaiah 55:6-7",
+      "Acts 13:38-39",
+      "1 Timothy 1:12-16",
+      "1 John 1:9"
+    ],
+    "keywords": [
+      "forgive",
+      "every",
+      "bible study",
+      "church",
+      "faith",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "answer-death",
+    "question": "What Happens When You Die?",
+    "shortAnswer": "According to Scripture, death is a state of unconsciousness in which a person is not actively participating in the affairs of the living. The Bible frequently compares death to sleep and points forward to the resurrection as the time when the dead will live again.",
+    "longAnswer": "When a person dies, the body returns to the dust from which it was made. Genesis 3:19 says, \"for dust thou art, and unto dust shalt thou return.\" Ecclesiastes 9:5 states that \"the dead know not any thing,\" and verse 10 says there is no work, knowledge, wisdom, or device in the grave. The Bible repeatedly uses sleep as a description of death. Jesus called Lazarus's death \"sleep\" and then plainly explained, \"Lazarus is dead\" (John 11:11-14). Paul similarly describes deceased believers as those who have \"fallen asleep\" (1 Thessalonians 4:13-15). This is important because the biblical hope is not that the dead are already living elsewhere in a conscious state. The hope is the resurrection. Jesus said that \"all that are in the graves shall hear his voice, and shall come forth\" (John 5:28-29). Paul describes the resurrection of believers at Christ's return (1 Thessalonians 4:16-17; 1 Corinthians 15:51-54). Death, therefore, is not the end of God's plan. It is an enemy that Christ will ultimately destroy (1 Corinthians 15:26). The Bible does not describe the ordinary dead as actively communicating with the living, watching earthly events, or carrying on normal conscious activities. Its consistent emphasis is on death as sleep and resurrection as the answer to death.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Health"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Genesis 3:19",
+      "Ecclesiastes 9:5-6,10",
+      "Psalm 146:4",
+      "John 11:11-14",
+      "1 Thessalonians 4:13-17",
+      "1 Corinthians 15:51-54"
+    ],
+    "keywords": [
+      "happens",
+      "bible study",
+      "creation",
+      "faith",
+      "health"
+    ]
+  },
+  {
+    "id": "answer-where-do-you-go-when-you-die",
+    "question": "Where Do You Go When You Die?",
+    "shortAnswer": "The Bible describes the dead as returning to the dust and remaining in the grave until the resurrection. Scripture does not teach that every person immediately goes to heaven or to a place of eternal torment at death.",
+    "longAnswer": "Genesis 3:19 explains what happens to the body: \"unto dust shalt thou return.\" The Old Testament frequently describes the grave as the destination of the dead. Job asked, \"If a man die, shall he live again?\" and looked forward to a future resurrection (Job 14:12-15). David wrote that in death there is no remembrance of God and asked, \"who will give thee thanks in the grave?\" (Psalm 6:5). Ecclesiastes 9:5-6 similarly says the dead have no knowledge of what is happening under the sun. The New Testament maintains this resurrection-centered hope. Paul did not tell grieving believers that their deceased relatives were already living in heaven. Instead, he directed them toward Christ's return: \"The Lord himself shall descend from heaven... and the dead in Christ shall rise first\" (1 Thessalonians 4:16). Jesus likewise spoke of a future resurrection of those in the graves (John 5:28-29). Therefore, the biblical picture is: Death → unconscious rest in the grave → resurrection → eternal life or final judgment.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Great Controversy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Genesis 3:19",
+      "Job 14:10-15",
+      "Psalm 6:5",
+      "Ecclesiastes 9:5-10",
+      "John 5:28-29",
+      "1 Thessalonians 4:13-17",
+      "1 Corinthians 15:20-23"
+    ],
+    "keywords": [
+      "bible study",
+      "creation",
+      "faith",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-heaven-hell-timing-2",
+    "question": "Do You Go to Heaven When You Die?",
+    "shortAnswer": "Scripture's emphasis is not that the righteous immediately go to heaven at death. The Bible repeatedly points believers toward the resurrection at Christ's second coming as the time when the dead in Christ receive immortal life.",
+    "longAnswer": "Paul describes the Christian hope in 1 Thessalonians 4:16-17. When Christ returns, \"the dead in Christ shall rise first,\" and living believers will then be caught up together with them to meet the Lord. If deceased Christians were already living consciously in heaven, the resurrection would not have the same meaning. Jesus told His disciples that He was going to prepare a place for them and that He would come again and receive them to Himself (John 14:1-3). He did not tell them that they would immediately come to Him at death. He pointed them to His return. Jesus also told Mary after His resurrection, \"Touch me not; for I am not yet ascended to my Father\" (John 20:17). The Bible's ultimate hope is therefore resurrection and restoration, not disembodied existence. At Christ's return, the righteous dead are raised, the living righteous are transformed, and together they meet Christ (1 Corinthians 15:51-54; 1 Thessalonians 4:16-17). Scripture does contain passages that Christians have interpreted differently concerning the intermediate state, particularly Philippians 1:21-23 and 2 Corinthians 5:1-8. These passages should be read alongside the many explicit passages describing death as sleep and resurrection as the future hope.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Salvation",
+      "Second Coming"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "John 5:28-29",
+      "John 14:1-3",
+      "John 20:17",
+      "1 Corinthians 15:51-54",
+      "1 Thessalonians 4:13-17"
+    ],
+    "keywords": [
+      "heaven",
+      "bible study",
+      "faith",
+      "salvation",
+      "second coming"
+    ]
+  },
+  {
+    "id": "answer-state-of-dead-soul-sleep",
+    "question": "What Happens After Death According to the Bible?",
+    "shortAnswer": "The Bible teaches that death is followed by a period of unconscious rest, after which comes resurrection and judgment. The final destiny of each person is determined by his or her relationship to God and response to His salvation.",
+    "longAnswer": "Jesus described death using the metaphor of sleep. Lazarus had died, yet Jesus said He would \"wake him up\" (John 11:11-14). The apostles continued using this language. Paul described deceased Christians as those who \"sleep in Jesus\" (1 Thessalonians 4:14). The resurrection occurs when Christ returns. First Thessalonians 4:16 says the \"dead in Christ shall rise first.\" Jesus also taught two future resurrections, one to life and one to judgment (John 5:28-29). Daniel 12:2 similarly says that \"many of them that sleep in the dust of the earth shall awake,\" with different outcomes. The Bible therefore presents a sequence: A person dies. The person rests in death. Christ returns. The dead are resurrected. God brings judgment. The righteous receive eternal life. Sin and death are ultimately destroyed. Revelation 20 describes the final judgment and the lake of fire, which Scripture explicitly identifies as \"the second death\" (Revelation 20:14).",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Law",
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Daniel 12:2",
+      "John 5:28-29",
+      "John 11:11-14",
+      "1 Thessalonians 4:13-17",
+      "Revelation 20:11-15"
+    ],
+    "keywords": [
+      "happens",
+      "death",
+      "bible study",
+      "creation",
+      "law",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-does-the-bible-say-the-dead-are-conscious",
+    "question": "Does the Bible Say the Dead Are Conscious?",
+    "shortAnswer": "The Bible's clearest statements about the ordinary state of the dead describe them as unconscious, using expressions such as \"know not any thing\" and \"sleep.\"",
+    "longAnswer": "Ecclesiastes 9:5 says, \"the dead know not any thing.\" Verse 6 continues by describing the dead as no longer participating in the activities and relationships of earthly life. Psalm 146:4 says that when a person dies, \"his thoughts perish.\" Jesus used the same basic concept when He described Lazarus's death as sleep. His disciples initially misunderstood Him, so Jesus plainly said, \"Lazarus is dead\" (John 11:11-14). Paul also describes deceased believers as sleeping (1 Thessalonians 4:13-15). The resurrection is consequently presented as an awakening. Daniel 12:2 speaks of those who \"sleep in the dust\" awakening. This biblical pattern is difficult to reconcile with the idea that the dead normally continue conscious earthly relationships or activities after death. Some biblical passages use figurative or poetic language concerning the dead. The safest approach is to interpret those passages alongside the Bible's direct statements about death and resurrection.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Law"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Job 14:10-12",
+      "Psalm 6:5",
+      "Psalm 115:17",
+      "Psalm 146:4",
+      "Ecclesiastes 9:5-6,10",
+      "John 11:11-14",
+      "1 Thessalonians 4:13-17"
+    ],
+    "keywords": [
+      "dead",
+      "conscious",
+      "bible study",
+      "creation",
+      "faith",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-do-the-dead-know-what-is-happening",
+    "question": "Do the Dead Know What Is Happening?",
+    "shortAnswer": "Scripture indicates that the dead do not have conscious knowledge of earthly events. Ecclesiastes explicitly says the dead \"know not any thing,\" while Psalm 146 says their thoughts perish.",
+    "longAnswer": "Ecclesiastes 9:5-6 is unusually direct: \"The dead know not any thing.\" The passage continues by saying that their love, hatred, and envy have ended and that they no longer participate in the affairs taking place \"under the sun.\" This does not mean God has forgotten the dead. God remembers every person and will resurrect them. Jesus demonstrated this when He called Lazarus from the grave. Lazarus did not return from a conscious heavenly existence with a message about what he had seen. Jesus simply called him out of death (John 11:43-44). If the dead were consciously observing earthly life, passages warning against communication with the dead would be difficult to understand. Deuteronomy 18:10-12 explicitly prohibits attempts to consult the dead or communicate with supposed spirits. The biblical emphasis is instead that God alone holds the future resurrection.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Great Controversy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Ecclesiastes 9:5-6",
+      "Psalm 146:4",
+      "Job 14:10-12",
+      "John 11:11-14,43-44",
+      "Deuteronomy 18:10-12",
+      "1 Thessalonians 4:13-17"
+    ],
+    "keywords": [
+      "dead",
+      "know",
+      "happening",
+      "bible study",
+      "creation",
+      "faith",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-can-the-dead-communicate-with-the-living",
+    "question": "Can the Dead Communicate With the Living?",
+    "shortAnswer": "Scripture forbids attempts to communicate with the dead. The Bible's teaching about death as unconsciousness means that supposed communications from deceased people should not be accepted as evidence that the dead are actually communicating.",
+    "longAnswer": "God explicitly prohibited Israel from consulting mediums, spiritists, or those who claimed to communicate with the dead. Deuteronomy 18:10-12 lists \"a consulter with familiar spirits\" among practices God condemns. Isaiah 8:19 asks: \"Should not a people seek unto their God? for the living to the dead?\" The biblical alternative is to seek God and His revealed Word rather than attempting to obtain supernatural information from the dead. The story of Saul and the medium at Endor in 1 Samuel 28 is sometimes presented as proof that the dead communicate. However, the passage occurs in the context of Saul's rebellion and his previous rejection of God's commands against such practices (1 Samuel 28:3-7). The narrative should therefore not be used to overturn the many direct statements describing death as unconsciousness. The New Testament also warns that Satan can deceive through supernatural signs (2 Corinthians 11:14). Scripture clearly prohibits attempts to contact the dead. It does not instruct believers to investigate or test supposed messages from deceased relatives. The biblical instruction is to seek God and His Word.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Great Controversy",
+      "Holy Spirit"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Deuteronomy 18:9-14",
+      "1 Samuel 28:3-20",
+      "Isaiah 8:19-20",
+      "Ecclesiastes 9:5-6",
+      "2 Corinthians 11:14"
+    ],
+    "keywords": [
+      "dead",
+      "communicate",
+      "living",
+      "bible study",
+      "faith",
+      "great controversy",
+      "holy spirit"
+    ]
+  },
+  {
+    "id": "answer-what-is-the-soul-according-to-the-bible",
+    "question": "What Is the Soul According to the Bible?",
+    "shortAnswer": "In the Bible, the word \"soul\" does not normally mean an immortal, conscious person living independently inside the body. Scripture uses \"soul\" in several ways, including for the whole living person, life, or being.",
+    "longAnswer": "Genesis 2:7 is foundational: \"The LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life; and man became a living soul.\" Notice the wording. God did not place an immortal soul into Adam. Adam became a living soul. The Hebrew word translated \"soul\" is used in different contexts and can refer to a living being, person, life, or self. The same biblical picture appears elsewhere. Ezekiel 18:4 says, \"the soul that sinneth, it shall die.\" This is significant because Scripture does not describe every human soul as inherently immortal. Paul teaches that immortality is something God gives to the redeemed at the resurrection. First Corinthians 15:51-54 says that \"this mortal must put on immortality.\" The Bible's concept of human life is therefore holistic. The person is a living being created by God. Death reverses the process: the body returns to dust, and the life-breath returns to God who gave it (Ecclesiastes 12:7).",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Health",
+      "Law"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Genesis 2:7",
+      "Genesis 35:18",
+      "Psalm 16:10",
+      "Ezekiel 18:4",
+      "Matthew 10:28",
+      "1 Corinthians 15:51-54",
+      "Ecclesiastes 12:7"
+    ],
+    "keywords": [
+      "soul",
+      "bible study",
+      "creation",
+      "health",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-is-the-soul-immortal",
+    "question": "Is the Soul Immortal?",
+    "shortAnswer": "Scripture does not teach that human beings possess inherent immortality. Instead, immortality is presented as something God gives to the redeemed at the resurrection.",
+    "longAnswer": "The Bible's first warning concerning death involved the claim that humans would not die. In Genesis 3:4, the serpent told Eve, \"Ye shall not surely die.\" Scripture consistently teaches that immortality belongs uniquely to God in Himself. First Timothy 6:16 describes God as the One \"who only hath immortality.\" Paul says that mortal human beings must \"put on immortality\" at the resurrection (1 Corinthians 15:53-54). This means immortality is not an automatic possession of every human being. Ezekiel 18:4 says, \"the soul that sinneth, it shall die.\" Jesus likewise said that God can \"destroy both soul and body in hell\" (Matthew 10:28). The biblical hope is therefore not that an immortal soul naturally survives death. It is that God will resurrect His people and give them immortality. The Bible uses the word \"immortal\" in a very specific way. It does not describe every human soul as inherently immortal. It promises immortality to those who receive eternal life from God.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Health",
+      "Law"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Genesis 2:16-17",
+      "Genesis 3:4",
+      "Ezekiel 18:4",
+      "Matthew 10:28",
+      "1 Timothy 6:15-16",
+      "1 Corinthians 15:51-54"
+    ],
+    "keywords": [
+      "soul",
+      "immortal",
+      "bible study",
+      "creation",
+      "health",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-what-happens-to-your-soul-when-you-die",
+    "question": "What Happens to Your Soul When You Die?",
+    "shortAnswer": "According to the biblical description of human nature, the soul does not leave the body as an immortal conscious person. At death, the person ceases to live and returns to the dust, awaiting the resurrection.",
+    "longAnswer": "Genesis 2:7 says that Adam became a living soul when God formed him from dust and gave him the breath of life. When a person dies, the reverse occurs. Ecclesiastes 12:7 says the dust returns to the earth and the spirit returns to God who gave it. This \"spirit\" should not automatically be understood as a conscious personality living independently of the body. James 2:26 says, \"the body without the spirit is dead,\" emphasizing the life-giving principle. The dead are repeatedly described as sleeping. Jesus called Lazarus's death sleep (John 11:11-14), and Paul called deceased believers those who had fallen asleep (1 Thessalonians 4:13-17). At the resurrection, God restores life. First Corinthians 15 explains that the mortal body is raised and transformed into immortality. The Christian hope is therefore not escape from the body into an eternal spiritual existence. It is resurrection and restoration.",
+    "topics": [
+      "Creation",
+      "Faith",
+      "Health",
+      "Holy Spirit"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Genesis 2:7",
+      "Ecclesiastes 9:5-6",
+      "Ecclesiastes 12:7",
+      "Psalm 146:4",
+      "John 11:11-14",
+      "1 Corinthians 15:42-54",
+      "1 Thessalonians 4:13-17"
+    ],
+    "keywords": [
+      "happens",
+      "soul",
+      "creation",
+      "faith",
+      "health",
+      "holy spirit"
+    ]
+  },
+  {
+    "id": "answer-heaven-hell-timing-3",
+    "question": "What Is Hell According to the Bible?",
+    "shortAnswer": "The Bible uses the word \"hell\" in several contexts, and translations can use \"hell\" for different biblical terms. Scripture's final picture of hell is the lake of fire associated with the destruction of sin, Satan, death, and those who ultimately reject God.",
+    "longAnswer": "In the King James Bible, \"hell\" can translate different concepts. In the Old Testament, the Hebrew word Sheol often refers broadly to the grave or realm of the dead. In the New Testament, Hades can similarly refer to the realm of the dead, while Gehenna is associated with final judgment. The final judgment is described most clearly in Revelation. Revelation 20:14 says, \"death and hell were cast into the lake of fire. This is the second death.\" The wording itself is significant. Hell is not presented as an eternal kingdom existing independently of God. Death and hell are themselves ultimately destroyed. Jesus also warned that God can \"destroy both soul and body in hell\" (Matthew 10:28). The Bible therefore presents final judgment as real and terrible, while also teaching that death itself will ultimately be abolished.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Great Controversy",
+      "Health"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Psalm 9:17",
+      "Matthew 10:28",
+      "Matthew 25:31-46",
+      "Mark 9:43-48",
+      "2 Thessalonians 1:7-9",
+      "Revelation 20:9-15",
+      "Revelation 21:8"
+    ],
+    "keywords": [
+      "hell",
+      "bible study",
+      "faith",
+      "great controversy",
+      "health"
+    ]
+  },
+  {
+    "id": "answer-is-hell-eternal",
+    "question": "Is Hell Eternal?",
+    "shortAnswer": "The Bible uses the language of \"eternal,\" \"everlasting,\" and \"unquenchable\" fire in describing final judgment. Scripture must be read carefully, however, because it also explicitly describes the result of that judgment as death and destruction, and identifies the lake of fire as \"the second death.\"",
+    "longAnswer": "Matthew 25:46 contrasts \"everlasting punishment\" with \"eternal life.\" The question is what kind of punishment Scripture describes. Second Thessalonians 1:9 speaks of \"everlasting destruction from the presence of the Lord.\" The punishment is everlasting in its consequences, but the Bible also teaches that the wicked ultimately die. Malachi 4:1 says the wicked will be burned like stubble, leaving \"neither root nor branch.\" Jesus warned of destruction in hell (Matthew 10:28). Revelation identifies the lake of fire as \"the second death\" (Revelation 20:14; 21:8). Thus Scripture clearly teaches an eternal final judgment and eternal consequences, but it does not require the conclusion that immortal sinners remain consciously alive and suffering forever. The Bible clearly teaches that final judgment is irreversible and its consequences are eternal. It also clearly calls the final result \"the second death.\" The exact nature and duration of every aspect of the imagery should therefore be interpreted in light of the whole biblical testimony.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Law",
+      "Prophecy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Isaiah 66:24",
+      "Malachi 4:1-3",
+      "Matthew 10:28",
+      "Matthew 25:46",
+      "2 Thessalonians 1:9",
+      "Revelation 20:9-15",
+      "Revelation 21:8"
+    ],
+    "keywords": [
+      "hell",
+      "eternal",
+      "bible study",
+      "comfort",
+      "law",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-hell",
+    "question": "Does the Bible Teach Eternal Torment?",
+    "shortAnswer": "The Bible uses strong language about fire, punishment, and \"for ever and ever\" in connection with final judgment. However, it also explicitly teaches that the final result for the wicked is death and destruction. Scripture does not teach that human beings possess inherent immortality that would require them to live forever in suffering.",
+    "longAnswer": "One of the strongest texts is Revelation 20:10, which describes the devil being tormented \"day and night for ever and ever.\" This statement specifically concerns the devil and appears in the symbolic context of Revelation. When the Bible describes the fate of ordinary sinners, it repeatedly uses the language of death and destruction. Jesus says God can \"destroy both soul and body in hell\" (Matthew 10:28). Paul describes the fate of those who reject God as \"everlasting destruction\" (2 Thessalonians 1:9). Revelation 20:14 calls the lake of fire \"the second death,\" and Revelation 21:8 repeats this identification. The Bible therefore does teach eternal punishment in the sense of irreversible, everlasting consequences. But it also teaches that the wicked ultimately perish rather than possessing natural immortality. The contrast throughout Scripture is between eternal life and death, not between two forms of eternal life. John 3:16 states that those who believe receive everlasting life, while those who do not believe \"should not perish.\" There are difficult passages involving eternal fire and everlasting punishment. They should not be ignored. At the same time, those passages must be interpreted alongside the Bible's explicit statements about destruction, death, and the ultimate destruction of death itself.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Faith",
+      "Great Controversy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 10:28",
+      "John 3:16",
+      "Malachi 4:1-3",
+      "2 Thessalonians 1:9",
+      "Revelation 20:9-15",
+      "Revelation 21:8"
+    ],
+    "keywords": [
+      "teach",
+      "eternal",
+      "torment",
+      "bible study",
+      "comfort",
+      "faith",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-what-is-the-lake-of-fire",
+    "question": "What Is the Lake of Fire?",
+    "shortAnswer": "The lake of fire is the biblical description of the final judgment in which Satan, sin, death, and those who reject God's salvation are finally destroyed. Revelation explicitly calls the lake of fire \"the second death.\"",
+    "longAnswer": "The lake of fire appears prominently in Revelation. The beast and false prophet are cast into it (Revelation 19:20). After the millennium, Satan is cast into the lake of fire (Revelation 20:10). Then death and Hades are also cast into it. Revelation explains: \"This is the second death\" (Revelation 20:14). Finally, those whose names are not in the book of life are cast into the lake of fire (Revelation 20:15). The lake of fire therefore represents the final eradication of evil. This is confirmed by Revelation 21:4, which says there will ultimately be no more death, sorrow, crying, or pain. The lake of fire should therefore be understood in the context of God's final victory over sin. It is not presented as an eternal realm that will coexist forever with God's restored creation.",
+    "topics": [
+      "Comfort",
+      "Creation",
+      "Faith",
+      "Great Controversy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Revelation 19:20",
+      "Revelation 20:9-15",
+      "Revelation 21:4,8",
+      "Malachi 4:1-3",
+      "2 Peter 3:7-13"
+    ],
+    "keywords": [
+      "lake",
+      "fire",
+      "comfort",
+      "creation",
+      "faith",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-what-is-the-second-death",
+    "question": "What Is the Second Death?",
+    "shortAnswer": "The second death is the final death described in Revelation after the resurrection, judgment, and final destruction of evil. It is associated with the lake of fire and represents the permanent end of sin and rebellion.",
+    "longAnswer": "Revelation 20:14 gives the clearest definition: \"Death and hell were cast into the lake of fire. This is the second death.\" The first death is the death experienced by human beings in the present world. The second death occurs after the final judgment. Revelation 20 describes two resurrections. Those who participate in the first resurrection are blessed and the second death has no power over them (Revelation 20:6). After the millennium, the remaining dead are resurrected for judgment. Satan is released, rebellion occurs, and fire comes down from God (Revelation 20:7-10). Then the lake of fire is called the second death. Revelation 21:8 again identifies the lake of fire as the second death. The second death is therefore not merely another stage of ordinary mortality. It is the final, irreversible destruction of sin and those who ultimately cling to it.",
+    "topics": [
+      "Comfort",
+      "Great Controversy",
+      "Law",
+      "Prophecy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Revelation 20:4-6",
+      "Revelation 20:9-15",
+      "Revelation 21:8",
+      "1 Corinthians 15:26",
+      "Malachi 4:1-3"
+    ],
+    "keywords": [
+      "second",
+      "death",
+      "comfort",
+      "great controversy",
+      "law",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-christ-descended-dead",
+    "question": "What Is the Resurrection?",
+    "shortAnswer": "The resurrection is God's act of bringing the dead back to life. Scripture teaches a resurrection of the righteous to eternal life and a resurrection of the wicked to judgment.",
+    "longAnswer": "The resurrection is one of the central teachings of the Bible. Daniel 12:2 describes people who \"sleep in the dust\" awakening. Jesus said: \"The hour is coming, in the which all that are in the graves shall hear his voice, and shall come forth\" (John 5:28-29). Jesus' own resurrection is the foundation of Christian hope. Paul calls Christ \"the firstfruits of them that slept\" (1 Corinthians 15:20). Because Christ rose, believers have the assurance that death does not have the final word. First Corinthians 15 explains that the resurrected body will be transformed. What is sown in corruption is raised in incorruption. What is mortal becomes immortal (1 Corinthians 15:42-54). Paul connects the resurrection of believers specifically with Christ's second coming (1 Thessalonians 4:16-17). The Bible therefore does not present eternal life as escape from death through an inherently immortal soul. Eternal life is ultimately received through resurrection.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Health",
+      "Prophecy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Daniel 12:2",
+      "John 5:28-29",
+      "John 11:25-26",
+      "Acts 24:15",
+      "1 Corinthians 15:12-23,42-54",
+      "1 Thessalonians 4:16-17"
+    ],
+    "keywords": [
+      "resurrection",
+      "bible study",
+      "faith",
+      "health",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-when-will-the-dead-be-resurrected",
+    "question": "When Will the Dead Be Resurrected?",
+    "shortAnswer": "The righteous dead will be resurrected at the second coming of Jesus Christ. Scripture also describes a later resurrection of the wicked for final judgment.",
+    "longAnswer": "Paul gives a remarkably clear sequence in 1 Thessalonians 4. When Christ descends from heaven with a shout and the trumpet of God, \"the dead in Christ shall rise first\" (1 Thessalonians 4:16). The living believers are then caught up together with them to meet the Lord (verse 17). First Corinthians 15:22-23 gives the same order: \"Christ the firstfruits; afterward they that are Christ's at his coming.\" Revelation 20 describes the righteous participating in the \"first resurrection\" (Revelation 20:4-6). The second resurrection occurs after the thousand years. Revelation 20:5 says, \"the rest of the dead lived not again until the thousand years were finished.\" This establishes a distinction between the resurrection of the righteous and the later resurrection connected with final judgment. Jesus also spoke of a resurrection of life and a resurrection of judgment (John 5:28-29).",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Prophecy",
+      "Salvation"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "John 5:28-29",
+      "1 Corinthians 15:20-23",
+      "1 Thessalonians 4:13-17",
+      "Revelation 20:4-6",
+      "Revelation 20:11-15"
+    ],
+    "keywords": [
+      "will",
+      "dead",
+      "resurrected",
+      "bible study",
+      "faith",
+      "prophecy",
+      "salvation"
+    ]
+  },
+  {
+    "id": "answer-will-we-recognize-our-loved-ones-in-heaven",
+    "question": "Will We Recognize Our Loved Ones in Heaven?",
+    "shortAnswer": "Scripture strongly suggests that God's people will recognize one another in the resurrection and eternal kingdom. The Bible does not give every detail about recognition, but it presents personal identity and relationships as continuing beyond resurrection.",
+    "longAnswer": "The disciples recognized Jesus after His resurrection, even though His body had been glorified. Thomas recognized Him and identified Him as \"My Lord and my God\" (John 20:27-28). Jesus' resurrection therefore demonstrates continuity of personal identity. At the resurrection, believers do not become anonymous beings. Paul says that \"this mortal must put on immortality\" (1 Corinthians 15:53). The person remains the person, although transformed. The Bible also describes people sitting with Abraham, Isaac, and Jacob in God's kingdom (Matthew 8:11). In the resurrection, believers will recognize the reality of God's family and fellowship. First Thessalonians 4:17 says believers will \"be caught up together\" to meet Christ and then \"ever be with the Lord.\" Paul concludes his teaching about resurrection by saying, \"Wherefore comfort one another with these words\" (1 Thessalonians 4:18). The Christian hope therefore includes restored relationships, although Scripture does not explain every emotional or interpersonal detail of eternal life. The Bible strongly supports personal continuity and recognition, but it does not give a detailed description of every family relationship in eternity.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Great Controversy",
+      "Health"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 8:11",
+      "Matthew 17:1-4",
+      "John 20:24-29",
+      "1 Corinthians 15:42-54",
+      "1 Thessalonians 4:13-18",
+      "Revelation 21:1-4"
+    ],
+    "keywords": [
+      "will",
+      "recognize",
+      "loved",
+      "ones",
+      "heaven",
+      "bible study",
+      "faith",
+      "great controversy",
+      "health"
+    ]
+  },
+  {
+    "id": "answer-will-pets-go-to-heaven",
+    "question": "Will Pets Go to Heaven?",
+    "shortAnswer": "The Bible does not explicitly say that individual pets will be resurrected or that specific animals will live in heaven. However, Scripture clearly teaches that animals were part of God's good creation and that the restored world will contain animals.",
+    "longAnswer": "Animals were included in God's original creation. Genesis 1 repeatedly describes God creating living creatures and calling His creation good. God also showed concern for animals in His law. For example, Deuteronomy 25:4 says, \"Thou shalt not muzzle the ox when he treadeth out the corn.\" Proverbs 12:10 says, \"A righteous man regardeth the life of his beast.\" The prophets describe the future restored creation using peaceful animal imagery. Isaiah 11:6-9 describes the wolf dwelling with the lamb, the leopard lying with the young goat, and the lion eating straw. Isaiah 65:17-25 similarly describes God's renewed creation. Romans 8:19-23 says that the entire creation waits for liberation from the curse and \"groaneth and travaileth\" while awaiting redemption. These passages demonstrate that God's restoration involves more than human beings alone. The created world itself will be renewed. However, Scripture does not explicitly promise that a particular dog, cat, horse, or other individual pet will be resurrected. Therefore, we should distinguish between what the Bible clearly promises and what we may personally hope for. Scripture does not explicitly answer whether individual pets will be resurrected. It does clearly reveal that animals belong to God's creation and that the future restored earth will include animal life.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Great Controversy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Genesis 1:20-25",
+      "Genesis 2:19-20",
+      "Proverbs 12:10",
+      "Isaiah 11:6-9",
+      "Isaiah 65:17-25",
+      "Romans 8:19-23",
+      "Revelation 21:1-5"
+    ],
+    "keywords": [
+      "will",
+      "pets",
+      "heaven",
+      "bible study",
+      "creation",
+      "faith",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-eternal-security-2",
+    "question": "Is the Bible True?",
+    "shortAnswer": "Yes. The Bible presents itself as the inspired Word of God and repeatedly describes God's Word as true, trustworthy, and enduring. The Bible says: \"All scripture is given by inspiration of God.\" 2 Timothy 3:16, KJV And Jesus prayed: \"Thy word is truth.\" John 17:17, KJV The question of whether the Bible is true ultimately involves whether God can be trusted.",
+    "longAnswer": "The Bible does not present itself merely as a collection of human religious opinions. The prophets repeatedly claimed that their message came from God. Peter explains: \"Holy men of God spake as they were moved by the Holy Ghost.\" 2 Peter 1:21, KJV This means that although human beings wrote the Scriptures, their ultimate source was God. The Bible also gives several reasons to trust its message: God is true: Romans 3:4; Titus 1:2. God's Word is truth: Psalm 119:160; John 17:17. God's Word endures: Isaiah 40:8; 1 Peter 1:24-25. Scripture is profitable for teaching and correction: 2 Timothy 3:16-17. Jesus treated Scripture as authoritative: Matthew 4:4, 7, 10; John 10:35. Prophecy provides evidence that God knows the future: Isaiah 46:9-10; John 13:19. Scripture points people to Christ: John 5:39; Luke 24:27. The Bible therefore calls people not to believe blindly, but to examine its claims. The Bereans were commended because they \"searched the scriptures daily, whether those things were so\" (Acts 17:11). Scripture clearly teaches that its inspired message comes from God and is trustworthy. It does not give a modern scientific description of manuscript transmission, printing, translation, or textual criticism. Those questions can be investigated separately. The foundational biblical claim is that God has given humanity a trustworthy revelation of His truth.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Prayer",
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "2 Timothy 3:16-17",
+      "2 Peter 1:20-21",
+      "John 17:17",
+      "Psalm 119:160",
+      "Isaiah 40:8",
+      "Titus 1:2",
+      "Acts 17:11"
+    ],
+    "keywords": [
+      "true",
+      "bible study",
+      "faith",
+      "prayer",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-can-we-trust-the-bible",
+    "question": "Can We Trust the Bible?",
+    "shortAnswer": "Yes. Scripture gives us strong reasons to trust God's Word because its ultimate source is God, who is truthful and does not lie.",
+    "longAnswer": "Paul says: \"All scripture is given by inspiration of God.\" 2 Timothy 3:16, KJV Peter adds that prophecy did not originate merely from human will: \"Holy men of God spake as they were moved by the Holy Ghost.\" 2 Peter 1:21, KJV The Bible also teaches that God's character guarantees the reliability of His promises. Numbers 23:19 says: \"God is not a man, that he should lie.\" Titus 1:2 describes God as One who \"cannot lie.\" Therefore, Scripture's reliability rests fundamentally upon the character of its divine Author. Jesus also demonstrated complete confidence in Scripture. When tempted by Satan, He repeatedly answered, \"It is written\" (Matthew 4:4, 7, 10). He did not treat Scripture as merely one opinion among many. Jesus also declared: \"The scripture cannot be broken.\" John 10:35, KJV The apostles followed the same principle. They repeatedly appealed to Scripture as authoritative when establishing doctrine and correcting error. Scripture tells us why its message can be trusted. It does not claim that every surviving manuscript copy, translation, or interpretation produced by humans is automatically perfect. That distinction matters. The inspired message of Scripture and our handling of Scripture are not the same thing. A person can misunderstand a true passage. A translator can make a less precise translation. A copyist can make a copying error. Therefore, \"Can we trust the Bible?\" and \"Can every human interpretation of the Bible be trusted?\" are two different questions.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Great Controversy",
+      "Health"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "2 Timothy 3:16-17",
+      "2 Peter 1:20-21",
+      "John 10:35",
+      "Isaiah 40:8",
+      "Psalm 119:89",
+      "Titus 1:2",
+      "Numbers 23:19"
+    ],
+    "keywords": [
+      "trust",
+      "bible study",
+      "faith",
+      "great controversy",
+      "health"
+    ]
+  },
+  {
+    "id": "answer-is-the-bible-accurate",
+    "question": "Is the Bible Accurate?",
+    "shortAnswer": "Yes. Scripture presents itself as a trustworthy revelation of God. However, accuracy must be distinguished from translation, copying, and interpretation.",
+    "longAnswer": "Luke explains that he carefully investigated the things he recorded: \"Having had perfect understanding of all things from the very first, to write unto thee in order.\" Luke 1:3, KJV He says his purpose was that Theophilus might know \"the certainty\" of the things he had been taught (Luke 1:4). This demonstrates that biblical writers were not necessarily writing without investigation. Luke specifically describes an orderly investigation of testimony and events. The apostles also emphasized that they were not presenting invented stories. Peter wrote: \"We have not followed cunningly devised fables.\" 2 Peter 1:16, KJV Paul likewise appealed to eyewitness testimony concerning Christ's resurrection: \"He was seen of Cephas, then of the twelve.\" 1 Corinthians 15:5, KJV He then lists additional witnesses, including more than five hundred people (1 Corinthians 15:6). At the same time, Scripture recognizes the need for careful handling of God's Word: \"Study to shew thyself approved unto God.\" 2 Timothy 2:15, KJV The Bible claims truth and accuracy in its inspired message. It does not claim that every translation into another language will reproduce every nuance equally well. Nor does Scripture give us a detailed account of every copying process or manuscript difference throughout history. Therefore, when someone identifies an apparent discrepancy, the proper question is not simply, \"Does this look different?\" but, \"Are these statements actually contradictory when their context, purpose, language, and perspective are understood?\"",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Great Controversy",
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Luke 1:1-4",
+      "2 Peter 1:16-21",
+      "2 Timothy 3:16-17",
+      "Psalm 119:160",
+      "Proverbs 30:5",
+      "John 17:17"
+    ],
+    "keywords": [
+      "accurate",
+      "bible study",
+      "faith",
+      "great controversy",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-is-the-bible-historically-accurate",
+    "question": "Is the Bible Historically Accurate?",
+    "shortAnswer": "The Bible presents itself as historical testimony, not merely religious mythology. Its writers frequently identify people, places, rulers, events, witnesses, and genealogies as part of real history.",
+    "longAnswer": "Luke begins his Gospel by explaining that he investigated the events he recorded (Luke 1:1-4). Paul's argument concerning the resurrection is also explicitly historical. He says Christ died, was buried, rose again, and appeared to numerous witnesses (1 Corinthians 15:3-8). The Bible also repeatedly grounds theological teaching in historical events. Jesus referred to Adam and Eve (Matthew 19:4-6), Noah and the Flood (Matthew 24:37-39), Lot and Sodom (Luke 17:28-32), Jonah (Matthew 12:40), and other Old Testament events. This is significant because Jesus used these accounts as real events in His teaching. Peter similarly describes the apostolic message as eyewitness testimony rather than fabricated stories: \"We were eyewitnesses of his majesty.\" 2 Peter 1:16, KJV The Bible makes historical claims, but it does not claim that every historical question can be settled simply by quoting a verse. Archaeology, ancient documents, chronology, geography, and other historical evidence can be examined separately. Therefore, a responsible biblical approach does not need to claim that every archaeological question has already been solved. The important point is that Scripture itself presents its central events as historical realities.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Salvation"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Luke 1:1-4",
+      "1 Corinthians 15:3-8",
+      "2 Peter 1:16",
+      "Matthew 19:4-6",
+      "Matthew 24:37-39",
+      "Matthew 12:40"
+    ],
+    "keywords": [
+      "historically",
+      "accurate",
+      "bible study",
+      "creation",
+      "faith",
+      "salvation"
+    ]
+  },
+  {
+    "id": "answer-are-there-contradictions-in-the-bible",
+    "question": "Are There Contradictions in the Bible?",
+    "shortAnswer": "The Bible contains difficult passages and accounts that sometimes appear different when compared with one another. But an apparent difference is not necessarily a contradiction.",
+    "longAnswer": "A contradiction would require two statements that cannot both be true when they refer to the same thing in the same sense and under the same circumstances. Scripture instructs us to handle God's Word carefully rather than drawing conclusions prematurely. Proverbs 18:13 says: \"He that answereth a matter before he heareth it, it is folly and shame unto him.\" Jesus also challenged people who interpreted Scripture incorrectly: \"Ye do err, not knowing the scriptures, nor the power of God.\" Matthew 22:29, KJV Different Gospel writers sometimes emphasize different details. This does not automatically mean that their accounts contradict each other. One witness may record one detail while another records another. For example, one Gospel may mention one person at an event while another gives additional information about other people present. The accounts can complement rather than cancel one another. Scripture does not say that every difficult passage will immediately be easy to understand. Peter even says that some things in Paul's writings are \"hard to be understood\" (2 Peter 3:16). Therefore, difficulty should not automatically be equated with contradiction. A careful study should consider context, wording, audience, chronology, genre, and the possibility that different writers are describing different aspects of the same event.",
+    "topics": [
+      "Bible Study",
+      "Salvation"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "2 Timothy 3:16-17",
+      "Proverbs 18:13",
+      "Matthew 22:29",
+      "John 10:35",
+      "1 Corinthians 13:12",
+      "2 Timothy 2:15"
+    ],
+    "keywords": [
+      "contradictions",
+      "bible study",
+      "salvation"
+    ]
+  },
+  {
+    "id": "answer-why-does-the-bible-contradict-itself",
+    "question": "Why Does the Bible Contradict Itself?",
+    "shortAnswer": "Many alleged contradictions arise from differences in context, translation, perspective, chronology, or incomplete information rather than actual logical contradictions.",
+    "longAnswer": "The Bible itself teaches humility in interpretation. Paul says: \"For we know in part, and we prophesy in part.\" 1 Corinthians 13:9, KJV Human knowledge is limited. We do not possess every detail behind every biblical event. Scripture also warns against answering before understanding: \"He that answereth a matter before he heareth it, it is folly.\" Proverbs 18:13, KJV And Paul instructs Timothy: \"Rightly dividing the word of truth.\" 2 Timothy 2:15, KJV This means that apparent problems should be investigated rather than dismissed or exaggerated. There are several questions worth asking when two passages appear different: Are they actually describing the same event? Are they speaking about the same person? Are they using the same definition of a word? Are they giving different details rather than contradictory details? Does the surrounding context explain the difference? Could translation affect the apparent difference? Is one account more detailed than the other? Scripture does not tell us that every apparent difficulty has already been solved. It does, however, provide a principle: seek truth carefully, compare Scripture with Scripture, and do not build conclusions on isolated statements.",
+    "topics": [
+      "Bible Study",
+      "Law",
+      "Stewardship"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "2 Timothy 2:15",
+      "Proverbs 18:13",
+      "1 Corinthians 13:9-12",
+      "2 Peter 3:16",
+      "John 7:24"
+    ],
+    "keywords": [
+      "contradict",
+      "itself",
+      "bible study",
+      "law",
+      "stewardship"
+    ]
+  },
+  {
+    "id": "answer-has-the-bible-been-changed",
+    "question": "Has the Bible Been Changed?",
+    "shortAnswer": "The Bible teaches that God's Word endures, but it does not claim that every handwritten copy or translation would be free from human error.",
+    "longAnswer": "Isaiah declares: \"The word of our God shall stand for ever.\" Isaiah 40:8, KJV Peter repeats this principle: \"The word of the Lord endureth for ever.\" 1 Peter 1:25, KJV Jesus also affirmed the enduring authority of Scripture: \"Till heaven and earth pass, one jot or one tittle shall in no wise pass from the law, till all be fulfilled.\" Matthew 5:18, KJV Jesus' statement shows His confidence that God's revealed Word would not simply disappear. The apostles likewise treated the Hebrew Scriptures as authoritative centuries after their original writing. They quoted them extensively and built their teachings upon them. The Bible does not provide a complete history of every manuscript copy. It does not say that no copyist could ever make a mistake. Therefore, it is important to distinguish between: God's inspired revelation ancient handwritten copies translations into other languages human interpretations A difference between two manuscripts does not automatically mean that God's revelation has been destroyed or that the Bible as a whole is unreliable. Scripture's central claim is that God's Word endures and that its message remains authoritative.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Law",
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Isaiah 40:8",
+      "Matthew 5:17-18",
+      "John 10:35",
+      "1 Peter 1:24-25",
+      "Psalm 119:89"
+    ],
+    "keywords": [
+      "been",
+      "changed",
+      "bible study",
+      "creation",
+      "law",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-who-wrote-the-bible",
+    "question": "Who Wrote the Bible?",
+    "shortAnswer": "The Bible was written by many human authors over many generations, but Scripture identifies God as the ultimate source of its inspired message.",
+    "longAnswer": "Peter explains: \"Holy men of God spake as they were moved by the Holy Ghost.\" 2 Peter 1:21, KJV The Bible therefore has both a divine and human dimension. Different books identify different human writers. Moses wrote portions of the Law (Deuteronomy 31:24). Isaiah identifies himself as the prophet who received his message (Isaiah 1:1). Jeremiah identifies himself at the beginning of his book (Jeremiah 1:1). Paul identifies himself in his letters, for example Romans 1:1. Peter identifies himself in 1 Peter 1:1. John identifies himself as the recipient and recorder of Revelation (Revelation 1:1-2). Yet Scripture does not present these men as independent inventors of religious ideas. Their message came under the direction of the Holy Spirit. The Bible does not claim that every sentence was mechanically dictated word-for-word. Instead, it describes prophets and apostles speaking and writing under divine inspiration. This allows us to recognize both the individuality of biblical writers and the divine authority of Scripture.",
+    "topics": [
+      "Bible Study",
+      "Holy Spirit",
+      "Law",
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "2 Peter 1:20-21",
+      "2 Timothy 3:16",
+      "Exodus 34:27",
+      "Jeremiah 30:2",
+      "Romans 1:1",
+      "1 Peter 1:1",
+      "Revelation 1:1-2"
+    ],
+    "keywords": [
+      "wrote",
+      "bible study",
+      "holy spirit",
+      "law",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-how-was-the-bible-written",
+    "question": "How Was the Bible Written?",
+    "shortAnswer": "God communicated through prophets and other inspired writers, who recorded His messages and the events they witnessed or investigated.",
+    "longAnswer": "Peter describes the prophetic process: \"Holy men of God spake as they were moved by the Holy Ghost.\" 2 Peter 1:21, KJV At times, God explicitly instructed prophets to write His message. For example: \"Write thou these words.\" Exodus 34:27, KJV God told Jeremiah: \"Write thee all the words that I have spoken unto thee in a book.\" Jeremiah 30:2, KJV Revelation likewise instructed John to write what he saw: \"What thou seest, write in a book.\" Revelation 1:11, KJV Luke describes another aspect of the process. He investigated eyewitness testimony and arranged his account carefully (Luke 1:1-4). Therefore, Scripture shows several elements working together: Divine revelation The Holy Spirit Human authors Eyewitness testimony Investigation Written records Preservation and transmission The Bible does not describe one single mechanical method by which every book was produced. Some portions were direct prophetic messages. Others include historical research, poetry, wisdom literature, letters, genealogies, visions, and eyewitness testimony. What unites them is the biblical claim that Scripture ultimately comes from God.",
+    "topics": [
+      "Bible Study",
+      "Holy Spirit",
+      "Law",
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "2 Timothy 3:16",
+      "2 Peter 1:20-21",
+      "Exodus 34:27",
+      "Jeremiah 30:2",
+      "Luke 1:1-4",
+      "Revelation 1:11"
+    ],
+    "keywords": [
+      "written",
+      "bible study",
+      "holy spirit",
+      "law",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-when-was-the-bible-written",
+    "question": "When Was the Bible Written?",
+    "shortAnswer": "The Bible was written over many generations rather than at one particular time. Scripture does not provide a complete chronological table giving the exact date of every book.",
+    "longAnswer": "Hebrews 1:1 gives an important overview: \"God, who at sundry times and in divers manners spake in time past unto the fathers by the prophets.\" Hebrews 1:1, KJV God communicated through different prophets and at different times. The Old Testament contains writings associated with the history of Israel, beginning with Moses and continuing through the prophets. The New Testament was written during the apostolic era following the earthly ministry, death, resurrection, and ascension of Jesus. Paul's letters were already circulating among churches during the apostolic period (Colossians 4:16), while Peter referred to Paul's writings alongside \"the other scriptures\" (2 Peter 3:15-16). The Bible does not give a complete modern-style publication history. Therefore, exact dates for individual books belong to the field of historical and textual study rather than something that can always be established directly from Scripture. What Scripture clearly shows is that God's revelation was given progressively through many prophets and eventually centered in the revelation of His Son: \"Hath in these last days spoken unto us by his Son.\" Hebrews 1:2, KJV",
+    "topics": [
+      "Bible Study",
+      "Church",
+      "Creation",
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Hebrews 1:1-2",
+      "Luke 1:1-4",
+      "Colossians 4:16",
+      "2 Peter 3:15-16"
+    ],
+    "keywords": [
+      "written",
+      "bible study",
+      "church",
+      "creation",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-who-decided-what-books-are-in-the-bible",
+    "question": "Who Decided What Books Are in the Bible?",
+    "shortAnswer": "The Bible does not describe a single human council deciding which books became Scripture. Instead, Scripture presents inspired writings as possessing divine authority because they came from God.",
+    "longAnswer": "Jesus clearly recognized the authority of the Old Testament Scriptures. After His resurrection, He referred to: \"the law of Moses, and the prophets, and the psalms\" Luke 24:44, KJV Jesus also repeatedly appealed to Scripture as authoritative. The apostles continued this practice. Paul described the Jews as having been entrusted with: \"the oracles of God.\" Romans 3:2, KJV Peter provides an especially important New Testament example. Referring to Paul's writings, he says: \"some things hard to be understood... which they that are unlearned and unstable wrest, as they do also the other scriptures.\" 2 Peter 3:16, KJV Peter's wording places Paul's writings in connection with the category of Scripture. Scripture does not describe a single meeting where a group of leaders sat down and created the biblical canon. The recognition of particular books as authoritative developed within the biblical community, while the authority of Scripture itself is presented as originating with God. This distinction is important: A council does not make God's Word inspired. Rather, people recognize and receive writings because they are believed to possess divine authority. The exact historical development of the canon involves questions beyond what Scripture itself records.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Law"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Luke 24:44",
+      "John 10:35",
+      "Romans 3:2",
+      "2 Peter 3:15-16",
+      "1 Thessalonians 5:27"
+    ],
+    "keywords": [
+      "decided",
+      "books",
+      "bible study",
+      "creation",
+      "faith",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-why-are-there-different-versions-of-the-bible",
+    "question": "Why Are There Different Versions of the Bible?",
+    "shortAnswer": "There are different Bible translations because the Scriptures were originally written in Hebrew, Aramaic, and Greek and must be translated into other languages. Translators also differ in how closely they follow the wording and structure of the original languages.",
+    "longAnswer": "The Bible itself recognizes the importance of communicating God's Word in a language people can understand. Nehemiah 8:8 says: \"So they read in the book in the law of God distinctly, and gave the sense, and caused them to understand the reading.\" At Pentecost, people from many nations heard the apostles speaking in their own languages (Acts 2:6-11). Paul also emphasized understandable communication: \"Except ye utter by the tongue words easy to be understood, how shall it be known what is spoken?\" 1 Corinthians 14:9, KJV Translation therefore serves an important biblical purpose: people should be able to understand God's message. Scripture does not identify one modern English translation as uniquely inspired. Different translations may use different approaches: More literal wording More natural modern language Different manuscript traditions Different treatment of difficult Hebrew or Greek expressions The wise reader should compare translations when studying difficult passages.",
+    "topics": [
+      "Bible Study",
+      "Law"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Nehemiah 8:8",
+      "Acts 2:6-11",
+      "1 Corinthians 14:9-11",
+      "2 Timothy 2:15"
+    ],
+    "keywords": [
+      "different",
+      "versions",
+      "bible study",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-how-many-books-are-in-the-bible",
+    "question": "How Many Books Are in the Bible?",
+    "shortAnswer": "The Protestant Bible contains 66 books: 39 in the Old Testament and 27 in the New Testament. However, Scripture itself does not state the number \"66.\" The number comes from the way the biblical canon is counted.",
+    "longAnswer": "Jesus referred to the Old Testament using the familiar threefold description: \"the law of Moses, and the prophets, and the psalms.\" Luke 24:44, KJV The New Testament contains the apostolic writings that testify to Jesus Christ and His teachings. The Bible itself does not contain a verse saying, \"There are exactly sixty-six books.\" Therefore, the number of books should not be confused with the authority of Scripture. The authority comes from God, not from the numerical count. The 66-book Protestant canon is a canonical classification, not a number explicitly revealed in Scripture. This is an important distinction for honest Bible study. Scripture teaches the authority and inspiration of God's Word. It does not provide a complete table of contents with a numerical total.",
+    "topics": [
+      "Bible Study",
+      "Law",
+      "State of the Dead"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Luke 24:44",
+      "Romans 3:2",
+      "2 Timothy 3:15-17",
+      "2 Peter 3:15-16"
+    ],
+    "keywords": [
+      "many",
+      "books",
+      "bible study",
+      "law",
+      "state of the dead"
+    ]
+  },
+  {
+    "id": "answer-why-does-the-catholic-bible-have-more-books",
+    "question": "Why Does the Catholic Bible Have More Books?",
+    "shortAnswer": "The Catholic and Protestant Old Testaments contain different numbers of books because they follow different canonical traditions concerning several Jewish writings commonly called the Deuterocanonical books or Apocrypha.",
+    "longAnswer": "The Bible itself does not contain a direct statement saying, \"Here is the complete list of canonical books.\" Jesus referred to: \"the law of Moses, and the prophets, and the psalms\" Luke 24:44, KJV Paul also says that the Jews were entrusted with: \"the oracles of God.\" Romans 3:2, KJV These passages are important when considering the Old Testament Scriptures recognized in the biblical period. However, neither passage provides a complete modern canonical list. The Protestant Old Testament follows the books traditionally received as the Hebrew Scriptures, while Catholic Bibles also include several additional writings that are classified as Deuterocanonical. The exact history of how the different Christian canons developed cannot be reconstructed from one biblical verse. It is therefore better to distinguish between what Scripture explicitly teaches and what later historical traditions claim. The important biblical principle is that inspired Scripture is authoritative because it comes from God. A writing does not become inspired simply because a later institution places it in a collection.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Law",
+      "State of the Dead"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Luke 24:44",
+      "Romans 3:2",
+      "2 Timothy 3:15-17"
+    ],
+    "keywords": [
+      "catholic",
+      "more",
+      "books",
+      "bible study",
+      "faith",
+      "law",
+      "state of the dead"
+    ]
+  },
+  {
+    "id": "answer-what-is-the-oldest-bible",
+    "question": "What Is the Oldest Bible?",
+    "shortAnswer": "There is no single surviving manuscript that can simply be identified as \"the original Bible.\" The biblical books were written individually over many generations, and the original handwritten documents are not preserved as a single complete volume.",
+    "longAnswer": "Scripture describes God's revelation as coming through many prophets over time. Hebrews says: \"God, who at sundry times and in divers manners spake in time past unto the fathers by the prophets.\" Hebrews 1:1, KJV The Bible therefore was not originally produced as one physical book. Individual books and collections were written, copied, preserved, and eventually brought together. The biblical writers themselves refer to written documents being copied and read. Moses wrote God's words (Exodus 34:27), Jeremiah was commanded to write God's message (Jeremiah 30:2), and Paul instructed churches to read his letters publicly (1 Thessalonians 5:27; Colossians 4:16). Scripture does not identify a particular surviving manuscript as \"the oldest Bible.\" Questions about ancient manuscripts, their dates, locations, and textual relationships are historical and textual questions. Theologically, the important point is that the authority of God's Word does not depend upon possessing one physical manuscript containing every biblical book.",
+    "topics": [
+      "Bible Study",
+      "Church",
+      "Law",
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Hebrews 1:1-2",
+      "Exodus 34:27",
+      "Jeremiah 30:2",
+      "1 Thessalonians 5:27",
+      "Colossians 4:16"
+    ],
+    "keywords": [
+      "oldest",
+      "bible study",
+      "church",
+      "law",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-what-is-the-most-accurate-bible-translation",
+    "question": "What Is the Most Accurate Bible Translation?",
+    "shortAnswer": "Scripture does not identify one modern translation as uniquely the most accurate. The best approach is to compare translations carefully and, when necessary, investigate the underlying Hebrew and Greek.",
+    "longAnswer": "The Bereans were praised because they searched the Scriptures to test what they were being taught: \"They received the word with all readiness of mind, and searched the scriptures daily, whether those things were so.\" Acts 17:11, KJV Paul also told Timothy: \"Study to shew thyself approved unto God.\" 2 Timothy 2:15, KJV These principles encourage careful study rather than unquestioning dependence upon one translation. Translations differ because languages do not always have exact one-to-one equivalents. A translation may be very literal in one passage while another may communicate the meaning more naturally. The Bible does not say: \"This particular English translation is inspired.\" The inspired Scriptures were originally written in their biblical languages. Every translation involves decisions about vocabulary, grammar, syntax, idioms, and context. That does not mean translations are unreliable. It means readers should recognize the difference between the inspired original writings and later translations.",
+    "topics": [
+      "Bible Study",
+      "Faith"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "Acts 17:11",
+      "2 Timothy 2:15",
+      "Proverbs 30:5-6",
+      "1 Thessalonians 5:21"
+    ],
+    "keywords": [
+      "most",
+      "accurate",
+      "translation",
+      "bible study",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-is-the-kjv-the-most-accurate-bible",
+    "question": "Is the KJV the Most Accurate Bible?",
+    "shortAnswer": "The King James Version is a respected and historically important English translation, but Scripture does not teach that the KJV is the only accurate or divinely inspired English translation.",
+    "longAnswer": "The biblical principle is to seek the truth of God's Word. Paul instructed believers to rightly handle: \"the word of truth.\" 2 Timothy 2:15, KJV The Bereans examined Scripture carefully rather than simply accepting a teacher's claims: \"They searched the scriptures daily, whether those things were so.\" Acts 17:11, KJV This principle applies to translations as well. The KJV has many strengths, including its dignified language and historical influence. Its wording has also shaped generations of English-speaking Bible readers. However, the KJV is a translation into English. It was not the language in which the Old and New Testaments were originally written. The Bible never declares that the KJV, or any other English translation, is uniquely inspired. Therefore, Christians should avoid making the translation itself the object of faith. The object of faith is God and His revealed Word. Comparing translations can sometimes clarify difficult passages. Studying the original languages can provide still greater precision when necessary.",
+    "topics": [
+      "Bible Study",
+      "Faith"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "Acts 17:11",
+      "2 Timothy 2:15",
+      "1 Thessalonians 5:21",
+      "Proverbs 30:5-6"
+    ],
+    "keywords": [
+      "most",
+      "accurate",
+      "bible study",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-what-language-was-the-bible-originally-written-in",
+    "question": "What Language Was the Bible Originally Written In?",
+    "shortAnswer": "The Old Testament was written primarily in Hebrew, with portions in Aramaic. The New Testament was written in Greek.",
+    "longAnswer": "The Bible itself preserves examples of different languages. Daniel contains an extended section beginning with Daniel 2:4 that is written in Aramaic. Ezra also contains sections in Aramaic, including Ezra 4:8-6:18 and 7:12-26. Most of the Old Testament, however, is written in Hebrew. The New Testament was written in Greek, the language in which the Gospel message was widely communicated throughout the Mediterranean world. The New Testament itself frequently quotes the Old Testament, sometimes in forms reflecting the Greek translation used among Greek-speaking Jews. The Bible does not give us a single verse saying, \"The Old Testament is Hebrew and the New Testament is Greek.\" Rather, the languages are established by examining the biblical text itself. The important point is that translation has always been part of communicating God's revelation across linguistic boundaries. This is why careful comparison of translations can be useful.",
+    "topics": [
+      "Bible Study",
+      "Law",
+      "Prophecy",
+      "Salvation"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Daniel 2:4",
+      "Ezra 4:8",
+      "Ezra 7:12",
+      "Luke 4:16-21",
+      "Acts 2:6-11"
+    ],
+    "keywords": [
+      "language",
+      "originally",
+      "written",
+      "bible study",
+      "law",
+      "prophecy",
+      "salvation"
+    ]
+  },
+  {
+    "id": "answer-why-are-some-books-not-in-the-bible",
+    "question": "Why Are Some Books Not in the Bible?",
+    "shortAnswer": "Many ancient religious writings existed outside the biblical collection. Scripture itself does not provide a complete catalog of every rejected writing or a single verse listing every book that belongs in the canon.",
+    "longAnswer": "The Bible repeatedly emphasizes that God's revealed Word is authoritative and must not be altered. Moses warned: \"Ye shall not add unto the word which I command you, neither shall ye diminish ought from it.\" Deuteronomy 4:2, KJV Proverbs similarly warns: \"Add thou not unto his words, lest he reprove thee, and thou be found a liar.\" Proverbs 30:6, KJV Revelation gives a similar warning concerning its prophecy (Revelation 22:18-19). At the same time, the Bible contains references to other writings. Joshua 10:13 refers to the Book of Jasher, for example. The existence of a historical or literary work outside the biblical canon does not automatically make it inspired Scripture. Jude 14-15 also contains language resembling material found in 1 Enoch. Quoting or referring to a statement does not necessarily establish the entire source as inspired Scripture. The Bible does not give us a complete list titled \"These books are excluded.\" Therefore, we should be cautious about making claims stronger than Scripture itself. The central biblical principle is that God's inspired Word is authoritative. Not every ancient religious document claiming revelation is therefore Scripture.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Law",
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Deuteronomy 4:2",
+      "Proverbs 30:6",
+      "Joshua 10:13",
+      "Revelation 22:18-19",
+      "Luke 24:44"
+    ],
+    "keywords": [
+      "some",
+      "books",
+      "bible study",
+      "faith",
+      "law",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-why-get-baptized",
+    "question": "Why Should I Believe the Bible?",
+    "shortAnswer": "The Bible gives several reasons to believe it: it claims to be God's inspired Word, reveals Jesus Christ, records historical testimony, presents fulfilled prophecy, and calls people to test what they hear against Scripture.",
+    "longAnswer": "Paul says Scripture is: \"given by inspiration of God\" 2 Timothy 3:16, KJV The Bible also explains its purpose in pointing people to salvation through Christ. Paul tells Timothy that the Holy Scriptures are able to make a person: \"wise unto salvation through faith which is in Christ Jesus.\" 2 Timothy 3:15, KJV Jesus likewise said: \"Search the scriptures; for in them ye think ye have eternal life: and they are they which testify of me.\" John 5:39, KJV John explains why he recorded his Gospel: \"These are written, that ye might believe that Jesus is the Christ, the Son of God.\" John 20:31, KJV The Bible also points to prophecy as evidence that God knows what will happen before it occurs (Isaiah 46:9-10; John 13:19). And it does not discourage examination. The Bereans searched the Scriptures daily to determine whether Paul's teaching was true (Acts 17:11). The Bible does not tell us to believe simply because another person says, \"The Bible is true.\" Instead, it repeatedly directs people back to God's Word, prophecy, the testimony concerning Christ, and personal examination. Christian faith is therefore not presented as faith without evidence. At the same time, evidence does not remove the need for faith. Scripture calls people to trust God and respond to the truth they have received. The ultimate center of the Bible is Jesus Christ. The Scriptures testify about Him, and the purpose of their testimony is that people may believe in Him and receive life.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Prophecy",
+      "Salvation"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "2 Timothy 3:15-17",
+      "John 5:39",
+      "John 20:31",
+      "Isaiah 46:9-10",
+      "Acts 17:11",
+      "2 Peter 1:16-21",
+      "1 Thessalonians 5:21"
+    ],
+    "keywords": [
+      "believe",
+      "bible study",
+      "faith",
+      "prophecy",
+      "salvation"
+    ]
+  },
+  {
+    "id": "answer-who-is-satan",
+    "question": "Who Is Satan?",
+    "shortAnswer": "Satan is a real personal spiritual being who rebelled against God, deceives humanity, opposes God's purposes, and is ultimately destined for destruction.",
+    "longAnswer": "The Bible identifies Satan by several names and descriptions. Revelation calls him: \"that old serpent, called the Devil, and Satan, which deceiveth the whole world.\" Revelation 12:9, KJV Jesus called him a murderer and a liar: \"He was a murderer from the beginning, and abode not in the truth.\" John 8:44, KJV Peter describes him as an adversary: \"Your adversary the devil, as a roaring lion, walketh about, seeking whom he may devour.\" 1 Peter 5:8, KJV Scripture therefore does not portray Satan as merely a symbol for evil. He is presented as an intelligent, personal enemy who deceives, accuses, tempts, and seeks to destroy. Revelation 12 also identifies Satan with the dragon and serpent and says that his angels were cast out with him. Satan's ultimate fate is also certain. Revelation 20:10 says that the devil will be cast into the lake of fire. The Bible clearly teaches Satan's reality, character, activities, and final judgment. It does not give every detail about his origin or history in one single passage. Some passages, particularly Isaiah 14 and Ezekiel 28, directly address earthly kings but contain language that has traditionally been understood as extending beyond the human ruler. Such connections should be made carefully rather than treating every detail as a direct biography of Satan.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Creation",
+      "Faith"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Genesis 3:1-15",
+      "Job 1:6-12",
+      "Isaiah 14:12-15",
+      "Ezekiel 28:12-17",
+      "John 8:44",
+      "1 Peter 5:8",
+      "Revelation 12:7-12",
+      "Revelation 20:10"
+    ],
+    "keywords": [
+      "satan",
+      "bible study",
+      "comfort",
+      "creation",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-where-did-satan-come-from",
+    "question": "Where Did Satan Come From?",
+    "shortAnswer": "Satan did not exist as an evil being from eternity. Scripture teaches that everything created by God was originally good, while Satan became an adversary through rebellion.",
+    "longAnswer": "The Bible teaches that God is the Creator of all things: \"For by him were all things created, that are in heaven, and that are in earth, visible and invisible.\" Colossians 1:16, KJV This includes the invisible heavenly realm. Genesis 1:31 says that when God finished creation: \"God saw every thing that he had made, and, behold, it was very good.\" Satan therefore cannot be understood as an eternal evil power equal to God. Scripture teaches one Creator, not two eternal opposing gods. Revelation 12 describes a heavenly conflict involving the dragon and his angels and identifies the dragon as Satan (Revelation 12:7-9). Jesus said that Satan \"abode not in the truth\" (John 8:44), indicating that his evil condition was not his original created state. Scripture does not give a complete chronological biography of Satan from his creation to his rebellion. However, it clearly rejects the idea that Satan is an eternal counterpart to God. God alone is eternal and sovereign.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Creation",
+      "Faith"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Genesis 1:31",
+      "Colossians 1:16",
+      "John 8:44",
+      "Revelation 12:7-9"
+    ],
+    "keywords": [
+      "satan",
+      "come",
+      "bible study",
+      "comfort",
+      "creation",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-was-satan-an-angel",
+    "question": "Was Satan an Angel?",
+    "shortAnswer": "Yes. Scripture identifies Satan with the heavenly rebellion and says that the dragon's angels were cast out with him.",
+    "longAnswer": "Revelation 12 says: \"There was war in heaven: Michael and his angels fought against the dragon; and the dragon fought and his angels.\" Revelation 12:7, KJV Verse 9 then identifies the dragon: \"that old serpent, called the Devil, and Satan.\" It also says: \"his angels were cast out with him.\" This establishes a direct connection between Satan and a group of rebellious heavenly beings. Jesus also speaks of: \"the devil and his angels\" Matthew 25:41, KJV The Bible therefore presents Satan as a supernatural created being who became God's adversary. The Bible does not explicitly state in one sentence, \"Satan was created as an angel named Lucifer.\" The name \"Lucifer\" comes from Isaiah 14:12 in the KJV, where the immediate context addresses the king of Babylon. The broader connection between this passage and Satan's rebellion is an interpretive conclusion based on its language and comparison with other passages. The safest biblical conclusion is that Satan was a heavenly created being who rebelled against God.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Creation",
+      "Great Controversy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 25:41",
+      "Revelation 12:7-9",
+      "Revelation 12:12"
+    ],
+    "keywords": [
+      "satan",
+      "angel",
+      "bible study",
+      "comfort",
+      "creation",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-why-did-satan-rebel-against-god",
+    "question": "Why Did Satan Rebel Against God?",
+    "shortAnswer": "Scripture associates Satan's rebellion with pride, self-exaltation, and a desire to rise above the position God had given him.",
+    "longAnswer": "Isaiah 14 describes a being saying: \"I will ascend into heaven, I will exalt my throne above the stars of God.\" Isaiah 14:13, KJV The immediate context addresses the king of Babylon, but the language has traditionally been connected with Satan's rebellion because it describes extraordinary self-exaltation against God. Ezekiel 28 likewise speaks of a being who was created with extraordinary beauty and privilege but whose heart became lifted up because of his beauty: \"Thine heart was lifted up because of thy beauty.\" Ezekiel 28:17, KJV The immediate context concerns the king of Tyre, so the passage should not be treated as though it were simply a direct biography of Satan. Yet its language contributes to the biblical picture of pride and rebellion. Jesus said of Satan: \"He was a murderer from the beginning, and abode not in the truth.\" John 8:44, KJV The Bible clearly associates Satan with rebellion, deception, pride, and rejection of truth. It does not provide a complete transcript of the original rebellion or every argument Satan used. The central issue is clear: a created being rejected God's truth and sought self-exaltation rather than submission to God.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Great Controversy",
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "John 8:44",
+      "Isaiah 14:12-15",
+      "Ezekiel 28:12-17",
+      "1 Timothy 3:6",
+      "Revelation 12:7-9"
+    ],
+    "keywords": [
+      "satan",
+      "rebel",
+      "against",
+      "bible study",
+      "creation",
+      "great controversy",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-why-didn-t-god-destroy-satan-immediately",
+    "question": "Why Didn't God Destroy Satan Immediately?",
+    "shortAnswer": "Scripture does not give one verse explicitly saying, \"God delayed Satan's destruction for this exact reason.\" But the biblical account shows that God is allowing the controversy over His character, government, and truth to be fully exposed before final judgment.",
+    "longAnswer": "The Bible describes a conflict involving accusations against God and His people. Satan is called: \"the accuser of our brethren.\" Revelation 12:10, KJV The book of Job gives a remarkable picture of Satan challenging God's motives and claiming that Job serves God only because God protects and blesses him (Job 1:9-11). God permits Satan to demonstrate the validity of his accusations within defined limits. The cross also reveals God's character in the midst of this conflict. Jesus said: \"Now shall the prince of this world be cast out.\" John 12:31, KJV Yet Satan continues operating for a time after the cross. The final judgment will demonstrate God's justice. Paul says: \"that thou mightest be justified in thy sayings, and mightest overcome when thou art judged.\" Romans 3:4, KJV Scripture does not give us every detail about why God chose this precise timeline. It does show that God does not act arbitrarily, that Satan's rebellion is being exposed, that Christ's victory is decisive, and that Satan's final destruction is certain. The Bible therefore does not portray God as unable to destroy Satan. Rather, Satan's destruction occurs according to God's appointed judgment.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Great Controversy",
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Job 1:6-12",
+      "Job 2:1-7",
+      "Romans 3:4",
+      "John 12:31-32",
+      "Revelation 12:10-12",
+      "Revelation 20:10"
+    ],
+    "keywords": [
+      "didn't",
+      "destroy",
+      "satan",
+      "immediately",
+      "bible study",
+      "faith",
+      "great controversy",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-what-caused-the-war-in-heaven",
+    "question": "What Caused the War in Heaven?",
+    "shortAnswer": "The Bible describes a conflict in heaven involving Satan and his angels against Michael and His angels. It connects Satan with rebellion, deception, pride, and opposition to God's government.",
+    "longAnswer": "Revelation 12 gives the clearest description: \"There was war in heaven: Michael and his angels fought against the dragon; and the dragon fought and his angels.\" Revelation 12:7, KJV The dragon is identified as Satan in verse 9. The passage therefore establishes that the conflict was real and involved intelligent heavenly beings. The Bible also describes Satan as one who \"abode not in the truth\" (John 8:44). His rebellion was not merely a physical conflict. It was fundamentally a conflict over truth, loyalty, authority, and worship. Satan's methods are deception and accusation. Revelation 12:9 calls him the deceiver of the whole world, while verse 10 calls him the accuser. Revelation does not give a complete transcript of the arguments that began the war. It does, however, identify the participants and the outcome: Satan and his angels lost their place in heaven.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Great Controversy",
+      "Health"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "John 8:44",
+      "Revelation 12:7-12",
+      "Isaiah 14:12-15",
+      "Ezekiel 28:15-17"
+    ],
+    "keywords": [
+      "caused",
+      "heaven",
+      "bible study",
+      "faith",
+      "great controversy",
+      "health"
+    ]
+  },
+  {
+    "id": "answer-what-does-the-bible-say-about-satan",
+    "question": "What Does the Bible Say About Satan?",
+    "shortAnswer": "The Bible describes Satan as a real spiritual adversary who deceives, tempts, accuses, opposes God, attacks God's people, and will ultimately be destroyed.",
+    "longAnswer": "Satan is called: The Devil: Matthew 4:1 Satan: Revelation 12:9 The tempter: Matthew 4:3 The adversary: 1 Peter 5:8 The accuser: Revelation 12:10 The deceiver: Revelation 12:9 A murderer and liar: John 8:44 The god of this world: 2 Corinthians 4:4 Peter warns believers to remain vigilant: \"Be sober, be vigilant; because your adversary the devil... walketh about, seeking whom he may devour.\" 1 Peter 5:8, KJV Paul says believers are not ignorant of Satan's devices (2 Corinthians 2:11). Yet Satan is not God's equal. He is a created being under God's ultimate authority. The Bible gives Satan significant power, but never presents him as omnipotent, omniscient, or omnipresent. He is powerful, but he is still a creature. His final defeat is certain.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Creation",
+      "Faith"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Job 1:6-12",
+      "Matthew 4:1-11",
+      "John 8:44",
+      "2 Corinthians 4:4",
+      "1 Peter 5:8-9",
+      "Revelation 12:9-12",
+      "Revelation 20:10"
+    ],
+    "keywords": [
+      "satan",
+      "bible study",
+      "comfort",
+      "creation",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-who-are-demons",
+    "question": "Who Are Demons?",
+    "shortAnswer": "Demons are evil spiritual beings who oppose God and are associated with Satan's kingdom.",
+    "longAnswer": "The Gospels repeatedly describe demons as real spiritual beings. Jesus encountered people possessed by demons and cast them out (Mark 1:23-27; Mark 5:1-20). The New Testament also distinguishes demons from ordinary human sickness. Matthew 8:16 says: \"He cast out the spirits with his word, and healed all that were sick.\" Demons recognize Jesus' identity. In Mark 1:24, a demon calls Him \"the Holy One of God.\" James also says: \"Thou believest that there is one God; thou doest well: the devils also believe, and tremble.\" James 2:19, KJV Demons therefore possess knowledge and intelligence, but their knowledge does not produce submission to God. Scripture clearly teaches the existence and activity of demons. It does not give us a detailed classification system describing different ranks or types of demons. Ephesians 6:12 does describe different expressions of spiritual opposition, but we should not build elaborate demonology beyond what Scripture reveals.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Faith",
+      "Great Controversy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 8:16",
+      "Mark 1:23-27",
+      "Mark 5:1-20",
+      "Luke 8:26-39",
+      "James 2:19",
+      "Revelation 16:13-14"
+    ],
+    "keywords": [
+      "demons",
+      "bible study",
+      "comfort",
+      "faith",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-are-demons-fallen-angels",
+    "question": "Are Demons Fallen Angels?",
+    "shortAnswer": "Scripture strongly connects demons with Satan's kingdom and speaks of Satan's angels, but it does not use the exact sentence \"demons are fallen angels.\"",
+    "longAnswer": "Jesus speaks of: \"the devil and his angels\" Matthew 25:41, KJV Revelation 12:9 says that Satan's angels were cast out with him. The New Testament also describes certain angels who sinned: \"God spared not the angels that sinned, but cast them down to hell.\" 2 Peter 2:4, KJV Jude similarly refers to: \"the angels which kept not their first estate.\" Jude 6, KJV Taken together, these passages strongly support the understanding that rebellious spiritual beings are associated with Satan and his kingdom. The Bible does not explicitly define every demon as a particular fallen angel or give us a complete taxonomy of the supernatural realm. Therefore, the safest statement is: Demons are evil spiritual beings associated with Satan and his rebellion, and Scripture connects Satan with rebellious angels.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Faith",
+      "Great Controversy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 25:41",
+      "2 Peter 2:4",
+      "Jude 6",
+      "Revelation 12:7-9"
+    ],
+    "keywords": [
+      "demons",
+      "fallen",
+      "angels",
+      "bible study",
+      "comfort",
+      "faith",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-can-demons-possess-christians",
+    "question": "Can Demons Possess Christians?",
+    "shortAnswer": "The Bible clearly teaches demonic possession and oppression, but it does not explicitly use the modern phrase \"a Christian can or cannot be demon-possessed.\" Scripture instead emphasizes that believers belong to Christ and must resist the devil.",
+    "longAnswer": "The New Testament records numerous cases of demonic possession, particularly among people who were not following Christ. Jesus delivered people from demons (Mark 5:1-20; Luke 8:26-39). Believers are commanded: \"Resist the devil, and he will flee from you.\" James 4:7, KJV Peter gives the same warning: \"Whom resist stedfast in the faith.\" 1 Peter 5:9, KJV Paul tells believers: \"Neither give place to the devil.\" Ephesians 4:27, KJV And believers are told to put on the whole armor of God against spiritual forces of evil. The Bible clearly teaches that Christians can face temptation, spiritual attack, deception, and oppression. It does not provide a detailed theological definition of \"possession\" that answers every modern question. What Scripture does emphasize is where believers should place their confidence: \"greater is he that is in you, than he that is in the world.\" 1 John 4:4, KJV",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Faith",
+      "Great Controversy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "James 4:7",
+      "1 Peter 5:8-9",
+      "Ephesians 4:27",
+      "Ephesians 6:10-18",
+      "1 John 4:4",
+      "Mark 5:1-20"
+    ],
+    "keywords": [
+      "demons",
+      "possess",
+      "christians",
+      "bible study",
+      "comfort",
+      "faith",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-can-satan-read-your-mind",
+    "question": "Can Satan Read Your Mind?",
+    "shortAnswer": "The Bible does not say that Satan is able to read human thoughts. Scripture does show that Satan is highly intelligent, observant, deceptive, and able to tempt people based on circumstances and behavior.",
+    "longAnswer": "God is repeatedly presented as uniquely knowing the human heart. 1 Kings 8:39 says: \"thou, even thou only, knowest the hearts of all the children of men.\" Psalm 139 describes God's complete knowledge of a person's thoughts and words. Scripture never attributes this unlimited knowledge of human hearts to Satan. Satan can observe human behavior and circumstances. In the book of Job, Satan makes claims based on what he observes about Job's situation (Job 1:9-11). Satan also tempted Jesus after observing His circumstances and fasting (Matthew 4:1-11). There is no biblical statement saying that Satan can read everyone's thoughts. Therefore, Christians should not live in fear that Satan possesses the same kind of unlimited knowledge that belongs to God. God alone is omniscient. Satan is a powerful creature, not God.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Faith",
+      "Great Controversy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "1 Kings 8:39",
+      "Psalm 139:1-4",
+      "Job 1:9-11",
+      "Matthew 4:1-11",
+      "Hebrews 4:13"
+    ],
+    "keywords": [
+      "satan",
+      "read",
+      "mind",
+      "bible study",
+      "comfort",
+      "faith",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-can-satan-hear-your-prayers",
+    "question": "Can Satan Hear Your Prayers?",
+    "shortAnswer": "Scripture does not explicitly say whether Satan can hear every private prayer. It does teach that God hears prayer and that believers should pray confidently to Him.",
+    "longAnswer": "David repeatedly expresses confidence that God hears prayer. Psalm 65:2 says: \"O thou that hearest prayer, unto thee shall all flesh come.\" Jesus instructed His followers to pray to the Father (Matthew 6:6-13). Scripture also teaches that God knows what we need before we ask: \"Your Father knoweth what things ye have need of, before ye ask him.\" Matthew 6:8, KJV The Bible does not make Satan's ability to hear private prayers a central concern. Instead, its emphasis is on directing our prayers to God and trusting Him. The Bible does not explicitly teach that Satan can hear every private prayer. It also does not teach that Christians need to use special secret wording to prevent Satan from hearing them. Prayer is communication with God. The believer's confidence is based on God's knowledge, love, and power.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Great Controversy",
+      "Prayer"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Psalm 65:2",
+      "Matthew 6:6-13",
+      "Matthew 6:8",
+      "Philippians 4:6-7",
+      "1 John 5:14-15"
+    ],
+    "keywords": [
+      "satan",
+      "hear",
+      "prayers",
+      "bible study",
+      "faith",
+      "great controversy",
+      "prayer"
+    ]
+  },
+  {
+    "id": "answer-spiritual-warfare",
+    "question": "What Is Spiritual Warfare?",
+    "shortAnswer": "Spiritual warfare is the conflict between God's kingdom and the forces of evil, and the believer's struggle against temptation, deception, sin, and spiritual opposition.",
+    "longAnswer": "Paul gives the clearest description: \"We wrestle not against flesh and blood, but against principalities, against powers, against the rulers of the darkness of this world.\" Ephesians 6:12, KJV Paul then describes the armor God provides: Truth Righteousness The gospel of peace Faith Salvation The Word of God Prayer (Ephesians 6:13-18.) Spiritual warfare therefore is not primarily about dramatic supernatural experiences. It includes the daily battle to remain faithful to God amid temptation, deception, persecution, false teaching, and spiritual opposition. Peter says: \"Be sober, be vigilant.\" 1 Peter 5:8, KJV The Bible does teach a genuine supernatural conflict. But it does not encourage believers to become obsessed with Satan. The focus is repeatedly on Christ, truth, faith, prayer, Scripture, obedience, and dependence upon God.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Faith",
+      "Great Controversy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Ephesians 6:10-18",
+      "1 Peter 5:8-9",
+      "James 4:7",
+      "2 Corinthians 10:3-5",
+      "Revelation 12:11"
+    ],
+    "keywords": [
+      "spiritual",
+      "warfare",
+      "bible study",
+      "comfort",
+      "faith",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-how-do-you-fight-spiritual-warfare",
+    "question": "How Do You Fight Spiritual Warfare?",
+    "shortAnswer": "The Bible teaches believers to resist Satan by submitting to God, standing in truth and faith, using God's Word, praying, and remaining spiritually watchful.",
+    "longAnswer": "James gives a simple two-part principle: \"Submit yourselves therefore to God. Resist the devil, and he will flee from you.\" James 4:7, KJV Ephesians 6 gives the fuller picture. Believers are commanded to put on the whole armor of God: Truth Righteousness Gospel of peace Faith Salvation The Word of God and to pray continually. Jesus Himself resisted Satan's temptations by appealing to Scripture: \"It is written.\" Matthew 4:4, 7, 10 This is one of the clearest biblical examples of spiritual warfare. Spiritual warfare is not primarily about learning secret formulas, confronting demons directly, or performing dramatic rituals. The biblical emphasis is on: Truth + faith + God's Word + prayer + obedience + dependence on Christ. The believer's strength comes from God, not personal supernatural authority.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Faith",
+      "Great Controversy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 4:1-11",
+      "James 4:7-8",
+      "Ephesians 6:10-18",
+      "1 Peter 5:8-9",
+      "Psalm 119:11"
+    ],
+    "keywords": [
+      "fight",
+      "spiritual",
+      "warfare",
+      "bible study",
+      "comfort",
+      "faith",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-what-does-the-bible-say-about-witchcraft",
+    "question": "What Does the Bible Say About Witchcraft?",
+    "shortAnswer": "The Bible consistently condemns witchcraft, sorcery, divination, mediums, spiritism, and attempts to obtain supernatural knowledge or power apart from God.",
+    "longAnswer": "God explicitly warned Israel: \"There shall not be found among you any one... that useth divination, or an observer of times, or an enchanter, or a witch.\" Deuteronomy 18:10, KJV The reason is given immediately: \"For all that do these things are an abomination unto the LORD.\" Deuteronomy 18:12, KJV Isaiah also asks: \"Should not a people seek unto their God?\" Isaiah 8:19, KJV Instead of seeking the dead or supernatural mediums, God's people are directed to God and His Word. The New Testament likewise records people abandoning magical practices when they accepted Christ (Acts 19:18-20). Scripture clearly rejects occult practices. It does not teach that every supernatural claim made by occult practitioners is genuine. Some may involve deception, fraud, psychological manipulation, or other explanations. But Scripture does warn that genuine supernatural deception exists. Paul says Satan can transform himself: \"into an angel of light.\" 2 Corinthians 11:14, KJV",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Great Controversy",
+      "Holy Spirit"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Exodus 22:18",
+      "Leviticus 19:31",
+      "Leviticus 20:6",
+      "Deuteronomy 18:9-14",
+      "Isaiah 8:19-20",
+      "Acts 19:18-20",
+      "Galatians 5:19-21"
+    ],
+    "keywords": [
+      "witchcraft",
+      "bible study",
+      "faith",
+      "great controversy",
+      "holy spirit"
+    ]
+  },
+  {
+    "id": "answer-what-does-the-bible-say-about-ghosts",
+    "question": "What Does the Bible Say About Ghosts?",
+    "shortAnswer": "The Bible does not teach that deceased human beings remain on earth as ghosts. Scripture teaches that the dead are unconscious until the resurrection while also teaching the existence of angels and evil spirits.",
+    "longAnswer": "Ecclesiastes says: \"The dead know not any thing.\" Ecclesiastes 9:5, KJV Psalm 146:4 says that when a person dies: \"his thoughts perish.\" Jesus compared death to sleep when describing Lazarus (John 11:11-14). Scripture also forbids attempts to communicate with the dead: \"Should not a people seek unto their God? for the living to the dead?\" Isaiah 8:19, KJV Deuteronomy 18:10-12 likewise prohibits consulting mediums and spiritists. The Bible does teach the existence of supernatural spiritual beings. Therefore, Scripture does not require us to conclude that every supernatural experience is imaginary. But it does not teach that deceased humans become wandering spirits. This distinction is important. The biblical teaching about death should be interpreted alongside its warnings against spiritism and communication with the dead.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Creation",
+      "Faith"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Ecclesiastes 9:5-6",
+      "Psalm 146:4",
+      "John 11:11-14",
+      "Isaiah 8:19-20",
+      "Deuteronomy 18:10-12"
+    ],
+    "keywords": [
+      "ghosts",
+      "bible study",
+      "comfort",
+      "creation",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-three-angels",
+    "question": "What Are Angels?",
+    "shortAnswer": "Angels are created spiritual beings who serve God and are sent to minister on behalf of those who will inherit salvation.",
+    "longAnswer": "Hebrews says: \"Are they not all ministering spirits, sent forth to minister for them who shall be heirs of salvation?\" Hebrews 1:14, KJV Angels appear throughout Scripture carrying out God's purposes. They: Deliver messages: Luke 1:26-38 Protect God's servants: Psalm 34:7 Praise God: Isaiah 6:1-3; Revelation 5:11-12 Execute God's commands: Psalm 103:20 Serve believers: Hebrews 1:14 Participate in the final gathering of God's people: Matthew 24:31 Angels are created beings, not divine beings equal to God. Paul warns against worshiping angels (Colossians 2:18). The Bible gives us significant information about angels but does not answer every question about their nature. It does not teach that humans become angels after death. Angels and redeemed human beings are presented as distinct orders of God's creation.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Holy Spirit"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "Psalm 34:7",
+      "Psalm 103:20-21",
+      "Isaiah 6:1-3",
+      "Matthew 24:31",
+      "Hebrews 1:14",
+      "Revelation 5:11-12"
+    ],
+    "keywords": [
+      "angels",
+      "bible study",
+      "creation",
+      "faith",
+      "holy spirit"
+    ]
+  },
+  {
+    "id": "answer-do-guardian-angels-exist",
+    "question": "Do Guardian Angels Exist?",
+    "shortAnswer": "The Bible teaches that angels minister to and protect God's people, although Scripture does not fully explain the modern idea that every individual has one permanently assigned guardian angel.",
+    "longAnswer": "Psalm 34:7 says: \"The angel of the LORD encampeth round about them that fear him, and delivereth them.\" Psalm 91:11 says: \"He shall give his angels charge over thee, to keep thee in all thy ways.\" Jesus also said: \"their angels do always behold the face of my Father which is in heaven.\" Matthew 18:10, KJV Hebrews 1:14 describes angels as \"ministering spirits\" sent to serve those who will inherit salvation. The Bible clearly supports angelic ministry and protection. However, it does not explicitly state that every individual has exactly one guardian angel assigned to them for life. Therefore, the biblical claim should not be expanded beyond what Scripture says. The important truth is that God uses heavenly messengers to minister to His people.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Faith",
+      "Great Controversy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Psalm 34:7",
+      "Psalm 91:11",
+      "Matthew 18:10",
+      "Hebrews 1:14"
+    ],
+    "keywords": [
+      "guardian",
+      "angels",
+      "exist",
+      "bible study",
+      "comfort",
+      "faith",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-what-are-cherubim",
+    "question": "What Are Cherubim?",
+    "shortAnswer": "Cherubim are heavenly beings associated with God's presence, glory, and throne.",
+    "longAnswer": "Cherubim first appear in Genesis after humanity's fall: \"So he drove out the man; and he placed at the east of the garden of Eden Cherubims.\" Genesis 3:24, KJV They also appear prominently in the sanctuary. God instructed that cherubim be represented above the mercy seat of the ark (Exodus 25:18-22). The imagery of cherubim appears again in Ezekiel's visions (Ezekiel 1; 10). The Psalms sometimes use cherubim imagery in descriptions of God's majestic movement: \"He rode upon a cherub, and did fly.\" Psalm 18:10, KJV Cherubim therefore are not simply decorative baby-like figures. Scripture associates them with God's heavenly presence and glory. The Bible gives symbolic and visionary descriptions of cherubim, particularly in Ezekiel. Their exact physical appearance should not be reduced to later artistic traditions. Scripture's emphasis is their association with God's throne, glory, holiness, and presence.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Forgiveness",
+      "Sanctuary"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Genesis 3:24",
+      "Exodus 25:18-22",
+      "Ezekiel 1",
+      "Ezekiel 10",
+      "Psalm 18:10"
+    ],
+    "keywords": [
+      "cherubim",
+      "bible study",
+      "creation",
+      "forgiveness",
+      "sanctuary"
+    ]
+  },
+  {
+    "id": "answer-what-are-seraphim",
+    "question": "What Are Seraphim?",
+    "shortAnswer": "Seraphim are heavenly beings described in Isaiah's vision of God's throne. They continually proclaim God's holiness and worship Him.",
+    "longAnswer": "Isaiah 6 gives the clearest biblical description: \"Above it stood the seraphims: each one had six wings.\" Isaiah 6:2, KJV They proclaim: \"Holy, holy, holy, is the LORD of hosts.\" Isaiah 6:3, KJV One of the seraphim also takes a live coal from the altar and touches Isaiah's lips, symbolizing the removal of his guilt and the cleansing of his sin (Isaiah 6:6-7). The scene emphasizes God's holiness. Isaiah is overwhelmed by his own uncleanness when he sees God's glory. The seraphim's worship therefore reinforces a central biblical truth: God's presence is perfectly holy. Seraphim are mentioned specifically in Isaiah 6. The Bible gives us less information about them than about angels generally. It does not provide a complete hierarchy of all heavenly beings. Therefore, elaborate systems ranking angels should not be treated as explicit biblical teaching unless Scripture itself supports them.",
+    "topics": [
+      "Bible Study",
+      "Health",
+      "Law",
+      "State of the Dead"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Isaiah 6:1-7"
+    ],
+    "keywords": [
+      "seraphim",
+      "bible study",
+      "health",
+      "law",
+      "state of the dead"
+    ]
+  },
+  {
+    "id": "answer-when-is-jesus-coming-back",
+    "question": "When Is Jesus Coming Back?",
+    "shortAnswer": "The Bible teaches that Jesus Christ will return personally, visibly, and gloriously. However, Jesus specifically said that the exact day and hour of His return are not revealed to human beings.",
+    "longAnswer": "Jesus said: \"But of that day and hour knoweth no man.\" Matthew 24:36, KJV He therefore warned His followers not to attempt to calculate the exact date. At the same time, Jesus gave signs that would precede His coming, including deception, wars, famines, pestilences, persecution, false prophets, and the worldwide proclamation of the gospel (Matthew 24:4-14). His return will not be secret or invisible. Jesus said: \"For as the lightning cometh out of the east, and shineth even unto the west; so shall also the coming of the Son of man be.\" Matthew 24:27, KJV Revelation describes Him coming with the clouds, and says: \"every eye shall see him.\" Revelation 1:7, KJV Paul says the Lord will descend from heaven with a shout, with the voice of the archangel, and with the trumpet of God (1 Thessalonians 4:16). Scripture gives signs and describes the manner of Christ's return, but it does not give us permission to set a date. The appropriate response is therefore not date-setting but watchfulness and readiness.",
+    "topics": [
+      "Bible Study",
+      "Great Controversy",
+      "Prophecy",
+      "Salvation"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Matthew 24:27",
+      "Acts 1:9-11",
+      "1 Thessalonians 4:16-17",
+      "Revelation 1:7"
+    ],
+    "keywords": [
+      "coming",
+      "back",
+      "bible study",
+      "great controversy",
+      "prophecy",
+      "salvation"
+    ]
+  },
+  {
+    "id": "answer-second-coming",
+    "question": "When Will Jesus Return?",
+    "shortAnswer": "The Bible does not reveal the exact date or hour of Christ's second coming. It teaches that the return will occur after the gospel has been proclaimed to the world and that believers should remain ready.",
+    "longAnswer": "Jesus said: \"But of that day and hour knoweth no man.\" Matthew 24:36, KJV This prevents Christians from legitimately calculating a precise date. Jesus did, however, say: \"this gospel of the kingdom shall be preached in all the world for a witness unto all nations; and then shall the end come.\" Matthew 24:14, KJV The sequence is important. The gospel is proclaimed to the nations, and then the end comes. Jesus also compared His coming to the days of Noah (Matthew 24:37-39). The issue was not that people lacked a calendar date. The issue was that they were unprepared. Paul similarly describes the day of the Lord as coming unexpectedly upon those who are spiritually unprepared (1 Thessalonians 5:1-6). The Bible does not give the precise date. Therefore, anyone claiming to know the exact day of Christ's return is claiming knowledge that Jesus said human beings do not possess.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Holy Spirit",
+      "Salvation"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Matthew 24:14",
+      "1 Thessalonians 5:1-6",
+      "2 Peter 3:10"
+    ],
+    "keywords": [
+      "will",
+      "return",
+      "bible study",
+      "faith",
+      "holy spirit",
+      "salvation"
+    ]
+  },
+  {
+    "id": "answer-what-are-the-signs-of-the-end-times",
+    "question": "What Are the Signs of the End Times?",
+    "shortAnswer": "Jesus gave several signs of the approaching end, including widespread deception, wars, famines, pestilences, persecution, false prophets, increasing lawlessness, and the worldwide proclamation of the gospel.",
+    "longAnswer": "In Matthew 24, Jesus warned: False Christs would arise (Matthew 24:5). Wars and rumors of wars would occur (verse 6). Nations would rise against nations (verse 7). Famines and earthquakes would occur (verse 7). Believers would experience persecution (verse 9). Many would turn away (verse 10). False prophets would deceive many (verse 11). Lawlessness would increase (verse 12). The gospel would be preached throughout the world (verse 14). Jesus also warned that deception would be one of the greatest dangers: \"Take heed that no man deceive you.\" Matthew 24:4, KJV Revelation adds a worldwide religious conflict involving worship, the beast, its image, and the mark of the beast (Revelation 13-14). Not every war, earthquake, or disaster should automatically be interpreted as the final event. Jesus specifically said: \"all these are the beginning of sorrows.\" Matthew 24:8, KJV The signs are therefore not a license for sensational predictions. They are warnings to remain spiritually awake.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Holy Spirit"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "Matthew 24:4-14",
+      "Luke 21:8-28",
+      "2 Timothy 3:1-5",
+      "2 Peter 3:3-4",
+      "Revelation 13-14"
+    ],
+    "keywords": [
+      "signs",
+      "times",
+      "bible study",
+      "creation",
+      "faith",
+      "holy spirit"
+    ]
+  },
+  {
+    "id": "answer-are-we-living-in-the-end-times",
+    "question": "Are We Living in the End Times?",
+    "shortAnswer": "The New Testament describes the Christian era as \"the last days,\" while also describing events that will intensify before Christ's return. Scripture therefore calls believers to watchfulness rather than date-setting.",
+    "longAnswer": "Peter applied Joel's prophecy to the time of the early church and said: \"it shall come to pass in the last days.\" Acts 2:17, KJV Hebrews likewise says that God: \"hath in these last days spoken unto us by his Son.\" Hebrews 1:2, KJV In this sense, the \"last days\" began with the coming of Christ. Yet Scripture also describes a future culmination of evil immediately before the second coming. Paul writes: \"in the last days perilous times shall come.\" 2 Timothy 3:1, KJV Jesus' teachings in Matthew 24 describe events leading toward His return. The phrase \"last days\" can refer broadly to the era inaugurated by Christ, while Scripture also describes a final period immediately preceding His return. Therefore, the question should not simply be, \"Can we prove that today is the last generation?\" The more important biblical question is whether we are spiritually prepared for Christ's return.",
+    "topics": [
+      "Bible Study",
+      "Church",
+      "Comfort",
+      "Faith"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Acts 2:16-17",
+      "Hebrews 1:1-2",
+      "2 Timothy 3:1-5",
+      "James 5:3-8",
+      "Matthew 24"
+    ],
+    "keywords": [
+      "living",
+      "times",
+      "bible study",
+      "church",
+      "comfort",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-what-does-the-bible-say-about-the-end-of-the-world",
+    "question": "What Does the Bible Say About the End of the World?",
+    "shortAnswer": "The Bible teaches that the present world order will eventually come to an end, followed by God's judgment and the creation of \"a new heaven and a new earth\" where righteousness dwells.",
+    "longAnswer": "Jesus spoke of the end of the age and His return (Matthew 24:3). Peter describes the final day of judgment and says: \"the heavens shall pass away with a great noise, and the elements shall melt with fervent heat.\" 2 Peter 3:10, KJV But Scripture does not end with destruction. Peter continues: \"Nevertheless we, according to his promise, look for new heavens and a new earth, wherein dwelleth righteousness.\" 2 Peter 3:13, KJV Revelation gives the same ultimate picture: \"I saw a new heaven and a new earth.\" Revelation 21:1, KJV God's purpose is therefore not merely to destroy but ultimately to restore. The Bible does not give a modern scientific description of exactly how every physical process will occur. It does clearly teach: Christ returns. Judgment occurs. Evil is finally destroyed. God creates a renewed world. God's people dwell with Him forever.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Creation",
+      "Great Controversy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 24:3-14",
+      "2 Peter 3:10-13",
+      "Revelation 20:11-15",
+      "Revelation 21:1-5"
+    ],
+    "keywords": [
+      "world",
+      "bible study",
+      "comfort",
+      "creation",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-what-is-the-antichrist",
+    "question": "What Is the Antichrist?",
+    "shortAnswer": "The Bible uses the word \"antichrist\" specifically in John's letters. It describes those who deny that Jesus is the Christ and who deny the Father and the Son. The broader biblical picture also describes an end-time power that opposes God and exalts itself against Him.",
+    "longAnswer": "John writes: \"Who is a liar but he that denieth that Jesus is the Christ? He is antichrist.\" 1 John 2:22, KJV John also says: \"even now are there many antichrists.\" 1 John 2:18, KJV This is important. Biblically, \"antichrist\" is not necessarily limited to one individual appearing at the very end of history. John describes a spirit of antichrist that denies Christ (1 John 4:3). Paul describes another end-time figure as \"the man of sin\" who exalts himself against God (2 Thessalonians 2:3-4). Daniel and Revelation describe powers that oppose God and persecute His people (Daniel 7:25; Revelation 13:5-7). The Bible does not explicitly say, \"The Antichrist is [insert a modern person's name].\" Identifying the larger prophetic powers requires comparing Daniel, Revelation, Paul's writings, and John's letters. The essential biblical characteristics are opposition to Christ, deception, self-exaltation, rejection of truth, and persecution of God's people.",
+    "topics": [
+      "Bible Study",
+      "Holy Spirit",
+      "Law",
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "1 John 2:18",
+      "1 John 4:2-3",
+      "2 John 7",
+      "2 Thessalonians 2:3-4",
+      "Daniel 7:25",
+      "Revelation 13:5-7"
+    ],
+    "keywords": [
+      "antichrist",
+      "bible study",
+      "holy spirit",
+      "law",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-who-is-the-antichrist",
+    "question": "Who Is the Antichrist?",
+    "shortAnswer": "Scripture does not give a simple personal name for \"the Antichrist.\" John's letters describe antichrist as both a doctrinal opposition to Christ and a movement or power that denies Him. Other passages describe end-time powers that oppose God and His people.",
+    "longAnswer": "John says: \"even now are there many antichrists.\" 1 John 2:18, KJV He defines antichrist in relation to denial of Jesus as the Christ and denial of the Father and Son (1 John 2:22). He also says: \"Every spirit that confesseth not that Jesus Christ is come in the flesh is not of God.\" 1 John 4:3, KJV Paul's \"man of sin\" is another major prophetic passage. He describes a power that exalts itself above God and opposes Him (2 Thessalonians 2:3-4). Daniel 7 describes a little horn that speaks against the Most High, persecutes God's saints, and seeks to change times and law (Daniel 7:8, 20-25). Revelation 13 describes a beast that receives worship, blasphemes God, persecutes the saints, and exercises worldwide influence. The biblical evidence should be assembled from the passages themselves rather than beginning with a modern person and attempting to make the prophecy fit. The characteristics matter more than speculation about names.",
+    "topics": [
+      "Bible Study",
+      "Great Controversy",
+      "Holy Spirit",
+      "Law"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Daniel 7:8",
+      "2 Thessalonians 2:3-8",
+      "1 John 2:18-22",
+      "1 John 4:1-3",
+      "Revelation 13:1-10"
+    ],
+    "keywords": [
+      "antichrist",
+      "bible study",
+      "great controversy",
+      "holy spirit",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-mark-of-beast",
+    "question": "What Is the Mark of the Beast?",
+    "shortAnswer": "The mark of the beast is a future identifying sign associated with allegiance to the beast and its worship. Revelation connects it directly with worship, obedience, economic restrictions, and opposition to God's people.",
+    "longAnswer": "Revelation 13 says the second beast causes people to receive a mark: \"on their right hand, or in their foreheads.\" Revelation 13:16, KJV Those who refuse the mark face economic consequences because: \"no man might buy or sell, save he that had the mark.\" Revelation 13:17, KJV But Revelation makes clear that the central issue is not merely commerce. Chapter 14 gives the warning: \"If any man worship the beast and his image, and receive his mark...\" Revelation 14:9, KJV The same chapter then contrasts these people with: \"the saints\" who \"keep the commandments of God, and the faith of Jesus.\" Revelation 14:12, KJV Thus the mark is fundamentally connected with worship and allegiance. Revelation also describes God's people as having the Father's name written on their foreheads (Revelation 14:1). Scripture does not identify the mark as a particular modern technology, implant, barcode, vaccine, credit card, or digital currency. It gives characteristics rather than a modern product name. The mark is connected with worship, allegiance, the beast, and its authority.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Health",
+      "Law"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Revelation 13:11-18",
+      "Revelation 14:9-12",
+      "Revelation 15:2",
+      "Revelation 16:2",
+      "Revelation 19:20"
+    ],
+    "keywords": [
+      "mark",
+      "beast",
+      "bible study",
+      "faith",
+      "health",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-what-is-666",
+    "question": "What Is 666?",
+    "shortAnswer": "666 is the number associated with the beast in Revelation 13. Scripture says it is \"the number of the beast\" and \"the number of a man.\"",
+    "longAnswer": "Revelation says: \"Here is wisdom. Let him that hath understanding count the number of the beast: for it is the number of a man; and his number is Six hundred threescore and six.\" Revelation 13:18, KJV The number is therefore specifically connected with the beast's identity and authority. The verse says that understanding is required to \"count\" or \"calculate\" the number. In the ancient world, letters could also have numerical values, so many interpreters have understood the number as connected with a name. However, the Bible itself does not provide the name in Revelation 13:18. Scripture does not say that every occurrence of the number 666 is automatically the mark of the beast. Nor does it say that Christians should obsess over finding 666 in modern prices, identification numbers, products, or technologies. The number is specifically associated with the beast described in Revelation 13. The central issue of Revelation 13-14 is worship and allegiance, not mathematical superstition.",
+    "topics": [
+      "Bible Study",
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Revelation 13:16-18",
+      "Revelation 14:9-11"
+    ],
+    "keywords": [
+      "bible study",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-what-is-the-image-of-the-beast",
+    "question": "What Is the Image of the Beast?",
+    "shortAnswer": "The image of the beast is a prophetic representation of the beast's authority that is empowered to speak, enforce worship, and persecute those who refuse to worship it.",
+    "longAnswer": "Revelation 13 says the second beast: \"should make an image to the beast.\" Revelation 13:14, KJV It then gives power to the image so that: \"the image of the beast should both speak, and cause that as many as would not worship the image of the beast should be killed.\" Revelation 13:15, KJV The image is therefore connected directly with worship and coercion. The issue is not merely possessing an object. It is the enforcement of worship and allegiance. Daniel provides important background because it describes an image associated with worship and political power in Nebuchadnezzar's kingdom (Daniel 3). Revelation repeatedly uses imagery from Daniel. Revelation does not identify the image as a particular modern statue, computer system, robot, or technology. Its defining biblical characteristics are: It represents the beast. It is associated with worship. It receives authority. It enforces allegiance. It persecutes those who refuse worship.",
+    "topics": [
+      "Law",
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Daniel 3",
+      "Revelation 13:11-18",
+      "Revelation 14:9-12"
+    ],
+    "keywords": [
+      "image",
+      "beast",
+      "law",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-what-is-babylon-in-revelation",
+    "question": "What Is Babylon in Revelation?",
+    "shortAnswer": "Babylon in Revelation is a symbolic end-time power or system opposed to God that influences nations, promotes spiritual immorality, and becomes intoxicated with the wine of its corrupting influence.",
+    "longAnswer": "Revelation calls Babylon: \"Babylon the great, the mother of harlots and abominations of the earth.\" Revelation 17:5, KJV Babylon is portrayed as a woman sitting upon a beast (Revelation 17:3-5). She influences kings and nations: \"the kings of the earth have committed fornication with her.\" Revelation 17:2, KJV Revelation 18 describes her worldwide commercial and political influence and says: \"all nations have drunk of the wine of the wrath of her fornication.\" Revelation 18:3, KJV The symbolic language indicates that Babylon represents more than the ancient city alone. Its characteristics must be compared with Daniel, Revelation, and Old Testament passages about Babylon. Revelation does not simply say, \"Babylon is [name of a modern organization].\" The identification must be based on the characteristics given in Scripture. Babylon is associated with spiritual unfaithfulness, deception, alliance with earthly powers, opposition to God's people, and worldwide influence.",
+    "topics": [
+      "Bible Study",
+      "Church",
+      "Creation",
+      "Faith"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "Revelation 14:8",
+      "Revelation 17:1-6",
+      "Revelation 18:1-24",
+      "Isaiah 13-14",
+      "Jeremiah 50-51"
+    ],
+    "keywords": [
+      "babylon",
+      "revelation",
+      "bible study",
+      "church",
+      "creation",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-what-is-the-wine-of-babylon",
+    "question": "What Is the Wine of Babylon?",
+    "shortAnswer": "The wine of Babylon represents the corrupting influence of Babylon's spiritual fornication and false teaching. Revelation uses wine symbolically in connection with deception, spiritual unfaithfulness, and rebellion against God.",
+    "longAnswer": "Revelation 14:8 says: \"Babylon is fallen, is fallen, that great city, because she made all nations drink of the wine of the wrath of her fornication.\" Revelation 17 describes Babylon as a woman who has: \"a golden cup in her hand full of abominations and filthiness of her fornication.\" Revelation 17:4, KJV The wine therefore appears within a symbolic picture of spiritual corruption. Jeremiah provides important Old Testament background: \"Babylon hath been a golden cup in the LORD'S hand, that made all the earth drunken.\" Jeremiah 51:7, KJV Babylon's wine causes nations to become spiritually intoxicated. In Revelation's symbolic context, Babylon's wine is not merely a reference to alcoholic beverage consumption. It represents the corrupting influence of Babylon's spiritual system and its teachings, alliances, and practices. The exact content of every element of Babylon's wine must be established by comparing the passages rather than assigning arbitrary meanings to the symbol.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Health"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Jeremiah 51:7",
+      "Revelation 14:8",
+      "Revelation 17:1-5",
+      "Revelation 18:2-3"
+    ],
+    "keywords": [
+      "wine",
+      "babylon",
+      "bible study",
+      "creation",
+      "faith",
+      "health"
+    ]
+  },
+  {
+    "id": "answer-what-is-armageddon",
+    "question": "What Is Armageddon?",
+    "shortAnswer": "Armageddon is the name Revelation gives to the gathering of the world's forces for the final conflict associated with the great day of God Almighty.",
+    "longAnswer": "Revelation 16 describes three unclean spirits going out to the kings of the earth to gather them: \"to the battle of that great day of God Almighty.\" Revelation 16:14, KJV Then Revelation says: \"And he gathered them together into a place called in the Hebrew tongue Armageddon.\" Revelation 16:16, KJV The context connects Armageddon with the final conflict between the forces of evil and God's purposes. The dragon, beast, and false prophet are involved in gathering the kings of the earth (Revelation 16:13-14). Revelation 19 then describes Christ's victorious return and the defeat of the beast and false prophet. The Bible does not describe Armageddon simply as a conventional military battle over one piece of land. Its broader context is worldwide and spiritual, involving the gathering of the nations in opposition to God. The exact geographical meaning of \"Armageddon\" has been debated, but the theological point is clear: the conflict ends with God's victory.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Creation",
+      "Great Controversy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Revelation 16:12-16",
+      "Revelation 17:12-14",
+      "Revelation 19:11-21"
+    ],
+    "keywords": [
+      "armageddon",
+      "bible study",
+      "comfort",
+      "creation",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-what-happens-at-armageddon",
+    "question": "What Happens at Armageddon?",
+    "shortAnswer": "Revelation presents Armageddon as the gathering of earthly powers for the final conflict against God. Christ then appears as the victorious King and defeats the forces of evil.",
+    "longAnswer": "Revelation 16 describes the gathering of the kings of the earth (verses 13-16). Revelation 19 gives the next major scene. Heaven opens and Christ appears as the Rider on the white horse: \"KING OF KINGS, AND LORD OF LORDS.\" Revelation 19:16, KJV The beast and false prophet are defeated (Revelation 19:20). The chapter portrays Christ's victory over the forces gathered against Him. Revelation does not present Armageddon as a battle in which God's victory is uncertain. The outcome is already determined by Christ's authority. The focus is therefore not on predicting military movements but on recognizing the final conflict over worship, allegiance, and the authority of God.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Creation",
+      "Great Controversy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Revelation 16:13-16",
+      "Revelation 19:11-21",
+      "Revelation 17:14"
+    ],
+    "keywords": [
+      "happens",
+      "armageddon",
+      "bible study",
+      "comfort",
+      "creation",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-what-are-the-seven-last-plagues",
+    "question": "What Are the Seven Last Plagues?",
+    "shortAnswer": "The seven last plagues are seven final judgments described in Revelation 15-16. They fall after the close of probationary opportunity and immediately precede Christ's second coming in the prophetic sequence.",
+    "longAnswer": "Revelation 15 introduces the seven angels: \"having the seven last plagues; for in them is filled up the wrath of God.\" Revelation 15:1, KJV Revelation 16 then describes them: Painful sores upon those who have the mark of the beast. The sea becoming blood. Rivers and fountains becoming blood. The sun scorching people with great heat. Darkness upon the throne of the beast. The Euphrates drying up and the gathering toward Armageddon. A great voice from heaven, followed by a massive earthquake and extraordinary heavenly signs. The Bible calls them the seven last plagues, distinguishing them from earlier judgments. Revelation 15:8 says: \"no man was able to enter into the temple, till the seven plagues of the seven angels were fulfilled.\" Revelation 16:15 also contains a warning from Christ to remain spiritually watchful. The exact symbolism and physical manifestation of every plague should not be invented beyond what Scripture reveals.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Creation",
+      "Health"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Revelation 15:1-8",
+      "Revelation 16:1-21"
+    ],
+    "keywords": [
+      "seven",
+      "last",
+      "plagues",
+      "bible study",
+      "comfort",
+      "creation",
+      "health"
+    ]
+  },
+  {
+    "id": "answer-what-are-the-seven-seals-in-revelation",
+    "question": "What Are the Seven Seals in Revelation?",
+    "shortAnswer": "The seven seals are a prophetic sequence in Revelation 6-8 involving the Lamb opening a scroll sealed with seven seals. They reveal successive scenes of conquest, conflict, suffering, persecution, judgment, and finally God's intervention.",
+    "longAnswer": "Revelation 5 introduces the sealed scroll in God's hand. Only the Lamb is worthy to open it. As Christ opens the seals, John sees: A white horse. A red horse. A black horse. A pale horse. The souls of those slain for God's Word. Cosmic signs and the shaking of earthly powers. Silence in heaven followed by the introduction of the seven trumpets. The fifth seal is particularly significant because it depicts faithful martyrs asking how long until God judges and avenges their blood (Revelation 6:9-11). The sixth seal points toward the final events associated with Christ's return (Revelation 6:12-17). Revelation itself does not provide a simple sentence assigning every seal to a particular modern historical event. The seals should therefore be studied in connection with the larger structure of Revelation and its Old Testament background.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Creation",
+      "Faith"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Revelation 5:1-14",
+      "Revelation 6:1-17",
+      "Revelation 7:1-17",
+      "Revelation 8:1"
+    ],
+    "keywords": [
+      "seven",
+      "seals",
+      "revelation",
+      "bible study",
+      "comfort",
+      "creation",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-what-are-the-seven-trumpets",
+    "question": "What Are the Seven Trumpets?",
+    "shortAnswer": "The seven trumpets are a series of judgments announced in Revelation 8-11. They portray escalating judgments involving the earth, sea, waters, heavenly bodies, humanity, and finally the proclamation of God's kingdom.",
+    "longAnswer": "The seventh seal introduces the seven trumpets (Revelation 8:1-6). The first four trumpets involve judgments upon: Earth Sea Rivers and waters The sun, moon, and stars (Revelation 8:7-13.) The fifth and sixth trumpets involve increasingly severe spiritual and earthly judgments (Revelation 9). The seventh trumpet announces: \"The kingdoms of this world are become the kingdoms of our Lord, and of his Christ.\" Revelation 11:15, KJV The heavenly beings then praise God and announce that His judgment has come (Revelation 11:16-19). The Bible does not explicitly provide a modern chronological label for each trumpet. Therefore, interpretation should remain tied to the biblical text. The broad movement is clear: judgment, conflict, warning, and ultimately God's kingdom triumphing.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Holy Spirit",
+      "Law"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Revelation 8:1-13",
+      "Revelation 9:1-21",
+      "Revelation 10:1-11",
+      "Revelation 11:15-19"
+    ],
+    "keywords": [
+      "seven",
+      "trumpets",
+      "bible study",
+      "creation",
+      "holy spirit",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-who-are-the-144-000",
+    "question": "Who Are the 144,000?",
+    "shortAnswer": "The 144,000 are described in Revelation 7 and 14 as God's servants who are sealed with His name, stand with the Lamb, follow Him, and are characterized by truthfulness and faithfulness.",
+    "longAnswer": "Revelation 7 says: \"I heard the number of them which were sealed: and there were sealed an hundred and forty and four thousand.\" Revelation 7:4, KJV They are associated with the tribes of Israel in a highly structured symbolic list. Revelation 14 describes them standing with the Lamb on Mount Zion, having the Father's name written on their foreheads. They: Follow the Lamb. Have been redeemed. Are described as firstfruits. Have no lie in their mouths. Are described as blameless. Revelation 14:4-5. The Bible explicitly gives the number 144,000. The major interpretive question is whether the number is literal, symbolic, or both in some sense. Revelation frequently uses symbolic numbers, but it also gives concrete numbers. Therefore, Scripture should be allowed to define the characteristics of the group rather than forcing the number into a preconceived theory. What is unmistakable is their allegiance to the Lamb.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Revelation 7:1-8",
+      "Revelation 14:1-5"
+    ],
+    "keywords": [
+      "bible study",
+      "faith",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-what-is-the-abomination-of-desolation",
+    "question": "What Is the Abomination of Desolation?",
+    "shortAnswer": "The \"abomination of desolation\" is a prophetic expression used by Daniel and quoted by Jesus. It refers to a profaning or desolating power associated with opposition to God's worship and sanctuary.",
+    "longAnswer": "Daniel uses the expression in connection with the prophetic \"abomination\" and desolation (Daniel 9:27; 11:31; 12:11). Jesus later said: \"When ye therefore shall see the abomination of desolation, spoken of by Daniel the prophet, stand in the holy place...\" Matthew 24:15, KJV He connected it with a warning to flee (Matthew 24:16). The parallel in Mark says: \"the abomination of desolation, spoken of by Daniel the prophet, standing where it ought not.\" Mark 13:14, KJV Luke's parallel describes Jerusalem surrounded by armies (Luke 21:20). This shows that the prophecy had an important historical application involving Jerusalem while also appearing within Jesus' broader end-time discourse. The phrase should not be reduced to one modern object or event without examining all its biblical uses. Daniel provides the prophetic foundation, while Jesus applies Daniel's language within His teaching about Jerusalem and the end.",
+    "topics": [
+      "Prophecy",
+      "Sanctuary",
+      "Salvation"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Daniel 9:27",
+      "Daniel 11:31",
+      "Daniel 12:11",
+      "Matthew 24:15-16",
+      "Mark 13:14",
+      "Luke 21:20-21"
+    ],
+    "keywords": [
+      "abomination",
+      "desolation",
+      "prophecy",
+      "sanctuary",
+      "salvation"
+    ]
+  },
+  {
+    "id": "answer-what-is-the-millennium-in-revelation",
+    "question": "What Is the Millennium in Revelation?",
+    "shortAnswer": "The millennium is the thousand-year period described in Revelation 20. It occurs between the first resurrection and the final resurrection and judgment of the wicked.",
+    "longAnswer": "Revelation 20 says Satan is bound for a thousand years (verses 1-3). The redeemed are described as reigning with Christ: \"they lived and reigned with Christ a thousand years.\" Revelation 20:4, KJV Then Revelation says: \"But the rest of the dead lived not again until the thousand years were finished.\" Revelation 20:5, KJV After the thousand years, Satan is released, the wicked are raised, and Satan leads them in a final rebellion. Fire comes down from God and consumes them (Revelation 20:7-9). Then comes the final judgment before the great white throne (Revelation 20:11-15). Death and hell are finally cast into the lake of fire, which Revelation calls: \"the second death.\" Revelation 20:14, KJV The Bible explicitly teaches a thousand-year period. It also gives a clear sequence: First resurrection → millennium → resurrection of the rest of the dead → final judgment → destruction of evil → new heaven and new earth. The millennium should therefore be studied from Revelation 20 itself rather than from theories that reverse or omit the sequence described in the text.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Creation",
+      "Great Controversy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Revelation 20:1-15",
+      "Revelation 21:1-5"
+    ],
+    "keywords": [
+      "millennium",
+      "revelation",
+      "bible study",
+      "comfort",
+      "creation",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-what-is-the-new-jerusalem",
+    "question": "What Is the New Jerusalem?",
+    "shortAnswer": "The New Jerusalem is the holy city that God prepares in heaven and brings down to the renewed earth after the final judgment. It is described as the dwelling place of God with His redeemed people.",
+    "longAnswer": "Revelation 21 describes a \"new heaven and a new earth\" and then says: \"And I John saw the holy city, new Jerusalem, coming down from God out of heaven.\" Revelation 21:2 The city is associated with the bride of the Lamb and with God's people. God Himself will dwell with humanity: \"Behold, the tabernacle of God is with men, and he will dwell with them.\" Revelation 21:3 There will be no death, sorrow, crying, or pain. Revelation describes the city with twelve gates, twelve foundations, streets of gold, precious stones, and the glory of God. There is no temple because \"the Lord God Almighty and the Lamb are the temple of it.\" There is also no need for the sun or moon because God's glory illuminates the city. The New Jerusalem therefore represents the final restoration of God's purpose for humanity: God dwelling permanently with His people in a world where sin, death, and suffering no longer exist. Scripture clearly teaches that the New Jerusalem is a real heavenly city that comes down to the renewed earth. Revelation also uses symbolic imagery, so not every feature necessarily needs to be interpreted as ordinary earthly architecture.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Creation",
+      "Faith"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Revelation 21:1-27",
+      "Revelation 22:1-5",
+      "Hebrews 11:10",
+      "Hebrews 12:22-24",
+      "John 14:1-3"
+    ],
+    "keywords": [
+      "jerusalem",
+      "bible study",
+      "comfort",
+      "creation",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-what-is-the-rapture",
+    "question": "What Is the Rapture?",
+    "shortAnswer": "The Bible does not use the word \"rapture,\" but it does teach that Christ's followers will be caught up to meet Him in the air when He returns.",
+    "longAnswer": "Paul writes: \"For the Lord himself shall descend from heaven with a shout, with the voice of the archangel, and with the trump of God.\" 1 Thessalonians 4:16 Then he says that the resurrected righteous and living believers will be: \"caught up together with them in the clouds, to meet the Lord in the air.\" 1 Thessalonians 4:17 The word commonly translated \"rapture\" comes from the Latin translation of the idea of being \"caught up.\" The biblical event is therefore real, but Scripture presents it in connection with Christ's visible return, the resurrection, the trumpet, and the gathering of His people. Scripture clearly teaches that believers will be caught up to meet Christ. The word \"rapture\" itself is not found in the Bible, and Scripture does not explicitly describe a separate secret coming years before Christ's visible return.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Salvation",
+      "Second Coming"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "1 Thessalonians 4:13-18",
+      "1 Corinthians 15:51-54",
+      "Matthew 24:30-31",
+      "John 14:1-3",
+      "2 Thessalonians 2:1"
+    ],
+    "keywords": [
+      "rapture",
+      "bible study",
+      "faith",
+      "salvation",
+      "second coming"
+    ]
+  },
+  {
+    "id": "answer-does-the-bible-teach-a-secret-rapture",
+    "question": "Does the Bible Teach a Secret Rapture?",
+    "shortAnswer": "The Bible teaches that believers will be caught up to meet Christ, but the passages describing Christ's return emphasize that it will be visible, audible, glorious, and accompanied by the resurrection.",
+    "longAnswer": "Jesus compared His coming to lightning: \"For as the lightning cometh out of the east, and shineth even unto the west; so shall also the coming of the Son of man be.\" Matthew 24:27 Revelation says: \"Behold, he cometh with clouds; and every eye shall see him.\" Revelation 1:7 Paul describes the event with a \"shout,\" \"the voice of the archangel,\" and \"the trump of God.\" The dead in Christ are raised, and the living righteous are caught up together with them. 1 Thessalonians 4:16-17. Jesus also said that His angels would gather His elect \"with a great sound of a trumpet.\" Matthew 24:31. Paul connects \"the coming of our Lord Jesus Christ\" with \"our gathering together unto him\" in 2 Thessalonians 2:1. The Bible clearly teaches a gathering of God's people to Christ. It does not explicitly say that this gathering occurs secretly while the world continues normally for years afterward.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Prophecy",
+      "Salvation"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Matthew 24:27-31",
+      "Matthew 24:36-44",
+      "1 Thessalonians 4:16-17",
+      "2 Thessalonians 1:7-10",
+      "2 Thessalonians 2:1-4",
+      "Revelation 1:7"
+    ],
+    "keywords": [
+      "teach",
+      "secret",
+      "rapture",
+      "bible study",
+      "faith",
+      "prophecy",
+      "salvation"
+    ]
+  },
+  {
+    "id": "answer-what-is-the-70-weeks-prophecy",
+    "question": "What Is the 70 Weeks Prophecy?",
+    "shortAnswer": "The 70 weeks prophecy is found in Daniel 9:24-27. It describes a prophetic period concerning Jerusalem, God's people, the coming Messiah, His death, and the ultimate resolution of sin.",
+    "longAnswer": "Gabriel told Daniel: \"Seventy weeks are determined upon thy people and upon thy holy city.\" Daniel 9:24 The prophecy is divided into 7 weeks, 62 weeks, and one final week. A major principle used in biblical prophecy is the symbolic relationship between days and years. Numbers 14:34 says: \"Each day for a year.\" Ezekiel 4:6 similarly says: \"I have appointed thee each day for a year.\" Using this prophetic day-year principle, 70 weeks represent 490 years. The prophecy begins with the command concerning the restoration of Jerusalem and reaches forward to the appearance of Messiah. Daniel says that after the 69 weeks: \"shall Messiah be cut off, but not for himself.\" Daniel 9:26 The prophecy also speaks of a covenant, the ending of sacrifice and offering, and the destruction of Jerusalem. The Common Prophetic Calculation The traditional biblical-historicist calculation understands the 70 weeks as: 7 weeks = 49 years 62 weeks = 434 years 1 week = 7 years Total = 490 years The starting point is connected with the decree to restore Jerusalem recorded in Ezra 7. Under this interpretation, the 69 weeks reach the time of Christ's appearance and baptism, and the final week reaches the events surrounding Christ's ministry and crucifixion. Daniel explicitly gives the 70-week period and its major events. The exact chronological calculation depends upon identifying the starting decree and applying the prophetic day-year principle. Therefore, the individual historical dates are an interpretation of the prophetic data rather than dates stated directly in Daniel.",
+    "topics": [
+      "Baptism",
+      "Law",
+      "Prophecy",
+      "State of the Dead"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Daniel 9:24-27",
+      "Ezra 7:11-26",
+      "Numbers 14:34",
+      "Ezekiel 4:6",
+      "Luke 3:1-23"
+    ],
+    "keywords": [
+      "weeks",
+      "prophecy",
+      "baptism",
+      "law",
+      "state of the dead"
+    ]
+  },
+  {
+    "id": "answer-what-is-the-2300-day-prophecy",
+    "question": "What Is the 2300-Day Prophecy?",
+    "shortAnswer": "Daniel 8:14 says: \"Unto two thousand and three hundred days; then shall the sanctuary be cleansed.\" A historicist reading understands these prophetic days as 2,300 years and connects the prophecy with the heavenly sanctuary and God's judgment.",
+    "longAnswer": "Daniel 8 presents a ram, a goat, and other prophetic symbols. The angel explicitly identifies the ram as representing Media and Persia and the goat as Greece. The prophecy then reaches the sanctuary: \"Unto two thousand and three hundred days; then shall the sanctuary be cleansed.\" Daniel 8:14 Daniel 8:26 says the vision concerns \"many days,\" and Daniel 9 follows with the 70-week prophecy. The connection between Daniel 8 and Daniel 9 is important because the 70 weeks are described as being \"determined,\" or cut off, in connection with the larger prophetic vision. Using the day-for-a-year principle, 2,300 prophetic days represent 2,300 years. The traditional calculation begins the prophetic period in 457 BC, associated with the decree to restore Jerusalem recorded in Ezra 7. The 2,300 years then reach 1844. The significance is not that Christ returned to earth in 1844. Rather, the interpretation understands Daniel 8:14 as pointing to a phase of Christ's heavenly ministry involving the sanctuary and judgment. Daniel 7 describes a heavenly judgment in which \"the judgment was set, and the books were opened.\" Daniel 7:9-10. The Son of Man then comes before the Ancient of Days and receives His kingdom. Revelation 14 also announces: \"Fear God, and give glory to him; for the hour of his judgment is come.\" Revelation 14:7 Daniel explicitly gives the 2,300-day figure and connects it with the sanctuary. The identification of the 2,300 days as years and the calculation to 1844 depend upon the prophetic day-year framework and the starting point derived from Daniel 9 and Ezra 7.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Creation",
+      "Health"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Daniel 7:9-14",
+      "Daniel 8:9-14",
+      "Daniel 9:24-27",
+      "Ezra 7:11-26",
+      "Numbers 14:34",
+      "Ezekiel 4:6",
+      "Hebrews 8:1-5",
+      "Hebrews 9:23-28",
+      "Revelation 14:6-7"
+    ],
+    "keywords": [
+      "prophecy",
+      "bible study",
+      "comfort",
+      "creation",
+      "health"
+    ]
+  },
+  {
+    "id": "answer-what-does-daniel-2-mean",
+    "question": "What Does Daniel 2 Mean?",
+    "shortAnswer": "Daniel 2 presents a prophetic image representing successive earthly kingdoms followed by God's everlasting kingdom.",
+    "longAnswer": "Nebuchadnezzar saw a great image with different materials: Head of gold Chest and arms of silver Belly and thighs of bronze Legs of iron Feet partly iron and partly clay Daniel explained that these represented successive kingdoms. The first kingdom is explicitly identified: \"Thou art this head of gold.\" Daniel 2:38 Babylon is therefore the head of gold. The next kingdoms correspond to the later portions of the image. Daniel then describes a stone \"cut out without hands\" that strikes the image and becomes a great mountain filling the earth. Daniel explains: \"And in the days of these kings shall the God of heaven set up a kingdom, which shall never be destroyed.\" Daniel 2:44 The prophecy therefore contrasts temporary human kingdoms with God's everlasting kingdom. Traditional Identification When Daniel 2 is compared with Daniel 7 and Daniel 8, the sequence is commonly understood as: Babylon Medo-Persia Greece Rome Divided kingdoms God's everlasting kingdom Daniel explicitly identifies Babylon and explains that the image represents successive kingdoms. The names of the later kingdoms are established by comparing Daniel 2 with Daniel 7 and Daniel 8.",
+    "topics": [
+      "Creation",
+      "Prophecy",
+      "State of the Dead"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Daniel 2:31-45",
+      "Daniel 7:17-27",
+      "Daniel 8:20-25"
+    ],
+    "keywords": [
+      "daniel",
+      "mean",
+      "creation",
+      "prophecy",
+      "state of the dead"
+    ]
+  },
+  {
+    "id": "answer-what-do-the-beasts-in-daniel-represent",
+    "question": "What Do the Beasts in Daniel Represent?",
+    "shortAnswer": "Daniel's beasts represent kingdoms or political powers. Daniel 7 explicitly says: \"These great beasts, which are four, are four kings, which shall arise out of the earth.\" Daniel 7:17 Later it says: \"The fourth beast shall be the fourth kingdom upon earth.\" Daniel 7:23",
+    "longAnswer": "Daniel 7 describes four beasts: A lion with eagle's wings A bear A leopard with four heads A terrifying fourth beast with iron teeth and ten horns The fourth beast is followed by a \"little horn\" that speaks against God, persecutes God's people, and attempts to change \"times and laws.\" Daniel 7:24-25. Daniel 8 helps identify the prophetic sequence because the angel explicitly says: \"The ram which thou sawest having two horns are the kings of Media and Persia. And the rough goat is the king of Grecia.\" Daniel 8:20-21 When Daniel 2, 7, and 8 are compared, the traditional sequence is Babylon, Medo-Persia, Greece, and Rome. Daniel explicitly interprets beasts as kingdoms. The identification of the first three major kingdoms comes through comparison of the prophetic chapters and their historical sequence. Daniel 7 itself does not simply list the modern names of all four kingdoms in one verse.",
+    "topics": [
+      "Creation",
+      "Great Controversy",
+      "Law",
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Daniel 2:31-45",
+      "Daniel 7:1-27",
+      "Daniel 8:20-25"
+    ],
+    "keywords": [
+      "beasts",
+      "daniel",
+      "represent",
+      "creation",
+      "great controversy",
+      "law",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-what-do-the-four-horsemen-of-revelation-mean",
+    "question": "What Do the Four Horsemen of Revelation Mean?",
+    "shortAnswer": "The four horsemen appear when the first four seals are opened in Revelation 6. They represent a prophetic sequence involving conquest, conflict, scarcity, and death.",
+    "longAnswer": "The first horse is white, the second red, the third black, and the fourth pale. The red horse is associated with taking peace from the earth: \"And there went out another horse that was red: and power was given to him that sat thereon to take peace from the earth.\" Revelation 6:4 The black horse is associated with severe economic scarcity and food prices. The pale horse is explicitly associated with death: \"And his name that sat on him was Death, and Hell followed with him.\" Revelation 6:8 The passage presents these images as part of the unfolding of the seals opened by the Lamb. The passage clearly describes the horsemen and their effects. Scripture does not explicitly assign every horseman to a particular modern nation, historical event, or individual. Such identifications go beyond what the text itself states.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Health",
+      "Prophecy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Revelation 5:1-14",
+      "Revelation 6:1-17"
+    ],
+    "keywords": [
+      "four",
+      "horsemen",
+      "revelation",
+      "mean",
+      "bible study",
+      "creation",
+      "health",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-what-does-revelation-13-mean",
+    "question": "What Does Revelation 13 Mean?",
+    "shortAnswer": "Revelation 13 describes two beasts that exercise authority, demand worship, persecute God's people, and impose economic restrictions connected with the mark of the beast.",
+    "longAnswer": "The first beast rises from the sea and has seven heads and ten horns. The dragon gives it power and authority. It blasphemes God and makes war with the saints. Revelation 13:5-7. The second beast rises from the earth. Although it initially resembles a lamb, it ultimately speaks \"as a dragon.\" It exercises authority in support of the first beast and causes the earth to worship it. The chapter then describes an image of the beast, a mark on the right hand or forehead, restrictions on buying and selling, and the number 666. Revelation 13 should be read alongside Daniel 7 because both passages describe: Beasts Horns Blasphemy Persecution of God's people Political/religious authority A defined prophetic period Conflict over worship Daniel 7's little horn speaks against God, persecutes the saints, and attempts to change times and law. Revelation 13 similarly presents a power that demands worship and persecutes God's people. Revelation clearly describes the characteristics and actions of the beasts. Scripture does not directly name a modern nation or institution in Revelation 13. Identifications should therefore be based on the biblical characteristics rather than speculation about current technology or political events.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Great Controversy",
+      "Law"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Revelation 13:1-18",
+      "Daniel 7:7-27",
+      "Revelation 14:9-12",
+      "Revelation 17:12-14"
+    ],
+    "keywords": [
+      "revelation",
+      "mean",
+      "bible study",
+      "creation",
+      "great controversy",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-what-does-revelation-14-mean",
+    "question": "What Does Revelation 14 Mean?",
+    "shortAnswer": "Revelation 14 presents the 144,000, three angels proclaiming God's final gospel warning, the fall of Babylon, a warning against worshiping the beast, the perseverance of God's people, and the final harvest.",
+    "longAnswer": "The first angel proclaims: \"Fear God, and give glory to him; for the hour of his judgment is come.\" Revelation 14:7 The message calls humanity to worship: \"him that made heaven, and earth, and the sea, and the fountains of waters.\" This language echoes the creation commandment in Exodus 20:11. The second angel announces: \"Babylon is fallen, is fallen.\" The third angel warns against worshiping the beast and receiving his mark. The chapter then gives a description of God's faithful people: \"Here is the patience of the saints: here are they that keep the commandments of God, and the faith of Jesus.\" Revelation 14:12 The chapter concludes with the harvest of the earth, representing the final separation and judgment. Revelation 14 clearly presents the final issues as involving worship, allegiance, God's commandments, faith in Jesus, Babylon, and the judgment. It does not identify every modern application directly.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Creation",
+      "Faith"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Revelation 14:1-20",
+      "Exodus 20:8-11",
+      "Revelation 13:15-18",
+      "Revelation 18:1-5"
+    ],
+    "keywords": [
+      "revelation",
+      "mean",
+      "bible study",
+      "comfort",
+      "creation",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-is-the-sabbath-still-required",
+    "question": "Is the Sabbath Still Required?",
+    "shortAnswer": "The Bible identifies the seventh day as God's Sabbath and never records a command abolishing or transferring the fourth commandment to another day.",
+    "longAnswer": "The Sabbath begins at creation: \"And on the seventh day God ended his work which he had made... And God blessed the seventh day, and sanctified it.\" Genesis 2:2-3 The fourth commandment says: \"Remember the sabbath day, to keep it holy.\" Exodus 20:8 It specifically identifies the seventh day as the Sabbath. Jesus did not present the Sabbath as something that existed only temporarily for Jews. He said: \"The sabbath was made for man.\" Mark 2:27 He also called Himself: \"Lord also of the sabbath.\" Mark 2:28 The New Testament continues to describe Jesus and His followers participating in Sabbath observance. Scripture clearly commands the seventh-day Sabbath and records no verse saying that Sunday replaced it.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Law"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Genesis 2:1-3",
+      "Exodus 20:8-11",
+      "Isaiah 58:13-14",
+      "Mark 2:27-28",
+      "Luke 4:16",
+      "Hebrews 4:9",
+      "Revelation 14:7,12"
+    ],
+    "keywords": [
+      "sabbath",
+      "still",
+      "required",
+      "bible study",
+      "creation",
+      "faith",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-sabbath-still-for-today",
+    "question": "Is the Sabbath Still Relevant Today?",
+    "shortAnswer": "Yes. Scripture presents the Sabbath as rooted in creation, included in the Ten Commandments, honored by Jesus, practiced by His followers, and associated with worship of the Creator.",
+    "longAnswer": "The Sabbath existed before there was a Jewish nation. Genesis 2 places its origin at creation. Isaiah also presents Sabbath observance in connection with future worship: \"And it shall come to pass, that from one new moon to another, and from one sabbath to another, shall all flesh come to worship before me.\" Isaiah 66:23 Revelation's final call to worship \"him that made heaven, and earth, and the sea\" points back to the language of the fourth commandment. Revelation 14:7; Exodus 20:11. The Bible does not say that the Sabbath became irrelevant after Christ's resurrection.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Law"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Genesis 2:1-3",
+      "Exodus 20:8-11",
+      "Isaiah 56:1-7",
+      "Isaiah 58:13-14",
+      "Isaiah 66:22-23",
+      "Mark 2:27-28",
+      "Revelation 14:6-7"
+    ],
+    "keywords": [
+      "sabbath",
+      "still",
+      "relevant",
+      "today",
+      "bible study",
+      "creation",
+      "faith",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-was-the-sabbath-only-for-jews",
+    "question": "Was the Sabbath Only for Jews?",
+    "shortAnswer": "No. The Sabbath was established at creation, before the existence of the Jewish nation.",
+    "longAnswer": "Genesis 2 records the seventh day being blessed and sanctified immediately after creation. Jesus said: \"The sabbath was made for man.\" Mark 2:27 He did not say it was made only for Jews. Isaiah 56 also speaks of foreigners joining themselves to the Lord and specifically describes them keeping God's Sabbath: \"Also the sons of the stranger, that join themselves to the LORD... every one that keepeth the sabbath from polluting it.\" Isaiah 56:6 This demonstrates that Scripture presents the Sabbath as having significance beyond ethnic Israel. Israel received the Sabbath commandment within the covenant, but the Sabbath itself originated at creation and Scripture explicitly includes believing foreigners among those who keep it.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Great Controversy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Genesis 2:1-3",
+      "Exodus 20:8-11",
+      "Isaiah 56:1-7",
+      "Mark 2:27"
+    ],
+    "keywords": [
+      "sabbath",
+      "only",
+      "jews",
+      "bible study",
+      "creation",
+      "faith",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-did-jesus-keep-the-sabbath",
+    "question": "Did Jesus Keep the Sabbath?",
+    "shortAnswer": "Yes. The Gospels repeatedly show Jesus attending the synagogue and teaching and healing on the Sabbath.",
+    "longAnswer": "Luke records: \"And, as his custom was, he went into the synagogue on the sabbath day.\" Luke 4:16 Jesus healed on the Sabbath and challenged human traditions that had distorted its purpose. He never said, \"The Sabbath is abolished.\" Instead, He said: \"The sabbath was made for man, and not man for the sabbath.\" Mark 2:27 Jesus' Sabbath controversies were primarily about how the Sabbath should be observed, not whether the Sabbath existed. He emphasized mercy, healing, service, and doing good.",
+    "topics": [
+      "Bible Study",
+      "Church",
+      "Faith",
+      "Forgiveness"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Luke 4:16-21",
+      "Mark 1:21-34",
+      "Mark 2:23-28",
+      "Mark 3:1-6",
+      "Matthew 12:1-14",
+      "John 5:1-18"
+    ],
+    "keywords": [
+      "keep",
+      "sabbath",
+      "bible study",
+      "church",
+      "faith",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "answer-did-the-apostles-keep-the-sabbath",
+    "question": "Did the Apostles Keep the Sabbath?",
+    "shortAnswer": "Yes. Acts repeatedly records the apostles teaching and worshiping on the Sabbath.",
+    "longAnswer": "Paul and Barnabas entered the synagogue on the Sabbath in Antioch. After speaking, the people asked them to preach again: \"And the next sabbath day came almost the whole city together to hear the word of God.\" Acts 13:44 Acts also records Paul reasoning from Scripture on the Sabbath in other cities. In Acts 17:2: \"And Paul, as his manner was, went in unto them, and three sabbath days reasoned with them out of the scriptures.\" Acts 18:4 says: \"And he reasoned in the synagogue every sabbath, and persuaded the Jews and the Greeks.\" This is especially significant because Paul was preaching to Gentiles as well as Jews. Acts clearly records Sabbath activity by the apostles. It does not record an apostolic command transferring Sabbath holiness to Sunday.",
+    "topics": [
+      "Bible Study",
+      "Church",
+      "Sabbath"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "Acts 13:14-16",
+      "Acts 13:42-44",
+      "Acts 16:13",
+      "Acts 17:2",
+      "Acts 18:4"
+    ],
+    "keywords": [
+      "apostles",
+      "keep",
+      "sabbath",
+      "bible study",
+      "church"
+    ]
+  },
+  {
+    "id": "answer-was-the-sabbath-changed-to-sunday",
+    "question": "Was the Sabbath Changed to Sunday?",
+    "shortAnswer": "The Bible records events occurring on the first day of the week, but it does not record a command changing the seventh-day Sabbath to Sunday.",
+    "longAnswer": "The resurrection occurred on the first day of the week. The Gospels repeatedly identify it as the first day. Matthew 28:1; Mark 16:2; Luke 24:1; John 20:1. However, none of these passages says: \"Therefore the Sabbath has been changed.\" John 20:19 records the disciples gathering on the first day, but the reason given is that they were behind closed doors because of fear of the Jews. Acts 20:7 describes a meeting on the first day of the week. The passage does not call the day holy or command Christians to observe it as a new Sabbath. Likewise, 1 Corinthians 16:2 instructs believers to set money aside on the first day. It does not say the first day became the Sabbath. The New Testament clearly mentions the first day of the week. It does not contain a command transferring the holiness of the seventh day to the first day.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Faith",
+      "Sabbath"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 28:1",
+      "Mark 16:2",
+      "Luke 24:1",
+      "John 20:1,19",
+      "Acts 20:7",
+      "1 Corinthians 16:1-2",
+      "Exodus 20:8-11"
+    ],
+    "keywords": [
+      "sabbath",
+      "changed",
+      "sunday",
+      "bible study",
+      "comfort",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-sabbath-vs-sunday",
+    "question": "Why Do Christians Worship on Sunday?",
+    "shortAnswer": "Many Christians worship on Sunday because of the association of Sunday with Christ's resurrection and because Sunday worship became established through Christian history and tradition. Scripture itself records some first-day gatherings, but does not command Sunday as the replacement for the seventh-day Sabbath.",
+    "longAnswer": "The resurrection took place on the first day of the week. This gives Sunday an important place in Christian history. The New Testament also records first-day gatherings, such as Acts 20:7. However, there is an important distinction between recording an event and commanding an institution. The Bible records: Jesus' resurrection on the first day A gathering in Troas on the first day Instructions concerning collections on the first day But Scripture never says: \"Keep the first day holy.\" By contrast, the fourth commandment explicitly says: \"The seventh day is the sabbath of the LORD thy God.\" Exodus 20:10 Sunday worship has a long Christian history, but the question of which day Scripture commands should be answered from the biblical text rather than from later tradition.",
+    "topics": [
+      "Bible Study",
+      "Law",
+      "Sabbath",
+      "Salvation"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Exodus 20:8-11",
+      "Matthew 28:1",
+      "John 20:1",
+      "Acts 20:7",
+      "1 Corinthians 16:2"
+    ],
+    "keywords": [
+      "christians",
+      "worship",
+      "sunday",
+      "bible study",
+      "law",
+      "sabbath",
+      "salvation"
+    ]
+  },
+  {
+    "id": "answer-does-the-bible-command-sunday-worship",
+    "question": "Does the Bible Command Sunday Worship?",
+    "shortAnswer": "No explicit biblical command requires Christians to keep Sunday as a holy day.",
+    "longAnswer": "The Bible explicitly commands the seventh day: \"Remember the sabbath day, to keep it holy.\" Exodus 20:8 The same command identifies the seventh day as God's Sabbath. There are several first-day passages in the New Testament, but none contains a command to sanctify Sunday. Acts 20:7 describes a gathering. 1 Corinthians 16:2 discusses setting aside money. John 20:19 describes the disciples meeting behind closed doors. None of these passages says that Sunday replaced the Sabbath. The Bible records first-day activity but does not issue a Sunday-Sabbath command. This distinction is important when evaluating claims about a biblical change of the Sabbath.",
+    "topics": [
+      "Bible Study",
+      "Sabbath",
+      "Stewardship"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Exodus 20:8-11",
+      "Matthew 28:1",
+      "John 20:19",
+      "Acts 20:7",
+      "1 Corinthians 16:2"
+    ],
+    "keywords": [
+      "command",
+      "sunday",
+      "worship",
+      "bible study",
+      "sabbath",
+      "stewardship"
+    ]
+  },
+  {
+    "id": "answer-what-does-romans-14-5-mean",
+    "question": "What Does Romans 14:5 Mean?",
+    "shortAnswer": "Romans 14:5 discusses differences among believers concerning days and must be understood within its immediate context of disputes about eating, drinking, and personal religious observance. The verse does not explicitly mention the weekly Sabbath.",
+    "longAnswer": "Paul writes: \"One man esteemeth one day above another: another esteemeth every day alike. Let every man be fully persuaded in his own mind.\" Romans 14:5 The surrounding context is important. Romans 14 begins by discussing disagreements over \"doubtful disputations.\" Romans 14:1. Paul then immediately discusses eating and not eating: \"For one believeth that he may eat all things: another, who is weak, eateth herbs.\" Romans 14:2 Verse 6 continues the connection between the day issue and eating: \"He that regardeth the day, regardeth it unto the Lord; and he that eateth, eateth to the Lord.\" Romans 14:6 Therefore, Romans 14 is dealing with disputed practices among believers rather than explicitly announcing that God has abolished the fourth commandment. Romans 14:5 does say that some believers regarded one day differently from another. It does not specifically identify the seventh-day Sabbath, nor does it explicitly say that the fourth commandment was abolished.",
+    "topics": [
+      "Faith",
+      "Law",
+      "Sabbath"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Romans 14:1-6",
+      "Romans 14:10-13",
+      "Romans 14:17",
+      "Exodus 20:8-11",
+      "Mark 2:27-28"
+    ],
+    "keywords": [
+      "romans",
+      "mean",
+      "faith",
+      "law",
+      "sabbath"
+    ]
+  },
+  {
+    "id": "answer-what-does-colossians-2-16-mean",
+    "question": "What Does Colossians 2:16 Mean?",
+    "shortAnswer": "Colossians 2:16 warns Christians not to allow others to judge them concerning food, drink, festivals, new moons, or sabbaths. The passage is understood by many Bible readers as referring to the ceremonial calendar and its associated sabbaths because these things were shadows pointing to Christ.",
+    "longAnswer": "Paul writes: \"Let no man therefore judge you in meat, or in drink, or in respect of an holyday, or of the new moon, or of the sabbath days.\" Colossians 2:16 Verse 17 explains: \"Which are a shadow of things to come; but the body is of Christ.\" The key question is: Which sabbaths are being discussed? The Old Testament uses the word \"sabbath\" for more than the weekly seventh-day Sabbath. The annual feast days also contained special sabbath rest days. For example, Leviticus 23 describes: Passover/Unleavened Bread Pentecost Trumpets Day of Atonement Tabernacles These annual appointments included special Sabbath days. Leviticus 23:37-38 distinguishes the annual festival offerings from: \"the sabbaths of the LORD.\" This creates an important biblical distinction between the weekly Sabbath established at creation and the ceremonial sabbaths connected with Israel's annual sanctuary calendar. Colossians 2:16 also follows the familiar sequence: festival → new moon → sabbath This sequence appears in the Old Testament in descriptions of Israel's ceremonial calendar. The reason these things were shadows is stated in verse 17: they pointed forward to Christ. The Weekly Sabbath Is Different The weekly Sabbath existed before sin and before the Jewish nation: \"And God blessed the seventh day, and sanctified it.\" Genesis 2:3 It was later included in the Ten Commandments: \"The seventh day is the sabbath of the LORD thy God.\" Exodus 20:10 It is also explicitly connected with creation: \"For in six days the LORD made heaven and earth, the sea, and all that in them is.\" Exodus 20:11 This is significant because the Sabbath is not introduced as merely a temporary ceremony pointing forward to Christ. It is grounded in God's completed work of creation. Colossians 2:16 clearly says believers should not be judged concerning these matters and identifies them as shadows of things to come. The passage does not explicitly say, \"The fourth commandment has been abolished.\" The interpretation that these \"sabbaths\" refer to the annual ceremonial Sabbath days rests on comparing Colossians 2 with the Old Testament's use of the Sabbath terminology for Israel's yearly ceremonial calendar. This distinction is important because the Bible itself uses \"sabbath\" in both contexts.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Health"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Colossians 2:16-17",
+      "Genesis 2:1-3",
+      "Exodus 20:8-11",
+      "Leviticus 23:4-8",
+      "Leviticus 23:21",
+      "Leviticus 23:24-25",
+      "Leviticus 23:27-32",
+      "Leviticus 23:37-38",
+      "Ezekiel 45:17",
+      "Hosea 2:11"
+    ],
+    "keywords": [
+      "colossians",
+      "mean",
+      "bible study",
+      "creation",
+      "faith",
+      "health"
+    ]
+  },
+  {
+    "id": "answer-what-does-hebrews-4-9-mean",
+    "question": "What Does Hebrews 4:9 Mean?",
+    "shortAnswer": "Hebrews 4:9 says: \"There remaineth therefore a rest to the people of God.\" Hebrews 4:9 The passage connects God's rest with both the seventh-day Sabbath and the spiritual rest found through faith in Christ.",
+    "longAnswer": "Hebrews 4 begins by discussing God's promise of entering His rest. The writer then goes back to creation: \"For he spake in a certain place of the seventh day on this wise, And God did rest the seventh day from all his works.\" Hebrews 4:4 The chapter then says: \"For if Jesus [Joshua] had given them rest, then would he not afterward have spoken of another day.\" Hebrews 4:8 Then comes the important statement: \"There remaineth therefore a rest to the people of God.\" Hebrews 4:9 The Greek word used in verse 9 is related specifically to Sabbath observance. The passage therefore brings together three ideas: God's rest at creation Israel's failure to enter God's spiritual rest through unbelief A continuing rest available to God's people Verse 10 says that the person who enters God's rest \"hath ceased from his own works, as God did from his.\" Thus Hebrews does not merely tell Christians to perform a ritual. It calls them to trust God, cease from self-reliance, and enter His rest. At the same time, the writer deliberately connects this rest with the seventh day and creation. Hebrews 4 does not say that the Sabbath was abolished. Instead, it says that a Sabbath rest \"remaineth\" for God's people while also expanding the concept to include spiritual rest in Christ.",
+    "topics": [
+      "Creation",
+      "Faith",
+      "Holy Spirit",
+      "Law"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Genesis 2:1-3",
+      "Psalm 95:7-11",
+      "Hebrews 3:7-19",
+      "Hebrews 4:1-11",
+      "Matthew 11:28-30"
+    ],
+    "keywords": [
+      "hebrews",
+      "mean",
+      "creation",
+      "faith",
+      "holy spirit",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-what-does-revelation-14-7-mean",
+    "question": "What Does Revelation 14:7 Mean?",
+    "shortAnswer": "Revelation 14:7 announces that the hour of God's judgment has come and calls the world to worship the Creator.",
+    "longAnswer": "The first angel proclaims: \"Fear God, and give glory to him; for the hour of his judgment is come: and worship him that made heaven, and earth, and the sea, and the fountains of waters.\" Revelation 14:7 The language deliberately points back to the fourth commandment: \"For in six days the LORD made heaven and earth, the sea, and all that in them is.\" Exodus 20:11 The message therefore combines three themes: Judgment Worship Creation This becomes especially important because Revelation 13 describes a final conflict over worship, while Revelation 14 contrasts false worship with worship of the Creator. Revelation 14:7 explicitly calls humanity to worship the Creator and announces judgment. Its wording strongly echoes the Sabbath commandment, although the verse itself does not use the word \"Sabbath.\"",
+    "topics": [
+      "Comfort",
+      "Creation",
+      "Law",
+      "Prophecy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Revelation 14:6-12",
+      "Exodus 20:8-11",
+      "Revelation 13:11-18",
+      "Daniel 7:9-14"
+    ],
+    "keywords": [
+      "revelation",
+      "mean",
+      "comfort",
+      "creation",
+      "law",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-what-does-lord-s-day-mean-in-the-bible",
+    "question": "What Does \"Lord's Day\" Mean in the Bible?",
+    "shortAnswer": "Revelation 1:10 says John was \"in the Spirit\" on \"the Lord's day,\" but the verse itself does not explicitly identify which day of the week John meant.",
+    "longAnswer": "John writes: \"I was in the Spirit on the Lord's day.\" Revelation 1:10 Some interpret this as Sunday because of later Christian usage. Others understand it as referring to the seventh-day Sabbath or to the eschatological \"day of the Lord.\" The important point is that Revelation 1:10 does not say: \"I was in the Spirit on Sunday.\" Nor does it explicitly say: \"I was in the Spirit on the seventh-day Sabbath.\" The phrase must therefore be interpreted from Scripture as a whole. Jesus specifically called Himself: \"Lord also of the sabbath.\" Mark 2:28 This provides an explicit biblical connection between Jesus and the Sabbath. The Bible uses the expression \"Lord's day\" only in Revelation 1:10. It does not explicitly define the phrase as Sunday.",
+    "topics": [
+      "Bible Study",
+      "Holy Spirit",
+      "Prophecy",
+      "Sabbath"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Revelation 1:10",
+      "Mark 2:27-28",
+      "Isaiah 58:13",
+      "Matthew 12:8"
+    ],
+    "keywords": [
+      "lord's",
+      "mean",
+      "bible study",
+      "holy spirit",
+      "prophecy",
+      "sabbath"
+    ]
+  },
+  {
+    "id": "answer-are-the-ten-commandments-still-valid",
+    "question": "Are the Ten Commandments Still Valid?",
+    "shortAnswer": "Yes. Scripture presents God's moral law as enduring, while distinguishing it from the ceremonial laws that pointed forward to Christ.",
+    "longAnswer": "Jesus said: \"Think not that I am come to destroy the law, or the prophets: I am not come to destroy, but to fulfil.\" Matthew 5:17 He continued: \"Till heaven and earth pass, one jot or one tittle shall in no wise pass from the law, till all be fulfilled.\" Matthew 5:18 Jesus then warned against teaching others to break even the least commandments. Matthew 5:19. The Ten Commandments summarize fundamental principles concerning: Worship Idolatry God's name Sabbath Parents Life Marriage Property Truth Coveting Paul also says: \"The law is holy, and the commandment holy, and just, and good.\" Romans 7:12 The New Testament does not present salvation as being earned by keeping the commandments. Salvation is by grace through faith. But Scripture also does not present grace as permission to live in deliberate disobedience.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Health"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Exodus 20:1-17",
+      "Matthew 5:17-19",
+      "Romans 3:31",
+      "Romans 7:7-14",
+      "James 2:8-12",
+      "Revelation 14:12"
+    ],
+    "keywords": [
+      "commandments",
+      "still",
+      "valid",
+      "bible study",
+      "creation",
+      "faith",
+      "health"
+    ]
+  },
+  {
+    "id": "answer-did-jesus-abolish-the-law",
+    "question": "Did Jesus Abolish the Law?",
+    "shortAnswer": "No. Jesus explicitly said He did not come to destroy the law.",
+    "longAnswer": "Jesus' own words are decisive: \"I am not come to destroy, but to fulfil.\" Matthew 5:17 The word \"fulfil\" should not automatically be understood as \"abolish.\" Jesus then demonstrated what He meant by expanding and deepening the moral principles of the law. For example: \"Ye have heard that it was said by them of old time, Thou shalt not kill... But I say unto you...\" Matthew 5:21-22 He moved from the external act to the condition of the heart. Likewise, He connected adultery with lust and emphasized truthfulness, love, forgiveness, and enemy-love. Jesus fulfilled the law in His life and mission, but He did not teach that God's moral commandments were abolished.",
+    "topics": [
+      "Forgiveness",
+      "Great Controversy",
+      "Law"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 5:17-48",
+      "Romans 3:31",
+      "Romans 7:12",
+      "John 14:15",
+      "1 John 2:3-4"
+    ],
+    "keywords": [
+      "abolish",
+      "forgiveness",
+      "great controversy",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-are-christians-under-the-law",
+    "question": "Are Christians Under the Law?",
+    "shortAnswer": "Christians are not saved by keeping the law, but they are not called to live in lawlessness. They are under God's grace and called to obey Him through faith and love.",
+    "longAnswer": "Paul asks: \"Shall we continue in sin, that grace may abound?\" Romans 6:1 His answer is: \"God forbid.\" Romans 6:2 Paul also says: \"Do we then make void the law through faith? God forbid: yea, we establish the law.\" Romans 3:31 Christians are not under the law as a system of condemnation by which they attempt to earn salvation. Christ provides righteousness and forgiveness. But grace produces obedience. Jesus said: \"If ye love me, keep my commandments.\" John 14:15 \"Not under the law\" does not mean \"free to sin.\" The biblical contrast is between condemnation and grace, not between obedience and disobedience.",
+    "topics": [
+      "Faith",
+      "Forgiveness",
+      "Great Controversy",
+      "Law"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Romans 3:19-31",
+      "Romans 6:1-15",
+      "Romans 7:12",
+      "Romans 8:1-4",
+      "John 14:15",
+      "1 John 5:3"
+    ],
+    "keywords": [
+      "christians",
+      "under",
+      "faith",
+      "forgiveness",
+      "great controversy",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-what-does-christ-is-the-end-of-the-law-mean",
+    "question": "What Does \"Christ Is the End of the Law\" Mean?",
+    "shortAnswer": "Romans 10:4 says Christ is \"the end of the law,\" but this does not necessarily mean Christ abolished God's law. The context concerns righteousness, faith, and the purpose toward which the law points.",
+    "longAnswer": "Paul writes: \"For Christ is the end of the law for righteousness to every one that believeth.\" Romans 10:4 The word \"end\" can carry the meaning of goal, culmination, or intended outcome. The context is important. Paul is explaining that Israel sought righteousness through its own understanding rather than submitting to God's righteousness. Christ is therefore the answer to the righteousness problem. This agrees with Romans 3:31: \"Do we then make void the law through faith? God forbid: yea, we establish the law.\" It also agrees with Romans 7:12: \"The law is holy, and the commandment holy, and just, and good.\" Romans 10:4 should not be isolated from Romans 3:31 and Romans 7:12. Christ is the basis of righteousness, but Paul does not say that faith makes God's law worthless.",
+    "topics": [
+      "Faith",
+      "Law",
+      "Salvation"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Romans 10:1-4",
+      "Romans 3:21-31",
+      "Romans 7:7-14",
+      "Matthew 5:17-19"
+    ],
+    "keywords": [
+      "christ",
+      "mean",
+      "faith",
+      "law",
+      "salvation"
+    ]
+  },
+  {
+    "id": "answer-what-does-the-bible-say-about-the-ten-commandments",
+    "question": "What Does the Bible Say About the Ten Commandments?",
+    "shortAnswer": "The Ten Commandments are God's moral law, given to Israel at Sinai and grounded in principles that existed before Sinai.",
+    "longAnswer": "God Himself spoke the Ten Commandments in Exodus 20. They cover humanity's relationship with God and with other people. The first four emphasize love and loyalty toward God. The final six address relationships with other human beings. Jesus summarized the entire moral law as love for God and love for neighbor: \"Thou shalt love the Lord thy God with all thy heart...\" Matthew 22:37 and: \"Thou shalt love thy neighbour as thyself.\" Matthew 22:39 Paul likewise says: \"Love worketh no ill to his neighbour: therefore love is the fulfilling of the law.\" Romans 13:10 Love does not eliminate the commandments. It expresses their underlying purpose.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Law"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Exodus 20:1-17",
+      "Deuteronomy 5:4-21",
+      "Matthew 22:35-40",
+      "Romans 13:8-10",
+      "James 2:8-12"
+    ],
+    "keywords": [
+      "commandments",
+      "bible study",
+      "faith",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-why-did-god-give-the-ten-commandments",
+    "question": "Why Did God Give the Ten Commandments?",
+    "shortAnswer": "God gave the commandments to reveal His will, define right and wrong, protect human relationships, expose sin, and teach people how to love God and others.",
+    "longAnswer": "Paul says: \"By the law is the knowledge of sin.\" Romans 3:20 The law functions like a moral mirror. It reveals sin, but it does not itself provide the power to save from sin. James compares God's law to a mirror. James 1:23-25. The commandments also protect life, marriage, property, truth, worship, family relationships, and human dignity. God's law is therefore not arbitrary restriction. It reveals the moral character of the God who gave it.",
+    "topics": [
+      "Law",
+      "Marriage and Family"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Exodus 20:1-17",
+      "Psalm 19:7-11",
+      "Psalm 119:97-105",
+      "Romans 3:20",
+      "Romans 7:7-14",
+      "James 1:23-25"
+    ],
+    "keywords": [
+      "give",
+      "commandments",
+      "law",
+      "marriage and family"
+    ]
+  },
+  {
+    "id": "answer-can-christians-keep-god-s-commandments",
+    "question": "Can Christians Keep God's Commandments?",
+    "shortAnswer": "Yes, Christians can obey God's commandments through God's transforming grace. Scripture does not teach sinless perfection achieved through human effort, but it does teach that the Holy Spirit enables obedience.",
+    "longAnswer": "God promised: \"I will put my laws into their mind, and write them in their hearts.\" Hebrews 8:10 Paul describes the purpose of the gospel as producing obedience: \"For the obedience of faith among all nations.\" Romans 1:5 John writes: \"For this is the love of God, that we keep his commandments.\" 1 John 5:3 The Christian life therefore involves both justification and transformation. We are saved by grace through faith, but saving faith produces a changed life. The Bible does not teach that human beings earn salvation by perfect commandment keeping. It does teach that God's Spirit produces obedience in those who belong to Christ.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Holy Spirit",
+      "Law"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Ezekiel 36:25-27",
+      "Jeremiah 31:31-33",
+      "Romans 8:1-4",
+      "Hebrews 8:10",
+      "John 14:15",
+      "1 John 2:3-4",
+      "1 John 5:3",
+      "Revelation 14:12"
+    ],
+    "keywords": [
+      "christians",
+      "keep",
+      "god's",
+      "commandments",
+      "bible study",
+      "faith",
+      "holy spirit",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-why-did-god-destroy-the-canaanites",
+    "question": "Why Did God Destroy the Canaanites?",
+    "shortAnswer": "The Bible presents the destruction of the Canaanite nations as an act of divine judgment against extreme and persistent wickedness, while also making clear that Israel itself would face judgment if it practiced the same sins.",
+    "longAnswer": "Before Israel entered Canaan, God told Abraham: \"The iniquity of the Amorites is not yet full.\" Genesis 15:16 This indicates that judgment was delayed. The Canaanite nations were associated with practices including idolatry, sexual immorality, child sacrifice, and other abominations. Deuteronomy warns Israel: \"For all that do these things are an abomination unto the LORD.\" Deuteronomy 18:12 The judgment was therefore not presented as ethnic hatred. Israel was also warned that if it copied these practices, the land would \"spue\" Israel out as well. Leviticus 18:24-28. The Bible also records examples of Canaanites responding to God differently. Rahab, a Canaanite woman, believed and was spared. Joshua 2; 6:22-25. The biblical explanation centers on judgment for wickedness, not racial superiority. The same God who judged Canaan warned Israel that persistent rebellion would bring judgment upon Israel too.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Law"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Genesis 15:13-16",
+      "Deuteronomy 7:1-5",
+      "Deuteronomy 9:4-5",
+      "Deuteronomy 18:9-14",
+      "Leviticus 18:24-30",
+      "Joshua 2:8-14",
+      "Joshua 6:22-25"
+    ],
+    "keywords": [
+      "destroy",
+      "canaanites",
+      "bible study",
+      "creation",
+      "faith",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-why-did-god-order-the-amalekites-to-be-killed",
+    "question": "Why Did God Order the Amalekites to Be Killed?",
+    "shortAnswer": "The Bible presents the judgment against Amalek as punishment for persistent hostility and violence against God's people. The command appears within a specific historical judgment and should not be treated as a general command for God's people to kill enemies.",
+    "longAnswer": "Amalek attacked Israel after the Exodus. Moses recorded: \"Amalek... smote the hindmost of thee, even all that were feeble behind thee.\" Deuteronomy 25:17-18 God announced judgment: \"I will utterly put out the remembrance of Amalek from under heaven.\" Exodus 17:14 Generations later, Saul was commanded to execute this judgment. 1 Samuel 15. Importantly, the Bible does not present this as a general moral permission for individuals to destroy people they consider wicked. It was a specific command concerning a specific nation within Israel's theocratic historical setting. The Amalekite judgment is presented as God's judicial act. Scripture does not authorize Christians today to imitate it by using violence against people they regard as enemies.",
+    "topics": [
+      "Bible Study",
+      "Law",
+      "State of the Dead"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Exodus 17:8-16",
+      "Deuteronomy 25:17-19",
+      "1 Samuel 15:1-35",
+      "Romans 12:19"
+    ],
+    "keywords": [
+      "order",
+      "amalekites",
+      "killed",
+      "bible study",
+      "law",
+      "state of the dead"
+    ]
+  },
+  {
+    "id": "answer-why-did-god-send-the-flood",
+    "question": "Why Did God Send the Flood?",
+    "shortAnswer": "The Bible says the Flood came because human wickedness had become extraordinarily widespread, while Noah found grace in God's sight.",
+    "longAnswer": "Genesis says: \"The earth also was corrupt before God, and the earth was filled with violence.\" Genesis 6:11 God saw that: \"every imagination of the thoughts of his heart was only evil continually.\" Genesis 6:5 The Flood was therefore presented as divine judgment. Yet Genesis emphasizes God's mercy toward Noah: \"But Noah found grace in the eyes of the LORD.\" Genesis 6:8 God provided a means of salvation through the ark. The New Testament uses the Flood as both a historical judgment and a warning about the final judgment.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Creation",
+      "Forgiveness"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Genesis 6:5-13",
+      "Genesis 7:1-24",
+      "Genesis 8:1-22",
+      "Matthew 24:37-39",
+      "2 Peter 2:5",
+      "2 Peter 3:5-7"
+    ],
+    "keywords": [
+      "send",
+      "flood",
+      "bible study",
+      "comfort",
+      "creation",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "answer-why-did-god-harden-pharaoh-s-heart",
+    "question": "Why Did God Harden Pharaoh's Heart?",
+    "shortAnswer": "The Bible says God hardened Pharaoh's heart, but it also repeatedly says that Pharaoh hardened his own heart. God's judgment confirmed Pharaoh in the rebellion he had already chosen.",
+    "longAnswer": "Pharaoh repeatedly refused God's command to release Israel. Before some of the later plagues, Scripture says: \"Pharaoh hardened his heart.\" Exodus 8:15 Other passages say: \"When Pharaoh saw that there was respite, he hardened his heart.\" Exodus 8:15 Later, God says: \"I will harden Pharaoh's heart.\" Exodus 7:3 The two statements are not necessarily contradictory. God's judgments exposed and intensified Pharaoh's rebellion. Pharaoh repeatedly chose resistance, and God used that rebellion to demonstrate His power and deliver Israel. Paul later discusses Pharaoh in Romans 9, emphasizing God's sovereignty and mercy. The Bible does not portray Pharaoh as an innocent man whom God arbitrarily forced to become evil. Pharaoh repeatedly resisted God, and Scripture repeatedly describes Pharaoh hardening his own heart.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Forgiveness",
+      "Great Controversy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Exodus 7:3-5",
+      "Exodus 8:15,32",
+      "Exodus 9:34-35",
+      "Exodus 10:1",
+      "Romans 9:14-18"
+    ],
+    "keywords": [
+      "harden",
+      "pharaoh's",
+      "heart",
+      "bible study",
+      "comfort",
+      "forgiveness",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-why-did-god-ask-abraham-to-sacrifice-isaac",
+    "question": "Why Did God Ask Abraham to Sacrifice Isaac?",
+    "shortAnswer": "God tested Abraham's faith, but He did not ultimately permit Isaac to be sacrificed. The event also points forward to the substitutionary sacrifice God Himself would provide.",
+    "longAnswer": "God told Abraham: \"Take now thy son, thine only son Isaac, whom thou lovest...\" Genesis 22:2 Abraham obeyed, but before Isaac was killed, the angel stopped him. God then provided a ram: \"And Abraham went and took the ram, and offered him up for a burnt offering in the stead of his son.\" Genesis 22:13 The phrase \"in the stead of his son\" is particularly important. Isaac was spared because a substitute was provided. Hebrews explains that Abraham believed God could even raise Isaac from the dead. Hebrews 11:17-19. The story also contains strong imagery pointing toward Christ: a beloved son, a sacrificial offering, and a substitute. God tested Abraham but stopped the sacrifice. The event is not presented as approval of human sacrifice. Instead, God Himself provided the substitute.",
+    "topics": [
+      "Creation",
+      "Faith",
+      "State of the Dead"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Genesis 22:1-19",
+      "Hebrews 11:17-19",
+      "James 2:21-23",
+      "John 3:16",
+      "Romans 8:32"
+    ],
+    "keywords": [
+      "abraham",
+      "sacrifice",
+      "isaac",
+      "creation",
+      "faith",
+      "state of the dead"
+    ]
+  },
+  {
+    "id": "answer-suffering-2",
+    "question": "Why Did God Allow Job to Suffer?",
+    "shortAnswer": "The book of Job presents suffering as part of a larger conflict involving Satan's accusations against God and Job. It does not teach that every suffering person is suffering because of a particular personal sin.",
+    "longAnswer": "Satan challenged Job's motives: \"Doth Job fear God for nought?\" Job 1:9 Satan argued that Job served God only because God blessed him. Job then suffered severe losses despite being described as: \"a perfect and an upright man, one that feared God, and eschewed evil.\" Job 1:8 Job's friends repeatedly assumed his suffering must have been caused by hidden sin. God eventually rebuked them: \"Ye have not spoken of me the thing which is right.\" Job 42:7 The book therefore rejects the simplistic idea that suffering always proves personal guilt. At the end, God restores Job, although the book does not answer every philosophical question about suffering. Job shows that righteous people can suffer and that human beings do not always know the larger reasons behind their suffering.",
+    "topics": [
+      "Comfort",
+      "Great Controversy",
+      "Law"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Job 1:1-22",
+      "Job 2:1-10",
+      "Job 38-42",
+      "John 9:1-3",
+      "James 5:10-11"
+    ],
+    "keywords": [
+      "allow",
+      "suffer",
+      "comfort",
+      "great controversy",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-why-did-god-kill-uzzah",
+    "question": "Why Did God Kill Uzzah?",
+    "shortAnswer": "Uzzah died after touching the Ark of the Covenant, which Israel had transported contrary to God's instructions concerning its handling.",
+    "longAnswer": "When the oxen stumbled, Uzzah reached out and touched the Ark: \"And the anger of the LORD was kindled against Uzzah; and God smote him there for his error.\" 2 Samuel 6:7 At first this can appear shocking. But the earlier instructions concerning the Ark are important. The Ark was to be carried by the Levites using poles. Numbers 4:15 specifically warned that they must not touch the holy things. The problem was therefore not merely that Uzzah touched the Ark accidentally. Israel had transported the Ark in a manner contrary to God's instructions. David later recognized the problem: \"For because ye did it not at the first, the LORD our God made a breach upon us, for that we sought him not after the due order.\" 1 Chronicles 15:13 The biblical account presents Uzzah's death as a serious judgment connected with treating God's holiness casually and disregarding His explicit instructions.",
+    "topics": [
+      "Law",
+      "Salvation",
+      "State of the Dead"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Exodus 25:14-15",
+      "Numbers 4:15",
+      "2 Samuel 6:1-11",
+      "1 Chronicles 13:9-12",
+      "1 Chronicles 15:11-15"
+    ],
+    "keywords": [
+      "kill",
+      "uzzah",
+      "law",
+      "salvation",
+      "state of the dead"
+    ]
+  },
+  {
+    "id": "answer-why-did-god-kill-ananias-and-sapphira",
+    "question": "Why Did God Kill Ananias and Sapphira?",
+    "shortAnswer": "Ananias and Sapphira died after deliberately lying to God and the Holy Spirit concerning money they had claimed to give to the church.",
+    "longAnswer": "Peter told Ananias: \"Why hath Satan filled thine heart to lie to the Holy Ghost?\" Acts 5:3 Peter then explained that the property and money belonged to Ananias before the gift. The sin was not that he kept some money. The sin was that he falsely represented what he had given. Peter told Sapphira: \"How is it that ye have agreed together to tempt the Spirit of the Lord?\" Acts 5:9 Both died. The result was fear throughout the church: \"And great fear came upon all the church.\" Acts 5:11 The account emphasizes deliberate deception, hypocrisy, and lying to God. It does not teach that every lie receives immediate physical death as its judgment today.",
+    "topics": [
+      "Church",
+      "Comfort",
+      "Great Controversy",
+      "Holy Spirit"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Acts 5:1-11",
+      "Leviticus 10:1-3",
+      "Joshua 7:1-26"
+    ],
+    "keywords": [
+      "kill",
+      "ananias",
+      "sapphira",
+      "church",
+      "comfort",
+      "great controversy",
+      "holy spirit"
+    ]
+  },
+  {
+    "id": "answer-why-did-jesus-curse-the-fig-tree",
+    "question": "Why Did Jesus Curse the Fig Tree?",
+    "shortAnswer": "Jesus' withering of the fig tree was a prophetic acted-out lesson about fruitless religion and impending judgment.",
+    "longAnswer": "Jesus found a fig tree with leaves but no fruit: \"For he found nothing but leaves.\" Mark 11:13 He then said: \"No man eat fruit of thee hereafter for ever.\" Mark 11:14 The next day the disciples saw that the tree had withered. The event occurs in the context of Jesus' cleansing of the temple. The fig tree therefore functions as a living symbol. Israel's religious leaders possessed an outward appearance of religion but were failing to produce the fruits God required. Jesus had already used similar imagery: \"Every tree that bringeth not forth good fruit is hewn down, and cast into the fire.\" Matthew 7:19 The lesson is not about Jesus irrationally becoming angry with a tree. It is a prophetic sign concerning fruitlessness and judgment. The fig tree was used symbolically. The surrounding events strongly connect the sign with Israel's spiritual condition and the rejection of God's Messiah.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Health",
+      "Holy Spirit"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 21:18-22",
+      "Mark 11:12-21",
+      "Luke 13:6-9",
+      "Matthew 7:16-20",
+      "Matthew 21:33-46"
+    ],
+    "keywords": [
+      "curse",
+      "tree",
+      "bible study",
+      "faith",
+      "health",
+      "holy spirit"
+    ]
+  },
+  {
+    "id": "answer-why-did-jesus-call-the-canaanite-woman-a-dog",
+    "question": "Why Did Jesus Call the Canaanite Woman a Dog?",
+    "shortAnswer": "Jesus' statement in Matthew 15 was part of an encounter that ultimately demonstrated the woman's remarkable faith. His words must be understood in the context of His mission to Israel and the woman's persistent faith.",
+    "longAnswer": "The woman was a Canaanite whose daughter was severely demon-possessed. She cried: \"Have mercy on me, O Lord, thou son of David.\" Matthew 15:22 At first Jesus did not answer her. Then He said: \"I am not sent but unto the lost sheep of the house of Israel.\" Matthew 15:24 When she continued pleading, Jesus said: \"It is not meet to take the children's bread, and to cast it to dogs.\" Matthew 15:26 She responded: \"Truth, Lord: yet the dogs eat of the crumbs which fall from their masters' table.\" Matthew 15:27 Jesus then praised her: \"O woman, great is thy faith.\" Matthew 15:28 Mark's account uses the diminutive form associated with household dogs rather than wild dogs. Mark 7:27. The encounter exposed the woman's faith and ultimately resulted in her daughter's healing. It also illustrates that although Jesus' earthly ministry had a particular initial focus on Israel, God's mercy was not limited to Israelites. The woman's faith was accepted. Jesus was not teaching that Canaanites were inherently inferior or that Gentiles were beyond God's mercy. The narrative ends with Jesus commending a Gentile woman's faith and granting her request.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Forgiveness"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 15:21-28",
+      "Mark 7:24-30",
+      "Isaiah 56:6-7",
+      "Matthew 8:5-13"
+    ],
+    "keywords": [
+      "call",
+      "canaanite",
+      "woman",
+      "bible study",
+      "creation",
+      "faith",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "answer-why-did-jesus-say-he-came-to-bring-a-sword",
+    "question": "Why Did Jesus Say He Came to Bring a Sword?",
+    "shortAnswer": "Jesus did not mean that His followers should use physical violence. He meant that His message would create division because people would have to choose whether to accept or reject Him.",
+    "longAnswer": "Jesus said: \"Think not that I am come to send peace on earth: I came not to send peace, but a sword.\" Matthew 10:34 The next verses explain what He meant. The \"sword\" would divide families because some would accept Him while others rejected Him: \"For I am come to set a man at variance against his father, and the daughter against her mother.\" Matthew 10:35 The context is therefore relational division caused by allegiance to Christ, not a command to take up weapons. Jesus consistently taught love for enemies: \"Love your enemies, bless them that curse you.\" Matthew 5:44 When Peter later used an actual sword to defend Jesus, Christ told him: \"Put up again thy sword into his place.\" Matthew 26:52 Jesus also said: \"My kingdom is not of this world: if my kingdom were of this world, then would my servants fight.\" John 18:36 The \"sword\" of Matthew 10 therefore describes the divisive consequences of the gospel, not Christian violence. The New Testament instead describes the Christian's weapon as spiritual truth. Ephesians 6:17 calls God's Word \"the sword of the Spirit.\" Jesus clearly predicted division because of Him. He did not instruct His disciples to spread Christianity through physical force.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Holy Spirit",
+      "Salvation"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Matthew 10:34-39",
+      "Matthew 5:38-48",
+      "Matthew 26:47-52",
+      "John 18:36",
+      "Ephesians 6:10-17"
+    ],
+    "keywords": [
+      "came",
+      "bring",
+      "sword",
+      "bible study",
+      "creation",
+      "holy spirit",
+      "salvation"
+    ]
+  },
+  {
+    "id": "answer-why-did-god-allow-slavery-in-the-bible",
+    "question": "Why Did God Allow Slavery in the Bible?",
+    "shortAnswer": "The Bible contains laws regulating servitude in the ancient world, but it does not present human beings as naturally possessing the right to treat other humans as property without moral restrictions. Scripture progressively emphasizes human dignity, justice, freedom, and equal accountability before God.",
+    "longAnswer": "The Bible begins with every human being created in God's image: \"So God created man in his own image.\" Genesis 1:27 The Mosaic law placed significant restrictions on slavery and servitude. An Israelite who became a servant because of poverty was not to be treated as a permanent slave in the same manner as property: \"For they are my servants, which I brought forth out of the land of Egypt.\" Leviticus 25:42 The law also required the release of Hebrew servants after a defined period. Exodus 21:2; Deuteronomy 15:12. The Bible condemned kidnapping people for sale: \"He that stealeth a man, and selleth him... shall surely be put to death.\" Exodus 21:16 The New Testament likewise condemns \"menstealers.\" 1 Timothy 1:9-10. Paul also told Christian masters: \"Masters, give unto your servants that which is just and equal.\" Colossians 4:1 And Philemon demonstrates the transforming implications of the gospel when Paul appeals for Onesimus to be received: \"Not now as a servant, but above a servant, a brother beloved.\" Philemon 16 The Bible describes an ancient institution and regulates it within Israel's legal system. It does not endorse kidnapping, trafficking, cruelty, or the idea that one race is inherently inferior to another.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Great Controversy",
+      "Law"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Genesis 1:26-27",
+      "Exodus 21:1-11,16",
+      "Deuteronomy 15:12-18",
+      "Leviticus 25:39-43",
+      "1 Timothy 1:9-10",
+      "Philemon 8-16",
+      "Colossians 4:1"
+    ],
+    "keywords": [
+      "allow",
+      "slavery",
+      "bible study",
+      "creation",
+      "great controversy",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-why-are-there-so-many-wars-in-the-old-testament",
+    "question": "Why Are There So Many Wars in the Old Testament?",
+    "shortAnswer": "The Old Testament records wars for several different reasons. Some were judgments specifically commanded by God, some were defensive conflicts, and many were consequences of human sin. The Bible does not portray war itself as God's ideal for humanity.",
+    "longAnswer": "War enters the biblical story because humanity is fallen. God originally created humanity for peace, but sin produced violence. Genesis 6:11 says: \"The earth was filled with violence.\" Some Old Testament wars were specifically connected with God's judgment. Others occurred because Israel was attacked by surrounding nations. The Bible also records wars that God did not approve of. David, for example, was prevented from building the temple because he had been a man of war. 1 Chronicles 28:3. The prophetic vision of God's ultimate kingdom is one of peace: \"They shall beat their swords into plowshares.\" Isaiah 2:4 The presence of war in the Bible does not mean God regards war as humanity's final ideal. Scripture points toward a future in which war ends.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Health",
+      "Law"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Genesis 6:5,11",
+      "Deuteronomy 20:1-20",
+      "1 Samuel 15",
+      "1 Chronicles 28:3",
+      "Isaiah 2:2-4",
+      "Micah 4:1-4"
+    ],
+    "keywords": [
+      "many",
+      "wars",
+      "testament",
+      "bible study",
+      "creation",
+      "health",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-why-does-the-old-testament-seem-so-violent",
+    "question": "Why Does the Old Testament Seem So Violent?",
+    "shortAnswer": "The Old Testament contains accounts of judgment, warfare, executions, and death, but it also repeatedly presents God as merciful, patient, compassionate, and opposed to wickedness.",
+    "longAnswer": "God describes Himself as: \"The LORD, The LORD God, merciful and gracious, longsuffering, and abundant in goodness and truth.\" Exodus 34:6 The Old Testament repeatedly emphasizes God's mercy. The destruction narratives must therefore be read alongside passages showing God's patience. For example, God waited hundreds of years before judging the Amorites because: \"the iniquity of the Amorites is not yet full.\" Genesis 15:16 God also repeatedly offered repentance before judgment. Nineveh is an important example. Jonah preached judgment, the people repented, and God showed mercy. Jonah 3:5-10. The Old Testament therefore contains both justice and mercy. The Old Testament does not portray God as enjoying destruction. Judgment is presented as a response to persistent evil, while mercy and repentance remain central themes.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Creation",
+      "Faith"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Genesis 15:13-16",
+      "Exodus 34:6-7",
+      "Jonah 3:5-10",
+      "Ezekiel 18:23",
+      "Psalm 103:8-18",
+      "Micah 6:8"
+    ],
+    "keywords": [
+      "testament",
+      "seem",
+      "violent",
+      "bible study",
+      "comfort",
+      "creation",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-why-does-god-seem-different-in-the-old-and-new-testaments",
+    "question": "Why Does God Seem Different in the Old and New Testaments?",
+    "shortAnswer": "The Bible does not present two different Gods. Both Testaments describe the same God as loving, merciful, holy, just, and opposed to sin.",
+    "longAnswer": "The Old Testament contains some of the Bible's strongest statements about God's love: \"The LORD hath appeared of old unto me, saying, Yea, I have loved thee with an everlasting love.\" Jeremiah 31:3 The New Testament contains some of its strongest statements about judgment. Jesus Himself warned about: Gehenna Judgment The destruction of the wicked The final separation of humanity Matthew 25:31-46; Mark 9:43-48. At the same time, the Old Testament repeatedly describes God's mercy, while the New Testament repeatedly teaches His justice. The same God says: \"I, the LORD, I change not.\" Malachi 3:6 And the New Testament says: \"Jesus Christ the same yesterday, and to day, and for ever.\" Hebrews 13:8 The difference between the Testaments is primarily one of covenant setting, historical circumstances, and the unfolding revelation of God's plan, not a change from one God into another.",
+    "topics": [
+      "Bible Study",
+      "Forgiveness",
+      "Law",
+      "Prophecy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Exodus 34:6-7",
+      "Psalm 103:8-18",
+      "Isaiah 53",
+      "Jeremiah 31:3",
+      "John 3:16",
+      "Romans 2:4-9",
+      "Hebrews 13:8"
+    ],
+    "keywords": [
+      "seem",
+      "different",
+      "testaments",
+      "bible study",
+      "forgiveness",
+      "law",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-who-was-cain-s-wife",
+    "question": "Who Was Cain's Wife?",
+    "shortAnswer": "The Bible does not give Cain's wife's name. The most straightforward reading of Genesis is that she was one of Cain's relatives, most likely a sister or another close descendant of Adam and Eve.",
+    "longAnswer": "Genesis says: \"And Adam called his wife's name Eve; because she was the mother of all living.\" Genesis 3:20 Later: \"And Adam knew his wife again; and she bare a son, and called his name Seth.\" Genesis 4:25 Genesis 5:4 adds: \"And he begat sons and daughters.\" Cain's wife therefore came from the expanding human family descended from Adam and Eve. Genesis does not record every birth individually. Cain's wife is never named. The Bible does not name Cain's wife or provide a detailed genealogy identifying her. It does establish Adam and Eve as the parents of humanity and later says Adam had \"sons and daughters.\"",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Marriage and Family"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Genesis 3:20",
+      "Genesis 4:1-17",
+      "Genesis 4:25",
+      "Genesis 5:1-5"
+    ],
+    "keywords": [
+      "cain's",
+      "wife",
+      "bible study",
+      "creation",
+      "marriage and family"
+    ]
+  },
+  {
+    "id": "answer-cain-wife",
+    "question": "Where Did Cain Get His Wife?",
+    "shortAnswer": "Cain's wife came from Adam and Eve's descendants. Genesis 5:4 explicitly says Adam had \"sons and daughters.\"",
+    "longAnswer": "Cain lived at a time when the human population consisted of descendants of the original family. The Bible does not provide a complete list of Adam's children. If the early human population descended from Adam and Eve, close-relative marriages would necessarily have occurred in the earliest generations. Later, the Mosaic law prohibited close-relative marriages. Leviticus 18:6-18. This law came many generations after Cain and therefore cannot simply be imposed retroactively on the earliest generations. Scripture does not tell us exactly who Cain's wife was. It gives enough information to understand that she was a descendant of Adam and Eve.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Law",
+      "Marriage and Family"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Genesis 4:16-17",
+      "Genesis 5:4",
+      "Leviticus 18:6-18",
+      "Acts 17:26"
+    ],
+    "keywords": [
+      "cain",
+      "wife",
+      "bible study",
+      "creation",
+      "law",
+      "marriage and family"
+    ]
+  },
+  {
+    "id": "answer-who-were-the-nephilim",
+    "question": "Who Were the Nephilim?",
+    "shortAnswer": "The Nephilim were powerful or renowned people mentioned in Genesis 6 and Numbers 13. The Bible's description is brief, and some details about their exact identity remain uncertain.",
+    "longAnswer": "Genesis says: \"There were giants in the earth in those days.\" Genesis 6:4 The Hebrew term Nephilim is retained in many translations. They are mentioned in connection with the \"sons of God\" and \"daughters of men.\" Numbers 13 also uses the term when the Israelite spies describe the inhabitants of Canaan: \"And there we saw the giants.\" Numbers 13:33 The Hebrew word in Numbers is Nephilim. Some interpretations understand the Genesis 6 Nephilim as unusually powerful human beings. Other interpretations connect them with the \"sons of God\" more directly. The Bible does not provide enough information to establish every detail of the Nephilim's nature. Claims that they were extraterrestrials, supernatural hybrids, or a separate species go beyond what Scripture explicitly states.",
+    "topics": [
+      "Bible Study",
+      "Creation"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "Genesis 6:1-4",
+      "Numbers 13:32-33",
+      "Deuteronomy 2:10-11"
+    ],
+    "keywords": [
+      "nephilim",
+      "bible study",
+      "creation"
+    ]
+  },
+  {
+    "id": "answer-who-were-the-sons-of-god-in-genesis-6",
+    "question": "Who Were the Sons of God in Genesis 6?",
+    "shortAnswer": "Genesis 6 says the \"sons of God\" took wives from the \"daughters of men,\" producing a corrupt generation before the Flood. The exact identity of the \"sons of God\" is debated.",
+    "longAnswer": "Genesis 6:2 says: \"The sons of God saw the daughters of men that they were fair; and they took them wives of all which they chose.\" Three major interpretations have historically been proposed: Angelic beings The godly descendants of Seth Powerful human rulers The Bible does use \"sons of God\" for heavenly beings in some passages, such as Job 1:6 and 2:1. However, Genesis 6 itself does not explicitly say: \"These were angels.\" Jesus also said angels in heaven do not marry. Matthew 22:30. The passage therefore should be handled carefully rather than building an elaborate doctrine on a short and difficult text. The Bible clearly describes the \"sons of God\" and their union with the daughters of men, but it does not give an exhaustive explanation of their identity in Genesis 6.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Great Controversy",
+      "State of the Dead"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Genesis 6:1-4",
+      "Job 1:6",
+      "Job 2:1",
+      "Job 38:7",
+      "Matthew 22:30",
+      "Jude 6-7"
+    ],
+    "keywords": [
+      "sons",
+      "genesis",
+      "bible study",
+      "creation",
+      "great controversy",
+      "state of the dead"
+    ]
+  },
+  {
+    "id": "answer-who-was-melchizedek",
+    "question": "Who Was Melchizedek?",
+    "shortAnswer": "Melchizedek was the king of Salem and priest of the Most High God who blessed Abraham. Hebrews later uses him as a prophetic type of Christ's priesthood.",
+    "longAnswer": "Genesis records: \"And Melchizedek king of Salem brought forth bread and wine: and he was the priest of the most high God.\" Genesis 14:18 He blessed Abraham, and Abraham gave him tithes. Psalm 110 later says of the Messiah: \"Thou art a priest for ever after the order of Melchizedek.\" Psalm 110:4 Hebrews develops this theme extensively. Jesus is described as a priest according to the order of Melchizedek, not according to the Levitical priesthood. Hebrews says Melchizedek is presented in Scripture as: \"without father, without mother, without descent, having neither beginning of days, nor end of life.\" Hebrews 7:3 This language is best understood in the context of the biblical record. Genesis does not give Melchizedek's genealogy, birth, or death. Hebrews uses this absence of genealogical record as part of its typological argument. The Bible does not explicitly say Melchizedek was Christ Himself. Hebrews uses Melchizedek as a type and comparison for Christ's superior, eternal priesthood.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Health",
+      "Sanctuary"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Genesis 14:18-20",
+      "Psalm 110:1-4",
+      "Hebrews 5:5-10",
+      "Hebrews 6:19-20",
+      "Hebrews 7:1-28"
+    ],
+    "keywords": [
+      "melchizedek",
+      "bible study",
+      "creation",
+      "health",
+      "sanctuary"
+    ]
+  },
+  {
+    "id": "answer-who-is-michael-the-archangel",
+    "question": "Who Is Michael the Archangel?",
+    "shortAnswer": "Michael is presented in Scripture as a chief heavenly figure who leads God's forces in conflict with Satan. The name means \"Who is like God?\"",
+    "longAnswer": "Michael appears in several important passages. Daniel describes: \"Michael, one of the chief princes.\" Daniel 10:13 Daniel also calls him: \"Michael your prince.\" Daniel 10:21 And: \"At that time shall Michael stand up, the great prince which standeth for the children of thy people.\" Daniel 12:1 Jude calls Michael: \"Michael the archangel.\" Jude 9 Revelation 12 describes Michael and his angels fighting against the dragon. The name Michael therefore appears in connection with heavenly leadership and the protection of God's people. Is Michael Jesus? The Bible never directly says, \"Michael is Jesus.\" However, an important connection appears in 1 Thessalonians 4:16: \"The Lord himself shall descend from heaven with a shout, with the voice of the archangel.\" This has led some Bible interpreters to connect Michael with Christ because of the commanding heavenly voice associated with Christ's return. But Scripture should be distinguished from interpretation. It explicitly identifies Michael as an archangel and Christ as the returning Lord, but it does not contain a sentence directly equating the two names. Michael is unquestionably a heavenly leader associated with God's people. The direct identification of Michael with Christ is an interpretation based on comparing passages, not an explicit biblical statement.",
+    "topics": [
+      "Bible Study",
+      "Church",
+      "Great Controversy",
+      "Marriage and Family"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Daniel 10:13-21",
+      "Daniel 12:1",
+      "Jude 9",
+      "Revelation 12:7-9",
+      "1 Thessalonians 4:16"
+    ],
+    "keywords": [
+      "michael",
+      "archangel",
+      "bible study",
+      "church",
+      "great controversy",
+      "marriage and family"
+    ]
+  },
+  {
+    "id": "answer-who-is-the-angel-of-the-lord",
+    "question": "Who Is the Angel of the Lord?",
+    "shortAnswer": "The \"Angel of the LORD\" appears throughout the Old Testament and sometimes speaks and acts with God's own authority. In several passages, the distinction between the Angel and God is mysterious.",
+    "longAnswer": "In Exodus 3, \"the angel of the LORD\" appears to Moses in the burning bush. Yet the passage then says: \"God called unto him out of the midst of the bush.\" Exodus 3:4 The Angel speaks as God: \"I am the God of thy father, the God of Abraham, the God of Isaac, and the God of Jacob.\" Exodus 3:6 Other passages show the Angel of the LORD acting as God's messenger and protector. Judges 13 provides another striking example. Manoah asks the Angel's name, and the Angel responds: \"Why askest thou thus after my name, seeing it is secret?\" Judges 13:18 Manoah then says: \"We have seen God.\" Judges 13:22 Some Christians understand these appearances as pre-incarnate appearances of Christ. Scripture provides strong reasons for that interpretation in certain passages, but it does not explicitly say in every occurrence that the Angel of the LORD is Jesus.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Great Controversy",
+      "State of the Dead"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Genesis 16:7-13",
+      "Genesis 22:11-18",
+      "Exodus 3:1-6",
+      "Judges 6:11-24",
+      "Judges 13:3-22"
+    ],
+    "keywords": [
+      "angel",
+      "lord",
+      "bible study",
+      "faith",
+      "great controversy",
+      "state of the dead"
+    ]
+  },
+  {
+    "id": "answer-who-was-mary-magdalene",
+    "question": "Who Was Mary Magdalene?",
+    "shortAnswer": "Mary Magdalene was a devoted follower of Jesus who was healed from demonic oppression and became one of the first witnesses to His resurrection.",
+    "longAnswer": "Luke says: \"Mary called Magdalene, out of whom went seven devils.\" Luke 8:2 She followed Jesus and supported His ministry. She was present at the crucifixion and burial and went to the tomb after Jesus' death. John records that the risen Christ appeared to her: \"Jesus saith unto her, Mary.\" John 20:16 She then became a witness to the disciples: \"Mary Magdalene came and told the disciples that she had seen the Lord.\" John 20:18 Mary Magdalene therefore holds a significant place in the resurrection narrative. The Bible does not identify Mary Magdalene as a prostitute. That identification comes from later tradition and from combining different women in the Gospel accounts.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Great Controversy",
+      "Marriage and Family"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Luke 8:1-3",
+      "Matthew 27:55-61",
+      "Matthew 28:1-10",
+      "Mark 15:40-47",
+      "John 19:25",
+      "John 20:1-18"
+    ],
+    "keywords": [
+      "mary",
+      "magdalene",
+      "bible study",
+      "comfort",
+      "great controversy",
+      "marriage and family"
+    ]
+  },
+  {
+    "id": "answer-did-jesus-have-brothers-and-sisters",
+    "question": "Did Jesus Have Brothers and Sisters?",
+    "shortAnswer": "The New Testament explicitly mentions Jesus' brothers and sisters. Christians have interpreted their exact relationship to Mary differently, but the biblical references themselves are clear.",
+    "longAnswer": "Mark asks: \"Is not this the carpenter, the son of Mary, the brother of James, and Joses, and of Juda, and Simon?\" Mark 6:3 The verse continues: \"And are not his sisters here with us?\" Matthew similarly mentions Jesus' brothers and sisters. Matthew 13:55-56. Acts 1:14 also refers to: \"Mary the mother of Jesus, and with his brethren.\" Paul later refers to: \"James the Lord's brother.\" Galatians 1:19 Some Christian traditions understand these brothers as Joseph's children from an earlier marriage or as other relatives. Others understand them as younger children of Mary and Joseph. The Bible clearly uses the language of brothers and sisters concerning Jesus' family. It does not explicitly settle every question about their biological relationship to Mary.",
+    "topics": [
+      "Bible Study",
+      "Marriage and Family",
+      "Salvation"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 13:55-56",
+      "Mark 6:3",
+      "John 7:3-5",
+      "Acts 1:14",
+      "Galatians 1:19"
+    ],
+    "keywords": [
+      "brothers",
+      "sisters",
+      "bible study",
+      "marriage and family",
+      "salvation"
+    ]
+  },
+  {
+    "id": "answer-did-jesus-have-a-wife",
+    "question": "Did Jesus Have a Wife?",
+    "shortAnswer": "No biblical passage says that Jesus was married. The New Testament presents Him as unmarried and never names a wife.",
+    "longAnswer": "The Gospels identify Jesus' mother, brothers, sisters, disciples, friends, and female followers, but never identify a wife. Mary Magdalene is sometimes claimed to have been Jesus' wife, but Scripture provides no evidence for this. The Gospels actually present Mary Magdalene as a follower of Jesus and witness to His resurrection. John 20:1-18. Jesus also used His relationship with His disciples and the church in terms of bridegroom imagery, but this is symbolic: \"Can the children of the bridechamber mourn, as long as the bridegroom is with them?\" Matthew 9:15 The New Testament later uses Christ as the bridegroom and the church as His bride. Ephesians 5:25-32; Revelation 19:7. There is no biblical evidence that Jesus had a human wife. Claims that He was secretly married to Mary Magdalene come from sources outside the canonical biblical account.",
+    "topics": [
+      "Bible Study",
+      "Church",
+      "Marriage and Family",
+      "Prophecy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 9:14-15",
+      "John 20:1-18",
+      "Ephesians 5:25-32",
+      "Revelation 19:7-9"
+    ],
+    "keywords": [
+      "wife",
+      "bible study",
+      "church",
+      "marriage and family",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-what-happened-to-judas",
+    "question": "What Happened to Judas?",
+    "shortAnswer": "Judas betrayed Jesus and later died by suicide. Matthew and Acts describe his death using different details that can be understood as complementary accounts.",
+    "longAnswer": "Matthew says: \"And he cast down the pieces of silver in the temple, and departed, and went and hanged himself.\" Matthew 27:5 Acts says: \"And falling headlong, he burst asunder in the midst, and all his bowels gushed out.\" Acts 1:18 The accounts can be understood as describing different aspects of the same death. Judas had betrayed Jesus for thirty pieces of silver. Matthew 26:14-16. After Jesus was condemned, Judas experienced remorse: \"I have sinned in that I have betrayed the innocent blood.\" Matthew 27:4 He returned the money but did not turn to Christ for forgiveness. Scripture clearly records Judas's betrayal, remorse, death, and replacement among the apostles. It does not give us a complete psychological explanation of Judas's final spiritual condition.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Forgiveness",
+      "Health"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 26:14-16",
+      "Matthew 27:3-10",
+      "Acts 1:15-20",
+      "John 17:12"
+    ],
+    "keywords": [
+      "happened",
+      "judas",
+      "bible study",
+      "comfort",
+      "forgiveness",
+      "health"
+    ]
+  },
+  {
+    "id": "answer-why-did-judas-betray-jesus",
+    "question": "Why Did Judas Betray Jesus?",
+    "shortAnswer": "Judas betrayed Jesus after Satan entered into him, while Judas himself willingly cooperated with the religious leaders for money. Scripture presents both spiritual temptation and personal responsibility.",
+    "longAnswer": "John says: \"Then entered Satan into Judas surnamed Iscariot.\" Luke 22:3 Matthew records that Judas approached the chief priests: \"What will ye give me, and I will deliver him unto you?\" Matthew 26:15 They gave him thirty pieces of silver. Jesus knew Judas would betray Him. John 13:10-11,18-27. The betrayal therefore involved: Satanic influence Greed Deliberate choice Rejection of Jesus The Bible never presents Judas as merely an innocent victim of supernatural control.",
+    "topics": [
+      "Bible Study",
+      "Great Controversy",
+      "Holy Spirit",
+      "Sanctuary"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Matthew 26:14-16",
+      "Matthew 26:20-25",
+      "Luke 22:3-6",
+      "John 12:4-6",
+      "John 13:21-30"
+    ],
+    "keywords": [
+      "judas",
+      "betray",
+      "bible study",
+      "great controversy",
+      "holy spirit",
+      "sanctuary"
+    ]
+  },
+  {
+    "id": "answer-why-did-peter-deny-jesus",
+    "question": "Why Did Peter Deny Jesus?",
+    "shortAnswer": "Peter denied Jesus because of fear and human weakness, despite previously insisting that he would never deny Him. Jesus had warned Peter about the coming temptation.",
+    "longAnswer": "Peter confidently said: \"Though all men shall be offended because of thee, yet will I never be offended.\" Matthew 26:33 Jesus responded: \"Before the cock crow, thou shalt deny me thrice.\" Matthew 26:34 When Jesus was arrested, Peter followed from a distance. Three times people identified him as one of Jesus' followers, and three times Peter denied knowing Him. After the third denial: \"And Peter remembered the word of Jesus... And he went out, and wept bitterly.\" Matthew 26:75 Yet Jesus later restored Peter. In John 21, Jesus three times asks Peter whether he loves Him and then entrusts him with caring for His sheep. Peter's failure was serious, but it was not the end of his story. His repentance and restoration demonstrate that failure does not have to be final when a person turns back to Christ.",
+    "topics": [
+      "Comfort",
+      "Faith",
+      "Forgiveness",
+      "Great Controversy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 26:31-35,69-75",
+      "Mark 14:27-31,66-72",
+      "Luke 22:31-34,54-62",
+      "John 18:15-27",
+      "John 21:15-19"
+    ],
+    "keywords": [
+      "peter",
+      "deny",
+      "comfort",
+      "faith",
+      "forgiveness",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-what-did-jesus-write-in-the-sand",
+    "question": "What Did Jesus Write in the Sand?",
+    "shortAnswer": "The Bible does not tell us what Jesus wrote.",
+    "longAnswer": "John 8 describes religious leaders bringing a woman caught in adultery to Jesus. They demanded an answer about whether she should be stoned. Jesus stooped down and wrote on the ground: \"Jesus stooped down, and with his finger wrote on the ground.\" John 8:6 They continued questioning Him. Jesus then said: \"He that is without sin among you, let him first cast a stone at her.\" John 8:7 One by one, the accusers left. Jesus then told the woman: \"Neither do I condemn thee: go, and sin no more.\" John 8:11 The text never tells us what Jesus wrote. Various theories exist, but they are speculation. The Bible tells us that Jesus wrote on the ground, but not what He wrote. A responsible biblical answer should leave that question where Scripture leaves it.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Great Controversy",
+      "Law"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "John 8:1-11",
+      "Matthew 7:1-5",
+      "Romans 2:1-4"
+    ],
+    "keywords": [
+      "write",
+      "sand",
+      "bible study",
+      "faith",
+      "great controversy",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-what-happened-to-enoch",
+    "question": "What Happened to Enoch?",
+    "shortAnswer": "Enoch did not experience ordinary death. Genesis says that God \"took\" him, and Hebrews says Enoch was translated so that he did not see death.",
+    "longAnswer": "Genesis says: \"And Enoch walked with God: and he was not; for God took him.\" Genesis 5:24 Hebrews gives additional explanation: \"By faith Enoch was translated that he should not see death; and was not found, because God had translated him.\" Hebrews 11:5 Enoch therefore experienced a unique translation by God. The Bible also records Elijah being taken to heaven in a similar extraordinary manner. 2 Kings 2:11. Enoch's experience demonstrates that death is not God's only possible way of ending a person's earthly life. God has the power to translate His faithful servants. Scripture explicitly says Enoch was translated and did not see death. It does not provide many details about exactly where Enoch was taken or describe the event beyond the statements in Genesis and Hebrews.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Great Controversy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Genesis 5:21-24",
+      "Hebrews 11:5-6",
+      "Jude 14-15",
+      "2 Kings 2:1-12"
+    ],
+    "keywords": [
+      "happened",
+      "enoch",
+      "bible study",
+      "creation",
+      "faith",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-what-happened-to-elijah",
+    "question": "What Happened to Elijah?",
+    "shortAnswer": "Elijah was taken directly to heaven without experiencing ordinary death. Scripture says he went up \"by a whirlwind into heaven.\"",
+    "longAnswer": "Elijah and Elisha crossed the Jordan together. Then: \"Behold, there appeared a chariot of fire, and horses of fire, and parted them both asunder; and Elijah went up by a whirlwind into heaven.\" 2 Kings 2:11 The event was witnessed by Elisha, who saw Elijah disappear from view. Elijah's translation was extraordinary. Unlike ordinary human death, Scripture explicitly says he was taken to heaven. Elijah also appears with Moses during the Transfiguration: \"And, behold, there appeared unto them Moses and Elias talking with him.\" Matthew 17:3 This is significant because Moses had died and been resurrected, while Elijah had been translated without dying. Scripture explicitly says Elijah was taken to heaven. His experience was exceptional and should not be used to establish a general rule that all people go immediately to heaven when they die.",
+    "topics": [
+      "Bible Study",
+      "Salvation",
+      "State of the Dead"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "2 Kings 2:1-15",
+      "Matthew 17:1-8",
+      "Mark 9:2-4",
+      "Luke 9:28-36"
+    ],
+    "keywords": [
+      "happened",
+      "elijah",
+      "bible study",
+      "salvation",
+      "state of the dead"
+    ]
+  },
+  {
+    "id": "answer-who-was-leviathan",
+    "question": "Who Was Leviathan?",
+    "shortAnswer": "Leviathan is a powerful creature described in poetic and highly dramatic language in Job 41, Psalm 74, Psalm 104, and Isaiah 27. The Bible uses Leviathan both as a creature of God's creation and, in some passages, as symbolic imagery for hostile powers.",
+    "longAnswer": "Job 41 gives the longest description: \"Canst thou draw out leviathan with an hook?\" Job 41:1 God describes Leviathan as extraordinarily powerful and beyond human ability to control. Psalm 104:26 says: \"There go the ships: there is that leviathan, whom thou hast made to play therein.\" This clearly presents Leviathan as part of God's creation. Psalm 74:14 uses Leviathan in a poetic context: \"Thou brakest the heads of leviathan in pieces.\" Isaiah 27:1 uses the imagery symbolically: \"The LORD... shall punish leviathan the piercing serpent.\" The Bible does not identify Leviathan as a dinosaur in a straightforward scientific sense. Nor does every mention necessarily refer to exactly the same thing. Scripture uses Leviathan as both creature imagery and poetic symbolism.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Great Controversy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Job 3:8",
+      "Job 41:1-34",
+      "Psalm 74:13-14",
+      "Psalm 104:25-26",
+      "Isaiah 27:1"
+    ],
+    "keywords": [
+      "leviathan",
+      "bible study",
+      "creation",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-dinosaurs",
+    "question": "Does the Bible Mention Dinosaurs?",
+    "shortAnswer": "The Bible does not use the modern word \"dinosaur,\" because that term was coined in the nineteenth century. It does describe several remarkable creatures, but Scripture does not explicitly identify any of them as dinosaurs.",
+    "longAnswer": "The most commonly discussed passages are Job 40 and Job 41. Job 40 describes Behemoth: \"Behold now behemoth, which I made with thee.\" Job 40:15 Job 41 describes Leviathan. Some readers believe these descriptions correspond to dinosaurs or dinosaur-like creatures. Others understand them as known ancient animals described using poetic language. The text emphasizes God's creative power rather than providing a scientific classification. The Bible does not explicitly say, \"These animals were dinosaurs.\" It does, however, affirm that God created the animal world and describes creatures that are difficult to identify with certainty from the biblical descriptions alone.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Great Controversy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Job 40:15-24",
+      "Job 41:1-34",
+      "Genesis 1:20-25"
+    ],
+    "keywords": [
+      "mention",
+      "dinosaurs",
+      "bible study",
+      "creation",
+      "faith",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-where-did-dinosaurs-go-according-to-the-bible",
+    "question": "Where Did Dinosaurs Go According to the Bible?",
+    "shortAnswer": "The Bible does not directly explain the extinction of dinosaurs. If dinosaurs were among the creatures that lived before the Flood, their disappearance could be discussed in connection with the Flood and subsequent changes to the earth, but Scripture does not explicitly make that connection.",
+    "longAnswer": "Genesis describes a world in which God created land animals: \"And God made the beast of the earth after his kind.\" Genesis 1:25 Genesis 6 then describes a world filled with violence and corruption, followed by the Flood. The Flood destroyed terrestrial life outside the ark: \"And all flesh died that moved upon the earth.\" Genesis 7:21 After the Flood, Scripture describes a dramatically changed human environment. However, the Bible never says: \"Dinosaurs became extinct because of the Flood.\" That conclusion goes beyond the explicit text. The Bible does not provide a detailed extinction history for dinosaurs. It gives the theological history of creation, sin, judgment, redemption, and restoration rather than a complete paleontological record.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Law",
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Genesis 1:20-25",
+      "Genesis 6:5-13",
+      "Genesis 7:17-24",
+      "Genesis 8:1-22"
+    ],
+    "keywords": [
+      "dinosaurs",
+      "bible study",
+      "creation",
+      "law",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-how-old-is-the-earth-according-to-the-bible",
+    "question": "How Old Is the Earth According to the Bible?",
+    "shortAnswer": "The Bible presents humanity and the world as having a definite beginning created by God, but it does not give an explicit number of years for the age of the earth.",
+    "longAnswer": "Genesis begins: \"In the beginning God created the heaven and the earth.\" Genesis 1:1 Genesis then gives genealogies connecting major generations from Adam onward. Some readers add the genealogical ages together and arrive at a relatively young-earth chronology. However, biblical genealogies sometimes omit generations. For example, Matthew's genealogy intentionally structures its list into groups rather than necessarily providing every generation. Therefore, Scripture gives a chronological framework but does not explicitly say: \"The earth is exactly X years old.\" The Bible's central claim is that creation is the work of God, not that the earth is self-existent or the product of chance. A young-earth chronology can be constructed from biblical genealogies, but the exact age depends on assumptions about whether the genealogies are complete. The explicit biblical teaching is that God created the heavens and earth and that humanity ultimately descends from God's creative act.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "State of the Dead"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Genesis 1:1-31",
+      "Genesis 5:1-32",
+      "Genesis 11:10-32",
+      "Exodus 20:11",
+      "Matthew 1:1-17",
+      "Acts 17:24-26"
+    ],
+    "keywords": [
+      "earth",
+      "bible study",
+      "creation",
+      "faith",
+      "state of the dead"
+    ]
+  },
+  {
+    "id": "answer-prayer",
+    "question": "How Should I Pray?",
+    "shortAnswer": "Jesus taught His followers to pray to God sincerely, privately, persistently, and with trust. Prayer should include worship, submission, confession, requests, forgiveness, and dependence upon God.",
+    "longAnswer": "Jesus gave His disciples a model prayer: \"Our Father which art in heaven, Hallowed be thy name.\" Matthew 6:9 The prayer continues with: God's kingdom God's will Daily needs Forgiveness Forgiving others Protection from temptation and evil Jesus also warned against empty repetition and praying merely to impress other people. He said: \"When thou prayest, enter into thy closet, and when thou hast shut thy door, pray to thy Father which is in secret.\" Matthew 6:6 Prayer should also be persistent. Jesus taught the parable of the persistent widow in Luke 18:1-8. Prayer is not a technique for manipulating God. It is communion with Him and an expression of faith, dependence, confession, gratitude, and submission to His will.",
+    "topics": [
+      "Baptism",
+      "Comfort",
+      "Faith",
+      "Forgiveness"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 6:5-13",
+      "Matthew 7:7-11",
+      "Luke 11:1-13",
+      "Luke 18:1-8",
+      "Philippians 4:6-7",
+      "1 Thessalonians 5:17"
+    ],
+    "keywords": [
+      "pray",
+      "baptism",
+      "comfort",
+      "faith",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "answer-why-doesn-t-god-answer-my-prayers",
+    "question": "Why Doesn't God Answer My Prayers?",
+    "shortAnswer": "The Bible gives several reasons a prayer may not receive the answer we expect, including God's wisdom, wrong motives, unconfessed sin, lack of faith, and requests that do not agree with God's will. Yet Scripture also teaches that God hears His children even when His answer is not what they expected.",
+    "longAnswer": "John writes: \"If we ask any thing according to his will, he heareth us.\" 1 John 5:14 James warns: \"Ye ask, and receive not, because ye ask amiss.\" James 4:3 The Bible also gives examples of faithful people whose prayers were answered differently than they wanted. Paul prayed repeatedly for his \"thorn in the flesh\" to be removed. Instead, Christ answered: \"My grace is sufficient for thee.\" 2 Corinthians 12:9 Jesus Himself prayed in Gethsemane: \"Not my will, but thine, be done.\" Luke 22:42 A delayed or different answer does not necessarily mean God has ignored a prayer. Scripture teaches that God's wisdom and will are greater than ours.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Law",
+      "Marriage and Family"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Psalm 66:18",
+      "Matthew 7:7-11",
+      "Mark 11:24-25",
+      "Luke 22:39-44",
+      "James 4:2-3",
+      "1 John 5:14-15"
+    ],
+    "keywords": [
+      "doesn't",
+      "answer",
+      "prayers",
+      "bible study",
+      "faith",
+      "law",
+      "marriage and family"
+    ]
+  },
+  {
+    "id": "answer-does-prayer-really-work",
+    "question": "Does Prayer Really Work?",
+    "shortAnswer": "Yes. Scripture presents prayer as a genuine means of communicating with God and repeatedly records God responding to prayer.",
+    "longAnswer": "James writes: \"The effectual fervent prayer of a righteous man availeth much.\" James 5:16 The Bible contains numerous examples: Hannah prayed for a child. 1 Samuel 1. Elijah prayed and rain stopped and later returned. James 5:17-18. Hezekiah prayed and God responded. 2 Kings 20:1-6. Daniel prayed for understanding. Daniel 9. Jesus repeatedly prayed to His Father. Luke 5:16; Luke 6:12. Prayer does not mean God becomes obligated to fulfill every request exactly as we make it. It means God invites His people to bring their needs, burdens, gratitude, and desires to Him.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Prayer",
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Psalm 34:15",
+      "Jeremiah 33:3",
+      "Matthew 7:7-11",
+      "James 5:16-18",
+      "Philippians 4:6-7"
+    ],
+    "keywords": [
+      "prayer",
+      "really",
+      "work",
+      "bible study",
+      "faith",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-prayer-2",
+    "question": "How Often Should I Pray?",
+    "shortAnswer": "The Bible encourages continual prayer rather than restricting prayer to a particular number of times per day.",
+    "longAnswer": "Paul writes: \"Pray without ceasing.\" 1 Thessalonians 5:17 Jesus also taught His disciples: \"Men ought always to pray, and not to faint.\" Luke 18:1 Daniel had established times of prayer: \"He kneeled upon his knees three times a day, and prayed.\" Daniel 6:10 The biblical pattern therefore includes both regular intentional prayer and an ongoing attitude of dependence upon God.",
+    "topics": [
+      "Bible Study",
+      "Law",
+      "Prayer",
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Psalm 55:17",
+      "Daniel 6:10",
+      "Luke 18:1",
+      "Ephesians 6:18",
+      "1 Thessalonians 5:17"
+    ],
+    "keywords": [
+      "often",
+      "pray",
+      "bible study",
+      "law",
+      "prayer",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-anxiety",
+    "question": "What Does the Bible Say About Anxiety?",
+    "shortAnswer": "The Bible acknowledges anxiety and directs believers to bring their concerns to God rather than allowing worry to control them.",
+    "longAnswer": "Paul writes: \"Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God.\" Philippians 4:6 Jesus taught: \"Take therefore no thought for the morrow.\" Matthew 6:34 His point was not that believers should ignore real responsibilities. He was teaching them not to live consumed by fear about the future. Peter gives a similar instruction: \"Casting all your care upon him; for he careth for you.\" 1 Peter 5:7 The Bible does not condemn a person merely for experiencing anxious feelings. It teaches believers to bring those burdens to God and trust Him while taking appropriate action.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Faith",
+      "Prayer"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 6:25-34",
+      "Philippians 4:6-8",
+      "1 Peter 5:6-7",
+      "Psalm 55:22",
+      "Isaiah 41:10"
+    ],
+    "keywords": [
+      "anxiety",
+      "bible study",
+      "comfort",
+      "faith",
+      "prayer"
+    ]
+  },
+  {
+    "id": "answer-what-does-the-bible-say-about-fear",
+    "question": "What Does the Bible Say About Fear?",
+    "shortAnswer": "Scripture repeatedly tells God's people not to be controlled by fear, while teaching them to have reverence for God.",
+    "longAnswer": "God told Joshua: \"Be strong and of a good courage; be not afraid, neither be thou dismayed.\" Joshua 1:9 Isaiah records God's promise: \"Fear thou not; for I am with thee.\" Isaiah 41:10 The New Testament says: \"For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.\" 2 Timothy 1:7 At the same time, Scripture repeatedly commands the \"fear of the LORD.\" This means reverence, awe, and submission to God rather than terror that drives a person away from Him.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Faith",
+      "Holy Spirit"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Deuteronomy 31:6",
+      "Psalm 23:4",
+      "Isaiah 41:10",
+      "Matthew 10:28-31",
+      "2 Timothy 1:7",
+      "1 John 4:18"
+    ],
+    "keywords": [
+      "fear",
+      "bible study",
+      "comfort",
+      "faith",
+      "holy spirit"
+    ]
+  },
+  {
+    "id": "answer-forgiveness-god-vs-people",
+    "question": "What Does the Bible Say About Forgiveness?",
+    "shortAnswer": "The Bible teaches that God offers forgiveness through Christ and calls His people to forgive others.",
+    "longAnswer": "John writes: \"If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.\" 1 John 1:9 Jesus taught His disciples to pray: \"Forgive us our debts, as we forgive our debtors.\" Matthew 6:12 Paul says: \"Be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ's sake hath forgiven you.\" Ephesians 4:32 Forgiveness does not mean pretending that wrongdoing did not happen. It means releasing personal vengeance and entrusting justice to God.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Forgiveness",
+      "Health"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Psalm 103:8-12",
+      "Matthew 6:12-15",
+      "Matthew 18:21-35",
+      "Luke 23:34",
+      "Ephesians 4:31-32",
+      "1 John 1:9"
+    ],
+    "keywords": [
+      "forgiveness",
+      "bible study",
+      "faith",
+      "health"
+    ]
+  },
+  {
+    "id": "answer-forgiveness-3",
+    "question": "How Do I Forgive Someone Who Hurt Me?",
+    "shortAnswer": "The Bible calls us to forgive as God has forgiven us, refuse personal revenge, pray for enemies, and leave ultimate judgment with God.",
+    "longAnswer": "Jesus said: \"Love your enemies, bless them that curse you, do good to them that hate you.\" Matthew 5:44 Paul says: \"Recompense to no man evil for evil.\" Romans 12:17 And: \"Dearly beloved, avenge not yourselves.\" Romans 12:19 Forgiveness does not require pretending that abuse or injustice was acceptable. Scripture also supports confronting wrongdoing, establishing boundaries, seeking justice, and protecting the vulnerable. Forgiveness and reconciliation are related but not identical. A person can forgive someone without immediately restoring the same level of trust.",
+    "topics": [
+      "Bible Study",
+      "Comfort",
+      "Faith",
+      "Forgiveness"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 5:43-48",
+      "Matthew 18:21-35",
+      "Luke 17:3-4",
+      "Romans 12:17-21",
+      "Ephesians 4:31-32"
+    ],
+    "keywords": [
+      "forgive",
+      "someone",
+      "hurt",
+      "bible study",
+      "comfort",
+      "faith",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "answer-what-does-the-bible-say-about-love",
+    "question": "What Does the Bible Say About Love?",
+    "shortAnswer": "Biblical love is more than emotion. It seeks another person's good, is patient and truthful, sacrifices, forgives, and remains faithful.",
+    "longAnswer": "The most famous biblical description is: \"Charity suffereth long, and is kind.\" 1 Corinthians 13:4 Paul continues by describing love as not envious, boastful, selfish, easily provoked, or rejoicing in wrongdoing. John gives an even deeper definition: \"God is love.\" 1 John 4:8 The greatest demonstration of God's love is Christ's sacrifice: \"Hereby perceive we the love of God, because he laid down his life for us.\" 1 John 3:16 Jesus summarized the law as love for God and neighbor. Biblical love does not mean approving everything someone does. Love rejoices in truth and seeks genuine good.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Forgiveness",
+      "Great Controversy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 22:37-40",
+      "John 3:16",
+      "John 13:34-35",
+      "1 Corinthians 13:1-13",
+      "1 John 3:16-18",
+      "1 John 4:7-12"
+    ],
+    "keywords": [
+      "love",
+      "bible study",
+      "faith",
+      "forgiveness",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-marriage",
+    "question": "What Does the Bible Say About Marriage?",
+    "shortAnswer": "The Bible presents marriage as a covenant relationship between a man and a woman, established by God for companionship, faithfulness, family, and mutual love.",
+    "longAnswer": "Marriage begins in Genesis: \"Therefore shall a man leave his father and his mother, and shall cleave unto his wife.\" Genesis 2:24 Jesus reaffirmed this creation pattern: \"But from the beginning of the creation God made them male and female.\" Mark 10:6 He then quoted Genesis concerning marriage. Paul describes marriage as a relationship characterized by sacrificial love: \"Husbands, love your wives, even as Christ also loved the church, and gave himself for it.\" Ephesians 5:25 Marriage therefore involves commitment, fidelity, sacrifice, and mutual responsibility.",
+    "topics": [
+      "Bible Study",
+      "Church",
+      "Creation",
+      "Faith"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "Genesis 2:18-25",
+      "Matthew 19:4-6",
+      "Mark 10:6-9",
+      "Ephesians 5:21-33",
+      "Hebrews 13:4"
+    ],
+    "keywords": [
+      "marriage",
+      "bible study",
+      "church",
+      "creation",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-divorce-remarriage",
+    "question": "What Does the Bible Say About Divorce?",
+    "shortAnswer": "The Bible permits divorce in certain circumstances but presents marriage as a lifelong covenant and does not treat divorce as God's original ideal.",
+    "longAnswer": "Jesus said: \"What therefore God hath joined together, let not man put asunder.\" Matthew 19:6 When questioned about Moses' allowance for divorce, Jesus explained: \"Moses because of the hardness of your hearts suffered you to put away your wives: but from the beginning it was not so.\" Matthew 19:8 Jesus then referred back to creation. Matthew 19:9 identifies sexual immorality as a serious exception in Jesus' discussion. Paul also discusses situations involving abandonment by an unbelieving spouse in 1 Corinthians 7:12-15. The Bible treats marriage as a serious covenant and divorce as a tragic consequence of human sin. It also recognizes circumstances in which a marriage covenant has been severely violated or abandoned.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Law",
+      "Marriage and Family"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Genesis 2:24",
+      "Malachi 2:14-16",
+      "Matthew 5:31-32",
+      "Matthew 19:3-9",
+      "Mark 10:2-12",
+      "1 Corinthians 7:10-15"
+    ],
+    "keywords": [
+      "divorce",
+      "bible study",
+      "creation",
+      "law",
+      "marriage and family"
+    ]
+  },
+  {
+    "id": "answer-what-does-the-bible-say-about-sex-before-marriage",
+    "question": "What Does the Bible Say About Sex Before Marriage?",
+    "shortAnswer": "The Bible consistently places sexual intimacy within marriage and calls sexual activity outside that covenant \"fornication\" or sexual immorality.",
+    "longAnswer": "Paul writes: \"This is the will of God, even your sanctification, that ye should abstain from fornication.\" 1 Thessalonians 4:3 He continues by calling believers to sexual self-control and holiness. Hebrews says: \"Marriage is honourable in all, and the bed undefiled.\" Hebrews 13:4 The biblical pattern begins in Genesis, where sexual union is connected with the marriage covenant: \"They shall be one flesh.\" Genesis 2:24 Paul tells unmarried believers who struggle with sexual temptation that marriage is the appropriate context for sexual intimacy. 1 Corinthians 7:2-9. The biblical sexual ethic places sexual intimacy within marriage. This teaching applies to sexual relationships generally, not merely to one particular category of sexual behavior.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Great Controversy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Genesis 2:24",
+      "Exodus 20:14",
+      "Matthew 5:27-30",
+      "1 Corinthians 6:15-20",
+      "1 Corinthians 7:2-9",
+      "1 Thessalonians 4:3-5",
+      "Hebrews 13:4"
+    ],
+    "keywords": [
+      "marriage",
+      "bible study",
+      "creation",
+      "faith",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-homosexuality",
+    "question": "What Does the Bible Say About Homosexuality?",
+    "shortAnswer": "The Bible consistently presents sexual intimacy within the male-female marriage relationship and contains several passages that explicitly address same-sex sexual behavior.",
+    "longAnswer": "The creation account establishes the male-female marriage pattern: \"Therefore shall a man leave his father and his mother, and shall cleave unto his wife.\" Genesis 2:24 Jesus reaffirmed this pattern in Matthew 19:4-6. Several New Testament passages explicitly discuss same-sex sexual behavior, including Romans 1:24-27, 1 Corinthians 6:9-11, and 1 Timothy 1:9-10. Romans describes same-sex relations within a broader discussion of humanity's rebellion against God. At the same time, the Bible distinguishes between sexual temptation, identity, and chosen behavior. It also teaches that every human being is made in God's image and must be treated with dignity. Paul's list in 1 Corinthians 6 ends with an important statement: \"And such were some of you: but ye are washed, but ye are sanctified, but ye are justified in the name of the Lord Jesus.\" 1 Corinthians 6:11 The gospel therefore offers grace and transformation to sinners of every category. The biblical texts concerning sexual behavior are clear in their traditional reading, while the Bible simultaneously teaches that every person has dignity, every person is accountable before God, and forgiveness is available through Christ.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Forgiveness",
+      "Great Controversy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Genesis 1:26-28",
+      "Genesis 2:18-25",
+      "Matthew 19:4-6",
+      "Romans 1:24-27",
+      "1 Corinthians 6:9-11",
+      "1 Timothy 1:9-11",
+      "Jude 7"
+    ],
+    "keywords": [
+      "homosexuality",
+      "bible study",
+      "creation",
+      "forgiveness",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-tattoos",
+    "question": "What Does the Bible Say About Tattoos?",
+    "shortAnswer": "The Bible contains one direct prohibition against tattoo-like markings in Leviticus 19:28. Christians differ over how this command applies under the new covenant, but the passage should not be ignored.",
+    "longAnswer": "Leviticus says: \"Ye shall not make any cuttings in your flesh for the dead, nor print any marks upon you.\" Leviticus 19:28 The immediate context involves pagan mourning practices and religious customs. The New Testament does not repeat a specific command saying: \"Christians must never get tattoos.\" However, Christians are told to consider whether their actions honor God: \"Whether therefore ye eat, or drink, or whatsoever ye do, do all to the glory of God.\" 1 Corinthians 10:31 Paul also says: \"Your body is the temple of the Holy Ghost.\" 1 Corinthians 6:19 Therefore, biblical principles concerning the body, motives, worship, modesty, identity, and separation from pagan practices should be considered. Leviticus 19:28 is an explicit Old Testament prohibition against making certain marks on the body. The New Testament does not explicitly repeat the command as a universal Christian rule. Application therefore requires considering both the original context and broader biblical principles.",
+    "topics": [
+      "Bible Study",
+      "Health",
+      "Law",
+      "State of the Dead"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Leviticus 19:28",
+      "1 Corinthians 6:19-20",
+      "1 Corinthians 10:31",
+      "Romans 12:1-2",
+      "1 Peter 3:3-4"
+    ],
+    "keywords": [
+      "tattoos",
+      "bible study",
+      "health",
+      "law",
+      "state of the dead"
+    ]
+  },
+  {
+    "id": "answer-tithing",
+    "question": "What Does the Bible Say About Tithing?",
+    "shortAnswer": "The Bible teaches that God's people should return a tenth of their increase to Him. Tithing supports God's work and those engaged in ministry. The New Testament also emphasizes generous, willing giving rather than giving merely as a legal obligation.",
+    "longAnswer": "The practice of giving a tenth appears before the Mosaic law. Abraham gave Melchizedek: \"And he gave him tithes of all.\" Genesis 14:20 Jacob also promised: \"Of all that thou shalt give me I will surely give the tenth unto thee.\" Genesis 28:22 Under Israel's covenant system, the tithe supported the Levites: \"And, behold, I have given the children of Levi all the tenth in Israel for an inheritance.\" Numbers 18:21 Malachi contains a direct challenge: \"Bring ye all the tithes into the storehouse, that there may be meat in mine house.\" Malachi 3:10 Jesus also referred to tithing while emphasizing that it must not replace justice, mercy, and faith: \"These ought ye to have done, and not to leave the other undone.\" Matthew 23:23 The New Testament also emphasizes generous and willing giving: \"Every man according as he purposeth in his heart, so let him give; not grudgingly, or of necessity.\" 2 Corinthians 9:7 The Bible clearly establishes the principle of returning a tenth to God. The New Testament does not teach that Christians earn salvation through tithing. Giving is part of worship and stewardship, while salvation remains God's gift of grace through faith.",
+    "topics": [
+      "Bible Study",
+      "Creation",
+      "Faith",
+      "Forgiveness"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Genesis 14:18-20",
+      "Genesis 28:20-22",
+      "Leviticus 27:30-33",
+      "Numbers 18:21-24",
+      "Deuteronomy 14:22-29",
+      "Malachi 3:8-12",
+      "Matthew 23:23",
+      "Hebrews 7:1-10",
+      "1 Corinthians 9:13-14",
+      "2 Corinthians 9:6-8"
+    ],
+    "keywords": [
+      "tithing",
+      "bible study",
+      "creation",
+      "faith",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "answer-gospel",
+    "question": "What is the gospel?",
+    "shortAnswer": "The gospel is the good news of God's infinite love to humanity, through the life, sacrifice, and righteousness of Jesus Christ as our only hope of eternal life. It restores the image of God in the soul and offers salvation as a free gift received by faith.",
+    "longAnswer": "The gospel is the good news of God's infinite love to humanity, through the life, the sacrifice, and the righteousness of Jesus Christ as our only hope of eternal life. The gospel restores the image of God in the soul. The plan of salvation was not an afterthought; it was an eternal purpose of love formulated before the world began. When humanity fell, Jesus stepped forward as our Substitute and Surety, offering to bear the weight of the sins of the whole world so that we might be reconciled to the Father. The gospel is the \"counsel of peace\" between the Father and the Son, proving that God's law is as immutable as His throne, while His mercy is deep enough to reach the lowest sinner. Salvation is a free gift. We cannot earn it through any merit or good works, for it is received wholly by faith.",
+    "topics": [
+      "Salvation",
+      "Faith",
+      "Christian Living"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "John 3:16",
+      "2 Corinthians 4:7",
+      "Revelation 13:8",
+      "2 Corinthians 5:19",
+      "Zechariah 6:13",
+      "John 1:12"
+    ],
+    "keywords": [
+      "good news",
+      "Jesus",
+      "cross",
+      "resurrection",
+      "saved",
+      "grace",
+      "obedience"
+    ]
+  },
+  {
+    "id": "answer-gods-love",
+    "question": "How can I know God loves me?",
+    "shortAnswer": "The clearest demonstration of God's love is the death and resurrection of Jesus Christ for sinners. God's love is also seen in His desire to restore people fully: heart, mind, body, relationships, and future.",
+    "longAnswer": "God's love is not measured by easy circumstances but by what He was willing to give: His own Son, while people were still sinners and enemies of God. That love reaches into every area of life — forgiving guilt, healing shame, restoring broken relationships, and giving purpose for the future. It is also patient and pursuing, shown in the Holy Spirit's ongoing work to draw hearts back to God, and it will be fully displayed when Christ returns to make all things new and remove every trace of sin's damage.",
+    "topics": [
+      "Faith",
+      "Comfort",
+      "Salvation"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "Romans 5:8",
+      "1 John 4:9-10",
+      "John 15:13"
+    ],
+    "keywords": [
+      "love",
+      "God's love",
+      "cross",
+      "grace",
+      "assurance"
+    ]
+  },
+  {
+    "id": "answer-bible-study",
+    "question": "How can I understand the Bible better?",
+    "shortAnswer": "Read prayerfully, pay attention to context, compare Scripture with Scripture, and apply what you learn. A helpful pattern is observation, interpretation, and application.",
+    "longAnswer": "Meaningful Bible study starts before you open the page, with a short prayer asking God to give understanding. From there, observation asks what a passage actually says, interpretation asks what it meant in its original context, and application asks how it applies to your life today. Comparing Scripture with Scripture — letting clearer passages shed light on harder ones — protects against taking a single verse out of context. Keeping a simple journal of insights, discussing questions with others, and returning to the same passages over time all deepen understanding far beyond a single reading.",
+    "topics": [
+      "Christian Living",
+      "Faith",
+      "Bible Study"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "2 Timothy 3:16-17",
+      "Psalm 119:105",
+      "Acts 17:11"
+    ],
+    "keywords": [
+      "study",
+      "interpretation",
+      "devotions",
+      "scripture",
+      "context"
+    ]
+  },
+  {
+    "id": "answer-sabbath",
+    "question": "Is the Sabbath still important for Christians?",
+    "shortAnswer": "The Sabbath points back to creation, honors God's commandments, and offers a weekly rhythm of worship, rest, mercy, and delight in the Lord. Jesus kept the Sabbath and taught that it was made as a blessing for humanity.",
+    "longAnswer": "The Sabbath was established at creation, before sin entered the world, when God rested on the seventh day and blessed it — making it a gift for all humanity, not a rule invented later. It was reaffirmed in the Ten Commandments and consistently kept by Jesus, who described it as something made for people's good, not a burden. Practically, the Sabbath offers a weekly rhythm of setting aside ordinary work to focus on worship, rest, family, nature, and acts of mercy, echoing both the beginning of creation and pointing forward to the final, eternal rest God promises His people.",
+    "topics": [
+      "Sabbath",
+      "Christian Living",
+      "Faith"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Genesis 2:2-3",
+      "Exodus 20:8-11",
+      "Mark 2:27-28"
+    ],
+    "keywords": [
+      "seventh day",
+      "rest",
+      "commandments",
+      "law",
+      "Saturday",
+      "worship"
+    ]
+  },
+  {
+    "id": "answer-commandments",
+    "question": "What role do God's commandments have in the Christian life?",
+    "shortAnswer": "The Bible teaches that we are saved by grace through faith, not by earning God's favor. At the same time, God's commandments reveal His character and guide the grateful obedience of those who love Him.",
+    "longAnswer": "Salvation has always been by grace through faith, never by keeping rules well enough to earn it — no amount of obedience can pay a debt only Christ's sacrifice can cover. Yet Scripture is equally clear that faith does not make the law void; instead, God's commandments describe what love for God and others looks like in practice. Once the heart is transformed by grace, obedience becomes a natural response of gratitude rather than an attempt to be accepted, and the Holy Spirit empowers believers to live out what the law describes rather than merely demands.",
+    "topics": [
+      "Christian Living",
+      "Faith",
+      "Salvation",
+      "Sabbath"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "John 14:15",
+      "Romans 3:31",
+      "Revelation 14:12"
+    ],
+    "keywords": [
+      "law",
+      "obedience",
+      "ten commandments",
+      "grace",
+      "faith",
+      "love"
+    ]
+  },
+  {
+    "id": "answer-judgment",
+    "question": "What does the Bible teach about judgment?",
+    "shortAnswer": "Judgment shows that God takes evil seriously, vindicates His character, and brings justice with mercy. Believers can face judgment with confidence because Jesus is both Savior and Advocate.",
+    "longAnswer": "The Bible describes a judgment in which books of record are opened and God's justice is displayed before the watching universe, answering every question raised about His fairness and character. Rather than something to dread, this judgment is good news for those who trust Christ, because Jesus serves as their Advocate, presenting His own righteousness on their behalf. Judgment ultimately demonstrates that God is both perfectly just and abundantly merciful — evil will not go unanswered forever, but for those in Christ, the outcome is already secure through His finished work.",
+    "topics": [
+      "Prophecy",
+      "Salvation",
+      "Faith"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Daniel 7:9-10",
+      "Ecclesiastes 12:14",
+      "1 John 2:1"
+    ],
+    "keywords": [
+      "judgment",
+      "advocate",
+      "justice",
+      "mercy",
+      "Daniel",
+      "sanctuary"
+    ]
+  },
+  {
+    "id": "answer-health",
+    "question": "Does God care about my physical health?",
+    "shortAnswer": "The Bible presents the body as belonging to God and calls believers to honor Him in every part of life. Caring for health is not a way to earn salvation; it is a grateful response to God's desire to restore the whole person.",
+    "longAnswer": "Because the body is described as a temple of the Holy Spirit, Scripture calls believers to care for it wisely — through rest, nourishing food, physical activity, and avoiding what harms the body or clouds the mind. This is never framed as a way to earn God's favor; it is a grateful, practical response to being bought at a price and belonging fully to God. Healthy choices also support a clear mind for prayer, service, and discernment, reflecting God's desire to restore the whole person — body, mind, and spirit — rather than treating physical health as separate from spiritual life.",
+    "topics": [
+      "Christian Living",
+      "Faith",
+      "Health"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "1 Corinthians 6:19-20",
+      "Romans 12:1",
+      "3 John 1:2"
+    ],
+    "keywords": [
+      "health",
+      "body",
+      "temperance",
+      "food",
+      "whole person",
+      "wellness"
+    ]
+  },
+  {
+    "id": "answer-baptism",
+    "question": "Why is baptism important?",
+    "shortAnswer": "Baptism is a public expression of faith in Christ, symbolizing His death, burial, and resurrection, and the believer's new life in Him. It follows repentance and a decision to walk with Jesus.",
+    "longAnswer": "Baptism by immersion pictures the gospel itself: going under the water symbolizes being buried with Christ, and rising out of the water symbolizes being raised to walk in newness of life. It is meant to follow genuine repentance and instruction, marking a conscious decision to follow Jesus rather than a ritual performed without understanding. Baptism does not cause salvation, but it publicly and meaningfully confirms it, and it becomes the starting point for an ongoing life of discipleship, growth, and participation in the church community.",
+    "topics": [
+      "Baptism",
+      "Salvation",
+      "Faith"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Romans 6:3-4",
+      "Acts 2:38",
+      "Matthew 28:19-20"
+    ],
+    "keywords": [
+      "baptism",
+      "immersion",
+      "new life",
+      "repentance",
+      "public confession"
+    ]
+  },
+  {
+    "id": "answer-parenting",
+    "question": "How should parents raise their children according to the Bible?",
+    "shortAnswer": "Scripture calls parents to teach children about God consistently, discipline with love rather than anger, and model a life of faith at home so children grow up knowing and trusting the Lord.",
+    "longAnswer": "Deuteronomy pictures teaching children about God as a constant, woven-in part of everyday life — talked about at home, on the road, at bedtime, and in the morning, not confined to a single lesson each week. Discipline is meant to shape the heart, not merely control behavior, and Paul specifically warns fathers against provoking children to anger, pointing instead toward instruction and correction rooted in love. Modeling authentic faith at home, admitting mistakes, and praying with and for children all shape a home environment where trust in God feels natural rather than forced.",
+    "topics": [
+      "Marriage and Family",
+      "Christian Living"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Deuteronomy 6:6-7",
+      "Ephesians 6:4",
+      "Proverbs 22:6"
+    ],
+    "keywords": [
+      "parenting",
+      "children",
+      "family",
+      "discipline",
+      "raising kids"
+    ]
+  },
+  {
+    "id": "answer-stewardship",
+    "question": "What does the Bible say about money and stewardship?",
+    "shortAnswer": "The Bible teaches that everything belongs to God and believers are stewards, not owners, of their time, talents, and resources. Faithful giving, honesty, and contentment flow from trusting God's provision.",
+    "longAnswer": "Scripture consistently teaches that everything ultimately belongs to God, and people are entrusted as managers, or stewards, of the time, abilities, and resources placed in their care. Faithful stewardship includes giving — such as the tithe and additional offerings — not as a transaction to gain God's blessing, but as an act of worship and trust. Contentment, honesty in finances, and generosity toward those in need flow naturally once ownership is understood correctly: everything is on loan from a generous God, and giving cheerfully reflects His own character.",
+    "topics": [
+      "Stewardship",
+      "Christian Living"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Malachi 3:10",
+      "Matthew 6:19-21",
+      "2 Corinthians 9:7"
+    ],
+    "keywords": [
+      "money",
+      "tithe",
+      "giving",
+      "finances",
+      "stewardship",
+      "generosity"
+    ]
+  },
+  {
+    "id": "answer-church",
+    "question": "Why is the church important?",
+    "shortAnswer": "The church is the community of believers united in Christ for worship, teaching, fellowship, encouragement, and mission. Scripture calls believers not to neglect gathering together as one body.",
+    "longAnswer": "The church is described as a body with many parts, each contributing different gifts for the good of the whole, held together by a shared faith in Christ rather than uniformity of personality or background. Gathering together for worship, teaching, prayer, and fellowship is not optional or old-fashioned; Hebrews specifically warns against neglecting this habit, especially as challenges increase. Beyond weekly worship, the early church modeled shared meals, mutual care, and active mission together, showing that spiritual growth happens best in community rather than in isolation.",
+    "topics": [
+      "Church",
+      "Christian Living",
+      "Faith"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Hebrews 10:24-25",
+      "Acts 2:42",
+      "1 Corinthians 12:27"
+    ],
+    "keywords": [
+      "church",
+      "fellowship",
+      "community",
+      "body of Christ",
+      "worship together"
+    ]
+  },
+  {
+    "id": "answer-creation",
+    "question": "What does the Bible teach about creation?",
+    "shortAnswer": "The Bible presents God as the intentional Creator of the heavens, the earth, and humanity in His own image. Creation reveals God's power and care, and it is the foundation for the Sabbath rest.",
+    "longAnswer": "Genesis describes a deliberate, purposeful creation — not a random accident — in which God speaks the universe into existence and forms humanity in His own image, giving people inherent dignity and purpose. The created world itself testifies to God's power and character, as the heavens are said to declare His glory even without words. Creation is also the foundation for the Sabbath: God rested on the seventh day not because He was tired, but to establish a pattern of rest and worship that would remind every generation of who made them and why they matter.",
+    "topics": [
+      "Creation",
+      "Faith",
+      "Sabbath"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "Genesis 1:1",
+      "Genesis 1:27",
+      "Psalm 19:1"
+    ],
+    "keywords": [
+      "creation",
+      "creator",
+      "genesis",
+      "origins",
+      "image of god"
+    ]
+  },
+  {
+    "id": "answer-temptation",
+    "question": "How can I overcome temptation?",
+    "shortAnswer": "The Bible promises that God provides a way of escape from every temptation and that His strength, not willpower alone, enables believers to resist sin and grow in godliness.",
+    "longAnswer": "Paul's promise that God will always provide a way of escape from temptation means no one faces an impossible situation — help is always available, even when it does not feel that way. Jesus modeled the pattern for resisting temptation Himself, responding to each test in the wilderness with Scripture rather than self-effort alone. Practically, this means knowing God's Word well enough to recall it under pressure, avoiding known triggers where possible, staying honest with trusted others for accountability, and depending on the Spirit's strength rather than relying solely on willpower, which tends to run out.",
+    "topics": [
+      "Christian Living",
+      "Faith"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "1 Corinthians 10:13",
+      "James 4:7",
+      "Hebrews 4:15-16"
+    ],
+    "keywords": [
+      "temptation",
+      "sin",
+      "overcome",
+      "willpower",
+      "victory",
+      "self-control"
+    ]
+  },
+  {
+    "id": "answer-doubt",
+    "question": "What should I do when I struggle with doubt?",
+    "shortAnswer": "Doubt is not condemned in Scripture; honest questions can be brought to God. Faith grows through seeking answers, remembering God's past faithfulness, and staying in community.",
+    "longAnswer": "Many biblical figures, including John the Baptist and Thomas, expressed real doubt, and God met their honesty with patient answers rather than rejection. Bringing questions to God directly — through prayer, Scripture study, and honest conversation with trusted believers — is far healthier than suppressing doubt or hiding it out of shame. Remembering specific ways God has been faithful in the past builds a foundation for trusting Him with what is still unclear. Doubt handled honestly, rather than ignored, can actually deepen and mature genuine faith over time.",
+    "topics": [
+      "Faith",
+      "Christian Living"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "Mark 9:24",
+      "John 20:27-29",
+      "Jude 1:22"
+    ],
+    "keywords": [
+      "doubt",
+      "questions",
+      "unbelief",
+      "struggling faith",
+      "uncertainty"
+    ]
+  },
+  {
+    "id": "answer-guidance",
+    "question": "How can I know God's will for my life?",
+    "shortAnswer": "God guides through Scripture, prayer, wise counsel, and the quiet leading of the Holy Spirit. Most of His will is already revealed; specific decisions are made trusting His care.",
+    "longAnswer": "A large part of God's will is already clearly revealed in Scripture — to love God and others, live with integrity, and reflect Christ's character — so seeking direction starts there rather than waiting for a special sign. For specific decisions, Scripture models seeking wise counsel, praying for clarity, watching for how God provides or closes doors, and paying attention to the peace or conviction of the Holy Spirit. Trusting God's care means moving forward in faith on decisions that align with biblical wisdom, resting in the confidence that He directs the steps of those who commit their way to Him.",
+    "topics": [
+      "Faith",
+      "Prayer",
+      "Christian Living"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "Proverbs 3:5-6",
+      "Psalm 32:8",
+      "James 1:5"
+    ],
+    "keywords": [
+      "god's will",
+      "guidance",
+      "decisions",
+      "direction",
+      "calling"
+    ]
+  },
+  {
+    "id": "answer-spiritual-gifts",
+    "question": "What are spiritual gifts and how do I find mine?",
+    "shortAnswer": "Spiritual gifts are abilities given by the Holy Spirit to build up the church. Every believer receives at least one, meant to be discovered and used in service to others.",
+    "longAnswer": "Spiritual gifts are Spirit-given abilities such as teaching, encouragement, service, leadership, mercy, or generosity, distributed to different believers so the whole church functions like a healthy body with many necessary parts. No one receives every gift, and no gift is more spiritually significant than another when used in love — the goal is mutual benefit, not personal status. Gifts are often discovered through serving, noticing what brings genuine fruit and joy, and receiving feedback from other believers, rather than through abstract self-reflection alone.",
+    "topics": [
+      "Holy Spirit",
+      "Church",
+      "Christian Living"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "1 Corinthians 12:4-7",
+      "Romans 12:4-8",
+      "1 Peter 4:10-11"
+    ],
+    "keywords": [
+      "spiritual gifts",
+      "gifts of the spirit",
+      "serving",
+      "talents",
+      "calling"
+    ]
+  },
+  {
+    "id": "answer-fasting",
+    "question": "What does the Bible teach about fasting?",
+    "shortAnswer": "Fasting is voluntarily setting aside food (or other things) for a time to focus more fully on prayer and seeking God, not a way to manipulate God or earn favor.",
+    "longAnswer": "Throughout Scripture, fasting accompanies serious prayer — seeking guidance, repenting, or drawing near to God in times of crisis or decision. Jesus assumed His followers would fast and taught that it should be done sincerely, without seeking public attention or praise for the sacrifice. Fasting is not a technique to force God's hand or a means of earning spiritual credit; rather, it is a physical way of expressing humility and dependence, clearing space so attention can focus more fully on prayer and listening to God.",
+    "topics": [
+      "Prayer",
+      "Christian Living"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "Matthew 6:16-18",
+      "Joel 2:12-13",
+      "Acts 13:2-3"
+    ],
+    "keywords": [
+      "fasting",
+      "prayer and fasting",
+      "self-denial",
+      "seeking god"
+    ]
+  },
+  {
+    "id": "answer-mission",
+    "question": "Why does the church share the gospel with others?",
+    "shortAnswer": "Jesus commissioned His followers to share the good news with everyone, everywhere, because the gospel is meant to be shared, not kept private, out of love for others.",
+    "longAnswer": "Before returning to heaven, Jesus gave His followers a clear commission: go and make disciples of all nations, teaching them to follow everything He commanded. This mission flows naturally from grace — those who have experienced forgiveness and hope want others to know it is available too. Sharing the gospel is not about pressure or manipulation; it includes living a visibly transformed life, serving practical needs, and speaking honestly about faith when opportunities arise. This mission is described as continuing until Christ's return, giving urgency and purpose to how believers live and relate to others.",
+    "topics": [
+      "Church",
+      "Christian Living",
+      "Faith"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 28:18-20",
+      "Matthew 24:14",
+      "Romans 10:14-15"
+    ],
+    "keywords": [
+      "evangelism",
+      "great commission",
+      "sharing faith",
+      "mission",
+      "witnessing"
+    ]
+  },
+  {
+    "id": "answer-grief",
+    "question": "How does the Bible help with grief and loss?",
+    "shortAnswer": "Scripture allows honest grief while offering real comfort: God is near to the brokenhearted, and death is not the final word for those who trust in the resurrection.",
+    "longAnswer": "The Bible never treats grief as a sign of weak faith — Jesus Himself wept at the tomb of a friend, and the Psalms are full of raw, honest sorrow brought openly to God. At the same time, grief for believers is described as different from grief without hope, because death is temporary, not final, for those united to Christ. God is described as especially near to the brokenhearted and to those crushed in spirit, inviting honest lament rather than forced positivity. The promise of the resurrection, when God will reunite loved ones and wipe away every tear, offers a future hope that can hold real grief and real comfort together.",
+    "topics": [
+      "Comfort",
+      "State of the Dead",
+      "Prophecy"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Psalm 34:18",
+      "John 11:33-35",
+      "1 Thessalonians 4:13-14"
+    ],
+    "keywords": [
+      "grief",
+      "loss",
+      "mourning",
+      "death of loved one",
+      "comfort"
+    ]
+  },
+  {
+    "id": "answer-work",
+    "question": "Does the Bible say anything about work and career?",
+    "shortAnswer": "Work is part of God's original design, meant to be done with integrity and diligence as service to God, not merely to people, regardless of the type of job.",
+    "longAnswer": "Work existed before sin entered the world, given to humanity as a meaningful part of caring for creation, not as a punishment. Paul instructs believers to work heartily, as if working for the Lord rather than merely for human supervisors, which reframes even ordinary tasks as an act of worship. Honesty, diligence, and fair treatment of others are consistently emphasized, along with a caution against greed or defining identity entirely by career success. Rest is also built into the pattern of work through the Sabbath, protecting against the exhaustion of nonstop labor.",
+    "topics": [
+      "Christian Living",
+      "Stewardship"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Colossians 3:23-24",
+      "Genesis 2:15",
+      "Proverbs 12:24"
+    ],
+    "keywords": [
+      "work",
+      "career",
+      "job",
+      "labor",
+      "workplace"
+    ]
+  },
+  {
+    "id": "answer-anger",
+    "question": "How should I handle anger according to the Bible?",
+    "shortAnswer": "Anger itself is not automatically sinful, but Scripture warns against letting it control actions or linger unresolved, urging quick reconciliation and self-control instead.",
+    "longAnswer": "Scripture acknowledges that anger is a real human emotion — even Jesus displayed righteous anger at injustice — but it draws a clear line between feeling anger and being controlled by it. Paul's instruction not to let the sun go down on anger points to resolving conflict promptly rather than letting resentment build. James urges believers to be slow to become angry, since human anger rarely produces the righteousness God desires. Practically, this means pausing before reacting, seeking to understand the other person, and pursuing reconciliation quickly rather than nursing a grudge.",
+    "topics": [
+      "Christian Living",
+      "Comfort"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Ephesians 4:26-27",
+      "James 1:19-20",
+      "Proverbs 15:1"
+    ],
+    "keywords": [
+      "anger",
+      "self-control",
+      "conflict",
+      "resentment",
+      "emotions"
+    ]
+  },
+  {
+    "id": "answer-daniel-revelation",
+    "question": "How should I understand prophecy in Daniel and Revelation?",
+    "shortAnswer": "Daniel and Revelation use symbolic language to reveal God's control over history, the rise and fall of powers, and the certainty of Christ's ultimate victory over evil.",
+    "longAnswer": "Daniel and Revelation are often called apocalyptic literature, using vivid symbols — beasts, horns, numbers, and visions — to communicate real historical and future events in a way meant to be interpreted symbolically rather than always literally. A reliable approach lets Scripture interpret Scripture, comparing similar symbols across both books and other prophetic passages rather than relying on outside speculation. The consistent message across these prophecies is reassurance: despite the rise of powerful, opposing forces throughout history, God remains sovereign, and the story ends with Christ's decisive victory and the full establishment of His kingdom.",
+    "topics": [
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Daniel 2:44",
+      "Revelation 1:1-3",
+      "Revelation 19:11-16"
+    ],
+    "keywords": [
+      "daniel",
+      "revelation",
+      "apocalyptic",
+      "bible prophecy",
+      "symbols"
+    ]
+  },
+  {
+    "id": "answer-loneliness",
+    "question": "What does the Bible say to someone feeling lonely?",
+    "shortAnswer": "God promises never to leave or forsake His people, offering His presence, the support of Christian community, and purpose even in seasons of deep loneliness.",
+    "longAnswer": "Scripture repeatedly promises that believers are never truly alone, since God Himself promises to never leave or forsake His people, even in the most isolating circumstances. At the same time, God designed people for community, which is part of why the church is described as a body — meant to notice, include, and care for members who are struggling or isolated. Practical steps include being honest about loneliness rather than hiding it, actively seeking connection within a faith community, and serving others, which often reduces isolation while creating meaningful relationships over time.",
+    "topics": [
+      "Comfort",
+      "Church"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Deuteronomy 31:6",
+      "Psalm 68:6",
+      "Hebrews 10:24-25"
+    ],
+    "keywords": [
+      "loneliness",
+      "isolation",
+      "alone",
+      "community",
+      "belonging"
+    ]
+  },
+  {
+    "id": "answer-gods-law",
+    "question": "What is the purpose of God's law?",
+    "shortAnswer": "God's law reveals His character, shows what love for God and others looks like, and helps us recognize sin. We are not saved by keeping the law; we obey because God's grace has already reached us.",
+    "longAnswer": "The law of God is a gracious expression of His holy and loving character. It points out sin, gives a trustworthy standard for right and wrong, and teaches believers how to love God and their neighbors in practical ways. The law cannot justify sinners or replace faith in Christ, but grace does not make obedience meaningless. Through the Spirit, believers learn to delight in God's instruction and live it out as a response of gratitude.",
+    "topics": [
+      "Law",
+      "Faith",
+      "Christian Living"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Romans 3:20",
+      "Matthew 22:37-40",
+      "John 14:15"
+    ],
+    "keywords": [
+      "law",
+      "commandments",
+      "obedience",
+      "sin",
+      "God's character",
+      "grace"
+    ]
+  },
+  {
+    "id": "answer-sanctuary",
+    "question": "What does the Bible teach about the sanctuary?",
+    "shortAnswer": "The biblical sanctuary illustrates God's plan to dwell with His people and deal with sin. Its services point forward to Jesus, whose sacrifice and heavenly ministry provide forgiveness, cleansing, and access to God.",
+    "longAnswer": "The sanctuary was designed as a visible lesson about God's presence, the seriousness of sin, and the way He restores sinners. Its sacrifices pointed to Christ's once-for-all death, while the priestly ministry anticipated Jesus as our compassionate High Priest in heaven. The sanctuary message assures believers that salvation is not only pardon for the past but also Christ's continuing work to cleanse, intercede, and prepare His people for His return.",
+    "topics": [
+      "Sanctuary",
+      "Salvation",
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Exodus 25:8",
+      "Hebrews 8:1-2",
+      "Hebrews 9:11-14"
+    ],
+    "keywords": [
+      "sanctuary",
+      "tabernacle",
+      "high priest",
+      "Jesus",
+      "atonement",
+      "heavenly ministry"
+    ]
+  },
+  {
+    "id": "answer-women-ministry",
+    "question": "Are women permitted to serve as pastors or elders according to scripture?",
+    "shortAnswer": "Scripture shows women prophesying, teaching, leading, and serving as deacons under the Spirit's gifting, while a few passages about church order have been understood differently regarding the ordained elder or pastor role. Sincere believers hold different convictions on this question.",
+    "longAnswer": "The Bible records women such as Deborah leading Israel as a judge and prophet, Phoebe serving as a deacon, Priscilla teaching Apollos alongside her husband, and Joel's promise — quoted at Pentecost — that God's Spirit would fall on sons and daughters alike, enabling both to prophesy. At the same time, Paul's instructions in 1 Corinthians 14 and 1 Timothy 2 about order in worship and the office of elder have been read by some as limiting the ordained pastoral role to men, while others read them as addressing specific local disruptions rather than a universal rule for every context. Galatians 3:28 affirms that in Christ there is no spiritual hierarchy between male and female. Given this range within Scripture, believers can affirm women serving fully in ministry, teaching, and leadership according to their spiritual gifts, while extending grace and humility toward fellow Christians who apply these specific passages differently regarding ordination.",
+    "topics": [
+      "Church",
+      "Christian Living",
+      "Holy Spirit"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Judges 4:4-5",
+      "Romans 16:1-2",
+      "Acts 2:17-18",
+      "Galatians 3:28"
+    ],
+    "keywords": [
+      "women pastors",
+      "women elders",
+      "women in ministry",
+      "ordination",
+      "church leadership",
+      "deborah",
+      "phoebe"
+    ]
+  },
+  {
+    "id": "answer-masturbation",
+    "question": "Is self-pleasure considered a sin in the eyes of biblical scripture?",
+    "shortAnswer": "Scripture never names this act directly, but it repeatedly calls believers to guard the heart and mind from lust, to practice self-control, and to honor the body as a temple of the Holy Spirit. This is an area for honest, grace-filled reflection rather than fear or shame.",
+    "longAnswer": "The Bible does not explicitly mention masturbation, so any application depends on broader biblical principles rather than a direct command. Jesus taught that lust itself, not only outward action, matters to God, which points believers toward examining the thoughts and desires connected to any behavior. Paul calls believers to sexual self-control and holiness, and to treat the body as belonging to God rather than being ruled by unchecked desire, especially where habits become compulsive or entangled with pornography. Rather than a legalistic rule, Scripture invites honest self-examination before God, freedom from shame through grace, and reliance on the Holy Spirit's help to grow in purity and self-control over time.",
+    "topics": [
+      "Christian Living",
+      "Health"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 5:27-28",
+      "1 Thessalonians 4:3-5",
+      "1 Corinthians 6:19-20"
+    ],
+    "keywords": [
+      "masturbation",
+      "self-pleasure",
+      "lust",
+      "purity",
+      "self-control",
+      "sexuality"
+    ]
+  },
+  {
+    "id": "answer-tongues",
+    "question": "Is the spiritual gift of speaking and praying in tongues active for believers today?",
+    "shortAnswer": "At Pentecost, the gift of tongues enabled believers to proclaim the gospel in real, known languages they had not learned. Paul lists tongues among the Spirit's gifts, while also instructing that it must be exercised in order, with interpretation, and never above intelligible teaching that builds up the whole church.",
+    "longAnswer": "In Acts 2, tongues appear as actual human languages, allowing the gospel to be understood immediately by people from many nations without a language barrier. Paul confirms tongues as one of several genuine gifts distributed by the Spirit for the church's benefit, but in 1 Corinthians 14 he places clear guardrails on its use in public worship: it should be interpreted so the whole congregation can be built up, exercised in turn rather than chaos, and never elevated above intelligible teaching and prophecy, which edify the church far more directly. Whether or not the specific gift continues in exactly its New Testament form, the underlying principle stands: any spiritual gift, including tongues, is meant to build up the church in an orderly, understandable way, not to draw attention to the individual or create confusion.",
+    "topics": [
+      "Holy Spirit",
+      "Church"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "Acts 2:4-6",
+      "1 Corinthians 12:7-11",
+      "1 Corinthians 14:12-13, 40"
+    ],
+    "keywords": [
+      "tongues",
+      "speaking in tongues",
+      "gift of tongues",
+      "pentecost",
+      "spiritual gifts"
+    ]
+  },
+  {
+    "id": "answer-alcohol",
+    "question": "Does scripture forbid consuming alcohol, or is moderate drinking acceptable for Christians?",
+    "shortAnswer": "Scripture consistently and strongly warns against drunkenness and the dangers wine and strong drink bring, and even commends avoiding alcohol altogether as the wisest path. Because the body is a temple of the Holy Spirit meant to stay clear-headed for prayer, service, and self-control, abstaining entirely is the safest and most consistent application of these principles.",
+    "longAnswer": "Proverbs vividly warns against the sorrow, danger, and deception that come with strong drink, going so far as to counsel not even looking at wine when it sparkles in the cup. Priests were forbidden from drinking before entering the tabernacle so their judgment and service to God would stay clear, and Ephesians commands believers not to be drunk with wine, contrasting it with being filled with the Spirit. Since the body belongs to God as a temple of the Holy Spirit, and since alcohol can cloud judgment, harm health, and lead others into destructive habits, choosing total abstinence honors both the clear biblical warnings against drunkenness and the broader call to full self-control, a clear mind, and a body kept fit for God's service.",
+    "topics": [
+      "Health",
+      "Christian Living"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Proverbs 23:29-32",
+      "Ephesians 5:18",
+      "1 Corinthians 6:19-20"
+    ],
+    "keywords": [
+      "alcohol",
+      "drinking",
+      "wine",
+      "drunkenness",
+      "temperance",
+      "self-control"
+    ]
+  },
+  {
+    "id": "answer-gambling",
+    "question": "Is participating in gambling or games of chance considered a sin?",
+    "shortAnswer": "The Bible never mentions gambling by name, but its consistent principles — trusting God's providence rather than chance, working honestly for what you have, contentment, and guarding against the love of money — all caution strongly against it.",
+    "longAnswer": "Scripture repeatedly warns that the love of money is a root of many kinds of evil, and that those eager to get rich fall into temptation and harmful desires. Gambling relies on chance and the hope of gaining at another person's loss rather than honest labor, and Proverbs observes that wealth gained quickly and carelessly tends to dwindle away. Ecclesiastes notes that those who love money are never satisfied by it, describing a restless cycle gambling often feeds. Instead, Scripture calls believers to trust God's provision, work diligently and honestly for their needs, hold money loosely with contentment, and avoid practices that stir greed or exploit others' losses for personal gain.",
+    "topics": [
+      "Stewardship",
+      "Christian Living"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "1 Timothy 6:9-10",
+      "Proverbs 13:11",
+      "Ecclesiastes 5:10"
+    ],
+    "keywords": [
+      "gambling",
+      "lottery",
+      "games of chance",
+      "money",
+      "greed",
+      "stewardship"
+    ]
+  },
+  {
+    "id": "answer-baptism-meaning",
+    "question": "What does baptism symbolize in the Bible?",
+    "shortAnswer": "Baptism is a public confession of faith in Jesus, symbolizing death to the old life, burial with Christ, and rising to walk in newness of life.",
+    "longAnswer": "The New Testament presents baptism as a meaningful response to the gospel rather than a casual religious ritual. Going down into the water pictures burial with Christ, and coming up from the water pictures resurrection into a new life shaped by His grace. Baptism does not earn salvation, but it publicly identifies a believer with Jesus, His death and resurrection, and His people. In Acts, baptism follows repentance and faith as people receive the message of Christ and openly begin the life of discipleship.",
+    "topics": [
+      "Baptism",
+      "Salvation",
+      "Faith"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Romans 6:3-4",
+      "Acts 2:38",
+      "Matthew 28:19-20"
+    ],
+    "keywords": [
+      "baptism meaning",
+      "immersion",
+      "new life",
+      "repentance",
+      "discipleship"
+    ]
+  },
+  {
+    "id": "answer-great-controversy-meaning",
+    "question": "What is the great controversy in the Bible?",
+    "shortAnswer": "The great controversy is the Bible's picture of the conflict between Christ and Satan, truth and deception, love and rebellion, with God's character ultimately vindicated before the universe.",
+    "longAnswer": "Scripture describes more than isolated human struggles; it reveals a larger conflict behind history. Satan's rebellion began with pride and accusation against God's character, and earth became the place where sin's consequences are exposed and God's love is revealed most clearly in Christ. The cross shows that God wins not by coercion but by self-sacrificing love. Until evil is finally removed, believers are called to faithfulness, discernment, prayer, and confidence that Christ has already secured the outcome. This framework helps explain suffering without blaming God as the author of evil.",
+    "topics": [
+      "Great Controversy",
+      "Prophecy",
+      "Faith"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Revelation 12:7-12",
+      "Genesis 3:15",
+      "John 12:31-32"
+    ],
+    "keywords": [
+      "great controversy",
+      "cosmic conflict",
+      "satan",
+      "evil",
+      "spiritual warfare",
+      "god's character"
+    ]
+  },
+  {
+    "id": "answer-law-and-grace",
+    "question": "How do law and grace work together in the Christian life?",
+    "shortAnswer": "Grace saves sinners through faith in Christ, while God's law shows what love looks like. Obedience is the fruit of salvation, not the price paid to receive it.",
+    "longAnswer": "The Bible never presents God's grace and God's law as enemies. Grace forgives, restores, and writes God's will on the heart; the law reveals God's character and shows what love for God and neighbor looks like in practical life. Legalism tries to use obedience as a ladder to earn acceptance, but the gospel teaches that acceptance comes through Christ alone. At the same time, grace does not make rebellion desirable. The Spirit leads believers into willing obedience because they have already been loved, rescued, and made new.",
+    "topics": [
+      "Law",
+      "Salvation",
+      "Christian Living",
+      "Faith"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Ephesians 2:8-10",
+      "Romans 3:31",
+      "John 14:15"
+    ],
+    "keywords": [
+      "law and grace",
+      "obedience",
+      "legalism",
+      "commandments",
+      "faith",
+      "gospel"
+    ]
+  },
+  {
+    "id": "answer-sanctuary-today",
+    "question": "Why does the sanctuary message matter today?",
+    "shortAnswer": "The sanctuary message matters because it shows how God deals with sin through Christ's sacrifice, priestly ministry, judgment, cleansing, and final restoration.",
+    "longAnswer": "The earthly sanctuary was a living illustration of the gospel. Its sacrifices pointed forward to Jesus' death, its priestly ministry pointed to His intercession, and its Day of Atonement pointed to God's final work of cleansing and judgment. This message matters today because it gives believers assurance that Christ's ministry did not end at the cross; He continues to apply the benefits of His sacrifice, represent His people, and prepare the universe for the complete end of sin. The sanctuary keeps salvation centered on Jesus from beginning to end.",
+    "topics": [
+      "Sanctuary",
+      "Salvation",
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Hebrews 4:14-16",
+      "Hebrews 8:1-2",
+      "Daniel 8:14"
+    ],
+    "keywords": [
+      "sanctuary message",
+      "atonement",
+      "high priest",
+      "heavenly sanctuary",
+      "judgment",
+      "cleansing"
+    ]
+  },
+  {
+    "id": "answer-ready-for-second-coming",
+    "question": "How can I be ready for the Second Coming of Jesus?",
+    "shortAnswer": "Readiness for Jesus' return is not date-setting or fear. It is an active relationship with Christ that shows itself in faith, watchfulness, obedience, service, and hope.",
+    "longAnswer": "Jesus repeatedly warned His followers to stay awake, not because they should live in panic, but because discipleship can become sleepy, distracted, or careless. Readiness begins with trusting Christ now, receiving His grace, and staying connected to Him daily. It also includes practical faithfulness: forgiving others, serving people in need, sharing the gospel, and living with eternity in view. Prophecy is meant to strengthen hope and loyalty, not produce speculation. The safest preparation for Christ's return is a surrendered life with Him today.",
+    "topics": [
+      "Second Coming",
+      "Prophecy",
+      "Christian Living",
+      "Faith"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Matthew 24:42-44",
+      "Luke 21:34-36",
+      "Titus 2:11-13"
+    ],
+    "keywords": [
+      "ready for second coming",
+      "watchfulness",
+      "Jesus return",
+      "end times",
+      "prepared",
+      "hope"
+    ]
+  },
+  {
+    "id": "answer-depression",
+    "question": "What does the Bible say to someone struggling with depression?",
+    "shortAnswer": "Scripture gives room for deep sorrow while pointing the hurting person toward God's nearness, honest prayer, supportive community, and patient hope.",
+    "longAnswer": "The Bible does not pretend that faithful people never experience darkness. Elijah, David, Jeremiah, and others expressed exhaustion, grief, and despair honestly before God. Scripture invites lament rather than denial, reminding the suffering person that God is near to the brokenhearted and attentive to cries for help. Depression should never be treated as a simple spiritual failure; wise care may include prayer, Scripture, trusted friends, pastoral support, counseling, and medical help when needed. Hope often returns gradually, but God's presence is not limited to seasons when emotions feel strong.",
+    "topics": [
+      "Comfort",
+      "Prayer",
+      "Health",
+      "Christian Living"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Psalm 34:18",
+      "1 Kings 19:4-8",
+      "Psalm 42:11"
+    ],
+    "keywords": [
+      "depression",
+      "sadness",
+      "mental health",
+      "despair",
+      "hope",
+      "emotional pain"
+    ]
+  },
+  {
+    "id": "answer-unanswered-prayer",
+    "question": "Why does God sometimes seem silent when I pray?",
+    "shortAnswer": "God's silence does not mean absence or rejection. Scripture teaches believers to keep praying, examine the heart, trust God's timing, and rest in His wisdom.",
+    "longAnswer": "Many prayers in Scripture include seasons of waiting, confusion, and apparent silence. The Psalms often ask how long God will delay, showing that honest questions can be part of real faith. Sometimes prayer is hindered by cherished sin, selfish motives, or broken relationships that need attention; other times the delay is not explained, and believers are simply invited to trust God's character. Jesus Himself prayed in agony and surrendered to the Father's will. God's answers may be yes, no, wait, or a deeper work than the person first asked for, but His silence is never proof that He has stopped caring.",
+    "topics": [
+      "Prayer",
+      "Faith",
+      "Comfort"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "Psalm 13:1-2",
+      "Luke 18:1",
+      "1 John 5:14"
+    ],
+    "keywords": [
+      "unanswered prayer",
+      "God silent",
+      "waiting",
+      "prayer delay",
+      "trust",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-communion",
+    "question": "What is the meaning of the Lord's Supper or Communion?",
+    "shortAnswer": "Communion remembers Christ's sacrifice, proclaims His death, renews faith in His grace, and points forward to His return.",
+    "longAnswer": "Jesus gave the bread and cup as a memorial of His body given and His blood poured out for sinners. Communion is not an empty tradition; it invites believers to remember the cost of salvation, receive again the assurance of grace, examine the heart, and renew unity with other believers. Paul says that every time Christians eat the bread and drink the cup, they proclaim the Lord's death until He comes. This means Communion looks backward to the cross, inward to repentance and faith, outward to fellowship, and forward to Christ's return.",
+    "topics": [
+      "Church",
+      "Salvation",
+      "Faith"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Luke 22:19-20",
+      "1 Corinthians 11:23-26",
+      "John 6:35"
+    ],
+    "keywords": [
+      "communion",
+      "lord's supper",
+      "bread and cup",
+      "foot washing",
+      "church",
+      "cross"
+    ]
+  },
+  {
+    "id": "answer-clean-unclean-foods",
+    "question": "Does the Bible still distinguish between clean and unclean foods?",
+    "shortAnswer": "Scripture identifies clean and unclean animals before Sinai and connects wise eating with holiness, health, and honoring God with the body.",
+    "longAnswer": "The clean and unclean distinction appears as early as Noah, long before the ceremonial laws given through Moses. Leviticus later gives detailed instruction about which animals were considered clean for food, and the New Testament never presents unclean animals as newly healthy or spiritually beneficial to eat. Passages sometimes used to erase the distinction are better read in context as addressing human traditions, Gentile inclusion, or food offered to idols rather than redefining unclean animals as clean. Christians are not saved by diet, but caring for the body as God's temple makes food choices part of grateful stewardship.",
+    "topics": [
+      "Health",
+      "Law",
+      "Christian Living"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Genesis 7:2",
+      "Leviticus 11:1-8",
+      "1 Corinthians 10:31"
+    ],
+    "keywords": [
+      "clean and unclean foods",
+      "diet",
+      "pork",
+      "health message",
+      "Leviticus 11",
+      "food laws"
+    ]
+  },
+  {
+    "id": "answer-family-worship",
+    "question": "How can a family worship God together at home?",
+    "shortAnswer": "Family worship can be simple: read Scripture, pray together, sing or share gratitude, and talk about how God's Word applies to daily life.",
+    "longAnswer": "The Bible pictures faith being taught in the ordinary rhythms of home life, not only during formal worship services. Family worship does not need to be long or complicated to be meaningful. A short passage, a question everyone can answer, prayer for real needs, and a moment of thanksgiving can shape the atmosphere of a home over time. Parents are called to teach diligently, but children also learn from seeing humility, forgiveness, and consistency. The goal is not performance; it is creating regular space for the family to remember God together.",
+    "topics": [
+      "Marriage and Family",
+      "Prayer",
+      "Bible Study",
+      "Christian Living"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Deuteronomy 6:6-7",
+      "Joshua 24:15",
+      "Psalm 78:4"
+    ],
+    "keywords": [
+      "family worship",
+      "home worship",
+      "children",
+      "parents",
+      "devotions",
+      "prayer"
+    ]
+  },
+  {
+    "id": "answer-daily-bible-reading",
+    "question": "Why is daily Bible reading important?",
+    "shortAnswer": "Daily Bible reading keeps the heart rooted in God's voice, renews the mind, strengthens faith, and gives wisdom for ordinary decisions.",
+    "longAnswer": "Scripture describes God's Word as light, food, seed, and a sword because it shapes the inner life in ways people cannot produce by willpower alone. Regular Bible reading helps believers recognize God's character, test ideas, resist temptation, and remember promises when feelings shift. The goal is not checking off a spiritual task, but listening to God with a teachable heart. Even a small daily portion, read prayerfully and applied honestly, can build long-term spiritual stability and deepen love for Christ.",
+    "topics": [
+      "Bible Study",
+      "Faith",
+      "Christian Living"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "Psalm 119:105",
+      "Matthew 4:4",
+      "2 Timothy 3:16-17"
+    ],
+    "keywords": [
+      "daily Bible reading",
+      "devotions",
+      "Scripture study",
+      "spiritual growth",
+      "God's Word"
+    ]
+  },
+  {
+    "id": "answer-baptism-age",
+    "question": "Is there a right age to be baptized?",
+    "shortAnswer": "Scripture does not set a fixed age; baptism follows a personal, understood decision to repent and trust Christ, whether that comes early or later in life.",
+    "longAnswer": "The New Testament pattern for baptism follows belief, not birth or family tradition alone. Every baptism recorded in Acts follows a person hearing the gospel, understanding it, and choosing to respond. Because of this, readiness matters more than a specific number: a child, teen, or adult can be baptized once they grasp what it means to repent, trust Jesus as Savior, and commit to following Him. Parents, mentors, and church leaders can help someone weigh that decision honestly rather than rushing it or delaying it out of fear.",
+    "topics": [
+      "Baptism",
+      "Church",
+      "Faith"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Acts 8:36-37",
+      "Acts 16:31-33",
+      "Mark 16:16"
+    ],
+    "keywords": [
+      "baptism age",
+      "children",
+      "believer's baptism",
+      "decision",
+      "commitment"
+    ]
+  },
+  {
+    "id": "answer-sanctuary-meaning",
+    "question": "What is the meaning of the sanctuary in the Bible?",
+    "shortAnswer": "The Old Testament sanctuary was a visual gospel, teaching how sin is confessed, atoned for, and ultimately removed through the work of Jesus Christ.",
+    "longAnswer": "God instructed Israel to build a sanctuary so He could dwell among His people and teach them, in pictures they could see and touch, how salvation works. Its furniture, sacrifices, and priestly service illustrated substitution, cleansing, mediation, and final judgment. The New Testament identifies Jesus as the reality behind every sanctuary symbol: He is the sacrifice, the High Priest, and the one who ministers on behalf of sinners. Understanding the sanctuary helps believers see the gospel as an unfolding story rather than an isolated event, one that moves toward the final removal of sin altogether.",
+    "topics": [
+      "Sanctuary",
+      "Salvation",
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Hebrews 8:1-2",
+      "Hebrews 9:11-12",
+      "Exodus 25:8"
+    ],
+    "keywords": [
+      "sanctuary",
+      "tabernacle",
+      "high priest",
+      "sacrifice",
+      "atonement"
+    ]
+  },
+  {
+    "id": "answer-day-of-atonement",
+    "question": "What was the Day of Atonement and why does it matter today?",
+    "shortAnswer": "The Day of Atonement pictured a final cleansing of sin's record, pointing forward to the judgment and to Christ's ongoing work of removing sin completely.",
+    "longAnswer": "Once a year, Israel's high priest entered the Most Holy Place to complete the cleansing of the sanctuary, removing the accumulated record of confessed sin from the camp. This yearly ceremony pictured something larger than a ritual: a coming day when sin's record would be fully and finally dealt with. The New Testament connects this pattern to Christ's ministry in heaven and to a future judgment, reminding believers that confessed sin is not just forgiven but will be completely blotted out, and calling for genuine repentance rather than casual religion.",
+    "topics": [
+      "Sanctuary",
+      "Prophecy",
+      "Second Coming"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Leviticus 16:29-30",
+      "Daniel 8:14",
+      "Hebrews 9:23-24"
+    ],
+    "keywords": [
+      "day of atonement",
+      "judgment",
+      "cleansing",
+      "sanctuary",
+      "Daniel 8"
+    ]
+  },
+  {
+    "id": "answer-forgive-myself",
+    "question": "How can I forgive myself after making a serious mistake?",
+    "shortAnswer": "Self-forgiveness grows out of receiving God's forgiveness fully — trusting that His pardon in Christ is complete, even when guilty feelings linger.",
+    "longAnswer": "Many people find it easier to believe God forgives others than to believe He has truly forgiven them. Scripture insists that confessed sin is genuinely removed, compared to a debt fully paid, not partially excused. Struggling to forgive yourself often means trusting your own judgment of your worth more than God's finished work on the cross. Practical steps include confessing specifically, receiving Scripture's promises as true regardless of feelings, making amends where possible, and refusing to let shame define an identity that God has already declared forgiven and renewed.",
+    "topics": [
+      "Forgiveness",
+      "Comfort",
+      "Salvation"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "1 John 1:9",
+      "Psalm 103:12",
+      "Romans 8:1"
+    ],
+    "keywords": [
+      "self-forgiveness",
+      "guilt",
+      "shame",
+      "grace",
+      "past mistakes"
+    ]
+  },
+  {
+    "id": "answer-second-coming-signs",
+    "question": "What are the biblical signs that Jesus is coming soon?",
+    "shortAnswer": "Jesus described spiritual, social, and global signs — false christs, wars, disasters, and the gospel reaching the whole world — as markers that His return is near.",
+    "longAnswer": "In the Olivet Discourse, Jesus warned against being deceived by false messiahs while pointing to broader patterns: wars, famines, earthquakes, persecution, increasing lawlessness, and love growing cold. He also gave a positive sign of hope: the gospel being preached to the whole world as a witness before the end comes. These signs are meant to prepare hearts rather than fuel date-setting or fear; Jesus repeatedly emphasized watching, staying spiritually awake, and living faithfully rather than trying to calculate an exact time.",
+    "topics": [
+      "Second Coming",
+      "Prophecy",
+      "Faith"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Matthew 24:6-14",
+      "Luke 21:25-28",
+      "2 Timothy 3:1-5"
+    ],
+    "keywords": [
+      "signs of the times",
+      "second coming",
+      "end times",
+      "Olivet Discourse",
+      "watching"
+    ]
+  },
+  {
+    "id": "answer-how-did-sin-begin",
+    "question": "How did sin and evil begin, according to the Bible?",
+    "shortAnswer": "Sin began with pride and rebellion in heaven, when a created angel desired God's authority for himself, and it spread to earth through the same temptation to distrust God.",
+    "longAnswer": "Scripture traces evil's origin not to God's creation but to the choice of a created being. Isaiah and Ezekiel describe, in poetic language layered over historical kings, the fall of a covering angel whose heart was lifted up with pride and who sought to exalt himself above God. That same rebellion reached earth in Eden, when the serpent tempted humanity with the identical lie: that God's authority and word could not be trusted. Understanding sin's origin as a moral choice rather than a divine flaw helps explain why God tolerates evil for a time — to fully expose its results — while still guaranteeing its final, complete end.",
+    "topics": [
+      "Great Controversy",
+      "Faith",
+      "Prophecy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Isaiah 14:12-14",
+      "Ezekiel 28:14-17",
+      "Genesis 3:1-5"
+    ],
+    "keywords": [
+      "origin of sin",
+      "fall of Lucifer",
+      "rebellion",
+      "great controversy",
+      "evil"
+    ]
+  },
+  {
+    "id": "answer-three-angels-first",
+    "question": "What is the message of the first angel in Revelation 14?",
+    "shortAnswer": "The first angel calls the world to fear God, give Him glory, and worship the Creator, announcing that the hour of judgment has arrived.",
+    "longAnswer": "Revelation 14 pictures an angel flying with the everlasting gospel to preach to every nation, tribe, tongue, and people. Its core call is worship: fearing God, giving Him glory, and recognizing Him as Creator of heaven, earth, sea, and springs of water. This message directly echoes the fourth commandment's language about the Sabbath as a memorial of creation, tying true worship to acknowledging God's authority as Maker rather than any substitute authority. The announcement that judgment has come is a call to take eternity seriously and choose loyalty to God before probation closes.",
+    "topics": [
+      "Three Angels",
+      "Prophecy",
+      "Sabbath"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Revelation 14:6-7",
+      "Exodus 20:11",
+      "Psalm 96:9"
+    ],
+    "keywords": [
+      "three angels messages",
+      "first angel",
+      "everlasting gospel",
+      "worship the creator",
+      "judgment hour"
+    ]
+  },
+  {
+    "id": "answer-health-body-temple",
+    "question": "Why does the Bible call the body a temple, and does it affect daily choices?",
+    "shortAnswer": "Because the Holy Spirit dwells within believers, Scripture calls the body a temple, inviting care for physical health as part of honoring God, not as a means of earning salvation.",
+    "longAnswer": "Paul's description of the body as a temple of the Holy Spirit reframes ordinary choices — diet, rest, exercise, and substance use — as spiritual matters rather than purely personal preferences. This is never presented as a system for earning God's favor; salvation remains a gift received by faith. Instead, caring for physical health flows from gratitude, recognizing that a clear mind and a well-cared-for body support a life of service, worship, and discernment. Scripture's health principles, such as the original diet given at creation and rest built into the weekly rhythm, still offer wisdom for whole-person well-being today.",
+    "topics": [
+      "Health",
+      "Christian Living",
+      "Creation"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "1 Corinthians 6:19-20",
+      "3 John 1:2",
+      "Genesis 1:29"
+    ],
+    "keywords": [
+      "health",
+      "body as temple",
+      "wellness",
+      "diet",
+      "stewardship of the body"
+    ]
+  },
+  {
+    "id": "answer-creation-six-days",
+    "question": "Did God really create the world in six literal days?",
+    "shortAnswer": "Scripture describes creation as six literal days followed by a seventh day of rest, a pattern later memorialized in the weekly Sabbath commandment.",
+    "longAnswer": "Genesis records creation using the same Hebrew word for \"day\" paired with \"evening and morning,\" the same pattern used elsewhere in Scripture for literal 24-hour days. The fourth commandment reinforces this reading by grounding the seven-day week in God's literal creation week, not in a symbolic or extended process. Believing in a recent, literal creation shapes more than a science debate; it affirms that human life has inherent dignity as God's direct handiwork, that death entered through sin rather than being part of God's original design, and that the weekly Sabbath rests on a real historical foundation.",
+    "topics": [
+      "Creation",
+      "Sabbath",
+      "Faith"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "Genesis 1:31-2:3",
+      "Exodus 20:11",
+      "Hebrews 11:3"
+    ],
+    "keywords": [
+      "creation",
+      "six days",
+      "literal week",
+      "Genesis",
+      "origins"
+    ]
+  },
+  {
+    "id": "answer-baptism-mode-immersion",
+    "question": "Does baptism have to be by full immersion, or is sprinkling enough?",
+    "shortAnswer": "Every New Testament example of baptism describes going down into water and coming up out of it, matching the biblical picture of burial and resurrection with Christ.",
+    "longAnswer": "The Greek word behind \"baptize\" means to dip or immerse, and the New Testament's baptism scenes consistently describe candidates going down into the water and coming back up, such as Philip and the Ethiopian official both entering and leaving the water together. This matters because immersion is the visual heart of the symbol: burial with Christ under the water and rising to new life as the person emerges, a picture that sprinkling or pouring does not fully convey. Choosing immersion is not about ritual precision for its own sake, but about letting the physical act preach the same gospel truth Paul described in Romans.",
+    "topics": [
+      "Baptism",
+      "Salvation",
+      "Bible Study"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Acts 8:38-39",
+      "Romans 6:4",
+      "Matthew 3:16"
+    ],
+    "keywords": [
+      "baptism mode",
+      "immersion",
+      "sprinkling",
+      "burial with Christ",
+      "Acts 8"
+    ]
+  },
+  {
+    "id": "answer-baptism-before-communion",
+    "question": "Do I need to be baptized before taking communion?",
+    "shortAnswer": "Communion in the New Testament is shared among believers who have already publicly identified with Christ, so baptism naturally comes first as the entry point into that shared fellowship.",
+    "longAnswer": "The Lord's Supper was instituted among Jesus' committed disciples, and the early church's pattern in Acts shows new believers being baptized and then continuing steadfastly in the apostles' teaching, fellowship, and the breaking of bread. Baptism marks a person's public entrance into the family of faith, while communion renews and celebrates that same covenant relationship together as a community. Someone still exploring faith is warmly welcome to attend and observe, but taking communion works best as a next step after baptism, not before it, so both symbols keep their full meaning.",
+    "topics": [
+      "Baptism",
+      "Church",
+      "Christian Living"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Acts 2:41-42",
+      "1 Corinthians 11:23-26",
+      "Acts 2:38"
+    ],
+    "keywords": [
+      "communion",
+      "Lord's supper",
+      "baptism first",
+      "church membership",
+      "fellowship"
+    ]
+  },
+  {
+    "id": "answer-stewardship-time-talents",
+    "question": "What does biblical stewardship mean beyond just money?",
+    "shortAnswer": "Stewardship covers everything entrusted to us — time, abilities, health, relationships, and possessions — and calls believers to manage all of it faithfully as caretakers, not owners.",
+    "longAnswer": "The parable of the talents pictures a master entrusting differing amounts of resources to his servants and later evaluating how faithfully, not how much, they managed what they were given. This principle extends stewardship far beyond a checkbook: time is a limited gift that can be spent wisely or wasted, spiritual gifts and abilities are meant to serve the community rather than sit unused, and even health and relationships are entrusted responsibilities. Recognizing that everything ultimately belongs to God frees people from either hoarding out of fear or wasting resources carelessly, and instead invites purposeful, grateful management of a life that is not fully one's own.",
+    "topics": [
+      "Stewardship",
+      "Christian Living",
+      "Church"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 25:14-30",
+      "1 Peter 4:10",
+      "Psalm 24:1"
+    ],
+    "keywords": [
+      "stewardship",
+      "talents",
+      "time management",
+      "spiritual gifts",
+      "faithfulness"
+    ]
+  },
+  {
+    "id": "answer-sanctuary-daily-service",
+    "question": "What happened in the daily sanctuary service, and why does it matter?",
+    "shortAnswer": "The daily sacrifices in the sanctuary let individual Israelites confess sin and receive forgiveness through a substitute, foreshadowing Christ's continual ministry on behalf of every believer.",
+    "longAnswer": "Each day, individuals who had sinned brought an animal to the sanctuary, confessed their sin over it, and watched it die in their place, a vivid picture that sin's penalty is death and that forgiveness comes through a substitute. The priest would then carry the record of that sin, symbolically, into the Holy Place, showing that confessed sin was forgiven but still recorded until final cleansing. This daily rhythm points forward to Christ, who does not simply forgive once at the cross but continually intercedes for confessing believers, applying His sacrifice moment by moment as their eternal High Priest.",
+    "topics": [
+      "Sanctuary",
+      "Salvation",
+      "Prayer"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Leviticus 4:27-31",
+      "Hebrews 7:25",
+      "1 John 2:1-2"
+    ],
+    "keywords": [
+      "daily sacrifice",
+      "sanctuary service",
+      "substitute",
+      "intercession",
+      "high priest"
+    ]
+  },
+  {
+    "id": "answer-state-of-dead-spiritism",
+    "question": "Why does the Bible warn against consulting mediums or trying to contact the dead?",
+    "shortAnswer": "Scripture forbids consulting mediums because the dead are unconscious and cannot communicate, meaning such contact is either deception or a counterfeit spiritual encounter, not genuine contact with a departed loved one.",
+    "longAnswer": "The law given through Moses explicitly forbade consulting mediums or spiritists, and King Saul's disastrous attempt to contact Samuel through a medium is presented as an act of unfaithfulness that hastened his downfall. Because Scripture describes the dead as sleeping, unaware of anything happening in the world of the living, any voice or presence claiming to be a deceased person is not what it appears to be. This warning protects grieving people from being exploited or deceived, and it points them instead toward genuine comfort found in prayer, Scripture's promises, and the sure hope of the resurrection when loved ones in Christ will be reunited.",
+    "topics": [
+      "State of the Dead",
+      "Great Controversy",
+      "Comfort"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Deuteronomy 18:10-12",
+      "1 Samuel 28:6-7",
+      "Isaiah 8:19-20"
+    ],
+    "keywords": [
+      "mediums",
+      "spiritism",
+      "contacting the dead",
+      "necromancy",
+      "deception"
+    ]
+  },
+  {
+    "id": "answer-holy-spirit-gifts",
+    "question": "What are spiritual gifts, and how do I know mine?",
+    "shortAnswer": "Spiritual gifts are Spirit-given abilities distributed to believers to build up the church, discovered through serving, prayerful reflection, and the confirmation of a faith community.",
+    "longAnswer": "Paul describes a variety of spiritual gifts — teaching, encouragement, service, leadership, generosity, and more — given by the same Spirit to different people for the common good, like parts of one body serving a shared purpose. No believer receives every gift, and no gift is more \"spiritual\" than another when it is used to serve rather than to gain status. Discovering a gift usually happens through practice rather than abstract guessing: trying different forms of service, noticing where genuine fruit and encouragement follow, and listening to trusted believers who can recognize gifts that may be harder to see in oneself.",
+    "topics": [
+      "Holy Spirit",
+      "Church",
+      "Christian Living"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "1 Corinthians 12:4-11",
+      "Romans 12:4-8",
+      "1 Peter 4:10-11"
+    ],
+    "keywords": [
+      "spiritual gifts",
+      "Holy Spirit",
+      "serving the church",
+      "discovering your gift",
+      "body of Christ"
+    ]
+  },
+  {
+    "id": "answer-church-leadership-structure",
+    "question": "Why does the church need organization and leadership if faith is personal?",
+    "shortAnswer": "Scripture treats the church as a body with different members and roles working together, so structure and leadership exist to serve unity and mission, not to replace a believer's personal relationship with God.",
+    "longAnswer": "Even in the New Testament's earliest days, the church quickly appointed leaders, elders, and deacons to care for practical needs, teach sound doctrine, and guard against confusion as the movement grew. Paul compares the church to a body with many parts, each serving a distinct function, which requires some coordination to work well together rather than in chaos. Organization is never meant to control someone's private walk with God; personal faith, prayer, and Bible study remain irreplaceable. Instead, healthy structure protects the community from division, supports consistent teaching, and multiplies the church's ability to serve and reach others.",
+    "topics": [
+      "Church",
+      "Christian Living",
+      "Stewardship"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Acts 6:1-6",
+      "1 Corinthians 12:12-14",
+      "Titus 1:5"
+    ],
+    "keywords": [
+      "church organization",
+      "church leadership",
+      "elders and deacons",
+      "unity",
+      "body of Christ"
+    ]
+  },
+  {
+    "id": "answer-health-mental-emotional",
+    "question": "Does the Bible have anything to say about mental and emotional health?",
+    "shortAnswer": "Scripture takes emotional struggle seriously, offering honest examples of depression and despair alongside practical patterns of rest, community, prayer, and hope that support emotional well-being.",
+    "longAnswer": "Biblical figures like Elijah and David openly described despair, exhaustion, and even a wish to die, and God responded with practical care — rest, food, and companionship — before addressing deeper spiritual matters, modeling a whole-person approach to emotional struggle. The Psalms give language for lament, allowing raw honesty before God rather than forced positivity. Community also matters deeply; believers are called to bear one another's burdens and to weep with those who weep rather than isolate the hurting. None of this replaces wise professional care when needed, but it affirms that emotional pain is not a sign of spiritual failure and that God meets people in it with genuine compassion.",
+    "topics": [
+      "Health",
+      "Comfort",
+      "Prayer"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "1 Kings 19:4-8",
+      "Psalm 42:5",
+      "Galatians 6:2"
+    ],
+    "keywords": [
+      "mental health",
+      "depression",
+      "emotional health",
+      "lament",
+      "Elijah despair"
+    ]
   }
 ];
 
@@ -1274,6 +7017,9 @@ const spotlightTags = document.querySelector("#spotlight-tags");
 const spotlightLink = document.querySelector("#spotlight-link");
 const spotlightShort = document.querySelector("#spotlight-short");
 const spotlightCta = document.querySelector("#spotlight-cta");
+const spotlightPrevious = document.querySelector("#spotlight-previous");
+const spotlightNext = document.querySelector("#spotlight-next");
+const spotlightProgressFill = document.querySelector("#spotlight-progress-fill");
 const promiseText = document.querySelector("#promise-text");
 const promiseReference = document.querySelector("#promise-reference");
 const promisePrevious = document.querySelector("#promise-previous");
@@ -2022,6 +7768,7 @@ function currentPromise() {
 
 function renderPromise() {
   const promise = currentPromise();
+  replayElementAnimation(promiseText.closest(".promise-copy"), "is-transitioning");
   updatePromiseTextHeight();
   promiseText.replaceChildren(promiseQuoteSpan(promise.text));
   promiseReference.textContent = promise.reference;
@@ -2075,6 +7822,7 @@ function schedulePromiseTextHeightUpdate() {
 function advancePromise(direction = 1) {
   promiseIndex = (promiseIndex + direction + biblePromises.length) % biblePromises.length;
   renderPromise();
+  restartTimedProgress(promiseProgressFill);
 }
 
 function promiseShareText() {
@@ -2648,6 +8396,16 @@ function promiseImageFileName(promise) {
   return `word-oasis-${slug || "promise"}.png`;
 }
 
+function replayElementAnimation(element, className) {
+  if (!element) {
+    return;
+  }
+
+  element.classList.remove(className);
+  void element.offsetWidth;
+  element.classList.add(className);
+}
+
 async function createPromiseImageBlob(promise) {
   const canvas = await renderPromiseImage(promise);
   const blob = await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
@@ -2908,18 +8666,23 @@ function clearAnswerFilters() {
 }
 
 let spotlightAnswerIndex = -1;
+let spotlightRotation;
 
-function renderSpotlightAnswer() {
+function currentSpotlightAnswer() {
+  return answers[spotlightAnswerIndex] || answers[0];
+}
+
+function renderSpotlightAnswer(direction = 1) {
   if (!answers.length) {
     return;
   }
 
-  // Avoid repeating the same question twice in a row when shuffling.
-  let index = spotlightAnswerIndex;
-  while (index === spotlightAnswerIndex && answers.length > 1) {
-    index = Math.floor(Math.random() * answers.length);
-  }
-  spotlightAnswerIndex = index === spotlightAnswerIndex ? 0 : index;
+  replayElementAnimation(document.querySelector("#spotlight-body"), "is-transitioning");
+
+  spotlightAnswerIndex =
+    spotlightAnswerIndex === -1
+      ? 0
+      : (spotlightAnswerIndex + direction + answers.length) % answers.length;
 
   const answer = answers[spotlightAnswerIndex];
   const url = answerUrl(answer);
@@ -2932,6 +8695,13 @@ function renderSpotlightAnswer() {
   spotlightLink.href = url;
   spotlightShort.textContent = answer.shortAnswer;
   spotlightCta.href = url;
+  restartTimedProgress(spotlightProgressFill);
+}
+
+function restartSpotlightRotation() {
+  window.clearInterval(spotlightRotation);
+  spotlightRotation = window.setInterval(() => renderSpotlightAnswer(), 10000);
+  restartTimedProgress(spotlightProgressFill);
 }
 
 const perspectivesByCategory = {
@@ -3064,6 +8834,16 @@ promiseCopy.addEventListener("click", copyPromise);
 
 promiseSaveImage.addEventListener("click", downloadPromiseImage);
 
+spotlightNext.addEventListener("click", () => {
+  renderSpotlightAnswer();
+  restartSpotlightRotation();
+});
+
+spotlightPrevious.addEventListener("click", () => {
+  renderSpotlightAnswer(-1);
+  restartSpotlightRotation();
+});
+
 [promiseFacebookShare, promiseLinkedInShare].forEach((shareLink) => {
   shareLink.addEventListener("click", (event) => {
     event.preventDefault();
@@ -3087,15 +8867,19 @@ if (document.fonts) {
   document.fonts.ready.then(updatePromiseTextHeight);
 }
 
-function restartPromiseProgress() {
-  if (!promiseProgressFill) {
+function restartTimedProgress(progressFill) {
+  if (!progressFill) {
     return;
   }
-  promiseProgressFill.classList.remove("is-running");
+  progressFill.classList.remove("is-running");
   // Force a reflow so removing/re-adding the class restarts the CSS
   // animation from zero instead of continuing where it left off.
-  void promiseProgressFill.offsetWidth;
-  promiseProgressFill.classList.add("is-running");
+  void progressFill.offsetWidth;
+  progressFill.classList.add("is-running");
+}
+
+function restartPromiseProgress() {
+  restartTimedProgress(promiseProgressFill);
 }
 
 function restartPromiseRotation() {
@@ -3240,9 +9024,6 @@ renderTopicFilters();
 populateQuestionTopics();
 renderAnswers();
 renderSpotlightAnswer();
+restartSpotlightRotation();
 
 resultsClear.addEventListener("click", clearAnswerFilters);
-
-// Rotates the featured question automatically since the manual shuffle
-// control was removed in favor of a simple "Bible Answers" label.
-window.setInterval(renderSpotlightAnswer, 10000);

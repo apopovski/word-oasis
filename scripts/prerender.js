@@ -241,7 +241,7 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
       gtag("config", "G-5WRW513RFW");
     </script>
     <link rel="canonical" href="${canonical}">
-    <link rel="icon" href="/word-oasis.svg" type="image/svg+xml">
+    <link rel="icon" href="/SVG/wordoasis-mark.svg" type="image/svg+xml">
     <link rel="alternate icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -250,20 +250,20 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261005">
+    <link rel="stylesheet" href="/styles.css?v=20261014">
     <meta property="og:type" content="${ogType}">
     <meta property="og:title" content="${escapeAttribute(title)}">
     <meta property="og:description" content="${escapeAttribute(description)}">
     <meta property="og:url" content="${canonical}">
     <meta property="og:site_name" content="Word Oasis">
-    <meta property="og:image" content="${SITE_URL}/og-image.png?v=20261005">
+    <meta property="og:image" content="${SITE_URL}/og-image.png?v=20261014">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Word Oasis logo with a daily Scripture, hope, and encouragement message">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${escapeAttribute(title)}">
     <meta name="twitter:description" content="${escapeAttribute(description)}">
-    <meta name="twitter:image" content="${SITE_URL}/og-image.png?v=20261005">
+    <meta name="twitter:image" content="${SITE_URL}/og-image.png?v=20261014">
     <meta name="twitter:image:alt" content="Word Oasis logo with a daily Scripture, hope, and encouragement message">
     ${jsonLd}
   </head>
@@ -391,8 +391,8 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
       </div>
     </div>
 
-    <script src="/theme.js?v=20261005"></script>
-    <script src="/verse-modal.js?v=20261005"></script>
+    <script src="/theme.js?v=20261014"></script>
+    <script src="/verse-modal.js?v=20261014"></script>
   </body>
 </html>
 `;
@@ -422,28 +422,28 @@ function scripturesHtml(scriptures) {
  * shown as tag pills above the body).
  */
 const TOPIC_KEYWORDS = {
-  Baptism: ["baptism", "baptized", "baptize"],
-  "Bible Study": ["Bible study", "studying Scripture"],
-  "Christian Living": ["Christian living"],
-  Church: ["the church", "local church"],
-  Comfort: ["comfort", "comforted"],
-  Creation: ["creation", "the Creator", "creation week"],
-  Faith: ["faith"],
-  Forgiveness: ["forgiveness", "forgive", "forgiving"],
-  "Great Controversy": ["great controversy"],
-  Health: ["physical health", "health"],
-  "Holy Spirit": ["Holy Spirit"],
-  Law: ["Ten Commandments", "God's law", "commandments"],
-  "Marriage and Family": ["marriage", "family"],
-  Prayer: ["prayer", "praying", "pray"],
-  Prophecy: ["prophecy", "prophetic", "prophecies"],
-  Sabbath: ["Sabbath"],
-  Salvation: ["salvation"],
-  Sanctuary: ["sanctuary"],
-  "Second Coming": ["second coming", "Christ's return", "return of Christ"],
-  "State of the Dead": ["state of the dead"],
-  Stewardship: ["stewardship", "tithing", "tithe"],
-  "Three Angels": ["three angels' messages", "three angels"]
+  Baptism: ["baptism", "baptized", "baptize", "immersion", "Lord's Supper", "Communion"],
+  "Bible Study": ["Bible study", "studying Scripture", "Scripture", "the Bible", "God's Word", "Gospels", "Old Testament", "New Testament"],
+  "Christian Living": ["Christian living", "discipleship", "obedience", "holiness", "spiritual growth", "daily life"],
+  Church: ["the church", "local church", "congregation", "pastors", "elders", "church leadership"],
+  Comfort: ["comfort", "comforted", "suffering", "grief", "anxiety", "depression", "loneliness", "fear", "pain"],
+  Creation: ["creation", "the Creator", "creation week", "created", "Genesis", "Flood", "dinosaurs"],
+  Faith: ["faith", "trust", "believe", "belief", "doubt", "assurance"],
+  Forgiveness: ["forgiveness", "forgive", "forgiving", "repentance", "mercy", "reconciliation"],
+  "Great Controversy": ["great controversy", "Satan", "the devil", "demons", "spiritual warfare", "war in heaven", "conflict between good and evil"],
+  Health: ["physical health", "mental health", "health", "body", "clean and unclean", "alcohol", "temperance", "body temple"],
+  "Holy Spirit": ["Holy Spirit", "Spirit of God", "spiritual gifts", "gift of tongues"],
+  Law: ["Ten Commandments", "God's law", "commandments", "law and grace", "covenant", "obedience"],
+  "Marriage and Family": ["marriage", "family", "divorce", "sexual intimacy", "husband", "wife", "children", "parents"],
+  Prayer: ["prayer", "praying", "pray", "answered prayer", "unanswered prayer"],
+  Prophecy: ["prophecy", "prophetic", "prophecies", "Daniel", "Revelation", "mark of the beast", "Babylon"],
+  Sabbath: ["Sabbath", "seventh day", "Saturday", "Sunday", "day of rest"],
+  Salvation: ["salvation", "saved", "grace", "the gospel", "eternal life", "cross", "resurrection", "forgiven"],
+  Sanctuary: ["sanctuary", "Day of Atonement", "High Priest", "heavenly ministry", "atonement"],
+  "Second Coming": ["second coming", "Christ's return", "return of Christ", "Jesus returns", "coming soon", "last days"],
+  "State of the Dead": ["state of the dead", "death", "dead", "soul", "hell", "lake of fire", "resurrection"],
+  Stewardship: ["stewardship", "tithing", "tithe", "offerings", "money", "giving"],
+  "Three Angels": ["three angels' messages", "three angels", "first angel", "second angel", "third angel", "everlasting gospel"]
 };
 
 const KEYWORD_TOPIC_MAP = new Map();
@@ -516,8 +516,42 @@ function answerPage(answer, answers, perspectivesByCategory, perspectivesByAnswe
         <div class="container answer-page-layout">
           <article class="answer-page-card">
             <div class="answer-tags">${tagsHtml(answer.topics)}</div>
+            <h2>Biblical explanation</h2>
             <p class="lead-answer">${linkifyKeywords(escapeHtml(answer.longAnswer), answer.topics, usedTopics)}</p>
-            <p>${linkifyKeywords(escapeHtml(perspective), answer.topics, usedTopics)}</p>
+            <div class="answer-key-takeaway">
+              <p class="eyebrow">Key takeaway</p>
+              <p>${linkifyKeywords(escapeHtml(perspective), answer.topics, usedTopics)}</p>
+            </div>
+            <div class="answer-share-panel" data-answer-share>
+              <span class="promise-share-label">Share this answer</span>
+              <div class="promise-share-buttons">
+                <a class="promise-social-share promise-social-facebook" data-answer-share-facebook href="#" target="_blank" rel="noopener noreferrer" aria-label="Share this answer on Facebook">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.5 21.9V13.9h2.7l.5-3.1h-3.2V8.8c0-.9.3-1.7 1.6-1.7h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2v2.4H7.6v3.1h2.8v8h3.1Z"/></svg>
+                  <span class="sr-only">Facebook</span>
+                </a>
+                <a class="promise-social-share promise-social-x" data-answer-share-x href="#" target="_blank" rel="noopener noreferrer" aria-label="Share this answer on X">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.2 4.4h2.6l-5.7 6.5 6.7 8.8h-5.2l-4.1-5.4-4.7 5.4H4.2l6.1-7-6.4-8.3h5.4l3.7 4.9 4.2-4.9Zm-.9 13.8h1.4L8.5 5.8H7l9.3 12.4Z"/></svg>
+                  <span class="sr-only">X</span>
+                </a>
+                <a class="promise-social-share promise-social-linkedin" data-answer-share-linkedin href="#" target="_blank" rel="noopener noreferrer" aria-label="Share this answer on LinkedIn">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.9 19.5H4V9.8h2.9v9.7ZM5.4 8.5a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4Zm14.6 11h-2.9v-4.7c0-1.1 0-2.6-1.6-2.6s-1.8 1.2-1.8 2.5v4.8h-2.9V9.8h2.8v1.3h.1a3.1 3.1 0 0 1 2.8-1.5c3 0 3.5 2 3.5 4.5v5.4Z"/></svg>
+                  <span class="sr-only">LinkedIn</span>
+                </a>
+                <a class="promise-social-share promise-social-whatsapp" data-answer-share-whatsapp href="#" target="_blank" rel="noopener noreferrer" aria-label="Share this answer on WhatsApp">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.4a8.5 8.5 0 0 0-7.3 12.9L3.6 20.6l4.4-1.1A8.5 8.5 0 1 0 12 3.4Zm0 1.7a6.8 6.8 0 1 1-3.5 12.7l-.3-.2-2.6.7.7-2.5-.2-.3A6.8 6.8 0 0 1 12 5.1Zm3.9 8.5c-.2-.1-1.2-.6-1.4-.7s-.3-.1-.5.1l-.6.8c-.1.1-.2.1-.4 0a5.6 5.6 0 0 1-2.8-2.4c-.1-.2 0-.3.1-.4l.3-.4.2-.4v-.3l-.7-1.6c-.2-.4-.3-.3-.5-.3h-.4a.9.9 0 0 0-.6.3 2.6 2.6 0 0 0-.8 1.9 4.5 4.5 0 0 0 1 2.3 9.2 9.2 0 0 0 3.6 3.1c1.3.5 1.8.5 2.4.4a2 2 0 0 0 1.4-1c.2-.5.2-.9.1-1l-.4-.4Z"/></svg>
+                  <span class="sr-only">WhatsApp</span>
+                </a>
+                <a class="promise-social-share answer-social-sms" data-answer-share-sms href="#" aria-label="Share this answer by text message">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 4H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.5L12 21l4.5-4H20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm-12 7.3a1.3 1.3 0 1 1 0-2.6 1.3 1.3 0 0 1 0 2.6Zm4 0a1.3 1.3 0 1 1 0-2.6 1.3 1.3 0 0 1 0 2.6Zm4 0a1.3 1.3 0 1 1 0-2.6 1.3 1.3 0 0 1 0 2.6Z"/></svg>
+                  <span class="sr-only">Text message</span>
+                </a>
+                <div class="promise-share-primary">
+                  <button type="button" class="promise-share" data-answer-share-native>Share</button>
+                  <button type="button" class="promise-copy-button" data-answer-share-copy>Copy</button>
+                </div>
+              </div>
+              <p class="answer-share-status" data-answer-share-status role="status" aria-live="polite"></p>
+            </div>
             <h2>Bible references</h2>
             <div class="scriptures">${scripturesHtml(answer.scriptures)}</div>
           </article>
@@ -534,11 +568,7 @@ function answerPage(answer, answers, perspectivesByCategory, perspectivesByAnswe
 }
 
 function answersIndexPage(answers) {
-  const grouped = answers.reduce((groups, answer) => {
-    if (!groups[answer.category]) groups[answer.category] = [];
-    groups[answer.category].push(answer);
-    return groups;
-  }, {});
+  const topics = Array.from(new Set(answers.flatMap((answer) => answer.topics))).sort();
 
   return pageShell({
     title: "Bible Questions and Answers | Word Oasis",
@@ -557,23 +587,93 @@ function answersIndexPage(answers) {
       </section>
       <section class="section">
         <div class="container">
-          <div class="category-grid">
-            ${Object.entries(grouped)
-              .map(
-                ([category, categoryAnswers]) => `
-                  <article class="directory-card">
-                    <h2>${escapeHtml(category)}</h2>
-                    <ul class="answer-list-page">
-                      ${categoryAnswers.map((answer) => `<li><a href="${answerPath(answer)}">${escapeHtml(answer.question)}</a></li>`).join("")}
-                    </ul>
+          <div class="answers-directory-toolbar" aria-labelledby="answers-topic-filter-heading">
+            <div>
+              <p class="eyebrow" id="answers-topic-filter-heading">Filter by topic</p>
+              <p>Choose a topic to narrow the answer library, or keep browsing every Scripture-based answer below.</p>
+            </div>
+            <p class="answers-directory-count" data-answer-topic-count>Showing ${answers.length} answers</p>
+            <div class="answers-topic-filter">
+              <label class="answers-topic-select-label" for="answers-topic-select">Topic</label>
+              <select id="answers-topic-select" data-answer-topic-select aria-label="Filter answers by topic">
+                <option value="all">All answers</option>
+                ${topics.map((topic) => `<option value="${slugify(topic)}">${escapeHtml(topic)}</option>`).join("")}
+              </select>
+            </div>
+          </div>
+          <div class="answers-directory" id="all-answers" data-answers-directory>
+            ${answers
+              .map((answer) => {
+                const answerTopicSlugs = answer.topics.map(slugify);
+                return `
+                  <article class="directory-answer-card" data-answer-topics="${answerTopicSlugs.join(" ")}">
+                    <span class="directory-answer-meta">${escapeHtml(answer.category)}</span>
+                    <a class="directory-answer-title" href="${answerPath(answer)}">${escapeHtml(answer.question)}</a>
+                    <p>${escapeHtml(answer.shortAnswer)}</p>
+                    <div class="directory-answer-topics" aria-label="Related topics">
+                      ${answer.topics
+                        .slice(0, 3)
+                        .map((topic) => `<a href="#topic-${slugify(topic)}" data-answer-topic-filter="${slugify(topic)}">${escapeHtml(topic)}</a>`)
+                        .join("")}
+                    </div>
                   </article>
-                `
-              )
+                `;
+              })
               .join("")}
           </div>
         </div>
       </section>
-    </main>`
+    </main>
+    <script>
+      (() => {
+        const topicSelect = document.querySelector("[data-answer-topic-select]");
+        const topicLinks = Array.from(document.querySelectorAll(".directory-answer-topics [data-answer-topic-filter]"));
+        const cards = Array.from(document.querySelectorAll("[data-answer-topics]"));
+        const count = document.querySelector("[data-answer-topic-count]");
+
+        if (!topicSelect || !cards.length) return;
+
+        const applyFilter = (topic) => {
+          topicSelect.value = topic;
+
+          topicLinks.forEach((link) => {
+            link.classList.toggle("is-active", link.dataset.answerTopicFilter === topic);
+          });
+
+          let visibleCount = 0;
+          cards.forEach((card) => {
+            const isVisible = topic === "all" || card.dataset.answerTopics.split(" ").includes(topic);
+            card.hidden = !isVisible;
+            if (isVisible) visibleCount += 1;
+          });
+
+          if (count) {
+            count.textContent = "Showing " + visibleCount + " answer" + (visibleCount === 1 ? "" : "s");
+          }
+        };
+
+        topicSelect.addEventListener("change", () => {
+          const topic = topicSelect.value;
+          applyFilter(topic);
+          history.replaceState(null, "", topic === "all" ? "#all-answers" : "#topic-" + topic);
+        });
+
+        topicLinks.forEach((link) => {
+          link.addEventListener("click", (event) => {
+            const topic = link.dataset.answerTopicFilter;
+            if (!topic) return;
+            event.preventDefault();
+            applyFilter(topic);
+            history.replaceState(null, "", "#topic-" + topic);
+          });
+        });
+
+        const initialTopic = location.hash.replace("#topic-", "");
+        if (initialTopic && cards.some((card) => card.dataset.answerTopics.split(" ").includes(initialTopic))) {
+          applyFilter(initialTopic);
+        }
+      })();
+    </script>`
   });
 }
 
@@ -653,7 +753,7 @@ function topicPage(topic, answers) {
 function writePage(relativePath, content) {
   const outputPath = path.join(ROOT, relativePath);
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-  fs.writeFileSync(outputPath, content, "utf8");
+  fs.writeFileSync(outputPath, content.replace(/[ \t]+$/gm, ""), "utf8");
 }
 
 function resetGeneratedDirectory(relativePath) {
