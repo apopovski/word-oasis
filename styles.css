@@ -1098,8 +1098,18 @@ h1 {
 }
 
 .promise-navigation {
+  display: grid;
+  justify-items: center;
   gap: 10px;
   margin-top: 2px;
+}
+
+.promise-navigation-main,
+.promise-navigation-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .promise-nav-text,
@@ -1168,6 +1178,7 @@ h1 {
    card waits before auto-advancing to the next verse. */
 .promise-progress {
   position: relative;
+  justify-self: center;
   width: 120px;
   height: 3px;
   overflow: hidden;
@@ -4121,6 +4132,24 @@ body.modal-open {
 
   .promise-actions {
     width: 100%;
+  }
+
+  .promise-navigation {
+    width: 100%;
+  }
+
+  .promise-navigation-main {
+    display: grid;
+    grid-template-columns: 38px minmax(100px, 1fr) 38px;
+    width: min(100%, 270px);
+  }
+
+  .promise-navigation-options {
+    flex-wrap: wrap;
+  }
+
+  .promise-position {
+    flex-basis: 100%;
   }
 
   .search-row {

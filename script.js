@@ -7449,6 +7449,82 @@ const promiseCategories = [
   }
 ];
 
+const additionalPromiseReferences = {
+  faith: [
+    "Genesis 15:6", "Exodus 14:13", "Numbers 23:19", "1 Kings 8:56", "Psalm 9:10",
+    "Psalm 20:7", "Psalm 28:7", "Psalm 40:4", "Proverbs 29:25", "Luke 1:37",
+    "Romans 4:20-21"
+  ],
+  courage: [
+    "Deuteronomy 20:4", "Joshua 10:25", "1 Chronicles 28:20", "2 Chronicles 20:15",
+    "Ezra 10:4", "Psalm 18:32-34", "Psalm 112:7-8", "Isaiah 35:3-4",
+    "Daniel 10:19", "Ephesians 6:10", "Hebrews 13:6"
+  ],
+  peace: [
+    "Leviticus 26:6", "Psalm 29:11", "Psalm 85:8", "Psalm 119:165", "Isaiah 32:17-18",
+    "Isaiah 54:13", "Luke 1:78-79", "Isaiah 26:12", "Romans 8:6", "2 Thessalonians 3:16",
+    "1 Peter 3:10-11"
+  ],
+  protection: [
+    "Genesis 15:1", "Deuteronomy 33:27", "1 Samuel 2:9", "2 Samuel 22:31",
+    "Psalm 5:11-12", "Psalm 17:8", "Psalm 32:7", "Psalm 138:7", "Proverbs 2:8",
+    "Isaiah 52:12", "2 Timothy 4:18"
+  ],
+  love: [
+    "Exodus 34:6", "Deuteronomy 33:3", "Psalm 63:3-4", "Psalm 103:17-18",
+    "Isaiah 49:15-16", "Hosea 2:19-20", "John 16:27", "John 17:23",
+    "Ephesians 2:4-5", "Titus 3:4-5", "1 John 4:9-10"
+  ],
+  hope: [
+    "Psalm 33:18", "Psalm 39:7", "Psalm 119:49-50", "Psalm 146:5", "Proverbs 23:18",
+    "Isaiah 25:8-9", "Psalm 71:14", "Romans 8:24-25", "1 Corinthians 15:58",
+    "Colossians 1:27", "Titus 2:13"
+  ],
+  guidance: [
+    "Exodus 15:13", "Psalm 16:7-8", "Psalm 48:14", "Psalm 73:24", "Proverbs 2:6",
+    "Proverbs 4:11-12", "Proverbs 20:24", "Isaiah 58:11", "Luke 1:79",
+    "Colossians 1:9-10", "2 Timothy 3:16-17"
+  ],
+  prayer: [
+    "1 Samuel 1:27", "1 Kings 8:28", "Psalm 5:3", "Psalm 18:6", "Psalm 50:15",
+    "Psalm 66:19-20", "Psalm 102:17", "Isaiah 65:24", "Mark 11:24",
+    "Romans 8:26-27", "Psalm 141:2"
+  ],
+  gratitude: [
+    "1 Chronicles 16:34", "Psalm 9:1-2", "Psalm 107:1", "Psalm 34:1",
+    "Psalm 92:1-2", "Psalm 95:1-2", "Psalm 103:1-5", "Isaiah 51:11",
+    "Luke 10:20", "Ephesians 5:19-20", "Hebrews 13:15"
+  ],
+  forgiveness: [
+    "Numbers 14:19-20", "Nehemiah 9:17", "Psalm 25:11", "Psalm 51:1-2",
+    "Psalm 65:3", "Psalm 79:9", "Psalm 130:3-4", "Daniel 9:9",
+    "Luke 7:47-48", "Acts 10:43", "Colossians 2:13-14"
+  ],
+  comfort: [
+    "Genesis 21:17", "Psalm 10:17", "Ruth 2:12", "Psalm 6:9",
+    "Psalm 27:10", "Isaiah 46:4", "Psalm 71:20-21", "Isaiah 57:18-19",
+    "Jeremiah 31:13", "John 14:18", "2 Corinthians 4:8-9"
+  ],
+  provision: [
+    "Genesis 28:20-21", "Exodus 23:25", "Deuteronomy 2:7", "1 Kings 17:14",
+    "Psalm 68:19", "Psalm 111:5", "Psalm 132:15", "Proverbs 10:3",
+    "Isaiah 33:16", "Luke 12:32", "2 Corinthians 9:10-11"
+  ],
+  salvation: [
+    "Psalm 62:7", "Isaiah 12:2", "Isaiah 45:22", "Ezekiel 11:19-20",
+    "Matthew 1:21", "Luke 19:10", "John 6:40", "Acts 2:21", "Romans 10:9-10",
+    "Titus 2:11-12", "Hebrews 7:25"
+  ],
+  rest: [
+    "Genesis 2:2-3", "Exodus 20:8-11", "Psalm 37:7", "Psalm 55:6",
+    "Psalm 91:1", "Isaiah 14:3", "Isaiah 28:12", "Mark 2:27"
+  ]
+};
+
+promiseCategories.forEach((category) => {
+  category.references.push(...(additionalPromiseReferences[category.id] || []));
+});
+
 const promisesByReference = new Map(biblePromises.map((promise) => [promise.reference, promise]));
 promiseCategories.forEach((category) => {
   category.references.forEach((reference) => {

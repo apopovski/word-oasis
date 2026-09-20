@@ -184,7 +184,6 @@
         const sharePayload = {
           title: answerTitle(),
           text: `Find the answer at: ${canonicalUrl}`,
-          url: canonicalUrl,
           files: [file]
         };
 

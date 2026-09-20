@@ -251,7 +251,7 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261039">
+    <link rel="stylesheet" href="/styles.css?v=20261042">
     <meta property="og:type" content="${ogType}">
     <meta property="og:title" content="${escapeAttribute(title)}">
     <meta property="og:description" content="${escapeAttribute(description)}">
@@ -332,10 +332,7 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
             <a class="brand footer-brand" href="/" aria-label="Word Oasis home">
               <img src="/word-oasis.svg" alt="Word Oasis" class="brand-mark">
             </a>
-            <p class="footer-tagline">
-              Clear, Scripture-based answers to real questions about faith, hope, prophecy, and
-              Christian living.
-            </p>
+            <p class="footer-tagline">Bible answers to your questions.</p>
             <blockquote class="footer-verse">
               &ldquo;And let the one who is thirsty come. And he willing, let him take of the Water
               of Life freely.&rdquo;
@@ -394,10 +391,10 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
       </div>
     </div>
 
-    <script src="/theme.js?v=20261039"></script>
-    <script src="/scripture-graphic.js?v=20261039"></script>
-    <script src="/local-library.js?v=20261039"></script>
-    <script src="/verse-modal.js?v=20261039"></script>
+    <script src="/theme.js?v=20261042"></script>
+    <script src="/scripture-graphic.js?v=20261042"></script>
+    <script src="/local-library.js?v=20261042"></script>
+    <script src="/verse-modal.js?v=20261042"></script>
   </body>
 </html>
 `;
