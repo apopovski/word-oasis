@@ -1768,6 +1768,7 @@ h1 {
 .answer-spotlight .promise-navigation {
   position: relative;
   z-index: 1;
+  margin-top: 26px;
 }
 
 #spotlight-body {
