@@ -918,11 +918,12 @@
         throw new Error("The Scripture graphic could not be created.");
       }
 
-      const sharePayload = {
-        title: options.reference,
-        text: `${options.reference}\n\nShared from Word Oasis`,
-        files: [file]
-      };
+      const sharePayload = { files: [file] };
+      if (includeSourceCheckbox.checked) {
+        const range = selectedRange();
+        const { book, chapter, translation } = selectedState();
+        sharePayload.url = buildReaderUrl(book, chapter, translation, range.start);
+      }
       if (navigator.share && navigator.canShare?.({ files: [file] })) {
         try {
           await navigator.share(sharePayload);
