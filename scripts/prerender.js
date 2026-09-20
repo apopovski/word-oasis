@@ -251,7 +251,7 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261043">
+    <link rel="stylesheet" href="/styles.css?v=20261044">
     <meta property="og:type" content="${ogType}">
     <meta property="og:title" content="${escapeAttribute(title)}">
     <meta property="og:description" content="${escapeAttribute(description)}">
@@ -391,10 +391,10 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
       </div>
     </div>
 
-    <script src="/theme.js?v=20261043"></script>
-    <script src="/scripture-graphic.js?v=20261043"></script>
-    <script src="/local-library.js?v=20261043"></script>
-    <script src="/verse-modal.js?v=20261043"></script>
+    <script src="/theme.js?v=20261044"></script>
+    <script src="/scripture-graphic.js?v=20261044"></script>
+    <script src="/local-library.js?v=20261044"></script>
+    <script src="/verse-modal.js?v=20261044"></script>
   </body>
 </html>
 `;
@@ -594,7 +594,7 @@ function answerPage(answer, answers, perspectivesByCategory, perspectivesByAnswe
             <div class="scriptures">${scripturesHtml(answer.scriptures)}</div>
             <div class="answer-editorial-note">
               <strong>Editorial note</strong>
-              <p>This answer is presented with its supporting references so you can examine each passage in context. If you notice an error or unclear statement, please <a href="/#ask">suggest a correction</a>.</p>
+              <p>This answer is presented with its supporting references so you can examine each passage in context. If you notice an error or unclear statement, please <a href="/?inquiry=general#ask">suggest a correction</a>.</p>
             </div>
           </article>
           <aside class="related-card" aria-label="Related answers">

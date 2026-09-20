@@ -4149,6 +4149,16 @@ body.modal-open {
     flex-wrap: wrap;
   }
 
+  .about-beliefs > summary {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .details-action {
+    align-self: flex-start;
+  }
+
   .promise-position {
     flex-basis: 100%;
   }

@@ -7113,6 +7113,15 @@ askModeInputs.forEach((input) => {
   });
 });
 
+const requestedInquiryMode = new URLSearchParams(window.location.search).get("inquiry");
+if (askModeContent[requestedInquiryMode]) {
+  const requestedInput = document.querySelector(`input[name="ask-mode"][value="${requestedInquiryMode}"]`);
+  if (requestedInput) {
+    requestedInput.checked = true;
+    applyAskMode(requestedInquiryMode);
+  }
+}
+
 const biblePromises = [
   {
     text: "I will never leave you nor forsake you.",
