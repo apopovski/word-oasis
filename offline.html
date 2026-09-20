@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#102a43">
+    <title>Offline | Word Oasis</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: Inter, system-ui, sans-serif;
+        background: #f8fbff;
+        color: #102a43;
+      }
+      body {
+        display: grid;
+        min-height: 100vh;
+        margin: 0;
+        place-items: center;
+        background: linear-gradient(145deg, #f8fbff, #e7f1fb);
+      }
+      main {
+        width: min(560px, calc(100% - 40px));
+        padding: 40px;
+        text-align: center;
+        background: #fff;
+        border: 1px solid #d8e5f0;
+        border-radius: 24px;
+        box-shadow: 0 24px 70px rgba(16, 42, 67, 0.14);
+      }
+      img { width: min(230px, 70%); }
+      h1 { margin: 28px 0 12px; }
+      p { color: #52697d; line-height: 1.7; }
+      a {
+        display: inline-flex;
+        min-height: 44px;
+        align-items: center;
+        padding: 0 20px;
+        margin-top: 12px;
+        color: #fff;
+        font-weight: 800;
+        text-decoration: none;
+        background: #102a43;
+        border-radius: 999px;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root { background: #071424; color: #f8fbff; }
+        body { background: linear-gradient(145deg, #071424, #102a43); }
+        main { background: #102a43; border-color: #294861; }
+        p { color: #c5d4e0; }
+        a { color: #102a43; background: #fde68a; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img src="/word-oasis.svg" alt="Word Oasis">
+      <h1>You’re offline</h1>
+      <p>Previously visited Word Oasis pages and Bible chapters may still be available. Reconnect to load content you have not opened before.</p>
+      <a href="/">Try the homepage</a>
+    </main>
+  </body>
+</html>
