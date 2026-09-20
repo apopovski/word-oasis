@@ -24,8 +24,16 @@
     return url.toString();
   }
 
+  function answerCanonicalUrl() {
+    return document.querySelector('link[rel="canonical"]')?.href || window.location.href.split(/[?#]/)[0];
+  }
+
+  function answerTitle() {
+    return document.querySelector("h1")?.textContent.trim() || document.title;
+  }
+
   function answerShareText() {
-    const title = document.querySelector("h1")?.textContent.trim() || document.title;
+    const title = answerTitle();
     const intro = document.querySelector(".page-intro")?.textContent.trim() || "";
     return intro ? `${title}\n\n${intro}` : title;
   }
@@ -41,6 +49,17 @@
     }
   }
 
+  function answerGraphicOptions() {
+    return {
+      text: answerTitle(),
+      reference: "Find the biblical answer",
+      label: "Bible answer",
+      fileName: answerTitle(),
+      paletteSeed: answerTitle(),
+      watermark: "?"
+    };
+  }
+
   function initializeAnswerShare() {
     if (!answerSharePanel) {
       return;
@@ -48,10 +67,17 @@
 
     const url = answerShareUrl();
     const content = answerShareContent();
+    const graphicRenderer = window.WordOasisScriptureGraphic;
+    let answerGraphicError = null;
+    let answerGraphicFilePromise = graphicRenderer
+      ? graphicRenderer.createFile(answerGraphicOptions()).catch((error) => {
+          answerGraphicError = error;
+          return null;
+        })
+      : null;
     const shareLinks = {
       "[data-answer-share-facebook]": `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
       "[data-answer-share-x]": `https://twitter.com/intent/tweet?text=${encodeURIComponent(content)}`,
-      "[data-answer-share-linkedin]": `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
       "[data-answer-share-whatsapp]": `https://api.whatsapp.com/send?text=${encodeURIComponent(content)}`,
       "[data-answer-share-sms]": `sms:?&body=${encodeURIComponent(content)}`
     };
@@ -96,6 +122,64 @@
       } catch (error) {
         setAnswerShareStatus("Could not copy automatically. Select the answer text to copy it.");
       }
+    });
+
+    async function shareAnswerGraphic(platform = "") {
+      if (!graphicRenderer || !answerGraphicFilePromise) {
+        setAnswerShareStatus("The answer graphic tools are not available right now.");
+        return;
+      }
+
+      setAnswerShareStatus("Creating your answer graphic...");
+      try {
+        const file = await answerGraphicFilePromise;
+        if (!file) {
+          throw answerGraphicError || new Error("The answer graphic could not be created.");
+        }
+        const canonicalUrl = answerCanonicalUrl();
+        const sharePayload = {
+          title: answerTitle(),
+          text: `Find the answer at: ${canonicalUrl}`,
+          url: canonicalUrl,
+          files: [file]
+        };
+
+        if (navigator.share && navigator.canShare?.({ files: [file] })) {
+          try {
+            await navigator.share(sharePayload);
+            setAnswerShareStatus(`Answer graphic shared${platform ? ` to ${platform}` : ""}.`);
+            return;
+          } catch (error) {
+            if (error.name === "AbortError") {
+              setAnswerShareStatus("");
+              return;
+            }
+          }
+        }
+
+        graphicRenderer.downloadFile(file);
+        const linkCaption = `Find the answer at: ${canonicalUrl}`;
+        try {
+          await navigator.clipboard.writeText(linkCaption);
+          setAnswerShareStatus("Answer graphic saved and its answer link copied. Paste the link beneath the graphic.");
+        } catch (error) {
+          setAnswerShareStatus("Answer graphic saved. Add its answer link when you post it.");
+        }
+      } catch (error) {
+        answerGraphicFilePromise = graphicRenderer.createFile(answerGraphicOptions()).catch((nextError) => {
+          answerGraphicError = nextError;
+          return null;
+        });
+        setAnswerShareStatus(error.message || "The answer graphic could not be created.");
+      }
+    }
+
+    answerSharePanel.querySelector("[data-answer-share-graphic]")?.addEventListener("click", () => {
+      shareAnswerGraphic();
+    });
+
+    answerSharePanel.querySelector("[data-answer-share-instagram]")?.addEventListener("click", () => {
+      shareAnswerGraphic("Instagram");
     });
   }
 

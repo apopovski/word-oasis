@@ -42,7 +42,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="styles.css?v=20261017">
+    <link rel="stylesheet" href="styles.css?v=20261035">
 <script>
   window.WORD_OASIS_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZSB_Tf-MEbTUrmSkEqwNn2gjtxqF4cv16pMCDMmV3voJeJAFhIYBQ/exec";
   window.WORD_OASIS_FORM_EMAIL_TO = "wordoasis7@gmail.com";
@@ -57,7 +57,7 @@
     <meta property="og:url" content="https://wordoasis.org/">
     <meta property="og:site_name" content="Word Oasis">
     <meta property="og:locale" content="en_US">
-    <meta property="og:image" content="https://wordoasis.org/og-image.png?v=20261017">
+    <meta property="og:image" content="https://wordoasis.org/og-image.png?v=20261031">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Word Oasis logo with a daily Scripture, hope, and encouragement message">
@@ -67,7 +67,7 @@
       name="twitter:description"
       content="Search 250+ Scripture-based Bible answers by topic, including salvation, prayer, anxiety, Sabbath, prophecy, health, forgiveness, and Christian living."
     >
-    <meta name="twitter:image" content="https://wordoasis.org/og-image.png?v=20261017">
+    <meta name="twitter:image" content="https://wordoasis.org/og-image.png?v=20261031">
     <meta name="twitter:image:alt" content="Word Oasis logo with a daily Scripture, hope, and encouragement message">
 
     <script type="application/ld+json">
@@ -1901,7 +1901,7 @@
       "name": "Are women permitted to serve as pastors or elders according to scripture?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Scripture shows women prophesying, teaching, leading, and serving as deacons under the Spirit's gifting, while a few passages about church order have been understood differently regarding the ordained elder or pastor role. Sincere believers hold different convictions on this question. (Judges 4:4-5, Romans 16:1-2, Acts 2:17-18, Galatians 3:28)"
+        "text": "Scripture reserves the governing and teaching office of pastor, elder, or overseer for qualified men. This distinction does not diminish women, who share equal worth in Christ and are called to vital ministries of prayer, discipleship, teaching other women and children, evangelism, mercy, hospitality, and service according to their spiritual gifts. (1 Timothy 2:11-14, 1 Timothy 3:1-7, Titus 1:5-9, Titus 2:3-5, Acts 18:26, Galatians 3:28)"
       }
     },
     {
@@ -2357,6 +2357,22 @@
           <article class="promise-card" id="promise-card">
             <div class="promise-copy">
               <p class="eyebrow"><span aria-hidden="true">✦</span> Today's Bible promise</p>
+              <div class="promise-preferences">
+                <label class="promise-preference">
+                  <span>Category</span>
+                  <select id="promise-category" aria-label="Bible promise category">
+                    <option value="all">All promises</option>
+                  </select>
+                </label>
+                <label class="promise-preference">
+                  <span>Bible version</span>
+                  <select id="promise-translation" aria-label="Bible version for today's promise">
+                    <option value="web">WEB</option>
+                    <option value="kjv">KJV</option>
+                    <option value="asv">ASV</option>
+                  </select>
+                </label>
+              </div>
               <blockquote id="promise-text"></blockquote>
               <p class="promise-reference" id="promise-reference"></p>
               <p class="promise-attribution">A daily moment of hope from Word Oasis</p>
@@ -2372,10 +2388,10 @@
                   <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.2 4.4h2.6l-5.7 6.5 6.7 8.8h-5.2l-4.1-5.4-4.7 5.4H4.2l6.1-7-6.4-8.3h5.4l3.7 4.9 4.2-4.9Zm-.9 13.8h1.4L8.5 5.8H7l9.3 12.4Z"/></svg>
                   <span class="sr-only">X</span>
                 </a>
-                <a class="promise-social-share promise-social-linkedin" id="promise-share-linkedin" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share this promise on LinkedIn">
-                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.9 19.5H4V9.8h2.9v9.7ZM5.4 8.5a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4Zm14.6 11h-2.9v-4.7c0-1.1 0-2.6-1.6-2.6s-1.8 1.2-1.8 2.5v4.8h-2.9V9.8h2.8v1.3h.1a3.1 3.1 0 0 1 2.8-1.5c3 0 3.5 2 3.5 4.5v5.4Z"/></svg>
-                  <span class="sr-only">LinkedIn</span>
-                </a>
+                <button type="button" class="promise-social-share promise-social-instagram" id="promise-share-instagram" aria-label="Share this promise on Instagram">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M7.2 2h9.6A5.2 5.2 0 0 1 22 7.2v9.6a5.2 5.2 0 0 1-5.2 5.2H7.2A5.2 5.2 0 0 1 2 16.8V7.2A5.2 5.2 0 0 1 7.2 2Zm0 2A3.2 3.2 0 0 0 4 7.2v9.6A3.2 3.2 0 0 0 7.2 20h9.6a3.2 3.2 0 0 0 3.2-3.2V7.2A3.2 3.2 0 0 0 16.8 4H7.2Zm10.1 1.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+                  <span class="sr-only">Instagram</span>
+                </button>
                 <a class="promise-social-share promise-social-whatsapp" id="promise-share-whatsapp" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share this promise on WhatsApp">
                   <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3.4a8.5 8.5 0 0 0-7.3 12.9L3.6 20.6l4.4-1.1A8.5 8.5 0 1 0 12 3.4Zm0 1.7a6.8 6.8 0 1 1-3.5 12.7l-.3-.2-2.6.7.7-2.5-.2-.3A6.8 6.8 0 0 1 12 5.1Zm3.9 8.5c-.2-.1-1.2-.6-1.4-.7s-.3-.1-.5.1l-.6.8c-.1.1-.2.1-.4 0a5.6 5.6 0 0 1-2.8-2.4c-.1-.2 0-.3.1-.4l.3-.4.2-.4v-.3l-.7-1.6c-.2-.4-.3-.3-.5-.3h-.4a.9.9 0 0 0-.6.3 2.6 2.6 0 0 0-.8 1.9 4.5 4.5 0 0 0 1 2.3 9.2 9.2 0 0 0 3.6 3.1c1.3.5 1.8.5 2.4.4a2 2 0 0 0 1.4-1c.2-.5.2-.9.1-1l-.4-.4Z"/></svg>
                   <span class="sr-only">WhatsApp</span>
@@ -2840,7 +2856,7 @@
       </div>
     </div>
 
-    <script src="theme.js?v=20261017"></script>
-    <script src="script.js?v=20261017"></script>
+    <script src="theme.js?v=20261035"></script>
+    <script src="script.js?v=20261035"></script>
   </body>
 </html>

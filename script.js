@@ -6174,8 +6174,8 @@ const answers = [
   {
     "id": "answer-women-ministry",
     "question": "Are women permitted to serve as pastors or elders according to scripture?",
-    "shortAnswer": "Scripture shows women prophesying, teaching, leading, and serving as deacons under the Spirit's gifting, while a few passages about church order have been understood differently regarding the ordained elder or pastor role. Sincere believers hold different convictions on this question.",
-    "longAnswer": "The Bible records women such as Deborah leading Israel as a judge and prophet, Phoebe serving as a deacon, Priscilla teaching Apollos alongside her husband, and Joel's promise — quoted at Pentecost — that God's Spirit would fall on sons and daughters alike, enabling both to prophesy. At the same time, Paul's instructions in 1 Corinthians 14 and 1 Timothy 2 about order in worship and the office of elder have been read by some as limiting the ordained pastoral role to men, while others read them as addressing specific local disruptions rather than a universal rule for every context. Galatians 3:28 affirms that in Christ there is no spiritual hierarchy between male and female. Given this range within Scripture, believers can affirm women serving fully in ministry, teaching, and leadership according to their spiritual gifts, while extending grace and humility toward fellow Christians who apply these specific passages differently regarding ordination.",
+    "shortAnswer": "Scripture reserves the governing and teaching office of pastor, elder, or overseer for qualified men. This distinction does not diminish women, who share equal worth in Christ and are called to vital ministries of prayer, discipleship, teaching other women and children, evangelism, mercy, hospitality, and service according to their spiritual gifts.",
+    "longAnswer": "The New Testament uses elder and overseer for the church office entrusted with shepherding, doctrinal teaching, and spiritual oversight. When Paul gives its qualifications, he describes the elder or overseer as \"the husband of one wife\" who leads his household faithfully and is able to teach (1 Timothy 3:1-7; Titus 1:5-9). He also grounds his instruction that women not exercise governing teaching authority over men in the assembled church in the order of creation, rather than merely in a temporary local problem (1 Timothy 2:11-14). Taken together, these passages teach that qualified men are to serve as pastors or elders. This role distinction does not make men more valuable or spiritually superior. Men and women are equally created in God's image, equally saved in Christ, and equally recipients of the Holy Spirit and His gifts (Genesis 1:27; Galatians 3:28; Acts 2:17-18). Scripture honors women who prayed, prophesied, supported gospel ministry, practiced hospitality, served the church, instructed other women and children, and helped explain truth in appropriate settings, as Priscilla did alongside Aquila (Acts 18:26; Romans 16:1-6; Titus 2:3-5). The church therefore should not suppress women's gifts, but encourage their broad and indispensable ministry while honoring the distinct pastoral and elder order established in Scripture.",
     "topics": [
       "Church",
       "Christian Living",
@@ -6183,9 +6183,11 @@ const answers = [
     ],
     "category": "Life and Relationships",
     "scriptures": [
-      "Judges 4:4-5",
-      "Romans 16:1-2",
-      "Acts 2:17-18",
+      "1 Timothy 2:11-14",
+      "1 Timothy 3:1-7",
+      "Titus 1:5-9",
+      "Titus 2:3-5",
+      "Acts 18:26",
       "Galatians 3:28"
     ],
     "keywords": [
@@ -7022,6 +7024,8 @@ const spotlightNext = document.querySelector("#spotlight-next");
 const spotlightProgressFill = document.querySelector("#spotlight-progress-fill");
 const promiseText = document.querySelector("#promise-text");
 const promiseReference = document.querySelector("#promise-reference");
+const promiseCategory = document.querySelector("#promise-category");
+const promiseTranslation = document.querySelector("#promise-translation");
 const promisePrevious = document.querySelector("#promise-previous");
 const promiseNext = document.querySelector("#promise-next");
 const promiseProgressFill = document.querySelector("#promise-progress-fill");
@@ -7030,7 +7034,7 @@ const promiseCopy = document.querySelector("#promise-copy");
 const promiseSaveImage = document.querySelector("#promise-save-image");
 const promiseFacebookShare = document.querySelector("#promise-share-facebook");
 const promiseXShare = document.querySelector("#promise-share-x");
-const promiseLinkedInShare = document.querySelector("#promise-share-linkedin");
+const promiseInstagramShare = document.querySelector("#promise-share-instagram");
 const promiseWhatsAppShare = document.querySelector("#promise-share-whatsapp");
 const promiseStatus = document.querySelector("#promise-status");
 const questionForm = document.querySelector("#question-form");
@@ -7312,7 +7316,159 @@ const biblePromises = [
   }
 ];
 
+const promiseCategories = [
+  {
+    id: "faith",
+    label: "Faith & trust",
+    references: [
+      "Psalm 37:3-5", "Psalm 56:3-4", "Psalm 62:8", "Proverbs 3:5-6", "Isaiah 26:3-4",
+      "Jeremiah 17:7-8", "Mark 9:23", "John 11:25-26", "Romans 10:11", "2 Corinthians 5:7",
+      "Hebrews 10:23", "Hebrews 11:1", "Hebrews 11:6", "James 1:5-6", "1 Peter 1:8-9"
+    ]
+  },
+  {
+    id: "courage",
+    label: "Courage & strength",
+    references: [
+      "Deuteronomy 31:6", "Joshua 1:9", "1 Samuel 30:6", "2 Chronicles 15:7", "Nehemiah 8:10",
+      "Psalm 18:2", "Psalm 27:1", "Psalm 31:24", "Psalm 46:1-3", "Isaiah 40:29-31",
+      "Isaiah 41:10", "Habakkuk 3:19", "1 Corinthians 16:13", "Philippians 4:13", "2 Timothy 1:7"
+    ]
+  },
+  {
+    id: "peace",
+    label: "Peace & anxiety",
+    references: [
+      "Psalm 4:8", "Psalm 23:1-4", "Psalm 55:22", "Psalm 94:19", "Isaiah 26:3",
+      "Isaiah 43:1-2", "Matthew 6:31-34", "Matthew 11:28-30", "John 14:1", "John 14:27",
+      "John 16:33", "Philippians 4:6-7", "Colossians 3:15", "1 Peter 5:7", "1 John 4:18"
+    ]
+  },
+  {
+    id: "protection",
+    label: "Fear & protection",
+    references: [
+      "Exodus 14:14", "Deuteronomy 31:8", "2 Samuel 22:3-4", "Psalm 3:3-5", "Psalm 23:4",
+      "Psalm 34:4-7", "Psalm 46:1", "Psalm 91:1-4", "Psalm 121:5-8", "Isaiah 41:10",
+      "Isaiah 43:2", "Nahum 1:7", "John 10:27-29", "Romans 8:31", "2 Thessalonians 3:3"
+    ]
+  },
+  {
+    id: "love",
+    label: "God's love",
+    references: [
+      "Deuteronomy 7:9", "Psalm 36:5-7", "Psalm 86:15", "Psalm 103:11-13", "Psalm 136:1",
+      "Isaiah 43:4", "Isaiah 54:10", "Jeremiah 31:3", "Zephaniah 3:17", "John 3:16",
+      "John 15:9", "Romans 5:8", "Romans 8:38-39", "Ephesians 3:17-19", "1 John 3:1"
+    ]
+  },
+  {
+    id: "hope",
+    label: "Hope",
+    references: [
+      "Psalm 30:5", "Psalm 42:11", "Psalm 71:5", "Psalm 130:5", "Isaiah 40:31",
+      "Jeremiah 29:11", "Lamentations 3:22-24", "Micah 7:7", "Romans 5:3-5", "Romans 8:28",
+      "Romans 12:12", "Romans 15:13", "2 Corinthians 4:16-18", "Hebrews 6:19", "1 Peter 1:3-4"
+    ]
+  },
+  {
+    id: "guidance",
+    label: "Guidance & wisdom",
+    references: [
+      "Psalm 25:4-5", "Psalm 32:8", "Psalm 37:23-24", "Psalm 119:105", "Proverbs 3:5-6",
+      "Proverbs 16:9", "Isaiah 30:21", "Isaiah 48:17", "Jeremiah 33:3", "John 8:12",
+      "John 16:13", "Romans 12:2", "James 1:5", "James 3:17", "Psalm 143:10"
+    ]
+  },
+  {
+    id: "prayer",
+    label: "Prayer",
+    references: [
+      "2 Chronicles 7:14", "Psalm 34:17", "Psalm 145:18-19", "Jeremiah 29:12-13", "Jeremiah 33:3",
+      "Matthew 7:7-8", "Matthew 18:20", "Matthew 21:22", "John 14:13-14", "John 15:7",
+      "Philippians 4:6-7", "1 Thessalonians 5:16-18", "Hebrews 4:16", "James 5:16", "1 John 5:14-15"
+    ]
+  },
+  {
+    id: "gratitude",
+    label: "Gratitude & joy",
+    references: [
+      "Psalm 16:11", "Psalm 30:11-12", "Psalm 100:4-5", "Psalm 118:24", "Psalm 126:5",
+      "Isaiah 12:2-3", "Habakkuk 3:17-18", "John 15:11", "Romans 15:13", "2 Corinthians 9:8",
+      "Philippians 4:4", "Colossians 3:15-17", "1 Thessalonians 5:16-18", "James 1:17", "1 Peter 1:8"
+    ]
+  },
+  {
+    id: "forgiveness",
+    label: "Forgiveness",
+    references: [
+      "2 Chronicles 7:14", "Psalm 32:1-2", "Psalm 86:5", "Psalm 103:8-12", "Isaiah 1:18",
+      "Isaiah 43:25", "Isaiah 55:6-7", "Micah 7:18-19", "Matthew 6:14", "Acts 3:19",
+      "Romans 8:1", "Ephesians 1:7", "Colossians 1:13-14", "Hebrews 8:12", "1 John 1:9"
+    ]
+  },
+  {
+    id: "comfort",
+    label: "Comfort & healing",
+    references: [
+      "Psalm 23:3-4", "Psalm 34:18", "Psalm 41:3", "Psalm 147:3", "Isaiah 40:1",
+      "Isaiah 49:13", "Isaiah 53:4-5", "Isaiah 66:13", "Jeremiah 17:14", "Matthew 5:4",
+      "2 Corinthians 1:3-4", "2 Corinthians 12:9", "Revelation 21:4", "Psalm 30:2", "James 5:15"
+    ]
+  },
+  {
+    id: "provision",
+    label: "Provision",
+    references: [
+      "Genesis 22:14", "Deuteronomy 8:18", "Psalm 23:1", "Psalm 34:9-10", "Psalm 37:25",
+      "Psalm 84:11", "Matthew 6:31-33", "Matthew 7:11", "Luke 12:24", "John 6:35",
+      "2 Corinthians 9:8", "Philippians 4:19", "James 1:17", "Psalm 81:10", "Romans 8:32"
+    ]
+  },
+  {
+    id: "salvation",
+    label: "Grace & salvation",
+    references: [
+      "Isaiah 44:22", "Isaiah 55:1", "Ezekiel 36:26-27", "John 1:12", "John 3:16-17",
+      "John 3:36", "John 5:24", "John 6:37", "John 10:28", "Acts 16:31",
+      "Romans 5:1", "Romans 6:23", "Romans 8:1", "Ephesians 2:8-9", "1 John 5:11-12"
+    ]
+  },
+  {
+    id: "rest",
+    label: "Rest & renewal",
+    references: [
+      "Exodus 33:14", "Psalm 4:8", "Psalm 23:2-3", "Psalm 62:1-2", "Psalm 127:2",
+      "Isaiah 30:15", "Isaiah 40:29-31", "Jeremiah 6:16", "Matthew 11:28-30", "Mark 6:31",
+      "John 14:27", "Hebrews 4:9-11", "1 Peter 5:7", "Revelation 14:13", "Psalm 116:7"
+    ]
+  }
+];
+
+const promisesByReference = new Map(biblePromises.map((promise) => [promise.reference, promise]));
+promiseCategories.forEach((category) => {
+  category.references.forEach((reference) => {
+    let promise = promisesByReference.get(reference);
+    if (!promise) {
+      promise = { text: "", reference };
+      biblePromises.push(promise);
+      promisesByReference.set(reference, promise);
+    }
+    promise.categories = [...new Set([...(promise.categories || []), category.id])];
+  });
+});
+
+const promiseTranslations = {
+  web: { id: "web", label: "WEB" },
+  kjv: { id: "kjv", label: "KJV" },
+  asv: { id: "asv", label: "ASV" }
+};
+const promiseTranslationStorageKey = "word-oasis-promise-translation";
+const promiseCategoryStorageKey = "word-oasis-promise-category";
+const promiseTranslationCache = new Map();
 let promiseIndex = 0;
+let displayedPromise = null;
+let promiseRenderRequest = 0;
 let promiseRotation;
 let promiseHeightResizeTimer;
 
@@ -7762,18 +7918,95 @@ function answerTemplate(answer) {
   `;
 }
 
-function currentPromise() {
-  return biblePromises[promiseIndex];
+function availablePromises() {
+  const category = promiseCategory?.value || "all";
+  return category === "all"
+    ? biblePromises
+    : biblePromises.filter((promise) => promise.categories?.includes(category));
 }
 
-function renderPromise() {
+function currentPromiseSource() {
+  const promises = availablePromises();
+  return promises[promiseIndex] || promises[0] || biblePromises[0];
+}
+
+function currentPromise() {
+  return displayedPromise || currentPromiseSource();
+}
+
+function selectedPromiseTranslation() {
+  return promiseTranslations[promiseTranslation?.value] || promiseTranslations.web;
+}
+
+async function translatedPromise(source, translation) {
+  const cacheKey = `${translation.id}:${source.reference}`;
+  if (promiseTranslationCache.has(cacheKey)) {
+    return promiseTranslationCache.get(cacheKey);
+  }
+
+  const request = fetch(
+    `https://bible-api.com/${encodeURIComponent(source.reference)}?translation=${translation.id}`
+  ).then(async (response) => {
+    if (!response.ok) {
+      throw new Error(`Bible translation request failed with status ${response.status}`);
+    }
+    const data = await response.json();
+    const text = String(data.text || "").replace(/\s+/g, " ").trim();
+    if (!text) {
+      throw new Error("Bible translation response did not include verse text");
+    }
+    return {
+      text,
+      reference: `${data.reference || source.reference} (${translation.label})`
+    };
+  });
+
+  promiseTranslationCache.set(cacheKey, request);
+  request.catch(() => promiseTranslationCache.delete(cacheKey));
+  return request;
+}
+
+async function renderPromise() {
+  const request = ++promiseRenderRequest;
+  const source = currentPromiseSource();
+  const translation = selectedPromiseTranslation();
+
+  if (window.WORD_OASIS_PRERENDER) {
+    displayedPromise = source.text
+      ? { ...source, reference: `${source.reference} (WEB)` }
+      : { text: "This promise could not be loaded right now.", reference: source.reference };
+    promiseText.replaceChildren(promiseQuoteSpan(displayedPromise.text));
+    promiseReference.textContent = displayedPromise.reference;
+    return;
+  }
+
+  promiseStatus.textContent = `Loading ${translation.label}…`;
+
+  try {
+    const promise = await translatedPromise(source, translation);
+    if (request !== promiseRenderRequest) {
+      return;
+    }
+    displayedPromise = promise;
+  } catch (error) {
+    if (request !== promiseRenderRequest) {
+      return;
+    }
+    displayedPromise = source.text
+      ? { ...source, reference: `${source.reference} (WEB)` }
+      : { text: "This promise could not be loaded right now.", reference: source.reference };
+    promiseStatus.textContent = `${translation.label} could not be loaded. Showing the available promise text.`;
+  }
+
   const promise = currentPromise();
   replayElementAnimation(promiseText.closest(".promise-copy"), "is-transitioning");
   updatePromiseTextHeight();
   promiseText.replaceChildren(promiseQuoteSpan(promise.text));
   promiseReference.textContent = promise.reference;
   updatePromiseShareLinks();
-  promiseStatus.textContent = "";
+  if (!promiseStatus.textContent.includes("could not be loaded")) {
+    promiseStatus.textContent = "";
+  }
   preparePromiseImage();
 }
 
@@ -7802,7 +8035,11 @@ function updatePromiseTextHeight() {
   measurement.style.width = `${width}px`;
   promiseText.parentElement.appendChild(measurement);
 
-  const maxHeight = biblePromises.reduce((height, promise) => {
+  const measuredPromises = displayedPromise ? [...availablePromises(), displayedPromise] : availablePromises();
+  const maxHeight = measuredPromises.reduce((height, promise) => {
+    if (!promise.text) {
+      return height;
+    }
     measurement.replaceChildren(promiseQuoteSpan(promise.text));
     return Math.max(height, measurement.scrollHeight);
   }, 0);
@@ -7820,7 +8057,9 @@ function schedulePromiseTextHeightUpdate() {
 }
 
 function advancePromise(direction = 1) {
-  promiseIndex = (promiseIndex + direction + biblePromises.length) % biblePromises.length;
+  const promiseCount = availablePromises().length;
+  promiseIndex = (promiseIndex + direction + promiseCount) % promiseCount;
+  displayedPromise = null;
   renderPromise();
   restartTimedProgress(promiseProgressFill);
 }
@@ -7924,7 +8163,7 @@ function loadPromiseImageFonts() {
 
   if (!promiseImageFontsPromise) {
     promiseImageFontsPromise = Promise.all([
-      document.fonts.load('600 72px "Inter"'),
+      document.fonts.load('500 72px "Inter"'),
       document.fonts.load('800 28px "Inter"'),
       document.fonts.load('600 26px "Inter"')
     ]).catch(() => undefined);
@@ -7990,7 +8229,7 @@ function fitPromiseVerse(ctx, text, maxWidth, maxHeight) {
   let fitted = null;
 
   for (let size = 74; size >= 28; size -= 2) {
-    ctx.font = `600 ${size}px "Inter", system-ui, sans-serif`;
+    ctx.font = `500 ${size}px "Inter", system-ui, sans-serif`;
     const lines = wrapCanvasText(ctx, text, maxWidth);
     const lineHeight = Math.round(size * 1.28);
     fitted = { size, lines, lineHeight, height: lines.length * lineHeight };
@@ -8429,18 +8668,18 @@ async function renderPromiseImage(promise) {
   let y = verseTop + Math.max((verseBottom - verseTop - blockHeight) / 2, 0);
 
   ctx.save();
-  ctx.globalAlpha = 0.12;
+  ctx.globalAlpha = 0.07;
   ctx.fillStyle = "#ffffff";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  ctx.font = '700 520px Georgia, "Times New Roman", serif';
+  ctx.font = '700 390px Georgia, "Times New Roman", serif';
   ctx.fillText("\u201C", centerX, y + verse.height / 2 + 90);
   ctx.restore();
 
   ctx.textBaseline = "alphabetic";
   ctx.fillStyle = "#ffffff";
   ctx.textAlign = "center";
-  ctx.font = `600 ${verse.size}px "Inter", system-ui, sans-serif`;
+  ctx.font = `500 ${verse.size}px "Inter", system-ui, sans-serif`;
   verse.lines.forEach((line) => {
     y += verse.lineHeight;
     ctx.fillText(line, centerX, y);
@@ -8503,36 +8742,32 @@ async function createPromiseImageFile() {
 // Safari drops the user-gesture grant while a canvas is being encoded, which
 // makes navigator.share reject. Rendering the graphic ahead of the tap keeps a
 // finished File on hand so the share sheet can open immediately.
-let promiseImageCache = { index: -1, file: null };
+let promiseImageCache = { key: "", file: null };
 
 function readyPromiseImageFile() {
-  return promiseImageCache.index === promiseIndex ? promiseImageCache.file : null;
+  const key = `${currentPromiseSource().reference}:${selectedPromiseTranslation().id}`;
+  return promiseImageCache.key === key ? promiseImageCache.file : null;
 }
 
 function preparePromiseImage() {
-  const index = promiseIndex;
-  if (promiseImageCache.index === index) {
+  const key = `${currentPromiseSource().reference}:${selectedPromiseTranslation().id}`;
+  if (promiseImageCache.key === key) {
     return;
   }
 
-  promiseImageCache = { index, file: null };
+  promiseImageCache = { key, file: null };
 
   const build = () => {
     createPromiseImageFile()
       .then((file) => {
-        if (promiseImageCache.index === index) {
+        if (promiseImageCache.key === key) {
           promiseImageCache.file = file;
         }
       })
       .catch(() => undefined);
   };
 
-  if (typeof window.requestIdleCallback === "function") {
-    window.requestIdleCallback(build, { timeout: 1200 });
-    return;
-  }
-
-  window.setTimeout(build, 200);
+  build();
 }
 
 async function downloadPromiseImage() {
@@ -8562,7 +8797,6 @@ function updatePromiseShareLinks() {
   const content = promiseShareContent();
   promiseFacebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
   promiseXShare.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(content)}`;
-  promiseLinkedInShare.href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
   promiseWhatsAppShare.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(content)}`;
 }
 
@@ -8816,7 +9050,9 @@ const perspectivesByAnswer = {
   "answer-second-coming":
     "The Bible presents a visible, audible, and glorious second coming rather than a secret rapture. Jesus returns personally to resurrect the righteous, gather His people, and bring the long conflict with sin to its decisive close; readiness means faithful relationship and mission, not predicting a date.",
   "answer-hell":
-    "The final fire is the second death: the complete and irreversible destruction of sin and unrepentant sinners, not eternal conscious torment. This preserves both God's justice and His character of love, and it leaves the universe truly free from pain, rebellion, and death."
+    "The final fire is the second death: the complete and irreversible destruction of sin and unrepentant sinners, not eternal conscious torment. This preserves both God's justice and His character of love, and it leaves the universe truly free from pain, rebellion, and death.",
+  "answer-women-ministry":
+    "Men and women possess equal dignity before God, but Scripture assigns the pastoral and elder office to qualified men. Women remain essential to the church's mission and should be equipped and encouraged to use their spiritual gifts faithfully in the many ministries Scripture entrusts to them."
 };
 
 function biblicalPerspective(answer) {
@@ -8921,12 +9157,22 @@ spotlightPrevious.addEventListener("click", () => {
   restartSpotlightRotation();
 });
 
-[promiseFacebookShare, promiseLinkedInShare].forEach((shareLink) => {
-  shareLink.addEventListener("click", (event) => {
-    event.preventDefault();
-    const platform = shareLink === promiseFacebookShare ? "Facebook" : "LinkedIn";
-    sharePromiseWithClipboard(shareLink, platform);
-  });
+promiseFacebookShare.addEventListener("click", (event) => {
+  event.preventDefault();
+  sharePromiseWithClipboard(promiseFacebookShare, "Facebook");
+});
+
+promiseInstagramShare.addEventListener("click", async () => {
+  try {
+    if (navigator.share && (await sharePromiseViaSystemSheet("Instagram"))) {
+      return;
+    }
+    await copyPromiseVerseOnly();
+    await downloadPromiseImage();
+    promiseStatus.textContent = "Graphic saved and caption copied. Upload the image to Instagram and paste the caption.";
+  } catch (error) {
+    promiseStatus.textContent = "The Instagram graphic could not be prepared. Please try again.";
+  }
 });
 
 [promiseXShare, promiseWhatsAppShare].forEach((shareLink) => {
@@ -8939,6 +9185,24 @@ spotlightPrevious.addEventListener("click", () => {
 });
 
 window.addEventListener("resize", schedulePromiseTextHeightUpdate);
+
+promiseTranslation.addEventListener("change", () => {
+  localStorage.setItem(promiseTranslationStorageKey, promiseTranslation.value);
+  displayedPromise = null;
+  promiseImageCache = { key: "", file: null };
+  renderPromise();
+  restartPromiseRotation();
+});
+
+promiseCategory.addEventListener("change", () => {
+  localStorage.setItem(promiseCategoryStorageKey, promiseCategory.value);
+  promiseIndex = 0;
+  displayedPromise = null;
+  promiseImageCache = { key: "", file: null };
+  updatePromiseTextHeight();
+  renderPromise();
+  restartPromiseRotation();
+});
 
 if (document.fonts) {
   document.fonts.ready.then(updatePromiseTextHeight);
@@ -8963,6 +9227,24 @@ function restartPromiseRotation() {
   window.clearInterval(promiseRotation);
   promiseRotation = window.setInterval(() => advancePromise(), 10000);
   restartPromiseProgress();
+}
+
+const savedPromiseTranslation = localStorage.getItem(promiseTranslationStorageKey);
+if (promiseTranslations[savedPromiseTranslation]) {
+  promiseTranslation.value = savedPromiseTranslation;
+}
+
+promiseCategories.forEach((category) => {
+  const option = document.createElement("option");
+  option.value = category.id;
+  option.textContent = `${category.label} (${category.references.length})`;
+  promiseCategory.append(option);
+});
+promiseCategory.options[0].textContent = `All promises (${biblePromises.length})`;
+
+const savedPromiseCategory = localStorage.getItem(promiseCategoryStorageKey);
+if (savedPromiseCategory === "all" || promiseCategories.some((category) => category.id === savedPromiseCategory)) {
+  promiseCategory.value = savedPromiseCategory;
 }
 
 updatePromiseTextHeight();

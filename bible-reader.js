@@ -141,10 +141,83 @@
     <div class="bible-selection-actions">
       <button type="button" id="bible-copy-selection" disabled>Copy passage</button>
       <button type="button" id="bible-share-selection" disabled>Share</button>
+      <button type="button" id="bible-share-graphic" aria-expanded="false" disabled>Share graphic</button>
       <button type="button" id="bible-memorize-selection" disabled>Memorize</button>
       <a id="bible-text-selection" aria-disabled="true">Text</a>
       <a id="bible-x-selection" target="_blank" rel="noopener" aria-disabled="true">X</a>
       <a id="bible-facebook-selection" target="_blank" rel="noopener" aria-disabled="true">Facebook</a>
+    </div>
+    <div class="bible-graphic-customizer" id="bible-graphic-customizer" hidden>
+      <fieldset>
+        <legend>Choose a background</legend>
+        <div class="bible-graphic-palettes">
+          <label class="bible-graphic-palette bible-graphic-palette-midnight">
+            <input type="radio" name="bible-graphic-palette" value="midnight">
+            <span aria-hidden="true"></span>
+            <small>Midnight</small>
+          </label>
+          <label class="bible-graphic-palette bible-graphic-palette-ocean">
+            <input type="radio" name="bible-graphic-palette" value="ocean">
+            <span aria-hidden="true"></span>
+            <small>Ocean</small>
+          </label>
+          <label class="bible-graphic-palette bible-graphic-palette-forest">
+            <input type="radio" name="bible-graphic-palette" value="forest">
+            <span aria-hidden="true"></span>
+            <small>Forest</small>
+          </label>
+          <label class="bible-graphic-palette bible-graphic-palette-plum">
+            <input type="radio" name="bible-graphic-palette" value="plum">
+            <span aria-hidden="true"></span>
+            <small>Plum</small>
+          </label>
+          <label class="bible-graphic-palette bible-graphic-palette-rose">
+            <input type="radio" name="bible-graphic-palette" value="rose">
+            <span aria-hidden="true"></span>
+            <small>Rose</small>
+          </label>
+          <label class="bible-graphic-palette bible-graphic-palette-golden">
+            <input type="radio" name="bible-graphic-palette" value="golden">
+            <span aria-hidden="true"></span>
+            <small>Golden</small>
+          </label>
+          <label class="bible-graphic-palette bible-graphic-palette-teal">
+            <input type="radio" name="bible-graphic-palette" value="teal">
+            <span aria-hidden="true"></span>
+            <small>Teal</small>
+          </label>
+          <label class="bible-graphic-palette bible-graphic-palette-sunset">
+            <input type="radio" name="bible-graphic-palette" value="sunset">
+            <span aria-hidden="true"></span>
+            <small>Sunset</small>
+          </label>
+          <label class="bible-graphic-palette bible-graphic-palette-lavender">
+            <input type="radio" name="bible-graphic-palette" value="lavender">
+            <span aria-hidden="true"></span>
+            <small>Lavender</small>
+          </label>
+          <label class="bible-graphic-palette bible-graphic-palette-auto">
+            <input type="radio" name="bible-graphic-palette" value="auto" checked>
+            <span aria-hidden="true">✦</span>
+            <small>Automatic</small>
+          </label>
+          <label class="bible-graphic-palette bible-graphic-palette-custom">
+            <input type="radio" name="bible-graphic-palette" value="custom">
+            <span aria-hidden="true">+</span>
+            <small>Custom</small>
+          </label>
+        </div>
+      </fieldset>
+      <label class="bible-graphic-custom-color" id="bible-graphic-custom-color" hidden>
+        Custom color
+        <span>
+          <input type="color" id="bible-graphic-color-input" value="#2563a6">
+          <output id="bible-graphic-color-value" for="bible-graphic-color-input">#2563A6</output>
+        </span>
+      </label>
+      <button class="bible-graphic-create" id="bible-share-graphic-confirm" type="button">
+        Share selected color
+      </button>
     </div>
     <div class="bible-memory-lab" id="bible-memory-lab" hidden>
       <div class="bible-memory-controls">
@@ -186,6 +259,13 @@
   const includeSourceCheckbox = selectionPanel.querySelector("#bible-include-source");
   const copySelectionButton = selectionPanel.querySelector("#bible-copy-selection");
   const shareSelectionButton = selectionPanel.querySelector("#bible-share-selection");
+  const shareGraphicButton = selectionPanel.querySelector("#bible-share-graphic");
+  const graphicCustomizer = selectionPanel.querySelector("#bible-graphic-customizer");
+  const graphicPaletteInputs = [...selectionPanel.querySelectorAll('input[name="bible-graphic-palette"]')];
+  const graphicCustomColorField = selectionPanel.querySelector("#bible-graphic-custom-color");
+  const graphicColorInput = selectionPanel.querySelector("#bible-graphic-color-input");
+  const graphicColorValue = selectionPanel.querySelector("#bible-graphic-color-value");
+  const shareGraphicConfirmButton = selectionPanel.querySelector("#bible-share-graphic-confirm");
   const memorizeSelectionButton = selectionPanel.querySelector("#bible-memorize-selection");
   const textSelectionLink = selectionPanel.querySelector("#bible-text-selection");
   const xSelectionLink = selectionPanel.querySelector("#bible-x-selection");
@@ -210,6 +290,7 @@
   let textSizeValue = defaultTextSize;
   let initialSearchQuery = "";
   let memoryIsFlipped = false;
+  let scriptureGraphicCache = { key: "", file: null, promise: null };
 
   function clampTextSize(value) {
     return Math.max(minTextSize, Math.min(value, maxTextSize));
@@ -431,13 +512,49 @@
       .join(" ");
   }
 
-  function keyWordPrompt(text) {
-    let wordIndex = 0;
-    return text.replace(/\b[\w’'-]+\b/g, (word) => {
-      wordIndex += 1;
-      const isKeyWord = word.length >= 7 || wordIndex % 6 === 1;
-      return isKeyWord ? word : "_____";
+  const memoryKeyWordStopWords = new Set([
+    "a", "an", "and", "are", "as", "at", "be", "been", "being", "but", "by",
+    "did", "do", "does", "for", "from", "had", "has", "have", "he", "her",
+    "hers", "him", "his", "i", "if", "in", "is", "it", "its", "me", "my",
+    "nor", "not", "of", "on", "or", "our", "ours", "she", "so", "than",
+    "that", "the", "their", "theirs", "them", "then", "there", "these",
+    "they", "this", "those", "to", "us", "was", "we", "were", "what",
+    "when", "where", "which", "who", "whom", "why", "will", "with", "you",
+    "your", "yours"
+  ]);
+
+  const shortMemoryKeyWords = new Set([
+    "god", "joy", "law", "life", "lord", "love", "peace", "sin", "son"
+  ]);
+
+  function isMemoryKeyWord(word) {
+    const normalized = word.toLowerCase().replace(/[’']/g, "");
+    return shortMemoryKeyWords.has(normalized)
+      || (normalized.length >= 4 && !memoryKeyWordStopWords.has(normalized));
+  }
+
+  function renderKeyWordPrompt(text) {
+    const fragment = document.createDocumentFragment();
+
+    text.split(/(\b[\w’'-]+\b)/g).forEach((part) => {
+      if (!/^\b[\w’'-]+\b$/.test(part)) {
+        fragment.append(document.createTextNode(part));
+        return;
+      }
+
+      if (isMemoryKeyWord(part)) {
+        fragment.append(document.createTextNode(part));
+        return;
+      }
+
+      const hiddenWord = document.createElement("span");
+      hiddenWord.className = "bible-memory-blurred-word";
+      hiddenWord.setAttribute("aria-hidden", "true");
+      hiddenWord.textContent = part;
+      fragment.append(hiddenWord);
     });
+
+    memoryText.replaceChildren(fragment);
   }
 
   function initialsPrompt(text) {
@@ -445,9 +562,6 @@
   }
 
   function memoryPromptText(text, mode) {
-    if (mode === "keywords") {
-      return keyWordPrompt(text);
-    }
     if (mode === "initials") {
       return initialsPrompt(text);
     }
@@ -455,6 +569,17 @@
       return "Passage hidden. Recite it from memory, then switch modes or flip again to review.";
     }
     return text;
+  }
+
+  function renderMemoryPrompt(text, mode) {
+    if (mode === "keywords") {
+      memoryText.setAttribute("aria-label", "Key words are shown. The remaining words are blurred.");
+      renderKeyWordPrompt(text);
+      return;
+    }
+
+    memoryText.removeAttribute("aria-label");
+    memoryText.textContent = memoryPromptText(text, mode);
   }
 
   function setMemoryFlipped(isFlipped) {
@@ -479,7 +604,7 @@
       const reference = referenceForRange(book, chapter, range, memoryTranslation);
       const passageText = plainPassageForRange(range, data.verses);
       memoryReference.textContent = reference;
-      memoryText.textContent = memoryPromptText(passageText, memoryModeSelect.value);
+      renderMemoryPrompt(passageText, memoryModeSelect.value);
       memoryStatus.textContent = `Practicing ${reference}.`;
     } catch (error) {
       memoryStatus.textContent = "Could not load that version for memorization. Try another version.";
@@ -526,6 +651,49 @@
     return lines.join("\n");
   }
 
+  function selectedGraphicOptions() {
+    const range = selectedRange();
+    if (!range) {
+      return null;
+    }
+    const { book, chapter, translation } = selectedState();
+    return {
+      text: plainPassageForRange(range, currentChapterVerses),
+      reference: referenceForRange(book, chapter, range, translation),
+      label: range.start === range.end ? "Bible verse" : "Scripture passage",
+      palette: graphicPaletteInputs.find((input) => input.checked)?.value || "auto",
+      customColor: graphicColorInput.value
+    };
+  }
+
+  function prepareSelectedGraphic() {
+    const options = selectedGraphicOptions();
+    const renderer = window.WordOasisScriptureGraphic;
+    if (!options || !renderer) {
+      scriptureGraphicCache = { key: "", file: null, promise: null };
+      return;
+    }
+
+    const key = `${options.reference}:${options.text}:${options.palette}:${options.customColor}`;
+    if (scriptureGraphicCache.key === key) {
+      return;
+    }
+
+    const promise = renderer.createFile(options);
+    scriptureGraphicCache = { key, file: null, promise };
+    promise
+      .then((file) => {
+        if (scriptureGraphicCache.key === key) {
+          scriptureGraphicCache.file = file;
+        }
+      })
+      .catch(() => {
+        if (scriptureGraphicCache.key === key) {
+          scriptureGraphicCache.promise = null;
+        }
+      });
+  }
+
   function updateSelectedVerseStyles() {
     const range = selectedRange();
     readerBody.querySelectorAll(".bible-verse").forEach((verseRow) => {
@@ -547,6 +715,7 @@
       : "Click a verse number to select it. Click another verse number to select a range.";
     copySelectionButton.disabled = !hasSelection;
     shareSelectionButton.disabled = !hasSelection;
+    shareGraphicButton.disabled = !hasSelection;
     memorizeSelectionButton.disabled = !hasSelection;
     setShareLinkState(textSelectionLink, hasSelection, `sms:?&body=${encodeURIComponent(text)}`);
     setShareLinkState(xSelectionLink, hasSelection, `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`);
@@ -561,9 +730,13 @@
       if (!memoryLab.hidden) {
         updateMemoryCard();
       }
+      prepareSelectedGraphic();
     } else {
       memoryLab.hidden = true;
       setMemoryFlipped(false);
+      scriptureGraphicCache = { key: "", file: null, promise: null };
+      graphicCustomizer.hidden = true;
+      shareGraphicButton.setAttribute("aria-expanded", "false");
       selectionHome.append(selectionPanel);
     }
   }
@@ -656,6 +829,76 @@
     }
     await copySelectedPassage();
     selectionStatus.textContent = "Sharing is not available in this browser, so the passage was copied instead.";
+  }
+
+  async function shareSelectedGraphic() {
+    const options = selectedGraphicOptions();
+    const renderer = window.WordOasisScriptureGraphic;
+    if (!options || !renderer) {
+      selectionStatus.textContent = "The Scripture graphic tools are not available right now.";
+      return;
+    }
+
+    const key = `${options.reference}:${options.text}:${options.palette}:${options.customColor}`;
+    selectionStatus.textContent = "Creating your Scripture graphic...";
+
+    try {
+      if (scriptureGraphicCache.key !== key) {
+        prepareSelectedGraphic();
+      }
+      const file = scriptureGraphicCache.file || await scriptureGraphicCache.promise;
+      if (!file) {
+        throw new Error("The Scripture graphic could not be created.");
+      }
+
+      const sharePayload = {
+        title: options.reference,
+        text: `${options.reference}\n\nShared from Word Oasis`,
+        files: [file]
+      };
+      if (navigator.share && navigator.canShare?.({ files: [file] })) {
+        try {
+          await navigator.share(sharePayload);
+          selectionStatus.textContent = "Scripture graphic shared.";
+          trackAnalyticsEvent("bible_passage_graphic_share", {
+            ...selectedAnalyticsPayload(),
+            graphic_palette: options.palette,
+            share_method: "native"
+          });
+          return;
+        } catch (error) {
+          if (error.name === "AbortError") {
+            selectionStatus.textContent = "";
+            return;
+          }
+        }
+      }
+
+      renderer.downloadFile(file);
+      selectionStatus.textContent = "Scripture graphic saved. Attach it to your post or message.";
+      trackAnalyticsEvent("bible_passage_graphic_share", {
+        ...selectedAnalyticsPayload(),
+        graphic_palette: options.palette,
+        share_method: "download"
+      });
+    } catch (error) {
+      selectionStatus.textContent = error.message || "The Scripture graphic could not be created. Try a shorter passage.";
+    }
+  }
+
+  function toggleGraphicCustomizer() {
+    const willOpen = graphicCustomizer.hidden;
+    graphicCustomizer.hidden = !willOpen;
+    shareGraphicButton.setAttribute("aria-expanded", String(willOpen));
+    if (willOpen) {
+      graphicPaletteInputs.find((input) => input.checked)?.focus();
+    }
+  }
+
+  function updateCustomColorControls() {
+    const isCustom = graphicPaletteInputs.some((input) => input.checked && input.value === "custom");
+    graphicCustomColorField.hidden = !isCustom;
+    graphicColorValue.value = graphicColorInput.value.toUpperCase();
   }
 
   function highlightVerse(verseNumber) {
@@ -1036,6 +1279,22 @@
   includeSourceCheckbox.addEventListener("change", updateSelectionTools);
   copySelectionButton.addEventListener("click", copySelectedPassage);
   shareSelectionButton.addEventListener("click", shareSelectedPassage);
+  shareGraphicButton.addEventListener("click", toggleGraphicCustomizer);
+  shareGraphicConfirmButton.addEventListener("click", shareSelectedGraphic);
+  graphicPaletteInputs.forEach((input) => {
+    input.addEventListener("change", () => {
+      updateCustomColorControls();
+      scriptureGraphicCache = { key: "", file: null, promise: null };
+      prepareSelectedGraphic();
+    });
+  });
+  graphicColorInput.addEventListener("input", () => {
+    const customInput = graphicPaletteInputs.find((input) => input.value === "custom");
+    customInput.checked = true;
+    updateCustomColorControls();
+    scriptureGraphicCache = { key: "", file: null, promise: null };
+    prepareSelectedGraphic();
+  });
   memorizeSelectionButton.addEventListener("click", openMemoryCard);
   memoryVersionSelect.addEventListener("change", updateMemoryCard);
   memoryModeSelect.addEventListener("change", updateMemoryCard);
