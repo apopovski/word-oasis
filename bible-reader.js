@@ -690,7 +690,7 @@
     }
   }
 
-  function selectedPassageText() {
+  function selectedPassageText(includeSource = includeSourceCheckbox.checked) {
     const range = selectedRange();
     if (!range) {
       return "";
@@ -700,7 +700,7 @@
       referenceForRange(book, chapter, range, translation),
       passageForRange(range)
     ];
-    if (includeSourceCheckbox.checked) {
+    if (includeSource) {
       lines.push("", `Read on Word Oasis: ${buildReaderUrl(book, chapter, translation, range.start)}`);
     }
     return lines.join("\n");
@@ -775,7 +775,7 @@
     memorizeSelectionButton.disabled = !hasSelection;
     setShareLinkState(textSelectionLink, hasSelection, `sms:?&body=${encodeURIComponent(text)}`);
     setShareLinkState(xSelectionLink, hasSelection, `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`);
-    setShareLinkState(facebookSelectionLink, hasSelection, `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(text)}`);
+    setShareLinkState(facebookSelectionLink, hasSelection, `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`);
     updateSelectedVerseStyles();
 
     if (hasSelection && window.WordOasisLibrary) {
@@ -877,15 +877,18 @@
       return;
     }
     const { book, chapter, translation } = selectedState();
-    const text = selectedPassageText();
+    const text = selectedPassageText(false);
     const url = buildReaderUrl(book, chapter, translation, range.start);
     if (navigator.share) {
       try {
-        await navigator.share({
+        const payload = {
           title: referenceForRange(book, chapter, range, translation),
-          text,
-          url
-        });
+          text
+        };
+        if (includeSourceCheckbox.checked) {
+          payload.url = url;
+        }
+        await navigator.share(payload);
         trackAnalyticsEvent("bible_passage_share", selectedAnalyticsPayload());
       } catch (error) {
         if (error.name !== "AbortError") {
@@ -896,6 +899,44 @@
     }
     await copySelectedPassage();
     selectionStatus.textContent = "Sharing is not available in this browser, so the passage was copied instead.";
+  }
+
+  function prefersNativeSocialShare() {
+    return Boolean(navigator.share) && window.matchMedia("(max-width: 900px), (pointer: coarse)").matches;
+  }
+
+  async function shareSelectedPassageOnFacebook(event) {
+    event.preventDefault();
+    if (facebookSelectionLink.getAttribute("aria-disabled") === "true") {
+      return;
+    }
+
+    if (prefersNativeSocialShare()) {
+      await shareSelectedPassage();
+      return;
+    }
+
+    const shareWindow = window.open(
+      facebookSelectionLink.href,
+      "wordOasisBibleFacebookShare",
+      "width=720,height=720,left=120,top=80,menubar=no,toolbar=no,location=no,status=no"
+    );
+    if (!shareWindow) {
+      selectionStatus.textContent = "Your browser blocked Facebook. Allow pop-ups or use Share instead.";
+      return;
+    }
+
+    shareWindow.focus();
+    try {
+      await copyText(selectedPassageText());
+      selectionStatus.textContent = "Facebook opened and the passage was copied. Paste it into the post, then publish.";
+    } catch (error) {
+      selectionStatus.textContent = "Facebook opened with the Word Oasis passage link. Add the verse text before publishing.";
+    }
+    trackAnalyticsEvent("bible_passage_social_share", {
+      ...selectedAnalyticsPayload(),
+      social_platform: "facebook"
+    });
   }
 
   async function shareSelectedGraphic() {
@@ -1348,6 +1389,21 @@
   includeSourceCheckbox.addEventListener("change", updateSelectionTools);
   copySelectionButton.addEventListener("click", copySelectedPassage);
   shareSelectionButton.addEventListener("click", shareSelectedPassage);
+  facebookSelectionLink.addEventListener("click", shareSelectedPassageOnFacebook);
+  xSelectionLink.addEventListener("click", () => {
+    selectionStatus.textContent = "Opening X with the selected passage.";
+    trackAnalyticsEvent("bible_passage_social_share", {
+      ...selectedAnalyticsPayload(),
+      social_platform: "x"
+    });
+  });
+  textSelectionLink.addEventListener("click", () => {
+    selectionStatus.textContent = "Opening your messaging app with the selected passage.";
+    trackAnalyticsEvent("bible_passage_social_share", {
+      ...selectedAnalyticsPayload(),
+      social_platform: "text"
+    });
+  });
   shareGraphicButton.addEventListener("click", toggleGraphicCustomizer);
   shareGraphicConfirmButton.addEventListener("click", shareSelectedGraphic);
   graphicPaletteInputs.forEach((input) => {
