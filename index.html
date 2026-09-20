@@ -42,7 +42,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="styles.css?v=20261035">
+    <link rel="stylesheet" href="styles.css?v=20261039">
 <script>
   window.WORD_OASIS_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZSB_Tf-MEbTUrmSkEqwNn2gjtxqF4cv16pMCDMmV3voJeJAFhIYBQ/exec";
   window.WORD_OASIS_FORM_EMAIL_TO = "wordoasis7@gmail.com";
@@ -2181,6 +2181,7 @@
           <li><a href="/answers/">Answers</a></li>
           <li><a href="/topics/">Topics</a></li>
           <li><a href="/bible/">Bible</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#ask">Ask a question</a></li>
           <li class="nav-search-item">
             <form class="nav-search" id="nav-search-form" role="search">
@@ -2352,11 +2353,11 @@
       </section>
 
 
-      <section class="promise-section" aria-label="Rotating Bible promises">
+      <section class="promise-section" aria-label="Bible promises">
         <div class="container">
           <article class="promise-card" id="promise-card">
             <div class="promise-copy">
-              <p class="eyebrow"><span aria-hidden="true">✦</span> Today's Bible promise</p>
+              <p class="eyebrow"><span aria-hidden="true">✦</span> Bible Promise</p>
               <div class="promise-preferences">
                 <label class="promise-preference">
                   <span>Category</span>
@@ -2366,16 +2367,16 @@
                 </label>
                 <label class="promise-preference">
                   <span>Bible version</span>
-                  <select id="promise-translation" aria-label="Bible version for today's promise">
+                  <select id="promise-translation" aria-label="Bible version for this promise">
                     <option value="web">WEB</option>
                     <option value="kjv">KJV</option>
                     <option value="asv">ASV</option>
                   </select>
                 </label>
               </div>
-              <blockquote id="promise-text"></blockquote>
-              <p class="promise-reference" id="promise-reference"></p>
-              <p class="promise-attribution">A daily moment of hope from Word Oasis</p>
+              <blockquote id="promise-text" aria-live="polite" aria-atomic="true"></blockquote>
+              <a class="promise-reference" id="promise-reference" href="/bible/"></a>
+              <p class="promise-attribution">Browse by theme, or return to today’s selected promise.</p>
             </div>
             <div class="promise-actions">
               <span class="promise-share-label">Share this hope</span>
@@ -2400,11 +2401,13 @@
                   <button type="button" class="promise-share" id="promise-share">Share</button>
                   <button type="button" class="promise-copy-button" id="promise-copy">Copy</button>
                   <button type="button" class="promise-copy-button" id="promise-save-image">Save image</button>
+                  <button type="button" class="promise-copy-button" id="promise-bookmark" aria-pressed="false">Save verse</button>
                 </div>
               </div>
             </div>
-            <p class="promise-status" id="promise-status" role="status" aria-live="polite"></p>
+            <p class="promise-status" id="promise-status" role="status" aria-live="polite" aria-atomic="true"></p>
             <div class="promise-navigation" aria-label="Browse promises">
+              <button type="button" class="promise-nav-text" id="promise-today">Today’s promise</button>
               <button type="button" class="promise-nav-button" id="promise-previous" aria-label="Show previous promise">
                 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.5 5.5 8 12l6.5 6.5"/></svg>
               </button>
@@ -2414,6 +2417,8 @@
               <button type="button" class="promise-nav-button" id="promise-next" aria-label="Show next promise">
                 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg>
               </button>
+              <button type="button" class="promise-nav-text" id="promise-random">Surprise me</button>
+              <span class="promise-position" id="promise-position" aria-live="polite"></span>
             </div>
           </article>
         </div>
@@ -2446,6 +2451,82 @@
               <p>From anxiety and forgiveness to faith, marriage, and discipleship, the goal is clear and usable biblical guidance.</p>
             </article>
           </div>
+        </div>
+      </section>
+
+      <section id="about" class="section about-section" aria-labelledby="about-heading">
+        <div class="container">
+          <div class="about-card">
+            <div class="about-copy">
+              <p class="eyebrow">About Word Oasis</p>
+              <h2 id="about-heading">A place to explore Scripture with clarity and hope</h2>
+              <p>Word Oasis exists to help people understand the Bible, discover the character of God, and apply biblical truth to real life. Whether you are opening Scripture for the first time or returning with a difficult question, our goal is to make thoughtful Bible study approachable.</p>
+              <p>Answers are written to be read alongside the passages they cite. The site also provides tools for reading, searching, memorizing, and sharing Scripture so you can continue studying beyond a single response.</p>
+            </div>
+            <aside class="about-purpose" aria-label="Our purpose">
+              <span class="about-purpose-mark" aria-hidden="true">✦</span>
+              <h3>Our purpose</h3>
+              <p>To point people back to God’s Word and encourage a growing relationship with Jesus Christ.</p>
+              <a class="text-link" href="/bible/">Open the Bible <span aria-hidden="true">→</span></a>
+            </aside>
+          </div>
+          <details class="about-beliefs">
+            <summary>
+              <span>
+                <span class="eyebrow">What we believe</span>
+                <strong>A sure foundation of biblical faith</strong>
+                <small>We believe the Bible is God’s inspired Word, Jesus Christ is the divine Son of God, and salvation is God’s gift of grace received through faith.</small>
+              </span>
+              <span class="details-action" aria-hidden="true">Read our beliefs</span>
+            </summary>
+            <div class="about-beliefs-content">
+              <p>These foundational convictions guide <i>Word Oasis</i> and express our commitment to the authority of Scripture, the gospel, and a life centered on Jesus Christ.</p>
+              <ul class="belief-list">
+              <li><strong>The Bible</strong> is the inspired Word of God and the trustworthy foundation for faith, doctrine, and daily life.</li>
+              <li><strong>The Godhead</strong> is one God revealed as the Father, the Son, and the Holy Spirit.</li>
+              <li><strong>Creation</strong> was God’s purposeful work in six literal days, and every person bears His image and possesses God-given dignity.</li>
+              <li><strong>Jesus Christ</strong> is the divine Son of God who became truly human, lived without sin, died for our sins, rose bodily, ministers for us, and will return in glory.</li>
+              <li><strong>Salvation</strong> is God’s gift of grace, received through faith in Jesus Christ rather than earned by human works; genuine faith produces a transformed and obedient life.</li>
+              <li><strong>The Ten Commandments</strong> express God’s enduring moral law and reveal what love for God and neighbor looks like.</li>
+              <li><strong>The Holy Spirit</strong> convicts, renews, guides, gives spiritual gifts, and empowers believers to reflect Christ and share the gospel.</li>
+              <li><strong>Christian hope</strong> rests in prayer, fellowship, Christ’s visible return, the resurrection of the dead, final victory over sin, and the restoration of all things.</li>
+              </ul>
+            </div>
+          </details>
+          <details class="editorial-standards">
+            <summary>How Word Oasis prepares Bible answers</summary>
+            <div>
+              <p>Answers are developed by comparing Scripture with Scripture, reading passages in their literary and historical context, and identifying the biblical references behind each conclusion.</p>
+              <ul>
+                <li>Public-domain Bible translations are used for reading tools and quotations.</li>
+                <li>References are provided so readers can examine each passage in context.</li>
+                <li>Articles are reviewed when substantive content is updated.</li>
+                <li>Corrections and thoughtful feedback are welcomed through the contact form.</li>
+              </ul>
+              <a class="text-link" href="#ask">Suggest a correction <span aria-hidden="true">→</span></a>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section id="library" class="section library-section" data-local-library hidden>
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Your private library</p>
+            <h2>Saved and recently viewed</h2>
+            <p>Bookmarks stay in this browser and are not sent to Word Oasis.</p>
+          </div>
+          <div class="library-columns">
+            <section aria-labelledby="saved-heading">
+              <h3 id="saved-heading">Saved</h3>
+              <div class="library-list" data-saved-list></div>
+            </section>
+            <section aria-labelledby="recent-heading">
+              <h3 id="recent-heading">Recently viewed answers</h3>
+              <div class="library-list" data-recent-list></div>
+            </section>
+          </div>
+          <button type="button" class="library-clear" data-library-clear>Clear local history</button>
         </div>
       </section>
 
@@ -2812,6 +2893,7 @@
               <li><a href="/answers/">All answers</a></li>
               <li><a href="/topics/">Browse topics</a></li>
               <li><a href="/bible/">Read the Bible</a></li>
+              <li><a href="#about">About Word Oasis</a></li>
             </ul>
           </nav>
 
@@ -2856,7 +2938,8 @@
       </div>
     </div>
 
-    <script src="theme.js?v=20261035"></script>
-    <script src="script.js?v=20261035"></script>
+    <script src="theme.js?v=20261039"></script>
+    <script src="local-library.js?v=20261039"></script>
+    <script src="script.js?v=20261039"></script>
   </body>
 </html>

@@ -7028,10 +7028,14 @@ const promiseCategory = document.querySelector("#promise-category");
 const promiseTranslation = document.querySelector("#promise-translation");
 const promisePrevious = document.querySelector("#promise-previous");
 const promiseNext = document.querySelector("#promise-next");
+const promiseToday = document.querySelector("#promise-today");
+const promiseRandom = document.querySelector("#promise-random");
+const promisePosition = document.querySelector("#promise-position");
 const promiseProgressFill = document.querySelector("#promise-progress-fill");
 const promiseShare = document.querySelector("#promise-share");
 const promiseCopy = document.querySelector("#promise-copy");
 const promiseSaveImage = document.querySelector("#promise-save-image");
+const promiseBookmark = document.querySelector("#promise-bookmark");
 const promiseFacebookShare = document.querySelector("#promise-share-facebook");
 const promiseXShare = document.querySelector("#promise-share-x");
 const promiseInstagramShare = document.querySelector("#promise-share-instagram");
@@ -7465,6 +7469,7 @@ const promiseTranslations = {
 };
 const promiseTranslationStorageKey = "word-oasis-promise-translation";
 const promiseCategoryStorageKey = "word-oasis-promise-category";
+const promiseCacheStorageKey = "word-oasis-promise-text-cache-v1";
 const promiseTranslationCache = new Map();
 let promiseIndex = 0;
 let displayedPromise = null;
@@ -7938,10 +7943,38 @@ function selectedPromiseTranslation() {
   return promiseTranslations[promiseTranslation?.value] || promiseTranslations.web;
 }
 
+function readStoredPromiseCache() {
+  try {
+    return JSON.parse(localStorage.getItem(promiseCacheStorageKey) || "{}");
+  } catch (error) {
+    console.warn("Word Oasis could not read the promise cache.", error);
+    return {};
+  }
+}
+
+function storeTranslatedPromise(cacheKey, promise) {
+  const stored = readStoredPromiseCache();
+  stored[cacheKey] = { ...promise, cachedAt: Date.now() };
+  const recentEntries = Object.entries(stored)
+    .sort(([, first], [, second]) => second.cachedAt - first.cachedAt)
+    .slice(0, 300);
+  localStorage.setItem(promiseCacheStorageKey, JSON.stringify(Object.fromEntries(recentEntries)));
+}
+
 async function translatedPromise(source, translation) {
   const cacheKey = `${translation.id}:${source.reference}`;
   if (promiseTranslationCache.has(cacheKey)) {
     return promiseTranslationCache.get(cacheKey);
+  }
+
+  const storedPromise = readStoredPromiseCache()[cacheKey];
+  if (storedPromise?.text && storedPromise?.reference) {
+    const cached = Promise.resolve({
+      text: storedPromise.text,
+      reference: storedPromise.reference
+    });
+    promiseTranslationCache.set(cacheKey, cached);
+    return cached;
   }
 
   const request = fetch(
@@ -7955,10 +7988,12 @@ async function translatedPromise(source, translation) {
     if (!text) {
       throw new Error("Bible translation response did not include verse text");
     }
-    return {
+    const translated = {
       text,
       reference: `${data.reference || source.reference} (${translation.label})`
     };
+    storeTranslatedPromise(cacheKey, translated);
+    return translated;
   });
 
   promiseTranslationCache.set(cacheKey, request);
@@ -7977,6 +8012,7 @@ async function renderPromise() {
       : { text: "This promise could not be loaded right now.", reference: source.reference };
     promiseText.replaceChildren(promiseQuoteSpan(displayedPromise.text));
     promiseReference.textContent = displayedPromise.reference;
+    updatePromiseMetadata();
     return;
   }
 
@@ -8003,11 +8039,37 @@ async function renderPromise() {
   updatePromiseTextHeight();
   promiseText.replaceChildren(promiseQuoteSpan(promise.text));
   promiseReference.textContent = promise.reference;
+  updatePromiseMetadata();
   updatePromiseShareLinks();
   if (!promiseStatus.textContent.includes("could not be loaded")) {
     promiseStatus.textContent = "";
   }
+
   preparePromiseImage();
+}
+
+function promiseBibleUrl() {
+  const source = currentPromiseSource();
+  const match = source.reference.match(/^(.+?)\s+(\d+):(\d+)/);
+  const url = new URL("/bible/", window.location.origin);
+  if (match) {
+    const book = match[1] === "Psalm" ? "Psalms" : match[1];
+    url.searchParams.set("book", book);
+    url.searchParams.set("chapter", match[2]);
+    url.searchParams.set("verse", match[3]);
+  }
+  url.searchParams.set("translation", selectedPromiseTranslation().id);
+  return `${url.pathname}${url.search}`;
+}
+
+function updatePromiseMetadata() {
+  const promises = availablePromises();
+  promisePosition.textContent = `${promiseIndex + 1} of ${promises.length}`;
+  promiseReference.href = promiseBibleUrl();
+  const source = currentPromiseSource();
+  const saved = window.WordOasisLibrary?.isSaved(`promise:${source.reference}`) || false;
+  promiseBookmark.setAttribute("aria-pressed", String(saved));
+  promiseBookmark.textContent = saved ? "Saved" : "Save verse";
 }
 
 // The quote marks live on this inner span rather than the blockquote so they
@@ -8064,6 +8126,54 @@ function advancePromise(direction = 1) {
   restartTimedProgress(promiseProgressFill);
 }
 
+function dailyPromiseIndex() {
+  const category = promiseCategory?.value || "all";
+  const date = new Date();
+  const seed = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}:${category}`;
+  let hash = 0;
+  for (const character of seed) {
+    hash = (hash * 31 + character.charCodeAt(0)) >>> 0;
+  }
+  return hash % availablePromises().length;
+}
+
+function showTodaysPromise() {
+  promiseIndex = dailyPromiseIndex();
+  displayedPromise = null;
+  renderPromise();
+  restartPromiseRotation();
+  trackPromiseEvent("today");
+}
+
+function showRandomPromise() {
+  const count = availablePromises().length;
+  const offset = count > 1 ? 1 + Math.floor(Math.random() * (count - 1)) : 0;
+  promiseIndex = (promiseIndex + offset) % count;
+  displayedPromise = null;
+  renderPromise();
+  restartPromiseRotation();
+  trackPromiseEvent("surprise");
+}
+
+function trackPromiseEvent(action) {
+  if (typeof window.gtag !== "function") return;
+  window.gtag("event", "promise_action", {
+    action,
+    category: promiseCategory.value,
+    translation: promiseTranslation.value
+  });
+}
+
+function updatePromiseUrl() {
+  const url = new URL(window.location.href);
+  if (promiseCategory.value === "all") {
+    url.searchParams.delete("promise");
+  } else {
+    url.searchParams.set("promise", promiseCategory.value);
+  }
+  window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
+}
+
 function promiseShareText() {
   const promise = currentPromise();
   return `"${promise.text}" — ${promise.reference}`;
@@ -8073,7 +8183,7 @@ function promiseShareUrl() {
   const url = new URL("https://wordoasis.org/");
   url.searchParams.set("utm_source", "social");
   url.searchParams.set("utm_medium", "share");
-  url.searchParams.set("utm_campaign", "daily_promise");
+  url.searchParams.set("utm_campaign", "bible_promise");
   return url.href;
 }
 
@@ -9135,6 +9245,9 @@ promisePrevious.addEventListener("click", () => {
   restartPromiseRotation();
 });
 
+promiseToday.addEventListener("click", showTodaysPromise);
+promiseRandom.addEventListener("click", showRandomPromise);
+
 promiseShare.addEventListener("click", async () => {
   try {
     await sharePromise();
@@ -9146,6 +9259,31 @@ promiseShare.addEventListener("click", async () => {
 promiseCopy.addEventListener("click", copyPromise);
 
 promiseSaveImage.addEventListener("click", downloadPromiseImage);
+
+promiseBookmark.addEventListener("click", () => {
+  if (!window.WordOasisLibrary) {
+    promiseStatus.textContent = "Saving is unavailable in this browser.";
+    return;
+  }
+
+  const source = currentPromiseSource();
+  const id = `promise:${source.reference}`;
+  if (window.WordOasisLibrary.isSaved(id)) {
+    window.WordOasisLibrary.remove(id);
+    promiseStatus.textContent = "Promise removed from your private library.";
+  } else {
+    window.WordOasisLibrary.save({
+      id,
+      type: "promise",
+      title: source.reference,
+      subtitle: currentPromise().text,
+      url: promiseBibleUrl()
+    });
+    promiseStatus.textContent = "Promise saved in your private library.";
+    trackPromiseEvent("save");
+  }
+  updatePromiseMetadata();
+});
 
 spotlightNext.addEventListener("click", () => {
   renderSpotlightAnswer();
@@ -9192,17 +9330,22 @@ promiseTranslation.addEventListener("change", () => {
   promiseImageCache = { key: "", file: null };
   renderPromise();
   restartPromiseRotation();
+  trackPromiseEvent("translation");
 });
 
 promiseCategory.addEventListener("change", () => {
   localStorage.setItem(promiseCategoryStorageKey, promiseCategory.value);
-  promiseIndex = 0;
+  promiseIndex = dailyPromiseIndex();
   displayedPromise = null;
   promiseImageCache = { key: "", file: null };
+  updatePromiseUrl();
   updatePromiseTextHeight();
   renderPromise();
   restartPromiseRotation();
+  trackPromiseEvent("category");
 });
+
+window.addEventListener("wordoasis:library-change", updatePromiseMetadata);
 
 if (document.fonts) {
   document.fonts.ready.then(updatePromiseTextHeight);
@@ -9243,10 +9386,13 @@ promiseCategories.forEach((category) => {
 promiseCategory.options[0].textContent = `All promises (${biblePromises.length})`;
 
 const savedPromiseCategory = localStorage.getItem(promiseCategoryStorageKey);
-if (savedPromiseCategory === "all" || promiseCategories.some((category) => category.id === savedPromiseCategory)) {
-  promiseCategory.value = savedPromiseCategory;
+const linkedPromiseCategory = new URLSearchParams(window.location.search).get("promise");
+const initialPromiseCategory = linkedPromiseCategory || savedPromiseCategory;
+if (initialPromiseCategory === "all" || promiseCategories.some((category) => category.id === initialPromiseCategory)) {
+  promiseCategory.value = initialPromiseCategory;
 }
 
+promiseIndex = dailyPromiseIndex();
 updatePromiseTextHeight();
 renderPromise();
 restartPromiseRotation();

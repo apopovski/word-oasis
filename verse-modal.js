@@ -49,6 +49,48 @@
     }
   }
 
+  function trackAnswerEvent(action) {
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "answer_action", { action });
+    }
+  }
+
+  function initializeAnswerLibrary() {
+    const answerPage = document.querySelector("[data-answer-page]");
+    const saveButton = answerPage?.querySelector("[data-answer-save]");
+    const library = window.WordOasisLibrary;
+    if (!answerPage || !saveButton || !library) return;
+
+    const item = {
+      id: `answer:${answerPage.dataset.answerId}`,
+      type: "answer",
+      title: answerTitle(),
+      subtitle: answerPage.dataset.answerCategory || "Bible answer",
+      url: new URL(answerCanonicalUrl()).pathname
+    };
+
+    const updateButton = () => {
+      const saved = library.isSaved(item.id);
+      saveButton.setAttribute("aria-pressed", String(saved));
+      saveButton.textContent = saved ? "Saved" : "Save answer";
+    };
+
+    library.addRecent(item);
+    updateButton();
+    saveButton.addEventListener("click", () => {
+      if (library.isSaved(item.id)) {
+        library.remove(item.id);
+        setAnswerShareStatus("Answer removed from your private library.");
+      } else {
+        library.save(item);
+        setAnswerShareStatus("Answer saved in your private library.");
+        trackAnswerEvent("save");
+      }
+      updateButton();
+    });
+    window.addEventListener("wordoasis:library-change", updateButton);
+  }
+
   function answerGraphicOptions() {
     return {
       text: answerTitle(),
@@ -98,6 +140,7 @@
             url
           });
           setAnswerShareStatus("Answer shared.");
+          trackAnswerEvent("share");
           return;
         } catch (error) {
           if (error && error.name === "AbortError") {
@@ -110,6 +153,7 @@
       try {
         await navigator.clipboard.writeText(content);
         setAnswerShareStatus("Answer copied to your clipboard.");
+        trackAnswerEvent("copy");
       } catch (error) {
         setAnswerShareStatus("Could not copy automatically. Select the answer text to copy it.");
       }
@@ -148,6 +192,7 @@
           try {
             await navigator.share(sharePayload);
             setAnswerShareStatus(`Answer graphic shared${platform ? ` to ${platform}` : ""}.`);
+            trackAnswerEvent(platform ? "instagram_graphic" : "graphic");
             return;
           } catch (error) {
             if (error.name === "AbortError") {
@@ -243,8 +288,26 @@
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && !verseModal.hidden) {
       closeVerseModal();
+      return;
+    }
+
+    if (event.key === "Tab" && !verseModal.hidden) {
+      const focusable = Array.from(
+        verseModal.querySelectorAll('button:not([disabled]), a[href], input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])')
+      );
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
     }
   });
 
   initializeAnswerShare();
+  initializeAnswerLibrary();
 })();

@@ -251,7 +251,7 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261035">
+    <link rel="stylesheet" href="/styles.css?v=20261039">
     <meta property="og:type" content="${ogType}">
     <meta property="og:title" content="${escapeAttribute(title)}">
     <meta property="og:description" content="${escapeAttribute(description)}">
@@ -285,6 +285,7 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
           <li><a href="/answers/">Answers</a></li>
           <li><a href="/topics/">Topics</a></li>
           <li><a href="/bible/">Bible</a></li>
+          <li><a href="/#about">About</a></li>
           <li><a href="/#ask">Ask a question</a></li>
           <li class="nav-search-item">
             <form class="nav-search" action="/" method="get" role="search">
@@ -348,6 +349,7 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
               <li><a href="/answers/">All answers</a></li>
               <li><a href="/topics/">Browse topics</a></li>
               <li><a href="/bible/">Read the Bible</a></li>
+              <li><a href="/#about">About Word Oasis</a></li>
             </ul>
           </nav>
 
@@ -392,9 +394,10 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
       </div>
     </div>
 
-    <script src="/theme.js?v=20261035"></script>
-    <script src="/scripture-graphic.js?v=20261035"></script>
-    <script src="/verse-modal.js?v=20261035"></script>
+    <script src="/theme.js?v=20261039"></script>
+    <script src="/scripture-graphic.js?v=20261039"></script>
+    <script src="/local-library.js?v=20261039"></script>
+    <script src="/verse-modal.js?v=20261039"></script>
   </body>
 </html>
 `;
@@ -473,9 +476,41 @@ function linkifyKeywords(text, currentTopics, usedTopics) {
 }
 
 function relatedAnswers(currentAnswer, answers) {
+  const stopWords = new Set(["a", "an", "and", "are", "as", "at", "be", "by", "did", "do", "does", "for", "from", "how", "in", "is", "it", "of", "on", "or", "that", "the", "this", "to", "what", "when", "where", "who", "why", "with"]);
+  const normalizeConcept = (word) => {
+    if (["exist", "exists", "existence", "real", "reality"].includes(word)) return "existence";
+    if (["create", "created", "creator", "creation"].includes(word)) return "creation";
+    if (["die", "dies", "death", "dead"].includes(word)) return "death";
+    return word;
+  };
+  const wordsFor = (text) =>
+    new Set(
+      text
+        .toLowerCase()
+        .match(/[a-z0-9]+/g)
+        ?.filter((word) => word.length > 2 && !stopWords.has(word) && word !== "bible" && word !== "scripture")
+        .map(normalizeConcept) || []
+    );
+  const currentQuestionWords = wordsFor(currentAnswer.question);
+  const currentKeywords = wordsFor((currentAnswer.keywords || []).join(" "));
+
   return answers
-    .filter((answer) => answer.id !== currentAnswer.id && answer.topics.some((topic) => currentAnswer.topics.includes(topic)))
-    .slice(0, 5);
+    .filter((answer) => answer.id !== currentAnswer.id)
+    .map((answer) => {
+      const sharedTopics = answer.topics.filter((topic) => currentAnswer.topics.includes(topic)).length;
+      const sharedQuestionWords = [...wordsFor(answer.question)].filter((word) => currentQuestionWords.has(word)).length;
+      const sharedKeywords = [...wordsFor((answer.keywords || []).join(" "))].filter((word) => currentKeywords.has(word)).length;
+      const sharedScriptures = answer.scriptures.filter((reference) => currentAnswer.scriptures.includes(reference)).length;
+      const categoryMatch = answer.category === currentAnswer.category ? 1 : 0;
+      return {
+        answer,
+        score: sharedQuestionWords * 8 + sharedKeywords * 4 + sharedScriptures * 5 + sharedTopics * 2 + categoryMatch
+      };
+    })
+    .filter(({ score }) => score > 0)
+    .sort((first, second) => second.score - first.score || first.answer.question.localeCompare(second.answer.question))
+    .slice(0, 5)
+    .map(({ answer }) => answer);
 }
 
 function answerPage(answer, answers, perspectivesByCategory, perspectivesByAnswer) {
@@ -516,8 +551,11 @@ function answerPage(answer, answers, perspectivesByCategory, perspectivesByAnswe
       </section>
       <section class="section section-answer">
         <div class="container answer-page-layout">
-          <article class="answer-page-card">
+          <article class="answer-page-card" data-answer-page data-answer-id="${escapeAttribute(answer.id)}" data-answer-category="${escapeAttribute(answer.category)}">
             <div class="answer-tags">${tagsHtml(answer.topics)}</div>
+            <div class="answer-page-actions">
+              <button type="button" class="promise-copy-button" data-answer-save aria-pressed="false">Save answer</button>
+            </div>
             <h2>Biblical explanation</h2>
             <p class="lead-answer">${linkifyKeywords(escapeHtml(answer.longAnswer), answer.topics, usedTopics)}</p>
             <div class="answer-key-takeaway">
@@ -557,6 +595,10 @@ function answerPage(answer, answers, perspectivesByCategory, perspectivesByAnswe
             </div>
             <h2>Bible references</h2>
             <div class="scriptures">${scripturesHtml(answer.scriptures)}</div>
+            <div class="answer-editorial-note">
+              <strong>Editorial note</strong>
+              <p>This answer is presented with its supporting references so you can examine each passage in context. If you notice an error or unclear statement, please <a href="/#ask">suggest a correction</a>.</p>
+            </div>
           </article>
           <aside class="related-card" aria-label="Related answers">
             <h2>Related answers</h2>

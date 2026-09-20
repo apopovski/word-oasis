@@ -142,6 +142,7 @@
       <button type="button" id="bible-copy-selection" disabled>Copy passage</button>
       <button type="button" id="bible-share-selection" disabled>Share</button>
       <button type="button" id="bible-share-graphic" aria-expanded="false" disabled>Share graphic</button>
+      <button type="button" id="bible-save-selection" aria-pressed="false" disabled>Save passage</button>
       <button type="button" id="bible-memorize-selection" disabled>Memorize</button>
       <a id="bible-text-selection" aria-disabled="true">Text</a>
       <a id="bible-x-selection" target="_blank" rel="noopener" aria-disabled="true">X</a>
@@ -249,6 +250,7 @@
       <div class="bible-memory-actions">
         <button type="button" id="bible-memory-flip">Flip card</button>
         <button type="button" id="bible-memory-reset">Show reference first</button>
+        <button type="button" id="bible-memory-save">Save for practice</button>
       </div>
       <p class="bible-memory-status" id="bible-memory-status" aria-live="polite"></p>
     </div>
@@ -267,6 +269,7 @@
   const graphicColorValue = selectionPanel.querySelector("#bible-graphic-color-value");
   const shareGraphicConfirmButton = selectionPanel.querySelector("#bible-share-graphic-confirm");
   const memorizeSelectionButton = selectionPanel.querySelector("#bible-memorize-selection");
+  const saveSelectionButton = selectionPanel.querySelector("#bible-save-selection");
   const textSelectionLink = selectionPanel.querySelector("#bible-text-selection");
   const xSelectionLink = selectionPanel.querySelector("#bible-x-selection");
   const facebookSelectionLink = selectionPanel.querySelector("#bible-facebook-selection");
@@ -279,6 +282,7 @@
   const memoryText = selectionPanel.querySelector("#bible-memory-text");
   const memoryFlipButton = selectionPanel.querySelector("#bible-memory-flip");
   const memoryResetButton = selectionPanel.querySelector("#bible-memory-reset");
+  const memorySaveButton = selectionPanel.querySelector("#bible-memory-save");
   const memoryStatus = selectionPanel.querySelector("#bible-memory-status");
 
   const chapterCache = new Map();
@@ -339,12 +343,15 @@
     return Math.min(numericChapter, book.chapters);
   }
 
-  function updateUrl(book, chapter, translation) {
+  function updateUrl(book, chapter, translation, verse) {
     const params = new URLSearchParams({
       book: book.name,
       chapter: String(chapter),
       translation: translation.id
     });
+    if (verse) {
+      params.set("verse", String(verse));
+    }
     window.history.replaceState({}, "", `${window.location.pathname}?${params.toString()}`);
   }
 
@@ -492,6 +499,54 @@
   function referenceForRange(book, chapter, range, translation) {
     const verses = range.start === range.end ? `${range.start}` : `${range.start}-${range.end}`;
     return `${book.name} ${chapter}:${verses} (${translation.shortLabel})`;
+  }
+
+  function libraryItemForRange(type, book, chapter, range, translation, verses) {
+    const reference = referenceForRange(book, chapter, range, translation);
+    return {
+      id: `${type}:${translation.id}:${book.name}:${chapter}:${range.start}-${range.end}`,
+      type,
+      title: reference,
+      subtitle: plainPassageForRange(range, verses),
+      url: buildReaderUrl(book, chapter, translation, range.start)
+    };
+  }
+
+  function saveCurrentPassage() {
+    const range = selectedRange();
+    if (!range || !window.WordOasisLibrary) return;
+    const { book, chapter, translation } = selectedState();
+    const item = libraryItemForRange("passage", book, chapter, range, translation, currentChapterVerses);
+
+    if (window.WordOasisLibrary.isSaved(item.id)) {
+      window.WordOasisLibrary.remove(item.id);
+      selectionStatus.textContent = "Passage removed from your private library.";
+    } else {
+      window.WordOasisLibrary.save(item);
+      selectionStatus.textContent = "Passage saved in your private library.";
+      trackAnalyticsEvent("bible_passage_save", { bible_version: translation.shortLabel });
+    }
+    updateSelectionTools();
+  }
+
+  async function saveMemoryPassage() {
+    const range = selectedRange();
+    if (!range || !window.WordOasisLibrary) return;
+    const { book, chapter } = selectedState();
+    const translation = findTranslation(memoryVersionSelect.value || translationSelect.value);
+    memoryStatus.textContent = "Saving passage for practice...";
+
+    try {
+      const data = translation.id === translationSelect.value
+        ? { verses: currentChapterVerses }
+        : await fetchChapter(book, chapter, translation);
+      const item = libraryItemForRange("memory", book, chapter, range, translation, data.verses);
+      window.WordOasisLibrary.save(item);
+      memoryStatus.textContent = `${item.title} saved for practice in this browser.`;
+      trackAnalyticsEvent("bible_memory_save", { bible_version: translation.shortLabel });
+    } catch (error) {
+      memoryStatus.textContent = "That passage could not be saved right now.";
+    }
   }
 
   function passageForRangeFromVerses(range, verses) {
@@ -716,13 +771,25 @@
     copySelectionButton.disabled = !hasSelection;
     shareSelectionButton.disabled = !hasSelection;
     shareGraphicButton.disabled = !hasSelection;
+    saveSelectionButton.disabled = !hasSelection;
     memorizeSelectionButton.disabled = !hasSelection;
     setShareLinkState(textSelectionLink, hasSelection, `sms:?&body=${encodeURIComponent(text)}`);
     setShareLinkState(xSelectionLink, hasSelection, `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`);
     setShareLinkState(facebookSelectionLink, hasSelection, `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(text)}`);
     updateSelectedVerseStyles();
 
+    if (hasSelection && window.WordOasisLibrary) {
+      const item = libraryItemForRange("passage", book, chapter, range, translation, currentChapterVerses);
+      const saved = window.WordOasisLibrary.isSaved(item.id);
+      saveSelectionButton.setAttribute("aria-pressed", String(saved));
+      saveSelectionButton.textContent = saved ? "Saved" : "Save passage";
+    } else {
+      saveSelectionButton.setAttribute("aria-pressed", "false");
+      saveSelectionButton.textContent = "Save passage";
+    }
+
     if (hasSelection) {
+      updateUrl(book, chapter, translation, range.start);
       const endRow = readerBody.querySelector(`.bible-verse[data-verse="${range.end}"]`);
       if (endRow) {
         readerBody.insertBefore(selectionPanel, endRow.nextSibling);
@@ -1154,10 +1221,11 @@
         }
       );
       trackAnalyticsEvent("bible_search", {
-        search_term: query,
         bible_version: translation.shortLabel,
         search_mode: parsedQuery.mode,
-        search_scope: searchScope.value
+        search_scope: searchScope.value,
+        result_count: filteredResults.length,
+        has_results: filteredResults.length > 0
       });
     } catch (error) {
       setSearchStatus("Could not search the Bible right now. Please check your connection and try again.");
@@ -1186,7 +1254,7 @@
     [nextButton, readerNextButton, bottomNextButton].forEach((button) => {
       button.disabled = nextDisabled;
     });
-    updateUrl(book, chapter, translation);
+    updateUrl(book, chapter, translation, pendingHighlightVerse);
     clearSelection();
     setReaderStatus("Loading Bible chapter...");
 
@@ -1296,9 +1364,12 @@
     prepareSelectedGraphic();
   });
   memorizeSelectionButton.addEventListener("click", openMemoryCard);
+  saveSelectionButton.addEventListener("click", saveCurrentPassage);
   memoryVersionSelect.addEventListener("change", updateMemoryCard);
   memoryModeSelect.addEventListener("change", updateMemoryCard);
   memoryCard.addEventListener("click", () => setMemoryFlipped(!memoryIsFlipped));
   memoryFlipButton.addEventListener("click", () => setMemoryFlipped(!memoryIsFlipped));
   memoryResetButton.addEventListener("click", () => setMemoryFlipped(false));
+  memorySaveButton.addEventListener("click", saveMemoryPassage);
+  window.addEventListener("wordoasis:library-change", updateSelectionTools);
 })();
