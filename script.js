@@ -7033,13 +7033,15 @@ const promiseRandom = document.querySelector("#promise-random");
 const promisePosition = document.querySelector("#promise-position");
 const promiseProgressFill = document.querySelector("#promise-progress-fill");
 const promiseShare = document.querySelector("#promise-share");
+const promiseShareTextButton = document.querySelector("#promise-share-text");
 const promiseCopy = document.querySelector("#promise-copy");
 const promiseSaveImage = document.querySelector("#promise-save-image");
 const promiseBookmark = document.querySelector("#promise-bookmark");
-const promiseFacebookShare = document.querySelector("#promise-share-facebook");
-const promiseXShare = document.querySelector("#promise-share-x");
-const promiseInstagramShare = document.querySelector("#promise-share-instagram");
-const promiseWhatsAppShare = document.querySelector("#promise-share-whatsapp");
+const promiseShareModeText = document.querySelector("#promise-share-mode-text");
+const promiseShareModeGraphic = document.querySelector("#promise-share-mode-graphic");
+const promiseTextActions = document.querySelector("#promise-text-actions");
+const promiseGraphicActions = document.querySelector("#promise-graphic-actions");
+const promisePlatformButtons = [...document.querySelectorAll("[data-promise-share-platform]")];
 const promiseStatus = document.querySelector("#promise-status");
 const questionForm = document.querySelector("#question-form");
 const questionInput = document.querySelector("#question-input");
@@ -8988,11 +8990,10 @@ async function downloadPromiseImage() {
 }
 
 function updatePromiseShareLinks() {
-  const url = promiseShareUrl();
-  const content = promiseShareContent();
-  promiseFacebookShare.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
-  promiseXShare.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(content)}`;
-  promiseWhatsAppShare.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(content)}`;
+  promisePlatformButtons.forEach((button) => {
+    const format = promiseShareModeGraphic.getAttribute("aria-pressed") === "true" ? "graphic" : "text";
+    button.setAttribute("aria-label", `Share promise as ${format} on ${button.dataset.promiseSharePlatform}`);
+  });
 }
 
 function prefersNativeShare() {
@@ -9026,15 +9027,6 @@ async function sharePromiseViaSystemSheet(platform) {
     url: promiseShareUrl()
   };
 
-  const file = readyPromiseImageFile();
-  if (file && navigator.canShare?.({ files: [file] })) {
-    // The graphic already carries the verse, reference, and wordoasis.org, so
-    // keep the accompanying text minimal (no link) to avoid a competing link
-    // preview card next to the image on platforms that render one.
-    payload.files = [file];
-    delete payload.url;
-  }
-
   try {
     await navigator.share(payload);
     promiseStatus.textContent = `Promise shared${platform ? ` to ${platform}` : ""}.`;
@@ -9045,36 +9037,17 @@ async function sharePromiseViaSystemSheet(platform) {
       return true;
     }
 
-    // A target that advertises file support can still refuse the attachment, so
-    // retry once with the plain text payload before giving up.
-    if (payload.files) {
-      try {
-        await navigator.share({
-          title: payload.title,
-          text: promiseShareText(),
-          url: promiseShareUrl()
-        });
-        promiseStatus.textContent = `Promise shared${platform ? ` to ${platform}` : ""}.`;
-        return true;
-      } catch (retryError) {
-        if (retryError && retryError.name === "AbortError") {
-          promiseStatus.textContent = "Sharing was canceled.";
-          return true;
-        }
-      }
-    }
-
     return false;
   }
 }
 
-async function sharePromiseWithClipboard(shareLink, platform) {
+async function sharePromiseWithClipboard(shareUrl, platform) {
   if (prefersNativeShare() && (await sharePromiseViaSystemSheet(platform))) {
     return;
   }
 
   const copyOperation = navigator.clipboard?.writeText(promiseShareContent());
-  const composerOpened = openPromiseShareWindow(shareLink.href);
+  const composerOpened = openPromiseShareWindow(shareUrl);
 
   if (!copyOperation) {
     if (composerOpened) {
@@ -9095,25 +9068,82 @@ async function sharePromiseWithClipboard(shareLink, platform) {
   }
 }
 
+function setPromiseShareMode(mode) {
+  const graphicMode = mode === "graphic";
+  const selector = promiseShareModeText.parentElement;
+  selector.classList.toggle("is-graphic", graphicMode);
+  selector.style.setProperty("--share-thumb-left", graphicMode ? "50%" : "3px");
+  promiseShareModeText.classList.toggle("active", !graphicMode);
+  promiseShareModeText.setAttribute("aria-pressed", String(!graphicMode));
+  promiseShareModeText.style.color = graphicMode ? "rgba(255, 255, 255, 0.82)" : "#111827";
+  promiseShareModeGraphic.classList.toggle("active", graphicMode);
+  promiseShareModeGraphic.setAttribute("aria-pressed", String(graphicMode));
+  promiseShareModeGraphic.style.color = graphicMode ? "#111827" : "rgba(255, 255, 255, 0.82)";
+  promiseTextActions.hidden = graphicMode;
+  promiseGraphicActions.hidden = !graphicMode;
+  promiseStatus.textContent = "";
+  updatePromiseShareLinks();
+}
+
+async function sharePromiseTextOnPlatform(platform) {
+  const url = promiseShareUrl();
+  const content = promiseShareContent();
+
+  if (platform === "Facebook") {
+    await sharePromiseWithClipboard(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, platform);
+    return;
+  }
+  if (platform === "X") {
+    openPromiseShareWindow(`https://twitter.com/intent/tweet?text=${encodeURIComponent(content)}`);
+    return;
+  }
+  if (platform === "WhatsApp") {
+    openPromiseShareWindow(`https://api.whatsapp.com/send?text=${encodeURIComponent(content)}`);
+    return;
+  }
+  if (platform === "Text") {
+    window.location.href = `sms:?&body=${encodeURIComponent(content)}`;
+    return;
+  }
+  if (navigator.share && (await sharePromiseViaSystemSheet(platform))) {
+    return;
+  }
+  await copyPromise();
+  promiseStatus.textContent = "Promise copied. Paste it into Instagram.";
+}
+
 async function sharePromise() {
+  await sharePromiseGraphic();
+}
+
+async function sharePromiseTextOrLink() {
   if (navigator.share && (await sharePromiseViaSystemSheet(""))) {
     return;
   }
-
-  // Desktop browsers without a share sheet get the graphic as a download plus
-  // the verse (no link) on the clipboard, since the graphic itself already
-  // carries the site name and shouldn't compete with a separate link preview.
-  await copyPromiseVerseOnly();
-  await downloadPromiseImage();
-  promiseStatus.textContent = "The promise graphic was saved and the verse copied. Attach both to your post.";
+  await copyPromise();
+  promiseStatus.textContent = "Promise text and link copied. Paste them into the app where you want to share.";
 }
 
-async function copyPromiseVerseOnly() {
-  try {
-    await navigator.clipboard.writeText(promiseShareText());
-  } catch (error) {
-    // Non-fatal: the caller sets its own status message afterward.
+async function sharePromiseGraphic(platform = "") {
+  const file = readyPromiseImageFile();
+  if (file && navigator.share && navigator.canShare?.({ files: [file] })) {
+    try {
+      await navigator.share({ files: [file] });
+      promiseStatus.textContent = "Promise graphic shared.";
+      trackPromiseEvent("graphic_share");
+      return;
+    } catch (error) {
+      if (error && error.name === "AbortError") {
+        promiseStatus.textContent = "Sharing was canceled.";
+        return;
+      }
+    }
   }
+
+  await downloadPromiseImage();
+  promiseStatus.textContent = platform
+    ? `Graphic downloaded. Add it to ${platform}.`
+    : "Promise graphic downloaded.";
 }
 
 async function copyPromise() {
@@ -9341,6 +9371,8 @@ promiseShare.addEventListener("click", async () => {
   }
 });
 
+promiseShareTextButton.addEventListener("click", sharePromiseTextOrLink);
+
 promiseCopy.addEventListener("click", copyPromise);
 
 promiseSaveImage.addEventListener("click", downloadPromiseImage);
@@ -9380,30 +9412,17 @@ spotlightPrevious.addEventListener("click", () => {
   restartSpotlightRotation();
 });
 
-promiseFacebookShare.addEventListener("click", (event) => {
-  event.preventDefault();
-  sharePromiseWithClipboard(promiseFacebookShare, "Facebook");
-});
+promiseShareModeText.addEventListener("click", () => setPromiseShareMode("text"));
+promiseShareModeGraphic.addEventListener("click", () => setPromiseShareMode("graphic"));
 
-promiseInstagramShare.addEventListener("click", async () => {
-  try {
-    if (navigator.share && (await sharePromiseViaSystemSheet("Instagram"))) {
-      return;
+promisePlatformButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const platform = button.dataset.promiseSharePlatform;
+    if (promiseShareModeGraphic.getAttribute("aria-pressed") === "true") {
+      sharePromiseGraphic(platform);
+    } else {
+      sharePromiseTextOnPlatform(platform);
     }
-    await copyPromiseVerseOnly();
-    await downloadPromiseImage();
-    promiseStatus.textContent = "Graphic saved and caption copied. Upload the image to Instagram and paste the caption.";
-  } catch (error) {
-    promiseStatus.textContent = "The Instagram graphic could not be prepared. Please try again.";
-  }
-});
-
-[promiseXShare, promiseWhatsAppShare].forEach((shareLink) => {
-  shareLink.addEventListener("click", (event) => {
-    event.preventDefault();
-    // X and WhatsApp honour prefilled text in their own web intents, so keep
-    // sending users straight to the platform they tapped.
-    openPromiseShareWindow(shareLink.href);
   });
 });
 

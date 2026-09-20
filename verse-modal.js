@@ -128,6 +128,16 @@
       const link = answerSharePanel.querySelector(selector);
       if (link) {
         link.href = href;
+        link.addEventListener("click", () => {
+          const action = selector.includes("facebook")
+            ? "Opening Facebook with the answer link."
+            : selector.includes("whatsapp")
+              ? "Opening WhatsApp with the answer link."
+              : selector.includes("sms")
+                ? "Opening your messaging app with the answer link."
+                : "Opening X with the answer link.";
+          setAnswerShareStatus(action);
+        });
       }
     });
 
@@ -152,19 +162,20 @@
 
       try {
         await navigator.clipboard.writeText(content);
-        setAnswerShareStatus("Answer copied to your clipboard.");
+        setAnswerShareStatus("Answer text and link copied. Paste them into the app where you want to share.");
         trackAnswerEvent("copy");
       } catch (error) {
-        setAnswerShareStatus("Could not copy automatically. Select the answer text to copy it.");
+        setAnswerShareStatus("Could not copy automatically. Copy the answer link from your address bar.");
       }
     });
 
     answerSharePanel.querySelector("[data-answer-share-copy]")?.addEventListener("click", async () => {
       try {
-        await navigator.clipboard.writeText(content);
-        setAnswerShareStatus("Answer copied to your clipboard.");
+        await navigator.clipboard.writeText(answerCanonicalUrl());
+        setAnswerShareStatus("Answer link copied to your clipboard.");
+        trackAnswerEvent("copy_link");
       } catch (error) {
-        setAnswerShareStatus("Could not copy automatically. Select the answer text to copy it.");
+        setAnswerShareStatus("Could not copy automatically. Copy the answer link from your address bar.");
       }
     });
 
@@ -190,8 +201,8 @@
         if (navigator.share && navigator.canShare?.({ files: [file] })) {
           try {
             await navigator.share(sharePayload);
-            setAnswerShareStatus(`Answer graphic shared${platform ? ` to ${platform}` : ""}.`);
-            trackAnswerEvent(platform ? "instagram_graphic" : "graphic");
+            setAnswerShareStatus("Answer graphic shared.");
+            trackAnswerEvent(platform ? `${platform.toLowerCase()}_graphic` : "graphic");
             return;
           } catch (error) {
             if (error.name === "AbortError") {
@@ -222,8 +233,34 @@
       shareAnswerGraphic();
     });
 
-    answerSharePanel.querySelector("[data-answer-share-instagram]")?.addEventListener("click", () => {
-      shareAnswerGraphic("Instagram");
+    answerSharePanel.querySelectorAll("[data-answer-share-graphic-platform]").forEach((button) => {
+      button.addEventListener("click", () => {
+        shareAnswerGraphic(button.dataset.answerShareGraphicPlatform);
+      });
+    });
+
+    answerSharePanel.querySelector("[data-answer-download-graphic]")?.addEventListener("click", async () => {
+      if (!graphicRenderer || !answerGraphicFilePromise) {
+        setAnswerShareStatus("The answer graphic tools are not available right now.");
+        return;
+      }
+
+      setAnswerShareStatus("Creating your question graphic...");
+      try {
+        const file = await answerGraphicFilePromise;
+        if (!file) {
+          throw answerGraphicError || new Error("The question graphic could not be created.");
+        }
+        graphicRenderer.downloadFile(file);
+        setAnswerShareStatus("Question graphic downloaded.");
+        trackAnswerEvent("graphic_download");
+      } catch (error) {
+        answerGraphicFilePromise = graphicRenderer.createFile(answerGraphicOptions()).catch((nextError) => {
+          answerGraphicError = nextError;
+          return null;
+        });
+        setAnswerShareStatus(error.message || "The question graphic could not be created.");
+      }
     });
   }
 

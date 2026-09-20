@@ -133,20 +133,31 @@
   selectionPanel.className = "bible-selection-panel";
   selectionPanel.setAttribute("aria-label", "Selected Bible passage tools");
   selectionPanel.innerHTML = `
-    <p id="bible-selection-label">Click a verse number to select it. Click another verse number to select a range.</p>
-    <label class="bible-share-source">
-      <input type="checkbox" id="bible-include-source" checked>
-      Include Word Oasis link
-    </label>
-    <div class="bible-selection-actions">
-      <button type="button" id="bible-copy-selection" disabled>Copy passage</button>
-      <button type="button" id="bible-share-selection" disabled>Share</button>
-      <button type="button" id="bible-share-graphic" aria-expanded="false" disabled>Share graphic</button>
-      <button type="button" id="bible-save-selection" aria-pressed="false" disabled>Save passage</button>
-      <button type="button" id="bible-memorize-selection" disabled>Memorize</button>
-      <a id="bible-text-selection" aria-disabled="true">Text</a>
-      <a id="bible-x-selection" target="_blank" rel="noopener" aria-disabled="true">X</a>
-      <a id="bible-facebook-selection" target="_blank" rel="noopener" aria-disabled="true">Facebook</a>
+    <p class="bible-selection-hint" id="bible-selection-label">Click a verse number to select it. Click another verse number to select a range.</p>
+    <div class="share-action-group">
+      <h3 class="share-group-heading">Share passage</h3>
+      <div class="share-mode-selector" role="group" aria-label="Choose passage sharing format">
+        <button type="button" id="bible-share-mode-text" class="active" aria-pressed="true">Text</button>
+        <button type="button" id="bible-share-mode-graphic" aria-pressed="false">Graphic</button>
+      </div>
+      <label class="bible-share-source">
+        <input type="checkbox" id="bible-include-source" checked>
+        Include Word Oasis link
+      </label>
+      <div class="bible-selection-actions bible-selection-primary-actions" id="bible-text-actions">
+        <button type="button" id="bible-share-selection" disabled>Share</button>
+        <button type="button" id="bible-copy-selection" disabled>Copy</button>
+      </div>
+      <div class="bible-selection-actions bible-selection-social-actions" aria-label="Share passage on a social platform">
+        <button type="button" class="promise-social-share promise-social-facebook" data-bible-share-platform="Facebook" aria-label="Share passage on Facebook" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21.9V13.9h2.7l.5-3.1h-3.2V8.8c0-.9.3-1.7 1.6-1.7h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2v2.4H7.6v3.1h2.8v8h3.1Z"/></svg></button>
+        <button type="button" class="promise-social-share promise-social-x" data-bible-share-platform="X" aria-label="Share passage on X" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.2 4.4h2.6l-5.7 6.5 6.7 8.8h-5.2l-4.1-5.4-4.7 5.4H4.2l6.1-7-6.4-8.3h5.4l3.7 4.9 4.2-4.9Zm-.9 13.8h1.4L8.5 5.8H7l9.3 12.4Z"/></svg></button>
+        <button type="button" class="promise-social-share promise-social-whatsapp" data-bible-share-platform="WhatsApp" aria-label="Share passage on WhatsApp" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.4a8.5 8.5 0 0 0-7.3 12.9L3.6 20.6l4.4-1.1A8.5 8.5 0 1 0 12 3.4Zm0 1.7a6.8 6.8 0 1 1-3.5 12.7l-.3-.2-2.6.7.7-2.5-.2-.3A6.8 6.8 0 0 1 12 5.1Zm3.9 8.5c-.2-.1-1.2-.6-1.4-.7s-.3-.1-.5.1l-.6.8c-.1.1-.2.1-.4 0a5.6 5.6 0 0 1-2.8-2.4c-.1-.2 0-.3.1-.4l.3-.4.2-.4v-.3l-.7-1.6c-.2-.4-.3-.3-.5-.3h-.4a.9.9 0 0 0-.6.3 2.6 2.6 0 0 0-.8 1.9 4.5 4.5 0 0 0 1 2.3 9.2 9.2 0 0 0 3.6 3.1c1.3.5 1.8.5 2.4.4a2 2 0 0 0 1.4-1c.2-.5.2-.9.1-1l-.4-.4Z"/></svg></button>
+        <button type="button" class="promise-social-share promise-social-instagram" data-bible-share-platform="Instagram" aria-label="Share passage on Instagram" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M7.2 2h9.6A5.2 5.2 0 0 1 22 7.2v9.6a5.2 5.2 0 0 1-5.2 5.2H7.2A5.2 5.2 0 0 1 2 16.8V7.2A5.2 5.2 0 0 1 7.2 2Zm0 2A3.2 3.2 0 0 0 4 7.2v9.6A3.2 3.2 0 0 0 7.2 20h9.6a3.2 3.2 0 0 0 3.2-3.2V7.2A3.2 3.2 0 0 0 16.8 4H7.2Zm10.1 1.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg></button>
+        <button type="button" class="promise-social-share answer-social-sms" data-bible-share-platform="Text" aria-label="Share passage by text" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.5L12 21l4.5-4H20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg></button>
+      </div>
+      <div class="bible-selection-actions bible-selection-primary-actions" id="bible-graphic-actions" hidden>
+        <button type="button" id="bible-share-graphic" aria-expanded="false" disabled>Choose design</button>
+      </div>
     </div>
     <div class="bible-graphic-customizer" id="bible-graphic-customizer" hidden>
       <fieldset>
@@ -216,9 +227,17 @@
           <output id="bible-graphic-color-value" for="bible-graphic-color-input">#2563A6</output>
         </span>
       </label>
-      <button class="bible-graphic-create" id="bible-share-graphic-confirm" type="button">
-        Share selected color
-      </button>
+      <div class="bible-selection-actions bible-selection-primary-actions">
+        <button class="bible-graphic-create" id="bible-share-graphic-confirm" type="button">Share</button>
+        <button type="button" id="bible-download-graphic">Download</button>
+      </div>
+    </div>
+    <div class="share-action-group">
+      <h3 class="share-group-heading">Study tools</h3>
+      <div class="bible-selection-actions bible-selection-primary-actions">
+        <button type="button" id="bible-save-selection" aria-pressed="false" disabled>Save passage</button>
+        <button type="button" id="bible-memorize-selection" disabled>Memorize passage</button>
+      </div>
     </div>
     <div class="bible-memory-lab" id="bible-memory-lab" hidden>
       <div class="bible-memory-controls">
@@ -259,6 +278,11 @@
   selectionHome.append(selectionPanel);
   const selectionLabel = selectionPanel.querySelector("#bible-selection-label");
   const includeSourceCheckbox = selectionPanel.querySelector("#bible-include-source");
+  const shareModeTextButton = selectionPanel.querySelector("#bible-share-mode-text");
+  const shareModeGraphicButton = selectionPanel.querySelector("#bible-share-mode-graphic");
+  const textActions = selectionPanel.querySelector("#bible-text-actions");
+  const graphicActions = selectionPanel.querySelector("#bible-graphic-actions");
+  const socialShareButtons = [...selectionPanel.querySelectorAll("[data-bible-share-platform]")];
   const copySelectionButton = selectionPanel.querySelector("#bible-copy-selection");
   const shareSelectionButton = selectionPanel.querySelector("#bible-share-selection");
   const shareGraphicButton = selectionPanel.querySelector("#bible-share-graphic");
@@ -268,11 +292,9 @@
   const graphicColorInput = selectionPanel.querySelector("#bible-graphic-color-input");
   const graphicColorValue = selectionPanel.querySelector("#bible-graphic-color-value");
   const shareGraphicConfirmButton = selectionPanel.querySelector("#bible-share-graphic-confirm");
+  const downloadGraphicButton = selectionPanel.querySelector("#bible-download-graphic");
   const memorizeSelectionButton = selectionPanel.querySelector("#bible-memorize-selection");
   const saveSelectionButton = selectionPanel.querySelector("#bible-save-selection");
-  const textSelectionLink = selectionPanel.querySelector("#bible-text-selection");
-  const xSelectionLink = selectionPanel.querySelector("#bible-x-selection");
-  const facebookSelectionLink = selectionPanel.querySelector("#bible-facebook-selection");
   const selectionStatus = selectionPanel.querySelector("#bible-selection-status");
   const memoryLab = selectionPanel.querySelector("#bible-memory-lab");
   const memoryVersionSelect = selectionPanel.querySelector("#bible-memory-version");
@@ -678,18 +700,6 @@
     trackAnalyticsEvent("bible_memorize_open", selectedAnalyticsPayload());
   }
 
-  function setShareLinkState(link, enabled, href) {
-    if (enabled) {
-      link.href = href;
-      link.setAttribute("aria-disabled", "false");
-      link.tabIndex = 0;
-    } else {
-      link.removeAttribute("href");
-      link.setAttribute("aria-disabled", "true");
-      link.tabIndex = -1;
-    }
-  }
-
   function selectedPassageText(includeSource = includeSourceCheckbox.checked) {
     const range = selectedRange();
     if (!range) {
@@ -762,9 +772,6 @@
     const hasSelection = Boolean(range);
     const { book, chapter, translation } = selectedState();
     const reference = hasSelection ? referenceForRange(book, chapter, range, translation) : "";
-    const text = hasSelection ? selectedPassageText() : "";
-    const shareUrl = hasSelection ? buildReaderUrl(book, chapter, translation, range.start) : "";
-
     selectionLabel.textContent = hasSelection
       ? `Selected: ${reference}`
       : "Click a verse number to select it. Click another verse number to select a range.";
@@ -773,9 +780,9 @@
     shareGraphicButton.disabled = !hasSelection;
     saveSelectionButton.disabled = !hasSelection;
     memorizeSelectionButton.disabled = !hasSelection;
-    setShareLinkState(textSelectionLink, hasSelection, `sms:?&body=${encodeURIComponent(text)}`);
-    setShareLinkState(xSelectionLink, hasSelection, `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`);
-    setShareLinkState(facebookSelectionLink, hasSelection, `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`);
+    socialShareButtons.forEach((button) => {
+      button.disabled = !hasSelection;
+    });
     updateSelectedVerseStyles();
 
     if (hasSelection && window.WordOasisLibrary) {
@@ -905,9 +912,9 @@
     return Boolean(navigator.share) && window.matchMedia("(max-width: 900px), (pointer: coarse)").matches;
   }
 
-  async function shareSelectedPassageOnFacebook(event) {
-    event.preventDefault();
-    if (facebookSelectionLink.getAttribute("aria-disabled") === "true") {
+  async function shareSelectedPassageOnFacebook() {
+    const range = selectedRange();
+    if (!range) {
       return;
     }
 
@@ -916,8 +923,10 @@
       return;
     }
 
+    const { book, chapter, translation } = selectedState();
+    const url = buildReaderUrl(book, chapter, translation, range.start);
     const shareWindow = window.open(
-      facebookSelectionLink.href,
+      `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
       "wordOasisBibleFacebookShare",
       "width=720,height=720,left=120,top=80,menubar=no,toolbar=no,location=no,status=no"
     );
@@ -939,7 +948,68 @@
     });
   }
 
-  async function shareSelectedGraphic() {
+  function setPassageShareMode(mode) {
+    const graphicMode = mode === "graphic";
+    const selector = shareModeTextButton.parentElement;
+    selector.classList.toggle("is-graphic", graphicMode);
+    selector.style.setProperty("--share-thumb-left", graphicMode ? "50%" : "3px");
+    shareModeTextButton.classList.toggle("active", !graphicMode);
+    shareModeTextButton.setAttribute("aria-pressed", String(!graphicMode));
+    shareModeTextButton.style.color = graphicMode ? "var(--text)" : "#111827";
+    shareModeGraphicButton.classList.toggle("active", graphicMode);
+    shareModeGraphicButton.setAttribute("aria-pressed", String(graphicMode));
+    shareModeGraphicButton.style.color = graphicMode ? "#111827" : "var(--text)";
+    textActions.hidden = graphicMode;
+    graphicActions.hidden = !graphicMode;
+    socialShareButtons.forEach((button) => {
+      button.setAttribute(
+        "aria-label",
+        `Share passage as ${graphicMode ? "graphic" : "text"} on ${button.dataset.bibleSharePlatform}`
+      );
+    });
+    if (!graphicMode) {
+      graphicCustomizer.hidden = true;
+      shareGraphicButton.setAttribute("aria-expanded", "false");
+    }
+    selectionStatus.textContent = "";
+  }
+
+  async function shareSelectedPassageOnPlatform(platform) {
+    if (!selectedRange()) {
+      return;
+    }
+    if (shareModeGraphicButton.getAttribute("aria-pressed") === "true") {
+      await shareSelectedGraphic(platform);
+      return;
+    }
+    if (platform === "Facebook") {
+      await shareSelectedPassageOnFacebook();
+      return;
+    }
+
+    const text = selectedPassageText();
+    if (platform === "X") {
+      window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+    } else if (platform === "WhatsApp") {
+      window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+    } else if (platform === "Text") {
+      window.location.href = `sms:?&body=${encodeURIComponent(text)}`;
+    } else if (navigator.share) {
+      await shareSelectedPassage();
+      return;
+    } else {
+      await copySelectedPassage();
+      selectionStatus.textContent = "Passage copied. Paste it into Instagram.";
+      return;
+    }
+    selectionStatus.textContent = `Opening ${platform} with the selected passage.`;
+    trackAnalyticsEvent("bible_passage_social_share", {
+      ...selectedAnalyticsPayload(),
+      social_platform: platform.toLowerCase()
+    });
+  }
+
+  async function shareSelectedGraphic(platform = "") {
     const options = selectedGraphicOptions();
     const renderer = window.WordOasisScriptureGraphic;
     if (!options || !renderer) {
@@ -972,7 +1042,8 @@
           trackAnalyticsEvent("bible_passage_graphic_share", {
             ...selectedAnalyticsPayload(),
             graphic_palette: options.palette,
-            share_method: "native"
+            share_method: "native",
+            social_platform: platform || undefined
           });
           return;
         } catch (error) {
@@ -984,7 +1055,39 @@
       }
 
       renderer.downloadFile(file);
-      selectionStatus.textContent = "Scripture graphic saved. Attach it to your post or message.";
+      selectionStatus.textContent = platform
+        ? `Scripture graphic downloaded. Add it to ${platform}.`
+        : "Scripture graphic downloaded.";
+      trackAnalyticsEvent("bible_passage_graphic_share", {
+        ...selectedAnalyticsPayload(),
+        graphic_palette: options.palette,
+        share_method: "download"
+      });
+    } catch (error) {
+      selectionStatus.textContent = error.message || "The Scripture graphic could not be created. Try a shorter passage.";
+    }
+  }
+
+  async function downloadSelectedGraphic() {
+    const options = selectedGraphicOptions();
+    const renderer = window.WordOasisScriptureGraphic;
+    if (!options || !renderer) {
+      selectionStatus.textContent = "The Scripture graphic tools are not available right now.";
+      return;
+    }
+
+    selectionStatus.textContent = "Creating your Scripture graphic...";
+    try {
+      const key = `${options.reference}:${options.text}:${options.palette}:${options.customColor}`;
+      if (scriptureGraphicCache.key !== key) {
+        prepareSelectedGraphic();
+      }
+      const file = scriptureGraphicCache.file || await scriptureGraphicCache.promise;
+      if (!file) {
+        throw new Error("The Scripture graphic could not be created.");
+      }
+      renderer.downloadFile(file);
+      selectionStatus.textContent = "Scripture graphic downloaded.";
       trackAnalyticsEvent("bible_passage_graphic_share", {
         ...selectedAnalyticsPayload(),
         graphic_palette: options.palette,
@@ -1387,25 +1490,18 @@
   });
   searchScope.addEventListener("change", updateSearchBooksVisibility);
   includeSourceCheckbox.addEventListener("change", updateSelectionTools);
+  shareModeTextButton.addEventListener("click", () => setPassageShareMode("text"));
+  shareModeGraphicButton.addEventListener("click", () => setPassageShareMode("graphic"));
   copySelectionButton.addEventListener("click", copySelectedPassage);
   shareSelectionButton.addEventListener("click", shareSelectedPassage);
-  facebookSelectionLink.addEventListener("click", shareSelectedPassageOnFacebook);
-  xSelectionLink.addEventListener("click", () => {
-    selectionStatus.textContent = "Opening X with the selected passage.";
-    trackAnalyticsEvent("bible_passage_social_share", {
-      ...selectedAnalyticsPayload(),
-      social_platform: "x"
-    });
-  });
-  textSelectionLink.addEventListener("click", () => {
-    selectionStatus.textContent = "Opening your messaging app with the selected passage.";
-    trackAnalyticsEvent("bible_passage_social_share", {
-      ...selectedAnalyticsPayload(),
-      social_platform: "text"
+  socialShareButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      shareSelectedPassageOnPlatform(button.dataset.bibleSharePlatform);
     });
   });
   shareGraphicButton.addEventListener("click", toggleGraphicCustomizer);
-  shareGraphicConfirmButton.addEventListener("click", shareSelectedGraphic);
+  shareGraphicConfirmButton.addEventListener("click", () => shareSelectedGraphic());
+  downloadGraphicButton.addEventListener("click", downloadSelectedGraphic);
   graphicPaletteInputs.forEach((input) => {
     input.addEventListener("change", () => {
       updateCustomColorControls();
