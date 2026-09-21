@@ -434,6 +434,10 @@ button {
   align-items: center;
 }
 
+.hero-grid-primary {
+  grid-template-columns: minmax(0, 820px);
+}
+
 .eyebrow {
   margin: 0 0 12px;
   color: var(--brand);
@@ -1513,6 +1517,10 @@ h1 {
 
 .ask-section {
   background: var(--surface-soft);
+}
+
+.ask-section-container {
+  max-width: 860px;
 }
 
 .ask-layout {

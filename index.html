@@ -52,7 +52,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="styles.css?v=20261078">
+    <link rel="stylesheet" href="styles.css?v=20261079">
 <script>
   window.WORD_OASIS_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZSB_Tf-MEbTUrmSkEqwNn2gjtxqF4cv16pMCDMmV3voJeJAFhIYBQ/exec";
   window.WORD_OASIS_FORM_EMAIL_TO = "wordoasis7@gmail.com";
@@ -304,7 +304,7 @@
 
     <main id="top">
       <section class="hero">
-        <div class="container hero-grid">
+        <div class="container hero-grid hero-grid-primary">
           <div class="hero-copy">
             <p class="eyebrow">Scripture-based answers for everyday questions</p>
             <h1>Discover clear Bible answers to the questions that matter most.</h1>
@@ -329,111 +329,8 @@
               <p class="search-hint">Popular: <button type="button" data-search="salvation">salvation</button> <button type="button" data-search="prayer">prayer</button> <button type="button" data-search="anxiety">anxiety</button></p>
             </form>
           </div>
-
-          <aside id="ask" class="hero-panel" aria-label="Ask a Bible question or contact us">
-            <span class="panel-tag">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-              <span id="ask-eyebrow-text">Find answers to your Bible questions</span>
-            </span>
-            <h2 id="ask-heading">Ask a Bible Question</h2>
-            <p id="ask-intro">
-              Have a Bible related question? We'll do our best to provide you with Scripture answers.
-            </p>
-
-            <div class="ask-mode-toggle" role="radiogroup" aria-label="What can we help with?">
-              <input type="radio" id="ask-mode-question" name="ask-mode" value="question" checked>
-              <label for="ask-mode-question">Bible question</label>
-              <input type="radio" id="ask-mode-general" name="ask-mode" value="general">
-              <label for="ask-mode-general">General inquiry</label>
-            </div>
-
-            <form class="hero-ask-form" id="question-form">
-              <label class="sr-only" for="question-input" id="question-input-label">Your question</label>
-              <textarea
-                id="question-input"
-                name="question"
-                rows="3"
-                maxlength="500"
-                placeholder="Type your question... (e.g. How can I trust God when I am anxious?)"
-                required
-              ></textarea>
-              <div class="hero-ask-row">
-                <span id="question-topic-row">
-                  <label class="sr-only" for="question-topic">Topic (optional)</label>
-                  <select id="question-topic" name="topic">
-                    <option value="">Topic (optional)</option>
-                  <option value="Baptism">Baptism</option>
-                    <option value="Bible Study">Bible Study</option>
-                    <option value="Christian Living">Christian Living</option>
-                    <option value="Church">Church</option>
-                    <option value="Comfort">Comfort</option>
-                    <option value="Creation">Creation</option>
-                    <option value="Faith">Faith</option>
-                    <option value="Forgiveness">Forgiveness</option>
-                    <option value="Great Controversy">Great Controversy</option>
-                    <option value="Health">Health</option>
-                    <option value="Hell">Hell</option>
-                    <option value="Holy Spirit">Holy Spirit</option>
-                    <option value="Law">Law</option>
-                    <option value="Marriage and Family">Marriage and Family</option>
-                    <option value="Prayer">Prayer</option>
-                    <option value="Prophecy">Prophecy</option>
-                    <option value="Sabbath">Sabbath</option>
-                    <option value="Salvation">Salvation</option>
-                    <option value="Sanctuary">Sanctuary</option>
-                    <option value="Second Coming">Second Coming</option>
-                    <option value="State of the Dead">State of the Dead</option>
-                    <option value="Stewardship">Stewardship</option>
-                    <option value="Three Angels">Three Angels</option><!-- prerender:question-topic -->
-                  </select>
-                </span>
-                <label class="sr-only" for="question-email">Email (required)</label>
-                <input id="question-email" name="email" type="email" placeholder="Email (required)" required>
-              </div>
-              <div class="hero-ask-row">
-                <label class="sr-only" for="question-gender">Gender (optional)</label>
-                <select id="question-gender" name="gender">
-                  <option value="">Gender (optional)</option>
-                  <option value="Male">Man</option>
-                  <option value="Female">Woman</option>
-                  
-                </select>
-                <label class="sr-only" for="question-location">Location (optional)</label>
-                <input id="question-location" name="location" type="text" placeholder="Location (optional)">
-              </div>
-              <div class="hero-ask-row">
-                <label class="sr-only" for="question-age">Age (optional)</label>
-                <input id="question-age" name="age" type="number" min="0" max="120" placeholder="Age (optional)">
-                <label class="sr-only" for="question-faith">Faith (optional)</label>
-                <input id="question-faith" name="faith" type="text" placeholder="Faith (optional)">
-              </div>
-              <button type="submit" class="hero-ask-button" id="question-submit">
-                <span id="question-submit-label">Find a Bible answer</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </button>
-              <div class="hero-form-footer">
-                <span class="hero-form-badge">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                  Free &amp; private
-                </span>
-              </div>
-              <p class="ask-status" id="question-status" role="status" aria-live="polite"></p>
-            </form>
-          </aside>
         </div>
       </section>
-
-      <section id="question-results" class="section question-results-section" hidden>
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Search Results</p>
-            <h2 id="question-results-title">Related answers</h2>
-            <p>Scripture-based answers matching your question.</p>
-          </div>
-          <div id="question-results-list" class="answers-list"></div>
-        </div>
-      </section>
-
 
       <section class="promise-section" aria-label="Bible promises">
         <div class="container">
@@ -838,6 +735,111 @@
         <strong class="topic-card-count">6</strong>
       </a>
           <!-- prerender:topic-grid --></div>
+        </div>
+      </section>
+
+      <section class="section ask-section" aria-labelledby="ask-heading">
+        <div class="container ask-section-container">
+          <aside id="ask" class="hero-panel" aria-label="Ask a Bible question or contact us">
+            <span class="panel-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              <span id="ask-eyebrow-text">Find answers to your Bible questions</span>
+            </span>
+            <h2 id="ask-heading">Ask a Bible Question</h2>
+            <p id="ask-intro">
+              Have a Bible related question? We'll do our best to provide you with Scripture answers.
+            </p>
+
+            <div class="ask-mode-toggle" role="radiogroup" aria-label="What can we help with?">
+              <input type="radio" id="ask-mode-question" name="ask-mode" value="question" checked>
+              <label for="ask-mode-question">Bible question</label>
+              <input type="radio" id="ask-mode-general" name="ask-mode" value="general">
+              <label for="ask-mode-general">General inquiry</label>
+            </div>
+
+            <form class="hero-ask-form" id="question-form">
+              <label class="sr-only" for="question-input" id="question-input-label">Your question</label>
+              <textarea
+                id="question-input"
+                name="question"
+                rows="3"
+                maxlength="500"
+                placeholder="Type your question... (e.g. How can I trust God when I am anxious?)"
+                required
+              ></textarea>
+              <div class="hero-ask-row">
+                <span id="question-topic-row">
+                  <label class="sr-only" for="question-topic">Topic (optional)</label>
+                  <select id="question-topic" name="topic">
+                    <option value="">Topic (optional)</option>
+                  <option value="Baptism">Baptism</option>
+                    <option value="Bible Study">Bible Study</option>
+                    <option value="Christian Living">Christian Living</option>
+                    <option value="Church">Church</option>
+                    <option value="Comfort">Comfort</option>
+                    <option value="Creation">Creation</option>
+                    <option value="Faith">Faith</option>
+                    <option value="Forgiveness">Forgiveness</option>
+                    <option value="Great Controversy">Great Controversy</option>
+                    <option value="Health">Health</option>
+                    <option value="Hell">Hell</option>
+                    <option value="Holy Spirit">Holy Spirit</option>
+                    <option value="Law">Law</option>
+                    <option value="Marriage and Family">Marriage and Family</option>
+                    <option value="Prayer">Prayer</option>
+                    <option value="Prophecy">Prophecy</option>
+                    <option value="Sabbath">Sabbath</option>
+                    <option value="Salvation">Salvation</option>
+                    <option value="Sanctuary">Sanctuary</option>
+                    <option value="Second Coming">Second Coming</option>
+                    <option value="State of the Dead">State of the Dead</option>
+                    <option value="Stewardship">Stewardship</option>
+                    <option value="Three Angels">Three Angels</option><!-- prerender:question-topic -->
+                  </select>
+                </span>
+                <label class="sr-only" for="question-email">Email (required)</label>
+                <input id="question-email" name="email" type="email" placeholder="Email (required)" required>
+              </div>
+              <div class="hero-ask-row">
+                <label class="sr-only" for="question-gender">Gender (optional)</label>
+                <select id="question-gender" name="gender">
+                  <option value="">Gender (optional)</option>
+                  <option value="Male">Man</option>
+                  <option value="Female">Woman</option>
+                </select>
+                <label class="sr-only" for="question-location">Location (optional)</label>
+                <input id="question-location" name="location" type="text" placeholder="Location (optional)">
+              </div>
+              <div class="hero-ask-row">
+                <label class="sr-only" for="question-age">Age (optional)</label>
+                <input id="question-age" name="age" type="number" min="0" max="120" placeholder="Age (optional)">
+                <label class="sr-only" for="question-faith">Faith (optional)</label>
+                <input id="question-faith" name="faith" type="text" placeholder="Faith (optional)">
+              </div>
+              <button type="submit" class="hero-ask-button" id="question-submit">
+                <span id="question-submit-label">Find a Bible answer</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+              <div class="hero-form-footer">
+                <span class="hero-form-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  Free &amp; private
+                </span>
+              </div>
+              <p class="ask-status" id="question-status" role="status" aria-live="polite"></p>
+            </form>
+          </aside>
+        </div>
+      </section>
+
+      <section id="question-results" class="section question-results-section" hidden>
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Search Results</p>
+            <h2 id="question-results-title">Related answers</h2>
+            <p>Scripture-based answers matching your question.</p>
+          </div>
+          <div id="question-results-list" class="answers-list"></div>
         </div>
       </section>
 
