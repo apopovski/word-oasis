@@ -40,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261058">
+    <link rel="stylesheet" href="/styles.css?v=20261076">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Prophecy Bible Answers | Word Oasis">
     <meta property="og:description" content="Browse Scripture-based answers about prophecy from Word Oasis, with Bible references for further study.">
@@ -72,12 +72,19 @@
         <ul id="primary-menu" class="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/answers/">Answers</a></li>
-          <li><a href="/topics/">Topics</a></li>
+          <li><a href="/topics/" aria-current="page">Topics</a></li>
           <li><a href="/bible/">Bible</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/#ask">Ask a question</a></li>
           <li class="nav-search-item">
-            <form class="nav-search" action="/" method="get" role="search">
+            <form class="nav-search" action="/" method="get" role="search" data-nav-search>
+              <button class="nav-search-toggle" type="button" aria-expanded="false" aria-controls="nav-search-fields" aria-label="Search Bible answers">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-4-4"></path>
+                </svg>
+              </button>
+              <div class="nav-search-fields" id="nav-search-fields">
               <label class="sr-only" for="nav-search-input">Search Bible questions</label>
               <input
                 id="nav-search-input"
@@ -86,7 +93,8 @@
                 placeholder="Search"
                 autocomplete="off"
               >
-              <button type="submit" aria-label="Submit search">Search</button>
+              <button class="nav-search-submit" type="submit" aria-label="Submit search">Search</button>
+              </div>
             </form>
           </li>
           <li class="nav-theme-item">
@@ -118,256 +126,271 @@
       <section class="page-hero">
         <div class="container">
           <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/topics/">Topics</a> / Prophecy</nav>
-          <p class="eyebrow">Topic</p>
-          <h1>Prophecy Bible answers</h1>
-          <p class="page-intro">Read clear Bible answers related to prophecy, with Scripture references for each question.</p>
+          <div class="topic-page-heading">
+            <span class="topic-page-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+    <path d="M15 12h-5"></path>
+    <path d="M15 8h-5"></path>
+    <path d="M19 17V5a2 2 0 0 0-2-2H4"></path>
+    <path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"></path>
+  </svg></span>
+            <div>
+              <p class="eyebrow">Topic</p>
+              <h1>Prophecy Bible answers</h1>
+              <p class="page-intro">Second coming, judgment, hope, and restoration. Explore 35 Scripture-based answers.</p>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-soft">
         <div class="container">
-          <ul class="answer-list-page">
+          <div class="topic-answer-grid">
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-is-jesus/">Who Is Jesus?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/who-is-jesus/">Who Is Jesus?</a></h2>
                     <p>Jesus Christ is the Son of God, the promised Messiah, the Creator, Savior, and coming King. He became human, lived a sinless life, died for humanity's sins, rose from the dead, and will return to establish His eternal kingdom.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/who-is-jesus/" aria-label="Read the full answer to Who Is Jesus?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-happens-after-death-according-to-the-bible/">What Happens After Death According to the Bible?</a></h2>
-                    <p>The Bible teaches that death is followed by a period of unconscious rest, after which comes resurrection and judgment. The final destiny of each person is determined by his or her relationship to God and response to His salvation.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-hell-eternal/">Is Hell Eternal?</a></h2>
-                    <p>The Bible uses the language of "eternal," "everlasting," and "unquenchable" fire in describing final judgment. Scripture must be read carefully, however, because it also explicitly describes the result of that judgment as death and destruction, and identifies the lake of fire as "the second death."</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-second-death/">What Is the Second Death?</a></h2>
-                    <p>The second death is the final death described in Revelation after the resurrection, judgment, and final destruction of evil. It is associated with the lake of fire and represents the permanent end of sin and rebellion.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-resurrection/">What Is the Resurrection?</a></h2>
-                    <p>The resurrection is God's act of bringing the dead back to life. Scripture teaches a resurrection of the righteous to eternal life and a resurrection of the wicked to judgment.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/when-will-the-dead-be-resurrected/">When Will the Dead Be Resurrected?</a></h2>
-                    <p>The righteous dead will be resurrected at the second coming of Jesus Christ. Scripture also describes a later resurrection of the wicked for final judgment.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-the-bible-true/">Is the Bible True?</a></h2>
-                    <p>Yes. The Bible presents itself as the inspired Word of God and repeatedly describes God's Word as true, trustworthy, and enduring. The Bible says: "All scripture is given by inspiration of God." 2 Timothy 3:16, KJV And Jesus prayed: "Thy word is truth." John 17:17, KJV The question of whether the Bible is true ultimately involves whether God can be trusted.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-the-bible-accurate/">Is the Bible Accurate?</a></h2>
-                    <p>Yes. Scripture presents itself as a trustworthy revelation of God. However, accuracy must be distinguished from translation, copying, and interpretation.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/has-the-bible-been-changed/">Has the Bible Been Changed?</a></h2>
-                    <p>The Bible teaches that God's Word endures, but it does not claim that every handwritten copy or translation would be free from human error.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-wrote-the-bible/">Who Wrote the Bible?</a></h2>
-                    <p>The Bible was written by many human authors over many generations, but Scripture identifies God as the ultimate source of its inspired message.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-was-the-bible-written/">How Was the Bible Written?</a></h2>
-                    <p>God communicated through prophets and other inspired writers, who recorded His messages and the events they witnessed or investigated.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/when-was-the-bible-written/">When Was the Bible Written?</a></h2>
-                    <p>The Bible was written over many generations rather than at one particular time. Scripture does not provide a complete chronological table giving the exact date of every book.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-oldest-bible/">What Is the Oldest Bible?</a></h2>
-                    <p>There is no single surviving manuscript that can simply be identified as "the original Bible." The biblical books were written individually over many generations, and the original handwritten documents are not preserved as a single complete volume.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-language-was-the-bible-originally-written-in/">What Language Was the Bible Originally Written In?</a></h2>
-                    <p>The Old Testament was written primarily in Hebrew, with portions in Aramaic. The New Testament was written in Greek.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-are-some-books-not-in-the-bible/">Why Are Some Books Not in the Bible?</a></h2>
-                    <p>Many ancient religious writings existed outside the biblical collection. Scripture itself does not provide a complete catalog of every rejected writing or a single verse listing every book that belongs in the canon.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-should-i-believe-the-bible/">Why Should I Believe the Bible?</a></h2>
-                    <p>The Bible gives several reasons to believe it: it claims to be God's inspired Word, reveals Jesus Christ, records historical testimony, presents fulfilled prophecy, and calls people to test what they hear against Scripture.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-satan-rebel-against-god/">Why Did Satan Rebel Against God?</a></h2>
-                    <p>Scripture associates Satan's rebellion with pride, self-exaltation, and a desire to rise above the position God had given him.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-didnt-god-destroy-satan-immediately/">Why Didn't God Destroy Satan Immediately?</a></h2>
-                    <p>Scripture does not give one verse explicitly saying, "God delayed Satan's destruction for this exact reason." But the biblical account shows that God is allowing the controversy over His character, government, and truth to be fully exposed before final judgment.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/when-is-jesus-coming-back/">When Is Jesus Coming Back?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/when-is-jesus-coming-back/">When Is Jesus Coming Back?</a></h2>
                     <p>The Bible teaches that Jesus Christ will return personally, visibly, and gloriously. However, Jesus specifically said that the exact day and hour of His return are not revealed to human beings.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/when-is-jesus-coming-back/" aria-label="Read the full answer to When Is Jesus Coming Back?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-antichrist/">What Is the Antichrist?</a></h2>
-                    <p>The Bible uses the word "antichrist" specifically in John's letters. It describes those who deny that Jesus is the Christ and who deny the Father and the Son. The broader biblical picture also describes an end-time power that opposes God and exalts itself against Him.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/when-will-jesus-return/">When Will Jesus Return?</a></h2>
+                    <p>The Bible does not reveal the exact date or hour of Christ's second coming. It teaches that the return will occur after the gospel has been proclaimed to the world and that believers should remain ready.</p>
+                    <a class="directory-read-more" href="/answers/when-will-jesus-return/" aria-label="Read the full answer to When Will Jesus Return?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-666/">What Is 666?</a></h2>
-                    <p>666 is the number associated with the beast in Revelation 13. Scripture says it is "the number of the beast" and "the number of a man."</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-are-the-signs-of-the-end-times/">What Are the Signs of the End Times?</a></h2>
+                    <p>Jesus gave several signs of the approaching end, including widespread deception, wars, famines, pestilences, persecution, false prophets, increasing lawlessness, and the worldwide proclamation of the gospel.</p>
+                    <a class="directory-read-more" href="/answers/what-are-the-signs-of-the-end-times/" aria-label="Read the full answer to What Are the Signs of the End Times?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-image-of-the-beast/">What Is the Image of the Beast?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/are-we-living-in-the-end-times/">Are We Living in the End Times?</a></h2>
+                    <p>The New Testament describes the Christian era as “the last days,” while also describing events that will intensify before Christ's return. Scripture therefore calls believers to watchfulness rather than date-setting.</p>
+                    <a class="directory-read-more" href="/answers/are-we-living-in-the-end-times/" aria-label="Read the full answer to Are We Living in the End Times?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-the-bible-say-about-the-end-of-the-world/">What Does the Bible Say About the End of the World?</a></h2>
+                    <p>The Bible teaches that the present world order will eventually come to an end, followed by God's judgment and the creation of “a new heaven and a new earth” where righteousness dwells.</p>
+                    <a class="directory-read-more" href="/answers/what-does-the-bible-say-about-the-end-of-the-world/" aria-label="Read the full answer to What Does the Bible Say About the End of the World?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-antichrist/">What Is the Antichrist?</a></h2>
+                    <p>The Bible uses the word “antichrist” specifically in John's letters. It describes those who deny that Jesus is the Christ and who deny the Father and the Son. The broader biblical picture also describes an end-time power that opposes God and exalts itself against Him.</p>
+                    <a class="directory-read-more" href="/answers/what-is-the-antichrist/" aria-label="Read the full answer to What Is the Antichrist?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/who-is-the-antichrist/">Who Is the Antichrist?</a></h2>
+                    <p>Scripture does not give a simple personal name for “the Antichrist.” John's letters describe antichrist as both a doctrinal opposition to Christ and a movement or power that denies Him. Other passages describe end-time powers that oppose God and His people.</p>
+                    <a class="directory-read-more" href="/answers/who-is-the-antichrist/" aria-label="Read the full answer to Who Is the Antichrist?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-mark-of-the-beast/">What Is the Mark of the Beast?</a></h2>
+                    <p>The mark of the beast is a future identifying sign associated with allegiance to the beast and its worship. Revelation connects it directly with worship, obedience, economic restrictions, and opposition to God's people.</p>
+                    <a class="directory-read-more" href="/answers/what-is-the-mark-of-the-beast/" aria-label="Read the full answer to What Is the Mark of the Beast?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-666/">What Is 666?</a></h2>
+                    <p>666 is the number associated with the beast in Revelation 13. Scripture says it is “the number of the beast” and “the number of a man.”</p>
+                    <a class="directory-read-more" href="/answers/what-is-666/" aria-label="Read the full answer to What Is 666?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-image-of-the-beast/">What Is the Image of the Beast?</a></h2>
                     <p>The image of the beast is a prophetic representation of the beast's authority that is empowered to speak, enforce worship, and persecute those who refuse to worship it.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-is-the-image-of-the-beast/" aria-label="Read the full answer to What Is the Image of the Beast?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-are-the-144-000/">Who Are the 144,000?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-babylon-in-revelation/">What Is Babylon in Revelation?</a></h2>
+                    <p>Babylon in Revelation is a symbolic end-time power or system opposed to God that influences nations, promotes spiritual immorality, and becomes intoxicated with the wine of its corrupting influence.</p>
+                    <a class="directory-read-more" href="/answers/what-is-babylon-in-revelation/" aria-label="Read the full answer to What Is Babylon in Revelation?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-wine-of-babylon/">What Is the Wine of Babylon?</a></h2>
+                    <p>The wine of Babylon represents the corrupting influence of Babylon's spiritual fornication and false teaching. Revelation uses wine symbolically in connection with deception, spiritual unfaithfulness, and rebellion against God.</p>
+                    <a class="directory-read-more" href="/answers/what-is-the-wine-of-babylon/" aria-label="Read the full answer to What Is the Wine of Babylon?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-armageddon/">What Is Armageddon?</a></h2>
+                    <p>Armageddon is the name Revelation gives to the gathering of the world's forces for the final conflict associated with the great day of God Almighty.</p>
+                    <a class="directory-read-more" href="/answers/what-is-armageddon/" aria-label="Read the full answer to What Is Armageddon?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-happens-at-armageddon/">What Happens at Armageddon?</a></h2>
+                    <p>Revelation presents Armageddon as the gathering of earthly powers for the final conflict against God. Christ then appears as the victorious King and defeats the forces of evil.</p>
+                    <a class="directory-read-more" href="/answers/what-happens-at-armageddon/" aria-label="Read the full answer to What Happens at Armageddon?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-are-the-seven-last-plagues/">What Are the Seven Last Plagues?</a></h2>
+                    <p>The seven last plagues are seven final judgments described in Revelation 15-16. They fall after the close of probationary opportunity and immediately precede Christ's second coming in the prophetic sequence.</p>
+                    <a class="directory-read-more" href="/answers/what-are-the-seven-last-plagues/" aria-label="Read the full answer to What Are the Seven Last Plagues?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-are-the-seven-seals-in-revelation/">What Are the Seven Seals in Revelation?</a></h2>
+                    <p>The seven seals are a prophetic sequence in Revelation 6-8 involving the Lamb opening a scroll sealed with seven seals. They reveal successive scenes of conquest, conflict, suffering, persecution, judgment, and finally God's intervention.</p>
+                    <a class="directory-read-more" href="/answers/what-are-the-seven-seals-in-revelation/" aria-label="Read the full answer to What Are the Seven Seals in Revelation?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-are-the-seven-trumpets/">What Are the Seven Trumpets?</a></h2>
+                    <p>The seven trumpets are a series of judgments announced in Revelation 8-11. They portray escalating judgments involving the earth, sea, waters, heavenly bodies, humanity, and finally the proclamation of God's kingdom.</p>
+                    <a class="directory-read-more" href="/answers/what-are-the-seven-trumpets/" aria-label="Read the full answer to What Are the Seven Trumpets?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/who-are-the-144-000/">Who Are the 144,000?</a></h2>
                     <p>The 144,000 are described in Revelation 7 and 14 as God's servants who are sealed with His name, stand with the Lamb, follow Him, and are characterized by truthfulness and faithfulness.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/who-are-the-144-000/" aria-label="Read the full answer to Who Are the 144,000?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-abomination-of-desolation/">What Is the Abomination of Desolation?</a></h2>
-                    <p>The "abomination of desolation" is a prophetic expression used by Daniel and quoted by Jesus. It refers to a profaning or desolating power associated with opposition to God's worship and sanctuary.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-abomination-of-desolation/">What Is the Abomination of Desolation?</a></h2>
+                    <p>The “abomination of desolation” is a prophetic expression used by Daniel and quoted by Jesus. It refers to a profaning or desolating power associated with opposition to God's worship and sanctuary.</p>
+                    <a class="directory-read-more" href="/answers/what-is-the-abomination-of-desolation/" aria-label="Read the full answer to What Is the Abomination of Desolation?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/does-the-bible-teach-a-secret-rapture/">Does the Bible Teach a Secret Rapture?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-millennium-in-revelation/">What Is the Millennium in Revelation?</a></h2>
+                    <p>The millennium is the thousand-year period described in Revelation 20. It occurs between the first resurrection and the final resurrection and judgment of the wicked.</p>
+                    <a class="directory-read-more" href="/answers/what-is-the-millennium-in-revelation/" aria-label="Read the full answer to What Is the Millennium in Revelation?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-new-jerusalem/">What Is the New Jerusalem?</a></h2>
+                    <p>The New Jerusalem is the holy city that God prepares in heaven and brings down to the renewed earth after the final judgment. It is described as the dwelling place of God with His redeemed people.</p>
+                    <a class="directory-read-more" href="/answers/what-is-the-new-jerusalem/" aria-label="Read the full answer to What Is the New Jerusalem?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-rapture/">What Is the Rapture?</a></h2>
+                    <p>The Bible does not use the word “rapture,” but it does teach that Christ's followers will be caught up to meet Him in the air when He returns.</p>
+                    <a class="directory-read-more" href="/answers/what-is-the-rapture/" aria-label="Read the full answer to What Is the Rapture?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/does-the-bible-teach-a-secret-rapture/">Does the Bible Teach a Secret Rapture?</a></h2>
                     <p>The Bible teaches that believers will be caught up to meet Christ, but the passages describing Christ's return emphasize that it will be visible, audible, glorious, and accompanied by the resurrection.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/does-the-bible-teach-a-secret-rapture/" aria-label="Read the full answer to Does the Bible Teach a Secret Rapture?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-70-weeks-prophecy/">What Is the 70 Weeks Prophecy?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-70-weeks-prophecy/">What Is the 70 Weeks Prophecy?</a></h2>
                     <p>The 70 weeks prophecy is found in Daniel 9:24-27. It describes a prophetic period concerning Jerusalem, God's people, the coming Messiah, His death, and the ultimate resolution of sin.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-is-the-70-weeks-prophecy/" aria-label="Read the full answer to What Is the 70 Weeks Prophecy?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-daniel-2-mean/">What Does Daniel 2 Mean?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-2300-day-prophecy/">What Is the 2300-Day Prophecy?</a></h2>
+                    <p>Daniel 8:14 says: “Unto two thousand and three hundred days; then shall the sanctuary be cleansed.” A historicist reading understands these prophetic days as 2,300 years and connects the prophecy with the heavenly sanctuary and God's judgment.</p>
+                    <a class="directory-read-more" href="/answers/what-is-the-2300-day-prophecy/" aria-label="Read the full answer to What Is the 2300-Day Prophecy?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-daniel-2-mean/">What Does Daniel 2 Mean?</a></h2>
                     <p>Daniel 2 presents a prophetic image representing successive earthly kingdoms followed by God's everlasting kingdom.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-does-daniel-2-mean/" aria-label="Read the full answer to What Does Daniel 2 Mean?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-do-the-beasts-in-daniel-represent/">What Do the Beasts in Daniel Represent?</a></h2>
-                    <p>Daniel's beasts represent kingdoms or political powers. Daniel 7 explicitly says: "These great beasts, which are four, are four kings, which shall arise out of the earth." Daniel 7:17 Later it says: "The fourth beast shall be the fourth kingdom upon earth." Daniel 7:23</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-do-the-beasts-in-daniel-represent/">What Do the Beasts in Daniel Represent?</a></h2>
+                    <p>Daniel's beasts represent kingdoms or political powers. Daniel 7 explicitly says: “These great beasts, which are four, are four kings, which shall arise out of the earth” (Daniel 7:17). Later it says: “The fourth beast shall be the fourth kingdom upon earth” (Daniel 7:23).</p>
+                    <a class="directory-read-more" href="/answers/what-do-the-beasts-in-daniel-represent/" aria-label="Read the full answer to What Do the Beasts in Daniel Represent?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-do-the-four-horsemen-of-revelation-mean/">What Do the Four Horsemen of Revelation Mean?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-do-the-four-horsemen-of-revelation-mean/">What Do the Four Horsemen of Revelation Mean?</a></h2>
                     <p>The four horsemen appear when the first four seals are opened in Revelation 6. They represent a prophetic sequence involving conquest, conflict, scarcity, and death.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-do-the-four-horsemen-of-revelation-mean/" aria-label="Read the full answer to What Do the Four Horsemen of Revelation Mean?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-revelation-14-7-mean/">What Does Revelation 14:7 Mean?</a></h2>
-                    <p>Revelation 14:7 announces that the hour of God's judgment has come and calls the world to worship the Creator.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-revelation-13-mean/">What Does Revelation 13 Mean?</a></h2>
+                    <p>Revelation 13 describes two beasts that exercise authority, demand worship, persecute God's people, and impose economic restrictions connected with the mark of the beast.</p>
+                    <a class="directory-read-more" href="/answers/what-does-revelation-13-mean/" aria-label="Read the full answer to What Does Revelation 13 Mean?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-lords-day-mean-in-the-bible/">What Does "Lord's Day" Mean in the Bible?</a></h2>
-                    <p>Revelation 1:10 says John was "in the Spirit" on "the Lord's day," but the verse itself does not explicitly identify which day of the week John meant.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-revelation-14-mean/">What Does Revelation 14 Mean?</a></h2>
+                    <p>Revelation 14 presents the 144,000, three angels proclaiming God's final gospel warning, the fall of Babylon, a warning against worshiping the beast, the perseverance of God's people, and the final harvest.</p>
+                    <a class="directory-read-more" href="/answers/what-does-revelation-14-mean/" aria-label="Read the full answer to What Does Revelation 14 Mean?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-god-seem-different-in-the-old-and-new-testaments/">Why Does God Seem Different in the Old and New Testaments?</a></h2>
-                    <p>The Bible does not present two different Gods. Both Testaments describe the same God as loving, merciful, holy, just, and opposed to sin.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/did-jesus-have-a-wife/">Did Jesus Have a Wife?</a></h2>
-                    <p>No biblical passage says that Jesus was married. The New Testament presents Him as unmarried and never names a wife.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/where-did-dinosaurs-go-according-to-the-bible/">Where Did Dinosaurs Go According to the Bible?</a></h2>
-                    <p>The Bible does not directly explain the extinction of dinosaurs. If dinosaurs were among the creatures that lived before the Flood, their disappearance could be discussed in connection with the Flood and subsequent changes to the earth, but Scripture does not explicitly make that connection.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/does-prayer-really-work/">Does Prayer Really Work?</a></h2>
-                    <p>Yes. Scripture presents prayer as a genuine means of communicating with God and repeatedly records God responding to prayer.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-often-should-i-pray/">How Often Should I Pray?</a></h2>
-                    <p>The Bible encourages continual prayer rather than restricting prayer to a particular number of times per day.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-teach-about-judgment/">What does the Bible teach about judgment?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-the-bible-teach-about-judgment/">What does the Bible teach about judgment?</a></h2>
                     <p>Judgment shows that God takes evil seriously, vindicates His character, and brings justice with mercy. Believers can face judgment with confidence because Jesus is both Savior and Advocate.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-does-the-bible-teach-about-judgment/" aria-label="Read the full answer to What does the Bible teach about judgment?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-does-the-bible-help-with-grief-and-loss/">How does the Bible help with grief and loss?</a></h2>
-                    <p>Scripture allows honest grief while offering real comfort: God is near to the brokenhearted, and death is not the final word for those who trust in the resurrection.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-should-i-understand-prophecy-in-daniel-and-revelation/">How should I understand prophecy in Daniel and Revelation?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/how-should-i-understand-prophecy-in-daniel-and-revelation/">How should I understand prophecy in Daniel and Revelation?</a></h2>
                     <p>Daniel and Revelation use symbolic language to reveal God's control over history, the rise and fall of powers, and the certainty of Christ's ultimate victory over evil.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/how-should-i-understand-prophecy-in-daniel-and-revelation/" aria-label="Read the full answer to How should I understand prophecy in Daniel and Revelation?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-teach-about-the-sanctuary/">What does the Bible teach about the sanctuary?</a></h2>
-                    <p>The biblical sanctuary illustrates God's plan to dwell with His people and deal with sin. Its services point forward to Jesus, whose sacrifice and heavenly ministry provide forgiveness, cleansing, and access to God.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-great-controversy-in-the-bible/">What is the great controversy in the Bible?</a></h2>
-                    <p>The great controversy is the Bible's picture of the conflict between Christ and Satan, truth and deception, love and rebellion, with God's character ultimately vindicated before the universe.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-the-sanctuary-message-matter-today/">Why does the sanctuary message matter today?</a></h2>
-                    <p>The sanctuary message matters because it shows how God deals with sin through Christ's sacrifice, priestly ministry, judgment, cleansing, and final restoration.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-can-i-be-ready-for-the-second-coming-of-jesus/">How can I be ready for the Second Coming of Jesus?</a></h2>
-                    <p>Readiness for Jesus' return is not date-setting or fear. It is an active relationship with Christ that shows itself in faith, watchfulness, obedience, service, and hope.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-meaning-of-the-sanctuary-in-the-bible/">What is the meaning of the sanctuary in the Bible?</a></h2>
-                    <p>The Old Testament sanctuary was a visual gospel, teaching how sin is confessed, atoned for, and ultimately removed through the work of Jesus Christ.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-was-the-day-of-atonement-and-why-does-it-matter-today/">What was the Day of Atonement and why does it matter today?</a></h2>
-                    <p>The Day of Atonement pictured a final cleansing of sin's record, pointing forward to the judgment and to Christ's ongoing work of removing sin completely.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-are-the-biblical-signs-that-jesus-is-coming-soon/">What are the biblical signs that Jesus is coming soon?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-are-the-biblical-signs-that-jesus-is-coming-soon/">What are the biblical signs that Jesus is coming soon?</a></h2>
                     <p>Jesus described spiritual, social, and global signs — false christs, wars, disasters, and the gospel reaching the whole world — as markers that His return is near.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-are-the-biblical-signs-that-jesus-is-coming-soon/" aria-label="Read the full answer to What are the biblical signs that Jesus is coming soon?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-did-sin-and-evil-begin-according-to-the-bible/">How did sin and evil begin, according to the Bible?</a></h2>
-                    <p>Sin began with pride and rebellion in heaven, when a created angel desired God's authority for himself, and it spread to earth through the same temptation to distrust God.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-message-of-the-first-angel-in-revelation-14/">What is the message of the first angel in Revelation 14?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-message-of-the-first-angel-in-revelation-14/">What is the message of the first angel in Revelation 14?</a></h2>
                     <p>The first angel calls the world to fear God, give Him glory, and worship the Creator, announcing that the hour of judgment has arrived.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-is-the-message-of-the-first-angel-in-revelation-14/" aria-label="Read the full answer to What is the message of the first angel in Revelation 14?">Read the full answer</a>
+                  </article>
 
-          </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -433,14 +456,22 @@
             &times;
           </button>
         </div>
+        <div class="verse-modal-toolbar">
+          <label for="verse-modal-translation">Bible version</label>
+          <select id="verse-modal-translation">
+            <option value="web">WEB - World English Bible</option>
+            <option value="kjv">KJV - King James Version</option>
+            <option value="asv">ASV - American Standard Version</option>
+          </select>
+        </div>
         <div class="verse-modal-body" id="verse-modal-body"></div>
       </div>
     </div>
 
-    <script src="/theme.js?v=20261058"></script>
-    <script src="/pwa.js?v=20261058"></script>
-    <script src="/scripture-graphic.js?v=20261058"></script>
-    <script src="/local-library.js?v=20261058"></script>
-    <script src="/verse-modal.js?v=20261058"></script>
+    <script src="/theme.js?v=20261073"></script>
+    <script src="/pwa.js?v=20261073"></script>
+    <script src="/scripture-graphic.js?v=20261073"></script>
+    <script src="/local-library.js?v=20261073"></script>
+    <script src="/verse-modal.js?v=20261073"></script>
   </body>
 </html>

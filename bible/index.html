@@ -41,7 +41,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261058">
+    <link rel="stylesheet" href="/styles.css?v=20261076">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Read the Bible Online | Word Oasis">
     <meta property="og:description" content="Read and search WEB, KJV, and ASV Bible chapters, filter by Testament or book, and copy, share, or memorize verse ranges.">
@@ -99,7 +99,14 @@
           <li><a href="/bible/" aria-current="page">Bible</a></li>
           <li><a href="/#ask">Ask a question</a></li>
           <li class="nav-search-item">
-            <form class="nav-search" action="/" method="get" role="search">
+            <form class="nav-search" action="/" method="get" role="search" data-nav-search>
+              <button class="nav-search-toggle" type="button" aria-expanded="false" aria-controls="nav-search-fields" aria-label="Search Bible answers">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-4-4"></path>
+                </svg>
+              </button>
+              <div class="nav-search-fields" id="nav-search-fields">
               <label class="sr-only" for="nav-search-input">Search Bible questions</label>
               <input
                 id="nav-search-input"
@@ -108,7 +115,8 @@
                 placeholder="Search"
                 autocomplete="off"
               >
-              <button type="submit" aria-label="Submit search">Search</button>
+              <button class="nav-search-submit" type="submit" aria-label="Submit search">Search</button>
+              </div>
             </form>
           </li>
           <li class="nav-theme-item">
@@ -185,27 +193,38 @@
               <label for="bible-search-input">Search the Bible</label>
               <div class="bible-search-row">
                 <input id="bible-search-input" type="search" placeholder='Try "mercy and truth" or kindness & truth' autocomplete="off">
-                <button type="submit">Search</button>
               </div>
               <p class="bible-search-help">Use quotes for exact phrases. Use &amp; to require multiple words.</p>
               <details class="bible-advanced-search">
-                <summary>Advanced search</summary>
-                <div class="bible-control-field">
-                  <label for="bible-search-scope">Search in</label>
-                  <select id="bible-search-scope">
-                    <option value="all">Entire Bible</option>
-                    <option value="ot">Old Testament</option>
-                    <option value="nt">New Testament</option>
-                    <option value="current">Current book</option>
-                    <option value="selected">Selected books</option>
-                  </select>
-                </div>
-                <div class="bible-control-field bible-search-books-field" id="bible-search-books-field" hidden>
-                  <label for="bible-search-books">Books to search</label>
-                  <select id="bible-search-books" multiple size="8"></select>
-                  <p class="bible-search-help">Hold Command or Ctrl to choose multiple books.</p>
+                <summary>
+                  <span class="bible-search-options-heading">Search options</span>
+                  <span class="bible-advanced-search-value" id="bible-search-scope-summary">Entire Bible</span>
+                </summary>
+                <div class="bible-advanced-search-content">
+                  <div class="bible-control-field">
+                    <label for="bible-search-scope">Where to search</label>
+                    <select id="bible-search-scope">
+                      <option value="all">Entire Bible</option>
+                      <option value="ot">Old Testament</option>
+                      <option value="nt">New Testament</option>
+                      <option value="current">Current book</option>
+                      <option value="selected">Selected books</option>
+                    </select>
+                  </div>
+                  <div class="bible-control-field bible-search-books-field" id="bible-search-books-field" hidden>
+                    <label for="bible-search-books">Books to search</label>
+                    <select id="bible-search-books" multiple size="8"></select>
+                    <p class="bible-search-help">Hold Command or Ctrl to choose multiple books.</p>
+                  </div>
                 </div>
               </details>
+              <button class="bible-search-submit" type="submit">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-4-4"></path>
+                </svg>
+                Search
+              </button>
             </form>
             <div class="bible-search-results" id="bible-search-results" aria-live="polite"></div>
           </aside>
@@ -290,10 +309,10 @@
       </div>
     </footer>
 
-    <script src="/theme.js?v=20261058"></script>
+    <script src="/theme.js?v=20261073"></script>
     <script src="/pwa.js?v=20261058"></script>
     <script src="/scripture-graphic.js?v=20261058"></script>
     <script src="/local-library.js?v=20261058"></script>
-    <script src="/bible-reader.js?v=20261058"></script>
+    <script src="/bible-reader.js?v=20261076"></script>
   </body>
 </html>

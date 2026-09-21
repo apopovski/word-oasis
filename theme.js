@@ -67,6 +67,30 @@
   // script.js only loads on the homepage.
   const navToggle = document.querySelector(".nav-toggle");
   const navLinks = document.querySelector("#primary-menu");
+  const navSearch = document.querySelector("[data-nav-search]");
+  const navSearchToggle = navSearch?.querySelector(".nav-search-toggle");
+  const navSearchInput = navSearch?.querySelector('input[type="search"]');
+
+  function closeNavSearch() {
+    if (!navSearch || !navSearchToggle) return;
+    navSearch.classList.remove("is-open");
+    navSearchToggle.setAttribute("aria-expanded", "false");
+  }
+
+  navSearchToggle?.addEventListener("click", () => {
+    const isOpen = navSearch.classList.toggle("is-open");
+    navSearchToggle.setAttribute("aria-expanded", String(isOpen));
+    if (isOpen) {
+      navSearchInput?.focus();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (navSearch?.classList.contains("is-open") && !navSearch.contains(event.target)) {
+      closeNavSearch();
+    }
+  });
+
   if (navToggle && navLinks) {
     navToggle.addEventListener("click", () => {
       const isOpen = navLinks.classList.toggle("open");
@@ -76,7 +100,7 @@
     navLinks.addEventListener("click", (event) => {
       // Ignore clicks on the search input/field itself so typing a query
       // doesn't immediately collapse the open menu.
-      if (event.target.closest("input")) {
+      if (event.target.closest(".nav-search")) {
         return;
       }
       navLinks.classList.remove("open");
@@ -84,9 +108,12 @@
     });
 
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && navLinks.classList.contains("open")) {
-        navLinks.classList.remove("open");
-        navToggle.setAttribute("aria-expanded", "false");
+      if (event.key === "Escape") {
+        closeNavSearch();
+        if (navLinks.classList.contains("open")) {
+          navLinks.classList.remove("open");
+          navToggle.setAttribute("aria-expanded", "false");
+        }
       }
     });
   }

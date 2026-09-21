@@ -40,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261058">
+    <link rel="stylesheet" href="/styles.css?v=20261076">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Marriage and Family Bible Answers | Word Oasis">
     <meta property="og:description" content="Browse Scripture-based answers about marriage and family from Word Oasis, with Bible references for further study.">
@@ -72,12 +72,19 @@
         <ul id="primary-menu" class="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/answers/">Answers</a></li>
-          <li><a href="/topics/">Topics</a></li>
+          <li><a href="/topics/" aria-current="page">Topics</a></li>
           <li><a href="/bible/">Bible</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/#ask">Ask a question</a></li>
           <li class="nav-search-item">
-            <form class="nav-search" action="/" method="get" role="search">
+            <form class="nav-search" action="/" method="get" role="search" data-nav-search>
+              <button class="nav-search-toggle" type="button" aria-expanded="false" aria-controls="nav-search-fields" aria-label="Search Bible answers">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-4-4"></path>
+                </svg>
+              </button>
+              <div class="nav-search-fields" id="nav-search-fields">
               <label class="sr-only" for="nav-search-input">Search Bible questions</label>
               <input
                 id="nav-search-input"
@@ -86,7 +93,8 @@
                 placeholder="Search"
                 autocomplete="off"
               >
-              <button type="submit" aria-label="Submit search">Search</button>
+              <button class="nav-search-submit" type="submit" aria-label="Submit search">Search</button>
+              </div>
             </form>
           </li>
           <li class="nav-theme-item">
@@ -118,71 +126,63 @@
       <section class="page-hero">
         <div class="container">
           <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/topics/">Topics</a> / Marriage and Family</nav>
-          <p class="eyebrow">Topic</p>
-          <h1>Marriage and Family Bible answers</h1>
-          <p class="page-intro">Read clear Bible answers related to marriage and family, with Scripture references for each question.</p>
+          <div class="topic-page-heading">
+            <span class="topic-page-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+    <circle cx="4.3" cy="7" r="2.2"></circle>
+    <path d="M.8 21v-2.1a3.5 3.5 0 0 1 7 0V21"></path>
+    <path d="M10.2 6a2.2 2.2 0 0 1 4.4 0c0 1.9.4 3.3.9 4.5H9.3c.5-1.2.9-2.6.9-4.5z"></path>
+    <path d="M8.6 21v-2.3a3.6 3.6 0 0 1 7.2 0V21"></path>
+    <circle cx="20.5" cy="11.4" r="1.6"></circle>
+    <path d="M18 21v-1.6a2.5 2.5 0 0 1 5 0V21"></path>
+  </svg></span>
+            <div>
+              <p class="eyebrow">Topic</p>
+              <h1>Marriage and Family Bible answers</h1>
+              <p class="page-intro">Marriage, parenting, and home life God's way. Explore 5 Scripture-based answers.</p>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-soft">
         <div class="container">
-          <ul class="answer-list-page">
+          <div class="topic-answer-grid">
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-god-give-the-ten-commandments/">Why Did God Give the Ten Commandments?</a></h2>
-                    <p>God gave the commandments to reveal His will, define right and wrong, protect human relationships, expose sin, and teach people how to love God and others.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Marriage and Family</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-the-bible-say-about-marriage/">What Does the Bible Say About Marriage?</a></h2>
+                    <p>The Bible presents marriage as a covenant relationship between a man and a woman, established by God for companionship, faithfulness, family, and mutual love.</p>
+                    <a class="directory-read-more" href="/answers/what-does-the-bible-say-about-marriage/" aria-label="Read the full answer to What Does the Bible Say About Marriage?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-was-cains-wife/">Who Was Cain's Wife?</a></h2>
-                    <p>The Bible does not give Cain's wife's name. The most straightforward reading of Genesis is that she was one of Cain's relatives, most likely a sister or another close descendant of Adam and Eve.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/where-did-cain-get-his-wife/">Where Did Cain Get His Wife?</a></h2>
-                    <p>Cain's wife came from Adam and Eve's descendants. Genesis 5:4 explicitly says Adam had "sons and daughters."</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-is-michael-the-archangel/">Who Is Michael the Archangel?</a></h2>
-                    <p>Michael is presented in Scripture as a chief heavenly figure who leads God's forces in conflict with Satan. The name means "Who is like God?"</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-was-mary-magdalene/">Who Was Mary Magdalene?</a></h2>
-                    <p>Mary Magdalene was a devoted follower of Jesus who was healed from demonic oppression and became one of the first witnesses to His resurrection.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/did-jesus-have-brothers-and-sisters/">Did Jesus Have Brothers and Sisters?</a></h2>
-                    <p>The New Testament explicitly mentions Jesus' brothers and sisters. Christians have interpreted their exact relationship to Mary differently, but the biblical references themselves are clear.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/did-jesus-have-a-wife/">Did Jesus Have a Wife?</a></h2>
-                    <p>No biblical passage says that Jesus was married. The New Testament presents Him as unmarried and never names a wife.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-doesnt-god-answer-my-prayers/">Why Doesn't God Answer My Prayers?</a></h2>
-                    <p>The Bible gives several reasons a prayer may not receive the answer we expect, including God's wisdom, wrong motives, unconfessed sin, lack of faith, and requests that do not agree with God's will. Yet Scripture also teaches that God hears His children even when His answer is not what they expected.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-about-divorce/">What Does the Bible Say About Divorce?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Marriage and Family</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-the-bible-say-about-divorce/">What Does the Bible Say About Divorce?</a></h2>
                     <p>The Bible permits divorce in certain circumstances but presents marriage as a lifelong covenant and does not treat divorce as God's original ideal.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-does-the-bible-say-about-divorce/" aria-label="Read the full answer to What Does the Bible Say About Divorce?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-should-parents-raise-their-children-according-to-the-bible/">How should parents raise their children according to the Bible?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Marriage and Family</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-the-bible-say-about-sex-before-marriage/">What Does the Bible Say About Sex Before Marriage?</a></h2>
+                    <p>The Bible consistently places sexual intimacy within marriage and calls sexual activity outside that covenant “fornication” or sexual immorality.</p>
+                    <a class="directory-read-more" href="/answers/what-does-the-bible-say-about-sex-before-marriage/" aria-label="Read the full answer to What Does the Bible Say About Sex Before Marriage?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Marriage and Family</span>
+                    <h2><a class="directory-answer-title" href="/answers/how-should-parents-raise-their-children-according-to-the-bible/">How should parents raise their children according to the Bible?</a></h2>
                     <p>Scripture calls parents to teach children about God consistently, discipline with love rather than anger, and model a life of faith at home so children grow up knowing and trusting the Lord.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/how-should-parents-raise-their-children-according-to-the-bible/" aria-label="Read the full answer to How should parents raise their children according to the Bible?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-can-a-family-worship-god-together-at-home/">How can a family worship God together at home?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Marriage and Family</span>
+                    <h2><a class="directory-answer-title" href="/answers/how-can-a-family-worship-god-together-at-home/">How can a family worship God together at home?</a></h2>
                     <p>Family worship can be simple: read Scripture, pray together, sing or share gratitude, and talk about how God's Word applies to daily life.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/how-can-a-family-worship-god-together-at-home/" aria-label="Read the full answer to How can a family worship God together at home?">Read the full answer</a>
+                  </article>
 
-          </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -248,14 +248,22 @@
             &times;
           </button>
         </div>
+        <div class="verse-modal-toolbar">
+          <label for="verse-modal-translation">Bible version</label>
+          <select id="verse-modal-translation">
+            <option value="web">WEB - World English Bible</option>
+            <option value="kjv">KJV - King James Version</option>
+            <option value="asv">ASV - American Standard Version</option>
+          </select>
+        </div>
         <div class="verse-modal-body" id="verse-modal-body"></div>
       </div>
     </div>
 
-    <script src="/theme.js?v=20261058"></script>
-    <script src="/pwa.js?v=20261058"></script>
-    <script src="/scripture-graphic.js?v=20261058"></script>
-    <script src="/local-library.js?v=20261058"></script>
-    <script src="/verse-modal.js?v=20261058"></script>
+    <script src="/theme.js?v=20261073"></script>
+    <script src="/pwa.js?v=20261073"></script>
+    <script src="/scripture-graphic.js?v=20261073"></script>
+    <script src="/local-library.js?v=20261073"></script>
+    <script src="/verse-modal.js?v=20261073"></script>
   </body>
 </html>

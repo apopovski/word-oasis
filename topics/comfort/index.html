@@ -40,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261058">
+    <link rel="stylesheet" href="/styles.css?v=20261076">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Comfort Bible Answers | Word Oasis">
     <meta property="og:description" content="Browse Scripture-based answers about comfort from Word Oasis, with Bible references for further study.">
@@ -72,12 +72,19 @@
         <ul id="primary-menu" class="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/answers/">Answers</a></li>
-          <li><a href="/topics/">Topics</a></li>
+          <li><a href="/topics/" aria-current="page">Topics</a></li>
           <li><a href="/bible/">Bible</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/#ask">Ask a question</a></li>
           <li class="nav-search-item">
-            <form class="nav-search" action="/" method="get" role="search">
+            <form class="nav-search" action="/" method="get" role="search" data-nav-search>
+              <button class="nav-search-toggle" type="button" aria-expanded="false" aria-controls="nav-search-fields" aria-label="Search Bible answers">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-4-4"></path>
+                </svg>
+              </button>
+              <div class="nav-search-fields" id="nav-search-fields">
               <label class="sr-only" for="nav-search-input">Search Bible questions</label>
               <input
                 id="nav-search-input"
@@ -86,7 +93,8 @@
                 placeholder="Search"
                 autocomplete="off"
               >
-              <button type="submit" aria-label="Submit search">Search</button>
+              <button class="nav-search-submit" type="submit" aria-label="Submit search">Search</button>
+              </div>
             </form>
           </li>
           <li class="nav-theme-item">
@@ -118,306 +126,110 @@
       <section class="page-hero">
         <div class="container">
           <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/topics/">Topics</a> / Comfort</nav>
-          <p class="eyebrow">Topic</p>
-          <h1>Comfort Bible answers</h1>
-          <p class="page-intro">Read clear Bible answers related to comfort, with Scripture references for each question.</p>
+          <div class="topic-page-heading">
+            <span class="topic-page-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+    <path d="M15 10V9"></path>
+    <path d="M16.472 15a6 6 0 0 1-8.943 0"></path>
+    <path d="M9 10V9"></path>
+    <circle cx="12" cy="12" r="10"></circle>
+  </svg></span>
+            <div>
+              <p class="eyebrow">Topic</p>
+              <h1>Comfort Bible answers</h1>
+              <p class="page-intro">Hope in suffering, grief, anxiety, and difficult seasons. Explore 12 Scripture-based answers.</p>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-soft">
         <div class="container">
-          <ul class="answer-list-page">
+          <div class="topic-answer-grid">
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-god-allow-suffering/">Why Does God Allow Suffering?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Comfort</span>
+                    <h2><a class="directory-answer-title" href="/answers/why-does-god-allow-suffering/">Why Does God Allow Suffering?</a></h2>
                     <p>The Bible teaches that suffering exists because sin entered God's creation, but it also teaches that God has not abandoned humanity to suffering. God permits human beings freedom, and Scripture describes a real conflict between good and evil. God ultimately promises to destroy sin, suffering, and death.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/why-does-god-allow-suffering/" aria-label="Read the full answer to Why Does God Allow Suffering?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-god-allow-evil/">Why Does God Allow Evil?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Comfort</span>
+                    <h2><a class="directory-answer-title" href="/answers/why-does-god-allow-evil/">Why Does God Allow Evil?</a></h2>
                     <p>The Bible teaches that evil exists because God's creatures were given meaningful freedom, and that some chose rebellion against God. God has permitted evil for a time, but Scripture promises that evil will ultimately be judged and destroyed.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/why-does-god-allow-evil/" aria-label="Read the full answer to Why Does God Allow Evil?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/does-god-love-everyone/">Does God Love Everyone?</a></h2>
-                    <p>Yes. Scripture teaches that God's love extends to the entire human race. "For God so loved the world" is one of the Bible's clearest statements of this truth (John 3:16). God's love does not mean that He approves of everything people do. Scripture distinguishes between loving people and approving of sin.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Comfort</span>
+                    <h2><a class="directory-answer-title" href="/answers/will-we-recognize-our-loved-ones-in-heaven/">Will We Recognize Our Loved Ones in Heaven?</a></h2>
+                    <p>Scripture strongly suggests that God's people will recognize one another in the resurrection and eternal kingdom. The Bible does not give every detail about recognition, but it presents personal identity and relationships as continuing beyond resurrection.</p>
+                    <a class="directory-read-more" href="/answers/will-we-recognize-our-loved-ones-in-heaven/" aria-label="Read the full answer to Will We Recognize Our Loved Ones in Heaven?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-god-like/">What Is God Like?</a></h2>
-                    <p>The Bible describes God as holy, loving, just, merciful, patient, faithful, wise, powerful, and truthful. His character is perfectly consistent. Scripture's clearest revelation of what God is like is found in Jesus Christ.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Comfort</span>
+                    <h2><a class="directory-answer-title" href="/answers/will-pets-go-to-heaven/">Will Pets Go to Heaven?</a></h2>
+                    <p>The Bible does not explicitly say that individual pets will be resurrected or that specific animals will live in heaven. However, Scripture clearly teaches that animals were part of God's good creation and that the restored world will contain animals.</p>
+                    <a class="directory-read-more" href="/answers/will-pets-go-to-heaven/" aria-label="Read the full answer to Will Pets Go to Heaven?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-doesnt-god-stop-evil/">Why Doesn't God Stop Evil?</a></h2>
-                    <p>The Bible teaches that God will ultimately stop evil, but He has permitted sin and rebellion for a limited time. Scripture presents this period as connected with human freedom, the revelation of truth, God's patience, and the eventual demonstration of His justice.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-jesus-die/">Why Did Jesus Die?</a></h2>
-                    <p>Jesus died to save humanity from sin. Scripture teaches that His death was a sacrifice for our sins, demonstrated God's love, satisfied the demands of justice, reconciled sinners to God, and opened the way to eternal life.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/can-i-lose-my-salvation/">Can I Lose My Salvation?</a></h2>
-                    <p>Scripture gives strong promises of God's keeping power, but it also repeatedly warns believers against turning away from Christ. The Bible therefore calls believers to continue in faith rather than treating salvation as permission to abandon Christ.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-it-mean-to-repent/">What Does It Mean to Repent?</a></h2>
-                    <p>To repent means to turn from sin toward God. Biblical repentance involves a change of heart and direction, not merely regret over getting caught or suffering consequences.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-unpardonable-sin/">What Is the Unpardonable Sin?</a></h2>
-                    <p>The unpardonable sin is commonly called blasphemy against the Holy Spirit. Jesus described it as attributing the work of God's Spirit to Satan. The context indicates persistent, willful resistance to the Spirit's testimony rather than an accidental statement or isolated sinful act.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-hell-eternal/">Is Hell Eternal?</a></h2>
-                    <p>The Bible uses the language of "eternal," "everlasting," and "unquenchable" fire in describing final judgment. Scripture must be read carefully, however, because it also explicitly describes the result of that judgment as death and destruction, and identifies the lake of fire as "the second death."</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/does-the-bible-teach-eternal-torment/">Does the Bible Teach Eternal Torment?</a></h2>
-                    <p>The Bible uses strong language about fire, punishment, and "for ever and ever" in connection with final judgment. However, it also explicitly teaches that the final result for the wicked is death and destruction. Scripture does not teach that human beings possess inherent immortality that would require them to live forever in suffering.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-lake-of-fire/">What Is the Lake of Fire?</a></h2>
-                    <p>The lake of fire is the biblical description of the final judgment in which Satan, sin, death, and those who reject God's salvation are finally destroyed. Revelation explicitly calls the lake of fire "the second death."</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-second-death/">What Is the Second Death?</a></h2>
-                    <p>The second death is the final death described in Revelation after the resurrection, judgment, and final destruction of evil. It is associated with the lake of fire and represents the permanent end of sin and rebellion.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-is-satan/">Who Is Satan?</a></h2>
-                    <p>Satan is a real personal spiritual being who rebelled against God, deceives humanity, opposes God's purposes, and is ultimately destined for destruction.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/where-did-satan-come-from/">Where Did Satan Come From?</a></h2>
-                    <p>Satan did not exist as an evil being from eternity. Scripture teaches that everything created by God was originally good, while Satan became an adversary through rebellion.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/was-satan-an-angel/">Was Satan an Angel?</a></h2>
-                    <p>Yes. Scripture identifies Satan with the heavenly rebellion and says that the dragon's angels were cast out with him.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-about-satan/">What Does the Bible Say About Satan?</a></h2>
-                    <p>The Bible describes Satan as a real spiritual adversary who deceives, tempts, accuses, opposes God, attacks God's people, and will ultimately be destroyed.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-are-demons/">Who Are Demons?</a></h2>
-                    <p>Demons are evil spiritual beings who oppose God and are associated with Satan's kingdom.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/are-demons-fallen-angels/">Are Demons Fallen Angels?</a></h2>
-                    <p>Scripture strongly connects demons with Satan's kingdom and speaks of Satan's angels, but it does not use the exact sentence "demons are fallen angels."</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/can-demons-possess-christians/">Can Demons Possess Christians?</a></h2>
-                    <p>The Bible clearly teaches demonic possession and oppression, but it does not explicitly use the modern phrase "a Christian can or cannot be demon-possessed." Scripture instead emphasizes that believers belong to Christ and must resist the devil.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/can-satan-read-your-mind/">Can Satan Read Your Mind?</a></h2>
-                    <p>The Bible does not say that Satan is able to read human thoughts. Scripture does show that Satan is highly intelligent, observant, deceptive, and able to tempt people based on circumstances and behavior.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-spiritual-warfare/">What Is Spiritual Warfare?</a></h2>
-                    <p>Spiritual warfare is the conflict between God's kingdom and the forces of evil, and the believer's struggle against temptation, deception, sin, and spiritual opposition.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-do-you-fight-spiritual-warfare/">How Do You Fight Spiritual Warfare?</a></h2>
-                    <p>The Bible teaches believers to resist Satan by submitting to God, standing in truth and faith, using God's Word, praying, and remaining spiritually watchful.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-about-ghosts/">What Does the Bible Say About Ghosts?</a></h2>
-                    <p>The Bible does not teach that deceased human beings remain on earth as ghosts. Scripture teaches that the dead are unconscious until the resurrection while also teaching the existence of angels and evil spirits.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/do-guardian-angels-exist/">Do Guardian Angels Exist?</a></h2>
-                    <p>The Bible teaches that angels minister to and protect God's people, although Scripture does not fully explain the modern idea that every individual has one permanently assigned guardian angel.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/are-we-living-in-the-end-times/">Are We Living in the End Times?</a></h2>
-                    <p>The New Testament describes the Christian era as "the last days," while also describing events that will intensify before Christ's return. Scripture therefore calls believers to watchfulness rather than date-setting.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-about-the-end-of-the-world/">What Does the Bible Say About the End of the World?</a></h2>
-                    <p>The Bible teaches that the present world order will eventually come to an end, followed by God's judgment and the creation of "a new heaven and a new earth" where righteousness dwells.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-armageddon/">What Is Armageddon?</a></h2>
-                    <p>Armageddon is the name Revelation gives to the gathering of the world's forces for the final conflict associated with the great day of God Almighty.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-happens-at-armageddon/">What Happens at Armageddon?</a></h2>
-                    <p>Revelation presents Armageddon as the gathering of earthly powers for the final conflict against God. Christ then appears as the victorious King and defeats the forces of evil.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-are-the-seven-last-plagues/">What Are the Seven Last Plagues?</a></h2>
-                    <p>The seven last plagues are seven final judgments described in Revelation 15-16. They fall after the close of probationary opportunity and immediately precede Christ's second coming in the prophetic sequence.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-are-the-seven-seals-in-revelation/">What Are the Seven Seals in Revelation?</a></h2>
-                    <p>The seven seals are a prophetic sequence in Revelation 6-8 involving the Lamb opening a scroll sealed with seven seals. They reveal successive scenes of conquest, conflict, suffering, persecution, judgment, and finally God's intervention.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-millennium-in-revelation/">What Is the Millennium in Revelation?</a></h2>
-                    <p>The millennium is the thousand-year period described in Revelation 20. It occurs between the first resurrection and the final resurrection and judgment of the wicked.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-new-jerusalem/">What Is the New Jerusalem?</a></h2>
-                    <p>The New Jerusalem is the holy city that God prepares in heaven and brings down to the renewed earth after the final judgment. It is described as the dwelling place of God with His redeemed people.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-2300-day-prophecy/">What Is the 2300-Day Prophecy?</a></h2>
-                    <p>Daniel 8:14 says: "Unto two thousand and three hundred days; then shall the sanctuary be cleansed." A historicist reading understands these prophetic days as 2,300 years and connects the prophecy with the heavenly sanctuary and God's judgment.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-revelation-14-mean/">What Does Revelation 14 Mean?</a></h2>
-                    <p>Revelation 14 presents the 144,000, three angels proclaiming God's final gospel warning, the fall of Babylon, a warning against worshiping the beast, the perseverance of God's people, and the final harvest.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/was-the-sabbath-changed-to-sunday/">Was the Sabbath Changed to Sunday?</a></h2>
-                    <p>The Bible records events occurring on the first day of the week, but it does not record a command changing the seventh-day Sabbath to Sunday.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-revelation-14-7-mean/">What Does Revelation 14:7 Mean?</a></h2>
-                    <p>Revelation 14:7 announces that the hour of God's judgment has come and calls the world to worship the Creator.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-god-send-the-flood/">Why Did God Send the Flood?</a></h2>
-                    <p>The Bible says the Flood came because human wickedness had become extraordinarily widespread, while Noah found grace in God's sight.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-god-harden-pharaohs-heart/">Why Did God Harden Pharaoh's Heart?</a></h2>
-                    <p>The Bible says God hardened Pharaoh's heart, but it also repeatedly says that Pharaoh hardened his own heart. God's judgment confirmed Pharaoh in the rebellion he had already chosen.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-god-allow-job-to-suffer/">Why Did God Allow Job to Suffer?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Comfort</span>
+                    <h2><a class="directory-answer-title" href="/answers/why-did-god-allow-job-to-suffer/">Why Did God Allow Job to Suffer?</a></h2>
                     <p>The book of Job presents suffering as part of a larger conflict involving Satan's accusations against God and Job. It does not teach that every suffering person is suffering because of a particular personal sin.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/why-did-god-allow-job-to-suffer/" aria-label="Read the full answer to Why Did God Allow Job to Suffer?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-god-kill-ananias-and-sapphira/">Why Did God Kill Ananias and Sapphira?</a></h2>
-                    <p>Ananias and Sapphira died after deliberately lying to God and the Holy Spirit concerning money they had claimed to give to the church.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-the-old-testament-seem-so-violent/">Why Does the Old Testament Seem So Violent?</a></h2>
-                    <p>The Old Testament contains accounts of judgment, warfare, executions, and death, but it also repeatedly presents God as merciful, patient, compassionate, and opposed to wickedness.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-was-mary-magdalene/">Who Was Mary Magdalene?</a></h2>
-                    <p>Mary Magdalene was a devoted follower of Jesus who was healed from demonic oppression and became one of the first witnesses to His resurrection.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-happened-to-judas/">What Happened to Judas?</a></h2>
-                    <p>Judas betrayed Jesus and later died by suicide. Matthew and Acts describe his death using different details that can be understood as complementary accounts.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-peter-deny-jesus/">Why Did Peter Deny Jesus?</a></h2>
-                    <p>Peter denied Jesus because of fear and human weakness, despite previously insisting that he would never deny Him. Jesus had warned Peter about the coming temptation.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-should-i-pray/">How Should I Pray?</a></h2>
-                    <p>Jesus taught His followers to pray to God sincerely, privately, persistently, and with trust. Prayer should include worship, submission, confession, requests, forgiveness, and dependence upon God.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-about-anxiety/">What Does the Bible Say About Anxiety?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Comfort</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-the-bible-say-about-anxiety/">What Does the Bible Say About Anxiety?</a></h2>
                     <p>The Bible acknowledges anxiety and directs believers to bring their concerns to God rather than allowing worry to control them.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-does-the-bible-say-about-anxiety/" aria-label="Read the full answer to What Does the Bible Say About Anxiety?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-about-fear/">What Does the Bible Say About Fear?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Comfort</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-the-bible-say-about-fear/">What Does the Bible Say About Fear?</a></h2>
                     <p>Scripture repeatedly tells God's people not to be controlled by fear, while teaching them to have reverence for God.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-does-the-bible-say-about-fear/" aria-label="Read the full answer to What Does the Bible Say About Fear?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-do-i-forgive-someone-who-hurt-me/">How Do I Forgive Someone Who Hurt Me?</a></h2>
-                    <p>The Bible calls us to forgive as God has forgiven us, refuse personal revenge, pray for enemies, and leave ultimate judgment with God.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-can-i-know-god-loves-me/">How can I know God loves me?</a></h2>
-                    <p>The clearest demonstration of God's love is the death and resurrection of Jesus Christ for sinners. God's love is also seen in His desire to restore people fully: heart, mind, body, relationships, and future.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-does-the-bible-help-with-grief-and-loss/">How does the Bible help with grief and loss?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Comfort</span>
+                    <h2><a class="directory-answer-title" href="/answers/how-does-the-bible-help-with-grief-and-loss/">How does the Bible help with grief and loss?</a></h2>
                     <p>Scripture allows honest grief while offering real comfort: God is near to the brokenhearted, and death is not the final word for those who trust in the resurrection.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/how-does-the-bible-help-with-grief-and-loss/" aria-label="Read the full answer to How does the Bible help with grief and loss?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-should-i-handle-anger-according-to-the-bible/">How should I handle anger according to the Bible?</a></h2>
-                    <p>Anger itself is not automatically sinful, but Scripture warns against letting it control actions or linger unresolved, urging quick reconciliation and self-control instead.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-to-someone-feeling-lonely/">What does the Bible say to someone feeling lonely?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Comfort</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-the-bible-say-to-someone-feeling-lonely/">What does the Bible say to someone feeling lonely?</a></h2>
                     <p>God promises never to leave or forsake His people, offering His presence, the support of Christian community, and purpose even in seasons of deep loneliness.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-does-the-bible-say-to-someone-feeling-lonely/" aria-label="Read the full answer to What does the Bible say to someone feeling lonely?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-to-someone-struggling-with-depression/">What does the Bible say to someone struggling with depression?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Comfort</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-the-bible-say-to-someone-struggling-with-depression/">What does the Bible say to someone struggling with depression?</a></h2>
                     <p>Scripture gives room for deep sorrow while pointing the hurting person toward God's nearness, honest prayer, supportive community, and patient hope.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-does-the-bible-say-to-someone-struggling-with-depression/" aria-label="Read the full answer to What does the Bible say to someone struggling with depression?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-god-sometimes-seem-silent-when-i-pray/">Why does God sometimes seem silent when I pray?</a></h2>
-                    <p>God's silence does not mean absence or rejection. Scripture teaches believers to keep praying, examine the heart, trust God's timing, and rest in His wisdom.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-can-i-forgive-myself-after-making-a-serious-mistake/">How can I forgive myself after making a serious mistake?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Comfort</span>
+                    <h2><a class="directory-answer-title" href="/answers/how-can-i-forgive-myself-after-making-a-serious-mistake/">How can I forgive myself after making a serious mistake?</a></h2>
                     <p>Self-forgiveness grows out of receiving God's forgiveness fully — trusting that His pardon in Christ is complete, even when guilty feelings linger.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/how-can-i-forgive-myself-after-making-a-serious-mistake/" aria-label="Read the full answer to How can I forgive myself after making a serious mistake?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-the-bible-warn-against-consulting-mediums-or-trying-to-contact-the-dead/">Why does the Bible warn against consulting mediums or trying to contact the dead?</a></h2>
-                    <p>Scripture forbids consulting mediums because the dead are unconscious and cannot communicate, meaning such contact is either deception or a counterfeit spiritual encounter, not genuine contact with a departed loved one.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/does-the-bible-have-anything-to-say-about-mental-and-emotional-health/">Does the Bible have anything to say about mental and emotional health?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Comfort</span>
+                    <h2><a class="directory-answer-title" href="/answers/does-the-bible-have-anything-to-say-about-mental-and-emotional-health/">Does the Bible have anything to say about mental and emotional health?</a></h2>
                     <p>Scripture takes emotional struggle seriously, offering honest examples of depression and despair alongside practical patterns of rest, community, prayer, and hope that support emotional well-being.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/does-the-bible-have-anything-to-say-about-mental-and-emotional-health/" aria-label="Read the full answer to Does the Bible have anything to say about mental and emotional health?">Read the full answer</a>
+                  </article>
 
-          </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -483,14 +295,22 @@
             &times;
           </button>
         </div>
+        <div class="verse-modal-toolbar">
+          <label for="verse-modal-translation">Bible version</label>
+          <select id="verse-modal-translation">
+            <option value="web">WEB - World English Bible</option>
+            <option value="kjv">KJV - King James Version</option>
+            <option value="asv">ASV - American Standard Version</option>
+          </select>
+        </div>
         <div class="verse-modal-body" id="verse-modal-body"></div>
       </div>
     </div>
 
-    <script src="/theme.js?v=20261058"></script>
-    <script src="/pwa.js?v=20261058"></script>
-    <script src="/scripture-graphic.js?v=20261058"></script>
-    <script src="/local-library.js?v=20261058"></script>
-    <script src="/verse-modal.js?v=20261058"></script>
+    <script src="/theme.js?v=20261073"></script>
+    <script src="/pwa.js?v=20261073"></script>
+    <script src="/scripture-graphic.js?v=20261073"></script>
+    <script src="/local-library.js?v=20261073"></script>
+    <script src="/verse-modal.js?v=20261073"></script>
   </body>
 </html>

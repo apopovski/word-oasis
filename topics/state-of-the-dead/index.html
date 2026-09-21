@@ -40,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261058">
+    <link rel="stylesheet" href="/styles.css?v=20261076">
     <meta property="og:type" content="website">
     <meta property="og:title" content="State of the Dead Bible Answers | Word Oasis">
     <meta property="og:description" content="Browse Scripture-based answers about state of the dead from Word Oasis, with Bible references for further study.">
@@ -72,12 +72,19 @@
         <ul id="primary-menu" class="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/answers/">Answers</a></li>
-          <li><a href="/topics/">Topics</a></li>
+          <li><a href="/topics/" aria-current="page">Topics</a></li>
           <li><a href="/bible/">Bible</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/#ask">Ask a question</a></li>
           <li class="nav-search-item">
-            <form class="nav-search" action="/" method="get" role="search">
+            <form class="nav-search" action="/" method="get" role="search" data-nav-search>
+              <button class="nav-search-toggle" type="button" aria-expanded="false" aria-controls="nav-search-fields" aria-label="Search Bible answers">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-4-4"></path>
+                </svg>
+              </button>
+              <div class="nav-search-fields" id="nav-search-fields">
               <label class="sr-only" for="nav-search-input">Search Bible questions</label>
               <input
                 id="nav-search-input"
@@ -86,7 +93,8 @@
                 placeholder="Search"
                 autocomplete="off"
               >
-              <button type="submit" aria-label="Submit search">Search</button>
+              <button class="nav-search-submit" type="submit" aria-label="Submit search">Search</button>
+              </div>
             </form>
           </li>
           <li class="nav-theme-item">
@@ -118,96 +126,194 @@
       <section class="page-hero">
         <div class="container">
           <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/topics/">Topics</a> / State of the Dead</nav>
-          <p class="eyebrow">Topic</p>
-          <h1>State of the Dead Bible answers</h1>
-          <p class="page-intro">Read clear Bible answers related to state of the dead, with Scripture references for each question.</p>
+          <div class="topic-page-heading">
+            <span class="topic-page-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+    <g transform="scale(0.046875)" fill="currentColor" stroke="none">
+      <path d="M428.466 386.01V164.97C428.451 73.851 354.608.008 263.493 0H248.51C157.392.008 83.548 73.851 83.541 164.97v221.04H44.166V512h423.668v-14.997V386.01H428.466zM113.535 164.97c.008-37.318 15.086-70.974 39.529-95.446 24.473-24.444 58.129-39.521 95.446-39.529h14.983c37.32.008 70.962 15.085 95.435 39.529 24.459 24.473 39.529 58.129 39.544 95.446v221.04H113.535V164.97zM74.161 416.004h363.679v66.001H74.161V416.004z"></path>
+      <polygon points="275.297,149.504 236.706,149.504 236.706,203.092 181.799,203.092 181.799,241.823 236.706,241.823 236.706,327.596 275.297,327.596 275.297,241.823 330.208,241.823 330.208,203.092 275.297,203.092"></polygon>
+    </g>
+  </svg></span>
+            <div>
+              <p class="eyebrow">Topic</p>
+              <h1>State of the Dead Bible answers</h1>
+              <p class="page-intro">What happens at death and the hope of resurrection. Explore 24 Scripture-based answers.</p>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-soft">
         <div class="container">
-          <ul class="answer-list-page">
+          <div class="topic-answer-grid">
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-it-mean-to-be-born-again/">What Does It Mean to Be Born Again?</a></h2>
-                    <p>To be born again means to experience spiritual renewal through the Holy Spirit. Jesus taught that entrance into God's kingdom requires a new birth that is spiritual rather than merely physical.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-happens-when-you-die/">What Happens When You Die?</a></h2>
+                    <p>According to Scripture, death is a state of unconsciousness in which a person is not actively participating in the affairs of the living. The Bible frequently compares death to sleep and points forward to the resurrection as the time when the dead will live again.</p>
+                    <a class="directory-read-more" href="/answers/what-happens-when-you-die/" aria-label="Read the full answer to What Happens When You Die?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-many-books-are-in-the-bible/">How Many Books Are in the Bible?</a></h2>
-                    <p>The Protestant Bible contains 66 books: 39 in the Old Testament and 27 in the New Testament. However, Scripture itself does not state the number "66." The number comes from the way the biblical canon is counted.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/where-do-you-go-when-you-die/">Where Do You Go When You Die?</a></h2>
+                    <p>The Bible describes the dead as returning to the dust and remaining in the grave until the resurrection. Scripture does not teach that every person immediately goes to heaven or to a place of eternal torment at death.</p>
+                    <a class="directory-read-more" href="/answers/where-do-you-go-when-you-die/" aria-label="Read the full answer to Where Do You Go When You Die?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-the-catholic-bible-have-more-books/">Why Does the Catholic Bible Have More Books?</a></h2>
-                    <p>The Catholic and Protestant Old Testaments contain different numbers of books because they follow different canonical traditions concerning several Jewish writings commonly called the Deuterocanonical books or Apocrypha.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/do-you-go-to-heaven-when-you-die/">Do You Go to Heaven When You Die?</a></h2>
+                    <p>Scripture's emphasis is not that the righteous immediately go to heaven at death. The Bible repeatedly points believers toward the resurrection at Christ's second coming as the time when the dead in Christ receive immortal life.</p>
+                    <a class="directory-read-more" href="/answers/do-you-go-to-heaven-when-you-die/" aria-label="Read the full answer to Do You Go to Heaven When You Die?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-are-seraphim/">What Are Seraphim?</a></h2>
-                    <p>Seraphim are heavenly beings described in Isaiah's vision of God's throne. They continually proclaim God's holiness and worship Him.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-happens-after-death-according-to-the-bible/">What Happens After Death According to the Bible?</a></h2>
+                    <p>The Bible teaches that death is followed by a period of unconscious rest, after which comes resurrection and judgment. The final destiny of each person is determined by his or her relationship to God and response to His salvation.</p>
+                    <a class="directory-read-more" href="/answers/what-happens-after-death-according-to-the-bible/" aria-label="Read the full answer to What Happens After Death According to the Bible?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-70-weeks-prophecy/">What Is the 70 Weeks Prophecy?</a></h2>
-                    <p>The 70 weeks prophecy is found in Daniel 9:24-27. It describes a prophetic period concerning Jerusalem, God's people, the coming Messiah, His death, and the ultimate resolution of sin.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/does-the-bible-say-the-dead-are-conscious/">Does the Bible Say the Dead Are Conscious?</a></h2>
+                    <p>The Bible's clearest statements about the ordinary state of the dead describe them as unconscious, using expressions such as “know not any thing” and “sleep.”</p>
+                    <a class="directory-read-more" href="/answers/does-the-bible-say-the-dead-are-conscious/" aria-label="Read the full answer to Does the Bible Say the Dead Are Conscious?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-daniel-2-mean/">What Does Daniel 2 Mean?</a></h2>
-                    <p>Daniel 2 presents a prophetic image representing successive earthly kingdoms followed by God's everlasting kingdom.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/do-the-dead-know-what-is-happening/">Do the Dead Know What Is Happening?</a></h2>
+                    <p>Scripture indicates that the dead do not have conscious knowledge of earthly events. Ecclesiastes explicitly says the dead “know not any thing,” while Psalm 146 says their thoughts perish.</p>
+                    <a class="directory-read-more" href="/answers/do-the-dead-know-what-is-happening/" aria-label="Read the full answer to Do the Dead Know What Is Happening?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-god-order-the-amalekites-to-be-killed/">Why Did God Order the Amalekites to Be Killed?</a></h2>
-                    <p>The Bible presents the judgment against Amalek as punishment for persistent hostility and violence against God's people. The command appears within a specific historical judgment and should not be treated as a general command for God's people to kill enemies.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/can-the-dead-communicate-with-the-living/">Can the Dead Communicate With the Living?</a></h2>
+                    <p>Scripture forbids attempts to communicate with the dead. The Bible's teaching about death as unconsciousness means that supposed communications from deceased people should not be accepted as evidence that the dead are actually communicating.</p>
+                    <a class="directory-read-more" href="/answers/can-the-dead-communicate-with-the-living/" aria-label="Read the full answer to Can the Dead Communicate With the Living?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-god-ask-abraham-to-sacrifice-isaac/">Why Did God Ask Abraham to Sacrifice Isaac?</a></h2>
-                    <p>God tested Abraham's faith, but He did not ultimately permit Isaac to be sacrificed. The event also points forward to the substitutionary sacrifice God Himself would provide.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-soul-according-to-the-bible/">What Is the Soul According to the Bible?</a></h2>
+                    <p>In the Bible, the word “soul” does not normally mean an immortal, conscious person living independently inside the body. Scripture uses “soul” in several ways, including for the whole living person, life, or being.</p>
+                    <a class="directory-read-more" href="/answers/what-is-the-soul-according-to-the-bible/" aria-label="Read the full answer to What Is the Soul According to the Bible?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-god-kill-uzzah/">Why Did God Kill Uzzah?</a></h2>
-                    <p>Uzzah died after touching the Ark of the Covenant, which Israel had transported contrary to God's instructions concerning its handling.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/is-the-soul-immortal/">Is the Soul Immortal?</a></h2>
+                    <p>Scripture does not teach that human beings possess inherent immortality. Instead, immortality is presented as something God gives to the redeemed at the resurrection.</p>
+                    <a class="directory-read-more" href="/answers/is-the-soul-immortal/" aria-label="Read the full answer to Is the Soul Immortal?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-were-the-sons-of-god-in-genesis-6/">Who Were the Sons of God in Genesis 6?</a></h2>
-                    <p>Genesis 6 says the "sons of God" took wives from the "daughters of men," producing a corrupt generation before the Flood. The exact identity of the "sons of God" is debated.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-happens-to-your-soul-when-you-die/">What Happens to Your Soul When You Die?</a></h2>
+                    <p>According to the biblical description of human nature, the soul does not leave the body as an immortal conscious person. At death, the person ceases to live and returns to the dust, awaiting the resurrection.</p>
+                    <a class="directory-read-more" href="/answers/what-happens-to-your-soul-when-you-die/" aria-label="Read the full answer to What Happens to Your Soul When You Die?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-is-the-angel-of-the-lord/">Who Is the Angel of the Lord?</a></h2>
-                    <p>The "Angel of the LORD" appears throughout the Old Testament and sometimes speaks and acts with God's own authority. In several passages, the distinction between the Angel and God is mysterious.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-hell-according-to-the-bible/">What Is Hell According to the Bible?</a></h2>
+                    <p>The Bible uses the word “hell” in several contexts, and translations can use “hell” for different biblical terms. Scripture's final picture of hell is the lake of fire associated with the destruction of sin, Satan, death, and those who ultimately reject God.</p>
+                    <a class="directory-read-more" href="/answers/what-is-hell-according-to-the-bible/" aria-label="Read the full answer to What Is Hell According to the Bible?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-happened-to-elijah/">What Happened to Elijah?</a></h2>
-                    <p>Elijah was taken directly to heaven without experiencing ordinary death. Scripture says he went up "by a whirlwind into heaven."</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/is-hell-eternal/">Is Hell Eternal?</a></h2>
+                    <p>The Bible uses the language of “eternal,” “everlasting,” and “unquenchable” fire in describing final judgment. Scripture must be read carefully, however, because it also explicitly describes the result of that judgment as death and destruction, and identifies the lake of fire as “the second death.”</p>
+                    <a class="directory-read-more" href="/answers/is-hell-eternal/" aria-label="Read the full answer to Is Hell Eternal?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-old-is-the-earth-according-to-the-bible/">How Old Is the Earth According to the Bible?</a></h2>
-                    <p>The Bible presents humanity and the world as having a definite beginning created by God, but it does not give an explicit number of years for the age of the earth.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/does-the-bible-teach-eternal-torment/">Does the Bible Teach Eternal Torment?</a></h2>
+                    <p>The Bible uses strong language about fire, punishment, and “for ever and ever” in connection with final judgment. However, it also explicitly teaches that the final result for the wicked is death and destruction. Scripture does not teach that human beings possess inherent immortality that would require them to live forever in suffering.</p>
+                    <a class="directory-read-more" href="/answers/does-the-bible-teach-eternal-torment/" aria-label="Read the full answer to Does the Bible Teach Eternal Torment?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-about-tattoos/">What Does the Bible Say About Tattoos?</a></h2>
-                    <p>The Bible contains one direct prohibition against tattoo-like markings in Leviticus 19:28. Christians differ over how this command applies under the new covenant, but the passage should not be ignored.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-lake-of-fire/">What Is the Lake of Fire?</a></h2>
+                    <p>The lake of fire is the biblical description of the final judgment in which Satan, sin, death, and those who reject God's salvation are finally destroyed. Revelation explicitly calls the lake of fire “the second death.”</p>
+                    <a class="directory-read-more" href="/answers/what-is-the-lake-of-fire/" aria-label="Read the full answer to What Is the Lake of Fire?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-does-the-bible-help-with-grief-and-loss/">How does the Bible help with grief and loss?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-second-death/">What Is the Second Death?</a></h2>
+                    <p>The second death is the final death described in Revelation after the resurrection, judgment, and final destruction of evil. It is associated with the lake of fire and represents the permanent end of sin and rebellion.</p>
+                    <a class="directory-read-more" href="/answers/what-is-the-second-death/" aria-label="Read the full answer to What Is the Second Death?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-resurrection/">What Is the Resurrection?</a></h2>
+                    <p>The resurrection is God's act of bringing the dead back to life. Scripture teaches a resurrection of the righteous to eternal life and a resurrection of the wicked to judgment.</p>
+                    <a class="directory-read-more" href="/answers/what-is-the-resurrection/" aria-label="Read the full answer to What Is the Resurrection?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/when-will-the-dead-be-resurrected/">When Will the Dead Be Resurrected?</a></h2>
+                    <p>The righteous dead will be resurrected at the second coming of Jesus Christ. Scripture also describes a later resurrection of the wicked for final judgment.</p>
+                    <a class="directory-read-more" href="/answers/when-will-the-dead-be-resurrected/" aria-label="Read the full answer to When Will the Dead Be Resurrected?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/will-we-recognize-our-loved-ones-in-heaven/">Will We Recognize Our Loved Ones in Heaven?</a></h2>
+                    <p>Scripture strongly suggests that God's people will recognize one another in the resurrection and eternal kingdom. The Bible does not give every detail about recognition, but it presents personal identity and relationships as continuing beyond resurrection.</p>
+                    <a class="directory-read-more" href="/answers/will-we-recognize-our-loved-ones-in-heaven/" aria-label="Read the full answer to Will We Recognize Our Loved Ones in Heaven?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-the-bible-say-about-witchcraft/">What Does the Bible Say About Witchcraft?</a></h2>
+                    <p>The Bible consistently condemns witchcraft, sorcery, divination, mediums, spiritism, and attempts to obtain supernatural knowledge or power apart from God.</p>
+                    <a class="directory-read-more" href="/answers/what-does-the-bible-say-about-witchcraft/" aria-label="Read the full answer to What Does the Bible Say About Witchcraft?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-the-bible-say-about-ghosts/">What Does the Bible Say About Ghosts?</a></h2>
+                    <p>The Bible does not teach that deceased human beings remain on earth as ghosts. Scripture teaches that the dead are unconscious until the resurrection while also teaching the existence of angels and evil spirits.</p>
+                    <a class="directory-read-more" href="/answers/what-does-the-bible-say-about-ghosts/" aria-label="Read the full answer to What Does the Bible Say About Ghosts?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-happened-to-enoch/">What Happened to Enoch?</a></h2>
+                    <p>Enoch did not experience ordinary death. Genesis says that God “took” him, and Hebrews says Enoch was translated so that he did not see death.</p>
+                    <a class="directory-read-more" href="/answers/what-happened-to-enoch/" aria-label="Read the full answer to What Happened to Enoch?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-happened-to-elijah/">What Happened to Elijah?</a></h2>
+                    <p>Elijah was taken directly to heaven without experiencing ordinary death. Scripture says he went up “by a whirlwind into heaven.”</p>
+                    <a class="directory-read-more" href="/answers/what-happened-to-elijah/" aria-label="Read the full answer to What Happened to Elijah?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/how-does-the-bible-help-with-grief-and-loss/">How does the Bible help with grief and loss?</a></h2>
                     <p>Scripture allows honest grief while offering real comfort: God is near to the brokenhearted, and death is not the final word for those who trust in the resurrection.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/how-does-the-bible-help-with-grief-and-loss/" aria-label="Read the full answer to How does the Bible help with grief and loss?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-the-bible-warn-against-consulting-mediums-or-trying-to-contact-the-dead/">Why does the Bible warn against consulting mediums or trying to contact the dead?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/why-does-the-bible-warn-against-consulting-mediums-or-trying-to-contact-the-dead/">Why does the Bible warn against consulting mediums or trying to contact the dead?</a></h2>
                     <p>Scripture forbids consulting mediums because the dead are unconscious and cannot communicate, meaning such contact is either deception or a counterfeit spiritual encounter, not genuine contact with a departed loved one.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/why-does-the-bible-warn-against-consulting-mediums-or-trying-to-contact-the-dead/" aria-label="Read the full answer to Why does the Bible warn against consulting mediums or trying to contact the dead?">Read the full answer</a>
+                  </article>
 
-          </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -273,14 +379,22 @@
             &times;
           </button>
         </div>
+        <div class="verse-modal-toolbar">
+          <label for="verse-modal-translation">Bible version</label>
+          <select id="verse-modal-translation">
+            <option value="web">WEB - World English Bible</option>
+            <option value="kjv">KJV - King James Version</option>
+            <option value="asv">ASV - American Standard Version</option>
+          </select>
+        </div>
         <div class="verse-modal-body" id="verse-modal-body"></div>
       </div>
     </div>
 
-    <script src="/theme.js?v=20261058"></script>
-    <script src="/pwa.js?v=20261058"></script>
-    <script src="/scripture-graphic.js?v=20261058"></script>
-    <script src="/local-library.js?v=20261058"></script>
-    <script src="/verse-modal.js?v=20261058"></script>
+    <script src="/theme.js?v=20261073"></script>
+    <script src="/pwa.js?v=20261073"></script>
+    <script src="/scripture-graphic.js?v=20261073"></script>
+    <script src="/local-library.js?v=20261073"></script>
+    <script src="/verse-modal.js?v=20261073"></script>
   </body>
 </html>

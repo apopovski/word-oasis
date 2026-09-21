@@ -40,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261058">
+    <link rel="stylesheet" href="/styles.css?v=20261076">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Stewardship Bible Answers | Word Oasis">
     <meta property="og:description" content="Browse Scripture-based answers about stewardship from Word Oasis, with Bible references for further study.">
@@ -72,12 +72,19 @@
         <ul id="primary-menu" class="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/answers/">Answers</a></li>
-          <li><a href="/topics/">Topics</a></li>
+          <li><a href="/topics/" aria-current="page">Topics</a></li>
           <li><a href="/bible/">Bible</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/#ask">Ask a question</a></li>
           <li class="nav-search-item">
-            <form class="nav-search" action="/" method="get" role="search">
+            <form class="nav-search" action="/" method="get" role="search" data-nav-search>
+              <button class="nav-search-toggle" type="button" aria-expanded="false" aria-controls="nav-search-fields" aria-label="Search Bible answers">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-4-4"></path>
+                </svg>
+              </button>
+              <div class="nav-search-fields" id="nav-search-fields">
               <label class="sr-only" for="nav-search-input">Search Bible questions</label>
               <input
                 id="nav-search-input"
@@ -86,7 +93,8 @@
                 placeholder="Search"
                 autocomplete="off"
               >
-              <button type="submit" aria-label="Submit search">Search</button>
+              <button class="nav-search-submit" type="submit" aria-label="Submit search">Search</button>
+              </div>
             </form>
           </li>
           <li class="nav-theme-item">
@@ -118,51 +126,62 @@
       <section class="page-hero">
         <div class="container">
           <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/topics/">Topics</a> / Stewardship</nav>
-          <p class="eyebrow">Topic</p>
-          <h1>Stewardship Bible answers</h1>
-          <p class="page-intro">Read clear Bible answers related to stewardship, with Scripture references for each question.</p>
+          <div class="topic-page-heading">
+            <span class="topic-page-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+    <path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17"></path>
+    <path d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"></path>
+    <path d="m2 16 6 6"></path>
+    <circle cx="16" cy="9" r="2.9"></circle>
+    <circle cx="6" cy="5" r="3"></circle>
+  </svg></span>
+            <div>
+              <p class="eyebrow">Topic</p>
+              <h1>Stewardship Bible answers</h1>
+              <p class="page-intro">Money, giving, time, and faithful living. Explore 5 Scripture-based answers.</p>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-soft">
         <div class="container">
-          <ul class="answer-list-page">
+          <div class="topic-answer-grid">
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-the-bible-contradict-itself/">Why Does the Bible Contradict Itself?</a></h2>
-                    <p>Many alleged contradictions arise from differences in context, translation, perspective, chronology, or incomplete information rather than actual logical contradictions.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Stewardship</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-the-bible-say-about-tithing/">What Does the Bible Say About Tithing?</a></h2>
+                    <p>The Bible teaches that God's people should return a tenth of their increase to Him. Tithing supports God's work and those engaged in ministry. The New Testament also emphasizes generous, willing giving rather than giving merely as a legal obligation.</p>
+                    <a class="directory-read-more" href="/answers/what-does-the-bible-say-about-tithing/" aria-label="Read the full answer to What Does the Bible Say About Tithing?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/does-the-bible-command-sunday-worship/">Does the Bible Command Sunday Worship?</a></h2>
-                    <p>No explicit biblical command requires Christians to keep Sunday as a holy day.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-about-money-and-stewardship/">What does the Bible say about money and stewardship?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Stewardship</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-the-bible-say-about-money-and-stewardship/">What does the Bible say about money and stewardship?</a></h2>
                     <p>The Bible teaches that everything belongs to God and believers are stewards, not owners, of their time, talents, and resources. Faithful giving, honesty, and contentment flow from trusting God's provision.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-does-the-bible-say-about-money-and-stewardship/" aria-label="Read the full answer to What does the Bible say about money and stewardship?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/does-the-bible-say-anything-about-work-and-career/">Does the Bible say anything about work and career?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Stewardship</span>
+                    <h2><a class="directory-answer-title" href="/answers/does-the-bible-say-anything-about-work-and-career/">Does the Bible say anything about work and career?</a></h2>
                     <p>Work is part of God's original design, meant to be done with integrity and diligence as service to God, not merely to people, regardless of the type of job.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/does-the-bible-say-anything-about-work-and-career/" aria-label="Read the full answer to Does the Bible say anything about work and career?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-participating-in-gambling-or-games-of-chance-considered-a-sin/">Is participating in gambling or games of chance considered a sin?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Stewardship</span>
+                    <h2><a class="directory-answer-title" href="/answers/is-participating-in-gambling-or-games-of-chance-considered-a-sin/">Is participating in gambling or games of chance considered a sin?</a></h2>
                     <p>The Bible never mentions gambling by name, but its consistent principles — trusting God's providence rather than chance, working honestly for what you have, contentment, and guarding against the love of money — all caution strongly against it.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/is-participating-in-gambling-or-games-of-chance-considered-a-sin/" aria-label="Read the full answer to Is participating in gambling or games of chance considered a sin?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-biblical-stewardship-mean-beyond-just-money/">What does biblical stewardship mean beyond just money?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Stewardship</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-biblical-stewardship-mean-beyond-just-money/">What does biblical stewardship mean beyond just money?</a></h2>
                     <p>Stewardship covers everything entrusted to us — time, abilities, health, relationships, and possessions — and calls believers to manage all of it faithfully as caretakers, not owners.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-does-biblical-stewardship-mean-beyond-just-money/" aria-label="Read the full answer to What does biblical stewardship mean beyond just money?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-the-church-need-organization-and-leadership-if-faith-is-personal/">Why does the church need organization and leadership if faith is personal?</a></h2>
-                    <p>Scripture treats the church as a body with different members and roles working together, so structure and leadership exist to serve unity and mission, not to replace a believer's personal relationship with God.</p>
-                  </li>
-
-          </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -228,14 +247,22 @@
             &times;
           </button>
         </div>
+        <div class="verse-modal-toolbar">
+          <label for="verse-modal-translation">Bible version</label>
+          <select id="verse-modal-translation">
+            <option value="web">WEB - World English Bible</option>
+            <option value="kjv">KJV - King James Version</option>
+            <option value="asv">ASV - American Standard Version</option>
+          </select>
+        </div>
         <div class="verse-modal-body" id="verse-modal-body"></div>
       </div>
     </div>
 
-    <script src="/theme.js?v=20261058"></script>
-    <script src="/pwa.js?v=20261058"></script>
-    <script src="/scripture-graphic.js?v=20261058"></script>
-    <script src="/local-library.js?v=20261058"></script>
-    <script src="/verse-modal.js?v=20261058"></script>
+    <script src="/theme.js?v=20261073"></script>
+    <script src="/pwa.js?v=20261073"></script>
+    <script src="/scripture-graphic.js?v=20261073"></script>
+    <script src="/local-library.js?v=20261073"></script>
+    <script src="/verse-modal.js?v=20261073"></script>
   </body>
 </html>

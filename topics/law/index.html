@@ -40,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261058">
+    <link rel="stylesheet" href="/styles.css?v=20261076">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Law Bible Answers | Word Oasis">
     <meta property="og:description" content="Browse Scripture-based answers about law from Word Oasis, with Bible references for further study.">
@@ -72,12 +72,19 @@
         <ul id="primary-menu" class="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/answers/">Answers</a></li>
-          <li><a href="/topics/">Topics</a></li>
+          <li><a href="/topics/" aria-current="page">Topics</a></li>
           <li><a href="/bible/">Bible</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/#ask">Ask a question</a></li>
           <li class="nav-search-item">
-            <form class="nav-search" action="/" method="get" role="search">
+            <form class="nav-search" action="/" method="get" role="search" data-nav-search>
+              <button class="nav-search-toggle" type="button" aria-expanded="false" aria-controls="nav-search-fields" aria-label="Search Bible answers">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-4-4"></path>
+                </svg>
+              </button>
+              <div class="nav-search-fields" id="nav-search-fields">
               <label class="sr-only" for="nav-search-input">Search Bible questions</label>
               <input
                 id="nav-search-input"
@@ -86,7 +93,8 @@
                 placeholder="Search"
                 autocomplete="off"
               >
-              <button type="submit" aria-label="Submit search">Search</button>
+              <button class="nav-search-submit" type="submit" aria-label="Submit search">Search</button>
+              </div>
             </form>
           </li>
           <li class="nav-theme-item">
@@ -118,341 +126,197 @@
       <section class="page-hero">
         <div class="container">
           <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/topics/">Topics</a> / Law</nav>
-          <p class="eyebrow">Topic</p>
-          <h1>Law Bible answers</h1>
-          <p class="page-intro">Read clear Bible answers related to law, with Scripture references for each question.</p>
+          <div class="topic-page-heading">
+            <span class="topic-page-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+    <path d="M4 21V8a4 4 0 0 1 8 0v13"></path>
+    <path d="M12 21V8a4 4 0 0 1 8 0v13"></path>
+    <path d="M2.5 21h19"></path>
+    <path d="M6.5 11h3"></path>
+    <path d="M6.5 14.5h3"></path>
+    <path d="M14.5 11h3"></path>
+    <path d="M14.5 14.5h3"></path>
+  </svg></span>
+            <div>
+              <p class="eyebrow">Topic</p>
+              <h1>Law Bible answers</h1>
+              <p class="page-intro">God's commandments, obedience, and faithful living. Explore 24 Scripture-based answers.</p>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-soft">
         <div class="container">
-          <ul class="answer-list-page">
+          <div class="topic-answer-grid">
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/does-god-answer-prayers/">Does God Answer Prayers?</a></h2>
-                    <p>Yes. The Bible teaches that God hears and answers prayer. However, an answer does not always mean receiving exactly what we requested. Scripture describes God's answers as sometimes "yes," sometimes "wait," and sometimes a different response according to His wisdom and will.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-is-jesus/">Who Is Jesus?</a></h2>
-                    <p>Jesus Christ is the Son of God, the promised Messiah, the Creator, Savior, and coming King. He became human, lived a sinless life, died for humanity's sins, rose from the dead, and will return to establish His eternal kingdom.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-must-i-do-to-be-saved/">What Must I Do to Be Saved?</a></h2>
-                    <p>The Bible answers this question by pointing to Jesus Christ. We are called to believe in Him, repent, receive His forgiveness, confess Him, and follow Him. When asked this exact question, Paul answered, "Believe on the Lord Jesus Christ" (Acts 16:30-31).</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-salvation/">What Is Salvation?</a></h2>
-                    <p>Biblical salvation is God's rescue of humanity from sin, its consequences, and ultimately death. Salvation includes forgiveness, justification, reconciliation with God, transformation of character, and ultimately eternal life in God's kingdom.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-do-i-get-to-heaven/">How Do I Get to Heaven?</a></h2>
-                    <p>The Bible teaches that eternal life comes through Jesus Christ, not through human merit. We receive salvation by God's grace through faith in Christ, and genuine faith produces a transformed life of obedience.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-it-mean-to-be-born-again/">What Does It Mean to Be Born Again?</a></h2>
-                    <p>To be born again means to experience spiritual renewal through the Holy Spirit. Jesus taught that entrance into God's kingdom requires a new birth that is spiritual rather than merely physical.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/are-we-saved-by-faith-or-works/">Are We Saved by Faith or Works?</a></h2>
-                    <p>Scripture teaches that we are saved by grace through faith, not by earning salvation through works. At the same time, genuine faith produces obedience and good works. Faith and works therefore have different roles.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-saved-by-grace-mean/">What Does "Saved by Grace" Mean?</a></h2>
-                    <p>Being saved by grace means that salvation is God's undeserved gift. We cannot earn forgiveness or eternal life through our own goodness. God saves us because of His mercy and the work of Jesus Christ, and we receive that salvation through faith.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-once-saved-always-saved-biblical/">Is "Once Saved, Always Saved" Biblical?</a></h2>
-                    <p>The phrase "once saved, always saved" does not appear in Scripture. The Bible gives strong assurance of God's ability to preserve believers, but it also contains warnings against abandoning faith in Christ. The biblical emphasis is perseverance in faith and continued dependence upon Christ.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-new-birth/">What Is the New Birth?</a></h2>
-                    <p>The new birth is the spiritual transformation God produces through the Holy Spirit. Jesus taught that a person must be "born again" to see or enter the kingdom of God.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-happens-after-death-according-to-the-bible/">What Happens After Death According to the Bible?</a></h2>
-                    <p>The Bible teaches that death is followed by a period of unconscious rest, after which comes resurrection and judgment. The final destiny of each person is determined by his or her relationship to God and response to His salvation.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/does-the-bible-say-the-dead-are-conscious/">Does the Bible Say the Dead Are Conscious?</a></h2>
-                    <p>The Bible's clearest statements about the ordinary state of the dead describe them as unconscious, using expressions such as "know not any thing" and "sleep."</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-soul-according-to-the-bible/">What Is the Soul According to the Bible?</a></h2>
-                    <p>In the Bible, the word "soul" does not normally mean an immortal, conscious person living independently inside the body. Scripture uses "soul" in several ways, including for the whole living person, life, or being.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-the-soul-immortal/">Is the Soul Immortal?</a></h2>
-                    <p>Scripture does not teach that human beings possess inherent immortality. Instead, immortality is presented as something God gives to the redeemed at the resurrection.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-hell-eternal/">Is Hell Eternal?</a></h2>
-                    <p>The Bible uses the language of "eternal," "everlasting," and "unquenchable" fire in describing final judgment. Scripture must be read carefully, however, because it also explicitly describes the result of that judgment as death and destruction, and identifies the lake of fire as "the second death."</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-second-death/">What Is the Second Death?</a></h2>
-                    <p>The second death is the final death described in Revelation after the resurrection, judgment, and final destruction of evil. It is associated with the lake of fire and represents the permanent end of sin and rebellion.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-the-bible-contradict-itself/">Why Does the Bible Contradict Itself?</a></h2>
-                    <p>Many alleged contradictions arise from differences in context, translation, perspective, chronology, or incomplete information rather than actual logical contradictions.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/has-the-bible-been-changed/">Has the Bible Been Changed?</a></h2>
-                    <p>The Bible teaches that God's Word endures, but it does not claim that every handwritten copy or translation would be free from human error.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-wrote-the-bible/">Who Wrote the Bible?</a></h2>
-                    <p>The Bible was written by many human authors over many generations, but Scripture identifies God as the ultimate source of its inspired message.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-was-the-bible-written/">How Was the Bible Written?</a></h2>
-                    <p>God communicated through prophets and other inspired writers, who recorded His messages and the events they witnessed or investigated.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-decided-what-books-are-in-the-bible/">Who Decided What Books Are in the Bible?</a></h2>
-                    <p>The Bible does not describe a single human council deciding which books became Scripture. Instead, Scripture presents inspired writings as possessing divine authority because they came from God.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-are-there-different-versions-of-the-bible/">Why Are There Different Versions of the Bible?</a></h2>
-                    <p>There are different Bible translations because the Scriptures were originally written in Hebrew, Aramaic, and Greek and must be translated into other languages. Translators also differ in how closely they follow the wording and structure of the original languages.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-many-books-are-in-the-bible/">How Many Books Are in the Bible?</a></h2>
-                    <p>The Protestant Bible contains 66 books: 39 in the Old Testament and 27 in the New Testament. However, Scripture itself does not state the number "66." The number comes from the way the biblical canon is counted.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-the-catholic-bible-have-more-books/">Why Does the Catholic Bible Have More Books?</a></h2>
-                    <p>The Catholic and Protestant Old Testaments contain different numbers of books because they follow different canonical traditions concerning several Jewish writings commonly called the Deuterocanonical books or Apocrypha.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-oldest-bible/">What Is the Oldest Bible?</a></h2>
-                    <p>There is no single surviving manuscript that can simply be identified as "the original Bible." The biblical books were written individually over many generations, and the original handwritten documents are not preserved as a single complete volume.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-language-was-the-bible-originally-written-in/">What Language Was the Bible Originally Written In?</a></h2>
-                    <p>The Old Testament was written primarily in Hebrew, with portions in Aramaic. The New Testament was written in Greek.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-are-some-books-not-in-the-bible/">Why Are Some Books Not in the Bible?</a></h2>
-                    <p>Many ancient religious writings existed outside the biblical collection. Scripture itself does not provide a complete catalog of every rejected writing or a single verse listing every book that belongs in the canon.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-are-seraphim/">What Are Seraphim?</a></h2>
-                    <p>Seraphim are heavenly beings described in Isaiah's vision of God's throne. They continually proclaim God's holiness and worship Him.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-antichrist/">What Is the Antichrist?</a></h2>
-                    <p>The Bible uses the word "antichrist" specifically in John's letters. It describes those who deny that Jesus is the Christ and who deny the Father and the Son. The broader biblical picture also describes an end-time power that opposes God and exalts itself against Him.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-is-the-antichrist/">Who Is the Antichrist?</a></h2>
-                    <p>Scripture does not give a simple personal name for "the Antichrist." John's letters describe antichrist as both a doctrinal opposition to Christ and a movement or power that denies Him. Other passages describe end-time powers that oppose God and His people.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-mark-of-the-beast/">What Is the Mark of the Beast?</a></h2>
-                    <p>The mark of the beast is a future identifying sign associated with allegiance to the beast and its worship. Revelation connects it directly with worship, obedience, economic restrictions, and opposition to God's people.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-image-of-the-beast/">What Is the Image of the Beast?</a></h2>
-                    <p>The image of the beast is a prophetic representation of the beast's authority that is empowered to speak, enforce worship, and persecute those who refuse to worship it.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-are-the-seven-trumpets/">What Are the Seven Trumpets?</a></h2>
-                    <p>The seven trumpets are a series of judgments announced in Revelation 8-11. They portray escalating judgments involving the earth, sea, waters, heavenly bodies, humanity, and finally the proclamation of God's kingdom.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-70-weeks-prophecy/">What Is the 70 Weeks Prophecy?</a></h2>
-                    <p>The 70 weeks prophecy is found in Daniel 9:24-27. It describes a prophetic period concerning Jerusalem, God's people, the coming Messiah, His death, and the ultimate resolution of sin.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-do-the-beasts-in-daniel-represent/">What Do the Beasts in Daniel Represent?</a></h2>
-                    <p>Daniel's beasts represent kingdoms or political powers. Daniel 7 explicitly says: "These great beasts, which are four, are four kings, which shall arise out of the earth." Daniel 7:17 Later it says: "The fourth beast shall be the fourth kingdom upon earth." Daniel 7:23</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-revelation-13-mean/">What Does Revelation 13 Mean?</a></h2>
-                    <p>Revelation 13 describes two beasts that exercise authority, demand worship, persecute God's people, and impose economic restrictions connected with the mark of the beast.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-the-sabbath-still-required/">Is the Sabbath Still Required?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/is-the-sabbath-still-required/">Is the Sabbath Still Required?</a></h2>
                     <p>The Bible identifies the seventh day as God's Sabbath and never records a command abolishing or transferring the fourth commandment to another day.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/is-the-sabbath-still-required/" aria-label="Read the full answer to Is the Sabbath Still Required?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-the-sabbath-still-relevant-today/">Is the Sabbath Still Relevant Today?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/is-the-sabbath-still-relevant-today/">Is the Sabbath Still Relevant Today?</a></h2>
                     <p>Yes. Scripture presents the Sabbath as rooted in creation, included in the Ten Commandments, honored by Jesus, practiced by His followers, and associated with worship of the Creator.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/is-the-sabbath-still-relevant-today/" aria-label="Read the full answer to Is the Sabbath Still Relevant Today?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-do-christians-worship-on-sunday/">Why Do Christians Worship on Sunday?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/was-the-sabbath-only-for-jews/">Was the Sabbath Only for Jews?</a></h2>
+                    <p>No. The Sabbath was established at creation, before the existence of the Jewish nation.</p>
+                    <a class="directory-read-more" href="/answers/was-the-sabbath-only-for-jews/" aria-label="Read the full answer to Was the Sabbath Only for Jews?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/did-jesus-keep-the-sabbath/">Did Jesus Keep the Sabbath?</a></h2>
+                    <p>Yes. The Gospels repeatedly show Jesus attending the synagogue and teaching and healing on the Sabbath.</p>
+                    <a class="directory-read-more" href="/answers/did-jesus-keep-the-sabbath/" aria-label="Read the full answer to Did Jesus Keep the Sabbath?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/did-the-apostles-keep-the-sabbath/">Did the Apostles Keep the Sabbath?</a></h2>
+                    <p>Yes. Acts repeatedly records the apostles teaching and worshiping on the Sabbath.</p>
+                    <a class="directory-read-more" href="/answers/did-the-apostles-keep-the-sabbath/" aria-label="Read the full answer to Did the Apostles Keep the Sabbath?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/was-the-sabbath-changed-to-sunday/">Was the Sabbath Changed to Sunday?</a></h2>
+                    <p>The Bible records events occurring on the first day of the week, but it does not record a command changing the seventh-day Sabbath to Sunday.</p>
+                    <a class="directory-read-more" href="/answers/was-the-sabbath-changed-to-sunday/" aria-label="Read the full answer to Was the Sabbath Changed to Sunday?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/why-do-christians-worship-on-sunday/">Why Do Christians Worship on Sunday?</a></h2>
                     <p>Many Christians worship on Sunday because of the association of Sunday with Christ's resurrection and because Sunday worship became established through Christian history and tradition. Scripture itself records some first-day gatherings, but does not command Sunday as the replacement for the seventh-day Sabbath.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/why-do-christians-worship-on-sunday/" aria-label="Read the full answer to Why Do Christians Worship on Sunday?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-romans-14-5-mean/">What Does Romans 14:5 Mean?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/does-the-bible-command-sunday-worship/">Does the Bible Command Sunday Worship?</a></h2>
+                    <p>No explicit biblical command requires Christians to keep Sunday as a holy day.</p>
+                    <a class="directory-read-more" href="/answers/does-the-bible-command-sunday-worship/" aria-label="Read the full answer to Does the Bible Command Sunday Worship?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-romans-14-5-mean/">What Does Romans 14:5 Mean?</a></h2>
                     <p>Romans 14:5 discusses differences among believers concerning days and must be understood within its immediate context of disputes about eating, drinking, and personal religious observance. The verse does not explicitly mention the weekly Sabbath.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-does-romans-14-5-mean/" aria-label="Read the full answer to What Does Romans 14:5 Mean?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-hebrews-4-9-mean/">What Does Hebrews 4:9 Mean?</a></h2>
-                    <p>Hebrews 4:9 says: "There remaineth therefore a rest to the people of God." Hebrews 4:9 The passage connects God's rest with both the seventh-day Sabbath and the spiritual rest found through faith in Christ.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-colossians-2-16-mean/">What Does Colossians 2:16 Mean?</a></h2>
+                    <p>Colossians 2:16 warns Christians not to allow others to judge them concerning food, drink, festivals, new moons, or sabbaths. The passage is understood by many Bible readers as referring to the ceremonial calendar and its associated sabbaths because these things were shadows pointing to Christ.</p>
+                    <a class="directory-read-more" href="/answers/what-does-colossians-2-16-mean/" aria-label="Read the full answer to What Does Colossians 2:16 Mean?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-revelation-14-7-mean/">What Does Revelation 14:7 Mean?</a></h2>
-                    <p>Revelation 14:7 announces that the hour of God's judgment has come and calls the world to worship the Creator.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-hebrews-4-9-mean/">What Does Hebrews 4:9 Mean?</a></h2>
+                    <p>Hebrews 4:9 says: “There remaineth therefore a rest to the people of God” (Hebrews 4:9). The passage connects God's rest with both the seventh-day Sabbath and the spiritual rest found through faith in Christ.</p>
+                    <a class="directory-read-more" href="/answers/what-does-hebrews-4-9-mean/" aria-label="Read the full answer to What Does Hebrews 4:9 Mean?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/did-jesus-abolish-the-law/">Did Jesus Abolish the Law?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-lords-day-mean-in-the-bible/">What Does “Lord's Day” Mean in the Bible?</a></h2>
+                    <p>Revelation 1:10 says John was “in the Spirit” on “the Lord's day,” but the verse itself does not explicitly identify which day of the week John meant.</p>
+                    <a class="directory-read-more" href="/answers/what-does-lords-day-mean-in-the-bible/" aria-label="Read the full answer to What Does “Lord's Day” Mean in the Bible?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/are-the-ten-commandments-still-valid/">Are the Ten Commandments Still Valid?</a></h2>
+                    <p>Yes. Scripture presents God's moral law as enduring, while distinguishing it from the ceremonial laws that pointed forward to Christ.</p>
+                    <a class="directory-read-more" href="/answers/are-the-ten-commandments-still-valid/" aria-label="Read the full answer to Are the Ten Commandments Still Valid?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/did-jesus-abolish-the-law/">Did Jesus Abolish the Law?</a></h2>
                     <p>No. Jesus explicitly said He did not come to destroy the law.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/did-jesus-abolish-the-law/" aria-label="Read the full answer to Did Jesus Abolish the Law?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/are-christians-under-the-law/">Are Christians Under the Law?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/are-christians-under-the-law/">Are Christians Under the Law?</a></h2>
                     <p>Christians are not saved by keeping the law, but they are not called to live in lawlessness. They are under God's grace and called to obey Him through faith and love.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/are-christians-under-the-law/" aria-label="Read the full answer to Are Christians Under the Law?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-christ-is-the-end-of-the-law-mean/">What Does "Christ Is the End of the Law" Mean?</a></h2>
-                    <p>Romans 10:4 says Christ is "the end of the law," but this does not necessarily mean Christ abolished God's law. The context concerns righteousness, faith, and the purpose toward which the law points.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-christ-is-the-end-of-the-law-mean/">What Does “Christ Is the End of the Law” Mean?</a></h2>
+                    <p>Romans 10:4 says Christ is “the end of the law,” but this does not necessarily mean Christ abolished God's law. The context concerns righteousness, faith, and the purpose toward which the law points.</p>
+                    <a class="directory-read-more" href="/answers/what-does-christ-is-the-end-of-the-law-mean/" aria-label="Read the full answer to What Does “Christ Is the End of the Law” Mean?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-about-the-ten-commandments/">What Does the Bible Say About the Ten Commandments?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-the-bible-say-about-the-ten-commandments/">What Does the Bible Say About the Ten Commandments?</a></h2>
                     <p>The Ten Commandments are God's moral law, given to Israel at Sinai and grounded in principles that existed before Sinai.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-does-the-bible-say-about-the-ten-commandments/" aria-label="Read the full answer to What Does the Bible Say About the Ten Commandments?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-god-give-the-ten-commandments/">Why Did God Give the Ten Commandments?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/why-did-god-give-the-ten-commandments/">Why Did God Give the Ten Commandments?</a></h2>
                     <p>God gave the commandments to reveal His will, define right and wrong, protect human relationships, expose sin, and teach people how to love God and others.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/why-did-god-give-the-ten-commandments/" aria-label="Read the full answer to Why Did God Give the Ten Commandments?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/can-christians-keep-gods-commandments/">Can Christians Keep God's Commandments?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/can-christians-keep-gods-commandments/">Can Christians Keep God's Commandments?</a></h2>
                     <p>Yes, Christians can obey God's commandments through God's transforming grace. Scripture does not teach sinless perfection achieved through human effort, but it does teach that the Holy Spirit enables obedience.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/can-christians-keep-gods-commandments/" aria-label="Read the full answer to Can Christians Keep God's Commandments?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-god-destroy-the-canaanites/">Why Did God Destroy the Canaanites?</a></h2>
-                    <p>The Bible presents the destruction of the Canaanite nations as an act of divine judgment against extreme and persistent wickedness, while also making clear that Israel itself would face judgment if it practiced the same sins.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-god-order-the-amalekites-to-be-killed/">Why Did God Order the Amalekites to Be Killed?</a></h2>
-                    <p>The Bible presents the judgment against Amalek as punishment for persistent hostility and violence against God's people. The command appears within a specific historical judgment and should not be treated as a general command for God's people to kill enemies.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-god-allow-job-to-suffer/">Why Did God Allow Job to Suffer?</a></h2>
-                    <p>The book of Job presents suffering as part of a larger conflict involving Satan's accusations against God and Job. It does not teach that every suffering person is suffering because of a particular personal sin.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-god-kill-uzzah/">Why Did God Kill Uzzah?</a></h2>
-                    <p>Uzzah died after touching the Ark of the Covenant, which Israel had transported contrary to God's instructions concerning its handling.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-god-allow-slavery-in-the-bible/">Why Did God Allow Slavery in the Bible?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/why-did-god-allow-slavery-in-the-bible/">Why Did God Allow Slavery in the Bible?</a></h2>
                     <p>The Bible contains laws regulating servitude in the ancient world, but it does not present human beings as naturally possessing the right to treat other humans as property without moral restrictions. Scripture progressively emphasizes human dignity, justice, freedom, and equal accountability before God.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/why-did-god-allow-slavery-in-the-bible/" aria-label="Read the full answer to Why Did God Allow Slavery in the Bible?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-are-there-so-many-wars-in-the-old-testament/">Why Are There So Many Wars in the Old Testament?</a></h2>
-                    <p>The Old Testament records wars for several different reasons. Some were judgments specifically commanded by God, some were defensive conflicts, and many were consequences of human sin. The Bible does not portray war itself as God's ideal for humanity.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/is-the-sabbath-still-important-for-christians/">Is the Sabbath still important for Christians?</a></h2>
+                    <p>The Sabbath points back to creation, honors God's commandments, and offers a weekly rhythm of worship, rest, mercy, and delight in the Lord. Jesus kept the Sabbath and taught that it was made as a blessing for humanity.</p>
+                    <a class="directory-read-more" href="/answers/is-the-sabbath-still-important-for-christians/" aria-label="Read the full answer to Is the Sabbath still important for Christians?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-god-seem-different-in-the-old-and-new-testaments/">Why Does God Seem Different in the Old and New Testaments?</a></h2>
-                    <p>The Bible does not present two different Gods. Both Testaments describe the same God as loving, merciful, holy, just, and opposed to sin.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-role-do-gods-commandments-have-in-the-christian-life/">What role do God's commandments have in the Christian life?</a></h2>
+                    <p>The Bible teaches that we are saved by grace through faith, not by earning God's favor. At the same time, God's commandments reveal His character and guide the grateful obedience of those who love Him.</p>
+                    <a class="directory-read-more" href="/answers/what-role-do-gods-commandments-have-in-the-christian-life/" aria-label="Read the full answer to What role do God's commandments have in the Christian life?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/where-did-cain-get-his-wife/">Where Did Cain Get His Wife?</a></h2>
-                    <p>Cain's wife came from Adam and Eve's descendants. Genesis 5:4 explicitly says Adam had "sons and daughters."</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-did-jesus-write-in-the-sand/">What Did Jesus Write in the Sand?</a></h2>
-                    <p>The Bible does not tell us what Jesus wrote.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/where-did-dinosaurs-go-according-to-the-bible/">Where Did Dinosaurs Go According to the Bible?</a></h2>
-                    <p>The Bible does not directly explain the extinction of dinosaurs. If dinosaurs were among the creatures that lived before the Flood, their disappearance could be discussed in connection with the Flood and subsequent changes to the earth, but Scripture does not explicitly make that connection.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-doesnt-god-answer-my-prayers/">Why Doesn't God Answer My Prayers?</a></h2>
-                    <p>The Bible gives several reasons a prayer may not receive the answer we expect, including God's wisdom, wrong motives, unconfessed sin, lack of faith, and requests that do not agree with God's will. Yet Scripture also teaches that God hears His children even when His answer is not what they expected.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-often-should-i-pray/">How Often Should I Pray?</a></h2>
-                    <p>The Bible encourages continual prayer rather than restricting prayer to a particular number of times per day.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-about-divorce/">What Does the Bible Say About Divorce?</a></h2>
-                    <p>The Bible permits divorce in certain circumstances but presents marriage as a lifelong covenant and does not treat divorce as God's original ideal.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-about-tattoos/">What Does the Bible Say About Tattoos?</a></h2>
-                    <p>The Bible contains one direct prohibition against tattoo-like markings in Leviticus 19:28. Christians differ over how this command applies under the new covenant, but the passage should not be ignored.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-purpose-of-gods-law/">What is the purpose of God's law?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-purpose-of-gods-law/">What is the purpose of God's law?</a></h2>
                     <p>God's law reveals His character, shows what love for God and others looks like, and helps us recognize sin. We are not saved by keeping the law; we obey because God's grace has already reached us.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-is-the-purpose-of-gods-law/" aria-label="Read the full answer to What is the purpose of God's law?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-do-law-and-grace-work-together-in-the-christian-life/">How do law and grace work together in the Christian life?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/how-do-law-and-grace-work-together-in-the-christian-life/">How do law and grace work together in the Christian life?</a></h2>
                     <p>Grace saves sinners through faith in Christ, while God's law shows what love looks like. Obedience is the fruit of salvation, not the price paid to receive it.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/how-do-law-and-grace-work-together-in-the-christian-life/" aria-label="Read the full answer to How do law and grace work together in the Christian life?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/does-the-bible-still-distinguish-between-clean-and-unclean-foods/">Does the Bible still distinguish between clean and unclean foods?</a></h2>
-                    <p>Scripture identifies clean and unclean animals before Sinai and connects wise eating with holiness, health, and honoring God with the body.</p>
-                  </li>
-
-          </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -518,14 +382,22 @@
             &times;
           </button>
         </div>
+        <div class="verse-modal-toolbar">
+          <label for="verse-modal-translation">Bible version</label>
+          <select id="verse-modal-translation">
+            <option value="web">WEB - World English Bible</option>
+            <option value="kjv">KJV - King James Version</option>
+            <option value="asv">ASV - American Standard Version</option>
+          </select>
+        </div>
         <div class="verse-modal-body" id="verse-modal-body"></div>
       </div>
     </div>
 
-    <script src="/theme.js?v=20261058"></script>
-    <script src="/pwa.js?v=20261058"></script>
-    <script src="/scripture-graphic.js?v=20261058"></script>
-    <script src="/local-library.js?v=20261058"></script>
-    <script src="/verse-modal.js?v=20261058"></script>
+    <script src="/theme.js?v=20261073"></script>
+    <script src="/pwa.js?v=20261073"></script>
+    <script src="/scripture-graphic.js?v=20261073"></script>
+    <script src="/local-library.js?v=20261073"></script>
+    <script src="/verse-modal.js?v=20261073"></script>
   </body>
 </html>

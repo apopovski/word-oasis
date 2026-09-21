@@ -40,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261058">
+    <link rel="stylesheet" href="/styles.css?v=20261076">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Creation Bible Answers | Word Oasis">
     <meta property="og:description" content="Browse Scripture-based answers about creation from Word Oasis, with Bible references for further study.">
@@ -72,12 +72,19 @@
         <ul id="primary-menu" class="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/answers/">Answers</a></li>
-          <li><a href="/topics/">Topics</a></li>
+          <li><a href="/topics/" aria-current="page">Topics</a></li>
           <li><a href="/bible/">Bible</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/#ask">Ask a question</a></li>
           <li class="nav-search-item">
-            <form class="nav-search" action="/" method="get" role="search">
+            <form class="nav-search" action="/" method="get" role="search" data-nav-search>
+              <button class="nav-search-toggle" type="button" aria-expanded="false" aria-controls="nav-search-fields" aria-label="Search Bible answers">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-4-4"></path>
+                </svg>
+              </button>
+              <div class="nav-search-fields" id="nav-search-fields">
               <label class="sr-only" for="nav-search-input">Search Bible questions</label>
               <input
                 id="nav-search-input"
@@ -86,7 +93,8 @@
                 placeholder="Search"
                 autocomplete="off"
               >
-              <button type="submit" aria-label="Submit search">Search</button>
+              <button class="nav-search-submit" type="submit" aria-label="Submit search">Search</button>
+              </div>
             </form>
           </li>
           <li class="nav-theme-item">
@@ -118,446 +126,151 @@
       <section class="page-hero">
         <div class="container">
           <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/topics/">Topics</a> / Creation</nav>
-          <p class="eyebrow">Topic</p>
-          <h1>Creation Bible answers</h1>
-          <p class="page-intro">Read clear Bible answers related to creation, with Scripture references for each question.</p>
+          <div class="topic-page-heading">
+            <span class="topic-page-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+    <circle cx="12" cy="12" r="10"></circle>
+    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+    <path d="M2 12h20"></path>
+  </svg></span>
+            <div>
+              <p class="eyebrow">Topic</p>
+              <h1>Creation Bible answers</h1>
+              <p class="page-intro">Origins, God as Creator, and the foundation of Sabbath. Explore 18 Scripture-based answers.</p>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-soft">
         <div class="container">
-          <ul class="answer-list-page">
+          <div class="topic-answer-grid">
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/does-god-exist/">Does God Exist?</a></h2>
-                    <p>Yes. The Bible presents the existence of God as the foundation of everything else it teaches. It does not attempt to prove God's existence through philosophical argument. Instead, it begins with the declaration, "In the beginning God created the heaven and the earth" (Genesis 1:1). Scripture teaches that God's existence can also be recognized through His creation.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Creation</span>
+                    <h2><a class="directory-answer-title" href="/answers/does-god-exist/">Does God Exist?</a></h2>
+                    <p>Yes. The Bible presents the existence of God as the foundation of everything else it teaches. It does not attempt to prove God's existence through philosophical argument. Instead, it begins with the declaration, “In the beginning God created the heaven and the earth” (Genesis 1:1). Scripture teaches that God's existence can also be recognized through His creation.</p>
+                    <a class="directory-read-more" href="/answers/does-god-exist/" aria-label="Read the full answer to Does God Exist?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-is-god/">Who Is God?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Creation</span>
+                    <h2><a class="directory-answer-title" href="/answers/who-is-god/">Who Is God?</a></h2>
                     <p>The Bible teaches that God is the eternal Creator, the source of life, the sovereign ruler of the universe, and the embodiment of perfect love, holiness, righteousness, wisdom, and truth. God is not merely a force or abstract power. Scripture presents Him as personal, intelligent, loving, and capable of communicating with His creatures.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/who-is-god/" aria-label="Read the full answer to Who Is God?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-god-real/">Is God Real?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Creation</span>
+                    <h2><a class="directory-answer-title" href="/answers/is-god-real/">Is God Real?</a></h2>
                     <p>Yes. Scripture teaches that God is real, living, personal, and active in His creation. The Bible presents God's reality through creation, revelation, prophecy, His dealings with humanity, and especially through Jesus Christ.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/is-god-real/" aria-label="Read the full answer to Is God Real?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-god-allow-suffering/">Why Does God Allow Suffering?</a></h2>
-                    <p>The Bible teaches that suffering exists because sin entered God's creation, but it also teaches that God has not abandoned humanity to suffering. God permits human beings freedom, and Scripture describes a real conflict between good and evil. God ultimately promises to destroy sin, suffering, and death.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-god-allow-evil/">Why Does God Allow Evil?</a></h2>
-                    <p>The Bible teaches that evil exists because God's creatures were given meaningful freedom, and that some chose rebellion against God. God has permitted evil for a time, but Scripture promises that evil will ultimately be judged and destroyed.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-god-good/">Is God Good?</a></h2>
-                    <p>Yes. Scripture consistently describes God as good, righteous, merciful, and faithful. Even when God's actions involve judgment, the Bible presents Him as acting according to justice rather than arbitrary cruelty.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-is-jesus/">Who Is Jesus?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Creation</span>
+                    <h2><a class="directory-answer-title" href="/answers/who-is-jesus/">Who Is Jesus?</a></h2>
                     <p>Jesus Christ is the Son of God, the promised Messiah, the Creator, Savior, and coming King. He became human, lived a sinless life, died for humanity's sins, rose from the dead, and will return to establish His eternal kingdom.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/who-is-jesus/" aria-label="Read the full answer to Who Is Jesus?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-jesus-god/">Is Jesus God?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Creation</span>
+                    <h2><a class="directory-answer-title" href="/answers/is-jesus-god/">Is Jesus God?</a></h2>
                     <p>Yes. The Bible directly identifies Jesus Christ with divine titles, attributes, works, and worship. At the same time, Scripture distinguishes Jesus from the Father. The biblical picture is that the Father and the Son are distinct persons while both are truly divine.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/is-jesus-god/" aria-label="Read the full answer to Is Jesus God?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/was-jesus-god-in-the-old-testament/">Was Jesus God in the Old Testament?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Creation</span>
+                    <h2><a class="directory-answer-title" href="/answers/was-jesus-god-in-the-old-testament/">Was Jesus God in the Old Testament?</a></h2>
                     <p>Yes. The New Testament identifies Jesus as the eternal Word through whom creation occurred and presents Him as the fulfillment of Old Testament descriptions of the coming Messiah. Several Old Testament passages also describe the Messiah in divine terms.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/was-jesus-god-in-the-old-testament/" aria-label="Read the full answer to Was Jesus God in the Old Testament?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/did-jesus-exist-before-his-birth/">Did Jesus Exist Before His Birth?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Creation</span>
+                    <h2><a class="directory-answer-title" href="/answers/did-jesus-exist-before-his-birth/">Did Jesus Exist Before His Birth?</a></h2>
                     <p>Yes. Scripture clearly teaches that Jesus existed before His human birth in Bethlehem. His birth was not the beginning of His existence. He existed with the Father before becoming human.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/did-jesus-exist-before-his-birth/" aria-label="Read the full answer to Did Jesus Exist Before His Birth?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-jesus-pray-if-he-is-god/">Why Did Jesus Pray If He Is God?</a></h2>
-                    <p>Jesus prayed because the Bible presents the Father and the Son as distinct persons who have an eternal relationship. During His incarnation, Jesus lived as a genuine human being, depended upon the Father, communicated with Him, and submitted Himself to the Father's will.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-can-i-be-saved/">How Can I Be Saved?</a></h2>
-                    <p>You are saved by God's grace through faith in Jesus Christ. Scripture calls you to believe in Christ, repent of your sins, confess Him, receive His forgiveness, and follow Him in a life of faith and obedience. Salvation is God's gift. It cannot be earned by human merit or good works.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-do-i-get-to-heaven/">How Do I Get to Heaven?</a></h2>
-                    <p>The Bible teaches that eternal life comes through Jesus Christ, not through human merit. We receive salvation by God's grace through faith in Christ, and genuine faith produces a transformed life of obedience.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/are-we-saved-by-faith-or-works/">Are We Saved by Faith or Works?</a></h2>
-                    <p>Scripture teaches that we are saved by grace through faith, not by earning salvation through works. At the same time, genuine faith produces obedience and good works. Faith and works therefore have different roles.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-happens-when-you-die/">What Happens When You Die?</a></h2>
-                    <p>According to Scripture, death is a state of unconsciousness in which a person is not actively participating in the affairs of the living. The Bible frequently compares death to sleep and points forward to the resurrection as the time when the dead will live again.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/where-do-you-go-when-you-die/">Where Do You Go When You Die?</a></h2>
-                    <p>The Bible describes the dead as returning to the dust and remaining in the grave until the resurrection. Scripture does not teach that every person immediately goes to heaven or to a place of eternal torment at death.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-happens-after-death-according-to-the-bible/">What Happens After Death According to the Bible?</a></h2>
-                    <p>The Bible teaches that death is followed by a period of unconscious rest, after which comes resurrection and judgment. The final destiny of each person is determined by his or her relationship to God and response to His salvation.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/does-the-bible-say-the-dead-are-conscious/">Does the Bible Say the Dead Are Conscious?</a></h2>
-                    <p>The Bible's clearest statements about the ordinary state of the dead describe them as unconscious, using expressions such as "know not any thing" and "sleep."</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/do-the-dead-know-what-is-happening/">Do the Dead Know What Is Happening?</a></h2>
-                    <p>Scripture indicates that the dead do not have conscious knowledge of earthly events. Ecclesiastes explicitly says the dead "know not any thing," while Psalm 146 says their thoughts perish.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-soul-according-to-the-bible/">What Is the Soul According to the Bible?</a></h2>
-                    <p>In the Bible, the word "soul" does not normally mean an immortal, conscious person living independently inside the body. Scripture uses "soul" in several ways, including for the whole living person, life, or being.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-the-soul-immortal/">Is the Soul Immortal?</a></h2>
-                    <p>Scripture does not teach that human beings possess inherent immortality. Instead, immortality is presented as something God gives to the redeemed at the resurrection.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-happens-to-your-soul-when-you-die/">What Happens to Your Soul When You Die?</a></h2>
-                    <p>According to the biblical description of human nature, the soul does not leave the body as an immortal conscious person. At death, the person ceases to live and returns to the dust, awaiting the resurrection.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-lake-of-fire/">What Is the Lake of Fire?</a></h2>
-                    <p>The lake of fire is the biblical description of the final judgment in which Satan, sin, death, and those who reject God's salvation are finally destroyed. Revelation explicitly calls the lake of fire "the second death."</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/will-pets-go-to-heaven/">Will Pets Go to Heaven?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Creation</span>
+                    <h2><a class="directory-answer-title" href="/answers/will-pets-go-to-heaven/">Will Pets Go to Heaven?</a></h2>
                     <p>The Bible does not explicitly say that individual pets will be resurrected or that specific animals will live in heaven. However, Scripture clearly teaches that animals were part of God's good creation and that the restored world will contain animals.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/will-pets-go-to-heaven/" aria-label="Read the full answer to Will Pets Go to Heaven?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-the-bible-historically-accurate/">Is the Bible Historically Accurate?</a></h2>
-                    <p>The Bible presents itself as historical testimony, not merely religious mythology. Its writers frequently identify people, places, rulers, events, witnesses, and genealogies as part of real history.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/has-the-bible-been-changed/">Has the Bible Been Changed?</a></h2>
-                    <p>The Bible teaches that God's Word endures, but it does not claim that every handwritten copy or translation would be free from human error.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/when-was-the-bible-written/">When Was the Bible Written?</a></h2>
-                    <p>The Bible was written over many generations rather than at one particular time. Scripture does not provide a complete chronological table giving the exact date of every book.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-decided-what-books-are-in-the-bible/">Who Decided What Books Are in the Bible?</a></h2>
-                    <p>The Bible does not describe a single human council deciding which books became Scripture. Instead, Scripture presents inspired writings as possessing divine authority because they came from God.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-is-satan/">Who Is Satan?</a></h2>
-                    <p>Satan is a real personal spiritual being who rebelled against God, deceives humanity, opposes God's purposes, and is ultimately destined for destruction.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/where-did-satan-come-from/">Where Did Satan Come From?</a></h2>
-                    <p>Satan did not exist as an evil being from eternity. Scripture teaches that everything created by God was originally good, while Satan became an adversary through rebellion.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/was-satan-an-angel/">Was Satan an Angel?</a></h2>
-                    <p>Yes. Scripture identifies Satan with the heavenly rebellion and says that the dragon's angels were cast out with him.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-satan-rebel-against-god/">Why Did Satan Rebel Against God?</a></h2>
-                    <p>Scripture associates Satan's rebellion with pride, self-exaltation, and a desire to rise above the position God had given him.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-about-satan/">What Does the Bible Say About Satan?</a></h2>
-                    <p>The Bible describes Satan as a real spiritual adversary who deceives, tempts, accuses, opposes God, attacks God's people, and will ultimately be destroyed.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-about-ghosts/">What Does the Bible Say About Ghosts?</a></h2>
-                    <p>The Bible does not teach that deceased human beings remain on earth as ghosts. Scripture teaches that the dead are unconscious until the resurrection while also teaching the existence of angels and evil spirits.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-are-angels/">What Are Angels?</a></h2>
-                    <p>Angels are created spiritual beings who serve God and are sent to minister on behalf of those who will inherit salvation.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-are-cherubim/">What Are Cherubim?</a></h2>
-                    <p>Cherubim are heavenly beings associated with God's presence, glory, and throne.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-are-the-signs-of-the-end-times/">What Are the Signs of the End Times?</a></h2>
-                    <p>Jesus gave several signs of the approaching end, including widespread deception, wars, famines, pestilences, persecution, false prophets, increasing lawlessness, and the worldwide proclamation of the gospel.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-about-the-end-of-the-world/">What Does the Bible Say About the End of the World?</a></h2>
-                    <p>The Bible teaches that the present world order will eventually come to an end, followed by God's judgment and the creation of "a new heaven and a new earth" where righteousness dwells.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-babylon-in-revelation/">What Is Babylon in Revelation?</a></h2>
-                    <p>Babylon in Revelation is a symbolic end-time power or system opposed to God that influences nations, promotes spiritual immorality, and becomes intoxicated with the wine of its corrupting influence.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-wine-of-babylon/">What Is the Wine of Babylon?</a></h2>
-                    <p>The wine of Babylon represents the corrupting influence of Babylon's spiritual fornication and false teaching. Revelation uses wine symbolically in connection with deception, spiritual unfaithfulness, and rebellion against God.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-armageddon/">What Is Armageddon?</a></h2>
-                    <p>Armageddon is the name Revelation gives to the gathering of the world's forces for the final conflict associated with the great day of God Almighty.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-happens-at-armageddon/">What Happens at Armageddon?</a></h2>
-                    <p>Revelation presents Armageddon as the gathering of earthly powers for the final conflict against God. Christ then appears as the victorious King and defeats the forces of evil.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-are-the-seven-last-plagues/">What Are the Seven Last Plagues?</a></h2>
-                    <p>The seven last plagues are seven final judgments described in Revelation 15-16. They fall after the close of probationary opportunity and immediately precede Christ's second coming in the prophetic sequence.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-are-the-seven-seals-in-revelation/">What Are the Seven Seals in Revelation?</a></h2>
-                    <p>The seven seals are a prophetic sequence in Revelation 6-8 involving the Lamb opening a scroll sealed with seven seals. They reveal successive scenes of conquest, conflict, suffering, persecution, judgment, and finally God's intervention.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-are-the-seven-trumpets/">What Are the Seven Trumpets?</a></h2>
-                    <p>The seven trumpets are a series of judgments announced in Revelation 8-11. They portray escalating judgments involving the earth, sea, waters, heavenly bodies, humanity, and finally the proclamation of God's kingdom.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-millennium-in-revelation/">What Is the Millennium in Revelation?</a></h2>
-                    <p>The millennium is the thousand-year period described in Revelation 20. It occurs between the first resurrection and the final resurrection and judgment of the wicked.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-new-jerusalem/">What Is the New Jerusalem?</a></h2>
-                    <p>The New Jerusalem is the holy city that God prepares in heaven and brings down to the renewed earth after the final judgment. It is described as the dwelling place of God with His redeemed people.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-2300-day-prophecy/">What Is the 2300-Day Prophecy?</a></h2>
-                    <p>Daniel 8:14 says: "Unto two thousand and three hundred days; then shall the sanctuary be cleansed." A historicist reading understands these prophetic days as 2,300 years and connects the prophecy with the heavenly sanctuary and God's judgment.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-daniel-2-mean/">What Does Daniel 2 Mean?</a></h2>
-                    <p>Daniel 2 presents a prophetic image representing successive earthly kingdoms followed by God's everlasting kingdom.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-do-the-beasts-in-daniel-represent/">What Do the Beasts in Daniel Represent?</a></h2>
-                    <p>Daniel's beasts represent kingdoms or political powers. Daniel 7 explicitly says: "These great beasts, which are four, are four kings, which shall arise out of the earth." Daniel 7:17 Later it says: "The fourth beast shall be the fourth kingdom upon earth." Daniel 7:23</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-do-the-four-horsemen-of-revelation-mean/">What Do the Four Horsemen of Revelation Mean?</a></h2>
-                    <p>The four horsemen appear when the first four seals are opened in Revelation 6. They represent a prophetic sequence involving conquest, conflict, scarcity, and death.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-revelation-13-mean/">What Does Revelation 13 Mean?</a></h2>
-                    <p>Revelation 13 describes two beasts that exercise authority, demand worship, persecute God's people, and impose economic restrictions connected with the mark of the beast.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-revelation-14-mean/">What Does Revelation 14 Mean?</a></h2>
-                    <p>Revelation 14 presents the 144,000, three angels proclaiming God's final gospel warning, the fall of Babylon, a warning against worshiping the beast, the perseverance of God's people, and the final harvest.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-the-sabbath-still-required/">Is the Sabbath Still Required?</a></h2>
-                    <p>The Bible identifies the seventh day as God's Sabbath and never records a command abolishing or transferring the fourth commandment to another day.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-the-sabbath-still-relevant-today/">Is the Sabbath Still Relevant Today?</a></h2>
-                    <p>Yes. Scripture presents the Sabbath as rooted in creation, included in the Ten Commandments, honored by Jesus, practiced by His followers, and associated with worship of the Creator.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/was-the-sabbath-only-for-jews/">Was the Sabbath Only for Jews?</a></h2>
-                    <p>No. The Sabbath was established at creation, before the existence of the Jewish nation.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-colossians-2-16-mean/">What Does Colossians 2:16 Mean?</a></h2>
-                    <p>Colossians 2:16 warns Christians not to allow others to judge them concerning food, drink, festivals, new moons, or sabbaths. The passage is understood by many Bible readers as referring to the ceremonial calendar and its associated sabbaths because these things were shadows pointing to Christ.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-hebrews-4-9-mean/">What Does Hebrews 4:9 Mean?</a></h2>
-                    <p>Hebrews 4:9 says: "There remaineth therefore a rest to the people of God." Hebrews 4:9 The passage connects God's rest with both the seventh-day Sabbath and the spiritual rest found through faith in Christ.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-revelation-14-7-mean/">What Does Revelation 14:7 Mean?</a></h2>
-                    <p>Revelation 14:7 announces that the hour of God's judgment has come and calls the world to worship the Creator.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/are-the-ten-commandments-still-valid/">Are the Ten Commandments Still Valid?</a></h2>
-                    <p>Yes. Scripture presents God's moral law as enduring, while distinguishing it from the ceremonial laws that pointed forward to Christ.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-god-destroy-the-canaanites/">Why Did God Destroy the Canaanites?</a></h2>
-                    <p>The Bible presents the destruction of the Canaanite nations as an act of divine judgment against extreme and persistent wickedness, while also making clear that Israel itself would face judgment if it practiced the same sins.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-god-send-the-flood/">Why Did God Send the Flood?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Creation</span>
+                    <h2><a class="directory-answer-title" href="/answers/why-did-god-send-the-flood/">Why Did God Send the Flood?</a></h2>
                     <p>The Bible says the Flood came because human wickedness had become extraordinarily widespread, while Noah found grace in God's sight.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/why-did-god-send-the-flood/" aria-label="Read the full answer to Why Did God Send the Flood?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-god-ask-abraham-to-sacrifice-isaac/">Why Did God Ask Abraham to Sacrifice Isaac?</a></h2>
-                    <p>God tested Abraham's faith, but He did not ultimately permit Isaac to be sacrificed. The event also points forward to the substitutionary sacrifice God Himself would provide.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-jesus-call-the-canaanite-woman-a-dog/">Why Did Jesus Call the Canaanite Woman a Dog?</a></h2>
-                    <p>Jesus' statement in Matthew 15 was part of an encounter that ultimately demonstrated the woman's remarkable faith. His words must be understood in the context of His mission to Israel and the woman's persistent faith.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-jesus-say-he-came-to-bring-a-sword/">Why Did Jesus Say He Came to Bring a Sword?</a></h2>
-                    <p>Jesus did not mean that His followers should use physical violence. He meant that His message would create division because people would have to choose whether to accept or reject Him.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-god-allow-slavery-in-the-bible/">Why Did God Allow Slavery in the Bible?</a></h2>
-                    <p>The Bible contains laws regulating servitude in the ancient world, but it does not present human beings as naturally possessing the right to treat other humans as property without moral restrictions. Scripture progressively emphasizes human dignity, justice, freedom, and equal accountability before God.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-are-there-so-many-wars-in-the-old-testament/">Why Are There So Many Wars in the Old Testament?</a></h2>
-                    <p>The Old Testament records wars for several different reasons. Some were judgments specifically commanded by God, some were defensive conflicts, and many were consequences of human sin. The Bible does not portray war itself as God's ideal for humanity.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-the-old-testament-seem-so-violent/">Why Does the Old Testament Seem So Violent?</a></h2>
-                    <p>The Old Testament contains accounts of judgment, warfare, executions, and death, but it also repeatedly presents God as merciful, patient, compassionate, and opposed to wickedness.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-was-cains-wife/">Who Was Cain's Wife?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Creation</span>
+                    <h2><a class="directory-answer-title" href="/answers/who-was-cains-wife/">Who Was Cain's Wife?</a></h2>
                     <p>The Bible does not give Cain's wife's name. The most straightforward reading of Genesis is that she was one of Cain's relatives, most likely a sister or another close descendant of Adam and Eve.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/who-was-cains-wife/" aria-label="Read the full answer to Who Was Cain's Wife?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/where-did-cain-get-his-wife/">Where Did Cain Get His Wife?</a></h2>
-                    <p>Cain's wife came from Adam and Eve's descendants. Genesis 5:4 explicitly says Adam had "sons and daughters."</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Creation</span>
+                    <h2><a class="directory-answer-title" href="/answers/where-did-cain-get-his-wife/">Where Did Cain Get His Wife?</a></h2>
+                    <p>Cain's wife came from Adam and Eve's descendants. Genesis 5:4 explicitly says Adam had “sons and daughters.”</p>
+                    <a class="directory-read-more" href="/answers/where-did-cain-get-his-wife/" aria-label="Read the full answer to Where Did Cain Get His Wife?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-were-the-nephilim/">Who Were the Nephilim?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Creation</span>
+                    <h2><a class="directory-answer-title" href="/answers/who-were-the-nephilim/">Who Were the Nephilim?</a></h2>
                     <p>The Nephilim were powerful or renowned people mentioned in Genesis 6 and Numbers 13. The Bible's description is brief, and some details about their exact identity remain uncertain.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/who-were-the-nephilim/" aria-label="Read the full answer to Who Were the Nephilim?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-were-the-sons-of-god-in-genesis-6/">Who Were the Sons of God in Genesis 6?</a></h2>
-                    <p>Genesis 6 says the "sons of God" took wives from the "daughters of men," producing a corrupt generation before the Flood. The exact identity of the "sons of God" is debated.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Creation</span>
+                    <h2><a class="directory-answer-title" href="/answers/who-were-the-sons-of-god-in-genesis-6/">Who Were the Sons of God in Genesis 6?</a></h2>
+                    <p>Genesis 6 says the “sons of God” took wives from the “daughters of men,” producing a corrupt generation before the Flood. The exact identity of the “sons of God” is debated.</p>
+                    <a class="directory-read-more" href="/answers/who-were-the-sons-of-god-in-genesis-6/" aria-label="Read the full answer to Who Were the Sons of God in Genesis 6?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-was-melchizedek/">Who Was Melchizedek?</a></h2>
-                    <p>Melchizedek was the king of Salem and priest of the Most High God who blessed Abraham. Hebrews later uses him as a prophetic type of Christ's priesthood.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Creation</span>
+                    <h2><a class="directory-answer-title" href="/answers/does-the-bible-mention-dinosaurs/">Does the Bible Mention Dinosaurs?</a></h2>
+                    <p>The Bible does not use the modern word “dinosaur,” because that term was coined in the nineteenth century. It does describe several remarkable creatures, but Scripture does not explicitly identify any of them as dinosaurs.</p>
+                    <a class="directory-read-more" href="/answers/does-the-bible-mention-dinosaurs/" aria-label="Read the full answer to Does the Bible Mention Dinosaurs?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-happened-to-enoch/">What Happened to Enoch?</a></h2>
-                    <p>Enoch did not experience ordinary death. Genesis says that God "took" him, and Hebrews says Enoch was translated so that he did not see death.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-was-leviathan/">Who Was Leviathan?</a></h2>
-                    <p>Leviathan is a powerful creature described in poetic and highly dramatic language in Job 41, Psalm 74, Psalm 104, and Isaiah 27. The Bible uses Leviathan both as a creature of God's creation and, in some passages, as symbolic imagery for hostile powers.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/does-the-bible-mention-dinosaurs/">Does the Bible Mention Dinosaurs?</a></h2>
-                    <p>The Bible does not use the modern word "dinosaur," because that term was coined in the nineteenth century. It does describe several remarkable creatures, but Scripture does not explicitly identify any of them as dinosaurs.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/where-did-dinosaurs-go-according-to-the-bible/">Where Did Dinosaurs Go According to the Bible?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Creation</span>
+                    <h2><a class="directory-answer-title" href="/answers/where-did-dinosaurs-go-according-to-the-bible/">Where Did Dinosaurs Go According to the Bible?</a></h2>
                     <p>The Bible does not directly explain the extinction of dinosaurs. If dinosaurs were among the creatures that lived before the Flood, their disappearance could be discussed in connection with the Flood and subsequent changes to the earth, but Scripture does not explicitly make that connection.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/where-did-dinosaurs-go-according-to-the-bible/" aria-label="Read the full answer to Where Did Dinosaurs Go According to the Bible?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-old-is-the-earth-according-to-the-bible/">How Old Is the Earth According to the Bible?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Creation</span>
+                    <h2><a class="directory-answer-title" href="/answers/how-old-is-the-earth-according-to-the-bible/">How Old Is the Earth According to the Bible?</a></h2>
                     <p>The Bible presents humanity and the world as having a definite beginning created by God, but it does not give an explicit number of years for the age of the earth.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/how-old-is-the-earth-according-to-the-bible/" aria-label="Read the full answer to How Old Is the Earth According to the Bible?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-about-marriage/">What Does the Bible Say About Marriage?</a></h2>
-                    <p>The Bible presents marriage as a covenant relationship between a man and a woman, established by God for companionship, faithfulness, family, and mutual love.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-about-divorce/">What Does the Bible Say About Divorce?</a></h2>
-                    <p>The Bible permits divorce in certain circumstances but presents marriage as a lifelong covenant and does not treat divorce as God's original ideal.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-about-sex-before-marriage/">What Does the Bible Say About Sex Before Marriage?</a></h2>
-                    <p>The Bible consistently places sexual intimacy within marriage and calls sexual activity outside that covenant "fornication" or sexual immorality.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-about-homosexuality/">What Does the Bible Say About Homosexuality?</a></h2>
-                    <p>The Bible consistently presents sexual intimacy within the male-female marriage relationship and contains several passages that explicitly address same-sex sexual behavior.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-about-tithing/">What Does the Bible Say About Tithing?</a></h2>
-                    <p>The Bible teaches that God's people should return a tenth of their increase to Him. Tithing supports God's work and those engaged in ministry. The New Testament also emphasizes generous, willing giving rather than giving merely as a legal obligation.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-teach-about-creation/">What does the Bible teach about creation?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Creation</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-the-bible-teach-about-creation/">What does the Bible teach about creation?</a></h2>
                     <p>The Bible presents God as the intentional Creator of the heavens, the earth, and humanity in His own image. Creation reveals God's power and care, and it is the foundation for the Sabbath rest.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-does-the-bible-teach-about-creation/" aria-label="Read the full answer to What does the Bible teach about creation?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-the-bible-call-the-body-a-temple-and-does-it-affect-daily-choices/">Why does the Bible call the body a temple, and does it affect daily choices?</a></h2>
-                    <p>Because the Holy Spirit dwells within believers, Scripture calls the body a temple, inviting care for physical health as part of honoring God, not as a means of earning salvation.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/did-god-really-create-the-world-in-six-literal-days/">Did God really create the world in six literal days?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Creation</span>
+                    <h2><a class="directory-answer-title" href="/answers/did-god-really-create-the-world-in-six-literal-days/">Did God really create the world in six literal days?</a></h2>
                     <p>Scripture describes creation as six literal days followed by a seventh day of rest, a pattern later memorialized in the weekly Sabbath commandment.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/did-god-really-create-the-world-in-six-literal-days/" aria-label="Read the full answer to Did God really create the world in six literal days?">Read the full answer</a>
+                  </article>
 
-          </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -623,14 +336,22 @@
             &times;
           </button>
         </div>
+        <div class="verse-modal-toolbar">
+          <label for="verse-modal-translation">Bible version</label>
+          <select id="verse-modal-translation">
+            <option value="web">WEB - World English Bible</option>
+            <option value="kjv">KJV - King James Version</option>
+            <option value="asv">ASV - American Standard Version</option>
+          </select>
+        </div>
         <div class="verse-modal-body" id="verse-modal-body"></div>
       </div>
     </div>
 
-    <script src="/theme.js?v=20261058"></script>
-    <script src="/pwa.js?v=20261058"></script>
-    <script src="/scripture-graphic.js?v=20261058"></script>
-    <script src="/local-library.js?v=20261058"></script>
-    <script src="/verse-modal.js?v=20261058"></script>
+    <script src="/theme.js?v=20261073"></script>
+    <script src="/pwa.js?v=20261073"></script>
+    <script src="/scripture-graphic.js?v=20261073"></script>
+    <script src="/local-library.js?v=20261073"></script>
+    <script src="/verse-modal.js?v=20261073"></script>
   </body>
 </html>

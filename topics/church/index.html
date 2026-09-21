@@ -40,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261058">
+    <link rel="stylesheet" href="/styles.css?v=20261076">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Church Bible Answers | Word Oasis">
     <meta property="og:description" content="Browse Scripture-based answers about church from Word Oasis, with Bible references for further study.">
@@ -72,12 +72,19 @@
         <ul id="primary-menu" class="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/answers/">Answers</a></li>
-          <li><a href="/topics/">Topics</a></li>
+          <li><a href="/topics/" aria-current="page">Topics</a></li>
           <li><a href="/bible/">Bible</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/#ask">Ask a question</a></li>
           <li class="nav-search-item">
-            <form class="nav-search" action="/" method="get" role="search">
+            <form class="nav-search" action="/" method="get" role="search" data-nav-search>
+              <button class="nav-search-toggle" type="button" aria-expanded="false" aria-controls="nav-search-fields" aria-label="Search Bible answers">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-4-4"></path>
+                </svg>
+              </button>
+              <div class="nav-search-fields" id="nav-search-fields">
               <label class="sr-only" for="nav-search-input">Search Bible questions</label>
               <input
                 id="nav-search-input"
@@ -86,7 +93,8 @@
                 placeholder="Search"
                 autocomplete="off"
               >
-              <button type="submit" aria-label="Submit search">Search</button>
+              <button class="nav-search-submit" type="submit" aria-label="Submit search">Search</button>
+              </div>
             </form>
           </li>
           <li class="nav-theme-item">
@@ -118,136 +126,69 @@
       <section class="page-hero">
         <div class="container">
           <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/topics/">Topics</a> / Church</nav>
-          <p class="eyebrow">Topic</p>
-          <h1>Church Bible answers</h1>
-          <p class="page-intro">Read clear Bible answers related to church, with Scripture references for each question.</p>
+          <div class="topic-page-heading">
+            <span class="topic-page-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+    <path d="M10 9h4"></path>
+    <path d="M12 7v5"></path>
+    <path d="M14 21v-3a2 2 0 0 0-4 0v3"></path>
+    <path d="m18 9 3.52 2.147a1 1 0 0 1 .48.854V19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-6.999a1 1 0 0 1 .48-.854L6 9"></path>
+    <path d="M6 21V7a1 1 0 0 1 .376-.782l5-3.999a1 1 0 0 1 1.249.001l5 4A1 1 0 0 1 18 7v14"></path>
+  </svg></span>
+            <div>
+              <p class="eyebrow">Topic</p>
+              <h1>Church Bible answers</h1>
+              <p class="page-intro">Fellowship, worship, and life together as believers. Explore 6 Scripture-based answers.</p>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-soft">
         <div class="container">
-          <ul class="answer-list-page">
+          <div class="topic-answer-grid">
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-it-mean-to-be-born-again/">What Does It Mean to Be Born Again?</a></h2>
-                    <p>To be born again means to experience spiritual renewal through the Holy Spirit. Jesus taught that entrance into God's kingdom requires a new birth that is spiritual rather than merely physical.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/can-god-forgive-every-sin/">Can God Forgive Every Sin?</a></h2>
-                    <p>The Bible teaches that God is willing to forgive every repentant sinner. The only sin Jesus specifically identifies as "unpardonable" is blasphemy against the Holy Spirit, understood in its biblical context as persistent rejection of the Spirit's testimony.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/when-was-the-bible-written/">When Was the Bible Written?</a></h2>
-                    <p>The Bible was written over many generations rather than at one particular time. Scripture does not provide a complete chronological table giving the exact date of every book.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-oldest-bible/">What Is the Oldest Bible?</a></h2>
-                    <p>There is no single surviving manuscript that can simply be identified as "the original Bible." The biblical books were written individually over many generations, and the original handwritten documents are not preserved as a single complete volume.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/are-we-living-in-the-end-times/">Are We Living in the End Times?</a></h2>
-                    <p>The New Testament describes the Christian era as "the last days," while also describing events that will intensify before Christ's return. Scripture therefore calls believers to watchfulness rather than date-setting.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-babylon-in-revelation/">What Is Babylon in Revelation?</a></h2>
-                    <p>Babylon in Revelation is a symbolic end-time power or system opposed to God that influences nations, promotes spiritual immorality, and becomes intoxicated with the wine of its corrupting influence.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/did-jesus-keep-the-sabbath/">Did Jesus Keep the Sabbath?</a></h2>
-                    <p>Yes. The Gospels repeatedly show Jesus attending the synagogue and teaching and healing on the Sabbath.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/did-the-apostles-keep-the-sabbath/">Did the Apostles Keep the Sabbath?</a></h2>
-                    <p>Yes. Acts repeatedly records the apostles teaching and worshiping on the Sabbath.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-god-kill-ananias-and-sapphira/">Why Did God Kill Ananias and Sapphira?</a></h2>
-                    <p>Ananias and Sapphira died after deliberately lying to God and the Holy Spirit concerning money they had claimed to give to the church.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-is-michael-the-archangel/">Who Is Michael the Archangel?</a></h2>
-                    <p>Michael is presented in Scripture as a chief heavenly figure who leads God's forces in conflict with Satan. The name means "Who is like God?"</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/did-jesus-have-a-wife/">Did Jesus Have a Wife?</a></h2>
-                    <p>No biblical passage says that Jesus was married. The New Testament presents Him as unmarried and never names a wife.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-about-marriage/">What Does the Bible Say About Marriage?</a></h2>
-                    <p>The Bible presents marriage as a covenant relationship between a man and a woman, established by God for companionship, faithfulness, family, and mutual love.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-is-the-church-important/">Why is the church important?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Church</span>
+                    <h2><a class="directory-answer-title" href="/answers/why-is-the-church-important/">Why is the church important?</a></h2>
                     <p>The church is the community of believers united in Christ for worship, teaching, fellowship, encouragement, and mission. Scripture calls believers not to neglect gathering together as one body.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/why-is-the-church-important/" aria-label="Read the full answer to Why is the church important?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-are-spiritual-gifts-and-how-do-i-find-mine/">What are spiritual gifts and how do I find mine?</a></h2>
-                    <p>Spiritual gifts are abilities given by the Holy Spirit to build up the church. Every believer receives at least one, meant to be discovered and used in service to others.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-the-church-share-the-gospel-with-others/">Why does the church share the gospel with others?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Church</span>
+                    <h2><a class="directory-answer-title" href="/answers/why-does-the-church-share-the-gospel-with-others/">Why does the church share the gospel with others?</a></h2>
                     <p>Jesus commissioned His followers to share the good news with everyone, everywhere, because the gospel is meant to be shared, not kept private, out of love for others.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/why-does-the-church-share-the-gospel-with-others/" aria-label="Read the full answer to Why does the church share the gospel with others?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-to-someone-feeling-lonely/">What does the Bible say to someone feeling lonely?</a></h2>
-                    <p>God promises never to leave or forsake His people, offering His presence, the support of Christian community, and purpose even in seasons of deep loneliness.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/are-women-permitted-to-serve-as-pastors-or-elders-according-to-scripture/">Are women permitted to serve as pastors or elders according to scripture?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Church</span>
+                    <h2><a class="directory-answer-title" href="/answers/are-women-permitted-to-serve-as-pastors-or-elders-according-to-scripture/">Are women permitted to serve as pastors or elders according to scripture?</a></h2>
                     <p>Scripture reserves the governing and teaching office of pastor, elder, or overseer for qualified men. This distinction does not diminish women, who share equal worth in Christ and are called to vital ministries of prayer, discipleship, teaching other women and children, evangelism, mercy, hospitality, and service according to their spiritual gifts.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/are-women-permitted-to-serve-as-pastors-or-elders-according-to-scripture/" aria-label="Read the full answer to Are women permitted to serve as pastors or elders according to scripture?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-the-spiritual-gift-of-speaking-and-praying-in-tongues-active-for-believers-today/">Is the spiritual gift of speaking and praying in tongues active for believers today?</a></h2>
-                    <p>At Pentecost, the gift of tongues enabled believers to proclaim the gospel in real, known languages they had not learned. Paul lists tongues among the Spirit's gifts, while also instructing that it must be exercised in order, with interpretation, and never above intelligible teaching that builds up the whole church.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-meaning-of-the-lords-supper-or-communion/">What is the meaning of the Lord's Supper or Communion?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Church</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-meaning-of-the-lords-supper-or-communion/">What is the meaning of the Lord's Supper or Communion?</a></h2>
                     <p>Communion remembers Christ's sacrifice, proclaims His death, renews faith in His grace, and points forward to His return.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-is-the-meaning-of-the-lords-supper-or-communion/" aria-label="Read the full answer to What is the meaning of the Lord's Supper or Communion?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-there-a-right-age-to-be-baptized/">Is there a right age to be baptized?</a></h2>
-                    <p>Scripture does not set a fixed age; baptism follows a personal, understood decision to repent and trust Christ, whether that comes early or later in life.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/do-i-need-to-be-baptized-before-taking-communion/">Do I need to be baptized before taking communion?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Church</span>
+                    <h2><a class="directory-answer-title" href="/answers/do-i-need-to-be-baptized-before-taking-communion/">Do I need to be baptized before taking communion?</a></h2>
                     <p>Communion in the New Testament is shared among believers who have already publicly identified with Christ, so baptism naturally comes first as the entry point into that shared fellowship.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/do-i-need-to-be-baptized-before-taking-communion/" aria-label="Read the full answer to Do I need to be baptized before taking communion?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-biblical-stewardship-mean-beyond-just-money/">What does biblical stewardship mean beyond just money?</a></h2>
-                    <p>Stewardship covers everything entrusted to us — time, abilities, health, relationships, and possessions — and calls believers to manage all of it faithfully as caretakers, not owners.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-are-spiritual-gifts-and-how-do-i-know-mine/">What are spiritual gifts, and how do I know mine?</a></h2>
-                    <p>Spiritual gifts are Spirit-given abilities distributed to believers to build up the church, discovered through serving, prayerful reflection, and the confirmation of a faith community.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-the-church-need-organization-and-leadership-if-faith-is-personal/">Why does the church need organization and leadership if faith is personal?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Church</span>
+                    <h2><a class="directory-answer-title" href="/answers/why-does-the-church-need-organization-and-leadership-if-faith-is-personal/">Why does the church need organization and leadership if faith is personal?</a></h2>
                     <p>Scripture treats the church as a body with different members and roles working together, so structure and leadership exist to serve unity and mission, not to replace a believer's personal relationship with God.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/why-does-the-church-need-organization-and-leadership-if-faith-is-personal/" aria-label="Read the full answer to Why does the church need organization and leadership if faith is personal?">Read the full answer</a>
+                  </article>
 
-          </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -313,14 +254,22 @@
             &times;
           </button>
         </div>
+        <div class="verse-modal-toolbar">
+          <label for="verse-modal-translation">Bible version</label>
+          <select id="verse-modal-translation">
+            <option value="web">WEB - World English Bible</option>
+            <option value="kjv">KJV - King James Version</option>
+            <option value="asv">ASV - American Standard Version</option>
+          </select>
+        </div>
         <div class="verse-modal-body" id="verse-modal-body"></div>
       </div>
     </div>
 
-    <script src="/theme.js?v=20261058"></script>
-    <script src="/pwa.js?v=20261058"></script>
-    <script src="/scripture-graphic.js?v=20261058"></script>
-    <script src="/local-library.js?v=20261058"></script>
-    <script src="/verse-modal.js?v=20261058"></script>
+    <script src="/theme.js?v=20261073"></script>
+    <script src="/pwa.js?v=20261073"></script>
+    <script src="/scripture-graphic.js?v=20261073"></script>
+    <script src="/local-library.js?v=20261073"></script>
+    <script src="/verse-modal.js?v=20261073"></script>
   </body>
 </html>

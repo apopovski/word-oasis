@@ -40,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261058">
+    <link rel="stylesheet" href="/styles.css?v=20261076">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Three Angels Bible Answers | Word Oasis">
     <meta property="og:description" content="Browse Scripture-based answers about three angels from Word Oasis, with Bible references for further study.">
@@ -72,12 +72,19 @@
         <ul id="primary-menu" class="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/answers/">Answers</a></li>
-          <li><a href="/topics/">Topics</a></li>
+          <li><a href="/topics/" aria-current="page">Topics</a></li>
           <li><a href="/bible/">Bible</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/#ask">Ask a question</a></li>
           <li class="nav-search-item">
-            <form class="nav-search" action="/" method="get" role="search">
+            <form class="nav-search" action="/" method="get" role="search" data-nav-search>
+              <button class="nav-search-toggle" type="button" aria-expanded="false" aria-controls="nav-search-fields" aria-label="Search Bible answers">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-4-4"></path>
+                </svg>
+              </button>
+              <div class="nav-search-fields" id="nav-search-fields">
               <label class="sr-only" for="nav-search-input">Search Bible questions</label>
               <input
                 id="nav-search-input"
@@ -86,7 +93,8 @@
                 placeholder="Search"
                 autocomplete="off"
               >
-              <button type="submit" aria-label="Submit search">Search</button>
+              <button class="nav-search-submit" type="submit" aria-label="Submit search">Search</button>
+              </div>
             </form>
           </li>
           <li class="nav-theme-item">
@@ -118,21 +126,78 @@
       <section class="page-hero">
         <div class="container">
           <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/topics/">Topics</a> / Three Angels</nav>
-          <p class="eyebrow">Topic</p>
-          <h1>Three Angels Bible answers</h1>
-          <p class="page-intro">Read clear Bible answers related to three angels, with Scripture references for each question.</p>
+          <div class="topic-page-heading">
+            <span class="topic-page-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+    <g fill="currentColor" stroke="none">
+      <circle cx="4.3" cy="6.68" r="1.28"></circle>
+      <path d="M4.3 8.4C3.46 10.2 2.63 13.8 2.63 20.4L5.97 20.4C5.97 13.8 5.14 10.2 4.3 8.4Z"></path>
+      <path d="M3.1 9.3C1.64 6.6 0.5 7.86 0.73 13.2C2.02 11.1 2.46 12 3 14.1Z"></path>
+      <path d="M5.5 9.3C6.96 6.6 8.1 7.86 7.87 13.2C6.58 11.1 6.14 12 5.6 14.1Z"></path>
+      <circle cx="12" cy="4.3" r="1.5"></circle>
+      <path d="M12 6.32C11.12 8.43 10.24 12.66 10.24 20.4L13.76 20.4C13.76 12.66 12.88 8.43 12 6.32Z"></path>
+      <path d="M10.73 7.38C9.2 4.21 8 5.69 8.24 11.95C9.6 9.49 10.06 10.54 10.63 13.01Z"></path>
+      <path d="M13.27 7.38C14.8 4.21 16 5.69 15.76 11.95C14.4 9.49 13.94 10.54 13.37 13.01Z"></path>
+      <circle cx="19.7" cy="6.68" r="1.28"></circle>
+      <path d="M19.7 8.4C18.86 10.2 18.03 13.8 18.03 20.4L21.37 20.4C21.37 13.8 20.54 10.2 19.7 8.4Z"></path>
+      <path d="M18.5 9.3C17.04 6.6 15.9 7.86 16.13 13.2C17.42 11.1 17.86 12 18.4 14.1Z"></path>
+      <path d="M20.9 9.3C22.36 6.6 23.5 7.86 23.27 13.2C21.98 11.1 21.54 12 21 14.1Z"></path>
+    </g>
+  </svg></span>
+            <div>
+              <p class="eyebrow">Topic</p>
+              <h1>Three Angels Bible answers</h1>
+              <p class="page-intro">God's final message of worship, warning, and hope. Explore 6 Scripture-based answers.</p>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-soft">
         <div class="container">
-          <ul class="answer-list-page">
+          <div class="topic-answer-grid">
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-message-of-the-first-angel-in-revelation-14/">What is the message of the first angel in Revelation 14?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Three Angels</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-mark-of-the-beast/">What Is the Mark of the Beast?</a></h2>
+                    <p>The mark of the beast is a future identifying sign associated with allegiance to the beast and its worship. Revelation connects it directly with worship, obedience, economic restrictions, and opposition to God's people.</p>
+                    <a class="directory-read-more" href="/answers/what-is-the-mark-of-the-beast/" aria-label="Read the full answer to What Is the Mark of the Beast?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Three Angels</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-image-of-the-beast/">What Is the Image of the Beast?</a></h2>
+                    <p>The image of the beast is a prophetic representation of the beast's authority that is empowered to speak, enforce worship, and persecute those who refuse to worship it.</p>
+                    <a class="directory-read-more" href="/answers/what-is-the-image-of-the-beast/" aria-label="Read the full answer to What Is the Image of the Beast?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Three Angels</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-wine-of-babylon/">What Is the Wine of Babylon?</a></h2>
+                    <p>The wine of Babylon represents the corrupting influence of Babylon's spiritual fornication and false teaching. Revelation uses wine symbolically in connection with deception, spiritual unfaithfulness, and rebellion against God.</p>
+                    <a class="directory-read-more" href="/answers/what-is-the-wine-of-babylon/" aria-label="Read the full answer to What Is the Wine of Babylon?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Three Angels</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-revelation-14-mean/">What Does Revelation 14 Mean?</a></h2>
+                    <p>Revelation 14 presents the 144,000, three angels proclaiming God's final gospel warning, the fall of Babylon, a warning against worshiping the beast, the perseverance of God's people, and the final harvest.</p>
+                    <a class="directory-read-more" href="/answers/what-does-revelation-14-mean/" aria-label="Read the full answer to What Does Revelation 14 Mean?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Three Angels</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-revelation-14-7-mean/">What Does Revelation 14:7 Mean?</a></h2>
+                    <p>Revelation 14:7 announces that the hour of God's judgment has come and calls the world to worship the Creator.</p>
+                    <a class="directory-read-more" href="/answers/what-does-revelation-14-7-mean/" aria-label="Read the full answer to What Does Revelation 14:7 Mean?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Three Angels</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-message-of-the-first-angel-in-revelation-14/">What is the message of the first angel in Revelation 14?</a></h2>
                     <p>The first angel calls the world to fear God, give Him glory, and worship the Creator, announcing that the hour of judgment has arrived.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-is-the-message-of-the-first-angel-in-revelation-14/" aria-label="Read the full answer to What is the message of the first angel in Revelation 14?">Read the full answer</a>
+                  </article>
 
-          </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -198,14 +263,22 @@
             &times;
           </button>
         </div>
+        <div class="verse-modal-toolbar">
+          <label for="verse-modal-translation">Bible version</label>
+          <select id="verse-modal-translation">
+            <option value="web">WEB - World English Bible</option>
+            <option value="kjv">KJV - King James Version</option>
+            <option value="asv">ASV - American Standard Version</option>
+          </select>
+        </div>
         <div class="verse-modal-body" id="verse-modal-body"></div>
       </div>
     </div>
 
-    <script src="/theme.js?v=20261058"></script>
-    <script src="/pwa.js?v=20261058"></script>
-    <script src="/scripture-graphic.js?v=20261058"></script>
-    <script src="/local-library.js?v=20261058"></script>
-    <script src="/verse-modal.js?v=20261058"></script>
+    <script src="/theme.js?v=20261073"></script>
+    <script src="/pwa.js?v=20261073"></script>
+    <script src="/scripture-graphic.js?v=20261073"></script>
+    <script src="/local-library.js?v=20261073"></script>
+    <script src="/verse-modal.js?v=20261073"></script>
   </body>
 </html>

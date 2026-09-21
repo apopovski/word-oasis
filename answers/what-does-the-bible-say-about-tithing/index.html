@@ -40,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261058">
+    <link rel="stylesheet" href="/styles.css?v=20261076">
     <meta property="og:type" content="article">
     <meta property="og:title" content="What Does the Bible Say About Tithing? | Word Oasis">
     <meta property="og:description" content="The Bible teaches that God's people should return a tenth of their increase to Him. Tithing supports God's work and those engaged in ministry. The New...">
@@ -64,7 +64,7 @@
     "name": "What Does the Bible Say About Tithing?",
     "acceptedAnswer": {
       "@type": "Answer",
-      "text": "The Bible teaches that God's people should return a tenth of their increase to Him. Tithing supports God's work and those engaged in ministry. The New Testament also emphasizes generous, willing giving rather than giving merely as a legal obligation. The practice of giving a tenth appears before the Mosaic law. Abraham gave Melchizedek: \"And he gave him tithes of all.\" Genesis 14:20 Jacob also promised: \"Of all that thou shalt give me I will surely give the tenth unto thee.\" Genesis 28:22 Under Israel's covenant system, the tithe supported the Levites: \"And, behold, I have given the children of Levi all the tenth in Israel for an inheritance.\" Numbers 18:21 Malachi contains a direct challenge: \"Bring ye all the tithes into the storehouse, that there may be meat in mine house.\" Malachi 3:10 Jesus also referred to tithing while emphasizing that it must not replace justice, mercy, and faith: \"These ought ye to have done, and not to leave the other undone.\" Matthew 23:23 The New Testament also emphasizes generous and willing giving: \"Every man according as he purposeth in his heart, so let him give; not grudgingly, or of necessity.\" 2 Corinthians 9:7 The Bible clearly establishes the principle of returning a tenth to God. The New Testament does not teach that Christians earn salvation through tithing. Giving is part of worship and stewardship, while salvation remains God's gift of grace through faith. Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others. (Genesis 14:18-20, Genesis 28:20-22, Leviticus 27:30-33, Numbers 18:21-24, Deuteronomy 14:22-29, Malachi 3:8-12, Matthew 23:23, Hebrews 7:1-10, 1 Corinthians 9:13-14, 2 Corinthians 9:6-8)"
+      "text": "The Bible teaches that God's people should return a tenth of their increase to Him. Tithing supports God's work and those engaged in ministry. The New Testament also emphasizes generous, willing giving rather than giving merely as a legal obligation. The practice of giving a tenth appears before the Mosaic law. Abraham gave Melchizedek: “And he gave him tithes of all” (Genesis 14:20). Jacob also promised: “Of all that thou shalt give me I will surely give the tenth unto thee” (Genesis 28:22). Under Israel's covenant system, the tithe supported the Levites: “And, behold, I have given the children of Levi all the tenth in Israel for an inheritance” (Numbers 18:21). Malachi contains a direct challenge: “Bring ye all the tithes into the storehouse, that there may be meat in mine house” (Malachi 3:10). Jesus also referred to tithing while emphasizing that it must not replace justice, mercy, and faith: “These ought ye to have done, and not to leave the other undone” (Matthew 23:23). The New Testament also emphasizes generous and willing giving: “Every man according as he purposeth in his heart, so let him give; not grudgingly, or of necessity” (2 Corinthians 9:7). The Bible clearly establishes the principle of returning a tenth to God. The New Testament does not teach that Christians earn salvation through tithing. Giving is part of worship and stewardship, while salvation remains God's gift of grace through faith. (Genesis 14:18-20, Genesis 28:20-22, Leviticus 27:30-33, Numbers 18:21-24, Deuteronomy 14:22-29, Malachi 3:8-12, Matthew 23:23, Hebrews 7:1-10, 1 Corinthians 9:13-14, 2 Corinthians 9:6-8)"
     }
   }
 }
@@ -84,13 +84,20 @@
         </button>
         <ul id="primary-menu" class="nav-links">
           <li><a href="/">Home</a></li>
-          <li><a href="/answers/">Answers</a></li>
+          <li><a href="/answers/" aria-current="page">Answers</a></li>
           <li><a href="/topics/">Topics</a></li>
           <li><a href="/bible/">Bible</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/#ask">Ask a question</a></li>
           <li class="nav-search-item">
-            <form class="nav-search" action="/" method="get" role="search">
+            <form class="nav-search" action="/" method="get" role="search" data-nav-search>
+              <button class="nav-search-toggle" type="button" aria-expanded="false" aria-controls="nav-search-fields" aria-label="Search Bible answers">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-4-4"></path>
+                </svg>
+              </button>
+              <div class="nav-search-fields" id="nav-search-fields">
               <label class="sr-only" for="nav-search-input">Search Bible questions</label>
               <input
                 id="nav-search-input"
@@ -99,7 +106,8 @@
                 placeholder="Search"
                 autocomplete="off"
               >
-              <button type="submit" aria-label="Submit search">Search</button>
+              <button class="nav-search-submit" type="submit" aria-label="Submit search">Search</button>
+              </div>
             </form>
           </li>
           <li class="nav-theme-item">
@@ -139,48 +147,38 @@
       <section class="section section-answer">
         <div class="container answer-page-layout">
           <article class="answer-page-card" data-answer-page data-answer-id="answer-tithing" data-answer-category="Life and Relationships">
-            <div class="answer-tags"><a class="tag-link" href="/topics/bible-study/">Bible Study</a><a class="tag-link" href="/topics/creation/">Creation</a><a class="tag-link" href="/topics/faith/">Faith</a><a class="tag-link" href="/topics/forgiveness/">Forgiveness</a></div>
-            <div class="answer-page-actions">
-              <button type="button" class="promise-copy-button" data-answer-save aria-pressed="false">Save answer</button>
-            </div>
+            <div class="answer-tags"><a class="tag-link" href="/topics/stewardship/">Stewardship</a></div>
             <h2>Biblical explanation</h2>
-            <p class="lead-answer">The practice of <a class="inline-topic-link" href="/topics/stewardship/">giving</a> a tenth appears before the Mosaic law. Abraham gave Melchizedek: "And he gave him tithes of all." Genesis 14:20 Jacob also promised: "Of all that thou shalt give me I will surely give the tenth unto thee." Genesis 28:22 Under Israel's <a class="inline-topic-link" href="/topics/law/">covenant</a> system, the tithe supported the Levites: "And, behold, I have given the <a class="inline-topic-link" href="/topics/marriage-and-family/">children</a> of Levi all the tenth in Israel for an inheritance." Numbers 18:21 Malachi contains a direct challenge: "Bring ye all the tithes into the storehouse, that there may be meat in mine house." Malachi 3:10 Jesus also referred to tithing while emphasizing that it must not replace justice, mercy, and faith: "These ought ye to have done, and not to leave the other undone." Matthew 23:23 The New Testament also emphasizes generous and willing giving: "Every man according as he purposeth in his heart, so let him give; not grudgingly, or of necessity." 2 Corinthians 9:7 The Bible clearly establishes the principle of returning a tenth to God. The New Testament does not teach that Christians earn <a class="inline-topic-link" href="/topics/salvation/">salvation</a> through tithing. Giving is part of worship and stewardship, while salvation remains God's gift of grace through faith.</p>
+            <p class="lead-answer">The practice of giving a tenth appears before the Mosaic law. Abraham gave Melchizedek: “And he gave him tithes of all” (<button type="button" class="scripture-link scripture-link-inline" data-scripture="Genesis 14:20">Genesis 14:20</button>). Jacob also promised: “Of all that thou shalt give me I will surely give the tenth unto thee” (<button type="button" class="scripture-link scripture-link-inline" data-scripture="Genesis 28:22">Genesis 28:22</button>). Under Israel's <a class="inline-topic-link" href="/topics/law/">covenant</a> system, the tithe supported the Levites: “And, behold, I have given the <a class="inline-topic-link" href="/topics/marriage-and-family/">children</a> of Levi all the tenth in Israel for an inheritance” (<button type="button" class="scripture-link scripture-link-inline" data-scripture="Numbers 18:21">Numbers 18:21</button>). Malachi contains a direct challenge: “Bring ye all the tithes into the storehouse, that there may be meat in mine house” (<button type="button" class="scripture-link scripture-link-inline" data-scripture="Malachi 3:10">Malachi 3:10</button>). Jesus also referred to tithing while emphasizing that it must not replace justice, <a class="inline-topic-link" href="/topics/forgiveness/">mercy</a>, and <a class="inline-topic-link" href="/topics/faith/">faith</a>: “These ought ye to have done, and not to leave the other undone” (<button type="button" class="scripture-link scripture-link-inline" data-scripture="Matthew 23:23">Matthew 23:23</button>). The <a class="inline-topic-link" href="/topics/bible-study/">New Testament</a> also emphasizes generous and willing giving: “Every man according as he purposeth in his heart, so let him give; not grudgingly, or of necessity” (<button type="button" class="scripture-link scripture-link-inline" data-scripture="2 Corinthians 9:7">2 Corinthians 9:7</button>). The Bible clearly establishes the principle of returning a tenth to God. The New Testament does not teach that Christians earn <a class="inline-topic-link" href="/topics/salvation/">salvation</a> through tithing. Giving is part of worship and stewardship, while salvation remains God's gift of grace through faith.</p>
             <div class="answer-key-takeaway">
               <p class="eyebrow">Key takeaway</p>
-              <p><a class="inline-topic-link" href="/topics/christian-living/">Discipleship</a> applies the gospel to the whole life: <a class="inline-topic-link" href="/topics/health/">body</a>, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others.</p>
+              <p>The Bible teaches that God's people should return a tenth of their increase to Him. Tithing supports God's work and those engaged in ministry. The New Testament also emphasizes generous, willing giving rather than giving merely as a legal obligation.</p>
             </div>
+            <h2>Bible references</h2>
+            <div class="scriptures"><button type="button" class="scripture-link" data-scripture="Genesis 14:18-20">Genesis 14:18-20</button><button type="button" class="scripture-link" data-scripture="Genesis 28:20-22">Genesis 28:20-22</button><button type="button" class="scripture-link" data-scripture="Leviticus 27:30-33">Leviticus 27:30-33</button><button type="button" class="scripture-link" data-scripture="Numbers 18:21-24">Numbers 18:21-24</button><button type="button" class="scripture-link" data-scripture="Deuteronomy 14:22-29">Deuteronomy 14:22-29</button><button type="button" class="scripture-link" data-scripture="Malachi 3:8-12">Malachi 3:8-12</button><button type="button" class="scripture-link" data-scripture="Matthew 23:23">Matthew 23:23</button><button type="button" class="scripture-link" data-scripture="Hebrews 7:1-10">Hebrews 7:1-10</button><button type="button" class="scripture-link" data-scripture="1 Corinthians 9:13-14">1 Corinthians 9:13-14</button><button type="button" class="scripture-link" data-scripture="2 Corinthians 9:6-8">2 Corinthians 9:6-8</button></div>
             <div class="answer-share-panel" data-answer-share>
               <div class="share-action-group">
                 <span class="promise-share-label">Share this answer</span>
-                <div class="promise-share-buttons">
-                  <a class="promise-social-share promise-social-facebook" data-answer-share-facebook href="#" target="_blank" rel="noopener noreferrer" aria-label="Share answer on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21.9V13.9h2.7l.5-3.1h-3.2V8.8c0-.9.3-1.7 1.6-1.7h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2v2.4H7.6v3.1h2.8v8h3.1Z"/></svg></a>
-                  <a class="promise-social-share promise-social-x" data-answer-share-x href="#" target="_blank" rel="noopener noreferrer" aria-label="Share answer on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.2 4.4h2.6l-5.7 6.5 6.7 8.8h-5.2l-4.1-5.4-4.7 5.4H4.2l6.1-7-6.4-8.3h5.4l3.7 4.9 4.2-4.9Zm-.9 13.8h1.4L8.5 5.8H7l9.3 12.4Z"/></svg></a>
-                  <a class="promise-social-share promise-social-whatsapp" data-answer-share-whatsapp href="#" target="_blank" rel="noopener noreferrer" aria-label="Share answer on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.4a8.5 8.5 0 0 0-7.3 12.9L3.6 20.6l4.4-1.1A8.5 8.5 0 1 0 12 3.4Zm0 1.7a6.8 6.8 0 1 1-3.5 12.7l-.3-.2-2.6.7.7-2.5-.2-.3A6.8 6.8 0 0 1 12 5.1Zm3.9 8.5c-.2-.1-1.2-.6-1.4-.7s-.3-.1-.5.1l-.6.8c-.1.1-.2.1-.4 0a5.6 5.6 0 0 1-2.8-2.4c-.1-.2 0-.3.1-.4l.3-.4.2-.4v-.3l-.7-1.6c-.2-.4-.3-.3-.5-.3h-.4a.9.9 0 0 0-.6.3 2.6 2.6 0 0 0-.8 1.9 4.5 4.5 0 0 0 1 2.3 9.2 9.2 0 0 0 3.6 3.1c1.3.5 1.8.5 2.4.4a2 2 0 0 0 1.4-1c.2-.5.2-.9.1-1l-.4-.4Z"/></svg></a>
-                  <a class="promise-social-share answer-social-sms" data-answer-share-sms href="#" aria-label="Share answer by text"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.5L12 21l4.5-4H20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg></a>
-                  <div class="promise-share-primary">
-                    <button type="button" class="promise-share" data-answer-share-native>Share answer link</button>
-                    <button type="button" class="promise-copy-button" data-answer-share-copy>Copy answer link</button>
-                  </div>
+                <div class="share-mode-selector" role="group" aria-label="Choose answer sharing format">
+                  <button type="button" data-answer-share-mode="text" class="active" aria-pressed="true">Text</button>
+                  <button type="button" data-answer-share-mode="graphic" aria-pressed="false">Graphic</button>
                 </div>
-              </div>
-              <div class="share-action-group">
-                <span class="promise-share-label">Share graphic</span>
                 <div class="promise-share-buttons">
-                  <button type="button" class="promise-social-share promise-social-facebook" data-answer-share-graphic-platform="Facebook" aria-label="Share question graphic for Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21.9V13.9h2.7l.5-3.1h-3.2V8.8c0-.9.3-1.7 1.6-1.7h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2v2.4H7.6v3.1h2.8v8h3.1Z"/></svg></button>
-                  <button type="button" class="promise-social-share promise-social-x" data-answer-share-graphic-platform="X" aria-label="Share question graphic for X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.2 4.4h2.6l-5.7 6.5 6.7 8.8h-5.2l-4.1-5.4-4.7 5.4H4.2l6.1-7-6.4-8.3h5.4l3.7 4.9 4.2-4.9Zm-.9 13.8h1.4L8.5 5.8H7l9.3 12.4Z"/></svg></button>
-                  <button type="button" class="promise-social-share promise-social-whatsapp" data-answer-share-graphic-platform="WhatsApp" aria-label="Share question graphic for WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.4a8.5 8.5 0 0 0-7.3 12.9L3.6 20.6l4.4-1.1A8.5 8.5 0 1 0 12 3.4Zm0 1.7a6.8 6.8 0 1 1-3.5 12.7l-.3-.2-2.6.7.7-2.5-.2-.3A6.8 6.8 0 0 1 12 5.1Zm3.9 8.5c-.2-.1-1.2-.6-1.4-.7s-.3-.1-.5.1l-.6.8c-.1.1-.2.1-.4 0a5.6 5.6 0 0 1-2.8-2.4c-.1-.2 0-.3.1-.4l.3-.4.2-.4v-.3l-.7-1.6c-.2-.4-.3-.3-.5-.3h-.4a.9.9 0 0 0-.6.3 2.6 2.6 0 0 0-.8 1.9 4.5 4.5 0 0 0 1 2.3 9.2 9.2 0 0 0 3.6 3.1c1.3.5 1.8.5 2.4.4a2 2 0 0 0 1.4-1c.2-.5.2-.9.1-1l-.4-.4Z"/></svg></button>
-                  <button type="button" class="promise-social-share promise-social-instagram" data-answer-share-graphic-platform="Instagram" aria-label="Share question graphic for Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M7.2 2h9.6A5.2 5.2 0 0 1 22 7.2v9.6a5.2 5.2 0 0 1-5.2 5.2H7.2A5.2 5.2 0 0 1 2 16.8V7.2A5.2 5.2 0 0 1 7.2 2Zm0 2A3.2 3.2 0 0 0 4 7.2v9.6A3.2 3.2 0 0 0 7.2 20h9.6a3.2 3.2 0 0 0 3.2-3.2V7.2A3.2 3.2 0 0 0 16.8 4H7.2Zm10.1 1.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg></button>
-                  <button type="button" class="promise-social-share answer-social-sms" data-answer-share-graphic-platform="Text" aria-label="Share question graphic by text"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.5L12 21l4.5-4H20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg></button>
+                  <div class="share-social-icons">
+                    <button type="button" class="promise-social-share promise-social-facebook" data-answer-share-platform="Facebook" aria-label="Share answer on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21.9V13.9h2.7l.5-3.1h-3.2V8.8c0-.9.3-1.7 1.6-1.7h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2v2.4H7.6v3.1h2.8v8h3.1Z"/></svg></button>
+                    <button type="button" class="promise-social-share promise-social-x" data-answer-share-platform="X" aria-label="Share answer on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.2 4.4h2.6l-5.7 6.5 6.7 8.8h-5.2l-4.1-5.4-4.7 5.4H4.2l6.1-7-6.4-8.3h5.4l3.7 4.9 4.2-4.9Zm-.9 13.8h1.4L8.5 5.8H7l9.3 12.4Z"/></svg></button>
+                    <button type="button" class="promise-social-share promise-social-whatsapp" data-answer-share-platform="WhatsApp" aria-label="Share answer on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.4a8.5 8.5 0 0 0-7.3 12.9L3.6 20.6l4.4-1.1A8.5 8.5 0 1 0 12 3.4Zm0 1.7a6.8 6.8 0 1 1-3.5 12.7l-.3-.2-2.6.7.7-2.5-.2-.3A6.8 6.8 0 0 1 12 5.1Zm3.9 8.5c-.2-.1-1.2-.6-1.4-.7s-.3-.1-.5.1l-.6.8c-.1.1-.2.1-.4 0a5.6 5.6 0 0 1-2.8-2.4c-.1-.2 0-.3.1-.4l.3-.4.2-.4v-.3l-.7-1.6c-.2-.4-.3-.3-.5-.3h-.4a.9.9 0 0 0-.6.3 2.6 2.6 0 0 0-.8 1.9 4.5 4.5 0 0 0 1 2.3 9.2 9.2 0 0 0 3.6 3.1c1.3.5 1.8.5 2.4.4a2 2 0 0 0 1.4-1c.2-.5.2-.9.1-1l-.4-.4Z"/></svg></button>
+                    <button type="button" class="promise-social-share promise-social-instagram" data-answer-share-platform="Instagram" aria-label="Share answer on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M7.2 2h9.6A5.2 5.2 0 0 1 22 7.2v9.6a5.2 5.2 0 0 1-5.2 5.2H7.2A5.2 5.2 0 0 1 2 16.8V7.2A5.2 5.2 0 0 1 7.2 2Zm0 2A3.2 3.2 0 0 0 4 7.2v9.6A3.2 3.2 0 0 0 7.2 20h9.6a3.2 3.2 0 0 0 3.2-3.2V7.2A3.2 3.2 0 0 0 16.8 4H7.2Zm10.1 1.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg></button>
+                    <button type="button" class="promise-social-share answer-social-sms" data-answer-share-platform="Text" aria-label="Share answer by text"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.5L12 21l4.5-4H20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg></button>
+                  </div>
                   <div class="promise-share-primary">
-                    <button type="button" class="promise-share" data-answer-share-graphic>Share question graphic</button>
-                    <button type="button" class="promise-copy-button" data-answer-download-graphic>Download question graphic</button>
+                    <button type="button" class="promise-share" data-answer-share-primary>Share</button>
+                    <button type="button" class="promise-copy-button" data-answer-share-secondary>Copy</button>
                   </div>
                 </div>
               </div>
               <p class="answer-share-status" data-answer-share-status role="status" aria-live="polite"></p>
             </div>
-            <h2>Bible references</h2>
-            <div class="scriptures"><button type="button" class="scripture-link" data-scripture="Genesis 14:18-20">Genesis 14:18-20</button><button type="button" class="scripture-link" data-scripture="Genesis 28:20-22">Genesis 28:20-22</button><button type="button" class="scripture-link" data-scripture="Leviticus 27:30-33">Leviticus 27:30-33</button><button type="button" class="scripture-link" data-scripture="Numbers 18:21-24">Numbers 18:21-24</button><button type="button" class="scripture-link" data-scripture="Deuteronomy 14:22-29">Deuteronomy 14:22-29</button><button type="button" class="scripture-link" data-scripture="Malachi 3:8-12">Malachi 3:8-12</button><button type="button" class="scripture-link" data-scripture="Matthew 23:23">Matthew 23:23</button><button type="button" class="scripture-link" data-scripture="Hebrews 7:1-10">Hebrews 7:1-10</button><button type="button" class="scripture-link" data-scripture="1 Corinthians 9:13-14">1 Corinthians 9:13-14</button><button type="button" class="scripture-link" data-scripture="2 Corinthians 9:6-8">2 Corinthians 9:6-8</button></div>
             <div class="answer-editorial-note">
               <strong>Editorial note</strong>
               <p>This answer is presented with its supporting references so you can examine each passage in context. If you notice an error or unclear statement, please <a href="/?inquiry=general#ask">suggest a correction</a>.</p>
@@ -189,7 +187,7 @@
           <aside class="related-card" aria-label="Related answers">
             <h2>Related answers</h2>
             <ul>
-              <li><a href="/answers/what-does-the-bible-say-about-forgiveness/">What Does the Bible Say About Forgiveness?</a></li><li><a href="/answers/what-does-the-bible-say-about-ghosts/">What Does the Bible Say About Ghosts?</a></li><li><a href="/answers/what-does-the-bible-say-about-homosexuality/">What Does the Bible Say About Homosexuality?</a></li><li><a href="/answers/what-does-the-bible-say-about-love/">What Does the Bible Say About Love?</a></li><li><a href="/answers/what-does-the-bible-say-about-satan/">What Does the Bible Say About Satan?</a></li>
+              <li><a href="/answers/does-the-bible-say-anything-about-work-and-career/">Does the Bible say anything about work and career?</a></li><li><a href="/answers/what-does-the-bible-say-about-money-and-stewardship/">What does the Bible say about money and stewardship?</a></li><li><a href="/answers/does-the-bible-have-anything-to-say-about-mental-and-emotional-health/">Does the Bible have anything to say about mental and emotional health?</a></li><li><a href="/answers/what-does-the-bible-say-about-anxiety/">What Does the Bible Say About Anxiety?</a></li><li><a href="/answers/what-does-the-bible-say-about-divorce/">What Does the Bible Say About Divorce?</a></li>
             </ul>
           </aside>
         </div>
@@ -257,14 +255,22 @@
             &times;
           </button>
         </div>
+        <div class="verse-modal-toolbar">
+          <label for="verse-modal-translation">Bible version</label>
+          <select id="verse-modal-translation">
+            <option value="web">WEB - World English Bible</option>
+            <option value="kjv">KJV - King James Version</option>
+            <option value="asv">ASV - American Standard Version</option>
+          </select>
+        </div>
         <div class="verse-modal-body" id="verse-modal-body"></div>
       </div>
     </div>
 
-    <script src="/theme.js?v=20261058"></script>
-    <script src="/pwa.js?v=20261058"></script>
-    <script src="/scripture-graphic.js?v=20261058"></script>
-    <script src="/local-library.js?v=20261058"></script>
-    <script src="/verse-modal.js?v=20261058"></script>
+    <script src="/theme.js?v=20261073"></script>
+    <script src="/pwa.js?v=20261073"></script>
+    <script src="/scripture-graphic.js?v=20261073"></script>
+    <script src="/local-library.js?v=20261073"></script>
+    <script src="/verse-modal.js?v=20261073"></script>
   </body>
 </html>

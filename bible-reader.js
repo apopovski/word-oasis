@@ -28,6 +28,8 @@
   const maxTextSize = 1.8;
   const textSizeStep = 0.04;
   const textSizeStorageKey = "word-oasis-bible-text-size";
+  const translationStorageKey = "word-oasis-bible-translation";
+  const legacyTranslationStorageKey = "word-oasis-promise-translation";
   const siteUrl = "https://wordoasis.org/bible/";
 
   const books = [
@@ -120,23 +122,24 @@
   const searchForm = document.querySelector("#bible-search-form");
   const searchInput = document.querySelector("#bible-search-input");
   const searchScope = document.querySelector("#bible-search-scope");
+  const searchScopeSummary = document.querySelector("#bible-search-scope-summary");
   const searchBooksField = document.querySelector("#bible-search-books-field");
   const searchBooksSelect = document.querySelector("#bible-search-books");
   const searchResults = document.querySelector("#bible-search-results");
   const selectionHome = document.querySelector("#bible-selection-home");
 
-  if (!bookSelect || !chapterSelect || !translationSelect || !chapterGrid || !readerTitle || !readerMeta || !readerBody || !readerCard || !prevButton || !nextButton || !readerPrevButton || !readerNextButton || !bottomPrevButton || !bottomNextButton || !smallerTextButton || !largerTextButton || !textSizeRange || !textSizeLabel || !searchForm || !searchInput || !searchScope || !searchBooksField || !searchBooksSelect || !searchResults || !selectionHome) {
+  if (!bookSelect || !chapterSelect || !translationSelect || !chapterGrid || !readerTitle || !readerMeta || !readerBody || !readerCard || !prevButton || !nextButton || !readerPrevButton || !readerNextButton || !bottomPrevButton || !bottomNextButton || !smallerTextButton || !largerTextButton || !textSizeRange || !textSizeLabel || !searchForm || !searchInput || !searchScope || !searchScopeSummary || !searchBooksField || !searchBooksSelect || !searchResults || !selectionHome) {
     return;
   }
 
   const selectionPanel = document.createElement("div");
   selectionPanel.className = "bible-selection-panel";
-  selectionPanel.setAttribute("aria-label", "Selected Bible passage tools");
+  selectionPanel.setAttribute("aria-label", "Selected Scripture tools");
   selectionPanel.innerHTML = `
     <p class="bible-selection-hint" id="bible-selection-label">Click a verse number to select it. Click another verse number to select a range.</p>
     <div class="share-action-group">
-      <h3 class="share-group-heading">Share passage</h3>
-      <div class="share-mode-selector" role="group" aria-label="Choose passage sharing format">
+      <h3 class="share-group-heading">Share Scripture</h3>
+      <div class="share-mode-selector" role="group" aria-label="Choose Scripture sharing format">
         <button type="button" id="bible-share-mode-text" class="active" aria-pressed="true">Text</button>
         <button type="button" id="bible-share-mode-graphic" aria-pressed="false">Graphic</button>
       </div>
@@ -148,12 +151,12 @@
         <button type="button" id="bible-share-selection" disabled>Share</button>
         <button type="button" id="bible-copy-selection" disabled>Copy</button>
       </div>
-      <div class="bible-selection-actions bible-selection-social-actions" aria-label="Share passage on a social platform">
-        <button type="button" class="promise-social-share promise-social-facebook" data-bible-share-platform="Facebook" aria-label="Share passage on Facebook" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21.9V13.9h2.7l.5-3.1h-3.2V8.8c0-.9.3-1.7 1.6-1.7h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2v2.4H7.6v3.1h2.8v8h3.1Z"/></svg></button>
-        <button type="button" class="promise-social-share promise-social-x" data-bible-share-platform="X" aria-label="Share passage on X" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.2 4.4h2.6l-5.7 6.5 6.7 8.8h-5.2l-4.1-5.4-4.7 5.4H4.2l6.1-7-6.4-8.3h5.4l3.7 4.9 4.2-4.9Zm-.9 13.8h1.4L8.5 5.8H7l9.3 12.4Z"/></svg></button>
-        <button type="button" class="promise-social-share promise-social-whatsapp" data-bible-share-platform="WhatsApp" aria-label="Share passage on WhatsApp" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.4a8.5 8.5 0 0 0-7.3 12.9L3.6 20.6l4.4-1.1A8.5 8.5 0 1 0 12 3.4Zm0 1.7a6.8 6.8 0 1 1-3.5 12.7l-.3-.2-2.6.7.7-2.5-.2-.3A6.8 6.8 0 0 1 12 5.1Zm3.9 8.5c-.2-.1-1.2-.6-1.4-.7s-.3-.1-.5.1l-.6.8c-.1.1-.2.1-.4 0a5.6 5.6 0 0 1-2.8-2.4c-.1-.2 0-.3.1-.4l.3-.4.2-.4v-.3l-.7-1.6c-.2-.4-.3-.3-.5-.3h-.4a.9.9 0 0 0-.6.3 2.6 2.6 0 0 0-.8 1.9 4.5 4.5 0 0 0 1 2.3 9.2 9.2 0 0 0 3.6 3.1c1.3.5 1.8.5 2.4.4a2 2 0 0 0 1.4-1c.2-.5.2-.9.1-1l-.4-.4Z"/></svg></button>
-        <button type="button" class="promise-social-share promise-social-instagram" data-bible-share-platform="Instagram" aria-label="Share passage on Instagram" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M7.2 2h9.6A5.2 5.2 0 0 1 22 7.2v9.6a5.2 5.2 0 0 1-5.2 5.2H7.2A5.2 5.2 0 0 1 2 16.8V7.2A5.2 5.2 0 0 1 7.2 2Zm0 2A3.2 3.2 0 0 0 4 7.2v9.6A3.2 3.2 0 0 0 7.2 20h9.6a3.2 3.2 0 0 0 3.2-3.2V7.2A3.2 3.2 0 0 0 16.8 4H7.2Zm10.1 1.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg></button>
-        <button type="button" class="promise-social-share answer-social-sms" data-bible-share-platform="Text" aria-label="Share passage by text" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.5L12 21l4.5-4H20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg></button>
+      <div class="bible-selection-actions bible-selection-social-actions" aria-label="Share Scripture on a social platform">
+        <button type="button" class="promise-social-share promise-social-facebook" data-bible-share-platform="Facebook" aria-label="Share Scripture on Facebook" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21.9V13.9h2.7l.5-3.1h-3.2V8.8c0-.9.3-1.7 1.6-1.7h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2v2.4H7.6v3.1h2.8v8h3.1Z"/></svg></button>
+        <button type="button" class="promise-social-share promise-social-x" data-bible-share-platform="X" aria-label="Share Scripture on X" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.2 4.4h2.6l-5.7 6.5 6.7 8.8h-5.2l-4.1-5.4-4.7 5.4H4.2l6.1-7-6.4-8.3h5.4l3.7 4.9 4.2-4.9Zm-.9 13.8h1.4L8.5 5.8H7l9.3 12.4Z"/></svg></button>
+        <button type="button" class="promise-social-share promise-social-whatsapp" data-bible-share-platform="WhatsApp" aria-label="Share Scripture on WhatsApp" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.4a8.5 8.5 0 0 0-7.3 12.9L3.6 20.6l4.4-1.1A8.5 8.5 0 1 0 12 3.4Zm0 1.7a6.8 6.8 0 1 1-3.5 12.7l-.3-.2-2.6.7.7-2.5-.2-.3A6.8 6.8 0 0 1 12 5.1Zm3.9 8.5c-.2-.1-1.2-.6-1.4-.7s-.3-.1-.5.1l-.6.8c-.1.1-.2.1-.4 0a5.6 5.6 0 0 1-2.8-2.4c-.1-.2 0-.3.1-.4l.3-.4.2-.4v-.3l-.7-1.6c-.2-.4-.3-.3-.5-.3h-.4a.9.9 0 0 0-.6.3 2.6 2.6 0 0 0-.8 1.9 4.5 4.5 0 0 0 1 2.3 9.2 9.2 0 0 0 3.6 3.1c1.3.5 1.8.5 2.4.4a2 2 0 0 0 1.4-1c.2-.5.2-.9.1-1l-.4-.4Z"/></svg></button>
+        <button type="button" class="promise-social-share promise-social-instagram" data-bible-share-platform="Instagram" aria-label="Share Scripture on Instagram" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M7.2 2h9.6A5.2 5.2 0 0 1 22 7.2v9.6a5.2 5.2 0 0 1-5.2 5.2H7.2A5.2 5.2 0 0 1 2 16.8V7.2A5.2 5.2 0 0 1 7.2 2Zm0 2A3.2 3.2 0 0 0 4 7.2v9.6A3.2 3.2 0 0 0 7.2 20h9.6a3.2 3.2 0 0 0 3.2-3.2V7.2A3.2 3.2 0 0 0 16.8 4H7.2Zm10.1 1.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg></button>
+        <button type="button" class="promise-social-share answer-social-sms" data-bible-share-platform="Text" aria-label="Share Scripture by text" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.5L12 21l4.5-4H20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg></button>
       </div>
       <div class="bible-selection-actions bible-selection-primary-actions" id="bible-graphic-actions" hidden>
         <button type="button" id="bible-share-graphic" aria-expanded="false" disabled>Choose design</button>
@@ -397,6 +400,7 @@
       .replace(/<S>.*?<\/S>/gi, "")
       .replace(/<[^>]*>/g, "")
       .replace(/\s+/g, " ")
+      .replace(/"([^"]*)"/g, "“$1”")
       .trim();
   }
 
@@ -443,6 +447,7 @@
 
   function updateSearchBooksVisibility() {
     const showBooks = searchScope.value === "selected";
+    searchScopeSummary.textContent = searchScope.selectedOptions[0]?.textContent || "Entire Bible";
     searchBooksField.hidden = !showBooks;
     if (showBooks && searchBooksSelect.selectedOptions.length === 0) {
       const currentBookId = books.indexOf(findBook(bookSelect.value)) + 1;
@@ -859,10 +864,10 @@
     }
     try {
       await copyText(text);
-      selectionStatus.textContent = "Passage copied.";
+      selectionStatus.textContent = "Scripture copied.";
       trackAnalyticsEvent("bible_passage_copy", selectedAnalyticsPayload());
     } catch (error) {
-      selectionStatus.textContent = "Could not copy automatically. Please select and copy the passage manually.";
+      selectionStatus.textContent = "Could not copy automatically. Please select and copy the Scripture manually.";
     }
   }
 
@@ -899,13 +904,13 @@
         trackAnalyticsEvent("bible_passage_share", selectedAnalyticsPayload());
       } catch (error) {
         if (error.name !== "AbortError") {
-          selectionStatus.textContent = "Could not open the share sheet. The passage is still selected.";
+          selectionStatus.textContent = "Could not open the share sheet. The Scripture is still selected.";
         }
       }
       return;
     }
     await copySelectedPassage();
-    selectionStatus.textContent = "Sharing is not available in this browser, so the passage was copied instead.";
+    selectionStatus.textContent = "Sharing is not available in this browser, so the Scripture was copied instead.";
   }
 
   function prefersNativeSocialShare() {
@@ -938,9 +943,9 @@
     shareWindow.focus();
     try {
       await copyText(selectedPassageText());
-      selectionStatus.textContent = "Facebook opened and the passage was copied. Paste it into the post, then publish.";
+      selectionStatus.textContent = "Facebook opened and the Scripture was copied. Paste it into the post, then publish.";
     } catch (error) {
-      selectionStatus.textContent = "Facebook opened with the Word Oasis passage link. Add the verse text before publishing.";
+      selectionStatus.textContent = "Facebook opened with the Word Oasis Scripture link. Add the verse text before publishing.";
     }
     trackAnalyticsEvent("bible_passage_social_share", {
       ...selectedAnalyticsPayload(),
@@ -964,7 +969,7 @@
     socialShareButtons.forEach((button) => {
       button.setAttribute(
         "aria-label",
-        `Share passage as ${graphicMode ? "graphic" : "text"} on ${button.dataset.bibleSharePlatform}`
+        `Share Scripture as ${graphicMode ? "graphic" : "text"} on ${button.dataset.bibleSharePlatform}`
       );
     });
     if (!graphicMode) {
@@ -999,10 +1004,10 @@
       return;
     } else {
       await copySelectedPassage();
-      selectionStatus.textContent = "Passage copied. Paste it into Instagram.";
+      selectionStatus.textContent = "Scripture copied. Paste it into Instagram.";
       return;
     }
-    selectionStatus.textContent = `Opening ${platform} with the selected passage.`;
+    selectionStatus.textContent = `Opening ${platform} with the selected Scripture.`;
     trackAnalyticsEvent("bible_passage_social_share", {
       ...selectedAnalyticsPayload(),
       social_platform: platform.toLowerCase()
@@ -1386,6 +1391,11 @@
 
   async function loadSelectedChapter() {
     const { book, chapter, translation } = selectedState();
+    try {
+      window.localStorage.setItem(translationStorageKey, translation.id);
+    } catch (error) {
+      console.warn("Could not save the Bible version preference.", error);
+    }
     populateChapterSelect(book, chapter);
     renderChapterButtons(book, chapter);
 
@@ -1442,7 +1452,16 @@
     const params = new URLSearchParams(window.location.search);
     const initialBook = findBook(params.get("book") || "John");
     const initialChapter = sanitizeChapter(initialBook, params.get("chapter") || "3");
-    const initialTranslation = findTranslation(params.get("translation") || "web");
+    let storedTranslation = "web";
+    try {
+      storedTranslation =
+        window.localStorage.getItem(translationStorageKey)
+        || window.localStorage.getItem(legacyTranslationStorageKey)
+        || "web";
+    } catch (error) {
+      storedTranslation = "web";
+    }
+    const initialTranslation = findTranslation(params.get("translation") || storedTranslation);
     const initialVerse = Number.parseInt(params.get("verse"), 10);
     initialSearchQuery = (params.get("q") || params.get("search") || "").trim();
 

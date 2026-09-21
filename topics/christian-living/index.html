@@ -40,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261058">
+    <link rel="stylesheet" href="/styles.css?v=20261076">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Christian Living Bible Answers | Word Oasis">
     <meta property="og:description" content="Browse Scripture-based answers about christian living from Word Oasis, with Bible references for further study.">
@@ -72,12 +72,19 @@
         <ul id="primary-menu" class="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/answers/">Answers</a></li>
-          <li><a href="/topics/">Topics</a></li>
+          <li><a href="/topics/" aria-current="page">Topics</a></li>
           <li><a href="/bible/">Bible</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/#ask">Ask a question</a></li>
           <li class="nav-search-item">
-            <form class="nav-search" action="/" method="get" role="search">
+            <form class="nav-search" action="/" method="get" role="search" data-nav-search>
+              <button class="nav-search-toggle" type="button" aria-expanded="false" aria-controls="nav-search-fields" aria-label="Search Bible answers">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-4-4"></path>
+                </svg>
+              </button>
+              <div class="nav-search-fields" id="nav-search-fields">
               <label class="sr-only" for="nav-search-input">Search Bible questions</label>
               <input
                 id="nav-search-input"
@@ -86,7 +93,8 @@
                 placeholder="Search"
                 autocomplete="off"
               >
-              <button type="submit" aria-label="Submit search">Search</button>
+              <button class="nav-search-submit" type="submit" aria-label="Submit search">Search</button>
+              </div>
             </form>
           </li>
           <li class="nav-theme-item">
@@ -118,176 +126,138 @@
       <section class="page-hero">
         <div class="container">
           <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/topics/">Topics</a> / Christian Living</nav>
-          <p class="eyebrow">Topic</p>
-          <h1>Christian Living Bible answers</h1>
-          <p class="page-intro">Read clear Bible answers related to christian living, with Scripture references for each question.</p>
+          <div class="topic-page-heading">
+            <span class="topic-page-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+    <path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"></path>
+    <path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"></path>
+    <path d="M16 17h4"></path>
+    <path d="M4 13h4"></path>
+  </svg></span>
+            <div>
+              <p class="eyebrow">Topic</p>
+              <h1>Christian Living Bible answers</h1>
+              <p class="page-intro">Obedience, holiness, daily discipleship. Explore 16 Scripture-based answers.</p>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-soft">
         <div class="container">
-          <ul class="answer-list-page">
+          <div class="topic-answer-grid">
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-gospel/">What is the gospel?</a></h2>
-                    <p>The gospel is the good news of God's infinite love to humanity, through the life, sacrifice, and righteousness of Jesus Christ as our only hope of eternal life. It restores the image of God in the soul and offers salvation as a free gift received by faith.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Christian Living</span>
+                    <h2><a class="directory-answer-title" href="/answers/can-i-lose-my-salvation/">Can I Lose My Salvation?</a></h2>
+                    <p>Scripture gives strong promises of God's keeping power, but it also repeatedly warns believers against turning away from Christ. The Bible therefore calls believers to continue in faith rather than treating salvation as permission to abandon Christ.</p>
+                    <a class="directory-read-more" href="/answers/can-i-lose-my-salvation/" aria-label="Read the full answer to Can I Lose My Salvation?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-can-i-understand-the-bible-better/">How can I understand the Bible better?</a></h2>
-                    <p>Read prayerfully, pay attention to context, compare Scripture with Scripture, and apply what you learn. A helpful pattern is observation, interpretation, and application.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Christian Living</span>
+                    <h2><a class="directory-answer-title" href="/answers/how-do-you-fight-spiritual-warfare/">How Do You Fight Spiritual Warfare?</a></h2>
+                    <p>The Bible teaches believers to resist Satan by submitting to God, standing in truth and faith, using God's Word, praying, and remaining spiritually watchful.</p>
+                    <a class="directory-read-more" href="/answers/how-do-you-fight-spiritual-warfare/" aria-label="Read the full answer to How Do You Fight Spiritual Warfare?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-the-sabbath-still-important-for-christians/">Is the Sabbath still important for Christians?</a></h2>
-                    <p>The Sabbath points back to creation, honors God's commandments, and offers a weekly rhythm of worship, rest, mercy, and delight in the Lord. Jesus kept the Sabbath and taught that it was made as a blessing for humanity.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Christian Living</span>
+                    <h2><a class="directory-answer-title" href="/answers/can-christians-keep-gods-commandments/">Can Christians Keep God's Commandments?</a></h2>
+                    <p>Yes, Christians can obey God's commandments through God's transforming grace. Scripture does not teach sinless perfection achieved through human effort, but it does teach that the Holy Spirit enables obedience.</p>
+                    <a class="directory-read-more" href="/answers/can-christians-keep-gods-commandments/" aria-label="Read the full answer to Can Christians Keep God's Commandments?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-role-do-gods-commandments-have-in-the-christian-life/">What role do God's commandments have in the Christian life?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Christian Living</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-the-bible-say-about-forgiveness/">What Does the Bible Say About Forgiveness?</a></h2>
+                    <p>The Bible teaches that God offers forgiveness through Christ and calls His people to forgive others.</p>
+                    <a class="directory-read-more" href="/answers/what-does-the-bible-say-about-forgiveness/" aria-label="Read the full answer to What Does the Bible Say About Forgiveness?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Christian Living</span>
+                    <h2><a class="directory-answer-title" href="/answers/how-do-i-forgive-someone-who-hurt-me/">How Do I Forgive Someone Who Hurt Me?</a></h2>
+                    <p>The Bible calls us to forgive as God has forgiven us, refuse personal revenge, pray for enemies, and leave ultimate judgment with God.</p>
+                    <a class="directory-read-more" href="/answers/how-do-i-forgive-someone-who-hurt-me/" aria-label="Read the full answer to How Do I Forgive Someone Who Hurt Me?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Christian Living</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-the-bible-say-about-love/">What Does the Bible Say About Love?</a></h2>
+                    <p>Biblical love is more than emotion. It seeks another person's good, is patient and truthful, sacrifices, forgives, and remains faithful.</p>
+                    <a class="directory-read-more" href="/answers/what-does-the-bible-say-about-love/" aria-label="Read the full answer to What Does the Bible Say About Love?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Christian Living</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-the-bible-say-about-homosexuality/">What Does the Bible Say About Homosexuality?</a></h2>
+                    <p>The Bible consistently presents sexual intimacy within the male-female marriage relationship and contains several passages that explicitly address same-sex sexual behavior.</p>
+                    <a class="directory-read-more" href="/answers/what-does-the-bible-say-about-homosexuality/" aria-label="Read the full answer to What Does the Bible Say About Homosexuality?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Christian Living</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-the-bible-say-about-tattoos/">What Does the Bible Say About Tattoos?</a></h2>
+                    <p>The Bible contains one direct prohibition against tattoo-like markings in Leviticus 19:28. Christians differ over how this command applies under the new covenant, but the passage should not be ignored.</p>
+                    <a class="directory-read-more" href="/answers/what-does-the-bible-say-about-tattoos/" aria-label="Read the full answer to What Does the Bible Say About Tattoos?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Christian Living</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-role-do-gods-commandments-have-in-the-christian-life/">What role do God's commandments have in the Christian life?</a></h2>
                     <p>The Bible teaches that we are saved by grace through faith, not by earning God's favor. At the same time, God's commandments reveal His character and guide the grateful obedience of those who love Him.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-role-do-gods-commandments-have-in-the-christian-life/" aria-label="Read the full answer to What role do God's commandments have in the Christian life?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/does-god-care-about-my-physical-health/">Does God care about my physical health?</a></h2>
-                    <p>The Bible presents the body as belonging to God and calls believers to honor Him in every part of life. Caring for health is not a way to earn salvation; it is a grateful response to God's desire to restore the whole person.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-should-parents-raise-their-children-according-to-the-bible/">How should parents raise their children according to the Bible?</a></h2>
-                    <p>Scripture calls parents to teach children about God consistently, discipline with love rather than anger, and model a life of faith at home so children grow up knowing and trusting the Lord.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-about-money-and-stewardship/">What does the Bible say about money and stewardship?</a></h2>
-                    <p>The Bible teaches that everything belongs to God and believers are stewards, not owners, of their time, talents, and resources. Faithful giving, honesty, and contentment flow from trusting God's provision.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-is-the-church-important/">Why is the church important?</a></h2>
-                    <p>The church is the community of believers united in Christ for worship, teaching, fellowship, encouragement, and mission. Scripture calls believers not to neglect gathering together as one body.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-can-i-overcome-temptation/">How can I overcome temptation?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Christian Living</span>
+                    <h2><a class="directory-answer-title" href="/answers/how-can-i-overcome-temptation/">How can I overcome temptation?</a></h2>
                     <p>The Bible promises that God provides a way of escape from every temptation and that His strength, not willpower alone, enables believers to resist sin and grow in godliness.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/how-can-i-overcome-temptation/" aria-label="Read the full answer to How can I overcome temptation?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-should-i-do-when-i-struggle-with-doubt/">What should I do when I struggle with doubt?</a></h2>
-                    <p>Doubt is not condemned in Scripture; honest questions can be brought to God. Faith grows through seeking answers, remembering God's past faithfulness, and staying in community.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-can-i-know-gods-will-for-my-life/">How can I know God's will for my life?</a></h2>
-                    <p>God guides through Scripture, prayer, wise counsel, and the quiet leading of the Holy Spirit. Most of His will is already revealed; specific decisions are made trusting His care.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-are-spiritual-gifts-and-how-do-i-find-mine/">What are spiritual gifts and how do I find mine?</a></h2>
-                    <p>Spiritual gifts are abilities given by the Holy Spirit to build up the church. Every believer receives at least one, meant to be discovered and used in service to others.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-teach-about-fasting/">What does the Bible teach about fasting?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Christian Living</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-the-bible-teach-about-fasting/">What does the Bible teach about fasting?</a></h2>
                     <p>Fasting is voluntarily setting aside food (or other things) for a time to focus more fully on prayer and seeking God, not a way to manipulate God or earn favor.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-does-the-bible-teach-about-fasting/" aria-label="Read the full answer to What does the Bible teach about fasting?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-the-church-share-the-gospel-with-others/">Why does the church share the gospel with others?</a></h2>
-                    <p>Jesus commissioned His followers to share the good news with everyone, everywhere, because the gospel is meant to be shared, not kept private, out of love for others.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/does-the-bible-say-anything-about-work-and-career/">Does the Bible say anything about work and career?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Christian Living</span>
+                    <h2><a class="directory-answer-title" href="/answers/does-the-bible-say-anything-about-work-and-career/">Does the Bible say anything about work and career?</a></h2>
                     <p>Work is part of God's original design, meant to be done with integrity and diligence as service to God, not merely to people, regardless of the type of job.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/does-the-bible-say-anything-about-work-and-career/" aria-label="Read the full answer to Does the Bible say anything about work and career?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-should-i-handle-anger-according-to-the-bible/">How should I handle anger according to the Bible?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Christian Living</span>
+                    <h2><a class="directory-answer-title" href="/answers/how-should-i-handle-anger-according-to-the-bible/">How should I handle anger according to the Bible?</a></h2>
                     <p>Anger itself is not automatically sinful, but Scripture warns against letting it control actions or linger unresolved, urging quick reconciliation and self-control instead.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/how-should-i-handle-anger-according-to-the-bible/" aria-label="Read the full answer to How should I handle anger according to the Bible?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-purpose-of-gods-law/">What is the purpose of God's law?</a></h2>
-                    <p>God's law reveals His character, shows what love for God and others looks like, and helps us recognize sin. We are not saved by keeping the law; we obey because God's grace has already reached us.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/are-women-permitted-to-serve-as-pastors-or-elders-according-to-scripture/">Are women permitted to serve as pastors or elders according to scripture?</a></h2>
-                    <p>Scripture reserves the governing and teaching office of pastor, elder, or overseer for qualified men. This distinction does not diminish women, who share equal worth in Christ and are called to vital ministries of prayer, discipleship, teaching other women and children, evangelism, mercy, hospitality, and service according to their spiritual gifts.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-self-pleasure-considered-a-sin-in-the-eyes-of-biblical-scripture/">Is self-pleasure considered a sin in the eyes of biblical scripture?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Christian Living</span>
+                    <h2><a class="directory-answer-title" href="/answers/is-self-pleasure-considered-a-sin-in-the-eyes-of-biblical-scripture/">Is self-pleasure considered a sin in the eyes of biblical scripture?</a></h2>
                     <p>Scripture never names this act directly, but it repeatedly calls believers to guard the heart and mind from lust, to practice self-control, and to honor the body as a temple of the Holy Spirit. This is an area for honest, grace-filled reflection rather than fear or shame.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/is-self-pleasure-considered-a-sin-in-the-eyes-of-biblical-scripture/" aria-label="Read the full answer to Is self-pleasure considered a sin in the eyes of biblical scripture?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/does-scripture-forbid-consuming-alcohol-or-is-moderate-drinking-acceptable-for-christians/">Does scripture forbid consuming alcohol, or is moderate drinking acceptable for Christians?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Christian Living</span>
+                    <h2><a class="directory-answer-title" href="/answers/does-scripture-forbid-consuming-alcohol-or-is-moderate-drinking-acceptable-for-christians/">Does scripture forbid consuming alcohol, or is moderate drinking acceptable for Christians?</a></h2>
                     <p>Scripture consistently and strongly warns against drunkenness and the dangers wine and strong drink bring, and even commends avoiding alcohol altogether as the wisest path. Because the body is a temple of the Holy Spirit meant to stay clear-headed for prayer, service, and self-control, abstaining entirely is the safest and most consistent application of these principles.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/does-scripture-forbid-consuming-alcohol-or-is-moderate-drinking-acceptable-for-christians/" aria-label="Read the full answer to Does scripture forbid consuming alcohol, or is moderate drinking acceptable for Christians?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-participating-in-gambling-or-games-of-chance-considered-a-sin/">Is participating in gambling or games of chance considered a sin?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Christian Living</span>
+                    <h2><a class="directory-answer-title" href="/answers/is-participating-in-gambling-or-games-of-chance-considered-a-sin/">Is participating in gambling or games of chance considered a sin?</a></h2>
                     <p>The Bible never mentions gambling by name, but its consistent principles — trusting God's providence rather than chance, working honestly for what you have, contentment, and guarding against the love of money — all caution strongly against it.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/is-participating-in-gambling-or-games-of-chance-considered-a-sin/" aria-label="Read the full answer to Is participating in gambling or games of chance considered a sin?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-do-law-and-grace-work-together-in-the-christian-life/">How do law and grace work together in the Christian life?</a></h2>
-                    <p>Grace saves sinners through faith in Christ, while God's law shows what love looks like. Obedience is the fruit of salvation, not the price paid to receive it.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-can-i-be-ready-for-the-second-coming-of-jesus/">How can I be ready for the Second Coming of Jesus?</a></h2>
-                    <p>Readiness for Jesus' return is not date-setting or fear. It is an active relationship with Christ that shows itself in faith, watchfulness, obedience, service, and hope.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-to-someone-struggling-with-depression/">What does the Bible say to someone struggling with depression?</a></h2>
-                    <p>Scripture gives room for deep sorrow while pointing the hurting person toward God's nearness, honest prayer, supportive community, and patient hope.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/does-the-bible-still-distinguish-between-clean-and-unclean-foods/">Does the Bible still distinguish between clean and unclean foods?</a></h2>
-                    <p>Scripture identifies clean and unclean animals before Sinai and connects wise eating with holiness, health, and honoring God with the body.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-can-a-family-worship-god-together-at-home/">How can a family worship God together at home?</a></h2>
-                    <p>Family worship can be simple: read Scripture, pray together, sing or share gratitude, and talk about how God's Word applies to daily life.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-is-daily-bible-reading-important/">Why is daily Bible reading important?</a></h2>
-                    <p>Daily Bible reading keeps the heart rooted in God's voice, renews the mind, strengthens faith, and gives wisdom for ordinary decisions.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-the-bible-call-the-body-a-temple-and-does-it-affect-daily-choices/">Why does the Bible call the body a temple, and does it affect daily choices?</a></h2>
-                    <p>Because the Holy Spirit dwells within believers, Scripture calls the body a temple, inviting care for physical health as part of honoring God, not as a means of earning salvation.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/do-i-need-to-be-baptized-before-taking-communion/">Do I need to be baptized before taking communion?</a></h2>
-                    <p>Communion in the New Testament is shared among believers who have already publicly identified with Christ, so baptism naturally comes first as the entry point into that shared fellowship.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-biblical-stewardship-mean-beyond-just-money/">What does biblical stewardship mean beyond just money?</a></h2>
-                    <p>Stewardship covers everything entrusted to us — time, abilities, health, relationships, and possessions — and calls believers to manage all of it faithfully as caretakers, not owners.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-are-spiritual-gifts-and-how-do-i-know-mine/">What are spiritual gifts, and how do I know mine?</a></h2>
-                    <p>Spiritual gifts are Spirit-given abilities distributed to believers to build up the church, discovered through serving, prayerful reflection, and the confirmation of a faith community.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-the-church-need-organization-and-leadership-if-faith-is-personal/">Why does the church need organization and leadership if faith is personal?</a></h2>
-                    <p>Scripture treats the church as a body with different members and roles working together, so structure and leadership exist to serve unity and mission, not to replace a believer's personal relationship with God.</p>
-                  </li>
-
-          </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -353,14 +323,22 @@
             &times;
           </button>
         </div>
+        <div class="verse-modal-toolbar">
+          <label for="verse-modal-translation">Bible version</label>
+          <select id="verse-modal-translation">
+            <option value="web">WEB - World English Bible</option>
+            <option value="kjv">KJV - King James Version</option>
+            <option value="asv">ASV - American Standard Version</option>
+          </select>
+        </div>
         <div class="verse-modal-body" id="verse-modal-body"></div>
       </div>
     </div>
 
-    <script src="/theme.js?v=20261058"></script>
-    <script src="/pwa.js?v=20261058"></script>
-    <script src="/scripture-graphic.js?v=20261058"></script>
-    <script src="/local-library.js?v=20261058"></script>
-    <script src="/verse-modal.js?v=20261058"></script>
+    <script src="/theme.js?v=20261073"></script>
+    <script src="/pwa.js?v=20261073"></script>
+    <script src="/scripture-graphic.js?v=20261073"></script>
+    <script src="/local-library.js?v=20261073"></script>
+    <script src="/verse-modal.js?v=20261073"></script>
   </body>
 </html>

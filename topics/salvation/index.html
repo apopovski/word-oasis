@@ -40,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261058">
+    <link rel="stylesheet" href="/styles.css?v=20261076">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Salvation Bible Answers | Word Oasis">
     <meta property="og:description" content="Browse Scripture-based answers about salvation from Word Oasis, with Bible references for further study.">
@@ -72,12 +72,19 @@
         <ul id="primary-menu" class="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/answers/">Answers</a></li>
-          <li><a href="/topics/">Topics</a></li>
+          <li><a href="/topics/" aria-current="page">Topics</a></li>
           <li><a href="/bible/">Bible</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/#ask">Ask a question</a></li>
           <li class="nav-search-item">
-            <form class="nav-search" action="/" method="get" role="search">
+            <form class="nav-search" action="/" method="get" role="search" data-nav-search>
+              <button class="nav-search-toggle" type="button" aria-expanded="false" aria-controls="nav-search-fields" aria-label="Search Bible answers">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-4-4"></path>
+                </svg>
+              </button>
+              <div class="nav-search-fields" id="nav-search-fields">
               <label class="sr-only" for="nav-search-input">Search Bible questions</label>
               <input
                 id="nav-search-input"
@@ -86,7 +93,8 @@
                 placeholder="Search"
                 autocomplete="off"
               >
-              <button type="submit" aria-label="Submit search">Search</button>
+              <button class="nav-search-submit" type="submit" aria-label="Submit search">Search</button>
+              </div>
             </form>
           </li>
           <li class="nav-theme-item">
@@ -118,186 +126,213 @@
       <section class="page-hero">
         <div class="container">
           <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/topics/">Topics</a> / Salvation</nav>
-          <p class="eyebrow">Topic</p>
-          <h1>Salvation Bible answers</h1>
-          <p class="page-intro">Read clear Bible answers related to salvation, with Scripture references for each question.</p>
+          <div class="topic-page-heading">
+            <span class="topic-page-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+    <path d="M12 2v20"></path>
+    <path d="M5 8h14"></path>
+  </svg></span>
+            <div>
+              <p class="eyebrow">Topic</p>
+              <h1>Salvation Bible answers</h1>
+              <p class="page-intro">Grace, faith, repentance, eternal life. Explore 27 Scripture-based answers.</p>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-soft">
         <div class="container">
-          <ul class="answer-list-page">
+          <div class="topic-answer-grid">
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-saved-by-grace-mean/">What Does "Saved by Grace" Mean?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/who-is-jesus/">Who Is Jesus?</a></h2>
+                    <p>Jesus Christ is the Son of God, the promised Messiah, the Creator, Savior, and coming King. He became human, lived a sinless life, died for humanity's sins, rose from the dead, and will return to establish His eternal kingdom.</p>
+                    <a class="directory-read-more" href="/answers/who-is-jesus/" aria-label="Read the full answer to Who Is Jesus?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/why-did-jesus-die/">Why Did Jesus Die?</a></h2>
+                    <p>Jesus died to save humanity from sin. Scripture teaches that His death was a sacrifice for our sins, demonstrated God's love, satisfied the demands of justice, reconciled sinners to God, and opened the way to eternal life.</p>
+                    <a class="directory-read-more" href="/answers/why-did-jesus-die/" aria-label="Read the full answer to Why Did Jesus Die?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/why-did-jesus-have-to-die/">Why Did Jesus Have to Die?</a></h2>
+                    <p>Jesus' death was necessary because sin brings death, God's law reveals the seriousness of sin, and humanity could not save itself. Christ voluntarily took upon Himself the consequences of sin and provided redemption for sinners.</p>
+                    <a class="directory-read-more" href="/answers/why-did-jesus-have-to-die/" aria-label="Read the full answer to Why Did Jesus Have to Die?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-did-jesus-accomplish-on-the-cross/">What Did Jesus Accomplish on the Cross?</a></h2>
+                    <p>At the cross, Jesus bore the sins of humanity, provided the basis for forgiveness, demonstrated God's love and righteousness, defeated Satan's accusations, reconciled sinners to God, and opened the way to eternal life.</p>
+                    <a class="directory-read-more" href="/answers/what-did-jesus-accomplish-on-the-cross/" aria-label="Read the full answer to What Did Jesus Accomplish on the Cross?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/did-jesus-really-rise-from-the-dead/">Did Jesus Really Rise From the Dead?</a></h2>
+                    <p>Yes. The Bible presents the resurrection of Jesus as a literal historical event and as the foundation of Christian faith. Jesus was crucified, buried, and physically raised from the dead on the third day.</p>
+                    <a class="directory-read-more" href="/answers/did-jesus-really-rise-from-the-dead/" aria-label="Read the full answer to Did Jesus Really Rise From the Dead?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/how-can-i-be-saved/">How Can I Be Saved?</a></h2>
+                    <p>You are saved by God's grace through faith in Jesus Christ. Scripture calls you to believe in Christ, repent of your sins, confess Him, receive His forgiveness, and follow Him in a life of faith and obedience. Salvation is God's gift. It cannot be earned by human merit or good works.</p>
+                    <a class="directory-read-more" href="/answers/how-can-i-be-saved/" aria-label="Read the full answer to How Can I Be Saved?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-must-i-do-to-be-saved/">What Must I Do to Be Saved?</a></h2>
+                    <p>The Bible answers this question by pointing to Jesus Christ. We are called to believe in Him, repent, receive His forgiveness, confess Him, and follow Him. When asked this exact question, Paul answered, “Believe on the Lord Jesus Christ” (Acts 16:30-31).</p>
+                    <a class="directory-read-more" href="/answers/what-must-i-do-to-be-saved/" aria-label="Read the full answer to What Must I Do to Be Saved?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-salvation/">What Is Salvation?</a></h2>
+                    <p>Biblical salvation is God's rescue of humanity from sin, its consequences, and ultimately death. Salvation includes forgiveness, justification, reconciliation with God, transformation of character, and ultimately eternal life in God's kingdom.</p>
+                    <a class="directory-read-more" href="/answers/what-is-salvation/" aria-label="Read the full answer to What Is Salvation?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/how-do-i-get-to-heaven/">How Do I Get to Heaven?</a></h2>
+                    <p>The Bible teaches that eternal life comes through Jesus Christ, not through human merit. We receive salvation by God's grace through faith in Christ, and genuine faith produces a transformed life of obedience.</p>
+                    <a class="directory-read-more" href="/answers/how-do-i-get-to-heaven/" aria-label="Read the full answer to How Do I Get to Heaven?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-it-mean-to-be-born-again/">What Does It Mean to Be Born Again?</a></h2>
+                    <p>To be born again means to experience spiritual renewal through the Holy Spirit. Jesus taught that entrance into God's kingdom requires a new birth that is spiritual rather than merely physical.</p>
+                    <a class="directory-read-more" href="/answers/what-does-it-mean-to-be-born-again/" aria-label="Read the full answer to What Does It Mean to Be Born Again?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/are-we-saved-by-faith-or-works/">Are We Saved by Faith or Works?</a></h2>
+                    <p>Scripture teaches that we are saved by grace through faith, not by earning salvation through works. At the same time, genuine faith produces obedience and good works. Faith and works therefore have different roles.</p>
+                    <a class="directory-read-more" href="/answers/are-we-saved-by-faith-or-works/" aria-label="Read the full answer to Are We Saved by Faith or Works?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-saved-by-grace-mean/">What Does “Saved by Grace” Mean?</a></h2>
                     <p>Being saved by grace means that salvation is God's undeserved gift. We cannot earn forgiveness or eternal life through our own goodness. God saves us because of His mercy and the work of Jesus Christ, and we receive that salvation through faith.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-does-saved-by-grace-mean/" aria-label="Read the full answer to What Does “Saved by Grace” Mean?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-once-saved-always-saved-biblical/">Is "Once Saved, Always Saved" Biblical?</a></h2>
-                    <p>The phrase "once saved, always saved" does not appear in Scripture. The Bible gives strong assurance of God's ability to preserve believers, but it also contains warnings against abandoning faith in Christ. The biblical emphasis is perseverance in faith and continued dependence upon Christ.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/can-i-lose-my-salvation/">Can I Lose My Salvation?</a></h2>
+                    <p>Scripture gives strong promises of God's keeping power, but it also repeatedly warns believers against turning away from Christ. The Bible therefore calls believers to continue in faith rather than treating salvation as permission to abandon Christ.</p>
+                    <a class="directory-read-more" href="/answers/can-i-lose-my-salvation/" aria-label="Read the full answer to Can I Lose My Salvation?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-new-birth/">What Is the New Birth?</a></h2>
-                    <p>The new birth is the spiritual transformation God produces through the Holy Spirit. Jesus taught that a person must be "born again" to see or enter the kingdom of God.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/is-once-saved-always-saved-biblical/">Is “Once Saved, Always Saved” Biblical?</a></h2>
+                    <p>The phrase “once saved, always saved” does not appear in Scripture. The Bible gives strong assurance of God's ability to preserve believers, but it also contains warnings against abandoning faith in Christ. The biblical emphasis is perseverance in faith and continued dependence upon Christ.</p>
+                    <a class="directory-read-more" href="/answers/is-once-saved-always-saved-biblical/" aria-label="Read the full answer to Is “Once Saved, Always Saved” Biblical?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/do-you-go-to-heaven-when-you-die/">Do You Go to Heaven When You Die?</a></h2>
-                    <p>Scripture's emphasis is not that the righteous immediately go to heaven at death. The Bible repeatedly points believers toward the resurrection at Christ's second coming as the time when the dead in Christ receive immortal life.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/how-do-i-know-i-am-saved/">How Do I Know I Am Saved?</a></h2>
+                    <p>The Bible points believers to faith in Jesus Christ, the promises of God's Word, the witness of the Holy Spirit, and the transforming fruit of a relationship with Christ. Assurance is based primarily on Christ and God's promises, not on fluctuating emotions.</p>
+                    <a class="directory-read-more" href="/answers/how-do-i-know-i-am-saved/" aria-label="Read the full answer to How Do I Know I Am Saved?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/when-will-the-dead-be-resurrected/">When Will the Dead Be Resurrected?</a></h2>
-                    <p>The righteous dead will be resurrected at the second coming of Jesus Christ. Scripture also describes a later resurrection of the wicked for final judgment.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/can-god-forgive-my-sins/">Can God Forgive My Sins?</a></h2>
+                    <p>Yes. Scripture repeatedly promises forgiveness to those who confess and turn to God. No sin is beyond God's ability to forgive when a person genuinely comes to Him in repentance and faith.</p>
+                    <a class="directory-read-more" href="/answers/can-god-forgive-my-sins/" aria-label="Read the full answer to Can God Forgive My Sins?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-the-bible-historically-accurate/">Is the Bible Historically Accurate?</a></h2>
-                    <p>The Bible presents itself as historical testimony, not merely religious mythology. Its writers frequently identify people, places, rulers, events, witnesses, and genealogies as part of real history.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-repentance/">What Is Repentance?</a></h2>
+                    <p>Biblical repentance means turning away from sin and turning toward God. It involves recognizing sin, experiencing genuine sorrow over it, confessing it, and choosing to follow God.</p>
+                    <a class="directory-read-more" href="/answers/what-is-repentance/" aria-label="Read the full answer to What Is Repentance?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/are-there-contradictions-in-the-bible/">Are There Contradictions in the Bible?</a></h2>
-                    <p>The Bible contains difficult passages and accounts that sometimes appear different when compared with one another. But an apparent difference is not necessarily a contradiction.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-it-mean-to-repent/">What Does It Mean to Repent?</a></h2>
+                    <p>To repent means to turn from sin toward God. Biblical repentance involves a change of heart and direction, not merely regret over getting caught or suffering consequences.</p>
+                    <a class="directory-read-more" href="/answers/what-does-it-mean-to-repent/" aria-label="Read the full answer to What Does It Mean to Repent?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-language-was-the-bible-originally-written-in/">What Language Was the Bible Originally Written In?</a></h2>
-                    <p>The Old Testament was written primarily in Hebrew, with portions in Aramaic. The New Testament was written in Greek.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-conversion/">What Is Conversion?</a></h2>
+                    <p>Conversion is the turning of a person from sin and rebellion toward God through faith in Jesus Christ. It involves a changed heart, a changed direction, and a new relationship with God.</p>
+                    <a class="directory-read-more" href="/answers/what-is-conversion/" aria-label="Read the full answer to What Is Conversion?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-should-i-believe-the-bible/">Why Should I Believe the Bible?</a></h2>
-                    <p>The Bible gives several reasons to believe it: it claims to be God's inspired Word, reveals Jesus Christ, records historical testimony, presents fulfilled prophecy, and calls people to test what they hear against Scripture.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-new-birth/">What Is the New Birth?</a></h2>
+                    <p>The new birth is the spiritual transformation God produces through the Holy Spirit. Jesus taught that a person must be “born again” to see or enter the kingdom of God.</p>
+                    <a class="directory-read-more" href="/answers/what-is-the-new-birth/" aria-label="Read the full answer to What Is the New Birth?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/when-is-jesus-coming-back/">When Is Jesus Coming Back?</a></h2>
-                    <p>The Bible teaches that Jesus Christ will return personally, visibly, and gloriously. However, Jesus specifically said that the exact day and hour of His return are not revealed to human beings.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/is-baptism-necessary-for-salvation/">Is Baptism Necessary for Salvation?</a></h2>
+                    <p>The Bible clearly commands baptism as the normal public response of a believer to the gospel. However, Scripture does not present the water itself as a magical substance that saves. Salvation comes through Christ and is received by faith, while baptism is an important expression of that faith and obedience.</p>
+                    <a class="directory-read-more" href="/answers/is-baptism-necessary-for-salvation/" aria-label="Read the full answer to Is Baptism Necessary for Salvation?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/when-will-jesus-return/">When Will Jesus Return?</a></h2>
-                    <p>The Bible does not reveal the exact date or hour of Christ's second coming. It teaches that the return will occur after the gospel has been proclaimed to the world and that believers should remain ready.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/can-you-be-saved-without-baptism/">Can You Be Saved Without Baptism?</a></h2>
+                    <p>Yes, Scripture provides circumstances in which salvation is not dependent upon a person's ability to receive baptism. However, the Bible also clearly commands baptism for believers who have the opportunity to obey Christ.</p>
+                    <a class="directory-read-more" href="/answers/can-you-be-saved-without-baptism/" aria-label="Read the full answer to Can You Be Saved Without Baptism?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-abomination-of-desolation/">What Is the Abomination of Desolation?</a></h2>
-                    <p>The "abomination of desolation" is a prophetic expression used by Daniel and quoted by Jesus. It refers to a profaning or desolating power associated with opposition to God's worship and sanctuary.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/are-christians-under-the-law/">Are Christians Under the Law?</a></h2>
+                    <p>Christians are not saved by keeping the law, but they are not called to live in lawlessness. They are under God's grace and called to obey Him through faith and love.</p>
+                    <a class="directory-read-more" href="/answers/are-christians-under-the-law/" aria-label="Read the full answer to Are Christians Under the Law?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-rapture/">What Is the Rapture?</a></h2>
-                    <p>The Bible does not use the word "rapture," but it does teach that Christ's followers will be caught up to meet Him in the air when He returns.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-christ-is-the-end-of-the-law-mean/">What Does “Christ Is the End of the Law” Mean?</a></h2>
+                    <p>Romans 10:4 says Christ is “the end of the law,” but this does not necessarily mean Christ abolished God's law. The context concerns righteousness, faith, and the purpose toward which the law points.</p>
+                    <a class="directory-read-more" href="/answers/what-does-christ-is-the-end-of-the-law-mean/" aria-label="Read the full answer to What Does “Christ Is the End of the Law” Mean?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/does-the-bible-teach-a-secret-rapture/">Does the Bible Teach a Secret Rapture?</a></h2>
-                    <p>The Bible teaches that believers will be caught up to meet Christ, but the passages describing Christ's return emphasize that it will be visible, audible, glorious, and accompanied by the resurrection.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-do-christians-worship-on-sunday/">Why Do Christians Worship on Sunday?</a></h2>
-                    <p>Many Christians worship on Sunday because of the association of Sunday with Christ's resurrection and because Sunday worship became established through Christian history and tradition. Scripture itself records some first-day gatherings, but does not command Sunday as the replacement for the seventh-day Sabbath.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-christ-is-the-end-of-the-law-mean/">What Does "Christ Is the End of the Law" Mean?</a></h2>
-                    <p>Romans 10:4 says Christ is "the end of the law," but this does not necessarily mean Christ abolished God's law. The context concerns righteousness, faith, and the purpose toward which the law points.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-god-kill-uzzah/">Why Did God Kill Uzzah?</a></h2>
-                    <p>Uzzah died after touching the Ark of the Covenant, which Israel had transported contrary to God's instructions concerning its handling.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-jesus-say-he-came-to-bring-a-sword/">Why Did Jesus Say He Came to Bring a Sword?</a></h2>
-                    <p>Jesus did not mean that His followers should use physical violence. He meant that His message would create division because people would have to choose whether to accept or reject Him.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/did-jesus-have-brothers-and-sisters/">Did Jesus Have Brothers and Sisters?</a></h2>
-                    <p>The New Testament explicitly mentions Jesus' brothers and sisters. Christians have interpreted their exact relationship to Mary differently, but the biblical references themselves are clear.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-happened-to-elijah/">What Happened to Elijah?</a></h2>
-                    <p>Elijah was taken directly to heaven without experiencing ordinary death. Scripture says he went up "by a whirlwind into heaven."</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-gospel/">What is the gospel?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-gospel/">What is the gospel?</a></h2>
                     <p>The gospel is the good news of God's infinite love to humanity, through the life, sacrifice, and righteousness of Jesus Christ as our only hope of eternal life. It restores the image of God in the soul and offers salvation as a free gift received by faith.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-is-the-gospel/" aria-label="Read the full answer to What is the gospel?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-can-i-know-god-loves-me/">How can I know God loves me?</a></h2>
-                    <p>The clearest demonstration of God's love is the death and resurrection of Jesus Christ for sinners. God's love is also seen in His desire to restore people fully: heart, mind, body, relationships, and future.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/why-does-the-church-share-the-gospel-with-others/">Why does the church share the gospel with others?</a></h2>
+                    <p>Jesus commissioned His followers to share the good news with everyone, everywhere, because the gospel is meant to be shared, not kept private, out of love for others.</p>
+                    <a class="directory-read-more" href="/answers/why-does-the-church-share-the-gospel-with-others/" aria-label="Read the full answer to Why does the church share the gospel with others?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-role-do-gods-commandments-have-in-the-christian-life/">What role do God's commandments have in the Christian life?</a></h2>
-                    <p>The Bible teaches that we are saved by grace through faith, not by earning God's favor. At the same time, God's commandments reveal His character and guide the grateful obedience of those who love Him.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-teach-about-judgment/">What does the Bible teach about judgment?</a></h2>
-                    <p>Judgment shows that God takes evil seriously, vindicates His character, and brings justice with mercy. Believers can face judgment with confidence because Jesus is both Savior and Advocate.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-is-baptism-important/">Why is baptism important?</a></h2>
-                    <p>Baptism is a public expression of faith in Christ, symbolizing His death, burial, and resurrection, and the believer's new life in Him. It follows repentance and a decision to walk with Jesus.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-teach-about-the-sanctuary/">What does the Bible teach about the sanctuary?</a></h2>
-                    <p>The biblical sanctuary illustrates God's plan to dwell with His people and deal with sin. Its services point forward to Jesus, whose sacrifice and heavenly ministry provide forgiveness, cleansing, and access to God.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-baptism-symbolize-in-the-bible/">What does baptism symbolize in the Bible?</a></h2>
-                    <p>Baptism is a public confession of faith in Jesus, symbolizing death to the old life, burial with Christ, and rising to walk in newness of life.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-do-law-and-grace-work-together-in-the-christian-life/">How do law and grace work together in the Christian life?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/how-do-law-and-grace-work-together-in-the-christian-life/">How do law and grace work together in the Christian life?</a></h2>
                     <p>Grace saves sinners through faith in Christ, while God's law shows what love looks like. Obedience is the fruit of salvation, not the price paid to receive it.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/how-do-law-and-grace-work-together-in-the-christian-life/" aria-label="Read the full answer to How do law and grace work together in the Christian life?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-the-sanctuary-message-matter-today/">Why does the sanctuary message matter today?</a></h2>
-                    <p>The sanctuary message matters because it shows how God deals with sin through Christ's sacrifice, priestly ministry, judgment, cleansing, and final restoration.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-meaning-of-the-lords-supper-or-communion/">What is the meaning of the Lord's Supper or Communion?</a></h2>
-                    <p>Communion remembers Christ's sacrifice, proclaims His death, renews faith in His grace, and points forward to His return.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-meaning-of-the-sanctuary-in-the-bible/">What is the meaning of the sanctuary in the Bible?</a></h2>
-                    <p>The Old Testament sanctuary was a visual gospel, teaching how sin is confessed, atoned for, and ultimately removed through the work of Jesus Christ.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-can-i-forgive-myself-after-making-a-serious-mistake/">How can I forgive myself after making a serious mistake?</a></h2>
-                    <p>Self-forgiveness grows out of receiving God's forgiveness fully — trusting that His pardon in Christ is complete, even when guilty feelings linger.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/does-baptism-have-to-be-by-full-immersion-or-is-sprinkling-enough/">Does baptism have to be by full immersion, or is sprinkling enough?</a></h2>
-                    <p>Every New Testament example of baptism describes going down into water and coming up out of it, matching the biblical picture of burial and resurrection with Christ.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-happened-in-the-daily-sanctuary-service-and-why-does-it-matter/">What happened in the daily sanctuary service, and why does it matter?</a></h2>
-                    <p>The daily sacrifices in the sanctuary let individual Israelites confess sin and receive forgiveness through a substitute, foreshadowing Christ's continual ministry on behalf of every believer.</p>
-                  </li>
-
-          </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -363,14 +398,22 @@
             &times;
           </button>
         </div>
+        <div class="verse-modal-toolbar">
+          <label for="verse-modal-translation">Bible version</label>
+          <select id="verse-modal-translation">
+            <option value="web">WEB - World English Bible</option>
+            <option value="kjv">KJV - King James Version</option>
+            <option value="asv">ASV - American Standard Version</option>
+          </select>
+        </div>
         <div class="verse-modal-body" id="verse-modal-body"></div>
       </div>
     </div>
 
-    <script src="/theme.js?v=20261058"></script>
-    <script src="/pwa.js?v=20261058"></script>
-    <script src="/scripture-graphic.js?v=20261058"></script>
-    <script src="/local-library.js?v=20261058"></script>
-    <script src="/verse-modal.js?v=20261058"></script>
+    <script src="/theme.js?v=20261073"></script>
+    <script src="/pwa.js?v=20261073"></script>
+    <script src="/scripture-graphic.js?v=20261073"></script>
+    <script src="/local-library.js?v=20261073"></script>
+    <script src="/verse-modal.js?v=20261073"></script>
   </body>
 </html>

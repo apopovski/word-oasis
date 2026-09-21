@@ -40,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261058">
+    <link rel="stylesheet" href="/styles.css?v=20261076">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Sabbath Bible Answers | Word Oasis">
     <meta property="og:description" content="Browse Scripture-based answers about sabbath from Word Oasis, with Bible references for further study.">
@@ -72,12 +72,19 @@
         <ul id="primary-menu" class="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/answers/">Answers</a></li>
-          <li><a href="/topics/">Topics</a></li>
+          <li><a href="/topics/" aria-current="page">Topics</a></li>
           <li><a href="/bible/">Bible</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/#ask">Ask a question</a></li>
           <li class="nav-search-item">
-            <form class="nav-search" action="/" method="get" role="search">
+            <form class="nav-search" action="/" method="get" role="search" data-nav-search>
+              <button class="nav-search-toggle" type="button" aria-expanded="false" aria-controls="nav-search-fields" aria-label="Search Bible answers">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-4-4"></path>
+                </svg>
+              </button>
+              <div class="nav-search-fields" id="nav-search-fields">
               <label class="sr-only" for="nav-search-input">Search Bible questions</label>
               <input
                 id="nav-search-input"
@@ -86,7 +93,8 @@
                 placeholder="Search"
                 autocomplete="off"
               >
-              <button type="submit" aria-label="Submit search">Search</button>
+              <button class="nav-search-submit" type="submit" aria-label="Submit search">Search</button>
+              </div>
             </form>
           </li>
           <li class="nav-theme-item">
@@ -118,71 +126,123 @@
       <section class="page-hero">
         <div class="container">
           <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/topics/">Topics</a> / Sabbath</nav>
-          <p class="eyebrow">Topic</p>
-          <h1>Sabbath Bible answers</h1>
-          <p class="page-intro">Read clear Bible answers related to sabbath, with Scripture references for each question.</p>
+          <div class="topic-page-heading">
+            <span class="topic-page-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+    <path d="M6.75 3v2.25M17.25 3v2.25"></path>
+    <path d="M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"></path>
+    <text x="12" y="17.4" fill="currentColor" stroke="none" text-anchor="middle" font-size="8" font-weight="800" font-family="Arial, sans-serif">7</text>
+  </svg></span>
+            <div>
+              <p class="eyebrow">Topic</p>
+              <h1>Sabbath Bible answers</h1>
+              <p class="page-intro">Rest, worship, creation, and God's commandments. Explore 14 Scripture-based answers.</p>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-soft">
         <div class="container">
-          <ul class="answer-list-page">
+          <div class="topic-answer-grid">
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/did-the-apostles-keep-the-sabbath/">Did the Apostles Keep the Sabbath?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Sabbath</span>
+                    <h2><a class="directory-answer-title" href="/answers/is-the-sabbath-still-required/">Is the Sabbath Still Required?</a></h2>
+                    <p>The Bible identifies the seventh day as God's Sabbath and never records a command abolishing or transferring the fourth commandment to another day.</p>
+                    <a class="directory-read-more" href="/answers/is-the-sabbath-still-required/" aria-label="Read the full answer to Is the Sabbath Still Required?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Sabbath</span>
+                    <h2><a class="directory-answer-title" href="/answers/is-the-sabbath-still-relevant-today/">Is the Sabbath Still Relevant Today?</a></h2>
+                    <p>Yes. Scripture presents the Sabbath as rooted in creation, included in the Ten Commandments, honored by Jesus, practiced by His followers, and associated with worship of the Creator.</p>
+                    <a class="directory-read-more" href="/answers/is-the-sabbath-still-relevant-today/" aria-label="Read the full answer to Is the Sabbath Still Relevant Today?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Sabbath</span>
+                    <h2><a class="directory-answer-title" href="/answers/was-the-sabbath-only-for-jews/">Was the Sabbath Only for Jews?</a></h2>
+                    <p>No. The Sabbath was established at creation, before the existence of the Jewish nation.</p>
+                    <a class="directory-read-more" href="/answers/was-the-sabbath-only-for-jews/" aria-label="Read the full answer to Was the Sabbath Only for Jews?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Sabbath</span>
+                    <h2><a class="directory-answer-title" href="/answers/did-jesus-keep-the-sabbath/">Did Jesus Keep the Sabbath?</a></h2>
+                    <p>Yes. The Gospels repeatedly show Jesus attending the synagogue and teaching and healing on the Sabbath.</p>
+                    <a class="directory-read-more" href="/answers/did-jesus-keep-the-sabbath/" aria-label="Read the full answer to Did Jesus Keep the Sabbath?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Sabbath</span>
+                    <h2><a class="directory-answer-title" href="/answers/did-the-apostles-keep-the-sabbath/">Did the Apostles Keep the Sabbath?</a></h2>
                     <p>Yes. Acts repeatedly records the apostles teaching and worshiping on the Sabbath.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/did-the-apostles-keep-the-sabbath/" aria-label="Read the full answer to Did the Apostles Keep the Sabbath?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/was-the-sabbath-changed-to-sunday/">Was the Sabbath Changed to Sunday?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Sabbath</span>
+                    <h2><a class="directory-answer-title" href="/answers/was-the-sabbath-changed-to-sunday/">Was the Sabbath Changed to Sunday?</a></h2>
                     <p>The Bible records events occurring on the first day of the week, but it does not record a command changing the seventh-day Sabbath to Sunday.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/was-the-sabbath-changed-to-sunday/" aria-label="Read the full answer to Was the Sabbath Changed to Sunday?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-do-christians-worship-on-sunday/">Why Do Christians Worship on Sunday?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Sabbath</span>
+                    <h2><a class="directory-answer-title" href="/answers/why-do-christians-worship-on-sunday/">Why Do Christians Worship on Sunday?</a></h2>
                     <p>Many Christians worship on Sunday because of the association of Sunday with Christ's resurrection and because Sunday worship became established through Christian history and tradition. Scripture itself records some first-day gatherings, but does not command Sunday as the replacement for the seventh-day Sabbath.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/why-do-christians-worship-on-sunday/" aria-label="Read the full answer to Why Do Christians Worship on Sunday?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/does-the-bible-command-sunday-worship/">Does the Bible Command Sunday Worship?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Sabbath</span>
+                    <h2><a class="directory-answer-title" href="/answers/does-the-bible-command-sunday-worship/">Does the Bible Command Sunday Worship?</a></h2>
                     <p>No explicit biblical command requires Christians to keep Sunday as a holy day.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/does-the-bible-command-sunday-worship/" aria-label="Read the full answer to Does the Bible Command Sunday Worship?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-romans-14-5-mean/">What Does Romans 14:5 Mean?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Sabbath</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-romans-14-5-mean/">What Does Romans 14:5 Mean?</a></h2>
                     <p>Romans 14:5 discusses differences among believers concerning days and must be understood within its immediate context of disputes about eating, drinking, and personal religious observance. The verse does not explicitly mention the weekly Sabbath.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-does-romans-14-5-mean/" aria-label="Read the full answer to What Does Romans 14:5 Mean?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-lords-day-mean-in-the-bible/">What Does "Lord's Day" Mean in the Bible?</a></h2>
-                    <p>Revelation 1:10 says John was "in the Spirit" on "the Lord's day," but the verse itself does not explicitly identify which day of the week John meant.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Sabbath</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-colossians-2-16-mean/">What Does Colossians 2:16 Mean?</a></h2>
+                    <p>Colossians 2:16 warns Christians not to allow others to judge them concerning food, drink, festivals, new moons, or sabbaths. The passage is understood by many Bible readers as referring to the ceremonial calendar and its associated sabbaths because these things were shadows pointing to Christ.</p>
+                    <a class="directory-read-more" href="/answers/what-does-colossians-2-16-mean/" aria-label="Read the full answer to What Does Colossians 2:16 Mean?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-the-sabbath-still-important-for-christians/">Is the Sabbath still important for Christians?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Sabbath</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-hebrews-4-9-mean/">What Does Hebrews 4:9 Mean?</a></h2>
+                    <p>Hebrews 4:9 says: “There remaineth therefore a rest to the people of God” (Hebrews 4:9). The passage connects God's rest with both the seventh-day Sabbath and the spiritual rest found through faith in Christ.</p>
+                    <a class="directory-read-more" href="/answers/what-does-hebrews-4-9-mean/" aria-label="Read the full answer to What Does Hebrews 4:9 Mean?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Sabbath</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-revelation-14-7-mean/">What Does Revelation 14:7 Mean?</a></h2>
+                    <p>Revelation 14:7 announces that the hour of God's judgment has come and calls the world to worship the Creator.</p>
+                    <a class="directory-read-more" href="/answers/what-does-revelation-14-7-mean/" aria-label="Read the full answer to What Does Revelation 14:7 Mean?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Sabbath</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-lords-day-mean-in-the-bible/">What Does “Lord's Day” Mean in the Bible?</a></h2>
+                    <p>Revelation 1:10 says John was “in the Spirit” on “the Lord's day,” but the verse itself does not explicitly identify which day of the week John meant.</p>
+                    <a class="directory-read-more" href="/answers/what-does-lords-day-mean-in-the-bible/" aria-label="Read the full answer to What Does “Lord's Day” Mean in the Bible?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Sabbath</span>
+                    <h2><a class="directory-answer-title" href="/answers/is-the-sabbath-still-important-for-christians/">Is the Sabbath still important for Christians?</a></h2>
                     <p>The Sabbath points back to creation, honors God's commandments, and offers a weekly rhythm of worship, rest, mercy, and delight in the Lord. Jesus kept the Sabbath and taught that it was made as a blessing for humanity.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/is-the-sabbath-still-important-for-christians/" aria-label="Read the full answer to Is the Sabbath still important for Christians?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-role-do-gods-commandments-have-in-the-christian-life/">What role do God's commandments have in the Christian life?</a></h2>
-                    <p>The Bible teaches that we are saved by grace through faith, not by earning God's favor. At the same time, God's commandments reveal His character and guide the grateful obedience of those who love Him.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-teach-about-creation/">What does the Bible teach about creation?</a></h2>
-                    <p>The Bible presents God as the intentional Creator of the heavens, the earth, and humanity in His own image. Creation reveals God's power and care, and it is the foundation for the Sabbath rest.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-message-of-the-first-angel-in-revelation-14/">What is the message of the first angel in Revelation 14?</a></h2>
-                    <p>The first angel calls the world to fear God, give Him glory, and worship the Creator, announcing that the hour of judgment has arrived.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/did-god-really-create-the-world-in-six-literal-days/">Did God really create the world in six literal days?</a></h2>
-                    <p>Scripture describes creation as six literal days followed by a seventh day of rest, a pattern later memorialized in the weekly Sabbath commandment.</p>
-                  </li>
-
-          </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -248,14 +308,22 @@
             &times;
           </button>
         </div>
+        <div class="verse-modal-toolbar">
+          <label for="verse-modal-translation">Bible version</label>
+          <select id="verse-modal-translation">
+            <option value="web">WEB - World English Bible</option>
+            <option value="kjv">KJV - King James Version</option>
+            <option value="asv">ASV - American Standard Version</option>
+          </select>
+        </div>
         <div class="verse-modal-body" id="verse-modal-body"></div>
       </div>
     </div>
 
-    <script src="/theme.js?v=20261058"></script>
-    <script src="/pwa.js?v=20261058"></script>
-    <script src="/scripture-graphic.js?v=20261058"></script>
-    <script src="/local-library.js?v=20261058"></script>
-    <script src="/verse-modal.js?v=20261058"></script>
+    <script src="/theme.js?v=20261073"></script>
+    <script src="/pwa.js?v=20261073"></script>
+    <script src="/scripture-graphic.js?v=20261073"></script>
+    <script src="/local-library.js?v=20261073"></script>
+    <script src="/verse-modal.js?v=20261073"></script>
   </body>
 </html>

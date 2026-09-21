@@ -40,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261058">
+    <link rel="stylesheet" href="/styles.css?v=20261076">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Sanctuary Bible Answers | Word Oasis">
     <meta property="og:description" content="Browse Scripture-based answers about sanctuary from Word Oasis, with Bible references for further study.">
@@ -72,12 +72,19 @@
         <ul id="primary-menu" class="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/answers/">Answers</a></li>
-          <li><a href="/topics/">Topics</a></li>
+          <li><a href="/topics/" aria-current="page">Topics</a></li>
           <li><a href="/bible/">Bible</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/#ask">Ask a question</a></li>
           <li class="nav-search-item">
-            <form class="nav-search" action="/" method="get" role="search">
+            <form class="nav-search" action="/" method="get" role="search" data-nav-search>
+              <button class="nav-search-toggle" type="button" aria-expanded="false" aria-controls="nav-search-fields" aria-label="Search Bible answers">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-4-4"></path>
+                </svg>
+              </button>
+              <div class="nav-search-fields" id="nav-search-fields">
               <label class="sr-only" for="nav-search-input">Search Bible questions</label>
               <input
                 id="nav-search-input"
@@ -86,7 +93,8 @@
                 placeholder="Search"
                 autocomplete="off"
               >
-              <button type="submit" aria-label="Submit search">Search</button>
+              <button class="nav-search-submit" type="submit" aria-label="Submit search">Search</button>
+              </div>
             </form>
           </li>
           <li class="nav-theme-item">
@@ -118,61 +126,85 @@
       <section class="page-hero">
         <div class="container">
           <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/topics/">Topics</a> / Sanctuary</nav>
-          <p class="eyebrow">Topic</p>
-          <h1>Sanctuary Bible answers</h1>
-          <p class="page-intro">Read clear Bible answers related to sanctuary, with Scripture references for each question.</p>
+          <div class="topic-page-heading">
+            <span class="topic-page-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+    <path d="M3 9.75 12 4l9 5.75"></path>
+    <path d="M5.5 10.5v7.5"></path>
+    <path d="M10 10.5v7.5"></path>
+    <path d="M14 10.5v7.5"></path>
+    <path d="M18.5 10.5v7.5"></path>
+    <path d="M3.5 18h17"></path>
+    <path d="M2.5 21h19"></path>
+  </svg></span>
+            <div>
+              <p class="eyebrow">Topic</p>
+              <h1>Sanctuary Bible answers</h1>
+              <p class="page-intro">Christ's ministry, redemption, and the plan of salvation. Explore 8 Scripture-based answers.</p>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-soft">
         <div class="container">
-          <ul class="answer-list-page">
+          <div class="topic-answer-grid">
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-are-cherubim/">What Are Cherubim?</a></h2>
-                    <p>Cherubim are heavenly beings associated with God's presence, glory, and throne.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Sanctuary</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-70-weeks-prophecy/">What Is the 70 Weeks Prophecy?</a></h2>
+                    <p>The 70 weeks prophecy is found in Daniel 9:24-27. It describes a prophetic period concerning Jerusalem, God's people, the coming Messiah, His death, and the ultimate resolution of sin.</p>
+                    <a class="directory-read-more" href="/answers/what-is-the-70-weeks-prophecy/" aria-label="Read the full answer to What Is the 70 Weeks Prophecy?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-abomination-of-desolation/">What Is the Abomination of Desolation?</a></h2>
-                    <p>The "abomination of desolation" is a prophetic expression used by Daniel and quoted by Jesus. It refers to a profaning or desolating power associated with opposition to God's worship and sanctuary.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Sanctuary</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-2300-day-prophecy/">What Is the 2300-Day Prophecy?</a></h2>
+                    <p>Daniel 8:14 says: “Unto two thousand and three hundred days; then shall the sanctuary be cleansed.” A historicist reading understands these prophetic days as 2,300 years and connects the prophecy with the heavenly sanctuary and God's judgment.</p>
+                    <a class="directory-read-more" href="/answers/what-is-the-2300-day-prophecy/" aria-label="Read the full answer to What Is the 2300-Day Prophecy?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/who-was-melchizedek/">Who Was Melchizedek?</a></h2>
-                    <p>Melchizedek was the king of Salem and priest of the Most High God who blessed Abraham. Hebrews later uses him as a prophetic type of Christ's priesthood.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Sanctuary</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-the-bible-teach-about-judgment/">What does the Bible teach about judgment?</a></h2>
+                    <p>Judgment shows that God takes evil seriously, vindicates His character, and brings justice with mercy. Believers can face judgment with confidence because Jesus is both Savior and Advocate.</p>
+                    <a class="directory-read-more" href="/answers/what-does-the-bible-teach-about-judgment/" aria-label="Read the full answer to What does the Bible teach about judgment?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-did-judas-betray-jesus/">Why Did Judas Betray Jesus?</a></h2>
-                    <p>Judas betrayed Jesus after Satan entered into him, while Judas himself willingly cooperated with the religious leaders for money. Scripture presents both spiritual temptation and personal responsibility.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-teach-about-the-sanctuary/">What does the Bible teach about the sanctuary?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Sanctuary</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-the-bible-teach-about-the-sanctuary/">What does the Bible teach about the sanctuary?</a></h2>
                     <p>The biblical sanctuary illustrates God's plan to dwell with His people and deal with sin. Its services point forward to Jesus, whose sacrifice and heavenly ministry provide forgiveness, cleansing, and access to God.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-does-the-bible-teach-about-the-sanctuary/" aria-label="Read the full answer to What does the Bible teach about the sanctuary?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-the-sanctuary-message-matter-today/">Why does the sanctuary message matter today?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Sanctuary</span>
+                    <h2><a class="directory-answer-title" href="/answers/why-does-the-sanctuary-message-matter-today/">Why does the sanctuary message matter today?</a></h2>
                     <p>The sanctuary message matters because it shows how God deals with sin through Christ's sacrifice, priestly ministry, judgment, cleansing, and final restoration.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/why-does-the-sanctuary-message-matter-today/" aria-label="Read the full answer to Why does the sanctuary message matter today?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-meaning-of-the-sanctuary-in-the-bible/">What is the meaning of the sanctuary in the Bible?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Sanctuary</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-meaning-of-the-sanctuary-in-the-bible/">What is the meaning of the sanctuary in the Bible?</a></h2>
                     <p>The Old Testament sanctuary was a visual gospel, teaching how sin is confessed, atoned for, and ultimately removed through the work of Jesus Christ.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-is-the-meaning-of-the-sanctuary-in-the-bible/" aria-label="Read the full answer to What is the meaning of the sanctuary in the Bible?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-was-the-day-of-atonement-and-why-does-it-matter-today/">What was the Day of Atonement and why does it matter today?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Sanctuary</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-was-the-day-of-atonement-and-why-does-it-matter-today/">What was the Day of Atonement and why does it matter today?</a></h2>
                     <p>The Day of Atonement pictured a final cleansing of sin's record, pointing forward to the judgment and to Christ's ongoing work of removing sin completely.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-was-the-day-of-atonement-and-why-does-it-matter-today/" aria-label="Read the full answer to What was the Day of Atonement and why does it matter today?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-happened-in-the-daily-sanctuary-service-and-why-does-it-matter/">What happened in the daily sanctuary service, and why does it matter?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Sanctuary</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-happened-in-the-daily-sanctuary-service-and-why-does-it-matter/">What happened in the daily sanctuary service, and why does it matter?</a></h2>
                     <p>The daily sacrifices in the sanctuary let individual Israelites confess sin and receive forgiveness through a substitute, foreshadowing Christ's continual ministry on behalf of every believer.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-happened-in-the-daily-sanctuary-service-and-why-does-it-matter/" aria-label="Read the full answer to What happened in the daily sanctuary service, and why does it matter?">Read the full answer</a>
+                  </article>
 
-          </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -238,14 +270,22 @@
             &times;
           </button>
         </div>
+        <div class="verse-modal-toolbar">
+          <label for="verse-modal-translation">Bible version</label>
+          <select id="verse-modal-translation">
+            <option value="web">WEB - World English Bible</option>
+            <option value="kjv">KJV - King James Version</option>
+            <option value="asv">ASV - American Standard Version</option>
+          </select>
+        </div>
         <div class="verse-modal-body" id="verse-modal-body"></div>
       </div>
     </div>
 
-    <script src="/theme.js?v=20261058"></script>
-    <script src="/pwa.js?v=20261058"></script>
-    <script src="/scripture-graphic.js?v=20261058"></script>
-    <script src="/local-library.js?v=20261058"></script>
-    <script src="/verse-modal.js?v=20261058"></script>
+    <script src="/theme.js?v=20261073"></script>
+    <script src="/pwa.js?v=20261073"></script>
+    <script src="/scripture-graphic.js?v=20261073"></script>
+    <script src="/local-library.js?v=20261073"></script>
+    <script src="/verse-modal.js?v=20261073"></script>
   </body>
 </html>

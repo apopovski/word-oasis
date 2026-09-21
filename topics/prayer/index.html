@@ -40,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261058">
+    <link rel="stylesheet" href="/styles.css?v=20261076">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Prayer Bible Answers | Word Oasis">
     <meta property="og:description" content="Browse Scripture-based answers about prayer from Word Oasis, with Bible references for further study.">
@@ -72,12 +72,19 @@
         <ul id="primary-menu" class="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/answers/">Answers</a></li>
-          <li><a href="/topics/">Topics</a></li>
+          <li><a href="/topics/" aria-current="page">Topics</a></li>
           <li><a href="/bible/">Bible</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/#ask">Ask a question</a></li>
           <li class="nav-search-item">
-            <form class="nav-search" action="/" method="get" role="search">
+            <form class="nav-search" action="/" method="get" role="search" data-nav-search>
+              <button class="nav-search-toggle" type="button" aria-expanded="false" aria-controls="nav-search-fields" aria-label="Search Bible answers">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-4-4"></path>
+                </svg>
+              </button>
+              <div class="nav-search-fields" id="nav-search-fields">
               <label class="sr-only" for="nav-search-input">Search Bible questions</label>
               <input
                 id="nav-search-input"
@@ -86,7 +93,8 @@
                 placeholder="Search"
                 autocomplete="off"
               >
-              <button type="submit" aria-label="Submit search">Search</button>
+              <button class="nav-search-submit" type="submit" aria-label="Submit search">Search</button>
+              </div>
             </form>
           </li>
           <li class="nav-theme-item">
@@ -118,81 +126,102 @@
       <section class="page-hero">
         <div class="container">
           <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/topics/">Topics</a> / Prayer</nav>
-          <p class="eyebrow">Topic</p>
-          <h1>Prayer Bible answers</h1>
-          <p class="page-intro">Read clear Bible answers related to prayer, with Scripture references for each question.</p>
+          <div class="topic-page-heading">
+            <span class="topic-page-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+    <g transform="translate(-1.549 -3.6264) scale(0.8464)" fill="currentColor" stroke="none">
+      <path d="M25.063 15.214c-0.458-1.030-0.941-1.905-1.49-2.732l0.043 0.068c-0.174-0.282-0.348-0.563-0.518-0.849-0.807-1.36-1.51-2.448-2.215-3.425-0.342-0.479-0.679-0.897-1.037-1.294l0.011 0.013c-0.267-0.326-0.6-0.587-0.981-0.763l-0.017-0.007c-0.081-0.031-0.175-0.050-0.274-0.050-0.055 0-0.108 0.006-0.159 0.016l0.005-0.001c-0.88 0.128-1.615 0.658-2.021 1.395l-0.007 0.014c-0.155 0.365-0.245 0.79-0.245 1.236 0 0.496 0.111 0.967 0.311 1.387l-0.008-0.020 2.077 4.622c-1.166 0.027-2.102 0.979-2.102 2.149 0 0.057 0.002 0.113 0.007 0.169l-0-0.007v3.11l-0.435 1.485-0.435-1.485v-3.11c0.004-0.048 0.006-0.104 0.006-0.16 0-1.171-0.936-2.123-2.1-2.148l-0.002-0 2.072-4.613c0.194-0.404 0.307-0.878 0.307-1.379 0-0.445-0.090-0.87-0.252-1.256l0.008 0.021c-0.413-0.751-1.148-1.282-2.013-1.408l-0.015-0.002c-0.047-0.010-0.1-0.015-0.155-0.015-0.099 0-0.193 0.018-0.28 0.051l0.005-0.002c-0.405 0.189-0.744 0.457-1.010 0.787l-0.004 0.005c-0.342 0.379-0.672 0.79-0.979 1.22l-0.028 0.042c-0.707 0.977-1.411 2.064-2.216 3.424-0.167 0.281-0.34 0.561-0.512 0.84-0.509 0.762-0.994 1.639-1.406 2.557l-0.047 0.116c-0.459 1.106-0.726 2.39-0.726 3.737 0 1.178 0.204 2.309 0.579 3.358l-0.022-0.070c0.452 1.090 0.82 2.367 1.044 3.692l0.015 0.107h-0.69c-0.414 0-0.75 0.336-0.75 0.75v0 3.211c0 0.414 0.336 0.75 0.75 0.75h17.712c0.414-0 0.75-0.336 0.75-0.75v0-3.211c-0-0.414-0.336-0.75-0.75-0.75h-0.691c0.244-1.444 0.616-2.731 1.114-3.951l-0.045 0.123c0.347-0.971 0.548-2.092 0.548-3.259 0-1.347-0.267-2.632-0.752-3.805l0.024 0.066zM8.187 21.715c-0.289-0.823-0.456-1.771-0.456-2.758 0-1.143 0.224-2.234 0.63-3.231l-0.021 0.057c0.424-0.948 0.871-1.753 1.379-2.514l-0.039 0.062c0.178-0.287 0.355-0.575 0.527-0.865 0.78-1.318 1.461-2.369 2.139-3.307 0.305-0.429 0.606-0.804 0.926-1.16l-0.010 0.011c0.083-0.089 0.184-0.199 0.276-0.28 0.31 0.075 0.566 0.267 0.724 0.525l0.003 0.005c0.059 0.168 0.092 0.363 0.092 0.565 0 0.277-0.064 0.539-0.177 0.773l0.005-0.011-2.892 6.436c-0.041 0.090-0.065 0.196-0.065 0.308v0 6.437c0 0.414 0.336 0.75 0.75 0.75s0.75-0.336 0.75-0.75v0-5.632c0-1.271 1.343-1.268 1.345 0v3.218c0 0.001 0 0.002 0 0.003 0 0.074 0.011 0.146 0.032 0.213l-0.001-0.005 1.147 3.918v1.557h-5.902c-0.236-1.618-0.642-3.074-1.207-4.449l0.045 0.124zM24.113 29.25h-16.212v-1.711h16.212zM23.838 21.686c-0.522 1.258-0.931 2.724-1.158 4.25l-0.013 0.104h-5.902v-1.557l1.147-3.918c0.019-0.062 0.030-0.134 0.030-0.208 0-0.001 0-0.002 0-0.003v0-3.218c-0.001-0.969 0.784-1.019 1.118-0.678 0.142 0.163 0.229 0.378 0.229 0.613 0 0.023-0.001 0.045-0.002 0.067l0-0.003v5.632c0 0.414 0.336 0.75 0.75 0.75s0.75-0.336 0.75-0.75v0-6.437c-0-0.111-0.025-0.217-0.068-0.312l0.002 0.005-2.896-6.446c-0.104-0.221-0.165-0.481-0.165-0.754 0-0.199 0.032-0.391 0.092-0.57l-0.004 0.013c0.16-0.266 0.418-0.46 0.721-0.534l0.008-0.002c0.094 0.084 0.201 0.199 0.295 0.303 0.303 0.337 0.597 0.704 0.871 1.087l0.026 0.038c0.676 0.938 1.357 1.988 2.139 3.309 0.174 0.293 0.354 0.582 0.531 0.872 0.467 0.697 0.914 1.5 1.294 2.338l0.044 0.107c0.386 0.939 0.61 2.029 0.61 3.172 0 0.977-0.164 1.916-0.466 2.791l0.018-0.060z"></path>
+    </g>
+  </svg></span>
+            <div>
+              <p class="eyebrow">Topic</p>
+              <h1>Prayer Bible answers</h1>
+              <p class="page-intro">How to pray, unanswered prayer, worship. Explore 11 Scripture-based answers.</p>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-soft">
         <div class="container">
-          <ul class="answer-list-page">
+          <div class="topic-answer-grid">
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/does-god-answer-prayers/">Does God Answer Prayers?</a></h2>
-                    <p>Yes. The Bible teaches that God hears and answers prayer. However, an answer does not always mean receiving exactly what we requested. Scripture describes God's answers as sometimes "yes," sometimes "wait," and sometimes a different response according to His wisdom and will.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prayer</span>
+                    <h2><a class="directory-answer-title" href="/answers/does-god-answer-prayers/">Does God Answer Prayers?</a></h2>
+                    <p>Yes. The Bible teaches that God hears and answers prayer. However, an answer does not always mean receiving exactly what we requested. Scripture describes God's answers as sometimes “yes,” sometimes “wait,” and sometimes a different response according to His wisdom and will.</p>
+                    <a class="directory-read-more" href="/answers/does-god-answer-prayers/" aria-label="Read the full answer to Does God Answer Prayers?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/is-the-bible-true/">Is the Bible True?</a></h2>
-                    <p>Yes. The Bible presents itself as the inspired Word of God and repeatedly describes God's Word as true, trustworthy, and enduring. The Bible says: "All scripture is given by inspiration of God." 2 Timothy 3:16, KJV And Jesus prayed: "Thy word is truth." John 17:17, KJV The question of whether the Bible is true ultimately involves whether God can be trusted.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prayer</span>
+                    <h2><a class="directory-answer-title" href="/answers/why-did-jesus-pray-if-he-is-god/">Why Did Jesus Pray If He Is God?</a></h2>
+                    <p>Jesus prayed because the Bible presents the Father and the Son as distinct persons who have an eternal relationship. During His incarnation, Jesus lived as a genuine human being, depended upon the Father, communicated with Him, and submitted Himself to the Father's will.</p>
+                    <a class="directory-read-more" href="/answers/why-did-jesus-pray-if-he-is-god/" aria-label="Read the full answer to Why Did Jesus Pray If He Is God?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/can-satan-hear-your-prayers/">Can Satan Hear Your Prayers?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prayer</span>
+                    <h2><a class="directory-answer-title" href="/answers/can-satan-hear-your-prayers/">Can Satan Hear Your Prayers?</a></h2>
                     <p>Scripture does not explicitly say whether Satan can hear every private prayer. It does teach that God hears prayer and that believers should pray confidently to Him.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/can-satan-hear-your-prayers/" aria-label="Read the full answer to Can Satan Hear Your Prayers?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/does-prayer-really-work/">Does Prayer Really Work?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prayer</span>
+                    <h2><a class="directory-answer-title" href="/answers/how-should-i-pray/">How Should I Pray?</a></h2>
+                    <p>Jesus taught His followers to pray to God sincerely, privately, persistently, and with trust. Prayer should include worship, submission, confession, requests, forgiveness, and dependence upon God.</p>
+                    <a class="directory-read-more" href="/answers/how-should-i-pray/" aria-label="Read the full answer to How Should I Pray?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prayer</span>
+                    <h2><a class="directory-answer-title" href="/answers/why-doesnt-god-answer-my-prayers/">Why Doesn't God Answer My Prayers?</a></h2>
+                    <p>The Bible gives several reasons a prayer may not receive the answer we expect, including God's wisdom, wrong motives, unconfessed sin, lack of faith, and requests that do not agree with God's will. Yet Scripture also teaches that God hears His children even when His answer is not what they expected.</p>
+                    <a class="directory-read-more" href="/answers/why-doesnt-god-answer-my-prayers/" aria-label="Read the full answer to Why Doesn't God Answer My Prayers?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prayer</span>
+                    <h2><a class="directory-answer-title" href="/answers/does-prayer-really-work/">Does Prayer Really Work?</a></h2>
                     <p>Yes. Scripture presents prayer as a genuine means of communicating with God and repeatedly records God responding to prayer.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/does-prayer-really-work/" aria-label="Read the full answer to Does Prayer Really Work?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-often-should-i-pray/">How Often Should I Pray?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prayer</span>
+                    <h2><a class="directory-answer-title" href="/answers/how-often-should-i-pray/">How Often Should I Pray?</a></h2>
                     <p>The Bible encourages continual prayer rather than restricting prayer to a particular number of times per day.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/how-often-should-i-pray/" aria-label="Read the full answer to How Often Should I Pray?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-about-anxiety/">What Does the Bible Say About Anxiety?</a></h2>
-                    <p>The Bible acknowledges anxiety and directs believers to bring their concerns to God rather than allowing worry to control them.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-can-i-know-gods-will-for-my-life/">How can I know God's will for my life?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prayer</span>
+                    <h2><a class="directory-answer-title" href="/answers/how-can-i-know-gods-will-for-my-life/">How can I know God's will for my life?</a></h2>
                     <p>God guides through Scripture, prayer, wise counsel, and the quiet leading of the Holy Spirit. Most of His will is already revealed; specific decisions are made trusting His care.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/how-can-i-know-gods-will-for-my-life/" aria-label="Read the full answer to How can I know God's will for my life?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-teach-about-fasting/">What does the Bible teach about fasting?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prayer</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-the-bible-teach-about-fasting/">What does the Bible teach about fasting?</a></h2>
                     <p>Fasting is voluntarily setting aside food (or other things) for a time to focus more fully on prayer and seeking God, not a way to manipulate God or earn favor.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-does-the-bible-teach-about-fasting/" aria-label="Read the full answer to What does the Bible teach about fasting?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-does-the-bible-say-to-someone-struggling-with-depression/">What does the Bible say to someone struggling with depression?</a></h2>
-                    <p>Scripture gives room for deep sorrow while pointing the hurting person toward God's nearness, honest prayer, supportive community, and patient hope.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/why-does-god-sometimes-seem-silent-when-i-pray/">Why does God sometimes seem silent when I pray?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prayer</span>
+                    <h2><a class="directory-answer-title" href="/answers/why-does-god-sometimes-seem-silent-when-i-pray/">Why does God sometimes seem silent when I pray?</a></h2>
                     <p>God's silence does not mean absence or rejection. Scripture teaches believers to keep praying, examine the heart, trust God's timing, and rest in His wisdom.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/why-does-god-sometimes-seem-silent-when-i-pray/" aria-label="Read the full answer to Why does God sometimes seem silent when I pray?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-can-a-family-worship-god-together-at-home/">How can a family worship God together at home?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Prayer</span>
+                    <h2><a class="directory-answer-title" href="/answers/how-can-a-family-worship-god-together-at-home/">How can a family worship God together at home?</a></h2>
                     <p>Family worship can be simple: read Scripture, pray together, sing or share gratitude, and talk about how God's Word applies to daily life.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/how-can-a-family-worship-god-together-at-home/" aria-label="Read the full answer to How can a family worship God together at home?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-happened-in-the-daily-sanctuary-service-and-why-does-it-matter/">What happened in the daily sanctuary service, and why does it matter?</a></h2>
-                    <p>The daily sacrifices in the sanctuary let individual Israelites confess sin and receive forgiveness through a substitute, foreshadowing Christ's continual ministry on behalf of every believer.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/does-the-bible-have-anything-to-say-about-mental-and-emotional-health/">Does the Bible have anything to say about mental and emotional health?</a></h2>
-                    <p>Scripture takes emotional struggle seriously, offering honest examples of depression and despair alongside practical patterns of rest, community, prayer, and hope that support emotional well-being.</p>
-                  </li>
-
-          </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -258,14 +287,22 @@
             &times;
           </button>
         </div>
+        <div class="verse-modal-toolbar">
+          <label for="verse-modal-translation">Bible version</label>
+          <select id="verse-modal-translation">
+            <option value="web">WEB - World English Bible</option>
+            <option value="kjv">KJV - King James Version</option>
+            <option value="asv">ASV - American Standard Version</option>
+          </select>
+        </div>
         <div class="verse-modal-body" id="verse-modal-body"></div>
       </div>
     </div>
 
-    <script src="/theme.js?v=20261058"></script>
-    <script src="/pwa.js?v=20261058"></script>
-    <script src="/scripture-graphic.js?v=20261058"></script>
-    <script src="/local-library.js?v=20261058"></script>
-    <script src="/verse-modal.js?v=20261058"></script>
+    <script src="/theme.js?v=20261073"></script>
+    <script src="/pwa.js?v=20261073"></script>
+    <script src="/scripture-graphic.js?v=20261073"></script>
+    <script src="/local-library.js?v=20261073"></script>
+    <script src="/verse-modal.js?v=20261073"></script>
   </body>
 </html>

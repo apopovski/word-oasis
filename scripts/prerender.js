@@ -102,25 +102,30 @@ function topicPath(topic) {
   return `/topics/${slugify(topic)}/`;
 }
 
+function topicIconMarkup(topic, topicIcons) {
+  const content = topicIcons[topic] || topicIcons.Faith;
+  return `<svg viewBox="0 0 24 24" focusable="false">${content}</svg>`;
+}
+
 function absoluteUrl(urlPath) {
   return `${SITE_URL}${urlPath}`;
 }
 
-function buildFaqJsonLd(answers) {
-  const mainEntity = answers.map((answer) => ({
-    "@type": "Question",
-    name: answer.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: `${answer.shortAnswer} (${answer.scriptures.join(", ")})`
-    }
-  }));
+function buildTopicListJsonLd(answers) {
+  const topics = Array.from(new Set(answers.flatMap((answer) => answer.topics))).sort();
 
   return JSON.stringify(
     {
       "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity
+      "@type": "ItemList",
+      name: "Word Oasis Bible topics",
+      numberOfItems: topics.length,
+      itemListElement: topics.map((topic, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: topic,
+        url: absoluteUrl(topicPath(topic))
+      }))
     },
     null,
     2
@@ -186,16 +191,26 @@ function injectSelectOptions(html, marker, optionsHtml) {
   return html.replace(regex, (_match, openPart, _old, markerComment) => `${openPart}\n                  ${optionsHtml}${markerComment}`);
 }
 
-function injectFaqJsonLd(html, faqJson) {
-  const regex = /<script type="application\/ld\+json" id="faq-jsonld">[\s\S]*?<\/script>/;
+function injectHomepageContentJsonLd(html, contentJson) {
+  const regex = /<script type="application\/ld\+json" id="(?:faq|homepage-content)-jsonld">[\s\S]*?<\/script>/;
   if (!regex.test(html)) {
-    throw new Error('Could not locate <script type="application/ld+json" id="faq-jsonld"> in index.html');
+    throw new Error("Could not locate homepage content structured data in index.html");
   }
-  return html.replace(regex, `<script type="application/ld+json" id="faq-jsonld">\n${faqJson}\n    </script>`);
+  return html.replace(
+    regex,
+    `<script type="application/ld+json" id="homepage-content-jsonld">\n${contentJson}\n    </script>`
+  );
 }
 
-function biblicalPerspective(answer, perspectivesByCategory, perspectivesByAnswer) {
-  return perspectivesByAnswer[answer.id] || perspectivesByCategory[answer.category];
+function injectHomepageAnswerCount(html, answerCount) {
+  return html.replace(
+    /Search \d+\+? Scripture-based Bible answers/g,
+    `Search ${answerCount} Scripture-based Bible answers`
+  );
+}
+
+function keyTakeaway(answer, perspectivesByAnswer) {
+  return perspectivesByAnswer[answer.id] || answer.shortAnswer;
 }
 
 function metaDescription(answer) {
@@ -209,6 +224,14 @@ function metaDescription(answer) {
 
 function pageShell({ title, description, canonicalPath, body, structuredData = [], ogType = "article" }) {
   const canonical = absoluteUrl(canonicalPath);
+  const activeSection = canonicalPath.startsWith("/answers/")
+    ? "answers"
+    : canonicalPath.startsWith("/topics/")
+      ? "topics"
+      : canonicalPath.startsWith("/bible/")
+        ? "bible"
+        : "home";
+  const currentPage = (section) => activeSection === section ? ' aria-current="page"' : "";
   const jsonLd = structuredData
     .map((data) => `<script type="application/ld+json">\n${JSON.stringify(data, null, 2)}\n    </script>`)
     .join("\n    ");
@@ -255,7 +278,7 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261058">
+    <link rel="stylesheet" href="/styles.css?v=20261076">
     <meta property="og:type" content="${ogType}">
     <meta property="og:title" content="${escapeAttribute(title)}">
     <meta property="og:description" content="${escapeAttribute(description)}">
@@ -285,14 +308,21 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
           <span></span>
         </button>
         <ul id="primary-menu" class="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/answers/">Answers</a></li>
-          <li><a href="/topics/">Topics</a></li>
-          <li><a href="/bible/">Bible</a></li>
+          <li><a href="/"${currentPage("home")}>Home</a></li>
+          <li><a href="/answers/"${currentPage("answers")}>Answers</a></li>
+          <li><a href="/topics/"${currentPage("topics")}>Topics</a></li>
+          <li><a href="/bible/"${currentPage("bible")}>Bible</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/#ask">Ask a question</a></li>
           <li class="nav-search-item">
-            <form class="nav-search" action="/" method="get" role="search">
+            <form class="nav-search" action="/" method="get" role="search" data-nav-search>
+              <button class="nav-search-toggle" type="button" aria-expanded="false" aria-controls="nav-search-fields" aria-label="Search Bible answers">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-4-4"></path>
+                </svg>
+              </button>
+              <div class="nav-search-fields" id="nav-search-fields">
               <label class="sr-only" for="nav-search-input">Search Bible questions</label>
               <input
                 id="nav-search-input"
@@ -301,7 +331,8 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
                 placeholder="Search"
                 autocomplete="off"
               >
-              <button type="submit" aria-label="Submit search">Search</button>
+              <button class="nav-search-submit" type="submit" aria-label="Submit search">Search</button>
+              </div>
             </form>
           </li>
           <li class="nav-theme-item">
@@ -391,15 +422,23 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
             &times;
           </button>
         </div>
+        <div class="verse-modal-toolbar">
+          <label for="verse-modal-translation">Bible version</label>
+          <select id="verse-modal-translation">
+            <option value="web">WEB - World English Bible</option>
+            <option value="kjv">KJV - King James Version</option>
+            <option value="asv">ASV - American Standard Version</option>
+          </select>
+        </div>
         <div class="verse-modal-body" id="verse-modal-body"></div>
       </div>
     </div>
 
-    <script src="/theme.js?v=20261058"></script>
-    <script src="/pwa.js?v=20261058"></script>
-    <script src="/scripture-graphic.js?v=20261058"></script>
-    <script src="/local-library.js?v=20261058"></script>
-    <script src="/verse-modal.js?v=20261058"></script>
+    <script src="/theme.js?v=20261073"></script>
+    <script src="/pwa.js?v=20261073"></script>
+    <script src="/scripture-graphic.js?v=20261073"></script>
+    <script src="/local-library.js?v=20261073"></script>
+    <script src="/verse-modal.js?v=20261073"></script>
   </body>
 </html>
 `;
@@ -477,6 +516,54 @@ function linkifyKeywords(text, currentTopics, usedTopics) {
   });
 }
 
+const BIBLE_BOOK_PATTERN = [
+  "Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy", "Joshua", "Judges", "Ruth",
+  "[1-2] Samuel", "[1-2] Kings", "[1-2] Chronicles", "Ezra", "Nehemiah", "Esther", "Job",
+  "Psalms?", "Proverbs", "Ecclesiastes", "Song of Solomon", "Isaiah", "Jeremiah", "Lamentations",
+  "Ezekiel", "Daniel", "Hosea", "Joel", "Amos", "Obadiah", "Jonah", "Micah", "Nahum",
+  "Habakkuk", "Zephaniah", "Haggai", "Zechariah", "Malachi", "Matthew", "Mark", "Luke", "John",
+  "Acts", "Romans", "[1-2] Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians",
+  "[1-2] Thessalonians", "[1-2] Timothy", "Titus", "Philemon", "Hebrews", "James", "[1-2] Peter",
+  "[1-3] John", "Jude", "Revelation"
+].join("|");
+
+const INLINE_SCRIPTURE_PATTERN = new RegExp(
+  `\\b(?:${BIBLE_BOOK_PATTERN})\\s+\\d{1,3}(?::\\d{1,3}(?:[-–]\\d{1,3})?)?(?:,\\s*\\d{1,3}(?:[-–]\\d{1,3})?)*`,
+  "g"
+);
+
+function linkifyScriptureReferences(text) {
+  return text.replace(INLINE_SCRIPTURE_PATTERN, (reference, offset, source) => {
+    const before = source.slice(0, offset);
+    const after = source.slice(offset + reference.length);
+    const alreadyParenthetical = before.endsWith("(") && after.startsWith(")");
+    const followsQuotation = /(?:&quot;|["”])\s*$/.test(before);
+    const button = `<button type="button" class="scripture-link scripture-link-inline" data-scripture="${escapeAttribute(reference)}">${escapeHtml(reference)}</button>`;
+    return followsQuotation && !alreadyParenthetical ? `(${button})` : button;
+  });
+}
+
+function linkifyTopicTextNodes(html, currentTopics, usedTopics) {
+  let protectedElement = "";
+  return html
+    .split(/(<[^>]+>)/g)
+    .map((part) => {
+      if (part.startsWith("<")) {
+        const opening = part.match(/^<(button|a)\b/i);
+        const closing = part.match(/^<\/(button|a)>/i);
+        if (opening) protectedElement = opening[1].toLowerCase();
+        if (closing && closing[1].toLowerCase() === protectedElement) protectedElement = "";
+        return part;
+      }
+      return protectedElement ? part : linkifyKeywords(part, currentTopics, usedTopics);
+    })
+    .join("");
+}
+
+function renderAnswerText(text, currentTopics, usedTopics) {
+  return linkifyTopicTextNodes(linkifyScriptureReferences(escapeHtml(text)), currentTopics, usedTopics);
+}
+
 function relatedAnswers(currentAnswer, answers) {
   const stopWords = new Set(["a", "an", "and", "are", "as", "at", "be", "by", "did", "do", "does", "for", "from", "how", "in", "is", "it", "of", "on", "or", "that", "the", "this", "to", "what", "when", "where", "who", "why", "with"]);
   const normalizeConcept = (word) => {
@@ -515,8 +602,8 @@ function relatedAnswers(currentAnswer, answers) {
     .map(({ answer }) => answer);
 }
 
-function answerPage(answer, answers, perspectivesByCategory, perspectivesByAnswer) {
-  const perspective = biblicalPerspective(answer, perspectivesByCategory, perspectivesByAnswer);
+function answerPage(answer, answers, perspectivesByAnswer) {
+  const takeaway = keyTakeaway(answer, perspectivesByAnswer);
   const related = relatedAnswers(answer, answers);
   const canonicalPath = answerPath(answer);
   const title = `${answer.question} | Word Oasis`;
@@ -536,7 +623,7 @@ function answerPage(answer, answers, perspectivesByCategory, perspectivesByAnswe
           name: answer.question,
           acceptedAnswer: {
             "@type": "Answer",
-            text: `${answer.shortAnswer} ${answer.longAnswer} ${perspective} (${answer.scriptures.join(", ")})`
+            text: `${answer.shortAnswer} ${answer.longAnswer} (${answer.scriptures.join(", ")})`
           }
         }
       }
@@ -555,47 +642,37 @@ function answerPage(answer, answers, perspectivesByCategory, perspectivesByAnswe
         <div class="container answer-page-layout">
           <article class="answer-page-card" data-answer-page data-answer-id="${escapeAttribute(answer.id)}" data-answer-category="${escapeAttribute(answer.category)}">
             <div class="answer-tags">${tagsHtml(answer.topics)}</div>
-            <div class="answer-page-actions">
-              <button type="button" class="promise-copy-button" data-answer-save aria-pressed="false">Save answer</button>
-            </div>
             <h2>Biblical explanation</h2>
-            <p class="lead-answer">${linkifyKeywords(escapeHtml(answer.longAnswer), answer.topics, usedTopics)}</p>
+            <p class="lead-answer">${renderAnswerText(answer.longAnswer, answer.topics, usedTopics)}</p>
             <div class="answer-key-takeaway">
               <p class="eyebrow">Key takeaway</p>
-              <p>${linkifyKeywords(escapeHtml(perspective), answer.topics, usedTopics)}</p>
+              <p>${renderAnswerText(takeaway, answer.topics, usedTopics)}</p>
             </div>
+            <h2>Bible references</h2>
+            <div class="scriptures">${scripturesHtml(answer.scriptures)}</div>
             <div class="answer-share-panel" data-answer-share>
               <div class="share-action-group">
                 <span class="promise-share-label">Share this answer</span>
-                <div class="promise-share-buttons">
-                  <a class="promise-social-share promise-social-facebook" data-answer-share-facebook href="#" target="_blank" rel="noopener noreferrer" aria-label="Share answer on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21.9V13.9h2.7l.5-3.1h-3.2V8.8c0-.9.3-1.7 1.6-1.7h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2v2.4H7.6v3.1h2.8v8h3.1Z"/></svg></a>
-                  <a class="promise-social-share promise-social-x" data-answer-share-x href="#" target="_blank" rel="noopener noreferrer" aria-label="Share answer on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.2 4.4h2.6l-5.7 6.5 6.7 8.8h-5.2l-4.1-5.4-4.7 5.4H4.2l6.1-7-6.4-8.3h5.4l3.7 4.9 4.2-4.9Zm-.9 13.8h1.4L8.5 5.8H7l9.3 12.4Z"/></svg></a>
-                  <a class="promise-social-share promise-social-whatsapp" data-answer-share-whatsapp href="#" target="_blank" rel="noopener noreferrer" aria-label="Share answer on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.4a8.5 8.5 0 0 0-7.3 12.9L3.6 20.6l4.4-1.1A8.5 8.5 0 1 0 12 3.4Zm0 1.7a6.8 6.8 0 1 1-3.5 12.7l-.3-.2-2.6.7.7-2.5-.2-.3A6.8 6.8 0 0 1 12 5.1Zm3.9 8.5c-.2-.1-1.2-.6-1.4-.7s-.3-.1-.5.1l-.6.8c-.1.1-.2.1-.4 0a5.6 5.6 0 0 1-2.8-2.4c-.1-.2 0-.3.1-.4l.3-.4.2-.4v-.3l-.7-1.6c-.2-.4-.3-.3-.5-.3h-.4a.9.9 0 0 0-.6.3 2.6 2.6 0 0 0-.8 1.9 4.5 4.5 0 0 0 1 2.3 9.2 9.2 0 0 0 3.6 3.1c1.3.5 1.8.5 2.4.4a2 2 0 0 0 1.4-1c.2-.5.2-.9.1-1l-.4-.4Z"/></svg></a>
-                  <a class="promise-social-share answer-social-sms" data-answer-share-sms href="#" aria-label="Share answer by text"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.5L12 21l4.5-4H20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg></a>
-                  <div class="promise-share-primary">
-                    <button type="button" class="promise-share" data-answer-share-native>Share answer link</button>
-                    <button type="button" class="promise-copy-button" data-answer-share-copy>Copy answer link</button>
-                  </div>
+                <div class="share-mode-selector" role="group" aria-label="Choose answer sharing format">
+                  <button type="button" data-answer-share-mode="text" class="active" aria-pressed="true">Text</button>
+                  <button type="button" data-answer-share-mode="graphic" aria-pressed="false">Graphic</button>
                 </div>
-              </div>
-              <div class="share-action-group">
-                <span class="promise-share-label">Share graphic</span>
                 <div class="promise-share-buttons">
-                  <button type="button" class="promise-social-share promise-social-facebook" data-answer-share-graphic-platform="Facebook" aria-label="Share question graphic for Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21.9V13.9h2.7l.5-3.1h-3.2V8.8c0-.9.3-1.7 1.6-1.7h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2v2.4H7.6v3.1h2.8v8h3.1Z"/></svg></button>
-                  <button type="button" class="promise-social-share promise-social-x" data-answer-share-graphic-platform="X" aria-label="Share question graphic for X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.2 4.4h2.6l-5.7 6.5 6.7 8.8h-5.2l-4.1-5.4-4.7 5.4H4.2l6.1-7-6.4-8.3h5.4l3.7 4.9 4.2-4.9Zm-.9 13.8h1.4L8.5 5.8H7l9.3 12.4Z"/></svg></button>
-                  <button type="button" class="promise-social-share promise-social-whatsapp" data-answer-share-graphic-platform="WhatsApp" aria-label="Share question graphic for WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.4a8.5 8.5 0 0 0-7.3 12.9L3.6 20.6l4.4-1.1A8.5 8.5 0 1 0 12 3.4Zm0 1.7a6.8 6.8 0 1 1-3.5 12.7l-.3-.2-2.6.7.7-2.5-.2-.3A6.8 6.8 0 0 1 12 5.1Zm3.9 8.5c-.2-.1-1.2-.6-1.4-.7s-.3-.1-.5.1l-.6.8c-.1.1-.2.1-.4 0a5.6 5.6 0 0 1-2.8-2.4c-.1-.2 0-.3.1-.4l.3-.4.2-.4v-.3l-.7-1.6c-.2-.4-.3-.3-.5-.3h-.4a.9.9 0 0 0-.6.3 2.6 2.6 0 0 0-.8 1.9 4.5 4.5 0 0 0 1 2.3 9.2 9.2 0 0 0 3.6 3.1c1.3.5 1.8.5 2.4.4a2 2 0 0 0 1.4-1c.2-.5.2-.9.1-1l-.4-.4Z"/></svg></button>
-                  <button type="button" class="promise-social-share promise-social-instagram" data-answer-share-graphic-platform="Instagram" aria-label="Share question graphic for Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M7.2 2h9.6A5.2 5.2 0 0 1 22 7.2v9.6a5.2 5.2 0 0 1-5.2 5.2H7.2A5.2 5.2 0 0 1 2 16.8V7.2A5.2 5.2 0 0 1 7.2 2Zm0 2A3.2 3.2 0 0 0 4 7.2v9.6A3.2 3.2 0 0 0 7.2 20h9.6a3.2 3.2 0 0 0 3.2-3.2V7.2A3.2 3.2 0 0 0 16.8 4H7.2Zm10.1 1.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg></button>
-                  <button type="button" class="promise-social-share answer-social-sms" data-answer-share-graphic-platform="Text" aria-label="Share question graphic by text"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.5L12 21l4.5-4H20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg></button>
+                  <div class="share-social-icons">
+                    <button type="button" class="promise-social-share promise-social-facebook" data-answer-share-platform="Facebook" aria-label="Share answer on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21.9V13.9h2.7l.5-3.1h-3.2V8.8c0-.9.3-1.7 1.6-1.7h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2v2.4H7.6v3.1h2.8v8h3.1Z"/></svg></button>
+                    <button type="button" class="promise-social-share promise-social-x" data-answer-share-platform="X" aria-label="Share answer on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.2 4.4h2.6l-5.7 6.5 6.7 8.8h-5.2l-4.1-5.4-4.7 5.4H4.2l6.1-7-6.4-8.3h5.4l3.7 4.9 4.2-4.9Zm-.9 13.8h1.4L8.5 5.8H7l9.3 12.4Z"/></svg></button>
+                    <button type="button" class="promise-social-share promise-social-whatsapp" data-answer-share-platform="WhatsApp" aria-label="Share answer on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.4a8.5 8.5 0 0 0-7.3 12.9L3.6 20.6l4.4-1.1A8.5 8.5 0 1 0 12 3.4Zm0 1.7a6.8 6.8 0 1 1-3.5 12.7l-.3-.2-2.6.7.7-2.5-.2-.3A6.8 6.8 0 0 1 12 5.1Zm3.9 8.5c-.2-.1-1.2-.6-1.4-.7s-.3-.1-.5.1l-.6.8c-.1.1-.2.1-.4 0a5.6 5.6 0 0 1-2.8-2.4c-.1-.2 0-.3.1-.4l.3-.4.2-.4v-.3l-.7-1.6c-.2-.4-.3-.3-.5-.3h-.4a.9.9 0 0 0-.6.3 2.6 2.6 0 0 0-.8 1.9 4.5 4.5 0 0 0 1 2.3 9.2 9.2 0 0 0 3.6 3.1c1.3.5 1.8.5 2.4.4a2 2 0 0 0 1.4-1c.2-.5.2-.9.1-1l-.4-.4Z"/></svg></button>
+                    <button type="button" class="promise-social-share promise-social-instagram" data-answer-share-platform="Instagram" aria-label="Share answer on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M7.2 2h9.6A5.2 5.2 0 0 1 22 7.2v9.6a5.2 5.2 0 0 1-5.2 5.2H7.2A5.2 5.2 0 0 1 2 16.8V7.2A5.2 5.2 0 0 1 7.2 2Zm0 2A3.2 3.2 0 0 0 4 7.2v9.6A3.2 3.2 0 0 0 7.2 20h9.6a3.2 3.2 0 0 0 3.2-3.2V7.2A3.2 3.2 0 0 0 16.8 4H7.2Zm10.1 1.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg></button>
+                    <button type="button" class="promise-social-share answer-social-sms" data-answer-share-platform="Text" aria-label="Share answer by text"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.5L12 21l4.5-4H20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg></button>
+                  </div>
                   <div class="promise-share-primary">
-                    <button type="button" class="promise-share" data-answer-share-graphic>Share question graphic</button>
-                    <button type="button" class="promise-copy-button" data-answer-download-graphic>Download question graphic</button>
+                    <button type="button" class="promise-share" data-answer-share-primary>Share</button>
+                    <button type="button" class="promise-copy-button" data-answer-share-secondary>Copy</button>
                   </div>
                 </div>
               </div>
               <p class="answer-share-status" data-answer-share-status role="status" aria-live="polite"></p>
             </div>
-            <h2>Bible references</h2>
-            <div class="scriptures">${scripturesHtml(answer.scriptures)}</div>
             <div class="answer-editorial-note">
               <strong>Editorial note</strong>
               <p>This answer is presented with its supporting references so you can examine each passage in context. If you notice an error or unclear statement, please <a href="/?inquiry=general#ask">suggest a correction</a>.</p>
@@ -629,32 +706,44 @@ function answersIndexPage(answers) {
           <p class="eyebrow">All answers</p>
           <h1>Bible questions and answers</h1>
           <p class="page-intro">Browse the full Word Oasis library of Scripture-based answers for questions about faith, salvation, prayer, prophecy, Christian living, and more.</p>
+          <div class="page-hero-stats" aria-label="Answer library overview">
+            <span><strong>${answers.length}</strong> answers</span>
+            <span><strong>${topics.length}</strong> topics</span>
+            <span>Scripture references included</span>
+          </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section answers-directory-section">
         <div class="container">
           <div class="answers-directory-toolbar" aria-labelledby="answers-topic-filter-heading">
-            <div>
-              <p class="eyebrow" id="answers-topic-filter-heading">Filter by topic</p>
-              <p>Choose a topic to narrow the answer library, or keep browsing every Scripture-based answer below.</p>
+            <div class="answers-directory-heading">
+              <p class="eyebrow">Explore the library</p>
+              <h2 id="answers-topic-filter-heading">Find the answer you need</h2>
+              <p>Search by question or choose a topic to narrow the library.</p>
             </div>
-            <p class="answers-directory-count" data-answer-topic-count>Showing ${answers.length} answers</p>
-            <div class="answers-topic-filter">
-              <label class="answers-topic-select-label" for="answers-topic-select">Topic</label>
-              <select id="answers-topic-select" data-answer-topic-select aria-label="Filter answers by topic">
-                <option value="all">All answers</option>
-                ${topics.map((topic) => `<option value="${slugify(topic)}">${escapeHtml(topic)}</option>`).join("")}
-              </select>
+            <div class="answers-directory-controls">
+              <div class="answers-search-filter">
+                <label for="answers-search-input">Search answers</label>
+                <input id="answers-search-input" type="search" data-answer-search placeholder="Try: prayer, anxiety, salvation..." autocomplete="off">
+              </div>
+              <div class="answers-topic-filter">
+                <label for="answers-topic-select">Topic</label>
+                <select id="answers-topic-select" data-answer-topic-select>
+                  <option value="all">All topics</option>
+                  ${topics.map((topic) => `<option value="${slugify(topic)}">${escapeHtml(topic)}</option>`).join("")}
+                </select>
+              </div>
             </div>
+            <p class="answers-directory-count" data-answer-topic-count aria-live="polite">Showing ${answers.length} answers</p>
           </div>
           <div class="answers-directory" id="all-answers" data-answers-directory>
             ${answers
               .map((answer) => {
                 const answerTopicSlugs = answer.topics.map(slugify);
                 return `
-                  <article class="directory-answer-card" data-answer-topics="${answerTopicSlugs.join(" ")}">
-                    <span class="directory-answer-meta">${escapeHtml(answer.category)}</span>
-                    <a class="directory-answer-title" href="${answerPath(answer)}">${escapeHtml(answer.question)}</a>
+                  <article class="directory-answer-card" data-answer-topics="${answerTopicSlugs.join(" ")}" data-answer-search-text="${escapeAttribute(`${answer.question} ${answer.shortAnswer} ${answer.topics.join(" ")} ${answer.keywords.join(" ")}`.toLowerCase())}">
+                    <span class="directory-answer-meta">${escapeHtml(answer.topics[0])}</span>
+                    <h2><a class="directory-answer-title" href="${answerPath(answer)}">${escapeHtml(answer.question)}</a></h2>
                     <p>${escapeHtml(answer.shortAnswer)}</p>
                     <div class="directory-answer-topics" aria-label="Related topics">
                       ${answer.topics
@@ -662,10 +751,16 @@ function answersIndexPage(answers) {
                         .map((topic) => `<a href="#topic-${slugify(topic)}" data-answer-topic-filter="${slugify(topic)}">${escapeHtml(topic)}</a>`)
                         .join("")}
                     </div>
+                    <a class="directory-read-more" href="${answerPath(answer)}" aria-label="Read the full answer to ${escapeAttribute(answer.question)}">Read the full answer</a>
                   </article>
                 `;
               })
               .join("")}
+          </div>
+          <div class="answers-directory-empty" data-answer-empty hidden>
+            <h2>No matching answers</h2>
+            <p>Try a broader search or choose another topic.</p>
+            <button type="button" data-answer-clear>Clear filters</button>
           </div>
         </div>
       </section>
@@ -676,10 +771,14 @@ function answersIndexPage(answers) {
         const topicLinks = Array.from(document.querySelectorAll(".directory-answer-topics [data-answer-topic-filter]"));
         const cards = Array.from(document.querySelectorAll("[data-answer-topics]"));
         const count = document.querySelector("[data-answer-topic-count]");
+        const searchInput = document.querySelector("[data-answer-search]");
+        const emptyState = document.querySelector("[data-answer-empty]");
+        const clearButton = document.querySelector("[data-answer-clear]");
 
         if (!topicSelect || !cards.length) return;
 
-        const applyFilter = (topic) => {
+        const applyFilter = (topic, query = searchInput ? searchInput.value : "") => {
+          const normalizedQuery = query.trim().toLowerCase();
           topicSelect.value = topic;
 
           topicLinks.forEach((link) => {
@@ -688,13 +787,18 @@ function answersIndexPage(answers) {
 
           let visibleCount = 0;
           cards.forEach((card) => {
-            const isVisible = topic === "all" || card.dataset.answerTopics.split(" ").includes(topic);
+            const matchesTopic = topic === "all" || card.dataset.answerTopics.split(" ").includes(topic);
+            const matchesQuery = !normalizedQuery || card.dataset.answerSearchText.includes(normalizedQuery);
+            const isVisible = matchesTopic && matchesQuery;
             card.hidden = !isVisible;
             if (isVisible) visibleCount += 1;
           });
 
           if (count) {
             count.textContent = "Showing " + visibleCount + " answer" + (visibleCount === 1 ? "" : "s");
+          }
+          if (emptyState) {
+            emptyState.hidden = visibleCount !== 0;
           }
         };
 
@@ -704,6 +808,19 @@ function answersIndexPage(answers) {
           history.replaceState(null, "", topic === "all" ? "#all-answers" : "#topic-" + topic);
         });
 
+        if (searchInput) {
+          searchInput.addEventListener("input", () => applyFilter(topicSelect.value));
+        }
+
+        if (clearButton) {
+          clearButton.addEventListener("click", () => {
+            if (searchInput) searchInput.value = "";
+            applyFilter("all", "");
+            history.replaceState(null, "", "#all-answers");
+            if (searchInput) searchInput.focus();
+          });
+        }
+
         topicLinks.forEach((link) => {
           link.addEventListener("click", (event) => {
             const topic = link.dataset.answerTopicFilter;
@@ -711,6 +828,7 @@ function answersIndexPage(answers) {
             event.preventDefault();
             applyFilter(topic);
             history.replaceState(null, "", "#topic-" + topic);
+            document.querySelector(".answers-directory-toolbar").scrollIntoView({ behavior: "smooth", block: "start" });
           });
         });
 
@@ -723,7 +841,7 @@ function answersIndexPage(answers) {
   });
 }
 
-function topicsIndexPage(answers, topics) {
+function topicsIndexPage(answers, topics, topicIcons, topicDescriptions) {
   return pageShell({
     title: "Bible Topics | Word Oasis",
     description: "Explore Word Oasis Bible answers by topic, including salvation, prayer, prophecy, Sabbath, Christian living, comfort, and more.",
@@ -736,29 +854,33 @@ function topicsIndexPage(answers, topics) {
           <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / Topics</nav>
           <p class="eyebrow">Topics</p>
           <h1>Explore Bible answers by topic</h1>
-          <p class="page-intro">Choose a topic to find related Bible questions, clear answers, and Scripture passages for deeper study.</p>
+          <p class="page-intro">Explore ${answers.length} Bible answers organized by topic, with clear explanations and Scripture passages for deeper study.</p>
         </div>
       </section>
-      <section class="section">
-        <div class="container topic-link-grid">
+      <section class="section section-soft">
+        <div class="container">
+          <div class="topic-grid">
           ${topics
             .map((topic) => {
               const count = answers.filter((answer) => answer.topics.includes(topic)).length;
               return `
-                <a class="directory-card" href="${topicPath(topic)}">
-                  <h2>${escapeHtml(topic)}</h2>
-                  <p>${count} Bible answer${count === 1 ? "" : "s"}</p>
+                <a class="topic-card" href="${topicPath(topic)}">
+                  <span class="topic-icon" aria-hidden="true">${topicIconMarkup(topic, topicIcons)}</span>
+                  <span class="topic-card-title">${escapeHtml(topic)}</span>
+                  <small>${escapeHtml(topicDescriptions[topic] || "Explore Scripture-based answers about this topic")}</small>
+                  <strong class="topic-card-count">${count}</strong>
                 </a>
               `;
             })
             .join("")}
+          </div>
         </div>
       </section>
     </main>`
   });
 }
 
-function topicPage(topic, answers) {
+function topicPage(topic, answers, topicIcons, topicDescriptions) {
   const topicAnswers = answers.filter((answer) => answer.topics.includes(topic));
 
   return pageShell({
@@ -771,25 +893,32 @@ function topicPage(topic, answers) {
       <section class="page-hero">
         <div class="container">
           <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/topics/">Topics</a> / ${escapeHtml(topic)}</nav>
-          <p class="eyebrow">Topic</p>
-          <h1>${escapeHtml(topic)} Bible answers</h1>
-          <p class="page-intro">Read clear Bible answers related to ${escapeHtml(topic.toLowerCase())}, with Scripture references for each question.</p>
+          <div class="topic-page-heading">
+            <span class="topic-page-icon" aria-hidden="true">${topicIconMarkup(topic, topicIcons)}</span>
+            <div>
+              <p class="eyebrow">Topic</p>
+              <h1>${escapeHtml(topic)} Bible answers</h1>
+              <p class="page-intro">${escapeHtml(topicDescriptions[topic] || `Read clear Bible answers related to ${topic.toLowerCase()}`)}. Explore ${topicAnswers.length} Scripture-based answer${topicAnswers.length === 1 ? "" : "s"}.</p>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-soft">
         <div class="container">
-          <ul class="answer-list-page">
+          <div class="topic-answer-grid">
             ${topicAnswers
               .map(
                 (answer) => `
-                  <li class="directory-card">
-                    <h2><a href="${answerPath(answer)}">${escapeHtml(answer.question)}</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">${escapeHtml(topic)}</span>
+                    <h2><a class="directory-answer-title" href="${answerPath(answer)}">${escapeHtml(answer.question)}</a></h2>
                     <p>${escapeHtml(answer.shortAnswer)}</p>
-                  </li>
+                    <a class="directory-read-more" href="${answerPath(answer)}" aria-label="Read the full answer to ${escapeAttribute(answer.question)}">Read the full answer</a>
+                  </article>
                 `
               )
               .join("")}
-          </ul>
+          </div>
         </div>
       </section>
     </main>`
@@ -841,21 +970,21 @@ ${entries}
   );
 }
 
-function writeStaticPages(answers, perspectivesByCategory, perspectivesByAnswer) {
+function writeStaticPages(answers, perspectivesByAnswer, topicIcons, topicDescriptions) {
   const topics = Array.from(new Set(answers.flatMap((answer) => answer.topics))).sort();
 
   resetGeneratedDirectory("answers");
   resetGeneratedDirectory("topics");
 
   writePage("answers/index.html", answersIndexPage(answers));
-  writePage("topics/index.html", topicsIndexPage(answers, topics));
+  writePage("topics/index.html", topicsIndexPage(answers, topics, topicIcons, topicDescriptions));
 
   answers.forEach((answer) => {
-    writePage(path.join(answerPath(answer).slice(1), "index.html"), answerPage(answer, answers, perspectivesByCategory, perspectivesByAnswer));
+    writePage(path.join(answerPath(answer).slice(1), "index.html"), answerPage(answer, answers, perspectivesByAnswer));
   });
 
   topics.forEach((topic) => {
-    writePage(path.join(topicPath(topic).slice(1), "index.html"), topicPage(topic, answers));
+    writePage(path.join(topicPath(topic).slice(1), "index.html"), topicPage(topic, answers, topicIcons, topicDescriptions));
   });
 
   writeSitemap(answers, topics);
@@ -866,8 +995,9 @@ function main() {
   const html = fs.readFileSync(INDEX_PATH, "utf8");
   const scriptSource = fs.readFileSync(SCRIPT_PATH, "utf8");
   const answers = extractAnswersData(scriptSource);
-  const perspectivesByCategory = extractConstData(scriptSource, "perspectivesByCategory");
   const perspectivesByAnswer = extractConstData(scriptSource, "perspectivesByAnswer");
+  const topicIcons = extractConstData(scriptSource, "topicIcons");
+  const topicDescriptions = extractConstData(scriptSource, "topicDescriptions");
 
   const { topicGridHtml, answersListHtml, resultMetaText, spotlightBodyHtml, questionTopicOptions } = renderWithJsdom(
     html,
@@ -880,10 +1010,16 @@ function main() {
   output = injectContainerContent(output, "result-meta", "prerender:result-meta", resultMetaText);
   output = injectContainerContent(output, "spotlight-body", "prerender:spotlight-body", `\n              ${spotlightBodyHtml}\n              `);
   output = injectSelectOptions(output, "prerender:question-topic", questionTopicOptions);
-  output = injectFaqJsonLd(output, buildFaqJsonLd(answers));
+  output = injectHomepageContentJsonLd(output, buildTopicListJsonLd(answers));
+  output = injectHomepageAnswerCount(output, answers.length);
 
   fs.writeFileSync(INDEX_PATH, output, "utf8");
-  const topics = writeStaticPages(answers, perspectivesByCategory, perspectivesByAnswer);
+  const topics = writeStaticPages(
+    answers,
+    perspectivesByAnswer,
+    topicIcons,
+    topicDescriptions
+  );
   console.log(`Prerendered ${answers.length} answers, ${topics.length} topics, and sitemap.xml`);
 }
 

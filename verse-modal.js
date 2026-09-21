@@ -1,20 +1,62 @@
-/* Lightweight Bible verse modal shared by every static answer/topic page.
-   Tapping a Scripture reference bubble fetches the public-domain World
-   English Bible text from bible-api.com and shows it in an accessible
-   dialog, without needing the full homepage script.js bundle. */
+/* Lightweight Bible verse modal shared by every static answer/topic page. */
 (function () {
   const verseModal = document.querySelector("#verse-modal");
   const verseModalTitle = document.querySelector("#verse-modal-title");
   const verseModalBody = document.querySelector("#verse-modal-body");
   const verseModalClose = document.querySelector("#verse-modal-close");
+  const verseModalTranslation = document.querySelector("#verse-modal-translation");
   const answerSharePanel = document.querySelector("[data-answer-share]");
 
-  if (!verseModal || !verseModalTitle || !verseModalBody || !verseModalClose) {
+  if (!verseModal || !verseModalTitle || !verseModalBody || !verseModalClose || !verseModalTranslation) {
     return;
   }
 
+  const translations = {
+    web: { id: "web", label: "World English Bible" },
+    kjv: { id: "kjv", label: "King James Version" },
+    asv: { id: "asv", label: "American Standard Version" }
+  };
+  const translationStorageKey = "word-oasis-bible-translation";
+  const legacyTranslationStorageKey = "word-oasis-promise-translation";
   const verseCache = new Map();
   let lastFocusedElement = null;
+  let activeReference = "";
+  let verseRequest = 0;
+
+  function storedTranslationId() {
+    try {
+      const stored = localStorage.getItem(translationStorageKey)
+        || localStorage.getItem(legacyTranslationStorageKey);
+      return translations[stored] ? stored : "web";
+    } catch (error) {
+      return "web";
+    }
+  }
+
+  function saveTranslationId(translationId) {
+    try {
+      localStorage.setItem(translationStorageKey, translationId);
+    } catch (error) {
+      console.warn("Could not save the Bible version preference.", error);
+    }
+  }
+
+  function setVerseStatus(message) {
+    const status = document.createElement("p");
+    status.className = "verse-status";
+    status.textContent = message;
+    verseModalBody.replaceChildren(status);
+  }
+
+  function renderVerse(text, translation) {
+    const verse = document.createElement("p");
+    verse.className = "verse-text";
+    verse.textContent = text;
+    const credit = document.createElement("p");
+    credit.className = "verse-credit";
+    credit.textContent = `${translation.label} (public domain)`;
+    verseModalBody.replaceChildren(verse, credit);
+  }
 
   function answerShareUrl() {
     const url = new URL(window.location.href);
@@ -55,42 +97,6 @@
     }
   }
 
-  function initializeAnswerLibrary() {
-    const answerPage = document.querySelector("[data-answer-page]");
-    const saveButton = answerPage?.querySelector("[data-answer-save]");
-    const library = window.WordOasisLibrary;
-    if (!answerPage || !saveButton || !library) return;
-
-    const item = {
-      id: `answer:${answerPage.dataset.answerId}`,
-      type: "answer",
-      title: answerTitle(),
-      subtitle: answerPage.dataset.answerCategory || "Bible answer",
-      url: new URL(answerCanonicalUrl()).pathname
-    };
-
-    const updateButton = () => {
-      const saved = library.isSaved(item.id);
-      saveButton.setAttribute("aria-pressed", String(saved));
-      saveButton.textContent = saved ? "Saved" : "Save answer";
-    };
-
-    library.addRecent(item);
-    updateButton();
-    saveButton.addEventListener("click", () => {
-      if (library.isSaved(item.id)) {
-        library.remove(item.id);
-        setAnswerShareStatus("Answer removed from your private library.");
-      } else {
-        library.save(item);
-        setAnswerShareStatus("Answer saved in your private library.");
-        trackAnswerEvent("save");
-      }
-      updateButton();
-    });
-    window.addEventListener("wordoasis:library-change", updateButton);
-  }
-
   function answerGraphicOptions() {
     return {
       text: answerTitle(),
@@ -117,35 +123,57 @@
           return null;
         })
       : null;
-    const shareLinks = {
-      "[data-answer-share-facebook]": `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
-      "[data-answer-share-x]": `https://twitter.com/intent/tweet?text=${encodeURIComponent(content)}`,
-      "[data-answer-share-whatsapp]": `https://api.whatsapp.com/send?text=${encodeURIComponent(content)}`,
-      "[data-answer-share-sms]": `sms:?&body=${encodeURIComponent(content)}`
-    };
+    const modeButtons = Array.from(answerSharePanel.querySelectorAll("[data-answer-share-mode]"));
+    const platformButtons = Array.from(answerSharePanel.querySelectorAll("[data-answer-share-platform]"));
+    const primaryButton = answerSharePanel.querySelector("[data-answer-share-primary]");
+    const secondaryButton = answerSharePanel.querySelector("[data-answer-share-secondary]");
+    const modeSelector = answerSharePanel.querySelector(".share-mode-selector");
+    const shareModeStorageKey = "word-oasis-answer-share-mode";
+    let shareMode = "text";
 
-    Object.entries(shareLinks).forEach(([selector, href]) => {
-      const link = answerSharePanel.querySelector(selector);
-      if (link) {
-        link.href = href;
-        link.addEventListener("click", () => {
-          const action = selector.includes("facebook")
-            ? "Opening Facebook with the answer link."
-            : selector.includes("whatsapp")
-              ? "Opening WhatsApp with the answer link."
-              : selector.includes("sms")
-                ? "Opening your messaging app with the answer link."
-                : "Opening X with the answer link.";
-          setAnswerShareStatus(action);
-        });
+    function storedShareMode() {
+      try {
+        const storedMode = sessionStorage.getItem(shareModeStorageKey);
+        return storedMode === "graphic" ? "graphic" : "text";
+      } catch (error) {
+        console.warn("Could not read the saved answer sharing mode.", error);
+        return "text";
       }
-    });
+    }
 
-    answerSharePanel.querySelector("[data-answer-share-native]")?.addEventListener("click", async () => {
+    function setShareMode(mode, persist = true) {
+      shareMode = mode;
+      modeButtons.forEach((button) => {
+        const selected = button.dataset.answerShareMode === mode;
+        button.classList.toggle("active", selected);
+        button.setAttribute("aria-pressed", String(selected));
+      });
+      if (modeSelector) {
+        modeSelector.style.setProperty("--share-thumb-left", mode === "graphic" ? "50%" : "3px");
+      }
+      if (secondaryButton) {
+        secondaryButton.textContent = mode === "graphic" ? "Download" : "Copy";
+      }
+      platformButtons.forEach((button) => {
+        const platform = button.dataset.answerSharePlatform;
+        const preposition = platform === "Text" ? "by" : "on";
+        button.setAttribute("aria-label", `Share answer as ${mode} ${preposition} ${platform}`);
+      });
+      if (persist) {
+        try {
+          sessionStorage.setItem(shareModeStorageKey, mode);
+        } catch (error) {
+          console.warn("Could not save the answer sharing mode.", error);
+        }
+      }
+      setAnswerShareStatus("");
+    }
+
+    async function shareAnswerText() {
       if (navigator.share) {
         try {
           await navigator.share({
-            title: document.querySelector("h1")?.textContent.trim() || document.title,
+            title: answerTitle(),
             text: document.querySelector(".page-intro")?.textContent.trim() || "",
             url
           });
@@ -167,17 +195,41 @@
       } catch (error) {
         setAnswerShareStatus("Could not copy automatically. Copy the answer link from your address bar.");
       }
-    });
+    }
 
-    answerSharePanel.querySelector("[data-answer-share-copy]")?.addEventListener("click", async () => {
+    async function copyAnswerText() {
       try {
-        await navigator.clipboard.writeText(answerCanonicalUrl());
-        setAnswerShareStatus("Answer link copied to your clipboard.");
-        trackAnswerEvent("copy_link");
+        await navigator.clipboard.writeText(content);
+        setAnswerShareStatus("Answer text and link copied.");
+        trackAnswerEvent("copy");
       } catch (error) {
         setAnswerShareStatus("Could not copy automatically. Copy the answer link from your address bar.");
       }
-    });
+    }
+
+    async function shareAnswerTextOnPlatform(platform) {
+      const destinations = {
+        Facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
+        X: `https://twitter.com/intent/tweet?text=${encodeURIComponent(content)}`,
+        WhatsApp: `https://api.whatsapp.com/send?text=${encodeURIComponent(content)}`,
+        Text: `sms:?&body=${encodeURIComponent(content)}`
+      };
+
+      if (platform === "Instagram") {
+        await shareAnswerText();
+        return;
+      }
+
+      const destination = destinations[platform];
+      if (!destination) return;
+      if (platform === "Text") {
+        window.location.href = destination;
+      } else {
+        window.open(destination, "_blank", "noopener,noreferrer");
+      }
+      setAnswerShareStatus(`Opening ${platform} with the answer text and link.`);
+      trackAnswerEvent(`${platform.toLowerCase()}_text`);
+    }
 
     async function shareAnswerGraphic(platform = "") {
       if (!graphicRenderer || !answerGraphicFilePromise) {
@@ -229,76 +281,121 @@
       }
     }
 
-    answerSharePanel.querySelector("[data-answer-share-graphic]")?.addEventListener("click", () => {
-      shareAnswerGraphic();
-    });
-
-    answerSharePanel.querySelectorAll("[data-answer-share-graphic-platform]").forEach((button) => {
-      button.addEventListener("click", () => {
-        shareAnswerGraphic(button.dataset.answerShareGraphicPlatform);
-      });
-    });
-
-    answerSharePanel.querySelector("[data-answer-download-graphic]")?.addEventListener("click", async () => {
+    async function downloadAnswerGraphic() {
       if (!graphicRenderer || !answerGraphicFilePromise) {
         setAnswerShareStatus("The answer graphic tools are not available right now.");
         return;
       }
 
-      setAnswerShareStatus("Creating your question graphic...");
+      setAnswerShareStatus("Creating your answer graphic...");
       try {
         const file = await answerGraphicFilePromise;
         if (!file) {
-          throw answerGraphicError || new Error("The question graphic could not be created.");
+          throw answerGraphicError || new Error("The answer graphic could not be created.");
         }
         graphicRenderer.downloadFile(file);
-        setAnswerShareStatus("Question graphic downloaded.");
+        setAnswerShareStatus("Answer graphic downloaded.");
         trackAnswerEvent("graphic_download");
       } catch (error) {
         answerGraphicFilePromise = graphicRenderer.createFile(answerGraphicOptions()).catch((nextError) => {
           answerGraphicError = nextError;
           return null;
         });
-        setAnswerShareStatus(error.message || "The question graphic could not be created.");
+        setAnswerShareStatus(error.message || "The answer graphic could not be created.");
+      }
+    }
+
+    modeButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        setShareMode(button.dataset.answerShareMode);
+      });
+    });
+
+    platformButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const platform = button.dataset.answerSharePlatform;
+        if (shareMode === "graphic") {
+          shareAnswerGraphic(platform);
+        } else {
+          shareAnswerTextOnPlatform(platform);
+        }
+      });
+    });
+
+    primaryButton?.addEventListener("click", () => {
+      if (shareMode === "graphic") {
+        shareAnswerGraphic();
+      } else {
+        shareAnswerText();
       }
     });
+
+    secondaryButton?.addEventListener("click", () => {
+      if (shareMode === "graphic") {
+        downloadAnswerGraphic();
+      } else {
+        copyAnswerText();
+      }
+    });
+
+    setShareMode(storedShareMode(), false);
   }
 
-  async function fetchVerseText(reference) {
-    if (verseCache.has(reference)) {
-      return verseCache.get(reference);
+  async function fetchVerseText(reference, translation) {
+    const cacheKey = `${translation.id}:${reference}`;
+    if (verseCache.has(cacheKey)) {
+      return verseCache.get(cacheKey);
     }
 
     const query = encodeURIComponent(reference).replace(/%20/g, "+");
-    const response = await fetch(`https://bible-api.com/${query}`);
+    const response = await fetch(`https://bible-api.com/${query}?translation=${translation.id}`);
 
     if (!response.ok) {
       throw new Error("Verse lookup failed");
     }
 
     const data = await response.json();
-    const text = data.text.trim().replace(/\s+/g, " ");
-    verseCache.set(reference, text);
+    const text = String(data.text || "")
+      .trim()
+      .replace(/\s+/g, " ")
+      .replace(/"([^"]*)"/g, "“$1”");
+    if (!text) {
+      throw new Error("Verse lookup returned no text");
+    }
+    verseCache.set(cacheKey, text);
     return text;
   }
 
-  async function openVerseModal(reference) {
-    lastFocusedElement = document.activeElement;
-    verseModalTitle.textContent = reference;
-    verseModalBody.innerHTML = `<p class="verse-status">Loading verse...</p>`;
-    verseModal.hidden = false;
-    document.body.classList.add("modal-open");
-    verseModalClose.focus();
+  async function loadActiveVerse() {
+    const request = ++verseRequest;
+    const translation = translations[verseModalTranslation.value] || translations.web;
+    setVerseStatus(`Loading ${translation.label}...`);
 
     try {
-      const text = await fetchVerseText(reference);
-      verseModalBody.innerHTML = `<p class="verse-text">${text}</p><p class="verse-credit">World English Bible (public domain)</p>`;
+      const text = await fetchVerseText(activeReference, translation);
+      if (request === verseRequest && !verseModal.hidden) {
+        renderVerse(text, translation);
+      }
     } catch (error) {
-      verseModalBody.innerHTML = `<p class="verse-status">Could not load this verse right now. Please check your connection and try again.</p>`;
+      if (request === verseRequest && !verseModal.hidden) {
+        setVerseStatus("Could not load this verse in the selected version. Please check your connection and try again.");
+      }
     }
   }
 
+  function openVerseModal(reference) {
+    lastFocusedElement = document.activeElement;
+    activeReference = reference;
+    verseModalTitle.textContent = reference;
+    verseModalTranslation.value = storedTranslationId();
+    verseModal.hidden = false;
+    document.body.classList.add("modal-open");
+    verseModalClose.focus();
+    loadActiveVerse();
+  }
+
   function closeVerseModal() {
+    verseRequest += 1;
     verseModal.hidden = true;
     document.body.classList.remove("modal-open");
     if (lastFocusedElement) {
@@ -314,6 +411,14 @@
   });
 
   verseModalClose.addEventListener("click", closeVerseModal);
+
+  verseModalTranslation.value = storedTranslationId();
+  verseModalTranslation.addEventListener("change", () => {
+    saveTranslationId(verseModalTranslation.value);
+    if (!verseModal.hidden && activeReference) {
+      loadActiveVerse();
+    }
+  });
 
   verseModal.addEventListener("click", (event) => {
     if (event.target === verseModal) {
@@ -345,5 +450,4 @@
   });
 
   initializeAnswerShare();
-  initializeAnswerLibrary();
 })();

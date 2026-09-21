@@ -40,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261058">
+    <link rel="stylesheet" href="/styles.css?v=20261076">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Second Coming Bible Answers | Word Oasis">
     <meta property="og:description" content="Browse Scripture-based answers about second coming from Word Oasis, with Bible references for further study.">
@@ -72,12 +72,19 @@
         <ul id="primary-menu" class="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/answers/">Answers</a></li>
-          <li><a href="/topics/">Topics</a></li>
+          <li><a href="/topics/" aria-current="page">Topics</a></li>
           <li><a href="/bible/">Bible</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/#ask">Ask a question</a></li>
           <li class="nav-search-item">
-            <form class="nav-search" action="/" method="get" role="search">
+            <form class="nav-search" action="/" method="get" role="search" data-nav-search>
+              <button class="nav-search-toggle" type="button" aria-expanded="false" aria-controls="nav-search-fields" aria-label="Search Bible answers">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-4-4"></path>
+                </svg>
+              </button>
+              <div class="nav-search-fields" id="nav-search-fields">
               <label class="sr-only" for="nav-search-input">Search Bible questions</label>
               <input
                 id="nav-search-input"
@@ -86,7 +93,8 @@
                 placeholder="Search"
                 autocomplete="off"
               >
-              <button type="submit" aria-label="Submit search">Search</button>
+              <button class="nav-search-submit" type="submit" aria-label="Submit search">Search</button>
+              </div>
             </form>
           </li>
           <li class="nav-theme-item">
@@ -118,41 +126,115 @@
       <section class="page-hero">
         <div class="container">
           <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/topics/">Topics</a> / Second Coming</nav>
-          <p class="eyebrow">Topic</p>
-          <h1>Second Coming Bible answers</h1>
-          <p class="page-intro">Read clear Bible answers related to second coming, with Scripture references for each question.</p>
+          <div class="topic-page-heading">
+            <span class="topic-page-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false">
+    <path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.204a1 1 0 0 1-.962.733H5.815a1 1 0 0 1-.962-.733L2.019 6.019a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"></path>
+    <path d="M5 21h14"></path>
+  </svg></span>
+            <div>
+              <p class="eyebrow">Topic</p>
+              <h1>Second Coming Bible answers</h1>
+              <p class="page-intro">Jesus' return, readiness, resurrection, and lasting hope. Explore 13 Scripture-based answers.</p>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-soft">
         <div class="container">
-          <ul class="answer-list-page">
+          <div class="topic-answer-grid">
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/do-you-go-to-heaven-when-you-die/">Do You Go to Heaven When You Die?</a></h2>
-                    <p>Scripture's emphasis is not that the righteous immediately go to heaven at death. The Bible repeatedly points believers toward the resurrection at Christ's second coming as the time when the dead in Christ receive immortal life.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Second Coming</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-resurrection/">What Is the Resurrection?</a></h2>
+                    <p>The resurrection is God's act of bringing the dead back to life. Scripture teaches a resurrection of the righteous to eternal life and a resurrection of the wicked to judgment.</p>
+                    <a class="directory-read-more" href="/answers/what-is-the-resurrection/" aria-label="Read the full answer to What Is the Resurrection?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-is-the-rapture/">What Is the Rapture?</a></h2>
-                    <p>The Bible does not use the word "rapture," but it does teach that Christ's followers will be caught up to meet Him in the air when He returns.</p>
-                  </li>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Second Coming</span>
+                    <h2><a class="directory-answer-title" href="/answers/when-will-the-dead-be-resurrected/">When Will the Dead Be Resurrected?</a></h2>
+                    <p>The righteous dead will be resurrected at the second coming of Jesus Christ. Scripture also describes a later resurrection of the wicked for final judgment.</p>
+                    <a class="directory-read-more" href="/answers/when-will-the-dead-be-resurrected/" aria-label="Read the full answer to When Will the Dead Be Resurrected?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/how-can-i-be-ready-for-the-second-coming-of-jesus/">How can I be ready for the Second Coming of Jesus?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Second Coming</span>
+                    <h2><a class="directory-answer-title" href="/answers/when-is-jesus-coming-back/">When Is Jesus Coming Back?</a></h2>
+                    <p>The Bible teaches that Jesus Christ will return personally, visibly, and gloriously. However, Jesus specifically said that the exact day and hour of His return are not revealed to human beings.</p>
+                    <a class="directory-read-more" href="/answers/when-is-jesus-coming-back/" aria-label="Read the full answer to When Is Jesus Coming Back?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Second Coming</span>
+                    <h2><a class="directory-answer-title" href="/answers/when-will-jesus-return/">When Will Jesus Return?</a></h2>
+                    <p>The Bible does not reveal the exact date or hour of Christ's second coming. It teaches that the return will occur after the gospel has been proclaimed to the world and that believers should remain ready.</p>
+                    <a class="directory-read-more" href="/answers/when-will-jesus-return/" aria-label="Read the full answer to When Will Jesus Return?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Second Coming</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-are-the-signs-of-the-end-times/">What Are the Signs of the End Times?</a></h2>
+                    <p>Jesus gave several signs of the approaching end, including widespread deception, wars, famines, pestilences, persecution, false prophets, increasing lawlessness, and the worldwide proclamation of the gospel.</p>
+                    <a class="directory-read-more" href="/answers/what-are-the-signs-of-the-end-times/" aria-label="Read the full answer to What Are the Signs of the End Times?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Second Coming</span>
+                    <h2><a class="directory-answer-title" href="/answers/are-we-living-in-the-end-times/">Are We Living in the End Times?</a></h2>
+                    <p>The New Testament describes the Christian era as “the last days,” while also describing events that will intensify before Christ's return. Scripture therefore calls believers to watchfulness rather than date-setting.</p>
+                    <a class="directory-read-more" href="/answers/are-we-living-in-the-end-times/" aria-label="Read the full answer to Are We Living in the End Times?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Second Coming</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-the-bible-say-about-the-end-of-the-world/">What Does the Bible Say About the End of the World?</a></h2>
+                    <p>The Bible teaches that the present world order will eventually come to an end, followed by God's judgment and the creation of “a new heaven and a new earth” where righteousness dwells.</p>
+                    <a class="directory-read-more" href="/answers/what-does-the-bible-say-about-the-end-of-the-world/" aria-label="Read the full answer to What Does the Bible Say About the End of the World?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Second Coming</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-millennium-in-revelation/">What Is the Millennium in Revelation?</a></h2>
+                    <p>The millennium is the thousand-year period described in Revelation 20. It occurs between the first resurrection and the final resurrection and judgment of the wicked.</p>
+                    <a class="directory-read-more" href="/answers/what-is-the-millennium-in-revelation/" aria-label="Read the full answer to What Is the Millennium in Revelation?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Second Coming</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-new-jerusalem/">What Is the New Jerusalem?</a></h2>
+                    <p>The New Jerusalem is the holy city that God prepares in heaven and brings down to the renewed earth after the final judgment. It is described as the dwelling place of God with His redeemed people.</p>
+                    <a class="directory-read-more" href="/answers/what-is-the-new-jerusalem/" aria-label="Read the full answer to What Is the New Jerusalem?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Second Coming</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-the-rapture/">What Is the Rapture?</a></h2>
+                    <p>The Bible does not use the word “rapture,” but it does teach that Christ's followers will be caught up to meet Him in the air when He returns.</p>
+                    <a class="directory-read-more" href="/answers/what-is-the-rapture/" aria-label="Read the full answer to What Is the Rapture?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Second Coming</span>
+                    <h2><a class="directory-answer-title" href="/answers/does-the-bible-teach-a-secret-rapture/">Does the Bible Teach a Secret Rapture?</a></h2>
+                    <p>The Bible teaches that believers will be caught up to meet Christ, but the passages describing Christ's return emphasize that it will be visible, audible, glorious, and accompanied by the resurrection.</p>
+                    <a class="directory-read-more" href="/answers/does-the-bible-teach-a-secret-rapture/" aria-label="Read the full answer to Does the Bible Teach a Secret Rapture?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Second Coming</span>
+                    <h2><a class="directory-answer-title" href="/answers/how-can-i-be-ready-for-the-second-coming-of-jesus/">How can I be ready for the Second Coming of Jesus?</a></h2>
                     <p>Readiness for Jesus' return is not date-setting or fear. It is an active relationship with Christ that shows itself in faith, watchfulness, obedience, service, and hope.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/how-can-i-be-ready-for-the-second-coming-of-jesus/" aria-label="Read the full answer to How can I be ready for the Second Coming of Jesus?">Read the full answer</a>
+                  </article>
 
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-was-the-day-of-atonement-and-why-does-it-matter-today/">What was the Day of Atonement and why does it matter today?</a></h2>
-                    <p>The Day of Atonement pictured a final cleansing of sin's record, pointing forward to the judgment and to Christ's ongoing work of removing sin completely.</p>
-                  </li>
-
-                  <li class="directory-card">
-                    <h2><a href="/answers/what-are-the-biblical-signs-that-jesus-is-coming-soon/">What are the biblical signs that Jesus is coming soon?</a></h2>
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Second Coming</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-are-the-biblical-signs-that-jesus-is-coming-soon/">What are the biblical signs that Jesus is coming soon?</a></h2>
                     <p>Jesus described spiritual, social, and global signs — false christs, wars, disasters, and the gospel reaching the whole world — as markers that His return is near.</p>
-                  </li>
+                    <a class="directory-read-more" href="/answers/what-are-the-biblical-signs-that-jesus-is-coming-soon/" aria-label="Read the full answer to What are the biblical signs that Jesus is coming soon?">Read the full answer</a>
+                  </article>
 
-          </ul>
+          </div>
         </div>
       </section>
     </main>
@@ -218,14 +300,22 @@
             &times;
           </button>
         </div>
+        <div class="verse-modal-toolbar">
+          <label for="verse-modal-translation">Bible version</label>
+          <select id="verse-modal-translation">
+            <option value="web">WEB - World English Bible</option>
+            <option value="kjv">KJV - King James Version</option>
+            <option value="asv">ASV - American Standard Version</option>
+          </select>
+        </div>
         <div class="verse-modal-body" id="verse-modal-body"></div>
       </div>
     </div>
 
-    <script src="/theme.js?v=20261058"></script>
-    <script src="/pwa.js?v=20261058"></script>
-    <script src="/scripture-graphic.js?v=20261058"></script>
-    <script src="/local-library.js?v=20261058"></script>
-    <script src="/verse-modal.js?v=20261058"></script>
+    <script src="/theme.js?v=20261073"></script>
+    <script src="/pwa.js?v=20261073"></script>
+    <script src="/scripture-graphic.js?v=20261073"></script>
+    <script src="/local-library.js?v=20261073"></script>
+    <script src="/verse-modal.js?v=20261073"></script>
   </body>
 </html>

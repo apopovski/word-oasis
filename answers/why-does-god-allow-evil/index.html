@@ -40,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261058">
+    <link rel="stylesheet" href="/styles.css?v=20261076">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Why Does God Allow Evil? | Word Oasis">
     <meta property="og:description" content="The Bible teaches that evil exists because God's creatures were given meaningful freedom, and that some chose rebellion against God. God has permitted...">
@@ -64,7 +64,7 @@
     "name": "Why Does God Allow Evil?",
     "acceptedAnswer": {
       "@type": "Answer",
-      "text": "The Bible teaches that evil exists because God's creatures were given meaningful freedom, and that some chose rebellion against God. God has permitted evil for a time, but Scripture promises that evil will ultimately be judged and destroyed. God's original creation was \"very good\" (Genesis 1:31). Evil was not presented as part of God's original design. The Bible identifies Satan as a rebel against God. Revelation 12:7-9 describes a conflict in heaven and identifies the devil and Satan as the deceiver of the whole world. Isaiah 14 and Ezekiel 28 contain passages describing pride, rebellion, and the downfall of a heavenly being, although their immediate historical contexts also concern earthly kings. Human rebellion followed. Genesis 3 records the entrance of sin into human experience. Why did God not immediately destroy the rebels? Scripture indicates that God's government is based upon truth, love, and justice. The story of Job shows Satan making accusations concerning God's motives and the loyalty of His servants (Job 1:9-11). The larger biblical narrative therefore involves not merely God's power to destroy evil, but the revelation of His character and the truth about sin. At the cross, God's character and the destructive nature of sin are dramatically revealed. Romans 3:25-26 presents God's justice and mercy together. God will eventually end evil completely. Nahum 1:9 says that affliction will not rise up a second time, and Revelation 20:10-15 describes the final destruction of Satan, sin, death, and those who persist in rebellion. Scripture reveals the origin, nature, and ultimate destiny of evil, but it does not answer every philosophical question about why God permits every particular event. Discipleship applies the gospel to the whole life: body, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful stewardship of the life God has entrusted to us and practical ways to serve others. (Genesis 1:31, Genesis 3, Job 1-2, John 8:44, Revelation 12:7-9, Romans 3:25-26, Revelation 20:10-15, Revelation 21:4)"
+      "text": "The Bible teaches that evil exists because God's creatures were given meaningful freedom, and that some chose rebellion against God. God has permitted evil for a time, but Scripture promises that evil will ultimately be judged and destroyed. God's original creation was “very good” (Genesis 1:31). Evil was not presented as part of God's original design. The Bible identifies Satan as a rebel against God. Revelation 12:7-9 describes a conflict in heaven and identifies the devil and Satan as the deceiver of the whole world. Isaiah 14 and Ezekiel 28 contain passages describing pride, rebellion, and the downfall of a heavenly being, although their immediate historical contexts also concern earthly kings. Human rebellion followed. Genesis 3 records the entrance of sin into human experience. Why did God not immediately destroy the rebels? Scripture indicates that God's government is based upon truth, love, and justice. The story of Job shows Satan making accusations concerning God's motives and the loyalty of His servants (Job 1:9-11). The larger biblical narrative therefore involves not merely God's power to destroy evil, but the revelation of His character and the truth about sin. At the cross, God's character and the destructive nature of sin are dramatically revealed. Romans 3:25-26 presents God's justice and mercy together. God will eventually end evil completely. Nahum 1:9 says that affliction will not rise up a second time, and Revelation 20:10-15 describes the final destruction of Satan, sin, death, and those who persist in rebellion. Scripture reveals the origin, nature, and ultimate destiny of evil, but it does not answer every philosophical question about why God permits every particular event. (Genesis 1:31, Genesis 3, Job 1-2, John 8:44, Revelation 12:7-9, Romans 3:25-26, Revelation 20:10-15, Revelation 21:4)"
     }
   }
 }
@@ -84,13 +84,20 @@
         </button>
         <ul id="primary-menu" class="nav-links">
           <li><a href="/">Home</a></li>
-          <li><a href="/answers/">Answers</a></li>
+          <li><a href="/answers/" aria-current="page">Answers</a></li>
           <li><a href="/topics/">Topics</a></li>
           <li><a href="/bible/">Bible</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/#ask">Ask a question</a></li>
           <li class="nav-search-item">
-            <form class="nav-search" action="/" method="get" role="search">
+            <form class="nav-search" action="/" method="get" role="search" data-nav-search>
+              <button class="nav-search-toggle" type="button" aria-expanded="false" aria-controls="nav-search-fields" aria-label="Search Bible answers">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-4-4"></path>
+                </svg>
+              </button>
+              <div class="nav-search-fields" id="nav-search-fields">
               <label class="sr-only" for="nav-search-input">Search Bible questions</label>
               <input
                 id="nav-search-input"
@@ -99,7 +106,8 @@
                 placeholder="Search"
                 autocomplete="off"
               >
-              <button type="submit" aria-label="Submit search">Search</button>
+              <button class="nav-search-submit" type="submit" aria-label="Submit search">Search</button>
+              </div>
             </form>
           </li>
           <li class="nav-theme-item">
@@ -139,48 +147,38 @@
       <section class="section section-answer">
         <div class="container answer-page-layout">
           <article class="answer-page-card" data-answer-page data-answer-id="answer-why-does-god-allow-evil" data-answer-category="Life and Relationships">
-            <div class="answer-tags"><a class="tag-link" href="/topics/bible-study/">Bible Study</a><a class="tag-link" href="/topics/comfort/">Comfort</a><a class="tag-link" href="/topics/creation/">Creation</a><a class="tag-link" href="/topics/faith/">Faith</a></div>
-            <div class="answer-page-actions">
-              <button type="button" class="promise-copy-button" data-answer-save aria-pressed="false">Save answer</button>
-            </div>
+            <div class="answer-tags"><a class="tag-link" href="/topics/great-controversy/">Great Controversy</a><a class="tag-link" href="/topics/comfort/">Comfort</a></div>
             <h2>Biblical explanation</h2>
-            <p class="lead-answer">God's original creation was "very good" (Genesis 1:31). Evil was not presented as part of God's original design. The Bible identifies <a class="inline-topic-link" href="/topics/great-controversy/">Satan</a> as a rebel against God. <a class="inline-topic-link" href="/topics/prophecy/">Revelation</a> 12:7-9 describes a conflict in heaven and identifies the devil and Satan as the deceiver of the whole world. Isaiah 14 and Ezekiel 28 contain passages describing pride, rebellion, and the downfall of a heavenly being, although their immediate historical contexts also concern earthly kings. Human rebellion followed. Genesis 3 records the entrance of sin into human experience. Why did God not immediately destroy the rebels? Scripture indicates that God's government is based upon truth, love, and justice. The story of Job shows Satan making accusations concerning God's motives and the loyalty of His servants (Job 1:9-11). The larger biblical narrative therefore involves not merely God's power to destroy evil, but the revelation of His character and the truth about sin. At the <a class="inline-topic-link" href="/topics/salvation/">cross</a>, God's character and the destructive nature of sin are dramatically revealed. Romans 3:25-26 presents God's justice and <a class="inline-topic-link" href="/topics/forgiveness/">mercy</a> together. God will eventually end evil completely. Nahum 1:9 says that affliction will not rise up a second time, and Revelation 20:10-15 describes the final destruction of Satan, sin, <a class="inline-topic-link" href="/topics/state-of-the-dead/">death</a>, and those who persist in rebellion. Scripture reveals the origin, nature, and ultimate destiny of evil, but it does not answer every philosophical question about why God permits every particular event.</p>
+            <p class="lead-answer">God's original <a class="inline-topic-link" href="/topics/creation/">creation</a> was “very good” (<button type="button" class="scripture-link scripture-link-inline" data-scripture="Genesis 1:31">Genesis 1:31</button>). Evil was not presented as part of God's original design. <a class="inline-topic-link" href="/topics/bible-study/">The Bible</a> identifies Satan as a rebel against God. <button type="button" class="scripture-link scripture-link-inline" data-scripture="Revelation 12:7-9">Revelation 12:7-9</button> describes a conflict in heaven and identifies the devil and Satan as the deceiver of the whole world. <button type="button" class="scripture-link scripture-link-inline" data-scripture="Isaiah 14">Isaiah 14</button> and <button type="button" class="scripture-link scripture-link-inline" data-scripture="Ezekiel 28">Ezekiel 28</button> contain passages describing pride, rebellion, and the downfall of a heavenly being, although their immediate historical contexts also concern earthly kings. Human rebellion followed. <button type="button" class="scripture-link scripture-link-inline" data-scripture="Genesis 3">Genesis 3</button> records the entrance of sin into human experience. Why did God not immediately destroy the rebels? Scripture indicates that God's government is based upon truth, love, and justice. The story of Job shows Satan making accusations concerning God's motives and the loyalty of His servants (<button type="button" class="scripture-link scripture-link-inline" data-scripture="Job 1:9-11">Job 1:9-11</button>). The larger biblical narrative therefore involves not merely God's power to destroy evil, but the <a class="inline-topic-link" href="/topics/prophecy/">revelation</a> of His character and the truth about sin. At the <a class="inline-topic-link" href="/topics/salvation/">cross</a>, God's character and the destructive nature of sin are dramatically revealed. <button type="button" class="scripture-link scripture-link-inline" data-scripture="Romans 3:25-26">Romans 3:25-26</button> presents God's justice and <a class="inline-topic-link" href="/topics/forgiveness/">mercy</a> together. God will eventually end evil completely. <button type="button" class="scripture-link scripture-link-inline" data-scripture="Nahum 1:9">Nahum 1:9</button> says that affliction will not rise up a second time, and <button type="button" class="scripture-link scripture-link-inline" data-scripture="Revelation 20:10-15">Revelation 20:10-15</button> describes the final destruction of Satan, sin, <a class="inline-topic-link" href="/topics/state-of-the-dead/">death</a>, and those who persist in rebellion. Scripture reveals the origin, nature, and ultimate destiny of evil, but it does not answer every philosophical question about why God permits every particular event.</p>
             <div class="answer-key-takeaway">
               <p class="eyebrow">Key takeaway</p>
-              <p><a class="inline-topic-link" href="/topics/christian-living/">Discipleship</a> applies the gospel to the whole life: <a class="inline-topic-link" href="/topics/health/">body</a>, mind, relationships, work, finances, and worship. Healthy choices and faithful habits do not earn salvation; they are grateful <a class="inline-topic-link" href="/topics/stewardship/">stewardship</a> of the life God has entrusted to us and practical ways to serve others.</p>
+              <p>The Bible teaches that evil exists because God's creatures were given meaningful freedom, and that some chose rebellion against God. God has permitted evil for a time, but Scripture promises that evil will ultimately be judged and destroyed.</p>
             </div>
+            <h2>Bible references</h2>
+            <div class="scriptures"><button type="button" class="scripture-link" data-scripture="Genesis 1:31">Genesis 1:31</button><button type="button" class="scripture-link" data-scripture="Genesis 3">Genesis 3</button><button type="button" class="scripture-link" data-scripture="Job 1-2">Job 1-2</button><button type="button" class="scripture-link" data-scripture="John 8:44">John 8:44</button><button type="button" class="scripture-link" data-scripture="Revelation 12:7-9">Revelation 12:7-9</button><button type="button" class="scripture-link" data-scripture="Romans 3:25-26">Romans 3:25-26</button><button type="button" class="scripture-link" data-scripture="Revelation 20:10-15">Revelation 20:10-15</button><button type="button" class="scripture-link" data-scripture="Revelation 21:4">Revelation 21:4</button></div>
             <div class="answer-share-panel" data-answer-share>
               <div class="share-action-group">
                 <span class="promise-share-label">Share this answer</span>
-                <div class="promise-share-buttons">
-                  <a class="promise-social-share promise-social-facebook" data-answer-share-facebook href="#" target="_blank" rel="noopener noreferrer" aria-label="Share answer on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21.9V13.9h2.7l.5-3.1h-3.2V8.8c0-.9.3-1.7 1.6-1.7h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2v2.4H7.6v3.1h2.8v8h3.1Z"/></svg></a>
-                  <a class="promise-social-share promise-social-x" data-answer-share-x href="#" target="_blank" rel="noopener noreferrer" aria-label="Share answer on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.2 4.4h2.6l-5.7 6.5 6.7 8.8h-5.2l-4.1-5.4-4.7 5.4H4.2l6.1-7-6.4-8.3h5.4l3.7 4.9 4.2-4.9Zm-.9 13.8h1.4L8.5 5.8H7l9.3 12.4Z"/></svg></a>
-                  <a class="promise-social-share promise-social-whatsapp" data-answer-share-whatsapp href="#" target="_blank" rel="noopener noreferrer" aria-label="Share answer on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.4a8.5 8.5 0 0 0-7.3 12.9L3.6 20.6l4.4-1.1A8.5 8.5 0 1 0 12 3.4Zm0 1.7a6.8 6.8 0 1 1-3.5 12.7l-.3-.2-2.6.7.7-2.5-.2-.3A6.8 6.8 0 0 1 12 5.1Zm3.9 8.5c-.2-.1-1.2-.6-1.4-.7s-.3-.1-.5.1l-.6.8c-.1.1-.2.1-.4 0a5.6 5.6 0 0 1-2.8-2.4c-.1-.2 0-.3.1-.4l.3-.4.2-.4v-.3l-.7-1.6c-.2-.4-.3-.3-.5-.3h-.4a.9.9 0 0 0-.6.3 2.6 2.6 0 0 0-.8 1.9 4.5 4.5 0 0 0 1 2.3 9.2 9.2 0 0 0 3.6 3.1c1.3.5 1.8.5 2.4.4a2 2 0 0 0 1.4-1c.2-.5.2-.9.1-1l-.4-.4Z"/></svg></a>
-                  <a class="promise-social-share answer-social-sms" data-answer-share-sms href="#" aria-label="Share answer by text"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.5L12 21l4.5-4H20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg></a>
-                  <div class="promise-share-primary">
-                    <button type="button" class="promise-share" data-answer-share-native>Share answer link</button>
-                    <button type="button" class="promise-copy-button" data-answer-share-copy>Copy answer link</button>
-                  </div>
+                <div class="share-mode-selector" role="group" aria-label="Choose answer sharing format">
+                  <button type="button" data-answer-share-mode="text" class="active" aria-pressed="true">Text</button>
+                  <button type="button" data-answer-share-mode="graphic" aria-pressed="false">Graphic</button>
                 </div>
-              </div>
-              <div class="share-action-group">
-                <span class="promise-share-label">Share graphic</span>
                 <div class="promise-share-buttons">
-                  <button type="button" class="promise-social-share promise-social-facebook" data-answer-share-graphic-platform="Facebook" aria-label="Share question graphic for Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21.9V13.9h2.7l.5-3.1h-3.2V8.8c0-.9.3-1.7 1.6-1.7h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2v2.4H7.6v3.1h2.8v8h3.1Z"/></svg></button>
-                  <button type="button" class="promise-social-share promise-social-x" data-answer-share-graphic-platform="X" aria-label="Share question graphic for X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.2 4.4h2.6l-5.7 6.5 6.7 8.8h-5.2l-4.1-5.4-4.7 5.4H4.2l6.1-7-6.4-8.3h5.4l3.7 4.9 4.2-4.9Zm-.9 13.8h1.4L8.5 5.8H7l9.3 12.4Z"/></svg></button>
-                  <button type="button" class="promise-social-share promise-social-whatsapp" data-answer-share-graphic-platform="WhatsApp" aria-label="Share question graphic for WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.4a8.5 8.5 0 0 0-7.3 12.9L3.6 20.6l4.4-1.1A8.5 8.5 0 1 0 12 3.4Zm0 1.7a6.8 6.8 0 1 1-3.5 12.7l-.3-.2-2.6.7.7-2.5-.2-.3A6.8 6.8 0 0 1 12 5.1Zm3.9 8.5c-.2-.1-1.2-.6-1.4-.7s-.3-.1-.5.1l-.6.8c-.1.1-.2.1-.4 0a5.6 5.6 0 0 1-2.8-2.4c-.1-.2 0-.3.1-.4l.3-.4.2-.4v-.3l-.7-1.6c-.2-.4-.3-.3-.5-.3h-.4a.9.9 0 0 0-.6.3 2.6 2.6 0 0 0-.8 1.9 4.5 4.5 0 0 0 1 2.3 9.2 9.2 0 0 0 3.6 3.1c1.3.5 1.8.5 2.4.4a2 2 0 0 0 1.4-1c.2-.5.2-.9.1-1l-.4-.4Z"/></svg></button>
-                  <button type="button" class="promise-social-share promise-social-instagram" data-answer-share-graphic-platform="Instagram" aria-label="Share question graphic for Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M7.2 2h9.6A5.2 5.2 0 0 1 22 7.2v9.6a5.2 5.2 0 0 1-5.2 5.2H7.2A5.2 5.2 0 0 1 2 16.8V7.2A5.2 5.2 0 0 1 7.2 2Zm0 2A3.2 3.2 0 0 0 4 7.2v9.6A3.2 3.2 0 0 0 7.2 20h9.6a3.2 3.2 0 0 0 3.2-3.2V7.2A3.2 3.2 0 0 0 16.8 4H7.2Zm10.1 1.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg></button>
-                  <button type="button" class="promise-social-share answer-social-sms" data-answer-share-graphic-platform="Text" aria-label="Share question graphic by text"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.5L12 21l4.5-4H20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg></button>
+                  <div class="share-social-icons">
+                    <button type="button" class="promise-social-share promise-social-facebook" data-answer-share-platform="Facebook" aria-label="Share answer on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21.9V13.9h2.7l.5-3.1h-3.2V8.8c0-.9.3-1.7 1.6-1.7h1.7V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2v2.4H7.6v3.1h2.8v8h3.1Z"/></svg></button>
+                    <button type="button" class="promise-social-share promise-social-x" data-answer-share-platform="X" aria-label="Share answer on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.2 4.4h2.6l-5.7 6.5 6.7 8.8h-5.2l-4.1-5.4-4.7 5.4H4.2l6.1-7-6.4-8.3h5.4l3.7 4.9 4.2-4.9Zm-.9 13.8h1.4L8.5 5.8H7l9.3 12.4Z"/></svg></button>
+                    <button type="button" class="promise-social-share promise-social-whatsapp" data-answer-share-platform="WhatsApp" aria-label="Share answer on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.4a8.5 8.5 0 0 0-7.3 12.9L3.6 20.6l4.4-1.1A8.5 8.5 0 1 0 12 3.4Zm0 1.7a6.8 6.8 0 1 1-3.5 12.7l-.3-.2-2.6.7.7-2.5-.2-.3A6.8 6.8 0 0 1 12 5.1Zm3.9 8.5c-.2-.1-1.2-.6-1.4-.7s-.3-.1-.5.1l-.6.8c-.1.1-.2.1-.4 0a5.6 5.6 0 0 1-2.8-2.4c-.1-.2 0-.3.1-.4l.3-.4.2-.4v-.3l-.7-1.6c-.2-.4-.3-.3-.5-.3h-.4a.9.9 0 0 0-.6.3 2.6 2.6 0 0 0-.8 1.9 4.5 4.5 0 0 0 1 2.3 9.2 9.2 0 0 0 3.6 3.1c1.3.5 1.8.5 2.4.4a2 2 0 0 0 1.4-1c.2-.5.2-.9.1-1l-.4-.4Z"/></svg></button>
+                    <button type="button" class="promise-social-share promise-social-instagram" data-answer-share-platform="Instagram" aria-label="Share answer on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M7.2 2h9.6A5.2 5.2 0 0 1 22 7.2v9.6a5.2 5.2 0 0 1-5.2 5.2H7.2A5.2 5.2 0 0 1 2 16.8V7.2A5.2 5.2 0 0 1 7.2 2Zm0 2A3.2 3.2 0 0 0 4 7.2v9.6A3.2 3.2 0 0 0 7.2 20h9.6a3.2 3.2 0 0 0 3.2-3.2V7.2A3.2 3.2 0 0 0 16.8 4H7.2Zm10.1 1.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg></button>
+                    <button type="button" class="promise-social-share answer-social-sms" data-answer-share-platform="Text" aria-label="Share answer by text"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.5L12 21l4.5-4H20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg></button>
+                  </div>
                   <div class="promise-share-primary">
-                    <button type="button" class="promise-share" data-answer-share-graphic>Share question graphic</button>
-                    <button type="button" class="promise-copy-button" data-answer-download-graphic>Download question graphic</button>
+                    <button type="button" class="promise-share" data-answer-share-primary>Share</button>
+                    <button type="button" class="promise-copy-button" data-answer-share-secondary>Copy</button>
                   </div>
                 </div>
               </div>
               <p class="answer-share-status" data-answer-share-status role="status" aria-live="polite"></p>
             </div>
-            <h2>Bible references</h2>
-            <div class="scriptures"><button type="button" class="scripture-link" data-scripture="Genesis 1:31">Genesis 1:31</button><button type="button" class="scripture-link" data-scripture="Genesis 3">Genesis 3</button><button type="button" class="scripture-link" data-scripture="Job 1-2">Job 1-2</button><button type="button" class="scripture-link" data-scripture="John 8:44">John 8:44</button><button type="button" class="scripture-link" data-scripture="Revelation 12:7-9">Revelation 12:7-9</button><button type="button" class="scripture-link" data-scripture="Romans 3:25-26">Romans 3:25-26</button><button type="button" class="scripture-link" data-scripture="Revelation 20:10-15">Revelation 20:10-15</button><button type="button" class="scripture-link" data-scripture="Revelation 21:4">Revelation 21:4</button></div>
             <div class="answer-editorial-note">
               <strong>Editorial note</strong>
               <p>This answer is presented with its supporting references so you can examine each passage in context. If you notice an error or unclear statement, please <a href="/?inquiry=general#ask">suggest a correction</a>.</p>
@@ -189,7 +187,7 @@
           <aside class="related-card" aria-label="Related answers">
             <h2>Related answers</h2>
             <ul>
-              <li><a href="/answers/why-does-god-allow-suffering/">Why Does God Allow Suffering?</a></li><li><a href="/answers/why-doesnt-god-stop-evil/">Why Doesn't God Stop Evil?</a></li><li><a href="/answers/where-did-satan-come-from/">Where Did Satan Come From?</a></li><li><a href="/answers/why-did-god-allow-slavery-in-the-bible/">Why Did God Allow Slavery in the Bible?</a></li><li><a href="/answers/what-does-the-bible-say-about-satan/">What Does the Bible Say About Satan?</a></li>
+              <li><a href="/answers/why-does-god-allow-suffering/">Why Does God Allow Suffering?</a></li><li><a href="/answers/why-doesnt-god-stop-evil/">Why Doesn't God Stop Evil?</a></li><li><a href="/answers/why-did-satan-rebel-against-god/">Why Did Satan Rebel Against God?</a></li><li><a href="/answers/why-did-god-allow-job-to-suffer/">Why Did God Allow Job to Suffer?</a></li><li><a href="/answers/where-did-satan-come-from/">Where Did Satan Come From?</a></li>
             </ul>
           </aside>
         </div>
@@ -257,14 +255,22 @@
             &times;
           </button>
         </div>
+        <div class="verse-modal-toolbar">
+          <label for="verse-modal-translation">Bible version</label>
+          <select id="verse-modal-translation">
+            <option value="web">WEB - World English Bible</option>
+            <option value="kjv">KJV - King James Version</option>
+            <option value="asv">ASV - American Standard Version</option>
+          </select>
+        </div>
         <div class="verse-modal-body" id="verse-modal-body"></div>
       </div>
     </div>
 
-    <script src="/theme.js?v=20261058"></script>
-    <script src="/pwa.js?v=20261058"></script>
-    <script src="/scripture-graphic.js?v=20261058"></script>
-    <script src="/local-library.js?v=20261058"></script>
-    <script src="/verse-modal.js?v=20261058"></script>
+    <script src="/theme.js?v=20261073"></script>
+    <script src="/pwa.js?v=20261073"></script>
+    <script src="/scripture-graphic.js?v=20261073"></script>
+    <script src="/local-library.js?v=20261073"></script>
+    <script src="/verse-modal.js?v=20261073"></script>
   </body>
 </html>
