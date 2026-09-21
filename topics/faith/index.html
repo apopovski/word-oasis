@@ -23,12 +23,22 @@
         document.documentElement.dataset.theme = theme;
       })();
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5WRW513RFW"></script>
+    <script src="/tracking-preferences.js?v=20261086"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-5WRW513RFW");
+      if (!window.WORD_OASIS_TRACKING_DISABLED) {
+        const analyticsScript = document.createElement("script");
+        analyticsScript.async = true;
+        analyticsScript.src = "https://www.googletagmanager.com/gtag/js?id=G-5WRW513RFW";
+        document.head.appendChild(analyticsScript);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function(){dataLayer.push(arguments);};
+        window.gtag("js", new Date());
+        window.gtag("config", "G-5WRW513RFW");
+      }
+    </script>
+    <script>
+      window.WORD_OASIS_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZSB_Tf-MEbTUrmSkEqwNn2gjtxqF4cv16pMCDMmV3voJeJAFhIYBQ/exec";
+      window.WORD_OASIS_BIBLE_STUDY_URL = "https://www.amazingbiblestudies.com/";
     </script>
     <link rel="canonical" href="https://wordoasis.org/topics/faith/">
     <link rel="icon" href="/SVG/wordoasis-mark.svg" type="image/svg+xml">
@@ -40,7 +50,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261076">
+    <link rel="stylesheet" href="/styles.css?v=20261078">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Faith Bible Answers | Word Oasis">
     <meta property="og:description" content="Browse Scripture-based answers about faith from Word Oasis, with Bible references for further study.">
@@ -134,7 +144,7 @@
             <div>
               <p class="eyebrow">Topic</p>
               <h1>Faith Bible answers</h1>
-              <p class="page-intro">Trusting God, growing through doubt, and living by His promises. Explore 21 Scripture-based answers.</p>
+              <p class="page-intro">Trusting God, growing through doubt, and living by His promises. Explore 25 Scripture-based answers.</p>
             </div>
           </div>
         </div>
@@ -290,6 +300,34 @@
                     <a class="directory-read-more" href="/answers/how-can-i-know-gods-will-for-my-life/" aria-label="Read the full answer to How can I know God's will for my life?">Read the full answer</a>
                   </article>
 
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Faith</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-do-election-and-predestination-mean-in-the-bible/">What Do Election and Predestination Mean in the Bible?</a></h2>
+                    <p>Election and predestination describe God's gracious purpose to save and transform people in Christ; Scripture presents that purpose alongside a genuine invitation for every person to respond.</p>
+                    <a class="directory-read-more" href="/answers/what-do-election-and-predestination-mean-in-the-bible/" aria-label="Read the full answer to What Do Election and Predestination Mean in the Bible?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Faith</span>
+                    <h2><a class="directory-answer-title" href="/answers/how-does-god-judge-people-who-never-hear-the-gospel/">How Does God Judge People Who Never Hear the Gospel?</a></h2>
+                    <p>God judges every person justly according to the light and opportunity received, while salvation remains possible only because of Christ's grace.</p>
+                    <a class="directory-read-more" href="/answers/how-does-god-judge-people-who-never-hear-the-gospel/" aria-label="Read the full answer to How Does God Judge People Who Never Hear the Gospel?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Faith</span>
+                    <h2><a class="directory-answer-title" href="/answers/should-christians-pray-to-mary-saints-or-angels/">Should Christians Pray to Mary, Saints, or Angels?</a></h2>
+                    <p>The New Testament directs prayer to God through Jesus Christ and presents Christ as the one mediator between God and humanity; it never instructs believers to pray to Mary, saints, or angels.</p>
+                    <a class="directory-read-more" href="/answers/should-christians-pray-to-mary-saints-or-angels/" aria-label="Read the full answer to Should Christians Pray to Mary, Saints, or Angels?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Faith</span>
+                    <h2><a class="directory-answer-title" href="/answers/should-a-christian-marry-someone-who-does-not-share-their-faith/">Should a Christian Marry Someone Who Does Not Share Their Faith?</a></h2>
+                    <p>Scripture counsels believers to marry within the faith because marriage joins two lives deeply, and opposing spiritual commitments can create lasting conflict over worship, values, and family.</p>
+                    <a class="directory-read-more" href="/answers/should-a-christian-marry-someone-who-does-not-share-their-faith/" aria-label="Read the full answer to Should a Christian Marry Someone Who Does Not Share Their Faith?">Read the full answer</a>
+                  </article>
+
           </div>
         </div>
       </section>
@@ -373,5 +411,7 @@
     <script src="/scripture-graphic.js?v=20261073"></script>
     <script src="/local-library.js?v=20261073"></script>
     <script src="/verse-modal.js?v=20261073"></script>
+    <script src="/bible-study-referral.js?v=20261084"></script>
+    <script src="/site-analytics.js?v=20261085"></script>
   </body>
 </html>

@@ -23,12 +23,22 @@
         document.documentElement.dataset.theme = theme;
       })();
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5WRW513RFW"></script>
+    <script src="/tracking-preferences.js?v=20261086"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-5WRW513RFW");
+      if (!window.WORD_OASIS_TRACKING_DISABLED) {
+        const analyticsScript = document.createElement("script");
+        analyticsScript.async = true;
+        analyticsScript.src = "https://www.googletagmanager.com/gtag/js?id=G-5WRW513RFW";
+        document.head.appendChild(analyticsScript);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function(){dataLayer.push(arguments);};
+        window.gtag("js", new Date());
+        window.gtag("config", "G-5WRW513RFW");
+      }
+    </script>
+    <script>
+      window.WORD_OASIS_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZSB_Tf-MEbTUrmSkEqwNn2gjtxqF4cv16pMCDMmV3voJeJAFhIYBQ/exec";
+      window.WORD_OASIS_BIBLE_STUDY_URL = "https://www.amazingbiblestudies.com/";
     </script>
     <link rel="canonical" href="https://wordoasis.org/topics/law/">
     <link rel="icon" href="/SVG/wordoasis-mark.svg" type="image/svg+xml">
@@ -40,7 +50,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261076">
+    <link rel="stylesheet" href="/styles.css?v=20261078">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Law Bible Answers | Word Oasis">
     <meta property="og:description" content="Browse Scripture-based answers about law from Word Oasis, with Bible references for further study.">
@@ -139,7 +149,7 @@
             <div>
               <p class="eyebrow">Topic</p>
               <h1>Law Bible answers</h1>
-              <p class="page-intro">God's commandments, obedience, and faithful living. Explore 24 Scripture-based answers.</p>
+              <p class="page-intro">God's commandments, obedience, and faithful living. Explore 27 Scripture-based answers.</p>
             </div>
           </div>
         </div>
@@ -316,6 +326,27 @@
                     <a class="directory-read-more" href="/answers/how-do-law-and-grace-work-together-in-the-christian-life/" aria-label="Read the full answer to How do law and grace work together in the Christian life?">Read the full answer</a>
                   </article>
 
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/when-is-civil-disobedience-justified-for-a-christian/">When Is Civil Disobedience Justified for a Christian?</a></h2>
+                    <p>Christians should ordinarily respect civil authority, but they must peacefully obey God rather than people when a government directly commands sin or forbids faithfulness to God.</p>
+                    <a class="directory-read-more" href="/answers/when-is-civil-disobedience-justified-for-a-christian/" aria-label="Read the full answer to When Is Civil Disobedience Justified for a Christian?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/must-christians-observe-passover-and-the-biblical-feast-days/">Must Christians Observe Passover and the Biblical Feast Days?</a></h2>
+                    <p>The New Testament does not require Gentile Christians to keep Israel's annual feast calendar, though believers may study or voluntarily observe aspects of it without making them a condition of salvation.</p>
+                    <a class="directory-read-more" href="/answers/must-christians-observe-passover-and-the-biblical-feast-days/" aria-label="Read the full answer to Must Christians Observe Passover and the Biblical Feast Days?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/is-physical-circumcision-required-under-the-new-covenant/">Is Physical Circumcision Required Under the New Covenant?</a></h2>
+                    <p>No. The apostles explicitly rejected physical circumcision as a requirement for salvation or church membership and emphasized faith working through love and a transformed heart.</p>
+                    <a class="directory-read-more" href="/answers/is-physical-circumcision-required-under-the-new-covenant/" aria-label="Read the full answer to Is Physical Circumcision Required Under the New Covenant?">Read the full answer</a>
+                  </article>
+
           </div>
         </div>
       </section>
@@ -399,5 +430,7 @@
     <script src="/scripture-graphic.js?v=20261073"></script>
     <script src="/local-library.js?v=20261073"></script>
     <script src="/verse-modal.js?v=20261073"></script>
+    <script src="/bible-study-referral.js?v=20261084"></script>
+    <script src="/site-analytics.js?v=20261085"></script>
   </body>
 </html>

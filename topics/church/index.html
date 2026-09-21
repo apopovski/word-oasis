@@ -23,12 +23,22 @@
         document.documentElement.dataset.theme = theme;
       })();
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5WRW513RFW"></script>
+    <script src="/tracking-preferences.js?v=20261086"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-5WRW513RFW");
+      if (!window.WORD_OASIS_TRACKING_DISABLED) {
+        const analyticsScript = document.createElement("script");
+        analyticsScript.async = true;
+        analyticsScript.src = "https://www.googletagmanager.com/gtag/js?id=G-5WRW513RFW";
+        document.head.appendChild(analyticsScript);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function(){dataLayer.push(arguments);};
+        window.gtag("js", new Date());
+        window.gtag("config", "G-5WRW513RFW");
+      }
+    </script>
+    <script>
+      window.WORD_OASIS_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZSB_Tf-MEbTUrmSkEqwNn2gjtxqF4cv16pMCDMmV3voJeJAFhIYBQ/exec";
+      window.WORD_OASIS_BIBLE_STUDY_URL = "https://www.amazingbiblestudies.com/";
     </script>
     <link rel="canonical" href="https://wordoasis.org/topics/church/">
     <link rel="icon" href="/SVG/wordoasis-mark.svg" type="image/svg+xml">
@@ -40,7 +50,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261076">
+    <link rel="stylesheet" href="/styles.css?v=20261078">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Church Bible Answers | Word Oasis">
     <meta property="og:description" content="Browse Scripture-based answers about church from Word Oasis, with Bible references for further study.">
@@ -137,7 +147,7 @@
             <div>
               <p class="eyebrow">Topic</p>
               <h1>Church Bible answers</h1>
-              <p class="page-intro">Fellowship, worship, and life together as believers. Explore 6 Scripture-based answers.</p>
+              <p class="page-intro">Fellowship, worship, and life together as believers. Explore 10 Scripture-based answers.</p>
             </div>
           </div>
         </div>
@@ -186,6 +196,34 @@
                     <h2><a class="directory-answer-title" href="/answers/why-does-the-church-need-organization-and-leadership-if-faith-is-personal/">Why does the church need organization and leadership if faith is personal?</a></h2>
                     <p>Scripture treats the church as a body with different members and roles working together, so structure and leadership exist to serve unity and mission, not to replace a believer's personal relationship with God.</p>
                     <a class="directory-read-more" href="/answers/why-does-the-church-need-organization-and-leadership-if-faith-is-personal/" aria-label="Read the full answer to Why does the church need organization and leadership if faith is personal?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Church</span>
+                    <h2><a class="directory-answer-title" href="/answers/has-the-christian-church-replaced-israel-in-gods-plan/">Has the Christian Church Replaced Israel in God's Plan?</a></h2>
+                    <p>The New Testament does not portray the church as simply erasing Israel; it presents believing Jews and Gentiles as one people in Christ while affirming God's continuing faithfulness to His promises.</p>
+                    <a class="directory-read-more" href="/answers/has-the-christian-church-replaced-israel-in-gods-plan/" aria-label="Read the full answer to Has the Christian Church Replaced Israel in God's Plan?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Church</span>
+                    <h2><a class="directory-answer-title" href="/answers/did-jesus-appoint-peter-as-the-supreme-head-of-the-church/">Did Jesus Appoint Peter as the Supreme Head of the Church?</a></h2>
+                    <p>Jesus gave Peter an important apostolic role, but the New Testament presents Christ as the church's supreme head and gives shared pastoral responsibility to His apostles and elders.</p>
+                    <a class="directory-read-more" href="/answers/did-jesus-appoint-peter-as-the-supreme-head-of-the-church/" aria-label="Read the full answer to Did Jesus Appoint Peter as the Supreme Head of the Church?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Church</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-it-mean-that-the-church-is-the-bride-of-christ/">What Does It Mean That the Church Is the Bride of Christ?</a></h2>
+                    <p>The bride image describes Christ's covenant love for His people, their faithful devotion to Him, and their preparation to live with Him forever.</p>
+                    <a class="directory-read-more" href="/answers/what-does-it-mean-that-the-church-is-the-bride-of-christ/" aria-label="Read the full answer to What Does It Mean That the Church Is the Bride of Christ?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Church</span>
+                    <h2><a class="directory-answer-title" href="/answers/should-christians-still-anoint-sick-people-with-oil/">Should Christians Still Anoint Sick People With Oil?</a></h2>
+                    <p>Yes. James instructs sick believers to call church elders for prayer and anointing, while making clear that healing ultimately depends on the Lord rather than on the oil itself.</p>
+                    <a class="directory-read-more" href="/answers/should-christians-still-anoint-sick-people-with-oil/" aria-label="Read the full answer to Should Christians Still Anoint Sick People With Oil?">Read the full answer</a>
                   </article>
 
           </div>
@@ -271,5 +309,7 @@
     <script src="/scripture-graphic.js?v=20261073"></script>
     <script src="/local-library.js?v=20261073"></script>
     <script src="/verse-modal.js?v=20261073"></script>
+    <script src="/bible-study-referral.js?v=20261084"></script>
+    <script src="/site-analytics.js?v=20261085"></script>
   </body>
 </html>

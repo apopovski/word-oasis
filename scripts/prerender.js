@@ -16,6 +16,8 @@ const ROOT = path.join(__dirname, "..");
 const INDEX_PATH = path.join(ROOT, "index.html");
 const SCRIPT_PATH = path.join(ROOT, "script.js");
 const SITE_URL = "https://wordoasis.org";
+const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZSB_Tf-MEbTUrmSkEqwNn2gjtxqF4cv16pMCDMmV3voJeJAFhIYBQ/exec";
+const BIBLE_STUDY_URL = "https://www.amazingbiblestudies.com/";
 const BUILD_DATE = new Date().toISOString().slice(0, 10);
 
 function extractAnswersData(scriptSource) {
@@ -261,12 +263,22 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
         document.documentElement.dataset.theme = theme;
       })();
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5WRW513RFW"></script>
+    <script src="/tracking-preferences.js?v=20261086"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-5WRW513RFW");
+      if (!window.WORD_OASIS_TRACKING_DISABLED) {
+        const analyticsScript = document.createElement("script");
+        analyticsScript.async = true;
+        analyticsScript.src = "https://www.googletagmanager.com/gtag/js?id=G-5WRW513RFW";
+        document.head.appendChild(analyticsScript);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function(){dataLayer.push(arguments);};
+        window.gtag("js", new Date());
+        window.gtag("config", "G-5WRW513RFW");
+      }
+    </script>
+    <script>
+      window.WORD_OASIS_FORM_ENDPOINT = ${JSON.stringify(FORM_ENDPOINT)};
+      window.WORD_OASIS_BIBLE_STUDY_URL = ${JSON.stringify(BIBLE_STUDY_URL)};
     </script>
     <link rel="canonical" href="${canonical}">
     <link rel="icon" href="/SVG/wordoasis-mark.svg" type="image/svg+xml">
@@ -278,7 +290,7 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261076">
+    <link rel="stylesheet" href="/styles.css?v=20261078">
     <meta property="og:type" content="${ogType}">
     <meta property="og:title" content="${escapeAttribute(title)}">
     <meta property="og:description" content="${escapeAttribute(description)}">
@@ -439,6 +451,8 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
     <script src="/scripture-graphic.js?v=20261073"></script>
     <script src="/local-library.js?v=20261073"></script>
     <script src="/verse-modal.js?v=20261073"></script>
+    <script src="/bible-study-referral.js?v=20261084"></script>
+    <script src="/site-analytics.js?v=20261085"></script>
   </body>
 </html>
 `;
@@ -636,6 +650,16 @@ function answerPage(answer, answers, perspectivesByAnswer) {
           <p class="eyebrow">${escapeHtml(answer.category)}</p>
           <h1>${escapeHtml(answer.question)}</h1>
           <p class="page-intro">${escapeHtml(answer.shortAnswer)}</p>
+          <div class="answer-public-stats" data-answer-public-stats hidden aria-label="Article readership">
+            <span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"></path>
+                <circle cx="12" cy="12" r="2.5"></circle>
+              </svg>
+              <strong data-answer-view-count>0</strong> views
+            </span>
+            <span><strong data-answer-reader-count>0</strong> readers</span>
+          </div>
         </div>
       </section>
       <section class="section section-answer">
@@ -650,6 +674,86 @@ function answerPage(answer, answers, perspectivesByAnswer) {
             </div>
             <h2>Bible references</h2>
             <div class="scriptures">${scripturesHtml(answer.scriptures)}</div>
+            <details class="bible-study-invitation" data-bible-study>
+              <summary>
+                <span class="bible-study-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11a3 3 0 0 1 3 3v15a3 3 0 0 0-3-3H6.5A2.5 2.5 0 0 0 4 20.5Z"></path>
+                    <path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H14v18a3 3 0 0 1 3-3h.5a2.5 2.5 0 0 1 2.5 2.5Z"></path>
+                  </svg>
+                </span>
+                <span>
+                  <strong>Want to go deeper into God's Word?</strong>
+                  <small>Sign up for a free online Bible study course</small>
+                </span>
+                <span class="bible-study-summary-action">
+                  <span class="bible-study-action-closed">Start free</span>
+                  <span class="bible-study-action-open">Close</span>
+                </span>
+              </summary>
+              <div class="bible-study-content">
+                <p>Grow in your understanding of Scripture through the free Amazing Facts Bible Study Guides. Tell us a little about yourself, then continue to the official Bible School to enroll.</p>
+                <form class="bible-study-form" data-bible-study-form>
+                  <div class="bible-study-form-grid">
+                    <label>
+                      <span>Name</span>
+                      <input type="text" name="name" autocomplete="name" maxlength="80" required>
+                    </label>
+                    <label>
+                      <span>Email</span>
+                      <input type="email" name="email" autocomplete="email" maxlength="120" required>
+                    </label>
+                    <label>
+                      <span>Age range <small>(optional)</small></span>
+                      <select name="ageRange">
+                        <option value="">Prefer not to say</option>
+                        <option value="Under 18">Under 18</option>
+                        <option value="18-24">18–24</option>
+                        <option value="25-34">25–34</option>
+                        <option value="35-44">35–44</option>
+                        <option value="45-54">45–54</option>
+                        <option value="55-64">55–64</option>
+                        <option value="65+">65+</option>
+                      </select>
+                    </label>
+                    <label>
+                      <span>Gender <small>(optional)</small></span>
+                      <select name="gender">
+                        <option value="">Prefer not to say</option>
+                        <option value="Woman">Woman</option>
+                        <option value="Man">Man</option>
+                        <option value="Self-described">Self-described</option>
+                      </select>
+                    </label>
+                    <label>
+                      <span>Country <small>(optional)</small></span>
+                      <input type="text" name="country" autocomplete="country-name" maxlength="80">
+                    </label>
+                    <label>
+                      <span>Faith background <small>(optional)</small></span>
+                      <select name="faith">
+                        <option value="">Prefer not to say</option>
+                        <option value="Christian">Christian</option>
+                        <option value="Another faith">Another faith</option>
+                        <option value="No religious background">No religious background</option>
+                        <option value="Exploring">Exploring faith</option>
+                      </select>
+                    </label>
+                  </div>
+                  <label class="bible-study-consent">
+                    <input type="checkbox" name="consent" required>
+                    <span>I agree that Word Oasis may store these details to track my Bible-study referral. Amazing Facts separately handles enrollment on its website.</span>
+                  </label>
+                  <button class="bible-study-submit" type="submit">
+                    Continue to free Bible studies
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+                  </button>
+                  <p class="bible-study-disclosure">You will leave Word Oasis and continue at Amazing Bible Studies. Optional demographic answers are used only for aggregate referral insights.</p>
+                  <p class="bible-study-status" data-bible-study-status role="status" aria-live="polite"></p>
+                  <a class="bible-study-direct-link" data-bible-study-direct-link href="${BIBLE_STUDY_URL}" rel="noopener">Continue without sharing details</a>
+                </form>
+              </div>
+            </details>
             <div class="answer-share-panel" data-answer-share>
               <div class="share-action-group">
                 <span class="promise-share-label">Share this answer</span>
@@ -710,7 +814,19 @@ function answersIndexPage(answers) {
             <span><strong>${answers.length}</strong> answers</span>
             <span><strong>${topics.length}</strong> topics</span>
             <span>Scripture references included</span>
+            <span data-library-readership hidden><strong data-total-readers>0</strong> readers · <strong data-total-views>0</strong> article views</span>
           </div>
+        </div>
+      </section>
+      <section class="section most-read-section" data-most-read-section hidden>
+        <div class="container">
+          <div class="section-heading most-read-heading">
+            <p class="eyebrow">Popular with readers</p>
+            <h2>Most read Bible answers</h2>
+            <p>See which Scripture-based answers visitors are exploring most.</p>
+          </div>
+          <div class="most-read-grid" data-most-read-list></div>
+          <p class="public-stats-note">Readership totals are anonymous and approximate. Repeat visits may be counted as additional views.</p>
         </div>
       </section>
       <section class="section answers-directory-section">

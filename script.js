@@ -1224,7 +1224,8 @@ const answers = [
     "shortAnswer": "The Bible uses the word “hell” in several contexts, and translations can use “hell” for different biblical terms. Scripture's final picture of hell is the lake of fire associated with the destruction of sin, Satan, death, and those who ultimately reject God.",
     "longAnswer": "In the King James Bible, “hell” can translate different concepts. In the Old Testament, the Hebrew word Sheol often refers broadly to the grave or realm of the dead. In the New Testament, Hades can similarly refer to the realm of the dead, while Gehenna is associated with final judgment. The final judgment is described most clearly in Revelation. Revelation 20:14 says, “death and hell were cast into the lake of fire. This is the second death.” The wording itself is significant. Hell is not presented as an eternal kingdom existing independently of God. Death and hell are themselves ultimately destroyed. Jesus also warned that God can “destroy both soul and body in hell” (Matthew 10:28). The Bible therefore presents final judgment as real and terrible, while also teaching that death itself will ultimately be abolished.",
     "topics": [
-      "State of the Dead"
+      "State of the Dead",
+      "Hell"
     ],
     "category": "Life and Relationships",
     "scriptures": [
@@ -1247,7 +1248,8 @@ const answers = [
     "shortAnswer": "The Bible uses the language of “eternal,” “everlasting,” and “unquenchable” fire in describing final judgment. Scripture must be read carefully, however, because it also explicitly describes the result of that judgment as death and destruction, and identifies the lake of fire as “the second death.”",
     "longAnswer": "Matthew 25:46 contrasts “everlasting punishment” with “eternal life.” The question is what kind of punishment Scripture describes. 2 Thessalonians 1:9 speaks of “everlasting destruction from the presence of the Lord.” The punishment is everlasting in its consequences, but the Bible also teaches that the wicked ultimately die. Malachi 4:1 says the wicked will be burned like stubble, leaving “neither root nor branch.” Jesus warned of destruction in hell (Matthew 10:28). Revelation identifies the lake of fire as “the second death” (Revelation 20:14; 21:8). Thus Scripture clearly teaches an eternal final judgment and eternal consequences, but it does not require the conclusion that immortal sinners remain consciously alive and suffering forever. The Bible clearly teaches that final judgment is irreversible and its consequences are eternal. It also clearly calls the final result “the second death.” The exact nature and duration of every aspect of the imagery should therefore be interpreted in light of the whole biblical testimony.",
     "topics": [
-      "State of the Dead"
+      "State of the Dead",
+      "Hell"
     ],
     "category": "Life and Relationships",
     "scriptures": [
@@ -1271,7 +1273,8 @@ const answers = [
     "shortAnswer": "The Bible uses strong language about fire, punishment, and “for ever and ever” in connection with final judgment. However, it also explicitly teaches that the final result for the wicked is death and destruction. Scripture does not teach that human beings possess inherent immortality that would require them to live forever in suffering.",
     "longAnswer": "One of the strongest texts is Revelation 20:10, which describes the devil being tormented “day and night for ever and ever.” This statement specifically concerns the devil and appears in the symbolic context of Revelation. When the Bible describes the fate of ordinary sinners, it repeatedly uses the language of death and destruction. Jesus says God can “destroy both soul and body in hell” (Matthew 10:28). Paul describes the fate of those who reject God as “everlasting destruction” (2 Thessalonians 1:9). Revelation 20:14 calls the lake of fire “the second death,” and Revelation 21:8 repeats this identification. The Bible therefore does teach eternal punishment in the sense of irreversible, everlasting consequences. But it also teaches that the wicked ultimately perish rather than possessing natural immortality. The contrast throughout Scripture is between eternal life and death, not between two forms of eternal life. John 3:16 states that those who believe receive everlasting life, while those who do not believe “should not perish.” There are difficult passages involving eternal fire and everlasting punishment. They should not be ignored. At the same time, those passages must be interpreted alongside the Bible's explicit statements about destruction, death, and the ultimate destruction of death itself.",
     "topics": [
-      "State of the Dead"
+      "State of the Dead",
+      "Hell"
     ],
     "category": "Life and Relationships",
     "scriptures": [
@@ -1295,7 +1298,8 @@ const answers = [
     "shortAnswer": "The lake of fire is the biblical description of the final judgment in which Satan, sin, death, and those who reject God's salvation are finally destroyed. Revelation explicitly calls the lake of fire “the second death.”",
     "longAnswer": "The lake of fire appears prominently in Revelation. The beast and false prophet are cast into it (Revelation 19:20). After the millennium, Satan is cast into the lake of fire (Revelation 20:10). Then death and Hades are also cast into it. Revelation explains: “This is the second death” (Revelation 20:14). Finally, those whose names are not in the book of life are cast into the lake of fire (Revelation 20:15). The lake of fire therefore represents the final eradication of evil. This is confirmed by Revelation 21:4, which says there will ultimately be no more death, sorrow, crying, or pain. The lake of fire should therefore be understood in the context of God's final victory over sin. It is not presented as an eternal realm that will coexist forever with God's restored creation.",
     "topics": [
-      "State of the Dead"
+      "State of the Dead",
+      "Hell"
     ],
     "category": "Life and Relationships",
     "scriptures": [
@@ -1317,7 +1321,8 @@ const answers = [
     "shortAnswer": "The second death is the final death described in Revelation after the resurrection, judgment, and final destruction of evil. It is associated with the lake of fire and represents the permanent end of sin and rebellion.",
     "longAnswer": "Revelation 20:14 gives the clearest definition: “Death and hell were cast into the lake of fire. This is the second death.” The first death is the death experienced by human beings in the present world. The second death occurs after the final judgment. Revelation 20 describes two resurrections. Those who participate in the first resurrection are blessed and the second death has no power over them (Revelation 20:6). After the millennium, the remaining dead are resurrected for judgment. Satan is released, rebellion occurs, and fire comes down from God (Revelation 20:7-10). Then the lake of fire is called the second death. Revelation 21:8 again identifies the lake of fire as the second death. The second death is therefore not merely another stage of ordinary mortality. It is the final, irreversible destruction of sin and those who ultimately cling to it.",
     "topics": [
-      "State of the Dead"
+      "State of the Dead",
+      "Hell"
     ],
     "category": "Life and Relationships",
     "scriptures": [
@@ -5982,6 +5987,547 @@ const answers = [
       "health",
       "comfort"
     ]
+  },
+  {
+    "id": "answer-recognizing-false-prophets",
+    "question": "How Can Christians Recognize a False Prophet or False Teacher?",
+    "shortAnswer": "Christians should test every teacher by Scripture, the truth about Jesus, the fruit of the person's life, and whether the teaching leads people toward faithful obedience to God.",
+    "longAnswer": "Jesus warned that false prophets may appear harmless, so outward confidence, popularity, or impressive signs are not enough to establish that a message comes from God. He said they are known by their fruits (Matthew 7:15-20). Scripture supplies several tests. A message must agree with God's revealed word (Isaiah 8:20), confess the biblical truth about Jesus Christ (1 John 4:1-3), and never use a sign or prediction to draw people away from God (Deuteronomy 13:1-4). Teachers should also display the character produced by the Holy Spirit rather than greed, manipulation, pride, or persistent immorality. Because even convincing deceptions are possible, believers should examine claims carefully instead of accepting or rejecting them merely because they seem supernatural.",
+    "topics": [
+      "Prophecy",
+      "Bible Study"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Deuteronomy 13:1-5",
+      "Isaiah 8:20",
+      "Matthew 7:15-23",
+      "Matthew 24:24",
+      "1 John 4:1-3"
+    ],
+    "keywords": [
+      "false prophet",
+      "false teacher",
+      "test the spirits",
+      "discernment",
+      "prophecy",
+      "bible study"
+    ]
+  },
+  {
+    "id": "answer-gog-and-magog",
+    "question": "Who Are Gog and Magog in Bible Prophecy?",
+    "shortAnswer": "Gog and Magog symbolize forces that unite in rebellion against God and His people; Revelation applies the imagery to the final worldwide uprising after the millennium.",
+    "longAnswer": "Ezekiel 38-39 portrays Gog from the land of Magog leading a large coalition against God's restored people. The prophecy emphasizes God's sovereignty: the attack fails, God vindicates His name, and the nations learn that He is Lord. Revelation later uses “Gog and Magog” for the nations Satan gathers after the thousand years to surround God's people (Revelation 20:7-9). This later use is worldwide rather than limited to one modern nation. The shared imagery presents the final expression of organized rebellion against God, followed by decisive divine judgment. Christians should therefore be cautious about confidently assigning every ancient name in Ezekiel to a current country when Revelation itself broadens the image to encompass the enemies of God from across the earth.",
+    "topics": [
+      "Prophecy",
+      "Great Controversy"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Ezekiel 38:1-9",
+      "Ezekiel 38:18-23",
+      "Ezekiel 39:1-8",
+      "Revelation 20:7-10"
+    ],
+    "keywords": [
+      "Gog",
+      "Magog",
+      "Ezekiel 38",
+      "Revelation 20",
+      "final rebellion",
+      "prophecy",
+      "great controversy"
+    ]
+  },
+  {
+    "id": "answer-great-multitude-revelation",
+    "question": "Who Is the Great Multitude in Revelation 7?",
+    "shortAnswer": "The great multitude is the redeemed family of God from every nation, standing before His throne because they have been cleansed through Christ and remained faithful through tribulation.",
+    "longAnswer": "John sees an innumerable multitude “of all nations, and kindreds, and people, and tongues” before God's throne (Revelation 7:9). Their white robes signify the righteousness and cleansing received through the Lamb, while their palm branches express victory and worship. The elder explains that they have come through great tribulation and have washed their robes in the Lamb's blood (Revelation 7:13-14). Their identity is therefore spiritual rather than ethnic or national: they are people redeemed by Christ from throughout the world. The passage ends with promises of God's presence, freedom from hunger and thirst, the Lamb's guidance, and the removal of every tear. Revelation presents this multitude to assure believers that God's saving work will succeed despite persecution and suffering.",
+    "topics": [
+      "Prophecy",
+      "Salvation"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Revelation 7:9-17",
+      "Revelation 14:12",
+      "Revelation 19:1",
+      "Revelation 21:3-4"
+    ],
+    "keywords": [
+      "great multitude",
+      "Revelation 7",
+      "white robes",
+      "great tribulation",
+      "redeemed",
+      "prophecy",
+      "salvation"
+    ]
+  },
+  {
+    "id": "answer-church-and-israel",
+    "question": "Has the Christian Church Replaced Israel in God's Plan?",
+    "shortAnswer": "The New Testament does not portray the church as simply erasing Israel; it presents believing Jews and Gentiles as one people in Christ while affirming God's continuing faithfulness to His promises.",
+    "longAnswer": "Paul directly rejects the claim that God has cast away His people (Romans 11:1). He describes a faithful remnant of Israel and pictures Gentile believers as branches grafted into an existing olive tree, warning them not to boast over the natural branches (Romans 11:17-21). At the same time, physical ancestry alone does not guarantee covenant faithfulness, because “they are not all Israel, which are of Israel” (Romans 9:6). Through faith in Christ, people from every background become Abraham's children and heirs of the promise (Galatians 3:26-29). Ephesians 2:11-22 describes Jewish and Gentile believers reconciled into one household, not two rival peoples. The biblical emphasis is therefore fulfillment and inclusion through Christ, joined with humility about mysteries that belong to God's redemptive purpose.",
+    "topics": [
+      "Church",
+      "Salvation"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Romans 9:6-8",
+      "Romans 11:1-29",
+      "Galatians 3:26-29",
+      "Ephesians 2:11-22"
+    ],
+    "keywords": [
+      "Israel",
+      "church",
+      "replacement theology",
+      "Gentiles",
+      "Abraham",
+      "salvation"
+    ]
+  },
+  {
+    "id": "answer-peter-first-pope",
+    "question": "Did Jesus Appoint Peter as the Supreme Head of the Church?",
+    "shortAnswer": "Jesus gave Peter an important apostolic role, but the New Testament presents Christ as the church's supreme head and gives shared pastoral responsibility to His apostles and elders.",
+    "longAnswer": "After Peter confessed Jesus as the Christ, Jesus spoke of building His church and gave Peter the keys of the kingdom (Matthew 16:16-19). Peter did exercise visible leadership, especially in the opening chapters of Acts. Yet Jesus later gave the authority to bind and loose to the wider body of disciples (Matthew 18:18), and He rejected attempts among the apostles to establish worldly rank (Luke 22:24-26). The New Testament calls Christ the head of the church (Ephesians 1:22-23) and describes the church as built on the foundation of the apostles and prophets, with Jesus Himself as the chief cornerstone (Ephesians 2:19-22). Peter also called himself a fellow elder and identified Christ as the Chief Shepherd (1 Peter 5:1-4). Scripture honors Peter's unique ministry without describing him as Christ's replacement or the supreme ruler over all Christians.",
+    "topics": [
+      "Church",
+      "Bible Study"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "Matthew 16:13-19",
+      "Matthew 18:18",
+      "Luke 22:24-26",
+      "Ephesians 1:22-23",
+      "Ephesians 2:19-22",
+      "1 Peter 5:1-4"
+    ],
+    "keywords": [
+      "Peter",
+      "pope",
+      "keys of the kingdom",
+      "church authority",
+      "head of the church",
+      "church",
+      "bible study"
+    ]
+  },
+  {
+    "id": "answer-church-bride-of-christ",
+    "question": "What Does It Mean That the Church Is the Bride of Christ?",
+    "shortAnswer": "The bride image describes Christ's covenant love for His people, their faithful devotion to Him, and their preparation to live with Him forever.",
+    "longAnswer": "Paul compares the relationship between Christ and the church to a faithful marriage. Christ loved the church and gave Himself for her, with the purpose of cleansing and presenting His people as holy (Ephesians 5:25-27). The image emphasizes sacrificial love, covenant loyalty, and transformation rather than a literal marriage ceremony between Jesus and an institution. Paul also told believers that he had presented them to Christ as a pure bride, warning them against spiritual unfaithfulness (2 Corinthians 11:2-3). Revelation develops the same picture: the bride prepares for the Lamb's marriage by receiving clean linen, which represents the righteous deeds of the saints (Revelation 19:7-8). The symbol calls the church to love Christ, reject rival loyalties, and confidently await His return.",
+    "topics": [
+      "Church",
+      "Second Coming"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "2 Corinthians 11:2-3",
+      "Ephesians 5:25-32",
+      "Revelation 19:7-9",
+      "Revelation 21:2-3"
+    ],
+    "keywords": [
+      "bride of Christ",
+      "marriage supper",
+      "church",
+      "Lamb",
+      "faithfulness",
+      "second coming"
+    ]
+  },
+  {
+    "id": "answer-anointing-the-sick",
+    "question": "Should Christians Still Anoint Sick People With Oil?",
+    "shortAnswer": "Yes. James instructs sick believers to call church elders for prayer and anointing, while making clear that healing ultimately depends on the Lord rather than on the oil itself.",
+    "longAnswer": "James tells a sick believer to call for the elders of the church, who are to pray and anoint the person with oil in the Lord's name (James 5:14-15). The oil can represent consecration and the work of the Holy Spirit, but Scripture does not treat it as a magical substance. The emphasis falls on united prayer, trust in God, confession where appropriate, and compassionate care within the church community. Jesus' disciples also anointed many sick people with oil and healed them (Mark 6:13). This practice does not forbid medical treatment or guarantee that every illness will be removed immediately. Christians may faithfully pray for healing while entrusting the timing and outcome to God's wisdom, as Paul did when his own repeated request for relief received a different answer (2 Corinthians 12:7-10).",
+    "topics": [
+      "Prayer",
+      "Church",
+      "Health"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Mark 6:13",
+      "2 Corinthians 12:7-10",
+      "James 5:13-16"
+    ],
+    "keywords": [
+      "anointing",
+      "oil",
+      "healing",
+      "sickness",
+      "elders",
+      "prayer",
+      "church",
+      "health"
+    ]
+  },
+  {
+    "id": "answer-election-predestination-free-choice",
+    "question": "What Do Election and Predestination Mean in the Bible?",
+    "shortAnswer": "Election and predestination describe God's gracious purpose to save and transform people in Christ; Scripture presents that purpose alongside a genuine invitation for every person to respond.",
+    "longAnswer": "Ephesians says God chose believers in Christ and predestined them for adoption (Ephesians 1:4-5). Romans describes those whom God foreknew as predestined to be conformed to the image of His Son (Romans 8:29). These passages emphasize the certainty and initiative of God's saving purpose, not arbitrary cruelty. The same Bible says God desires all people to be saved (1 Timothy 2:3-4), is not willing that any should perish (2 Peter 3:9), and invites anyone who is thirsty to take the water of life freely (Revelation 22:17). Scripture also calls people to choose whom they will serve and to respond in faith. Christians have long differed over how divine sovereignty and human choice fit together, but both truths should be retained: salvation begins with God's grace, and the gospel invitation is genuinely extended to all.",
+    "topics": [
+      "Salvation",
+      "Faith"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Deuteronomy 30:19-20",
+      "Romans 8:28-30",
+      "Ephesians 1:3-6",
+      "1 Timothy 2:3-4",
+      "2 Peter 3:9",
+      "Revelation 22:17"
+    ],
+    "keywords": [
+      "election",
+      "predestination",
+      "free will",
+      "choice",
+      "foreknowledge",
+      "salvation",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-those-who-never-hear-gospel",
+    "question": "How Does God Judge People Who Never Hear the Gospel?",
+    "shortAnswer": "God judges every person justly according to the light and opportunity received, while salvation remains possible only because of Christ's grace.",
+    "longAnswer": "Scripture teaches that creation gives humanity a real witness to God's power and divine nature (Romans 1:19-20). It also says that people without the written law show an awareness of moral responsibility through conscience, and that God judges the secrets of each heart with perfect knowledge (Romans 2:12-16). Paul told the Athenians that God had guided the times and boundaries of nations so that people might seek Him (Acts 17:26-27). These passages do not teach that sincerity or ignorance earns salvation. Jesus remains the only Savior, and every rescue from sin rests on His work. They do show that God does not condemn people through an uninformed or unfair process. Abraham's question remains a sound assurance: “Shall not the Judge of all the earth do right?” (Genesis 18:25).",
+    "topics": [
+      "Salvation",
+      "Faith"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Genesis 18:25",
+      "Psalm 19:1-4",
+      "John 14:6",
+      "Acts 17:26-31",
+      "Romans 1:19-20",
+      "Romans 2:12-16"
+    ],
+    "keywords": [
+      "never heard gospel",
+      "unevangelized",
+      "God's judgment",
+      "conscience",
+      "fairness",
+      "salvation",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-suicide-eternal-destiny",
+    "question": "Does Suicide Automatically Determine a Person's Eternal Destiny?",
+    "shortAnswer": "The Bible never gives humans authority to declare that every person who dies by suicide is automatically lost; final judgment belongs to the merciful and perfectly informed God.",
+    "longAnswer": "Suicide is a tragic destruction of life and should never be treated lightly. Yet Scripture does not establish a rule that the final act of suicide places a person beyond God's judgment or mercy. God alone fully knows a person's heart, understanding, suffering, and responsibility. Paul cautions believers not to pronounce final judgments before the Lord reveals what is hidden (1 Corinthians 4:5). The Bible's accounts of suicide describe the tragedy but do not provide a formula by which survivors can determine each person's eternal destiny. Those grieving such a death may entrust their loved one to the Judge who is both just and compassionate. Anyone considering self-harm should seek immediate help from emergency services, a crisis line, trusted loved ones, and qualified health professionals; reaching for help is not a failure of faith.",
+    "topics": [
+      "Salvation",
+      "Comfort",
+      "Health"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Psalm 34:18",
+      "Romans 8:38-39",
+      "1 Corinthians 4:5",
+      "Hebrews 4:15-16"
+    ],
+    "keywords": [
+      "suicide",
+      "eternal destiny",
+      "mental health",
+      "grief",
+      "mercy",
+      "salvation",
+      "comfort",
+      "health"
+    ]
+  },
+  {
+    "id": "answer-age-of-accountability",
+    "question": "Does the Bible Teach an Age of Accountability?",
+    "shortAnswer": "The Bible does not name a universal age of accountability, but it distinguishes young children from those with mature moral knowledge and presents God as judging each person justly.",
+    "longAnswer": "No passage assigns a specific birthday at which every child becomes morally accountable. Scripture does, however, recognize stages of understanding. Deuteronomy describes children who “had no knowledge between good and evil” (Deuteronomy 1:39), and Isaiah refers to a time before a child knows to refuse evil and choose good (Isaiah 7:15-16). Jonah 4:11 likewise describes many people in Nineveh who could not discern between their right hand and their left. These texts support the principle that God takes knowledge and capacity into account. Jesus welcomed children and said that the kingdom of heaven belongs to such as them (Matthew 19:14). Parents should teach children about God from an early age without pretending Scripture gives an exact universal threshold that it does not state.",
+    "topics": [
+      "Salvation",
+      "Marriage and Family"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Deuteronomy 1:39",
+      "Isaiah 7:15-16",
+      "Jonah 4:11",
+      "Matthew 19:13-15",
+      "Romans 2:6-16"
+    ],
+    "keywords": [
+      "age of accountability",
+      "children",
+      "salvation of children",
+      "moral knowledge",
+      "family",
+      "salvation"
+    ]
+  },
+  {
+    "id": "answer-judge-not-meaning",
+    "question": "What Did Jesus Mean When He Said, “Judge Not”?",
+    "shortAnswer": "Jesus forbade hypocritical and self-righteous condemnation, not all moral discernment; believers must examine themselves first and then evaluate matters humbly by God's word.",
+    "longAnswer": "Jesus' command “Judge not” is immediately followed by a warning that the standard used against others will be used against us (Matthew 7:1-2). His illustration of a person ignoring a beam in his own eye while correcting a speck in another's exposes hypocrisy. Jesus did not end by saying the speck should never be addressed; He said to remove the beam first so one can see clearly to help (Matthew 7:3-5). Elsewhere He commanded, “Judge righteous judgment” (John 7:24). Churches must sometimes evaluate conduct and teaching, but they must do so by Scripture, with consistent standards, restoration as the goal, and awareness of their own weakness. Christians must not claim God's authority to pronounce another person's final destiny or condemn people from pride.",
+    "topics": [
+      "Christian Living",
+      "Forgiveness"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Matthew 7:1-5",
+      "John 7:24",
+      "Romans 14:10-13",
+      "1 Corinthians 5:12-13",
+      "Galatians 6:1"
+    ],
+    "keywords": [
+      "judge not",
+      "judging others",
+      "discernment",
+      "hypocrisy",
+      "condemnation",
+      "christian living",
+      "forgiveness"
+    ]
+  },
+  {
+    "id": "answer-cremation-resurrection",
+    "question": "Does Cremation Conflict With the Biblical Teaching of Resurrection?",
+    "shortAnswer": "No. The Bible does not command one required method of burial, and God's ability to resurrect a person does not depend on the preservation of the body.",
+    "longAnswer": "Burial was the normal practice in many biblical accounts, and Christians may value it as a meaningful expression of hope. Scripture does not, however, state that cremation prevents resurrection or is inherently sinful. Human bodies return to dust regardless of how death occurs or how remains are handled (Genesis 3:19). Paul explains that the resurrection body is raised by God's power and transformed, comparing burial to a seed that is sown before God gives it a body according to His purpose (1 Corinthians 15:35-44). People who died in fires, at sea, or centuries ago are no less within God's power to raise. Decisions about burial or cremation may therefore consider conscience, culture, cost, and family needs while preserving respect for the deceased and confidence in the resurrection.",
+    "topics": [
+      "State of the Dead",
+      "Second Coming"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Genesis 3:19",
+      "Ecclesiastes 12:7",
+      "1 Corinthians 15:35-44",
+      "1 Thessalonians 4:13-18"
+    ],
+    "keywords": [
+      "cremation",
+      "burial",
+      "resurrection",
+      "body",
+      "funeral",
+      "state of the dead",
+      "second coming"
+    ]
+  },
+  {
+    "id": "answer-christian-civil-disobedience",
+    "question": "When Is Civil Disobedience Justified for a Christian?",
+    "shortAnswer": "Christians should ordinarily respect civil authority, but they must peacefully obey God rather than people when a government directly commands sin or forbids faithfulness to God.",
+    "longAnswer": "Romans 13:1-7 calls Christians to respect governing authorities, and believers should pay what they owe, honor public order, and seek the good of their communities. That duty is not absolute obedience to every human command. The Hebrew men refused to worship Nebuchadnezzar's image (Daniel 3:16-18), Daniel continued praying when prayer was outlawed (Daniel 6:10), and the apostles answered, “We ought to obey God rather than men” when ordered to stop preaching Christ (Acts 5:29). Biblical civil disobedience is not an excuse for violence, personal convenience, or partisan hostility. It responds to a clear conflict with God's command, accepts consequences without revenge, and remains truthful, respectful, and committed to doing good wherever possible.",
+    "topics": [
+      "Christian Living",
+      "Law"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Daniel 3:16-18",
+      "Daniel 6:10",
+      "Matthew 22:21",
+      "Acts 5:29",
+      "Romans 13:1-7",
+      "1 Peter 2:13-17"
+    ],
+    "keywords": [
+      "civil disobedience",
+      "government",
+      "obey God",
+      "authority",
+      "religious liberty",
+      "christian living",
+      "law"
+    ]
+  },
+  {
+    "id": "answer-praying-to-saints",
+    "question": "Should Christians Pray to Mary, Saints, or Angels?",
+    "shortAnswer": "The New Testament directs prayer to God through Jesus Christ and presents Christ as the one mediator between God and humanity; it never instructs believers to pray to Mary, saints, or angels.",
+    "longAnswer": "Jesus taught His disciples to address prayer to “Our Father which art in heaven” (Matthew 6:9). He invited them to ask in His name, and Hebrews encourages believers to approach God's throne confidently through their great High Priest (John 14:13-14; Hebrews 4:14-16). Paul states that there is “one mediator between God and men, the man Christ Jesus” (1 Timothy 2:5). Mary is honored in Scripture as the mother of Jesus, and faithful believers should respect those who have served God. Yet no biblical example teaches Christians to direct prayers to them. When people attempted acts of religious veneration toward Peter or an angel, they were redirected away from the creature and toward God (Acts 10:25-26; Revelation 22:8-9). Christians may ask living believers to pray with them while bringing worship and prayer directly to God through Christ.",
+    "topics": [
+      "Prayer",
+      "Faith"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "Matthew 6:9",
+      "John 14:13-14",
+      "Acts 10:25-26",
+      "1 Timothy 2:5",
+      "Hebrews 4:14-16",
+      "Revelation 22:8-9"
+    ],
+    "keywords": [
+      "pray to Mary",
+      "pray to saints",
+      "angels",
+      "mediator",
+      "intercession",
+      "prayer",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-sabbath-activities",
+    "question": "What Activities Are Appropriate on the Sabbath?",
+    "shortAnswer": "The Sabbath is designed for worship, rest, mercy, fellowship, and delight in God rather than ordinary business or self-centered pursuits.",
+    "longAnswer": "The fourth commandment sets apart the seventh day for rest from ordinary labor and identifies it as God's holy day (Exodus 20:8-11). Isaiah describes the Sabbath as a delight when people turn from routine business and honor God (Isaiah 58:13-14). Jesus corrected burdensome human rules without removing the Sabbath's holiness. He attended worship, taught, healed, relieved suffering, and declared that it is lawful to do good on the Sabbath (Luke 4:16; Matthew 12:9-13). These principles support worship, prayer, Bible study, time with family and believers, enjoyment of God's creation, and acts of mercy. Scripture gives principles rather than an exhaustive list for every modern activity, so believers should ask whether a choice protects holy time, provides needed rest, blesses others, and directs the heart toward God.",
+    "topics": [
+      "Sabbath",
+      "Christian Living"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Exodus 20:8-11",
+      "Isaiah 58:13-14",
+      "Matthew 12:9-13",
+      "Mark 2:27-28",
+      "Luke 4:16",
+      "Luke 13:10-17"
+    ],
+    "keywords": [
+      "Sabbath activities",
+      "keep Sabbath",
+      "Sabbath rules",
+      "worship",
+      "rest",
+      "Sabbath",
+      "christian living"
+    ]
+  },
+  {
+    "id": "answer-biblical-feast-days",
+    "question": "Must Christians Observe Passover and the Biblical Feast Days?",
+    "shortAnswer": "The New Testament does not require Gentile Christians to keep Israel's annual feast calendar, though believers may study or voluntarily observe aspects of it without making them a condition of salvation.",
+    "longAnswer": "Israel's annual feasts commemorated God's saving acts and pointed forward to Christ's work. The New Testament identifies Christ as “our passover” and applies the feast imagery spiritually to sincere Christian living (1 Corinthians 5:7-8). When the early church considered which requirements should be placed on Gentile converts, the Jerusalem council did not command them to observe the annual festivals (Acts 15:5-29). Paul warned believers not to let others judge them concerning festivals, new moons, or sabbath days that functioned as shadows of things to come, because the substance belongs to Christ (Colossians 2:16-17). Christians may find historical and spiritual value in learning about the feasts, but they should not present voluntary observance as a means of earning salvation or a universal test of faithfulness.",
+    "topics": [
+      "Law",
+      "Salvation"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Acts 15:5-29",
+      "Romans 14:5-6",
+      "1 Corinthians 5:7-8",
+      "Colossians 2:16-17",
+      "Hebrews 10:1"
+    ],
+    "keywords": [
+      "feast days",
+      "Passover",
+      "annual sabbaths",
+      "Jewish festivals",
+      "ceremonial law",
+      "law",
+      "salvation"
+    ]
+  },
+  {
+    "id": "answer-circumcision-new-covenant",
+    "question": "Is Physical Circumcision Required Under the New Covenant?",
+    "shortAnswer": "No. The apostles explicitly rejected physical circumcision as a requirement for salvation or church membership and emphasized faith working through love and a transformed heart.",
+    "longAnswer": "Some early teachers claimed Gentile believers could not be saved unless they were circumcised according to Moses' law. The apostles and elders considered the issue in Jerusalem and refused to place that requirement on Gentile converts (Acts 15:1-29). Paul warned that accepting circumcision as necessary for justification would mean relying on law-keeping rather than Christ's grace (Galatians 5:2-6). He did not condemn circumcision as a medical or cultural choice; the issue was treating it as a covenant requirement or a means of salvation. Romans describes true circumcision as a work of the heart by the Spirit (Romans 2:28-29), and Colossians connects believers' spiritual renewal with Christ and baptism. Under the new covenant, belonging to God's family rests on faith in Christ, not a physical mark.",
+    "topics": [
+      "Law",
+      "Salvation",
+      "Baptism"
+    ],
+    "category": "Faith and Salvation",
+    "scriptures": [
+      "Acts 15:1-29",
+      "Romans 2:28-29",
+      "Galatians 5:2-6",
+      "Galatians 6:15",
+      "Colossians 2:11-12"
+    ],
+    "keywords": [
+      "circumcision",
+      "new covenant",
+      "Gentiles",
+      "law of Moses",
+      "justification",
+      "law",
+      "salvation",
+      "baptism"
+    ]
+  },
+  {
+    "id": "answer-marrying-unbeliever",
+    "question": "Should a Christian Marry Someone Who Does Not Share Their Faith?",
+    "shortAnswer": "Scripture counsels believers to marry within the faith because marriage joins two lives deeply, and opposing spiritual commitments can create lasting conflict over worship, values, and family.",
+    "longAnswer": "Paul says that a believer who is free to marry should marry “only in the Lord” (1 Corinthians 7:39). The principle of not being unequally yoked also warns against binding partnerships in which loyalty to Christ pulls one person in a direction the other cannot share (2 Corinthians 6:14-15). The Old Testament similarly warned Israel against marriages that would turn hearts away from God. This counsel is not a claim that unbelievers have less human value; it recognizes that marriage shapes daily priorities, finances, community, worship, and the raising of children. A Christian considering marriage should look beyond present affection and honestly evaluate shared allegiance to Christ. If someone is already married to an unbelieving spouse who is willing to remain, Paul counsels faithfulness rather than divorce (1 Corinthians 7:12-16).",
+    "topics": [
+      "Marriage and Family",
+      "Faith"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Deuteronomy 7:3-4",
+      "1 Corinthians 7:12-16",
+      "1 Corinthians 7:39",
+      "2 Corinthians 6:14-15"
+    ],
+    "keywords": [
+      "marry unbeliever",
+      "unequally yoked",
+      "Christian dating",
+      "interfaith marriage",
+      "marriage",
+      "family",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-baptism-with-holy-spirit",
+    "question": "What Is Baptism With the Holy Spirit?",
+    "shortAnswer": "Baptism with the Holy Spirit is Christ's work of giving believers the Spirit, joining them to His body, empowering witness, and beginning a transformed life.",
+    "longAnswer": "John the Baptist announced that Jesus would baptize people with the Holy Spirit (Luke 3:16). Jesus told His disciples to wait for the Spirit's power before carrying the gospel to the world (Acts 1:4-8), and that promise was visibly fulfilled at Pentecost (Acts 2:1-4). When hearers asked how to respond, Peter called them to repent, be baptized in Jesus' name, and receive the gift of the Holy Spirit (Acts 2:38-39). Other accounts in Acts show that the order of water baptism, laying on of hands, and visible manifestations was not identical in every case, so no single outward sign should be made the universal proof of receiving the Spirit. Paul gives the central reality: “By one Spirit are we all baptized into one body” (1 Corinthians 12:13). The Spirit exalts Christ, gives power for witness, produces holy character, and equips believers to serve.",
+    "topics": [
+      "Holy Spirit",
+      "Baptism"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "Luke 3:16",
+      "Luke 11:13",
+      "Acts 1:4-8",
+      "Acts 2:1-4",
+      "Acts 2:38-39",
+      "Acts 10:44-48",
+      "1 Corinthians 12:13"
+    ],
+    "keywords": [
+      "baptism with Holy Spirit",
+      "receive the Spirit",
+      "Pentecost",
+      "Spirit baptism",
+      "power for witness",
+      "holy spirit",
+      "baptism"
+    ]
   }
 ];
 
@@ -6616,6 +7162,9 @@ const topicIcons = {
       <polygon points="275.297,149.504 236.706,149.504 236.706,203.092 181.799,203.092 181.799,241.823 236.706,241.823 236.706,327.596 275.297,327.596 275.297,241.823 330.208,241.823 330.208,203.092 275.297,203.092"></polygon>
     </g>
   `,
+  Hell: `
+    <path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4"></path>
+  `,
   "Great Controversy": `
     <path d="m13 19 6-6"></path>
     <path d="M14.5 17.5 3.586 6.586A2 2 0 0 1 3 5.172V3h2.172a2 2 0 0 1 1.414.586L17.5 14.5"></path>
@@ -6627,7 +7176,12 @@ const topicIcons = {
     <path d="M7.5 16.5 4 20"></path>
   `,
   "Holy Spirit": `
-    <path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4"></path>
+    <path d="M2 17.2c3.2.5 5.9.6 8.2-.1-3.8-2.4-5.8-6.4-5.5-11.6 2.2 1.7 4.5 2.9 6.8 3.8L14.2 2c1.2 3.4 4.1 5 5.2 8.7 1.5-.5 3.1.1 4.1 2l-2.1 1.1c-.7 5.3-3.9 8.2-8.7 8.2-4.8 0-8.4-1.7-10.7-4.8Z"></path>
+    <path d="M4.7 5.5c.5 5.8 3.4 8.9 7.9 10.1"></path>
+    <path d="M11.5 9.3c4.8 1.5 7.1 3.8 6.8 6.8"></path>
+    <path d="M14.2 2c.4 3.8 2.5 5.1 5.2 8.7"></path>
+    <path d="M7.2 12.4c.7.7 1.6 1.2 2.7 1.5"></path>
+    <circle cx="19.8" cy="12.1" r=".55" fill="currentColor" stroke="none"></circle>
   `,
   Baptism: `
     <path d="M12 10L12 2"></path>
@@ -6740,6 +7294,7 @@ const topicDescriptions = {
   Prophecy: "Second coming, judgment, hope, and restoration",
   "Second Coming": "Jesus' return, readiness, resurrection, and lasting hope",
   "State of the Dead": "What happens at death and the hope of resurrection",
+  Hell: "Final judgment, the lake of fire, and the end of sin",
   "Great Controversy": "The conflict between good and evil, and why it matters",
   "Holy Spirit": "The Comforter, spiritual fruit, and power for living",
   Baptism: "New life in Christ and public commitment to Him",

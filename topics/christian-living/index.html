@@ -23,12 +23,22 @@
         document.documentElement.dataset.theme = theme;
       })();
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5WRW513RFW"></script>
+    <script src="/tracking-preferences.js?v=20261086"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-5WRW513RFW");
+      if (!window.WORD_OASIS_TRACKING_DISABLED) {
+        const analyticsScript = document.createElement("script");
+        analyticsScript.async = true;
+        analyticsScript.src = "https://www.googletagmanager.com/gtag/js?id=G-5WRW513RFW";
+        document.head.appendChild(analyticsScript);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function(){dataLayer.push(arguments);};
+        window.gtag("js", new Date());
+        window.gtag("config", "G-5WRW513RFW");
+      }
+    </script>
+    <script>
+      window.WORD_OASIS_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZSB_Tf-MEbTUrmSkEqwNn2gjtxqF4cv16pMCDMmV3voJeJAFhIYBQ/exec";
+      window.WORD_OASIS_BIBLE_STUDY_URL = "https://www.amazingbiblestudies.com/";
     </script>
     <link rel="canonical" href="https://wordoasis.org/topics/christian-living/">
     <link rel="icon" href="/SVG/wordoasis-mark.svg" type="image/svg+xml">
@@ -40,7 +50,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261076">
+    <link rel="stylesheet" href="/styles.css?v=20261078">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Christian Living Bible Answers | Word Oasis">
     <meta property="og:description" content="Browse Scripture-based answers about christian living from Word Oasis, with Bible references for further study.">
@@ -136,7 +146,7 @@
             <div>
               <p class="eyebrow">Topic</p>
               <h1>Christian Living Bible answers</h1>
-              <p class="page-intro">Obedience, holiness, daily discipleship. Explore 16 Scripture-based answers.</p>
+              <p class="page-intro">Obedience, holiness, daily discipleship. Explore 19 Scripture-based answers.</p>
             </div>
           </div>
         </div>
@@ -257,6 +267,27 @@
                     <a class="directory-read-more" href="/answers/is-participating-in-gambling-or-games-of-chance-considered-a-sin/" aria-label="Read the full answer to Is participating in gambling or games of chance considered a sin?">Read the full answer</a>
                   </article>
 
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Christian Living</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-did-jesus-mean-when-he-said-judge-not/">What Did Jesus Mean When He Said, “Judge Not”?</a></h2>
+                    <p>Jesus forbade hypocritical and self-righteous condemnation, not all moral discernment; believers must examine themselves first and then evaluate matters humbly by God's word.</p>
+                    <a class="directory-read-more" href="/answers/what-did-jesus-mean-when-he-said-judge-not/" aria-label="Read the full answer to What Did Jesus Mean When He Said, “Judge Not”?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Christian Living</span>
+                    <h2><a class="directory-answer-title" href="/answers/when-is-civil-disobedience-justified-for-a-christian/">When Is Civil Disobedience Justified for a Christian?</a></h2>
+                    <p>Christians should ordinarily respect civil authority, but they must peacefully obey God rather than people when a government directly commands sin or forbids faithfulness to God.</p>
+                    <a class="directory-read-more" href="/answers/when-is-civil-disobedience-justified-for-a-christian/" aria-label="Read the full answer to When Is Civil Disobedience Justified for a Christian?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card">
+                    <span class="directory-answer-meta">Christian Living</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-activities-are-appropriate-on-the-sabbath/">What Activities Are Appropriate on the Sabbath?</a></h2>
+                    <p>The Sabbath is designed for worship, rest, mercy, fellowship, and delight in God rather than ordinary business or self-centered pursuits.</p>
+                    <a class="directory-read-more" href="/answers/what-activities-are-appropriate-on-the-sabbath/" aria-label="Read the full answer to What Activities Are Appropriate on the Sabbath?">Read the full answer</a>
+                  </article>
+
           </div>
         </div>
       </section>
@@ -340,5 +371,7 @@
     <script src="/scripture-graphic.js?v=20261073"></script>
     <script src="/local-library.js?v=20261073"></script>
     <script src="/verse-modal.js?v=20261073"></script>
+    <script src="/bible-study-referral.js?v=20261084"></script>
+    <script src="/site-analytics.js?v=20261085"></script>
   </body>
 </html>

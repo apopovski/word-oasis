@@ -23,12 +23,22 @@
         document.documentElement.dataset.theme = theme;
       })();
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5WRW513RFW"></script>
+    <script src="/tracking-preferences.js?v=20261086"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-5WRW513RFW");
+      if (!window.WORD_OASIS_TRACKING_DISABLED) {
+        const analyticsScript = document.createElement("script");
+        analyticsScript.async = true;
+        analyticsScript.src = "https://www.googletagmanager.com/gtag/js?id=G-5WRW513RFW";
+        document.head.appendChild(analyticsScript);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function(){dataLayer.push(arguments);};
+        window.gtag("js", new Date());
+        window.gtag("config", "G-5WRW513RFW");
+      }
+    </script>
+    <script>
+      window.WORD_OASIS_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZSB_Tf-MEbTUrmSkEqwNn2gjtxqF4cv16pMCDMmV3voJeJAFhIYBQ/exec";
+      window.WORD_OASIS_BIBLE_STUDY_URL = "https://www.amazingbiblestudies.com/";
     </script>
     <link rel="canonical" href="https://wordoasis.org/answers/">
     <link rel="icon" href="/SVG/wordoasis-mark.svg" type="image/svg+xml">
@@ -40,7 +50,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261076">
+    <link rel="stylesheet" href="/styles.css?v=20261078">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Bible Questions and Answers | Word Oasis">
     <meta property="og:description" content="Browse every Word Oasis Bible answer by topic and category, with Scripture references for further study.">
@@ -130,10 +140,22 @@
           <h1>Bible questions and answers</h1>
           <p class="page-intro">Browse the full Word Oasis library of Scripture-based answers for questions about faith, salvation, prayer, prophecy, Christian living, and more.</p>
           <div class="page-hero-stats" aria-label="Answer library overview">
-            <span><strong>257</strong> answers</span>
-            <span><strong>22</strong> topics</span>
+            <span><strong>277</strong> answers</span>
+            <span><strong>23</strong> topics</span>
             <span>Scripture references included</span>
+            <span data-library-readership hidden><strong data-total-readers>0</strong> readers · <strong data-total-views>0</strong> article views</span>
           </div>
+        </div>
+      </section>
+      <section class="section most-read-section" data-most-read-section hidden>
+        <div class="container">
+          <div class="section-heading most-read-heading">
+            <p class="eyebrow">Popular with readers</p>
+            <h2>Most read Bible answers</h2>
+            <p>See which Scripture-based answers visitors are exploring most.</p>
+          </div>
+          <div class="most-read-grid" data-most-read-list></div>
+          <p class="public-stats-note">Readership totals are anonymous and approximate. Repeat visits may be counted as additional views.</p>
         </div>
       </section>
       <section class="section answers-directory-section">
@@ -153,11 +175,11 @@
                 <label for="answers-topic-select">Topic</label>
                 <select id="answers-topic-select" data-answer-topic-select>
                   <option value="all">All topics</option>
-                  <option value="baptism">Baptism</option><option value="bible-study">Bible Study</option><option value="christian-living">Christian Living</option><option value="church">Church</option><option value="comfort">Comfort</option><option value="creation">Creation</option><option value="faith">Faith</option><option value="forgiveness">Forgiveness</option><option value="great-controversy">Great Controversy</option><option value="health">Health</option><option value="holy-spirit">Holy Spirit</option><option value="law">Law</option><option value="marriage-and-family">Marriage and Family</option><option value="prayer">Prayer</option><option value="prophecy">Prophecy</option><option value="sabbath">Sabbath</option><option value="salvation">Salvation</option><option value="sanctuary">Sanctuary</option><option value="second-coming">Second Coming</option><option value="state-of-the-dead">State of the Dead</option><option value="stewardship">Stewardship</option><option value="three-angels">Three Angels</option>
+                  <option value="baptism">Baptism</option><option value="bible-study">Bible Study</option><option value="christian-living">Christian Living</option><option value="church">Church</option><option value="comfort">Comfort</option><option value="creation">Creation</option><option value="faith">Faith</option><option value="forgiveness">Forgiveness</option><option value="great-controversy">Great Controversy</option><option value="health">Health</option><option value="hell">Hell</option><option value="holy-spirit">Holy Spirit</option><option value="law">Law</option><option value="marriage-and-family">Marriage and Family</option><option value="prayer">Prayer</option><option value="prophecy">Prophecy</option><option value="sabbath">Sabbath</option><option value="salvation">Salvation</option><option value="sanctuary">Sanctuary</option><option value="second-coming">Second Coming</option><option value="state-of-the-dead">State of the Dead</option><option value="stewardship">Stewardship</option><option value="three-angels">Three Angels</option>
                 </select>
               </div>
             </div>
-            <p class="answers-directory-count" data-answer-topic-count aria-live="polite">Showing 257 answers</p>
+            <p class="answers-directory-count" data-answer-topic-count aria-live="polite">Showing 277 answers</p>
           </div>
           <div class="answers-directory" id="all-answers" data-answers-directory>
 
@@ -661,52 +683,52 @@
                     <a class="directory-read-more" href="/answers/what-happens-to-your-soul-when-you-die/" aria-label="Read the full answer to What Happens to Your Soul When You Die?">Read the full answer</a>
                   </article>
 
-                  <article class="directory-answer-card" data-answer-topics="state-of-the-dead" data-answer-search-text="what is hell according to the bible? the bible uses the word “hell” in several contexts, and translations can use “hell” for different biblical terms. scripture's final picture of hell is the lake of fire associated with the destruction of sin, satan, death, and those who ultimately reject god. state of the dead hell state of the dead">
+                  <article class="directory-answer-card" data-answer-topics="state-of-the-dead hell" data-answer-search-text="what is hell according to the bible? the bible uses the word “hell” in several contexts, and translations can use “hell” for different biblical terms. scripture's final picture of hell is the lake of fire associated with the destruction of sin, satan, death, and those who ultimately reject god. state of the dead hell hell state of the dead">
                     <span class="directory-answer-meta">State of the Dead</span>
                     <h2><a class="directory-answer-title" href="/answers/what-is-hell-according-to-the-bible/">What Is Hell According to the Bible?</a></h2>
                     <p>The Bible uses the word “hell” in several contexts, and translations can use “hell” for different biblical terms. Scripture's final picture of hell is the lake of fire associated with the destruction of sin, Satan, death, and those who ultimately reject God.</p>
                     <div class="directory-answer-topics" aria-label="Related topics">
-                      <a href="#topic-state-of-the-dead" data-answer-topic-filter="state-of-the-dead">State of the Dead</a>
+                      <a href="#topic-state-of-the-dead" data-answer-topic-filter="state-of-the-dead">State of the Dead</a><a href="#topic-hell" data-answer-topic-filter="hell">Hell</a>
                     </div>
                     <a class="directory-read-more" href="/answers/what-is-hell-according-to-the-bible/" aria-label="Read the full answer to What Is Hell According to the Bible?">Read the full answer</a>
                   </article>
 
-                  <article class="directory-answer-card" data-answer-topics="state-of-the-dead" data-answer-search-text="is hell eternal? the bible uses the language of “eternal,” “everlasting,” and “unquenchable” fire in describing final judgment. scripture must be read carefully, however, because it also explicitly describes the result of that judgment as death and destruction, and identifies the lake of fire as “the second death.” state of the dead hell eternal state of the dead">
+                  <article class="directory-answer-card" data-answer-topics="state-of-the-dead hell" data-answer-search-text="is hell eternal? the bible uses the language of “eternal,” “everlasting,” and “unquenchable” fire in describing final judgment. scripture must be read carefully, however, because it also explicitly describes the result of that judgment as death and destruction, and identifies the lake of fire as “the second death.” state of the dead hell hell eternal state of the dead">
                     <span class="directory-answer-meta">State of the Dead</span>
                     <h2><a class="directory-answer-title" href="/answers/is-hell-eternal/">Is Hell Eternal?</a></h2>
                     <p>The Bible uses the language of “eternal,” “everlasting,” and “unquenchable” fire in describing final judgment. Scripture must be read carefully, however, because it also explicitly describes the result of that judgment as death and destruction, and identifies the lake of fire as “the second death.”</p>
                     <div class="directory-answer-topics" aria-label="Related topics">
-                      <a href="#topic-state-of-the-dead" data-answer-topic-filter="state-of-the-dead">State of the Dead</a>
+                      <a href="#topic-state-of-the-dead" data-answer-topic-filter="state-of-the-dead">State of the Dead</a><a href="#topic-hell" data-answer-topic-filter="hell">Hell</a>
                     </div>
                     <a class="directory-read-more" href="/answers/is-hell-eternal/" aria-label="Read the full answer to Is Hell Eternal?">Read the full answer</a>
                   </article>
 
-                  <article class="directory-answer-card" data-answer-topics="state-of-the-dead" data-answer-search-text="does the bible teach eternal torment? the bible uses strong language about fire, punishment, and “for ever and ever” in connection with final judgment. however, it also explicitly teaches that the final result for the wicked is death and destruction. scripture does not teach that human beings possess inherent immortality that would require them to live forever in suffering. state of the dead teach eternal torment state of the dead">
+                  <article class="directory-answer-card" data-answer-topics="state-of-the-dead hell" data-answer-search-text="does the bible teach eternal torment? the bible uses strong language about fire, punishment, and “for ever and ever” in connection with final judgment. however, it also explicitly teaches that the final result for the wicked is death and destruction. scripture does not teach that human beings possess inherent immortality that would require them to live forever in suffering. state of the dead hell teach eternal torment state of the dead">
                     <span class="directory-answer-meta">State of the Dead</span>
                     <h2><a class="directory-answer-title" href="/answers/does-the-bible-teach-eternal-torment/">Does the Bible Teach Eternal Torment?</a></h2>
                     <p>The Bible uses strong language about fire, punishment, and “for ever and ever” in connection with final judgment. However, it also explicitly teaches that the final result for the wicked is death and destruction. Scripture does not teach that human beings possess inherent immortality that would require them to live forever in suffering.</p>
                     <div class="directory-answer-topics" aria-label="Related topics">
-                      <a href="#topic-state-of-the-dead" data-answer-topic-filter="state-of-the-dead">State of the Dead</a>
+                      <a href="#topic-state-of-the-dead" data-answer-topic-filter="state-of-the-dead">State of the Dead</a><a href="#topic-hell" data-answer-topic-filter="hell">Hell</a>
                     </div>
                     <a class="directory-read-more" href="/answers/does-the-bible-teach-eternal-torment/" aria-label="Read the full answer to Does the Bible Teach Eternal Torment?">Read the full answer</a>
                   </article>
 
-                  <article class="directory-answer-card" data-answer-topics="state-of-the-dead" data-answer-search-text="what is the lake of fire? the lake of fire is the biblical description of the final judgment in which satan, sin, death, and those who reject god's salvation are finally destroyed. revelation explicitly calls the lake of fire “the second death.” state of the dead lake fire state of the dead">
+                  <article class="directory-answer-card" data-answer-topics="state-of-the-dead hell" data-answer-search-text="what is the lake of fire? the lake of fire is the biblical description of the final judgment in which satan, sin, death, and those who reject god's salvation are finally destroyed. revelation explicitly calls the lake of fire “the second death.” state of the dead hell lake fire state of the dead">
                     <span class="directory-answer-meta">State of the Dead</span>
                     <h2><a class="directory-answer-title" href="/answers/what-is-the-lake-of-fire/">What Is the Lake of Fire?</a></h2>
                     <p>The lake of fire is the biblical description of the final judgment in which Satan, sin, death, and those who reject God's salvation are finally destroyed. Revelation explicitly calls the lake of fire “the second death.”</p>
                     <div class="directory-answer-topics" aria-label="Related topics">
-                      <a href="#topic-state-of-the-dead" data-answer-topic-filter="state-of-the-dead">State of the Dead</a>
+                      <a href="#topic-state-of-the-dead" data-answer-topic-filter="state-of-the-dead">State of the Dead</a><a href="#topic-hell" data-answer-topic-filter="hell">Hell</a>
                     </div>
                     <a class="directory-read-more" href="/answers/what-is-the-lake-of-fire/" aria-label="Read the full answer to What Is the Lake of Fire?">Read the full answer</a>
                   </article>
 
-                  <article class="directory-answer-card" data-answer-topics="state-of-the-dead" data-answer-search-text="what is the second death? the second death is the final death described in revelation after the resurrection, judgment, and final destruction of evil. it is associated with the lake of fire and represents the permanent end of sin and rebellion. state of the dead second death state of the dead">
+                  <article class="directory-answer-card" data-answer-topics="state-of-the-dead hell" data-answer-search-text="what is the second death? the second death is the final death described in revelation after the resurrection, judgment, and final destruction of evil. it is associated with the lake of fire and represents the permanent end of sin and rebellion. state of the dead hell second death state of the dead">
                     <span class="directory-answer-meta">State of the Dead</span>
                     <h2><a class="directory-answer-title" href="/answers/what-is-the-second-death/">What Is the Second Death?</a></h2>
                     <p>The second death is the final death described in Revelation after the resurrection, judgment, and final destruction of evil. It is associated with the lake of fire and represents the permanent end of sin and rebellion.</p>
                     <div class="directory-answer-topics" aria-label="Related topics">
-                      <a href="#topic-state-of-the-dead" data-answer-topic-filter="state-of-the-dead">State of the Dead</a>
+                      <a href="#topic-state-of-the-dead" data-answer-topic-filter="state-of-the-dead">State of the Dead</a><a href="#topic-hell" data-answer-topic-filter="hell">Hell</a>
                     </div>
                     <a class="directory-read-more" href="/answers/what-is-the-second-death/" aria-label="Read the full answer to What Is the Second Death?">Read the full answer</a>
                   </article>
@@ -2731,6 +2753,206 @@
                     <a class="directory-read-more" href="/answers/does-the-bible-have-anything-to-say-about-mental-and-emotional-health/" aria-label="Read the full answer to Does the Bible have anything to say about mental and emotional health?">Read the full answer</a>
                   </article>
 
+                  <article class="directory-answer-card" data-answer-topics="prophecy bible-study" data-answer-search-text="how can christians recognize a false prophet or false teacher? christians should test every teacher by scripture, the truth about jesus, the fruit of the person's life, and whether the teaching leads people toward faithful obedience to god. prophecy bible study false prophet false teacher test the spirits discernment prophecy bible study">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/how-can-christians-recognize-a-false-prophet-or-false-teacher/">How Can Christians Recognize a False Prophet or False Teacher?</a></h2>
+                    <p>Christians should test every teacher by Scripture, the truth about Jesus, the fruit of the person's life, and whether the teaching leads people toward faithful obedience to God.</p>
+                    <div class="directory-answer-topics" aria-label="Related topics">
+                      <a href="#topic-prophecy" data-answer-topic-filter="prophecy">Prophecy</a><a href="#topic-bible-study" data-answer-topic-filter="bible-study">Bible Study</a>
+                    </div>
+                    <a class="directory-read-more" href="/answers/how-can-christians-recognize-a-false-prophet-or-false-teacher/" aria-label="Read the full answer to How Can Christians Recognize a False Prophet or False Teacher?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card" data-answer-topics="prophecy great-controversy" data-answer-search-text="who are gog and magog in bible prophecy? gog and magog symbolize forces that unite in rebellion against god and his people; revelation applies the imagery to the final worldwide uprising after the millennium. prophecy great controversy gog magog ezekiel 38 revelation 20 final rebellion prophecy great controversy">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/who-are-gog-and-magog-in-bible-prophecy/">Who Are Gog and Magog in Bible Prophecy?</a></h2>
+                    <p>Gog and Magog symbolize forces that unite in rebellion against God and His people; Revelation applies the imagery to the final worldwide uprising after the millennium.</p>
+                    <div class="directory-answer-topics" aria-label="Related topics">
+                      <a href="#topic-prophecy" data-answer-topic-filter="prophecy">Prophecy</a><a href="#topic-great-controversy" data-answer-topic-filter="great-controversy">Great Controversy</a>
+                    </div>
+                    <a class="directory-read-more" href="/answers/who-are-gog-and-magog-in-bible-prophecy/" aria-label="Read the full answer to Who Are Gog and Magog in Bible Prophecy?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card" data-answer-topics="prophecy salvation" data-answer-search-text="who is the great multitude in revelation 7? the great multitude is the redeemed family of god from every nation, standing before his throne because they have been cleansed through christ and remained faithful through tribulation. prophecy salvation great multitude revelation 7 white robes great tribulation redeemed prophecy salvation">
+                    <span class="directory-answer-meta">Prophecy</span>
+                    <h2><a class="directory-answer-title" href="/answers/who-is-the-great-multitude-in-revelation-7/">Who Is the Great Multitude in Revelation 7?</a></h2>
+                    <p>The great multitude is the redeemed family of God from every nation, standing before His throne because they have been cleansed through Christ and remained faithful through tribulation.</p>
+                    <div class="directory-answer-topics" aria-label="Related topics">
+                      <a href="#topic-prophecy" data-answer-topic-filter="prophecy">Prophecy</a><a href="#topic-salvation" data-answer-topic-filter="salvation">Salvation</a>
+                    </div>
+                    <a class="directory-read-more" href="/answers/who-is-the-great-multitude-in-revelation-7/" aria-label="Read the full answer to Who Is the Great Multitude in Revelation 7?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card" data-answer-topics="church salvation" data-answer-search-text="has the christian church replaced israel in god's plan? the new testament does not portray the church as simply erasing israel; it presents believing jews and gentiles as one people in christ while affirming god's continuing faithfulness to his promises. church salvation israel church replacement theology gentiles abraham salvation">
+                    <span class="directory-answer-meta">Church</span>
+                    <h2><a class="directory-answer-title" href="/answers/has-the-christian-church-replaced-israel-in-gods-plan/">Has the Christian Church Replaced Israel in God's Plan?</a></h2>
+                    <p>The New Testament does not portray the church as simply erasing Israel; it presents believing Jews and Gentiles as one people in Christ while affirming God's continuing faithfulness to His promises.</p>
+                    <div class="directory-answer-topics" aria-label="Related topics">
+                      <a href="#topic-church" data-answer-topic-filter="church">Church</a><a href="#topic-salvation" data-answer-topic-filter="salvation">Salvation</a>
+                    </div>
+                    <a class="directory-read-more" href="/answers/has-the-christian-church-replaced-israel-in-gods-plan/" aria-label="Read the full answer to Has the Christian Church Replaced Israel in God's Plan?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card" data-answer-topics="church bible-study" data-answer-search-text="did jesus appoint peter as the supreme head of the church? jesus gave peter an important apostolic role, but the new testament presents christ as the church's supreme head and gives shared pastoral responsibility to his apostles and elders. church bible study peter pope keys of the kingdom church authority head of the church church bible study">
+                    <span class="directory-answer-meta">Church</span>
+                    <h2><a class="directory-answer-title" href="/answers/did-jesus-appoint-peter-as-the-supreme-head-of-the-church/">Did Jesus Appoint Peter as the Supreme Head of the Church?</a></h2>
+                    <p>Jesus gave Peter an important apostolic role, but the New Testament presents Christ as the church's supreme head and gives shared pastoral responsibility to His apostles and elders.</p>
+                    <div class="directory-answer-topics" aria-label="Related topics">
+                      <a href="#topic-church" data-answer-topic-filter="church">Church</a><a href="#topic-bible-study" data-answer-topic-filter="bible-study">Bible Study</a>
+                    </div>
+                    <a class="directory-read-more" href="/answers/did-jesus-appoint-peter-as-the-supreme-head-of-the-church/" aria-label="Read the full answer to Did Jesus Appoint Peter as the Supreme Head of the Church?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card" data-answer-topics="church second-coming" data-answer-search-text="what does it mean that the church is the bride of christ? the bride image describes christ's covenant love for his people, their faithful devotion to him, and their preparation to live with him forever. church second coming bride of christ marriage supper church lamb faithfulness second coming">
+                    <span class="directory-answer-meta">Church</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-does-it-mean-that-the-church-is-the-bride-of-christ/">What Does It Mean That the Church Is the Bride of Christ?</a></h2>
+                    <p>The bride image describes Christ's covenant love for His people, their faithful devotion to Him, and their preparation to live with Him forever.</p>
+                    <div class="directory-answer-topics" aria-label="Related topics">
+                      <a href="#topic-church" data-answer-topic-filter="church">Church</a><a href="#topic-second-coming" data-answer-topic-filter="second-coming">Second Coming</a>
+                    </div>
+                    <a class="directory-read-more" href="/answers/what-does-it-mean-that-the-church-is-the-bride-of-christ/" aria-label="Read the full answer to What Does It Mean That the Church Is the Bride of Christ?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card" data-answer-topics="prayer church health" data-answer-search-text="should christians still anoint sick people with oil? yes. james instructs sick believers to call church elders for prayer and anointing, while making clear that healing ultimately depends on the lord rather than on the oil itself. prayer church health anointing oil healing sickness elders prayer church health">
+                    <span class="directory-answer-meta">Prayer</span>
+                    <h2><a class="directory-answer-title" href="/answers/should-christians-still-anoint-sick-people-with-oil/">Should Christians Still Anoint Sick People With Oil?</a></h2>
+                    <p>Yes. James instructs sick believers to call church elders for prayer and anointing, while making clear that healing ultimately depends on the Lord rather than on the oil itself.</p>
+                    <div class="directory-answer-topics" aria-label="Related topics">
+                      <a href="#topic-prayer" data-answer-topic-filter="prayer">Prayer</a><a href="#topic-church" data-answer-topic-filter="church">Church</a><a href="#topic-health" data-answer-topic-filter="health">Health</a>
+                    </div>
+                    <a class="directory-read-more" href="/answers/should-christians-still-anoint-sick-people-with-oil/" aria-label="Read the full answer to Should Christians Still Anoint Sick People With Oil?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card" data-answer-topics="salvation faith" data-answer-search-text="what do election and predestination mean in the bible? election and predestination describe god's gracious purpose to save and transform people in christ; scripture presents that purpose alongside a genuine invitation for every person to respond. salvation faith election predestination free will choice foreknowledge salvation faith">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-do-election-and-predestination-mean-in-the-bible/">What Do Election and Predestination Mean in the Bible?</a></h2>
+                    <p>Election and predestination describe God's gracious purpose to save and transform people in Christ; Scripture presents that purpose alongside a genuine invitation for every person to respond.</p>
+                    <div class="directory-answer-topics" aria-label="Related topics">
+                      <a href="#topic-salvation" data-answer-topic-filter="salvation">Salvation</a><a href="#topic-faith" data-answer-topic-filter="faith">Faith</a>
+                    </div>
+                    <a class="directory-read-more" href="/answers/what-do-election-and-predestination-mean-in-the-bible/" aria-label="Read the full answer to What Do Election and Predestination Mean in the Bible?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card" data-answer-topics="salvation faith" data-answer-search-text="how does god judge people who never hear the gospel? god judges every person justly according to the light and opportunity received, while salvation remains possible only because of christ's grace. salvation faith never heard gospel unevangelized god's judgment conscience fairness salvation faith">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/how-does-god-judge-people-who-never-hear-the-gospel/">How Does God Judge People Who Never Hear the Gospel?</a></h2>
+                    <p>God judges every person justly according to the light and opportunity received, while salvation remains possible only because of Christ's grace.</p>
+                    <div class="directory-answer-topics" aria-label="Related topics">
+                      <a href="#topic-salvation" data-answer-topic-filter="salvation">Salvation</a><a href="#topic-faith" data-answer-topic-filter="faith">Faith</a>
+                    </div>
+                    <a class="directory-read-more" href="/answers/how-does-god-judge-people-who-never-hear-the-gospel/" aria-label="Read the full answer to How Does God Judge People Who Never Hear the Gospel?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card" data-answer-topics="salvation comfort health" data-answer-search-text="does suicide automatically determine a person's eternal destiny? the bible never gives humans authority to declare that every person who dies by suicide is automatically lost; final judgment belongs to the merciful and perfectly informed god. salvation comfort health suicide eternal destiny mental health grief mercy salvation comfort health">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/does-suicide-automatically-determine-a-persons-eternal-destiny/">Does Suicide Automatically Determine a Person's Eternal Destiny?</a></h2>
+                    <p>The Bible never gives humans authority to declare that every person who dies by suicide is automatically lost; final judgment belongs to the merciful and perfectly informed God.</p>
+                    <div class="directory-answer-topics" aria-label="Related topics">
+                      <a href="#topic-salvation" data-answer-topic-filter="salvation">Salvation</a><a href="#topic-comfort" data-answer-topic-filter="comfort">Comfort</a><a href="#topic-health" data-answer-topic-filter="health">Health</a>
+                    </div>
+                    <a class="directory-read-more" href="/answers/does-suicide-automatically-determine-a-persons-eternal-destiny/" aria-label="Read the full answer to Does Suicide Automatically Determine a Person's Eternal Destiny?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card" data-answer-topics="salvation marriage-and-family" data-answer-search-text="does the bible teach an age of accountability? the bible does not name a universal age of accountability, but it distinguishes young children from those with mature moral knowledge and presents god as judging each person justly. salvation marriage and family age of accountability children salvation of children moral knowledge family salvation">
+                    <span class="directory-answer-meta">Salvation</span>
+                    <h2><a class="directory-answer-title" href="/answers/does-the-bible-teach-an-age-of-accountability/">Does the Bible Teach an Age of Accountability?</a></h2>
+                    <p>The Bible does not name a universal age of accountability, but it distinguishes young children from those with mature moral knowledge and presents God as judging each person justly.</p>
+                    <div class="directory-answer-topics" aria-label="Related topics">
+                      <a href="#topic-salvation" data-answer-topic-filter="salvation">Salvation</a><a href="#topic-marriage-and-family" data-answer-topic-filter="marriage-and-family">Marriage and Family</a>
+                    </div>
+                    <a class="directory-read-more" href="/answers/does-the-bible-teach-an-age-of-accountability/" aria-label="Read the full answer to Does the Bible Teach an Age of Accountability?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card" data-answer-topics="christian-living forgiveness" data-answer-search-text="what did jesus mean when he said, “judge not”? jesus forbade hypocritical and self-righteous condemnation, not all moral discernment; believers must examine themselves first and then evaluate matters humbly by god's word. christian living forgiveness judge not judging others discernment hypocrisy condemnation christian living forgiveness">
+                    <span class="directory-answer-meta">Christian Living</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-did-jesus-mean-when-he-said-judge-not/">What Did Jesus Mean When He Said, “Judge Not”?</a></h2>
+                    <p>Jesus forbade hypocritical and self-righteous condemnation, not all moral discernment; believers must examine themselves first and then evaluate matters humbly by God's word.</p>
+                    <div class="directory-answer-topics" aria-label="Related topics">
+                      <a href="#topic-christian-living" data-answer-topic-filter="christian-living">Christian Living</a><a href="#topic-forgiveness" data-answer-topic-filter="forgiveness">Forgiveness</a>
+                    </div>
+                    <a class="directory-read-more" href="/answers/what-did-jesus-mean-when-he-said-judge-not/" aria-label="Read the full answer to What Did Jesus Mean When He Said, “Judge Not”?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card" data-answer-topics="state-of-the-dead second-coming" data-answer-search-text="does cremation conflict with the biblical teaching of resurrection? no. the bible does not command one required method of burial, and god's ability to resurrect a person does not depend on the preservation of the body. state of the dead second coming cremation burial resurrection body funeral state of the dead second coming">
+                    <span class="directory-answer-meta">State of the Dead</span>
+                    <h2><a class="directory-answer-title" href="/answers/does-cremation-conflict-with-the-biblical-teaching-of-resurrection/">Does Cremation Conflict With the Biblical Teaching of Resurrection?</a></h2>
+                    <p>No. The Bible does not command one required method of burial, and God's ability to resurrect a person does not depend on the preservation of the body.</p>
+                    <div class="directory-answer-topics" aria-label="Related topics">
+                      <a href="#topic-state-of-the-dead" data-answer-topic-filter="state-of-the-dead">State of the Dead</a><a href="#topic-second-coming" data-answer-topic-filter="second-coming">Second Coming</a>
+                    </div>
+                    <a class="directory-read-more" href="/answers/does-cremation-conflict-with-the-biblical-teaching-of-resurrection/" aria-label="Read the full answer to Does Cremation Conflict With the Biblical Teaching of Resurrection?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card" data-answer-topics="christian-living law" data-answer-search-text="when is civil disobedience justified for a christian? christians should ordinarily respect civil authority, but they must peacefully obey god rather than people when a government directly commands sin or forbids faithfulness to god. christian living law civil disobedience government obey god authority religious liberty christian living law">
+                    <span class="directory-answer-meta">Christian Living</span>
+                    <h2><a class="directory-answer-title" href="/answers/when-is-civil-disobedience-justified-for-a-christian/">When Is Civil Disobedience Justified for a Christian?</a></h2>
+                    <p>Christians should ordinarily respect civil authority, but they must peacefully obey God rather than people when a government directly commands sin or forbids faithfulness to God.</p>
+                    <div class="directory-answer-topics" aria-label="Related topics">
+                      <a href="#topic-christian-living" data-answer-topic-filter="christian-living">Christian Living</a><a href="#topic-law" data-answer-topic-filter="law">Law</a>
+                    </div>
+                    <a class="directory-read-more" href="/answers/when-is-civil-disobedience-justified-for-a-christian/" aria-label="Read the full answer to When Is Civil Disobedience Justified for a Christian?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card" data-answer-topics="prayer faith" data-answer-search-text="should christians pray to mary, saints, or angels? the new testament directs prayer to god through jesus christ and presents christ as the one mediator between god and humanity; it never instructs believers to pray to mary, saints, or angels. prayer faith pray to mary pray to saints angels mediator intercession prayer faith">
+                    <span class="directory-answer-meta">Prayer</span>
+                    <h2><a class="directory-answer-title" href="/answers/should-christians-pray-to-mary-saints-or-angels/">Should Christians Pray to Mary, Saints, or Angels?</a></h2>
+                    <p>The New Testament directs prayer to God through Jesus Christ and presents Christ as the one mediator between God and humanity; it never instructs believers to pray to Mary, saints, or angels.</p>
+                    <div class="directory-answer-topics" aria-label="Related topics">
+                      <a href="#topic-prayer" data-answer-topic-filter="prayer">Prayer</a><a href="#topic-faith" data-answer-topic-filter="faith">Faith</a>
+                    </div>
+                    <a class="directory-read-more" href="/answers/should-christians-pray-to-mary-saints-or-angels/" aria-label="Read the full answer to Should Christians Pray to Mary, Saints, or Angels?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card" data-answer-topics="sabbath christian-living" data-answer-search-text="what activities are appropriate on the sabbath? the sabbath is designed for worship, rest, mercy, fellowship, and delight in god rather than ordinary business or self-centered pursuits. sabbath christian living sabbath activities keep sabbath sabbath rules worship rest sabbath christian living">
+                    <span class="directory-answer-meta">Sabbath</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-activities-are-appropriate-on-the-sabbath/">What Activities Are Appropriate on the Sabbath?</a></h2>
+                    <p>The Sabbath is designed for worship, rest, mercy, fellowship, and delight in God rather than ordinary business or self-centered pursuits.</p>
+                    <div class="directory-answer-topics" aria-label="Related topics">
+                      <a href="#topic-sabbath" data-answer-topic-filter="sabbath">Sabbath</a><a href="#topic-christian-living" data-answer-topic-filter="christian-living">Christian Living</a>
+                    </div>
+                    <a class="directory-read-more" href="/answers/what-activities-are-appropriate-on-the-sabbath/" aria-label="Read the full answer to What Activities Are Appropriate on the Sabbath?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card" data-answer-topics="law salvation" data-answer-search-text="must christians observe passover and the biblical feast days? the new testament does not require gentile christians to keep israel's annual feast calendar, though believers may study or voluntarily observe aspects of it without making them a condition of salvation. law salvation feast days passover annual sabbaths jewish festivals ceremonial law law salvation">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/must-christians-observe-passover-and-the-biblical-feast-days/">Must Christians Observe Passover and the Biblical Feast Days?</a></h2>
+                    <p>The New Testament does not require Gentile Christians to keep Israel's annual feast calendar, though believers may study or voluntarily observe aspects of it without making them a condition of salvation.</p>
+                    <div class="directory-answer-topics" aria-label="Related topics">
+                      <a href="#topic-law" data-answer-topic-filter="law">Law</a><a href="#topic-salvation" data-answer-topic-filter="salvation">Salvation</a>
+                    </div>
+                    <a class="directory-read-more" href="/answers/must-christians-observe-passover-and-the-biblical-feast-days/" aria-label="Read the full answer to Must Christians Observe Passover and the Biblical Feast Days?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card" data-answer-topics="law salvation baptism" data-answer-search-text="is physical circumcision required under the new covenant? no. the apostles explicitly rejected physical circumcision as a requirement for salvation or church membership and emphasized faith working through love and a transformed heart. law salvation baptism circumcision new covenant gentiles law of moses justification law salvation baptism">
+                    <span class="directory-answer-meta">Law</span>
+                    <h2><a class="directory-answer-title" href="/answers/is-physical-circumcision-required-under-the-new-covenant/">Is Physical Circumcision Required Under the New Covenant?</a></h2>
+                    <p>No. The apostles explicitly rejected physical circumcision as a requirement for salvation or church membership and emphasized faith working through love and a transformed heart.</p>
+                    <div class="directory-answer-topics" aria-label="Related topics">
+                      <a href="#topic-law" data-answer-topic-filter="law">Law</a><a href="#topic-salvation" data-answer-topic-filter="salvation">Salvation</a><a href="#topic-baptism" data-answer-topic-filter="baptism">Baptism</a>
+                    </div>
+                    <a class="directory-read-more" href="/answers/is-physical-circumcision-required-under-the-new-covenant/" aria-label="Read the full answer to Is Physical Circumcision Required Under the New Covenant?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card" data-answer-topics="marriage-and-family faith" data-answer-search-text="should a christian marry someone who does not share their faith? scripture counsels believers to marry within the faith because marriage joins two lives deeply, and opposing spiritual commitments can create lasting conflict over worship, values, and family. marriage and family faith marry unbeliever unequally yoked christian dating interfaith marriage marriage family faith">
+                    <span class="directory-answer-meta">Marriage and Family</span>
+                    <h2><a class="directory-answer-title" href="/answers/should-a-christian-marry-someone-who-does-not-share-their-faith/">Should a Christian Marry Someone Who Does Not Share Their Faith?</a></h2>
+                    <p>Scripture counsels believers to marry within the faith because marriage joins two lives deeply, and opposing spiritual commitments can create lasting conflict over worship, values, and family.</p>
+                    <div class="directory-answer-topics" aria-label="Related topics">
+                      <a href="#topic-marriage-and-family" data-answer-topic-filter="marriage-and-family">Marriage and Family</a><a href="#topic-faith" data-answer-topic-filter="faith">Faith</a>
+                    </div>
+                    <a class="directory-read-more" href="/answers/should-a-christian-marry-someone-who-does-not-share-their-faith/" aria-label="Read the full answer to Should a Christian Marry Someone Who Does Not Share Their Faith?">Read the full answer</a>
+                  </article>
+
+                  <article class="directory-answer-card" data-answer-topics="holy-spirit baptism" data-answer-search-text="what is baptism with the holy spirit? baptism with the holy spirit is christ's work of giving believers the spirit, joining them to his body, empowering witness, and beginning a transformed life. holy spirit baptism baptism with holy spirit receive the spirit pentecost spirit baptism power for witness holy spirit baptism">
+                    <span class="directory-answer-meta">Holy Spirit</span>
+                    <h2><a class="directory-answer-title" href="/answers/what-is-baptism-with-the-holy-spirit/">What Is Baptism With the Holy Spirit?</a></h2>
+                    <p>Baptism with the Holy Spirit is Christ's work of giving believers the Spirit, joining them to His body, empowering witness, and beginning a transformed life.</p>
+                    <div class="directory-answer-topics" aria-label="Related topics">
+                      <a href="#topic-holy-spirit" data-answer-topic-filter="holy-spirit">Holy Spirit</a><a href="#topic-baptism" data-answer-topic-filter="baptism">Baptism</a>
+                    </div>
+                    <a class="directory-read-more" href="/answers/what-is-baptism-with-the-holy-spirit/" aria-label="Read the full answer to What Is Baptism With the Holy Spirit?">Read the full answer</a>
+                  </article>
+
           </div>
           <div class="answers-directory-empty" data-answer-empty hidden>
             <h2>No matching answers</h2>
@@ -2892,5 +3114,7 @@
     <script src="/scripture-graphic.js?v=20261073"></script>
     <script src="/local-library.js?v=20261073"></script>
     <script src="/verse-modal.js?v=20261073"></script>
+    <script src="/bible-study-referral.js?v=20261084"></script>
+    <script src="/site-analytics.js?v=20261085"></script>
   </body>
 </html>

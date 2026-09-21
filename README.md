@@ -1,6 +1,6 @@
 # Word Oasis setup for email and Google Sheets logging
 
-This site can still work as a fully local browser-only Bible Q&A page. To also email newly submitted questions and save them to a Google Sheet, connect the form to a lightweight Google Apps Script endpoint.
+This site can still work as a fully local browser-only Bible Q&A page. To also email newly submitted questions, track Bible-study referrals, and save them to Google Sheets, connect the forms to a lightweight Google Apps Script endpoint.
 
 ## 1) Create the Google Apps Script
 
@@ -42,6 +42,9 @@ In the Google Apps Script project, set these script properties:
 
 - `SHEET_ID` = the spreadsheet ID from the Google Sheet URL
 - `SHEET_NAME` = the worksheet name (for example, `Questions`)
+- `REFERRAL_SHEET_NAME` = the worksheet for Bible-study referrals (defaults to `Bible Study Referrals`)
+- `ANALYTICS_SHEET_NAME` = the worksheet for anonymous article views (defaults to `Article Analytics`)
+- `ANALYTICS_SALT` = a private random value used when hashing anonymous browser identifiers
 - `EMAIL_TO` = the inbox that should receive the notification email
 
 You can add them in Apps Script by going to Project settings > Script properties or by editing the script and replacing the default values.
@@ -51,6 +54,50 @@ You can add them in Apps Script by going to Project settings > Script properties
 - Submit a question in the site form.
 - Confirm the row appears in the Google Sheet.
 - Confirm the email notification arrives in the target inbox.
+- Open any generated answer page, expand “Want to go deeper into God's Word?”, and submit a test referral.
+- Confirm it appears in the `Bible Study Referrals` worksheet before the browser continues to Amazing Bible Studies.
+- Keep an answer page visible for at least eight seconds and confirm a hashed row appears in the `Article Analytics` worksheet.
+- Visit `/answers/` and confirm the aggregate readership and most-read answers appear.
+
+The referral worksheet records a visitor who requested to continue to the
+official Amazing Facts enrollment site. It does not claim that the visitor
+finished enrolling because Amazing Facts does not provide Word Oasis with a
+completion callback. Name and email are required for identifying a referral;
+age range, gender, country, and faith background are optional. The form
+requires explicit consent before Word Oasis stores these details.
+
+## Public readership analytics
+
+Answer pages anonymously record one view per browser per article per day after
+the page has remained open for eight seconds. Browsers with Do Not Track
+enabled are not recorded. The site stores a random browser token locally and
+hashes it in Apps Script before saving it; the analytics worksheet does not
+store the raw token, IP addresses, names, emails, or demographics.
+
+The public site displays aggregate article views, approximate unique browsers,
+and the six most-read answers. These counters begin when the updated Apps
+Script deployment goes live and cannot recover historical Google Analytics
+data. “Readers” means unique browser identifiers and is therefore an
+approximation rather than an exact count of people.
+
+### Excluding an owner or editor
+
+To prevent an owner/editor device from contributing to Google Analytics or
+Word Oasis article-view counts, open this URL once in each browser and device:
+
+```text
+https://wordoasis.org/?word_oasis_tracking=off
+```
+
+The preference persists in that browser, removes existing Google Analytics
+cookies where possible, and removes the setting from the address bar. It must
+be opened separately on a phone, tablet, another computer, a private browsing
+session, or a different browser because websites cannot safely identify the
+same person across devices. To restore tracking on a device, open:
+
+```text
+https://wordoasis.org/?word_oasis_tracking=on
+```
 
 ## Troubleshooting
 
@@ -108,4 +155,3 @@ npm run prerender
 This is safe to run repeatedly — it fully regenerates the static content
 between the markers each time, and `script.js` re-renders the identical
 markup on page load, so nothing changes for visitors.
-
