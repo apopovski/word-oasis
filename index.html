@@ -53,7 +53,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="styles.css?v=20261081">
+    <link rel="stylesheet" href="styles.css?v=20261087">
 <script>
   window.WORD_OASIS_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZSB_Tf-MEbTUrmSkEqwNn2gjtxqF4cv16pMCDMmV3voJeJAFhIYBQ/exec";
   window.WORD_OASIS_FORM_EMAIL_TO = "wordoasis7@gmail.com";
@@ -316,18 +316,37 @@
             </p>
 
             <form class="search-card" id="search-form" role="search">
-              <label for="search-input">Search Bible questions</label>
-              <div class="search-row">
-                <input
-                  id="search-input"
-                  type="search"
-                  name="q"
-                  placeholder="Try: forgiveness, anxiety, salvation..."
-                  autocomplete="off"
-                >
-                <button type="submit">Search</button>
+              <div class="search-card-heading">
+                <label for="search-input">Search Bible questions</label>
               </div>
-              <p class="search-hint">Popular: <button type="button" data-search="salvation">salvation</button> <button type="button" data-search="prayer">prayer</button> <button type="button" data-search="anxiety">anxiety</button></p>
+              <div class="search-row">
+                <span class="search-input-wrap">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="11" cy="11" r="6.5"></circle>
+                    <path d="m16 16 4 4"></path>
+                  </svg>
+                  <input
+                    id="search-input"
+                    type="search"
+                    name="q"
+                    placeholder="Try forgiveness, anxiety, or salvation"
+                    autocomplete="off"
+                  >
+                </span>
+                <button type="submit">
+                  <span>Search</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h14"></path>
+                    <path d="m14 7 5 5-5 5"></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="search-hint">
+                <span>Popular</span>
+                <button type="button" data-search="salvation">Salvation</button>
+                <button type="button" data-search="prayer">Prayer</button>
+                <button type="button" data-search="anxiety">Anxiety</button>
+              </div>
             </form>
           </div>
         </div>
@@ -973,6 +992,6 @@
     <script src="theme.js?v=20261073"></script>
     <script src="pwa.js?v=20261069"></script>
     <script src="local-library.js?v=20261069"></script>
-    <script src="script.js?v=20261084"></script>
+    <script src="script.js?v=20261085"></script>
   </body>
 </html>

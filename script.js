@@ -6675,428 +6675,523 @@ if (askModeContent[requestedInquiryMode]) {
 
 const biblePromises = [
   {
-    text: "I will never leave you nor forsake you.",
-    reference: "Hebrews 13:5"
+    text: "He has said, “I will in no way leave you, neither will I in any way forsake you.”",
+    reference: "Hebrews 13:5",
+    categories: ["faith"]
   },
   {
-    text: "The Lord is my shepherd; I shall not want.",
-    reference: "Psalm 23:1"
+    text: "Yahweh is my shepherd: I shall lack nothing. He makes me lie down in green pastures. He leads me beside still waters. He restores my soul.",
+    reference: "Psalm 23:1-4",
+    categories: ["peace", "provision", "rest"]
   },
   {
-    text: "Come to me, all you who are weary and burdened, and I will give you rest.",
-    reference: "Matthew 11:28"
+    text: "“Come to me, all you who labor and are heavily burdened, and I will give you rest. Take my yoke upon you, and learn from me, for I am gentle and humble in heart; and you will find rest for your souls. For my yoke is easy, and my burden is light.”",
+    reference: "Matthew 11:28-30",
+    categories: ["peace", "comfort", "rest"]
   },
   {
-    text: "My grace is sufficient for you, for my power is made perfect in weakness.",
-    reference: "2 Corinthians 12:9"
+    text: "He has said to me, “My grace is sufficient for you, for my power is made perfect in weakness.” Most gladly therefore I will rather glory in my weaknesses, that the power of Christ may rest on me.",
+    reference: "2 Corinthians 12:9",
+    categories: ["comfort"]
   },
   {
-    text: "I am with you always, even to the end of the age.",
-    reference: "Matthew 28:20"
+    text: "Behold, I am with you always, even to the end of the age.",
+    reference: "Matthew 28:20",
+    categories: ["faith"]
   },
   {
-    text: "The Lord is near to the brokenhearted and saves the crushed in spirit.",
-    reference: "Psalm 34:18"
+    text: "Yahweh is near to those who have a broken heart, and saves those who have a crushed spirit.",
+    reference: "Psalm 34:18",
+    categories: ["comfort"]
   },
   {
-    text: "Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go.",
-    reference: "Joshua 1:9"
+    text: "Haven’t I commanded you? Be strong and courageous. Don’t be afraid. Don’t be dismayed, for Yahweh your God is with you wherever you go.”",
+    reference: "Joshua 1:9",
+    categories: ["courage"]
   },
   {
-    text: "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.",
-    reference: "John 3:16"
+    text: "For God so loved the world, that he gave his one and only Son, that whoever believes in him should not perish, but have eternal life.",
+    reference: "John 3:16",
+    categories: ["love", "salvation"]
   },
   {
-    text: "Cast all your anxiety on him because he cares for you.",
-    reference: "1 Peter 5:7"
+    text: "Casting all your worries on him, because he cares for you.",
+    reference: "1 Peter 5:7",
+    categories: ["peace"]
   },
   {
-    text: "Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God.",
-    reference: "Philippians 4:6"
+    text: "In nothing be anxious, but in everything, by prayer and petition with thanksgiving, let your requests be made known to God. And the peace of God, which surpasses all understanding, will guard your hearts and your thoughts in Christ Jesus.",
+    reference: "Philippians 4:6-7",
+    categories: ["peace", "prayer"]
   },
   {
-    text: "He restores my soul; he leads me in paths of righteousness for his name's sake.",
-    reference: "Psalm 23:3"
+    text: "Peace I leave with you. My peace I give to you; not as the world gives, give I to you. Don’t let your heart be troubled, neither let it be fearful.",
+    reference: "John 14:27",
+    categories: ["peace", "rest"]
   },
   {
-    text: "Peace I leave with you; my peace I give you. I do not give to you as the world gives. Do not let your hearts be troubled and do not be afraid.",
-    reference: "John 14:27"
+    text: "We know that all things work together for good for those who love God, to those who are called according to his purpose.",
+    reference: "Romans 8:28",
+    categories: ["faith", "love", "hope"]
   },
   {
-    text: "If God is for us, who can be against us?",
-    reference: "Romans 8:31"
+    text: "It is because of Yahweh’s loving kindnesses that we are not consumed, because his compassion doesn’t fail. They are new every morning. Great is your faithfulness.",
+    reference: "Lamentations 3:22-23",
+    categories: ["hope", "gratitude"]
   },
   {
-    text: "And we know that in all things God works for the good of those who love him, who have been called according to his purpose.",
-    reference: "Romans 8:28"
+    text: "I can do all things through Christ, who strengthens me.",
+    reference: "Philippians 4:13",
+    categories: ["courage"]
   },
   {
-    text: "The steadfast love of the Lord never ceases; his mercies never come to an end.",
-    reference: "Lamentations 3:22"
+    text: "Yahweh will fight for you, and you shall be still.”",
+    reference: "Exodus 14:14",
+    categories: ["protection"]
   },
   {
-    text: "Jesus Christ is the same yesterday and today and forever.",
-    reference: "Hebrews 13:8"
+    text: "“Ask, and it will be given you. Seek, and you will find. Knock, and it will be opened for you. For everyone who asks receives. He who seeks finds. To him who knocks it will be opened.",
+    reference: "Matthew 7:7-8",
+    categories: ["prayer"]
   },
   {
-    text: "I can do all this through him who gives me strength.",
-    reference: "Philippians 4:13"
+    text: "Let us hold fast the confession of our hope without wavering, for he who promised is faithful.",
+    reference: "Hebrews 10:23",
+    categories: ["faith"]
   },
   {
-    text: "The Lord will fight for you; you need only to be still.",
-    reference: "Exodus 14:14"
+    text: "Yahweh is my light and my salvation. Whom shall I fear? Yahweh is the strength of my life. Of whom shall I be afraid?",
+    reference: "Psalm 27:1",
+    categories: ["protection"]
   },
   {
-    text: "His divine power has given us everything we need for a godly life through our knowledge of him who called us by his own glory and goodness.",
-    reference: "2 Peter 1:3"
+    text: "For I know the thoughts that I think toward you,” says Yahweh, “thoughts of peace, and not of evil, to give you hope and a future.",
+    reference: "Jeremiah 29:11",
+    categories: ["hope"]
   },
   {
-    text: "Ask and it will be given to you; seek and you will find; knock and the door will be opened to you.",
-    reference: "Matthew 7:7"
+    text: "But those who wait for Yahweh will renew their strength. They will mount up with wings like eagles. They will run, and not be weary. They will walk, and not faint.",
+    reference: "Isaiah 40:31",
+    categories: ["courage"]
   },
   {
-    text: "Let us hold unswervingly to the hope we profess, for he who promised is faithful.",
-    reference: "Hebrews 10:23"
+    text: "Don’t you be afraid, for I am with you. Don’t be dismayed, for I am your God. I will strengthen you. Yes, I will help you. Yes, I will uphold you with the right hand of my righteousness.",
+    reference: "Isaiah 41:10",
+    categories: ["courage", "comfort"]
   },
   {
-    text: "The Lord is my light and my salvation—whom shall I fear? The Lord is the stronghold of my life—of whom shall I be afraid?",
-    reference: "Psalm 27:1"
+    text: "For God didn’t give us a spirit of fear, but of power, love, and self-control.",
+    reference: "2 Timothy 1:7",
+    categories: ["courage"]
   },
   {
-    text: "For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future.",
-    reference: "Jeremiah 29:11"
+    text: "Don’t be afraid, for I have redeemed you. I have called you by your name. You are mine. When you pass through the waters, I will be with you.",
+    reference: "Isaiah 43:1-2",
+    categories: ["courage", "protection"]
   },
   {
-    text: "You are precious and honored in my sight, and I love you.",
-    reference: "Isaiah 43:4"
+    text: "Yahweh, your God, is among you, a mighty one who will save. He will rejoice over you with joy. He will calm you in his love. He will rejoice over you with singing.",
+    reference: "Zephaniah 3:17",
+    categories: ["love", "comfort"]
   },
   {
-    text: "The blood of Jesus, his Son, purifies us from all sin.",
-    reference: "1 John 1:7"
+    text: "For his anger is but for a moment. His favor is for a lifetime. Weeping may stay for the night, but joy comes in the morning.",
+    reference: "Psalm 30:5",
+    categories: ["hope", "comfort"]
   },
   {
-    text: "Let the peace of Christ rule in your hearts, since as members of one body you were called to peace. And be thankful.",
-    reference: "Colossians 3:15"
+    text: "Draw near to God, and he will draw near to you. Cleanse your hands, you sinners; and purify your hearts, you double-minded.",
+    reference: "James 4:8",
+    categories: ["faith", "prayer"]
   },
   {
-    text: "Trust in the Lord with all your heart and lean not on your own understanding.",
-    reference: "Proverbs 3:5"
+    text: "Yahweh is good, a stronghold in the day of trouble; and he knows those who take refuge in him.",
+    reference: "Nahum 1:7",
+    categories: ["courage", "protection"]
   },
   {
-    text: "The name of the Lord is a fortified tower; the righteous run to it and are safe.",
-    reference: "Proverbs 18:10"
+    text: "Blessed are those who mourn, for they shall be comforted.",
+    reference: "Matthew 5:4",
+    categories: ["comfort"]
   },
   {
-    text: "Delight yourself in the Lord, and he will give you the desires of your heart.",
-    reference: "Psalm 37:4"
+    text: "God is our refuge and strength, a very present help in trouble.",
+    reference: "Psalm 46:1",
+    categories: ["courage", "protection", "comfort"]
   },
   {
-    text: "But those who hope in the Lord will renew their strength. They will soar on wings like eagles.",
-    reference: "Isaiah 40:31"
+    text: "My God will supply every need of yours according to his riches in glory in Christ Jesus.",
+    reference: "Philippians 4:19",
+    categories: ["provision"]
   },
   {
-    text: "Fear not, for I am with you; be not dismayed, for I am your God. I will strengthen you, I will help you.",
-    reference: "Isaiah 41:10"
+    text: "There is therefore now no condemnation to those who are in Christ Jesus, who don’t walk according to the flesh, but according to the Spirit.",
+    reference: "Romans 8:1",
+    categories: ["forgiveness", "salvation"]
   },
   {
-    text: "For God has not given us a spirit of fear, but of power and of love and of a sound mind.",
-    reference: "2 Timothy 1:7"
+    text: "If we confess our sins, he is faithful and righteous to forgive us the sins, and to cleanse us from all unrighteousness.",
+    reference: "1 John 1:9",
+    categories: ["forgiveness", "salvation"]
   },
   {
-    text: "Do not fear, for I have redeemed you; I have called you by name, you are mine.",
-    reference: "Isaiah 43:1"
+    text: "Therefore if anyone is in Christ, he is a new creation. The old things have passed away. Behold, all things have become new.",
+    reference: "2 Corinthians 5:17",
+    categories: ["forgiveness", "salvation"]
   },
   {
-    text: "The Lord your God is with you, the Mighty Warrior who saves. He will take great delight in you; he will rejoice over you with singing.",
-    reference: "Zephaniah 3:17"
+    text: "By grace you have been saved through faith, and that not of yourselves; it is the gift of God, not of works, that no one would boast.",
+    reference: "Ephesians 2:8-9",
+    categories: ["forgiveness", "salvation"]
   },
   {
-    text: "Weeping may stay for the night, but rejoicing comes in the morning.",
-    reference: "Psalm 30:5"
+    text: "Blessed is the man who endures temptation, for when he has been approved, he will receive the crown of life, which the Lord promised to those who love him.",
+    reference: "James 1:12",
+    categories: ["hope"]
   },
   {
-    text: "Draw near to God, and he will draw near to you.",
-    reference: "James 4:8"
+    text: "Then he said to them, “Go your way. Eat the fat, drink the sweet, and send portions to him for whom nothing is prepared, for today is holy to our Lord. Don’t be grieved, for the joy of Yahweh is your strength.”",
+    reference: "Nehemiah 8:10",
+    categories: ["gratitude"]
   },
   {
-    text: "The Lord is good, a stronghold in the day of trouble; and he knows those who take refuge in him.",
-    reference: "Nahum 1:7"
+    text: "No, in all these things, we are more than conquerors through him who loved us.",
+    reference: "Romans 8:37",
+    categories: ["faith", "courage"]
   },
   {
-    text: "Blessed are those who mourn, for they will be comforted.",
-    reference: "Matthew 5:4"
+    text: "Trust in Yahweh with all your heart, and don’t lean on your own understanding. In all your ways acknowledge him, and he will make your paths straight.",
+    reference: "Proverbs 3:5-6",
+    categories: ["faith", "guidance"]
   },
   {
-    text: "God is our refuge and strength, an ever-present help in trouble.",
-    reference: "Psalm 46:1"
+    text: "Also delight yourself in Yahweh, and he will give you the desires of your heart. Commit your way to Yahweh. Trust also in him, and he will do this:",
+    reference: "Psalm 37:4-5",
+    categories: ["faith", "guidance"]
   },
   {
-    text: "Even though I walk through the darkest valley, I will fear no evil, for you are with me.",
-    reference: "Psalm 23:4"
+    text: "He who dwells in the secret place of the Most High will rest in the shadow of the Almighty. I will say of Yahweh, “He is my refuge and my fortress; my God, in whom I trust.”",
+    reference: "Psalm 91:1-4",
+    categories: ["protection"]
   },
   {
-    text: "Rejoice in hope, be patient in tribulation, be constant in prayer.",
-    reference: "Romans 12:12"
+    text: "Yahweh will keep you from all evil. He will keep your soul. Yahweh will keep your going out and your coming in, from this time forward, and forever more.",
+    reference: "Psalm 121:7-8",
+    categories: ["protection"]
   },
   {
-    text: "And my God will meet all your needs according to the riches of his glory in Christ Jesus.",
-    reference: "Philippians 4:19"
+    text: "Yahweh himself is who goes before you. He will be with you. He will not fail you nor forsake you. Don’t be afraid. Don’t be discouraged.”",
+    reference: "Deuteronomy 31:8",
+    categories: ["courage", "protection"]
   },
   {
-    text: "There is now no condemnation for those who are in Christ Jesus.",
-    reference: "Romans 8:1"
+    text: "My sheep hear my voice, and I know them, and they follow me. I give eternal life to them. They will never perish, and no one will snatch them out of my hand.",
+    reference: "John 10:27-29",
+    categories: ["protection"]
   },
   {
-    text: "If we confess our sins, he is faithful and just to forgive us our sins and to cleanse us from all unrighteousness.",
-    reference: "1 John 1:9"
+    text: "But the Lord is faithful, who will establish you, and guard you from the evil one.",
+    reference: "2 Thessalonians 3:3",
+    categories: ["faith", "protection"]
   },
   {
-    text: "Therefore, if anyone is in Christ, the new creation has come: The old has gone, the new is here!",
-    reference: "2 Corinthians 5:17"
+    text: "Neither death, nor life, nor things present, nor things to come, nor any other created thing will be able to separate us from God’s love in Christ Jesus our Lord.",
+    reference: "Romans 8:38-39",
+    categories: ["faith", "love"]
   },
   {
-    text: "For it is by grace you have been saved, through faith, and this is not from yourselves, it is the gift of God.",
-    reference: "Ephesians 2:8"
+    text: "But God commends his own love toward us, in that while we were yet sinners, Christ died for us.",
+    reference: "Romans 5:8",
+    categories: ["love"]
   },
   {
-    text: "Whoever believes in the Son has eternal life.",
-    reference: "John 3:36"
+    text: "See how great a love the Father has given to us, that we should be called children of God! For this cause the world doesn’t know us, because it didn’t know him.",
+    reference: "1 John 3:1",
+    categories: ["love"]
   },
   {
-    text: "Blessed is the man who remains steadfast under trial, for when he has stood the test he will receive the crown of life.",
-    reference: "James 1:12"
+    text: "For the mountains may depart, and the hills be removed; but my loving kindness will not depart from you, and my covenant of peace will not be removed,” says Yahweh who has mercy on you.",
+    reference: "Isaiah 54:10",
+    categories: ["love"]
   },
   {
-    text: "The joy of the Lord is your strength.",
-    reference: "Nehemiah 8:10"
+    text: "Yahweh appeared of old to me, saying, “Yes, I have loved you with an everlasting love. Therefore I have drawn you with loving kindness.",
+    reference: "Jeremiah 31:3",
+    categories: ["love"]
   },
   {
-    text: "Every good gift and every perfect gift is from above, coming down from the Father of lights.",
-    reference: "James 1:17"
+    text: "For as the heavens are high above the earth, so great is his loving kindness toward those who fear him. As far as the east is from the west, so far has he removed our transgressions from us.",
+    reference: "Psalm 103:11-12",
+    categories: ["love"]
   },
   {
-    text: "In all these things we are more than conquerors through him who loved us.",
-    reference: "Romans 8:37"
+    text: "Now may the God of hope fill you with all joy and peace in believing, that you may abound in hope, in the power of the Holy Spirit.",
+    reference: "Romans 15:13",
+    categories: ["hope", "gratitude"]
+  },
+  {
+    text: "According to his great mercy, God caused us to be born again to a living hope through the resurrection of Jesus Christ from the dead.",
+    reference: "1 Peter 1:3-4",
+    categories: ["hope"]
+  },
+  {
+    text: "He will wipe away every tear from their eyes. Death will be no more; neither will there be mourning, nor crying, nor pain, any more. The first things have passed away.”",
+    reference: "Revelation 21:4",
+    categories: ["hope", "comfort"]
+  },
+  {
+    text: "We don’t faint. Though our outward person is decaying, our inward person is renewed day by day. Our light affliction works for us an eternal weight of glory.",
+    reference: "2 Corinthians 4:16-18",
+    categories: ["courage", "hope", "comfort"]
+  },
+  {
+    text: "This hope we have as an anchor of the soul, a hope both sure and steadfast and entering into that which is within the veil;",
+    reference: "Hebrews 6:19",
+    categories: ["hope"]
+  },
+  {
+    text: "I will instruct you and teach you in the way which you shall go. I will counsel you with my eye on you.",
+    reference: "Psalm 32:8",
+    categories: ["guidance"]
+  },
+  {
+    text: "Your word is a lamp to my feet, and a light for my path.",
+    reference: "Psalm 119:105",
+    categories: ["guidance"]
+  },
+  {
+    text: "But if any of you lacks wisdom, let him ask of God, who gives to all liberally and without reproach; and it will be given to him.",
+    reference: "James 1:5",
+    categories: ["guidance"]
+  },
+  {
+    text: "Your ears will hear a voice behind you, saying, “This is the way. Walk in it,” whenever you turn to the right hand or to the left.",
+    reference: "Isaiah 30:21",
+    categories: ["guidance"]
+  },
+  {
+    text: "However when he, the Spirit of truth, has come, he will guide you into all truth, for he will not speak from himself; but whatever he hears, he will speak. He will declare to you things that are coming.",
+    reference: "John 16:13",
+    categories: ["guidance"]
+  },
+  {
+    text: "‘Call to me, and I will answer you, and will show you great and difficult things, which you don’t know.’",
+    reference: "Jeremiah 33:3",
+    categories: ["guidance", "prayer"]
+  },
+  {
+    text: "The righteous cry, and Yahweh hears, and delivers them out of all their troubles.",
+    reference: "Psalm 34:17",
+    categories: ["prayer"]
+  },
+  {
+    text: "Yahweh is near to all those who call on him, to all who call on him in truth. He will fulfill the desire of those who fear him. He also will hear their cry, and will save them.",
+    reference: "Psalm 145:18-19",
+    categories: ["prayer"]
+  },
+  {
+    text: "This is the boldness which we have toward him, that, if we ask anything according to his will, he listens to us. And if we know that he listens to us, whatever we ask, we know that we have the petitions which we have asked of him.",
+    reference: "1 John 5:14-15",
+    categories: ["prayer"]
+  },
+  {
+    text: "Let us therefore draw near with boldness to the throne of grace, that we may receive mercy, and may find grace for help in time of need.",
+    reference: "Hebrews 4:16",
+    categories: ["prayer"]
+  },
+  {
+    text: "This is the day that Yahweh has made. We will rejoice and be glad in it!",
+    reference: "Psalm 118:24",
+    categories: ["gratitude"]
+  },
+  {
+    text: "I have spoken these things to you, that my joy may remain in you, and that your joy may be made full.",
+    reference: "John 15:11",
+    categories: ["gratitude"]
+  },
+  {
+    text: "You will show me the path of life. In your presence is fullness of joy. In your right hand there are pleasures forever more.",
+    reference: "Psalm 16:11",
+    categories: ["gratitude"]
+  },
+  {
+    text: "“Come now, and let us reason together,” says Yahweh: “Though your sins be as scarlet, they shall be as white as snow. Though they be red like crimson, they shall be as wool.",
+    reference: "Isaiah 1:18",
+    categories: ["forgiveness"]
+  },
+  {
+    text: "He will again have compassion on us. He will tread our iniquities under foot, and will cast all our sins into the depths of the sea.",
+    reference: "Micah 7:18-19",
+    categories: ["forgiveness"]
+  },
+  {
+    text: "“Repent therefore, and turn again, that your sins may be blotted out, so that there may come times of refreshing from the presence of the Lord,",
+    reference: "Acts 3:19",
+    categories: ["forgiveness", "salvation"]
+  },
+  {
+    text: "In him we have our redemption through his blood, the forgiveness of our trespasses, according to the riches of his grace.",
+    reference: "Ephesians 1:7",
+    categories: ["forgiveness", "salvation"]
+  },
+  {
+    text: "For I will be merciful to their unrighteousness. I will remember their sins and lawless deeds no more.”",
+    reference: "Hebrews 8:12",
+    categories: ["forgiveness"]
+  },
+  {
+    text: "He heals the broken in heart, and binds up their wounds.",
+    reference: "Psalm 147:3",
+    categories: ["comfort"]
+  },
+  {
+    text: "He was pierced for our transgressions and crushed for our iniquities. The punishment that brought our peace was on him, and by his wounds we are healed.",
+    reference: "Isaiah 53:4-5",
+    categories: ["comfort"]
+  },
+  {
+    text: "The Father of mercies and God of all comfort comforts us in all our affliction, so that we may comfort others with the comfort we receive from God.",
+    reference: "2 Corinthians 1:3-4",
+    categories: ["comfort"]
+  },
+  {
+    text: "The prayer of faith will heal the sick, and the Lord will raise them up. If they have committed sins, they will be forgiven.",
+    reference: "James 5:15",
+    categories: ["comfort"]
+  },
+  {
+    text: "Oh fear Yahweh, you his saints, for there is no lack with those who fear him. The young lions do lack, and suffer hunger, but those who seek Yahweh shall not lack any good thing.",
+    reference: "Psalm 34:9-10",
+    categories: ["provision"]
+  },
+  {
+    text: "Your heavenly Father knows that you need these things. But seek first God’s Kingdom and his righteousness, and all these things will be given to you as well.",
+    reference: "Matthew 6:31-33",
+    categories: ["provision"]
+  },
+  {
+    text: "If you then, being evil, know how to give good gifts to your children, how much more will your Father who is in heaven give good things to those who ask him!",
+    reference: "Matthew 7:11",
+    categories: ["provision"]
+  },
+  {
+    text: "He who didn’t spare his own Son, but delivered him up for us all, how would he not also with him freely give us all things?",
+    reference: "Romans 8:32",
+    categories: ["provision"]
+  },
+  {
+    text: "Jesus said to them, “I am the bread of life. He who comes to me will not be hungry, and he who believes in me will never be thirsty.",
+    reference: "John 6:35",
+    categories: ["provision"]
+  },
+  {
+    text: "I will give you a new heart, and I will put a new spirit within you. I will take away the stony heart and give you a heart of flesh.",
+    reference: "Ezekiel 36:26-27",
+    categories: ["forgiveness", "salvation"]
+  },
+  {
+    text: "But as many as received him, to them he gave the right to become God’s children, to those who believe in his name:",
+    reference: "John 1:12",
+    categories: ["salvation"]
+  },
+  {
+    text: "“Most certainly I tell you, he who hears my word, and believes him who sent me, has eternal life, and doesn’t come into judgment, but has passed out of death into life.",
+    reference: "John 5:24",
+    categories: ["salvation"]
+  },
+  {
+    text: "All those whom the Father gives me will come to me. He who comes to me I will in no way throw out.",
+    reference: "John 6:37",
+    categories: ["salvation"]
+  },
+  {
+    text: "They said, “Believe in the Lord Jesus Christ, and you will be saved, you and your household.”",
+    reference: "Acts 16:31",
+    categories: ["salvation"]
+  },
+  {
+    text: "Being therefore justified by faith, we have peace with God through our Lord Jesus Christ;",
+    reference: "Romans 5:1",
+    categories: ["salvation"]
+  },
+  {
+    text: "For the wages of sin is death, but the free gift of God is eternal life in Christ Jesus our Lord.",
+    reference: "Romans 6:23",
+    categories: ["salvation"]
+  },
+  {
+    text: "The testimony is this, that God gave to us eternal life, and this life is in his Son. He who has the Son has the life. He who doesn’t have God’s Son doesn’t have the life.",
+    reference: "1 John 5:11-12",
+    categories: ["salvation"]
+  },
+  {
+    text: "He said, “My presence will go with you, and I will give you rest.”",
+    reference: "Exodus 33:14",
+    categories: ["rest"]
+  },
+  {
+    text: "In peace I will both lay myself down and sleep, for you, Yahweh alone, make me live in safety.",
+    reference: "Psalm 4:8",
+    categories: ["peace", "rest"]
+  },
+  {
+    text: "My soul rests in God alone. My salvation is from him. He alone is my rock and my salvation, my fortress— I will never be greatly shaken.",
+    reference: "Psalm 62:1-2",
+    categories: ["peace", "rest"]
+  },
+  {
+    text: "You will keep whoever’s mind is steadfast in perfect peace, because he trusts in you.",
+    reference: "Isaiah 26:3",
+    categories: ["peace", "rest"]
+  },
+  {
+    text: "Don’t let your heart be troubled. Believe in God. Believe also in me. I am going to prepare a place for you, and I will come again and receive you to myself.",
+    reference: "John 14:1-3",
+    categories: ["peace", "rest"]
+  },
+  {
+    text: "I have told you these things, that in me you may have peace. In the world you have oppression; but cheer up! I have overcome the world.”",
+    reference: "John 16:33",
+    categories: ["courage", "peace"]
+  },
+  {
+    text: "No temptation has taken you except what is common to man. God is faithful, who will not allow you to be tempted above what you are able, but will with the temptation also make the way of escape, that you may be able to endure it.",
+    reference: "1 Corinthians 10:13",
+    categories: ["faith"]
+  },
+  {
+    text: "Let us not be weary in doing good, for we will reap in due season, if we don’t give up.",
+    reference: "Galatians 6:9",
+    categories: ["faith", "hope"]
+  },
+  {
+    text: "Cast your burden on Yahweh, and he will sustain you. He will never allow the righteous to be moved.",
+    reference: "Psalm 55:22",
+    categories: ["peace", "rest"]
+  },
+  {
+    text: "Though I walk in the middle of trouble, you will revive me. You will stretch out your hand against the wrath of my enemies. Your right hand will save me.",
+    reference: "Psalm 138:7",
+    categories: ["courage", "protection"]
   }
 ];
 
 const promiseCategories = [
-  {
-    id: "faith",
-    label: "Faith & trust",
-    references: [
-      "Psalm 37:3-5", "Psalm 56:3-4", "Psalm 62:8", "Proverbs 3:5-6", "Isaiah 26:3-4",
-      "Jeremiah 17:7-8", "Mark 9:23", "John 11:25-26", "Romans 10:11", "2 Corinthians 5:7",
-      "Hebrews 10:23", "Hebrews 11:1", "Hebrews 11:6", "James 1:5-6", "1 Peter 1:8-9"
-    ]
-  },
-  {
-    id: "courage",
-    label: "Courage & strength",
-    references: [
-      "Deuteronomy 31:6", "Joshua 1:9", "1 Samuel 30:6", "2 Chronicles 15:7", "Nehemiah 8:10",
-      "Psalm 18:2", "Psalm 27:1", "Psalm 31:24", "Psalm 46:1-3", "Isaiah 40:29-31",
-      "Isaiah 41:10", "Habakkuk 3:19", "1 Corinthians 16:13", "Philippians 4:13", "2 Timothy 1:7"
-    ]
-  },
-  {
-    id: "peace",
-    label: "Peace & anxiety",
-    references: [
-      "Psalm 4:8", "Psalm 23:1-4", "Psalm 55:22", "Psalm 94:19", "Isaiah 26:3",
-      "Isaiah 43:1-2", "Matthew 6:31-34", "Matthew 11:28-30", "John 14:1", "John 14:27",
-      "John 16:33", "Philippians 4:6-7", "Colossians 3:15", "1 Peter 5:7", "1 John 4:18"
-    ]
-  },
-  {
-    id: "protection",
-    label: "Fear & protection",
-    references: [
-      "Exodus 14:14", "Deuteronomy 31:8", "2 Samuel 22:3-4", "Psalm 3:3-5", "Psalm 23:4",
-      "Psalm 34:4-7", "Psalm 46:1", "Psalm 91:1-4", "Psalm 121:5-8", "Isaiah 41:10",
-      "Isaiah 43:2", "Nahum 1:7", "John 10:27-29", "Romans 8:31", "2 Thessalonians 3:3"
-    ]
-  },
-  {
-    id: "love",
-    label: "God's love",
-    references: [
-      "Deuteronomy 7:9", "Psalm 36:5-7", "Psalm 86:15", "Psalm 103:11-13", "Psalm 136:1",
-      "Isaiah 43:4", "Isaiah 54:10", "Jeremiah 31:3", "Zephaniah 3:17", "John 3:16",
-      "John 15:9", "Romans 5:8", "Romans 8:38-39", "Ephesians 3:17-19", "1 John 3:1"
-    ]
-  },
-  {
-    id: "hope",
-    label: "Hope",
-    references: [
-      "Psalm 30:5", "Psalm 42:11", "Psalm 71:5", "Psalm 130:5", "Isaiah 40:31",
-      "Jeremiah 29:11", "Lamentations 3:22-24", "Micah 7:7", "Romans 5:3-5", "Romans 8:28",
-      "Romans 12:12", "Romans 15:13", "2 Corinthians 4:16-18", "Hebrews 6:19", "1 Peter 1:3-4"
-    ]
-  },
-  {
-    id: "guidance",
-    label: "Guidance & wisdom",
-    references: [
-      "Psalm 25:4-5", "Psalm 32:8", "Psalm 37:23-24", "Psalm 119:105", "Proverbs 3:5-6",
-      "Proverbs 16:9", "Isaiah 30:21", "Isaiah 48:17", "Jeremiah 33:3", "John 8:12",
-      "John 16:13", "Romans 12:2", "James 1:5", "James 3:17", "Psalm 143:10"
-    ]
-  },
-  {
-    id: "prayer",
-    label: "Prayer",
-    references: [
-      "2 Chronicles 7:14", "Psalm 34:17", "Psalm 145:18-19", "Jeremiah 29:12-13", "Jeremiah 33:3",
-      "Matthew 7:7-8", "Matthew 18:20", "Matthew 21:22", "John 14:13-14", "John 15:7",
-      "Philippians 4:6-7", "1 Thessalonians 5:16-18", "Hebrews 4:16", "James 5:16", "1 John 5:14-15"
-    ]
-  },
-  {
-    id: "gratitude",
-    label: "Gratitude & joy",
-    references: [
-      "Psalm 16:11", "Psalm 30:11-12", "Psalm 100:4-5", "Psalm 118:24", "Psalm 126:5",
-      "Isaiah 12:2-3", "Habakkuk 3:17-18", "John 15:11", "Romans 15:13", "2 Corinthians 9:8",
-      "Philippians 4:4", "Colossians 3:15-17", "1 Thessalonians 5:16-18", "James 1:17", "1 Peter 1:8"
-    ]
-  },
-  {
-    id: "forgiveness",
-    label: "Forgiveness",
-    references: [
-      "2 Chronicles 7:14", "Psalm 32:1-2", "Psalm 86:5", "Psalm 103:8-12", "Isaiah 1:18",
-      "Isaiah 43:25", "Isaiah 55:6-7", "Micah 7:18-19", "Matthew 6:14", "Acts 3:19",
-      "Romans 8:1", "Ephesians 1:7", "Colossians 1:13-14", "Hebrews 8:12", "1 John 1:9"
-    ]
-  },
-  {
-    id: "comfort",
-    label: "Comfort & healing",
-    references: [
-      "Psalm 23:3-4", "Psalm 34:18", "Psalm 41:3", "Psalm 147:3", "Isaiah 40:1",
-      "Isaiah 49:13", "Isaiah 53:4-5", "Isaiah 66:13", "Jeremiah 17:14", "Matthew 5:4",
-      "2 Corinthians 1:3-4", "2 Corinthians 12:9", "Revelation 21:4", "Psalm 30:2", "James 5:15"
-    ]
-  },
-  {
-    id: "provision",
-    label: "Provision",
-    references: [
-      "Genesis 22:14", "Deuteronomy 8:18", "Psalm 23:1", "Psalm 34:9-10", "Psalm 37:25",
-      "Psalm 84:11", "Matthew 6:31-33", "Matthew 7:11", "Luke 12:24", "John 6:35",
-      "2 Corinthians 9:8", "Philippians 4:19", "James 1:17", "Psalm 81:10", "Romans 8:32"
-    ]
-  },
-  {
-    id: "salvation",
-    label: "Grace & salvation",
-    references: [
-      "Isaiah 44:22", "Isaiah 55:1", "Ezekiel 36:26-27", "John 1:12", "John 3:16-17",
-      "John 3:36", "John 5:24", "John 6:37", "John 10:28", "Acts 16:31",
-      "Romans 5:1", "Romans 6:23", "Romans 8:1", "Ephesians 2:8-9", "1 John 5:11-12"
-    ]
-  },
-  {
-    id: "rest",
-    label: "Rest & renewal",
-    references: [
-      "Exodus 33:14", "Psalm 4:8", "Psalm 23:2-3", "Psalm 62:1-2", "Psalm 127:2",
-      "Isaiah 30:15", "Isaiah 40:29-31", "Jeremiah 6:16", "Matthew 11:28-30", "Mark 6:31",
-      "John 14:27", "Hebrews 4:9-11", "1 Peter 5:7", "Revelation 14:13", "Psalm 116:7"
-    ]
-  }
+  { id: "faith", label: "Faith & trust" },
+  { id: "courage", label: "Courage & strength" },
+  { id: "peace", label: "Peace & anxiety" },
+  { id: "protection", label: "Fear & protection" },
+  { id: "love", label: "God's love" },
+  { id: "hope", label: "Hope" },
+  { id: "guidance", label: "Guidance & wisdom" },
+  { id: "prayer", label: "Prayer" },
+  { id: "gratitude", label: "Gratitude & joy" },
+  { id: "forgiveness", label: "Forgiveness" },
+  { id: "comfort", label: "Comfort & healing" },
+  { id: "provision", label: "Provision" },
+  { id: "salvation", label: "Grace & salvation" },
+  { id: "rest", label: "Rest & renewal" }
 ];
-
-const additionalPromiseReferences = {
-  faith: [
-    "Genesis 15:6", "Exodus 14:13", "Numbers 23:19", "1 Kings 8:56", "Psalm 9:10",
-    "Psalm 20:7", "Psalm 28:7", "Psalm 40:4", "Proverbs 29:25", "Luke 1:37",
-    "Romans 4:20-21"
-  ],
-  courage: [
-    "Deuteronomy 20:4", "Joshua 10:25", "1 Chronicles 28:20", "2 Chronicles 20:15",
-    "Ezra 10:4", "Psalm 18:32-34", "Psalm 112:7-8", "Isaiah 35:3-4",
-    "Daniel 10:19", "Ephesians 6:10", "Hebrews 13:6"
-  ],
-  peace: [
-    "Leviticus 26:6", "Psalm 29:11", "Psalm 85:8", "Psalm 119:165", "Isaiah 32:17-18",
-    "Isaiah 54:13", "Luke 1:78-79", "Isaiah 26:12", "Romans 8:6", "2 Thessalonians 3:16",
-    "1 Peter 3:10-11"
-  ],
-  protection: [
-    "Genesis 15:1", "Deuteronomy 33:27", "1 Samuel 2:9", "2 Samuel 22:31",
-    "Psalm 5:11-12", "Psalm 17:8", "Psalm 32:7", "Psalm 138:7", "Proverbs 2:8",
-    "Isaiah 52:12", "2 Timothy 4:18"
-  ],
-  love: [
-    "Exodus 34:6", "Deuteronomy 33:3", "Psalm 63:3-4", "Psalm 103:17-18",
-    "Isaiah 49:15-16", "Hosea 2:19-20", "John 16:27", "John 17:23",
-    "Ephesians 2:4-5", "Titus 3:4-5", "1 John 4:9-10"
-  ],
-  hope: [
-    "Psalm 33:18", "Psalm 39:7", "Psalm 119:49-50", "Psalm 146:5", "Proverbs 23:18",
-    "Isaiah 25:8-9", "Psalm 71:14", "Romans 8:24-25", "1 Corinthians 15:58",
-    "Colossians 1:27", "Titus 2:13"
-  ],
-  guidance: [
-    "Exodus 15:13", "Psalm 16:7-8", "Psalm 48:14", "Psalm 73:24", "Proverbs 2:6",
-    "Proverbs 4:11-12", "Proverbs 20:24", "Isaiah 58:11", "Luke 1:79",
-    "Colossians 1:9-10", "2 Timothy 3:16-17"
-  ],
-  prayer: [
-    "1 Samuel 1:27", "1 Kings 8:28", "Psalm 5:3", "Psalm 18:6", "Psalm 50:15",
-    "Psalm 66:19-20", "Psalm 102:17", "Isaiah 65:24", "Mark 11:24",
-    "Romans 8:26-27", "Psalm 141:2"
-  ],
-  gratitude: [
-    "1 Chronicles 16:34", "Psalm 9:1-2", "Psalm 107:1", "Psalm 34:1",
-    "Psalm 92:1-2", "Psalm 95:1-2", "Psalm 103:1-5", "Isaiah 51:11",
-    "Luke 10:20", "Ephesians 5:19-20", "Hebrews 13:15"
-  ],
-  forgiveness: [
-    "Numbers 14:19-20", "Nehemiah 9:17", "Psalm 25:11", "Psalm 51:1-2",
-    "Psalm 65:3", "Psalm 79:9", "Psalm 130:3-4", "Daniel 9:9",
-    "Luke 7:47-48", "Acts 10:43", "Colossians 2:13-14"
-  ],
-  comfort: [
-    "Genesis 21:17", "Psalm 10:17", "Ruth 2:12", "Psalm 6:9",
-    "Psalm 27:10", "Isaiah 46:4", "Psalm 71:20-21", "Isaiah 57:18-19",
-    "Jeremiah 31:13", "John 14:18", "2 Corinthians 4:8-9"
-  ],
-  provision: [
-    "Genesis 28:20-21", "Exodus 23:25", "Deuteronomy 2:7", "1 Kings 17:14",
-    "Psalm 68:19", "Psalm 111:5", "Psalm 132:15", "Proverbs 10:3",
-    "Isaiah 33:16", "Luke 12:32", "2 Corinthians 9:10-11"
-  ],
-  salvation: [
-    "Psalm 62:7", "Isaiah 12:2", "Isaiah 45:22", "Ezekiel 11:19-20",
-    "Matthew 1:21", "Luke 19:10", "John 6:40", "Acts 2:21", "Romans 10:9-10",
-    "Titus 2:11-12", "Hebrews 7:25"
-  ],
-  rest: [
-    "Genesis 2:2-3", "Exodus 20:8-11", "Psalm 37:7", "Psalm 55:6",
-    "Psalm 91:1", "Isaiah 14:3", "Isaiah 28:12", "Mark 2:27"
-  ]
-};
-
-promiseCategories.forEach((category) => {
-  category.references.push(...(additionalPromiseReferences[category.id] || []));
-});
-
-const promisesByReference = new Map(biblePromises.map((promise) => [promise.reference, promise]));
-promiseCategories.forEach((category) => {
-  category.references.forEach((reference) => {
-    let promise = promisesByReference.get(reference);
-    if (!promise) {
-      promise = { text: "", reference };
-      biblePromises.push(promise);
-      promisesByReference.set(reference, promise);
-    }
-    promise.categories = [...new Set([...(promise.categories || []), category.id])];
-  });
-});
 
 const promiseTranslations = {
   web: { id: "web", label: "WEB" },
@@ -9010,7 +9105,8 @@ if (promiseTranslations[savedPromiseTranslation]) {
 promiseCategories.forEach((category) => {
   const option = document.createElement("option");
   option.value = category.id;
-  option.textContent = `${category.label} (${category.references.length})`;
+  const promiseCount = biblePromises.filter((promise) => promise.categories.includes(category.id)).length;
+  option.textContent = `${category.label} (${promiseCount})`;
   promiseCategory.append(option);
 });
 promiseCategory.options[0].textContent = `All promises (${biblePromises.length})`;
