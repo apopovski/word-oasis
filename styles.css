@@ -401,27 +401,38 @@ button {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 88px 0 70px;
+  display: flex;
+  min-height: 650px;
+  align-items: center;
+  padding: 104px 0 96px;
   background:
-    linear-gradient(180deg, var(--hero-start) 0%, var(--bg) 100%);
+    linear-gradient(
+      90deg,
+      var(--hero-left, rgba(5, 20, 36, 0.96)) 0%,
+      var(--hero-mid, rgba(8, 32, 52, 0.88)) 42%,
+      var(--hero-fade, rgba(8, 32, 52, 0.48)) 66%,
+      var(--hero-edge, rgba(8, 32, 52, 0.16)) 100%
+    ),
+    linear-gradient(180deg, rgba(7, 24, 41, 0.08), rgba(7, 24, 41, 0.36)),
+    var(--hero-image, url("images/hero/bible-study-rod-long.jpg")) var(--hero-position, center 48%) / cover no-repeat;
+}
+
+[data-hero-shade="strong"] {
+  --hero-left: rgba(5, 20, 36, 0.98);
+  --hero-mid: rgba(8, 32, 52, 0.94);
+  --hero-fade: rgba(8, 32, 52, 0.66);
+  --hero-edge: rgba(8, 32, 52, 0.3);
 }
 
 .hero::after {
   position: absolute;
-  left: max(18px, calc((100vw - 1120px) / 2));
-  bottom: 32px;
-  width: min(520px, 54vw);
-  height: 88px;
+  left: -100px;
+  bottom: -210px;
+  width: 720px;
+  height: 420px;
   content: "";
-  background:
-    repeating-linear-gradient(
-      135deg,
-      color-mix(in srgb, var(--brand) 18%, transparent) 0 2px,
-      transparent 2px 18px
-    );
-  opacity: 0.28;
-  mask: linear-gradient(90deg, transparent, #000 18%, #000 78%, transparent);
-  -webkit-mask: linear-gradient(90deg, transparent, #000 18%, #000 78%, transparent);
+  background: radial-gradient(circle, rgba(42, 155, 255, 0.28), transparent 68%);
+  filter: blur(4px);
   pointer-events: none;
 }
 
@@ -435,7 +446,25 @@ button {
 }
 
 .hero-grid-primary {
-  grid-template-columns: minmax(0, 820px);
+  grid-template-columns: minmax(0, 850px);
+}
+
+.hero-copy {
+  position: relative;
+  padding: 22px 0;
+}
+
+.hero .eyebrow {
+  color: #7dd3fc;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.24);
+}
+
+.hero h1 {
+  max-width: 850px;
+  color: #ffffff;
+  font-size: clamp(2.55rem, 6vw, 4.6rem);
+  text-wrap: balance;
+  text-shadow: 0 3px 28px rgba(0, 0, 0, 0.38);
 }
 
 .eyebrow {
@@ -467,24 +496,28 @@ h1 {
 }
 
 .hero-text {
-  max-width: 680px;
+  max-width: 760px;
   margin: 0 0 30px;
-  color: var(--muted);
+  color: rgba(241, 247, 252, 0.88);
   font-size: 1.18rem;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.32);
 }
 
 .search-card {
-  max-width: 720px;
+  max-width: 780px;
   padding: 18px;
-  background: color-mix(in srgb, var(--surface) 90%, transparent);
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
+  box-shadow: 0 28px 70px rgba(1, 12, 24, 0.32);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .search-card label {
   display: block;
   margin: 0 0 10px;
+  color: #102a43;
   font-weight: 800;
 }
 
@@ -498,11 +531,15 @@ h1 {
   width: 100%;
   min-height: 56px;
   padding: 0 18px;
-  color: var(--text);
-  background: var(--field-bg);
-  border: 1px solid var(--border);
+  color: #102a43;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
   border-radius: 18px;
   outline: none;
+}
+
+.search-row input::placeholder {
+  color: #64748b;
 }
 
 .search-row input:focus {
@@ -522,9 +559,19 @@ h1 {
   box-shadow: 0 18px 34px rgba(37, 99, 235, 0.25);
 }
 
+.hero .search-row button {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  box-shadow: 0 16px 30px rgba(29, 78, 216, 0.3);
+}
+
+.hero .search-row button:hover,
+.hero .search-row button:focus-visible {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+}
+
 .search-hint {
   margin: 12px 0 0;
-  color: var(--muted);
+  color: #526777;
   font-size: 0.95rem;
 }
 
@@ -533,6 +580,32 @@ h1 {
   font-weight: 800;
   background: transparent;
   border: 0;
+}
+
+.hero .search-hint button {
+  color: #1d4ed8;
+}
+
+.hero-photo-credit {
+  position: absolute;
+  right: max(18px, calc((100vw - 1120px) / 2));
+  bottom: 18px;
+  z-index: 2;
+  margin: 0;
+  padding: 6px 9px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.68rem;
+  font-weight: 600;
+  background: rgba(5, 20, 36, 0.42);
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.hero-photo-credit a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .hero-panel {
@@ -5201,7 +5274,26 @@ body.modal-open {
 
 @media (max-width: 620px) {
   .hero {
+    min-height: 0;
     padding-top: 58px;
+    padding-bottom: 74px;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5, 20, 36, 0.9) 0%,
+        rgba(5, 20, 36, 0.95) 50%,
+        rgba(5, 20, 36, 0.98) 100%
+      ),
+      var(--hero-image, url("images/hero/bible-study-rod-long.jpg")) var(--hero-mobile-position, 62% center) / cover no-repeat;
+  }
+
+  .hero-copy {
+    padding: 18px 0;
+  }
+
+  .hero-photo-credit {
+    right: 16px;
+    bottom: 13px;
   }
 
   .promise-card {

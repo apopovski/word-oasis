@@ -1,4 +1,4 @@
-const CACHE_VERSION = "word-oasis-v43";
+const CACHE_VERSION = "word-oasis-v45";
 const PAGE_CACHE = `${CACHE_VERSION}-pages`;
 const ASSET_CACHE = `${CACHE_VERSION}-assets`;
 const BIBLE_CACHE = `${CACHE_VERSION}-bible`;
@@ -10,6 +10,15 @@ const APP_SHELL = [
   "/answers/",
   "/topics/",
   "/styles.css",
+  "/hero-rotation.js",
+  "/images/hero/bible-study-emmanuel-phaeton.jpg",
+  "/images/hero/bible-study-aaron-burden.jpg",
+  "/images/hero/bible-study-ben-white.jpg",
+  "/images/hero/bible-study-samantha-sophia.jpg",
+  "/images/hero/bible-study-patrick-fore.jpg",
+  "/images/hero/bible-study-joel-muniz.jpg",
+  "/images/hero/bible-study-rod-long.jpg",
+  "/images/hero/bible-study-alexandra-fuller.jpg",
   "/theme.js",
   "/pwa.js",
   "/script.js",
