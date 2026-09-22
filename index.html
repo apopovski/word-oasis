@@ -74,6 +74,10 @@
       @media(max-width:880px){.nav-toggle{display:block}.nav-links{position:absolute;top:76px;right:16px;left:16px;display:none;flex-direction:column;align-items:stretch;gap:0;padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow)}.nav-links.open{display:flex}.nav-links a,.nav-dropdown-toggle{display:flex;width:100%;justify-content:space-between;padding:12px;border-radius:12px}.nav-dropdown-menu{position:static;display:none;width:100%;padding:4px 0 4px 12px;background:transparent;border:0;border-left:2px solid var(--border);border-radius:0;box-shadow:none;opacity:1;visibility:visible;transform:none}.nav-item-dropdown.is-open .nav-dropdown-menu{display:block}.hero-grid{grid-template-columns:1fr}.search-card{justify-self:stretch;max-width:none;transform:none}}
       @media(max-width:620px){.hero{min-height:0;padding-top:44px;padding-bottom:56px;background:linear-gradient(180deg,rgba(5,20,36,.9) 0%,rgba(5,20,36,.95) 50%,rgba(5,20,36,.98) 100%),var(--hero-mobile-image,url("images/hero/mobile/bible-study-rod-long.webp")) var(--hero-mobile-position,62% center)/cover no-repeat}.hero-copy{padding:18px 0}.hero-text{font-size:1rem}.hero-photo-credit{right:12px;bottom:10px;max-width:calc(100% - 24px);text-align:right}.search-card{max-width:none;margin-bottom:0;padding:18px;transform:none}.search-card-heading{margin:0 2px 12px}.search-row{grid-template-columns:1fr;gap:6px;width:100%;padding:6px;background:transparent;border:0;box-shadow:none}.search-input-wrap{min-height:58px;padding:0 14px;background:rgba(7,31,53,.46);border:1px solid rgba(255,255,255,.2);border-radius:16px}.hero .search-row button{min-height:52px}.search-hint{width:100%;justify-content:center;gap:6px}}
     </style>
+    <style>
+      .promise-social-share,.promise-nav-button{display:inline-grid;place-items:center;width:44px;height:44px;min-width:44px;min-height:44px;padding:0}.promise-social-share{border-radius:50%}.share-social-icons,.promise-navigation-main,.promise-navigation-options{display:flex;align-items:center;justify-content:center;gap:12px}.promise-navigation{display:grid;justify-items:center;gap:10px}.promise-navigation-main{width:min(100%,288px)}.promise-nav-text{min-height:44px;padding:8px 14px}.about-purpose .text-link,.footer-grid a:not(.brand){display:inline-flex;align-items:center;min-height:32px;padding-block:4px}.footer-list li{margin-bottom:6px}
+      @media(max-width:620px){.promise-navigation-main{display:grid;grid-template-columns:44px minmax(100px,1fr) 44px;width:min(100%,294px)}}
+    </style>
     <script>
       (() => {
         let stylesRequested = false;
@@ -83,7 +87,7 @@
           }
           stylesRequested = true;
           [
-            "styles.css?v=20261138",
+            "styles.css?v=20261139",
             "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap"
           ].forEach((href) => {
             const link = document.createElement("link");
@@ -103,7 +107,7 @@
       })();
     </script>
     <noscript>
-      <link rel="stylesheet" href="styles.css?v=20261138">
+      <link rel="stylesheet" href="styles.css?v=20261139">
       <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap"
         rel="stylesheet"
@@ -444,7 +448,7 @@
                 </label>
               </div>
               <blockquote id="promise-text" aria-live="polite" aria-atomic="true"></blockquote>
-              <a class="promise-reference" id="promise-reference" href="/bible/"></a>
+              <a class="promise-reference" id="promise-reference" href="/bible/" aria-label="Open this Bible promise in the Bible reader"></a>
             </div>
             <div class="promise-actions">
               <div class="share-action-group">
