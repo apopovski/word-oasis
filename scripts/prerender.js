@@ -290,7 +290,7 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261124">
+    <link rel="stylesheet" href="/styles.css?v=20261125">
     <meta property="og:type" content="${ogType}">
     <meta property="og:title" content="${escapeAttribute(title)}">
     <meta property="og:description" content="${escapeAttribute(description)}">
@@ -461,7 +461,7 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
     <script src="/pwa.js?v=20261073"></script>
     <script src="/scripture-graphic.js?v=20261073"></script>
     <script src="/local-library.js?v=20261073"></script>
-    <script src="/verse-modal.js?v=20261124"></script>
+    <script src="/verse-modal.js?v=20261125"></script>
     <script src="/bible-study-referral.js?v=20261084"></script>
     <script src="/site-analytics.js?v=20261085"></script>
   </body>

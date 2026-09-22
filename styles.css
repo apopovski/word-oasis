@@ -2558,8 +2558,8 @@ h1 {
 .scripture-quote {
   margin: 0;
   padding: 16px 18px;
-  background: #fffaf0;
-  border-left: 4px solid var(--accent);
+  background: color-mix(in srgb, var(--brand) 8%, var(--surface-soft));
+  border-left: 4px solid var(--brand);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
 }
 
@@ -2572,7 +2572,7 @@ h1 {
 }
 
 .scripture-quote cite {
-  color: #7c4a03;
+  color: var(--brand);
   font-size: 0.82rem;
   font-style: normal;
   font-weight: 800;
@@ -7121,7 +7121,7 @@ body.modal-open {
 }
 
 [data-theme="dark"] .scripture-quote {
-  background: rgba(251, 191, 36, 0.08);
+  background: color-mix(in srgb, var(--brand) 14%, var(--surface-soft));
 }
 
 [data-theme="dark"] .scripture-quote p {
