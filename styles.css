@@ -790,21 +790,22 @@ h1 {
 .hero-photo-credit {
   position: absolute;
   right: max(18px, calc((100vw - 1120px) / 2));
-  bottom: 18px;
+  bottom: 14px;
   z-index: 2;
   margin: 0;
-  padding: 6px 9px;
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 0.68rem;
-  font-weight: 600;
-  background: rgba(5, 20, 36, 0.42);
+  padding: 3px 6px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.56rem;
+  font-weight: 500;
+  background: rgba(5, 20, 36, 0.24);
   border-radius: 999px;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  opacity: 0.82;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .hero-photo-credit a {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.78);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -7445,8 +7446,10 @@ body.modal-open {
   }
 
   .hero-photo-credit {
-    right: 16px;
-    bottom: 13px;
+    right: 12px;
+    bottom: 10px;
+    max-width: calc(100% - 24px);
+    text-align: right;
   }
 
   .promise-card {
