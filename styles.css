@@ -5181,7 +5181,18 @@ body.modal-open {
 }
 
 .study-hero .hero-photo-credit {
-  right: 20px;
+  right: 14px;
+  bottom: 10px;
+  padding: 2px 5px;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 0.48rem;
+  font-weight: 500;
+  background: rgba(5, 20, 36, 0.16);
+  opacity: 0.68;
+}
+
+.study-hero .hero-photo-credit a {
+  color: rgba(255, 255, 255, 0.62);
 }
 
 .quiz-hero-grid {
