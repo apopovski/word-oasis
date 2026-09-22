@@ -619,6 +619,7 @@ h1 {
   justify-self: end;
   width: 100%;
   max-width: 420px;
+  margin-bottom: 22px;
   padding: 24px;
   background: rgba(248, 251, 255, 0.13);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -628,6 +629,7 @@ h1 {
     inset 0 1px 0 rgba(255, 255, 255, 0.22);
   backdrop-filter: blur(13px) saturate(120%);
   -webkit-backdrop-filter: blur(13px) saturate(120%);
+  transform: translateY(-30px);
 }
 
 .search-card-heading {
@@ -715,7 +717,7 @@ h1 {
 }
 
 .search-row input::placeholder {
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.46);
   opacity: 1;
 }
 
@@ -7525,7 +7527,9 @@ body.modal-open {
 
   .search-card {
     max-width: none;
+    margin-bottom: 0;
     padding: 18px;
+    transform: none;
   }
 
   .search-card-heading {
