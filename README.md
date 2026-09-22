@@ -18,7 +18,7 @@ challenge and take the same quiz; no personal data is collected.
 
 ## Interactive Bible studies
 
-The `/studies/` page provides nine self-paced, fill-in-the-Scripture Bible
+The `/studies/` page provides 21 self-paced, fill-in-the-Scripture Bible
 studies grouped into four categories (Foundations, About Jesus, Christian
 Living, and The Future). Study data and interactions live in `studies.js`.
 Each study opens with a key thought, walks through 8 Scripture statements one

@@ -1,4 +1,4 @@
-const CACHE_VERSION = "word-oasis-v63";
+const CACHE_VERSION = "word-oasis-v64";
 const PAGE_CACHE = `${CACHE_VERSION}-pages`;
 const ASSET_CACHE = `${CACHE_VERSION}-assets`;
 const BIBLE_CACHE = `${CACHE_VERSION}-bible`;
