@@ -1,4 +1,4 @@
-const CACHE_VERSION = "word-oasis-v52";
+const CACHE_VERSION = "word-oasis-v54";
 const PAGE_CACHE = `${CACHE_VERSION}-pages`;
 const ASSET_CACHE = `${CACHE_VERSION}-assets`;
 const BIBLE_CACHE = `${CACHE_VERSION}-bible`;
@@ -9,6 +9,7 @@ const APP_SHELL = [
   "/bible/",
   "/answers/",
   "/topics/",
+  "/quizzes/",
   "/styles.css",
   "/hero-rotation.js",
   "/images/hero/bible-study-emmanuel-phaeton.jpg",
@@ -22,6 +23,7 @@ const APP_SHELL = [
   "/theme.js",
   "/pwa.js",
   "/script.js",
+  "/quizzes.js",
   "/bible-reader.js",
   "/scripture-graphic.js",
   "/local-library.js",

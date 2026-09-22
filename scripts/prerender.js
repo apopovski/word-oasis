@@ -324,6 +324,7 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
           <li><a href="/answers/"${currentPage("answers")}>Answers</a></li>
           <li><a href="/topics/"${currentPage("topics")}>Topics</a></li>
           <li><a href="/bible/"${currentPage("bible")}>Bible</a></li>
+          <li><a href="/quizzes/"${currentPage("quizzes")}>Quizzes</a></li>
           <li><a href="/#about">About</a></li>
           <li><a href="/#ask">Ask a question</a></li>
           <li class="nav-search-item">
@@ -393,6 +394,7 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
               <li><a href="/answers/">All answers</a></li>
               <li><a href="/topics/">Browse topics</a></li>
               <li><a href="/bible/">Read the Bible</a></li>
+              <li><a href="/quizzes/">Bible quizzes</a></li>
               <li><a href="/#about">About Word Oasis</a></li>
             </ul>
           </nav>
@@ -1061,6 +1063,7 @@ function writeSitemap(answers, topics) {
     { loc: "/", priority: "1.0" },
     { loc: "/answers/", priority: "0.9" },
     { loc: "/bible/", priority: "0.9" },
+    { loc: "/quizzes/", priority: "0.8" },
     { loc: "/topics/", priority: "0.8" },
     ...answers.map((answer) => ({ loc: answerPath(answer), priority: "0.8" })),
     ...topics.map((topic) => ({ loc: topicPath(topic), priority: "0.7" }))

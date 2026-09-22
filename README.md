@@ -2,6 +2,15 @@
 
 This site can still work as a fully local browser-only Bible Q&A page. To also email newly submitted questions, track Bible-study referrals, and save them to Google Sheets, connect the forms to a lightweight Google Apps Script endpoint.
 
+## Bible knowledge quizzes
+
+The `/quizzes/` page provides five self-contained, 10-question Bible quizzes.
+Quiz data and interactions live in `quizzes.js`. Every answer includes a Bible
+reference, and scores remain in the visitor's browser. Result sharing uses the
+device share sheet or direct Facebook, X, WhatsApp, and copy-link actions. A
+shared URL contains only the quiz ID and score so recipients can see the
+challenge and take the same quiz; no personal data is collected.
+
 ## 1) Create the Google Apps Script
 
 1. Open https://script.google.com/
