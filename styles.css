@@ -4065,6 +4065,13 @@ h1 {
   font-weight: 600;
 }
 
+.bible-reader-head-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
 .bible-reader-arrows {
   display: inline-flex;
   gap: 8px;
@@ -5447,11 +5454,53 @@ body.modal-open {
   align-items: center;
   gap: 8px;
   padding: 8px 0;
-  margin-bottom: 18px;
   color: var(--brand);
   font-weight: 800;
   background: transparent;
   border: 0;
+}
+
+.quiz-player-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.quiz-link-button {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 15px;
+  color: var(--brand);
+  font-size: 0.86rem;
+  font-weight: 800;
+  white-space: nowrap;
+  background: color-mix(in srgb, var(--brand) 9%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--brand) 24%, var(--border));
+  border-radius: 999px;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.quiz-link-button svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.quiz-link-button:hover,
+.quiz-link-button:focus-visible {
+  color: #ffffff;
+  background: var(--brand);
+  transform: translateY(-1px);
+}
+
+.quiz-link-button.is-copied {
+  color: #ffffff;
+  background: #16a34a;
+  border-color: #16a34a;
 }
 
 .quiz-player-card {

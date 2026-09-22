@@ -533,7 +533,9 @@
     diplomaName: document.querySelector("[data-diploma-name]"),
     diplomaDate: document.querySelector("[data-diploma-date]"),
     diplomaList: document.querySelector("[data-diploma-list]"),
-    translationSelect: player.querySelector("[data-study-translation]")
+    translationSelect: player.querySelector("[data-study-translation]"),
+    copyLink: player.querySelector("[data-study-copy-link]"),
+    copyLinkLabel: player.querySelector("[data-study-copy-link-label]")
   };
 
   let activeStudy = null;
@@ -891,6 +893,51 @@
     });
   }
 
+  async function copyTextToClipboard(text) {
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch (error) {
+      // Continue to the legacy clipboard fallback below.
+    }
+
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    textArea.style.position = "fixed";
+    textArea.style.opacity = "0";
+    document.body.append(textArea);
+    textArea.select();
+    let copied = false;
+    try {
+      copied = document.execCommand("copy");
+    } catch (error) {
+      copied = false;
+    } finally {
+      textArea.remove();
+    }
+    return copied;
+  }
+
+  let copyLinkResetTimer = null;
+
+  async function copyStudyPageLink() {
+    if (!elements.copyLink) return;
+    const url = new URL(window.location.href);
+    if (activeStudy) {
+      url.searchParams.set("study", activeStudy.id);
+    }
+    const copied = await copyTextToClipboard(url.toString());
+    if (copyLinkResetTimer) clearTimeout(copyLinkResetTimer);
+    elements.copyLink.classList.toggle("is-copied", copied);
+    if (elements.copyLinkLabel) {
+      elements.copyLinkLabel.textContent = copied ? "Link copied!" : "Copy failed";
+    }
+    copyLinkResetTimer = setTimeout(() => {
+      elements.copyLink.classList.remove("is-copied");
+      if (elements.copyLinkLabel) elements.copyLinkLabel.textContent = "Copy link";
+    }, 2200);
+  }
+
   function showDirectory() {
     player.hidden = true;
     directory.hidden = false;
@@ -960,6 +1007,11 @@
     if (diplomaPrintButton) {
       document.body.classList.add("is-printing-diploma");
       window.print();
+      return;
+    }
+    const copyLinkButton = event.target.closest("[data-study-copy-link]");
+    if (copyLinkButton) {
+      copyStudyPageLink();
     }
   });
 

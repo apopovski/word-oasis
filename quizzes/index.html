@@ -46,7 +46,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261125">
+    <link rel="stylesheet" href="/styles.css?v=20261126">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Bible Knowledge Quizzes | Word Oasis">
     <meta property="og:description" content="How well do you know the Bible? Take a free Word Oasis Bible quiz and share your score.">
@@ -271,9 +271,15 @@
 
       <section class="section quiz-player-section" data-quiz-player hidden>
         <div class="container quiz-player-container">
-          <button type="button" class="quiz-back" data-quiz-back>
-            <span aria-hidden="true">←</span> All quizzes
-          </button>
+          <div class="quiz-player-toolbar">
+            <button type="button" class="quiz-back" data-quiz-back>
+              <span aria-hidden="true">←</span> All quizzes
+            </button>
+            <button type="button" class="quiz-link-button" data-quiz-copy-link aria-label="Copy a direct link to this quiz">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.78 3.653a3.936 3.936 0 1 1 5.567 5.567l-3.627 3.627a3.936 3.936 0 0 1-5.88-.353.75.75 0 0 0-1.18.928 5.436 5.436 0 0 0 8.12.486l3.628-3.628a5.436 5.436 0 1 0-7.688-7.688l-3 3a.75.75 0 0 0 1.06 1.061l3-3Z"/><path d="M7.28 11.153a3.936 3.936 0 0 1 5.88.353.75.75 0 0 0 1.18-.928 5.436 5.436 0 0 0-8.12-.486L2.592 13.72a5.436 5.436 0 1 0 7.688 7.688l3-3a.75.75 0 1 0-1.06-1.06l-3 3a3.936 3.936 0 0 1-5.567-5.568l3.627-3.627Z"/></svg>
+              <span data-quiz-copy-link-label>Copy link</span>
+            </button>
+          </div>
           <article class="quiz-player-card">
             <p class="quiz-challenge" data-quiz-challenge hidden></p>
             <header class="quiz-player-header">
@@ -409,6 +415,6 @@
     <script src="/theme.js?v=20261073"></script>
     <script src="/pwa.js?v=20261073"></script>
     <script src="/verse-modal.js?v=20261125"></script>
-    <script src="/quizzes.js?v=20261092"></script>
+    <script src="/quizzes.js?v=20261126"></script>
   </body>
 </html>

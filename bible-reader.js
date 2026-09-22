@@ -127,6 +127,8 @@
   const searchBooksSelect = document.querySelector("#bible-search-books");
   const searchResults = document.querySelector("#bible-search-results");
   const selectionHome = document.querySelector("#bible-selection-home");
+  const copyLinkButton = document.querySelector("#bible-copy-link");
+  const copyLinkLabel = document.querySelector("#bible-copy-link-label");
 
   if (!bookSelect || !chapterSelect || !translationSelect || !chapterGrid || !readerTitle || !readerMeta || !readerBody || !readerCard || !prevButton || !nextButton || !readerPrevButton || !readerNextButton || !bottomPrevButton || !bottomNextButton || !smallerTextButton || !largerTextButton || !textSizeRange || !textSizeLabel || !searchForm || !searchInput || !searchScope || !searchScopeSummary || !searchBooksField || !searchBooksSelect || !searchResults || !selectionHome) {
     return;
@@ -871,6 +873,29 @@
     }
   }
 
+  let copyLinkResetTimer = null;
+
+  async function copyChapterLink() {
+    if (!copyLinkButton) return;
+    const { book, chapter, translation } = selectedState();
+    const url = buildReaderUrl(book, chapter, translation);
+    let copied = true;
+    try {
+      await copyText(url);
+    } catch (error) {
+      copied = false;
+    }
+    if (copyLinkResetTimer) clearTimeout(copyLinkResetTimer);
+    copyLinkButton.classList.toggle("is-copied", copied);
+    if (copyLinkLabel) {
+      copyLinkLabel.textContent = copied ? "Link copied!" : "Copy failed";
+    }
+    copyLinkResetTimer = setTimeout(() => {
+      copyLinkButton.classList.remove("is-copied");
+      if (copyLinkLabel) copyLinkLabel.textContent = "Copy link";
+    }, 2200);
+  }
+
   function selectedAnalyticsPayload() {
     const range = selectedRange();
     const { book, chapter, translation } = selectedState();
@@ -1498,6 +1523,7 @@
   nextButton.addEventListener("click", () => moveChapter(1));
   readerPrevButton.addEventListener("click", () => moveChapter(-1));
   readerNextButton.addEventListener("click", () => moveChapter(1));
+  copyLinkButton?.addEventListener("click", copyChapterLink);
   bottomPrevButton.addEventListener("click", () => moveChapter(-1));
   bottomNextButton.addEventListener("click", () => moveChapter(1));
   smallerTextButton.addEventListener("click", () => applyTextSize(textSizeValue - textSizeStep));

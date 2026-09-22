@@ -813,7 +813,9 @@
     resultTitle: player.querySelector("[data-quiz-result-title]"),
     resultMessage: player.querySelector("[data-quiz-result-message]"),
     resultReference: player.querySelector("[data-quiz-result-reference]"),
-    retake: player.querySelector("[data-quiz-retake]")
+    retake: player.querySelector("[data-quiz-retake]"),
+    copyLink: player.querySelector("[data-quiz-copy-link]"),
+    copyLinkLabel: player.querySelector("[data-quiz-copy-link-label]")
   };
 
   let activeQuiz = null;
@@ -937,32 +939,59 @@
     return url.href;
   }
 
-  async function copyResult() {
-    const content = `${resultShareText()} ${resultShareUrl()}`;
+  async function copyTextToClipboard(text) {
     try {
-      await navigator.clipboard.writeText(content);
-      elements.resultReference.textContent = "Result copied to your clipboard.";
-      return;
+      await navigator.clipboard.writeText(text);
+      return true;
     } catch (error) {
       // Continue to the legacy clipboard fallback below.
     }
 
     const textArea = document.createElement("textarea");
-    textArea.value = content;
+    textArea.value = text;
     textArea.style.position = "fixed";
     textArea.style.opacity = "0";
     document.body.append(textArea);
     textArea.select();
+    let copied = false;
     try {
-      if (!document.execCommand("copy")) {
-        throw new Error("The browser rejected the copy command.");
-      }
-      elements.resultReference.textContent = "Result copied to your clipboard.";
+      copied = document.execCommand("copy");
     } catch (error) {
-      elements.resultReference.textContent = "This browser could not copy the result. Please copy the page address from the address bar.";
+      copied = false;
     } finally {
       textArea.remove();
     }
+    return copied;
+  }
+
+  async function copyResult() {
+    const content = `${resultShareText()} ${resultShareUrl()}`;
+    const copied = await copyTextToClipboard(content);
+    elements.resultReference.textContent = copied
+      ? "Result copied to your clipboard."
+      : "This browser could not copy the result. Please copy the page address from the address bar.";
+  }
+
+  let copyLinkResetTimer = null;
+
+  async function copyQuizPageLink() {
+    if (!elements.copyLink) return;
+    const url = new URL(window.location.href);
+    url.searchParams.delete("score");
+    url.searchParams.delete("total");
+    if (activeQuiz) {
+      url.searchParams.set("quiz", activeQuiz.id);
+    }
+    const copied = await copyTextToClipboard(url.toString());
+    if (copyLinkResetTimer) clearTimeout(copyLinkResetTimer);
+    elements.copyLink.classList.toggle("is-copied", copied);
+    if (elements.copyLinkLabel) {
+      elements.copyLinkLabel.textContent = copied ? "Link copied!" : "Copy failed";
+    }
+    copyLinkResetTimer = setTimeout(() => {
+      elements.copyLink.classList.remove("is-copied");
+      if (elements.copyLinkLabel) elements.copyLinkLabel.textContent = "Copy link";
+    }, 2200);
   }
 
   function openShareUrl(url) {
@@ -1157,6 +1186,11 @@
     const shareButton = event.target.closest("[data-quiz-share]");
     if (shareButton) {
       shareResult(shareButton.dataset.quizShare);
+      return;
+    }
+    const copyLinkButton = event.target.closest("[data-quiz-copy-link]");
+    if (copyLinkButton) {
+      copyQuizPageLink();
     }
   });
 
