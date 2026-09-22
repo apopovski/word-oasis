@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bible Knowledge Quizzes | Word Oasis</title>
-    <meta name="description" content="Test your Bible knowledge with free quizzes about Bible basics, Jesus, the Old Testament, the New Testament, and Bible people and places.">
+    <meta name="description" content="Test your Bible knowledge with free quizzes about Bible basics, Jesus, the Old and New Testaments, and the prophecies of Daniel.">
     <meta name="author" content="Word Oasis">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <meta name="theme-color" content="#102a43">
@@ -46,7 +46,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261089">
+    <link rel="stylesheet" href="/styles.css?v=20261121">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Bible Knowledge Quizzes | Word Oasis">
     <meta property="og:description" content="How well do you know the Bible? Take a free Word Oasis Bible quiz and share your score.">
@@ -66,7 +66,7 @@
         "@type": "CollectionPage",
         "name": "Bible Knowledge Quizzes",
         "url": "https://wordoasis.org/quizzes/",
-        "description": "Five free Bible knowledge quizzes with Scripture references and shareable scores.",
+        "description": "Ten free Bible knowledge quizzes with Scripture references and shareable scores.",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Word Oasis",
@@ -89,11 +89,20 @@
         </button>
         <ul id="primary-menu" class="nav-links">
           <li><a href="/">Home</a></li>
+          <li><a href="/#about">About</a></li>
           <li><a href="/answers/">Answers</a></li>
           <li><a href="/topics/">Topics</a></li>
-          <li><a href="/bible/">Bible</a></li>
-          <li><a href="/quizzes/" aria-current="page">Quizzes</a></li>
-          <li><a href="/#about">About</a></li>
+          <li class="nav-item-dropdown">
+            <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-learn-menu">
+              Learn
+              <svg class="nav-dropdown-caret" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+            </button>
+            <ul class="nav-dropdown-menu" id="nav-learn-menu">
+              <li><a href="/bible/">Bible</a></li>
+              <li><a href="/studies/">Bible Studies</a></li>
+              <li><a href="/quizzes/" aria-current="page">Quizzes</a></li>
+            </ul>
+          </li>
           <li><a href="/#ask">Ask a question</a></li>
           <li class="nav-theme-item">
             <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color mode" aria-pressed="false">
@@ -129,8 +138,8 @@
             <h1 tabindex="-1">Bible knowledge quizzes</h1>
             <p>Choose a topic, answer 10 questions, learn from Scripture references, and share your score with friends.</p>
             <div class="quiz-hero-stats" aria-label="Quiz collection overview">
-              <span><strong>5</strong> quizzes</span>
-              <span><strong>50</strong> questions</span>
+                  <span><strong>10</strong> quizzes</span>
+                  <span><strong>100</strong> questions</span>
               <span>Scripture references included</span>
             </div>
           </div>
@@ -200,6 +209,67 @@
               <p>Families, journeys, callings, cities, rivers, and memorable encounters.</p>
               <button type="button" data-start-quiz="people-and-places">Start quiz <span aria-hidden="true">→</span></button>
             </article>
+            <article class="quiz-card quiz-card-book">
+              <span class="quiz-card-icon quiz-card-icon-prophecy" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11a3 3 0 0 1 3 3v15a3 3 0 0 0-3-3H6.5A2.5 2.5 0 0 0 4 20.5z"></path><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H14v18a3 3 0 0 1 3-3h.5a2.5 2.5 0 0 1 2.5 2.5z"></path></svg>
+              </span>
+              <span class="quiz-card-meta">5 quizzes · Prophecy</span>
+              <h3>Book of Daniel</h3>
+              <p>Trace prophecy from ancient kingdoms to the time of the end through five focused quizzes.</p>
+              <button type="button" data-open-daniel>Explore Daniel <span aria-hidden="true">→</span></button>
+            </article>
+            <div class="quiz-series-heading" data-daniel-directory hidden>
+              <p class="eyebrow">Daniel prophecy series</p>
+              <h3>Trace prophecy from ancient kingdoms to the time of the end.</h3>
+              <p>These quizzes follow a historicist, sanctuary-centered reading and distinguish direct biblical identifications from later historical interpretation.</p>
+            </div>
+            <div class="quiz-daniel-grid" data-daniel-directory hidden>
+            <article class="quiz-card quiz-card-prophecy">
+              <span class="quiz-card-icon quiz-card-icon-prophecy" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l3 2"></path><path d="M12 2v2"></path><path d="M12 20v2"></path></svg>
+              </span>
+              <span class="quiz-card-meta">10 questions · Prophecy</span>
+              <h3>Daniel 2: Kingdoms &amp; the Stone</h3>
+              <p>The great image, successive kingdoms, divided powers, and God's everlasting kingdom.</p>
+              <button type="button" data-start-quiz="daniel-2">Start quiz <span aria-hidden="true">→</span></button>
+            </article>
+            <article class="quiz-card quiz-card-prophecy">
+              <span class="quiz-card-icon quiz-card-icon-prophecy" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 19c1-4 3-6 8-6s7 2 8 6"></path><path d="M7 13 5 7l4 2 3-5 3 5 4-2-2 6"></path></svg>
+              </span>
+              <span class="quiz-card-meta">10 questions · Prophecy</span>
+              <h3>Daniel 7: Beasts &amp; Judgment</h3>
+              <p>The four beasts, little horn, heavenly judgment, and the kingdom of the saints.</p>
+              <button type="button" data-start-quiz="daniel-7">Start quiz <span aria-hidden="true">→</span></button>
+            </article>
+            <article class="quiz-card quiz-card-prophecy">
+              <span class="quiz-card-icon quiz-card-icon-prophecy" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 18h16"></path><path d="M6 18V9l6-4 6 4v9"></path><path d="M10 18v-5h4v5"></path><path d="M3 5h3"></path><path d="M18 5h3"></path></svg>
+              </span>
+              <span class="quiz-card-meta">10 questions · Prophecy</span>
+              <h3>Daniel 8–9: The 2,300 Days</h3>
+              <p>The ram, goat, sanctuary, seventy weeks, Messiah, and one connected prophetic timeline.</p>
+              <button type="button" data-start-quiz="daniel-8-9">Start quiz <span aria-hidden="true">→</span></button>
+            </article>
+            <article class="quiz-card quiz-card-prophecy">
+              <span class="quiz-card-icon quiz-card-icon-prophecy" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M3 12h18"></path><path d="m7 8-4 4 4 4"></path><path d="m17 8 4 4-4 4"></path><path d="M12 4v16"></path></svg>
+              </span>
+              <span class="quiz-card-meta">10 questions · Prophecy</span>
+              <h3>Daniel 11: The Great Conflict</h3>
+              <p>Persia, Greece, Rome, the kings of north and south, and the final crisis.</p>
+              <button type="button" data-start-quiz="daniel-11">Start quiz <span aria-hidden="true">→</span></button>
+            </article>
+            <article class="quiz-card quiz-card-prophecy">
+              <span class="quiz-card-icon quiz-card-icon-prophecy" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3v18"></path><path d="M5 12h14"></path><path d="m7 6 5-3 5 3"></path><path d="m7 18 5 3 5-3"></path></svg>
+              </span>
+              <span class="quiz-card-meta">10 questions · Prophecy</span>
+              <h3>Daniel 12: The Time of the End</h3>
+              <p>Michael, deliverance, resurrection, the unsealed book, and final prophetic periods.</p>
+              <button type="button" data-start-quiz="daniel-12">Start quiz <span aria-hidden="true">→</span></button>
+            </article>
+            </div>
           </div>
         </div>
       </section>
@@ -217,7 +287,7 @@
                 <h2 data-quiz-title>Bible Basics</h2>
                 <p data-quiz-description></p>
               </div>
-              <span class="quiz-live-score" data-quiz-score>Score: 0</span>
+              <span class="quiz-live-score" data-quiz-score>0/0 correct</span>
             </header>
             <div class="quiz-progress-meta">
               <span data-quiz-progress>Question 1 of 10</span>
@@ -232,7 +302,11 @@
               <div class="quiz-options" data-quiz-options></div>
               <div class="quiz-feedback" role="status" aria-live="polite" data-quiz-feedback hidden></div>
               <div class="quiz-next-row">
-                <button type="button" class="quiz-next" data-quiz-next hidden>Next question</button>
+                <div class="quiz-navigation">
+                  <button type="button" class="quiz-previous" data-quiz-previous hidden>← Previous</button>
+                  <button type="button" class="quiz-next" data-quiz-next hidden>Next question →</button>
+                </div>
+                <small class="quiz-save-status" role="status" aria-live="polite" data-quiz-save-status>Progress saves automatically on this device.</small>
               </div>
             </div>
 
@@ -296,6 +370,7 @@
               <li><a href="/topics/">Browse topics</a></li>
               <li><a href="/bible/">Read the Bible</a></li>
               <li><a href="/quizzes/">Bible quizzes</a></li>
+              <li><a href="/studies/">Bible studies</a></li>
               <li><a href="/#about">About Word Oasis</a></li>
             </ul>
           </nav>
@@ -312,13 +387,33 @@
         </div>
         <div class="footer-bottom">
           <span>&copy; 2026 Word Oasis.</span>
-          <span>Scripture quotations marked WEB are from the public-domain World English Bible.</span>
         </div>
       </div>
     </footer>
 
+    <div class="verse-modal" id="verse-modal" role="dialog" aria-modal="true" aria-labelledby="verse-modal-title" hidden>
+      <div class="verse-modal-card">
+        <div class="verse-modal-header">
+          <h2 id="verse-modal-title">Reference</h2>
+          <button type="button" class="verse-modal-close" id="verse-modal-close" aria-label="Close verse">
+            &times;
+          </button>
+        </div>
+        <div class="verse-modal-toolbar">
+          <label for="verse-modal-translation">Bible version</label>
+          <select id="verse-modal-translation">
+            <option value="web">WEB - World English Bible</option>
+            <option value="kjv">KJV - King James Version</option>
+            <option value="asv">ASV - American Standard Version</option>
+          </select>
+        </div>
+        <div class="verse-modal-body" id="verse-modal-body"></div>
+      </div>
+    </div>
+
     <script src="/theme.js?v=20261073"></script>
     <script src="/pwa.js?v=20261073"></script>
-    <script src="/quizzes.js?v=20261089"></script>
+    <script src="/verse-modal.js?v=20261121"></script>
+    <script src="/quizzes.js?v=20261092"></script>
   </body>
 </html>

@@ -48,14 +48,29 @@
     verseModalBody.replaceChildren(status);
   }
 
-  function renderVerse(text, translation) {
-    const verse = document.createElement("p");
-    verse.className = "verse-text";
-    verse.textContent = text;
+  function renderVerse(verses, translation) {
+    const list = document.createElement("div");
+    list.className = "verse-text-list";
+    const showNumbers = verses.length > 1 && verses.some((verse) => verse.number != null);
+
+    verses.forEach((verse) => {
+      const paragraph = document.createElement("p");
+      paragraph.className = "verse-text";
+      if (showNumbers && verse.number != null) {
+        const number = document.createElement("sup");
+        number.className = "verse-number";
+        number.textContent = verse.number;
+        paragraph.append(number, document.createTextNode(` ${verse.text}`));
+      } else {
+        paragraph.textContent = verse.text;
+      }
+      list.append(paragraph);
+    });
+
     const credit = document.createElement("p");
     credit.className = "verse-credit";
     credit.textContent = `${translation.label} (public domain)`;
-    verseModalBody.replaceChildren(verse, credit);
+    verseModalBody.replaceChildren(list, credit);
   }
 
   function answerShareUrl() {
@@ -341,6 +356,13 @@
     setShareMode(storedShareMode(), false);
   }
 
+  function cleanVerseText(text) {
+    return String(text || "")
+      .trim()
+      .replace(/\s+/g, " ")
+      .replace(/"([^"]*)"/g, "“$1”");
+  }
+
   async function fetchVerseText(reference, translation) {
     const cacheKey = `${translation.id}:${reference}`;
     if (verseCache.has(cacheKey)) {
@@ -355,15 +377,17 @@
     }
 
     const data = await response.json();
-    const text = String(data.text || "")
-      .trim()
-      .replace(/\s+/g, " ")
-      .replace(/"([^"]*)"/g, "“$1”");
-    if (!text) {
+    const verses = Array.isArray(data.verses) && data.verses.length
+      ? data.verses
+          .map((verse) => ({ number: verse.verse ?? null, text: cleanVerseText(verse.text) }))
+          .filter((verse) => verse.text)
+      : [{ number: null, text: cleanVerseText(data.text) }];
+
+    if (!verses.length) {
       throw new Error("Verse lookup returned no text");
     }
-    verseCache.set(cacheKey, text);
-    return text;
+    verseCache.set(cacheKey, verses);
+    return verses;
   }
 
   async function loadActiveVerse() {
@@ -372,9 +396,9 @@
     setVerseStatus(`Loading ${translation.label}...`);
 
     try {
-      const text = await fetchVerseText(activeReference, translation);
+      const verses = await fetchVerseText(activeReference, translation);
       if (request === verseRequest && !verseModal.hidden) {
-        renderVerse(text, translation);
+        renderVerse(verses, translation);
       }
     } catch (error) {
       if (request === verseRequest && !verseModal.hidden) {
@@ -415,6 +439,9 @@
   verseModalTranslation.value = storedTranslationId();
   verseModalTranslation.addEventListener("change", () => {
     saveTranslationId(verseModalTranslation.value);
+    window.dispatchEvent(new CustomEvent("wordoasis:translationchange", {
+      detail: { translation: verseModalTranslation.value }
+    }));
     if (!verseModal.hidden && activeReference) {
       loadActiveVerse();
     }

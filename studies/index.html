@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interactive Bible Studies | Word Oasis</title>
+    <meta name="description" content="Free, interactive Bible studies you can take at your own pace — covering God's love, the Bible's reliability, Jesus, the Ten Commandments, the Sabbath, death, and Bible prophecy.">
+    <meta name="author" content="Word Oasis">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <meta name="theme-color" content="#102a43">
+    <meta name="application-name" content="Word Oasis">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Word Oasis">
+    <script>
+      (() => {
+        let saved = null;
+        try {
+          saved = localStorage.getItem("word-oasis-theme");
+        } catch (error) {}
+        const systemDark = typeof matchMedia === "function" && matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = saved === "dark" || saved === "light" ? saved : systemDark ? "dark" : "light";
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+    <script src="/tracking-preferences.js?v=20261086"></script>
+    <script>
+      if (!window.WORD_OASIS_TRACKING_DISABLED) {
+        const analyticsScript = document.createElement("script");
+        analyticsScript.async = true;
+        analyticsScript.src = "https://www.googletagmanager.com/gtag/js?id=G-5WRW513RFW";
+        document.head.appendChild(analyticsScript);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function(){dataLayer.push(arguments);};
+        window.gtag("js", new Date());
+        window.gtag("config", "G-5WRW513RFW");
+      }
+    </script>
+    <link rel="canonical" href="https://wordoasis.org/studies/">
+    <link rel="icon" href="/SVG/wordoasis-mark.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest?v=20261048">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css?v=20261121">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Interactive Bible Studies | Word Oasis">
+    <meta property="og:description" content="Take a free, self-paced interactive Bible study — read a key thought, fill in the Scripture, and grow in your walk with God.">
+    <meta property="og:url" content="https://wordoasis.org/studies/">
+    <meta property="og:site_name" content="Word Oasis">
+    <meta property="og:image" content="https://wordoasis.org/og-image.png?v=20261031">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Word Oasis interactive Bible studies">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Interactive Bible Studies | Word Oasis">
+    <meta name="twitter:description" content="Take a free, self-paced interactive Bible study — read a key thought, fill in the Scripture, and grow in your walk with God.">
+    <meta name="twitter:image" content="https://wordoasis.org/og-image.png?v=20261031">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Interactive Bible Studies",
+        "url": "https://wordoasis.org/studies/",
+        "description": "Nine free, self-paced interactive Bible studies with Scripture references and key thoughts.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Word Oasis",
+          "url": "https://wordoasis.org/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="/" aria-label="Word Oasis home">
+          <img src="/word-oasis.svg" alt="Word Oasis" class="brand-mark">
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+          <span class="sr-only">Open menu</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul id="primary-menu" class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/answers/">Answers</a></li>
+          <li><a href="/topics/">Topics</a></li>
+          <li class="nav-item-dropdown">
+            <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-learn-menu">
+              Learn
+              <svg class="nav-dropdown-caret" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+            </button>
+            <ul class="nav-dropdown-menu" id="nav-learn-menu">
+              <li><a href="/bible/">Bible</a></li>
+              <li><a href="/studies/" aria-current="page">Bible Studies</a></li>
+              <li><a href="/quizzes/">Quizzes</a></li>
+            </ul>
+          </li>
+          <li><a href="/#ask">Ask a question</a></li>
+          <li class="nav-theme-item">
+            <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color mode" aria-pressed="false">
+              <span class="theme-toggle-icon" aria-hidden="true">
+                <svg class="theme-icon-moon" viewBox="0 0 24 24" focusable="false">
+                  <path d="M20.1 14.6A8.4 8.4 0 0 1 9.4 3.9a8.4 8.4 0 1 0 10.7 10.7Z"></path>
+                </svg>
+                <svg class="theme-icon-sun" viewBox="0 0 24 24" focusable="false">
+                  <circle cx="12" cy="12" r="4.1"></circle>
+                  <path d="M12 2.4v2.2"></path>
+                  <path d="M12 19.4v2.2"></path>
+                  <path d="M4.8 4.8l1.6 1.6"></path>
+                  <path d="M17.6 17.6l1.6 1.6"></path>
+                  <path d="M2.4 12h2.2"></path>
+                  <path d="M19.4 12h2.2"></path>
+                  <path d="M4.8 19.2l1.6-1.6"></path>
+                  <path d="M17.6 6.4l1.6-1.6"></path>
+                </svg>
+              </span>
+              <span class="theme-toggle-text" data-theme-label>Dark</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="quiz-hero study-hero">
+        <div class="container quiz-hero-grid">
+          <div>
+            <nav class="breadcrumb quiz-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / Bible Studies</nav>
+            <p class="eyebrow">Grow at your own pace</p>
+            <h1 tabindex="-1">Interactive Bible studies</h1>
+            <p>Nine self-paced studies you can take right on this page — read a key thought, read the Scripture passage, then answer by choosing the missing word. Your progress saves automatically.</p>
+            <div class="quiz-hero-stats" aria-label="Bible study collection overview">
+              <span><strong>9</strong> studies</span>
+              <span><strong>70+</strong> Scripture statements</span>
+              <span>Read each verse, then choose the missing word</span>
+            </div>
+          </div>
+          <div class="quiz-hero-mark" aria-hidden="true">
+            <svg viewBox="0 0 120 120">
+              <path d="M24 30a10 10 0 0 1 10-10h52a10 10 0 0 1 10 10v54H34a10 10 0 0 0-10 10Z"></path>
+              <path d="M34 20v74"></path>
+              <path d="M48 40h34"></path>
+              <path d="M48 54h34"></path>
+              <path d="M48 68h20"></path>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="section quiz-directory-section" data-study-directory>
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Choose a study</p>
+            <h2>What would you like to explore?</h2>
+            <p>Each study opens with a key thought, walks through Scripture one statement at a time, and ends with a short summary and a question worth thinking about.</p>
+          </div>
+
+          <div class="study-progress-banner" data-study-progress-banner>
+            <div class="study-progress-info">
+              <span class="study-progress-label">Your progress</span>
+              <strong data-study-progress-text>0 of 9 studies completed</strong>
+              <div class="study-progress-track" aria-hidden="true"><span data-study-progress-bar></span></div>
+            </div>
+            <button type="button" class="study-certificate-cta" data-view-diploma hidden>
+              <span aria-hidden="true">🎓</span> View your certificate
+            </button>
+          </div>
+
+          <div class="study-filters" role="group" aria-label="Filter studies by category">
+            <button type="button" class="study-filter is-active" data-study-filter="all">All studies</button>
+            <button type="button" class="study-filter" data-study-filter="foundations">Foundations</button>
+            <button type="button" class="study-filter" data-study-filter="jesus">About Jesus</button>
+            <button type="button" class="study-filter" data-study-filter="living">Christian Living</button>
+            <button type="button" class="study-filter" data-study-filter="future">The Future</button>
+          </div>
+
+          <div class="quiz-grid study-grid">
+            <article class="quiz-card study-card" data-study-card="foundations">
+              <span class="quiz-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-10-9.1C.4 8.2 2 4.5 5.6 3.7 8 3.2 10 4.3 12 6.7 14 4.3 16 3.2 18.4 3.7 22 4.5 23.6 8.2 22 11.9 19.5 16.4 12 21 12 21Z"></path></svg>
+              </span>
+              <span class="quiz-card-meta">Foundations · 10 min</span>
+              <h3>Does God Really Love You?</h3>
+              <p>Before anything else, settle this one question about how God feels about you.</p>
+              <button type="button" data-start-study="does-god-love-you">Start study <span aria-hidden="true">→</span></button>
+            </article>
+
+            <article class="quiz-card study-card" data-study-card="foundations">
+              <span class="quiz-card-icon quiz-card-icon-gold" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11a3 3 0 0 1 3 3v15a3 3 0 0 0-3-3H6.5A2.5 2.5 0 0 0 4 20.5z"></path><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H14v18a3 3 0 0 1 3-3h.5a2.5 2.5 0 0 1 2.5 2.5z"></path></svg>
+              </span>
+              <span class="quiz-card-meta">Foundations · 9 min</span>
+              <h3>Can We Trust the Bible?</h3>
+              <p>Is there a book we can actually build our lives on? Test its claims for yourself.</p>
+              <button type="button" data-start-study="can-we-trust-the-bible">Start study <span aria-hidden="true">→</span></button>
+            </article>
+
+            <article class="quiz-card study-card" data-study-card="jesus">
+              <span class="quiz-card-icon quiz-card-icon-purple" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3v7H6v3h6v8h3v-8h6v-3h-6V3z"></path></svg>
+              </span>
+              <span class="quiz-card-meta">About Jesus · 9 min</span>
+              <h3>Who Is Jesus, Really?</h3>
+              <p>Prophet? Good teacher? Or something more? Scripture leaves little room for a middle answer.</p>
+              <button type="button" data-start-study="who-is-jesus">Start study <span aria-hidden="true">→</span></button>
+            </article>
+
+            <article class="quiz-card study-card" data-study-card="jesus">
+              <span class="quiz-card-icon quiz-card-icon-rose" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M20 8.5c0 4-8 10-8 10s-8-6-8-10a4 4 0 0 1 8-1.6A4 4 0 0 1 20 8.5Z"></path></svg>
+              </span>
+              <span class="quiz-card-meta">About Jesus · 10 min</span>
+              <h3>Saved by Grace: Why Did Jesus Have to Die?</h3>
+              <p>What was actually accomplished at the cross — and what it means for you today.</p>
+              <button type="button" data-start-study="why-did-jesus-die">Start study <span aria-hidden="true">→</span></button>
+            </article>
+
+            <article class="quiz-card study-card" data-study-card="living">
+              <span class="quiz-card-icon quiz-card-icon-green" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M6 4h13v15H6a3 3 0 0 1 0-6h13"></path><path d="M8 7h7"></path><path d="M8 10h5"></path></svg>
+              </span>
+              <span class="quiz-card-meta">Christian Living · 9 min</span>
+              <h3>Are the Ten Commandments Still Important?</h3>
+              <p>If we're saved by grace, do God's commandments still matter today?</p>
+              <button type="button" data-start-study="gods-law-today">Start study <span aria-hidden="true">→</span></button>
+            </article>
+
+            <article class="quiz-card study-card" data-study-card="living">
+              <span class="quiz-card-icon quiz-card-icon-gold" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><path d="M12 2v3"></path><path d="M12 19v3"></path><path d="m4.2 4.2 2.1 2.1"></path><path d="m17.7 17.7 2.1 2.1"></path><path d="M2 12h3"></path><path d="M19 12h3"></path><path d="m4.2 19.8 2.1-2.1"></path><path d="m17.7 6.3 2.1-2.1"></path></svg>
+              </span>
+              <span class="quiz-card-meta">Christian Living · 9 min</span>
+              <h3>The Sabbath: A Gift of Rest</h3>
+              <p>In a world that never stops, could this be exactly what we're missing?</p>
+              <button type="button" data-start-study="the-sabbath-rest">Start study <span aria-hidden="true">→</span></button>
+            </article>
+
+            <article class="quiz-card study-card" data-study-card="future">
+              <span class="quiz-card-icon quiz-card-icon-prophecy" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 0 0-5 5c0 3 5 8 5 8s5-5 5-8a5 5 0 0 0-5-5Z"></path><path d="M8 22h8"></path></svg>
+              </span>
+              <span class="quiz-card-meta">The Future · 10 min</span>
+              <h3>What Really Happens After Death?</h3>
+              <p>Few questions matter more — and few are more misunderstood.</p>
+              <button type="button" data-start-study="what-happens-after-death">Start study <span aria-hidden="true">→</span></button>
+            </article>
+
+            <article class="quiz-card study-card" data-study-card="future">
+              <span class="quiz-card-icon quiz-card-icon-prophecy" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 15a8 8 0 0 1 16 0"></path><path d="M4 15h16"></path><path d="M12 3v4"></path><path d="m6.5 6.5 1.4 1.4"></path><path d="m17.5 6.5-1.4 1.4"></path></svg>
+              </span>
+              <span class="quiz-card-meta">The Future · 9 min</span>
+              <h3>Is Jesus Really Coming Back?</h3>
+              <p>The most repeated promise in the New Testament — and what it will look like.</p>
+              <button type="button" data-start-study="second-coming">Start study <span aria-hidden="true">→</span></button>
+            </article>
+
+            <article class="quiz-card study-card quiz-card-prophecy" data-study-card="future">
+              <span class="quiz-card-icon quiz-card-icon-prophecy" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l3 2"></path><path d="M12 2v2"></path><path d="M12 20v2"></path></svg>
+              </span>
+              <span class="quiz-card-meta">The Future · 10 min</span>
+              <h3>Bible Prophecy: A Roadmap to the Future</h3>
+              <p>Long before newspapers existed, Daniel sketched the rise and fall of empires — and the end of history.</p>
+              <button type="button" data-start-study="daniel-roadmap">Start study <span aria-hidden="true">→</span></button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section quiz-player-section study-player-section" data-study-player hidden>
+        <div class="container quiz-player-container">
+          <button type="button" class="quiz-back" data-study-back>
+            <span aria-hidden="true">←</span> All studies
+          </button>
+          <article class="quiz-player-card study-player-card">
+            <header class="quiz-player-header">
+              <div>
+                <p class="eyebrow" data-study-eyebrow>Foundations · 10 min</p>
+                <h2 data-study-title>Does God Really Love You?</h2>
+                <p data-study-summary></p>
+              </div>
+              <span class="quiz-live-score" data-study-score>0/0 correct</span>
+            </header>
+
+            <div class="study-key-thought">
+              <span class="study-key-thought-label">Key thought</span>
+              <p data-study-key-thought></p>
+            </div>
+
+            <div class="study-version-bar">
+              <label for="study-translation">Bible version</label>
+              <select id="study-translation" data-study-translation>
+                <option value="web">WEB - World English Bible</option>
+                <option value="kjv">KJV - King James Version</option>
+                <option value="asv">ASV - American Standard Version</option>
+              </select>
+            </div>
+
+            <div class="quiz-progress-meta">
+              <span data-study-progress>Statement 1 of 8</span>
+              <span>Choose the missing word</span>
+            </div>
+            <div class="quiz-progress-track" aria-hidden="true">
+              <span data-study-progress-bar></span>
+            </div>
+
+            <div class="quiz-question-panel study-statement-panel" data-study-statement-panel>
+              <div class="study-step study-step-read">
+                <span class="study-step-badge" aria-hidden="true">1</span>
+                <div class="study-step-body">
+                  <span class="study-step-title">Read the verse</span>
+                  <div class="study-reference-line" data-study-reference></div>
+                  <p class="study-statement" tabindex="-1" data-study-statement></p>
+                </div>
+              </div>
+              <div class="study-step study-step-answer">
+                <span class="study-step-badge" aria-hidden="true">2</span>
+                <div class="study-step-body">
+                  <span class="study-step-title">Choose the missing word</span>
+                  <div class="study-options" data-study-options></div>
+                </div>
+              </div>
+              <div class="study-feedback" role="status" aria-live="polite" data-study-feedback hidden></div>
+              <div class="quiz-next-row">
+                <div class="quiz-navigation">
+                  <button type="button" class="quiz-previous" data-study-previous hidden>← Previous</button>
+                  <button type="button" class="quiz-next" data-study-next hidden>Next →</button>
+                </div>
+                <small class="quiz-save-status" role="status" aria-live="polite" data-study-save-status>Progress saves automatically on this device.</small>
+              </div>
+            </div>
+
+            <div class="quiz-result study-result" data-study-result hidden>
+              <div class="study-complete-badge">
+                <span class="study-complete-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 13 4 4 10-10"></path></svg></span>
+                <span>Study complete!</span>
+              </div>
+              <span class="quiz-result-label">Statements correct</span>
+              <strong class="quiz-result-score" tabindex="-1" data-study-result-score>0/8</strong>
+              <p class="study-result-message" data-study-result-message></p>
+              <div class="study-decision">
+                <span class="study-decision-label">Something to think about</span>
+                <p data-study-result-decision></p>
+              </div>
+              <div class="study-certificate-banner" data-study-certificate-banner hidden>
+                <span class="study-certificate-banner-icon" aria-hidden="true">🎓</span>
+                <div class="study-certificate-banner-text">
+                  <strong>You've completed all 9 Bible studies!</strong>
+                  <p>Claim your certificate of completion from Word Oasis.</p>
+                </div>
+                <button type="button" class="study-certificate-cta" data-view-diploma>View my certificate</button>
+              </div>
+              <div class="quiz-result-actions">
+                <button type="button" class="quiz-retake" data-study-retake>Study it again</button>
+                <button type="button" class="quiz-choose" data-study-back>Choose another study</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section study-diploma-section" data-study-diploma hidden>
+        <div class="container study-diploma-container">
+          <button type="button" class="quiz-back" data-diploma-close>
+            <span aria-hidden="true">←</span> Back to studies
+          </button>
+          <div class="study-diploma-card" id="study-diploma-print-area">
+            <div class="study-diploma-border">
+              <img src="/word-oasis.svg" alt="Word Oasis" class="study-diploma-logo">
+              <p class="study-diploma-eyebrow">Certificate of Completion</p>
+              <h2 class="study-diploma-heading">Interactive Bible Studies</h2>
+              <p class="study-diploma-intro">This certifies that</p>
+              <input type="text" class="study-diploma-name" data-diploma-name placeholder="Your name" aria-label="Your name for the certificate">
+              <p class="study-diploma-body">has faithfully completed all nine Interactive Bible Studies on Word Oasis, exploring God's love, the reliability of Scripture, the person of Jesus, salvation, God's law, the Sabbath, death, and Bible prophecy.</p>
+              <ul class="study-diploma-list" data-diploma-list></ul>
+              <div class="study-diploma-footer">
+                <div class="study-diploma-footer-col">
+                  <span class="study-diploma-signature">Word Oasis</span>
+                  <span class="study-diploma-signature-label">wordoasis.org</span>
+                </div>
+                <div class="study-diploma-seal" aria-hidden="true">
+                  <svg viewBox="0 0 64 64">
+                    <circle cx="32" cy="32" r="30"></circle>
+                    <circle cx="32" cy="32" r="24"></circle>
+                    <path d="M22 33.5 28.5 40 43 24"></path>
+                  </svg>
+                </div>
+                <div class="study-diploma-footer-col study-diploma-footer-col-right">
+                  <span class="study-diploma-date" data-diploma-date></span>
+                  <span class="study-diploma-signature-label">Date completed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="study-diploma-actions">
+            <button type="button" class="quiz-next" data-diploma-print>
+              <span aria-hidden="true">🖨️</span> Print or save as PDF
+            </button>
+            <button type="button" class="quiz-choose" data-diploma-close>Back to studies</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft quiz-study-cta">
+        <div class="container">
+          <div>
+            <p class="eyebrow">Keep growing</p>
+            <h2>Every study is an invitation to open the Book for yourself.</h2>
+            <p>Read each verse, then answer from what you just read — or explore the complete Bible, Q&amp;A library, and prophecy quizzes.</p>
+          </div>
+          <div class="quiz-study-actions">
+            <a href="/bible/">Read the Bible</a>
+            <a href="/quizzes/">Take a Bible quiz</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand-col">
+            <a class="brand footer-brand" href="/" aria-label="Word Oasis home">
+              <img src="/word-oasis.svg" alt="Word Oasis" class="brand-mark">
+            </a>
+            <p class="footer-tagline">Bible answers to your questions.</p>
+            <blockquote class="footer-verse">
+              &ldquo;And let the one who is thirsty come. And he willing, let him take of the Water of Life freely.&rdquo;
+              <cite>Revelation 22:17</cite>
+            </blockquote>
+          </div>
+          <nav class="footer-col" aria-label="Explore Word Oasis">
+            <h2>Explore</h2>
+            <ul class="footer-list">
+              <li><a href="/answers/">All answers</a></li>
+              <li><a href="/topics/">Browse topics</a></li>
+              <li><a href="/bible/">Read the Bible</a></li>
+              <li><a href="/quizzes/">Bible quizzes</a></li>
+              <li><a href="/studies/">Bible studies</a></li>
+              <li><a href="/#about">About Word Oasis</a></li>
+            </ul>
+          </nav>
+          <nav class="footer-col" aria-label="Popular topics">
+            <h2>Popular topics</h2>
+            <ul class="footer-list">
+              <li><a href="/topics/salvation/">Salvation</a></li>
+              <li><a href="/topics/prayer/">Prayer</a></li>
+              <li><a href="/topics/faith/">Faith</a></li>
+              <li><a href="/topics/forgiveness/">Forgiveness</a></li>
+              <li><a href="/topics/prophecy/">Prophecy</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-bottom">
+          <span>&copy; 2026 Word Oasis.</span>
+        </div>
+      </div>
+    </footer>
+
+    <div class="verse-modal" id="verse-modal" role="dialog" aria-modal="true" aria-labelledby="verse-modal-title" hidden>
+      <div class="verse-modal-card">
+        <div class="verse-modal-header">
+          <h2 id="verse-modal-title">Reference</h2>
+          <button type="button" class="verse-modal-close" id="verse-modal-close" aria-label="Close verse">
+            &times;
+          </button>
+        </div>
+        <div class="verse-modal-toolbar">
+          <label for="verse-modal-translation">Bible version</label>
+          <select id="verse-modal-translation">
+            <option value="web">WEB - World English Bible</option>
+            <option value="kjv">KJV - King James Version</option>
+            <option value="asv">ASV - American Standard Version</option>
+          </select>
+        </div>
+        <div class="verse-modal-body" id="verse-modal-body"></div>
+      </div>
+    </div>
+
+    <script src="/theme.js?v=20261073"></script>
+    <script src="/pwa.js?v=20261073"></script>
+    <script src="/verse-modal.js?v=20261121"></script>
+    <script src="/studies.js?v=20261121"></script>
+  </body>
+</html>

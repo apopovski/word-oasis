@@ -4,12 +4,30 @@ This site can still work as a fully local browser-only Bible Q&A page. To also e
 
 ## Bible knowledge quizzes
 
-The `/quizzes/` page provides five self-contained, 10-question Bible quizzes.
+The `/quizzes/` page provides ten self-contained, 10-question Bible quizzes,
+including five historicist Daniel prophecy quizzes covering chapters 2, 7,
+8–9 together, 11, and 12.
 Quiz data and interactions live in `quizzes.js`. Every answer includes a Bible
-reference, and scores remain in the visitor's browser. Result sharing uses the
+reference that opens in the site's in-page Scripture modal, and scores remain
+in the visitor's browser. Daniel quizzes are grouped behind a Book of Daniel
+selection, and an in-progress attempt saves locally so visitors can leave and
+return without losing their answered questions. Result sharing uses the
 device share sheet or direct Facebook, X, WhatsApp, and copy-link actions. A
 shared URL contains only the quiz ID and score so recipients can see the
 challenge and take the same quiz; no personal data is collected.
+
+## Interactive Bible studies
+
+The `/studies/` page provides nine self-paced, fill-in-the-Scripture Bible
+studies grouped into four categories (Foundations, About Jesus, Christian
+Living, and The Future). Study data and interactions live in `studies.js`.
+Each study opens with a key thought, walks through 8 Scripture statements one
+at a time with a multiple-choice blank, and ends with a closing thought and a
+personal reflection question. Every Scripture reference opens in the site's
+in-page verse modal, matching the quiz experience. Progress saves locally per
+study (`word-oasis-study:{id}` in `localStorage`) so a visitor can leave and
+resume later, and the directory includes category filter pills for quickly
+finding a topic.
 
 ## 1) Create the Google Apps Script
 

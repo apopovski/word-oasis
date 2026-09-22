@@ -53,7 +53,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="styles.css?v=20261089">
+    <link rel="stylesheet" href="styles.css?v=20261121">
 <script>
   window.WORD_OASIS_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZSB_Tf-MEbTUrmSkEqwNn2gjtxqF4cv16pMCDMmV3voJeJAFhIYBQ/exec";
   window.WORD_OASIS_FORM_EMAIL_TO = "wordoasis7@gmail.com";
@@ -273,11 +273,20 @@
         </button>
         <ul id="primary-menu" class="nav-links">
           <li><a href="/" aria-current="page">Home</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="/answers/">Answers</a></li>
           <li><a href="/topics/">Topics</a></li>
-          <li><a href="/bible/">Bible</a></li>
-          <li><a href="/quizzes/">Quizzes</a></li>
-          <li><a href="#about">About</a></li>
+          <li class="nav-item-dropdown">
+            <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="nav-learn-menu">
+              Learn
+              <svg class="nav-dropdown-caret" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+            </button>
+            <ul class="nav-dropdown-menu" id="nav-learn-menu">
+              <li><a href="/bible/">Bible</a></li>
+              <li><a href="/studies/">Bible Studies</a></li>
+              <li><a href="/quizzes/">Quizzes</a></li>
+            </ul>
+          </li>
           <li><a href="#ask">Ask a question</a></li>
           <li class="nav-theme-item">
             <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color mode" aria-pressed="false">
@@ -980,6 +989,7 @@
               <li><a href="/topics/">Browse topics</a></li>
               <li><a href="/bible/">Read the Bible</a></li>
               <li><a href="/quizzes/">Bible quizzes</a></li>
+              <li><a href="/studies/">Bible studies</a></li>
               <li><a href="#about">About Word Oasis</a></li>
             </ul>
           </nav>
@@ -1008,7 +1018,6 @@
 
         <div class="footer-bottom">
           <p class="footer-copyright">&copy; 2026 Word Oasis. All rights reserved.</p>
-          <p class="footer-note">Scripture quotations are shared for study and personal encouragement.</p>
         </div>
       </div>
     </footer>

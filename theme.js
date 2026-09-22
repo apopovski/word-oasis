@@ -70,6 +70,32 @@
   const navSearch = document.querySelector("[data-nav-search]");
   const navSearchToggle = navSearch?.querySelector(".nav-search-toggle");
   const navSearchInput = navSearch?.querySelector('input[type="search"]');
+  const navDropdowns = document.querySelectorAll(".nav-item-dropdown");
+
+  function closeNavDropdowns() {
+    navDropdowns.forEach((item) => {
+      item.classList.remove("is-open");
+      item.querySelector(".nav-dropdown-toggle")?.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  navDropdowns.forEach((item) => {
+    const toggle = item.querySelector(".nav-dropdown-toggle");
+    toggle?.addEventListener("click", () => {
+      const isOpen = item.classList.contains("is-open");
+      closeNavDropdowns();
+      if (!isOpen) {
+        item.classList.add("is-open");
+        toggle.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (![...navDropdowns].some((item) => item.contains(event.target))) {
+      closeNavDropdowns();
+    }
+  });
 
   function closeNavSearch() {
     if (!navSearch || !navSearchToggle) return;
@@ -98,18 +124,20 @@
     });
 
     navLinks.addEventListener("click", (event) => {
-      // Ignore clicks on the search input/field itself so typing a query
-      // doesn't immediately collapse the open menu.
-      if (event.target.closest(".nav-search")) {
+      // Ignore clicks on the search input/field or the Learn dropdown toggle
+      // so they don't immediately collapse the open menu.
+      if (event.target.closest(".nav-search") || event.target.closest(".nav-dropdown-toggle")) {
         return;
       }
       navLinks.classList.remove("open");
       navToggle.setAttribute("aria-expanded", "false");
+      closeNavDropdowns();
     });
 
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
         closeNavSearch();
+        closeNavDropdowns();
         if (navLinks.classList.contains("open")) {
           navLinks.classList.remove("open");
           navToggle.setAttribute("aria-expanded", "false");
