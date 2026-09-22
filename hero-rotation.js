@@ -3,6 +3,7 @@
     {
       id: "wrrgZwI7qOY",
       file: "/images/hero/bible-study-emmanuel-phaeton.jpg",
+      desktopFile: "/images/hero/desktop/bible-study-emmanuel-phaeton.webp",
       mobileFile: "/images/hero/mobile/bible-study-emmanuel-phaeton.webp",
       name: "Emmanuel Phaeton",
       username: "emmanuelphaeton",
@@ -13,6 +14,7 @@
     {
       id: "P8j0oFw1cJ4",
       file: "/images/hero/bible-study-aaron-burden.jpg",
+      desktopFile: "/images/hero/desktop/bible-study-aaron-burden.webp",
       mobileFile: "/images/hero/mobile/bible-study-aaron-burden.webp",
       name: "Aaron Burden",
       username: "aaronburden",
@@ -23,6 +25,7 @@
     {
       id: "W8Qqn1PmQH0",
       file: "/images/hero/bible-study-ben-white.jpg",
+      desktopFile: "/images/hero/desktop/bible-study-ben-white.webp",
       mobileFile: "/images/hero/mobile/bible-study-ben-white.webp",
       name: "Ben White",
       username: "benwhitephotography",
@@ -33,6 +36,7 @@
     {
       id: "NaWKMlp3tVs",
       file: "/images/hero/bible-study-samantha-sophia.jpg",
+      desktopFile: "/images/hero/desktop/bible-study-samantha-sophia.webp",
       mobileFile: "/images/hero/mobile/bible-study-samantha-sophia.webp",
       name: "Samantha Sophia",
       username: "samanthasophia",
@@ -43,6 +47,7 @@
     {
       id: "b_SHPU5M3nk",
       file: "/images/hero/bible-study-patrick-fore.jpg",
+      desktopFile: "/images/hero/desktop/bible-study-patrick-fore.webp",
       mobileFile: "/images/hero/mobile/bible-study-patrick-fore.webp",
       name: "Patrick Fore",
       username: "patrickian4",
@@ -53,6 +58,7 @@
     {
       id: "XqXJJhK-c08",
       file: "/images/hero/bible-study-joel-muniz.jpg",
+      desktopFile: "/images/hero/desktop/bible-study-joel-muniz.webp",
       mobileFile: "/images/hero/mobile/bible-study-joel-muniz.webp",
       name: "Joel Muniz",
       username: "jmuniz",
@@ -63,6 +69,7 @@
     {
       id: "DRgrzQQsJDA",
       file: "/images/hero/bible-study-rod-long.jpg",
+      desktopFile: "/images/hero/desktop/bible-study-rod-long.webp",
       mobileFile: "/images/hero/mobile/bible-study-rod-long.webp",
       name: "Rod Long",
       username: "rodlong",
@@ -73,6 +80,7 @@
     {
       id: "0-inkOU1cgQ",
       file: "/images/hero/bible-study-alexandra-fuller.jpg",
+      desktopFile: "/images/hero/desktop/bible-study-alexandra-fuller.webp",
       mobileFile: "/images/hero/mobile/bible-study-alexandra-fuller.webp",
       name: "Alexandra Fuller",
       username: "alexandrajf",
@@ -97,11 +105,11 @@
   const preload = document.createElement("link");
   preload.rel = "preload";
   preload.as = "image";
-  preload.href = isMobile ? photo.mobileFile || photo.file : photo.file;
+  preload.href = isMobile ? photo.mobileFile || photo.file : photo.desktopFile || photo.file;
   preload.fetchPriority = "high";
   document.head.append(preload);
 
-  root.style.setProperty("--hero-image", `url("${photo.file}")`);
+  root.style.setProperty("--hero-image", `url("${photo.desktopFile || photo.file}")`);
   root.style.setProperty("--hero-mobile-image", `url("${photo.mobileFile || photo.file}")`);
   root.style.setProperty("--hero-position", photo.position);
   root.style.setProperty("--hero-mobile-position", photo.mobilePosition);

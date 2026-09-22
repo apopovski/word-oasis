@@ -529,7 +529,7 @@ main > section:not(.hero) {
       var(--hero-edge, rgba(8, 32, 52, 0.16)) 100%
     ),
     linear-gradient(180deg, rgba(7, 24, 41, 0.08), rgba(7, 24, 41, 0.36)),
-    var(--hero-image, url("images/hero/bible-study-rod-long.jpg")) var(--hero-position, center 48%) / cover no-repeat;
+    var(--hero-image, url("images/hero/desktop/bible-study-rod-long.webp")) var(--hero-position, center 48%) / cover no-repeat;
 }
 
 [data-hero-shade="strong"] {
