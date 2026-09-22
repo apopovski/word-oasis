@@ -366,7 +366,7 @@
     const markWidth = 1380;
     const markHeight = markWidth * MARK_RATIO;
     ctx.save();
-    ctx.globalAlpha = 0.055;
+    ctx.globalAlpha = 0.025;
     ctx.drawImage(mark, WIDTH - markWidth * 0.6, HEIGHT - markHeight + 50, markWidth, markHeight);
     ctx.restore();
   }

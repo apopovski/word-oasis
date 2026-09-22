@@ -8525,7 +8525,7 @@ async function drawPromiseBrandMark(ctx, theme) {
     const markWidth = 1380;
     const markHeight = markWidth * PROMISE_MARK_RATIO;
     ctx.save();
-    ctx.globalAlpha = 0.055;
+    ctx.globalAlpha = 0.025;
     const markX = PROMISE_IMAGE_WIDTH - markWidth * 0.6;
     const markY = PROMISE_IMAGE_HEIGHT - markHeight + 50;
     ctx.drawImage(mark, markX, markY, markWidth, markHeight);
