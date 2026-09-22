@@ -258,11 +258,8 @@ button {
   width: 17px;
   height: 17px;
   flex-shrink: 0;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  fill: currentColor;
+  stroke: none;
   opacity: 0.75;
 }
 
@@ -5356,11 +5353,8 @@ body.modal-open {
 .quiz-card-icon svg {
   width: 29px;
   height: 29px;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.8;
+  fill: currentColor;
+  stroke: none;
 }
 
 .quiz-card-meta {
