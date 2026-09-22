@@ -556,7 +556,7 @@ button {
 }
 
 .hero-grid-primary {
-  grid-template-columns: minmax(0, 850px);
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .hero-copy {
@@ -614,23 +614,72 @@ h1 {
 }
 
 .search-card {
-  max-width: 780px;
-  padding: 16px;
-  background: rgba(248, 251, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.32);
+  display: grid;
+  grid-template-columns: 116px minmax(0, 1fr);
+  gap: 14px 16px;
+  width: 100%;
+  padding: 12px;
+  background: rgba(248, 251, 255, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 26px;
   box-shadow:
-    0 26px 70px rgba(1, 12, 24, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.34);
-  backdrop-filter: blur(16px) saturate(135%);
-  -webkit-backdrop-filter: blur(16px) saturate(135%);
+    0 24px 62px rgba(1, 12, 24, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(13px) saturate(120%);
+  -webkit-backdrop-filter: blur(13px) saturate(120%);
+}
+
+.search-card-rail {
+  grid-row: 1 / 4;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 9px;
+  min-height: 100%;
+  padding: 14px 10px;
+  color: rgba(255, 255, 255, 0.84);
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05)),
+    rgba(7, 31, 53, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+}
+
+.search-card-rail span {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+}
+
+.search-card-rail svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.search-card-rail strong {
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.search-card > :not(.search-card-rail) {
+  grid-column: 2;
 }
 
 .search-card-heading {
   display: flex;
   align-items: center;
   gap: 9px;
-  margin: 0 6px 12px;
+  margin: 2px 6px -2px;
 }
 
 .search-card-heading label {
@@ -653,8 +702,8 @@ h1 {
   align-items: center;
   gap: 8px;
   padding: 6px;
-  background: rgba(7, 31, 53, 0.68);
-  border: 1px solid rgba(255, 255, 255, 0.32);
+  background: rgba(7, 31, 53, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 20px;
   box-shadow:
     0 8px 24px rgba(15, 42, 67, 0.08),
@@ -701,7 +750,7 @@ h1 {
 }
 
 .search-row input::placeholder {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.72);
   opacity: 1;
 }
 
@@ -752,7 +801,7 @@ h1 {
   align-items: center;
   gap: 7px;
   margin: 12px 4px 0;
-  color: rgba(255, 255, 255, 0.94);
+  color: rgba(255, 255, 255, 0.78);
   font-size: 0.78rem;
   font-weight: 700;
 }
@@ -769,8 +818,8 @@ h1 {
   color: #ffffff;
   font: inherit;
   font-weight: 800;
-  background: rgba(7, 31, 53, 0.62);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(7, 31, 53, 0.36);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 999px;
   transition: color 150ms ease, background 150ms ease, border-color 150ms ease;
 }
@@ -7164,7 +7213,6 @@ body.modal-open {
   filter: brightness(0) invert(1);
 }
 
-[data-theme="dark"] .search-card,
 [data-theme="dark"] .answer-card,
 [data-theme="dark"] .cta-card,
 [data-theme="dark"] .ask-card,
@@ -7508,6 +7556,33 @@ body.modal-open {
     flex-basis: 100%;
   }
 
+  .search-card {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .search-card-rail {
+    grid-row: auto;
+    display: flex;
+    justify-content: flex-start;
+    min-height: 0;
+    padding: 10px 12px;
+  }
+
+  .search-card-rail span {
+    width: 34px;
+    height: 34px;
+  }
+
+  .search-card > :not(.search-card-rail) {
+    grid-column: 1;
+  }
+
+  .search-card-heading {
+    margin: 0 6px;
+  }
+
   .search-row {
     display: grid;
     grid-template-columns: 1fr;
@@ -7526,8 +7601,8 @@ body.modal-open {
   .search-input-wrap {
     min-height: 58px;
     padding: 0 14px;
-    background: rgba(7, 31, 53, 0.68);
-    border: 1px solid rgba(255, 255, 255, 0.32);
+    background: rgba(7, 31, 53, 0.46);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 16px;
     box-shadow: inset 0 1px 2px rgba(15, 42, 67, 0.04);
   }

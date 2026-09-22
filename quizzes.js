@@ -1187,6 +1187,12 @@
         element.hidden = false;
       });
       danielButton.closest(".quiz-card").hidden = true;
+      if (window.matchMedia("(max-width: 700px)").matches) {
+        const danielDirectory = document.querySelector("[data-daniel-directory]");
+        requestAnimationFrame(() => {
+          danielDirectory?.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      }
       return;
     }
     const startButton = event.target.closest("[data-start-quiz]");
