@@ -7948,6 +7948,7 @@ const PROMISE_LOGO_RATIO = 179.3 / 250;
 const PROMISE_MARK_RATIO = 77.77 / 212.76;
 
 const promiseSvgImageCache = new Map();
+let promiseHeroImagesPromise = null;
 let promiseImageFontsPromise = null;
 
 // The brand assets ship as single-colour navy SVGs, so each promise graphic
@@ -8004,6 +8005,56 @@ function loadPromiseLogoImage(color) {
 
 function loadPromiseMarkImage(color) {
   return loadTintedPromiseSvg("/SVG/wordoasis-mark.svg", color, { width: 1000, height: 365.53 });
+}
+
+function loadPromiseHeroImages() {
+  if (!promiseHeroImagesPromise) {
+    promiseHeroImagesPromise = fetch("/studies/hero-images.json")
+      .then((response) => (response.ok ? response.json() : null))
+      .then((data) => (data && Array.isArray(data.images) ? data.images : []))
+      .catch(() => []);
+  }
+  return promiseHeroImagesPromise;
+}
+
+function pickPromiseHeroImage(images) {
+  return images.length ? images[Math.floor(Math.random() * images.length)] : null;
+}
+
+function loadPromisePhotoImage(src) {
+  const cacheKey = `photo:${src}`;
+  if (promiseSvgImageCache.has(cacheKey)) {
+    return promiseSvgImageCache.get(cacheKey);
+  }
+
+  const imagePromise = new Promise((resolve, reject) => {
+    const image = new Image();
+    image.decoding = "async";
+    image.onload = () => resolve(image);
+    image.onerror = () => reject(new Error("Promise background image could not be decoded"));
+    image.src = src;
+  }).catch((error) => {
+    promiseSvgImageCache.delete(cacheKey);
+    throw error;
+  });
+
+  promiseSvgImageCache.set(cacheKey, imagePromise);
+  return imagePromise;
+}
+
+function drawPromiseImageCover(ctx, image) {
+  const imageWidth = image.naturalWidth || image.width;
+  const imageHeight = image.naturalHeight || image.height;
+  const scale = Math.max(PROMISE_IMAGE_WIDTH / imageWidth, PROMISE_IMAGE_HEIGHT / imageHeight);
+  const drawWidth = imageWidth * scale;
+  const drawHeight = imageHeight * scale;
+  ctx.drawImage(
+    image,
+    (PROMISE_IMAGE_WIDTH - drawWidth) / 2,
+    (PROMISE_IMAGE_HEIGHT - drawHeight) / 2,
+    drawWidth,
+    drawHeight
+  );
 }
 
 // Canvas silently falls back to a default face if a web font has not loaded, so
@@ -8426,13 +8477,26 @@ function drawPromiseCheerfulWash(ctx, theme) {
   ctx.fillRect(0, 0, PROMISE_IMAGE_WIDTH, PROMISE_IMAGE_HEIGHT);
 }
 
-function drawPromiseImageBackground(ctx, theme) {
+async function drawPromiseImageBackground(ctx, theme) {
+  try {
+    const photo = pickPromiseHeroImage(await loadPromiseHeroImages());
+    if (photo?.file) {
+      const image = await loadPromisePhotoImage(photo.file);
+      drawPromiseImageCover(ctx, image);
+    }
+  } catch (error) {
+    console.warn("Word Oasis promise graphic photo background failed.", error);
+  }
+
   const base = ctx.createLinearGradient(0, 0, PROMISE_IMAGE_WIDTH, PROMISE_IMAGE_HEIGHT);
   base.addColorStop(0, theme.gradient[0]);
   base.addColorStop(0.55, theme.gradient[1]);
   base.addColorStop(1, theme.gradient[2]);
+  ctx.save();
+  ctx.globalAlpha = 0.84;
   ctx.fillStyle = base;
   ctx.fillRect(0, 0, PROMISE_IMAGE_WIDTH, PROMISE_IMAGE_HEIGHT);
+  ctx.restore();
 
   const topGlow = ctx.createRadialGradient(250, 180, 0, 250, 180, 760);
   topGlow.addColorStop(0, theme.glowTop);
@@ -8484,7 +8548,7 @@ async function renderPromiseImage(promise) {
   }
 
   const theme = pickPromiseImageTheme(promise);
-  drawPromiseImageBackground(ctx, theme);
+  await drawPromiseImageBackground(ctx, theme);
   await drawPromiseBrandMark(ctx, theme);
 
   const centerX = PROMISE_IMAGE_WIDTH / 2;

@@ -1,4 +1,4 @@
-const CACHE_VERSION = "word-oasis-v76";
+const CACHE_VERSION = "word-oasis-v77";
 const PAGE_CACHE = `${CACHE_VERSION}-pages`;
 const ASSET_CACHE = `${CACHE_VERSION}-assets`;
 const BIBLE_CACHE = `${CACHE_VERSION}-bible`;
@@ -13,6 +13,7 @@ const APP_SHELL = [
   "/studies/",
   "/styles.css",
   "/hero-rotation.js",
+  "/studies/hero-images.json",
   "/images/hero/bible-study-emmanuel-phaeton.jpg",
   "/images/hero/bible-study-aaron-burden.jpg",
   "/images/hero/bible-study-ben-white.jpg",

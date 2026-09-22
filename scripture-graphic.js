@@ -8,6 +8,7 @@
   const LOGO_RATIO = 179.3 / 250;
   const MARK_RATIO = 77.77 / 212.76;
   const imageCache = new Map();
+  let heroImagesPromise = null;
   let fontsPromise = null;
 
   const palettes = [
@@ -167,6 +168,66 @@
     return promise;
   }
 
+  function loadHeroImages() {
+    if (!heroImagesPromise) {
+      heroImagesPromise = fetch("/studies/hero-images.json")
+        .then((response) => (response.ok ? response.json() : null))
+        .then((data) => (data && Array.isArray(data.images) ? data.images : []))
+        .catch(() => []);
+    }
+    return heroImagesPromise;
+  }
+
+  function pickHeroImage(images, seed) {
+    if (!images.length) {
+      return null;
+    }
+    if (!seed) {
+      return images[Math.floor(Math.random() * images.length)];
+    }
+    const hash = Array.from(seed).reduce(
+      (total, character) => total + character.codePointAt(0),
+      0
+    );
+    return images[hash % images.length];
+  }
+
+  function loadPhotoImage(src) {
+    const cacheKey = `photo:${src}`;
+    if (imageCache.has(cacheKey)) {
+      return imageCache.get(cacheKey);
+    }
+
+    const promise = new Promise((resolve, reject) => {
+      const image = new Image();
+      image.decoding = "async";
+      image.onload = () => resolve(image);
+      image.onerror = () => reject(new Error("Background image could not be decoded"));
+      image.src = src;
+    }).catch((error) => {
+      imageCache.delete(cacheKey);
+      throw error;
+    });
+
+    imageCache.set(cacheKey, promise);
+    return promise;
+  }
+
+  function drawImageCover(ctx, image, width, height) {
+    const imageWidth = image.naturalWidth || image.width;
+    const imageHeight = image.naturalHeight || image.height;
+    const scale = Math.max(width / imageWidth, height / imageHeight);
+    const drawWidth = imageWidth * scale;
+    const drawHeight = imageHeight * scale;
+    ctx.drawImage(
+      image,
+      (width - drawWidth) / 2,
+      (height - drawHeight) / 2,
+      drawWidth,
+      drawHeight
+    );
+  }
+
   function rgba(hex, alpha) {
     const normalized = hex.replace("#", "");
     const red = Number.parseInt(normalized.slice(0, 2), 16);
@@ -248,13 +309,26 @@
     return { lines: [text], size: 14 };
   }
 
-  function drawBackground(ctx, palette) {
+  async function drawBackground(ctx, palette, seed) {
+    try {
+      const photo = pickHeroImage(await loadHeroImages(), seed);
+      if (photo?.file) {
+        const image = await loadPhotoImage(photo.file);
+        drawImageCover(ctx, image, WIDTH, HEIGHT);
+      }
+    } catch (error) {
+      console.warn("Word Oasis Scripture graphic photo background failed.", error);
+    }
+
     const base = ctx.createLinearGradient(0, 0, WIDTH, HEIGHT);
     base.addColorStop(0, palette.gradient[0]);
     base.addColorStop(0.55, palette.gradient[1]);
     base.addColorStop(1, palette.gradient[2]);
+    ctx.save();
+    ctx.globalAlpha = 0.84;
     ctx.fillStyle = base;
     ctx.fillRect(0, 0, WIDTH, HEIGHT);
+    ctx.restore();
 
     const warmGlow = ctx.createRadialGradient(150, 170, 0, 150, 170, 680);
     warmGlow.addColorStop(0, rgba(palette.accent, 0.24));
@@ -317,7 +391,7 @@
     }
 
     const palette = paletteFor(options?.paletteSeed || reference, options?.palette, options?.customColor);
-    drawBackground(ctx, palette);
+    await drawBackground(ctx, palette);
     try {
       await drawBranding(ctx, palette);
     } catch (error) {
