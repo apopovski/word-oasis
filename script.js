@@ -9385,3 +9385,4 @@ renderSpotlightAnswer();
 restartSpotlightRotation();
 
 resultsClear.addEventListener("click", clearAnswerFilters);
+window.WORD_OASIS_MAIN_READY = true;

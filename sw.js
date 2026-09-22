@@ -1,4 +1,4 @@
-const CACHE_VERSION = "word-oasis-v78";
+const CACHE_VERSION = "word-oasis-v80";
 const PAGE_CACHE = `${CACHE_VERSION}-pages`;
 const ASSET_CACHE = `${CACHE_VERSION}-assets`;
 const BIBLE_CACHE = `${CACHE_VERSION}-bible`;
@@ -22,6 +22,14 @@ const APP_SHELL = [
   "/images/hero/bible-study-joel-muniz.jpg",
   "/images/hero/bible-study-rod-long.jpg",
   "/images/hero/bible-study-alexandra-fuller.jpg",
+  "/images/hero/mobile/bible-study-emmanuel-phaeton.webp",
+  "/images/hero/mobile/bible-study-aaron-burden.webp",
+  "/images/hero/mobile/bible-study-ben-white.webp",
+  "/images/hero/mobile/bible-study-samantha-sophia.webp",
+  "/images/hero/mobile/bible-study-patrick-fore.webp",
+  "/images/hero/mobile/bible-study-joel-muniz.webp",
+  "/images/hero/mobile/bible-study-rod-long.webp",
+  "/images/hero/mobile/bible-study-alexandra-fuller.webp",
   "/theme.js",
   "/pwa.js",
   "/script.js",
