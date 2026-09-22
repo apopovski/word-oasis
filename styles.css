@@ -5162,6 +5162,27 @@ body.modal-open {
   border-radius: 50%;
 }
 
+.study-hero {
+  --study-hero-scrim-a: rgba(6, 20, 36, 0.82);
+  --study-hero-scrim-b: rgba(10, 33, 61, 0.74);
+  --study-hero-scrim-c: rgba(21, 58, 122, 0.58);
+  background:
+    linear-gradient(120deg, var(--study-hero-scrim-a) 0%, var(--study-hero-scrim-b) 46%, var(--study-hero-scrim-c) 100%),
+    radial-gradient(circle at 82% 34%, rgba(96, 165, 250, 0.28), transparent 24rem),
+    var(--study-hero-image, none) var(--study-hero-position, center 50%) / cover no-repeat,
+    linear-gradient(135deg, #071f35 0%, #123d68 56%, #1d4ed8 130%);
+}
+
+.study-hero[data-hero-shade="strong"] {
+  --study-hero-scrim-a: rgba(5, 16, 30, 0.92);
+  --study-hero-scrim-b: rgba(8, 28, 54, 0.86);
+  --study-hero-scrim-c: rgba(17, 48, 104, 0.72);
+}
+
+.study-hero .hero-photo-credit {
+  right: 20px;
+}
+
 .quiz-hero-grid {
   position: relative;
   z-index: 1;
@@ -6031,6 +6052,14 @@ body.modal-open {
 @media (max-width: 620px) {
   .quiz-hero {
     padding: 62px 0 58px;
+  }
+
+  .study-hero {
+    background:
+      linear-gradient(120deg, var(--study-hero-scrim-a) 0%, var(--study-hero-scrim-b) 46%, var(--study-hero-scrim-c) 100%),
+      radial-gradient(circle at 82% 34%, rgba(96, 165, 250, 0.28), transparent 24rem),
+      var(--study-hero-image, none) var(--study-hero-mobile-position, var(--study-hero-position, center 50%)) / cover no-repeat,
+      linear-gradient(135deg, #071f35 0%, #123d68 56%, #1d4ed8 130%);
   }
 
   .quiz-hero-grid {

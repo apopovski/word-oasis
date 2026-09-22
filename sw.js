@@ -1,4 +1,4 @@
-const CACHE_VERSION = "word-oasis-v69";
+const CACHE_VERSION = "word-oasis-v70";
 const PAGE_CACHE = `${CACHE_VERSION}-pages`;
 const ASSET_CACHE = `${CACHE_VERSION}-assets`;
 const BIBLE_CACHE = `${CACHE_VERSION}-bible`;
@@ -26,6 +26,7 @@ const APP_SHELL = [
   "/script.js",
   "/quizzes.js",
   "/studies.js",
+  "/studies-hero-rotation.js",
   "/bible-reader.js",
   "/scripture-graphic.js",
   "/local-library.js",

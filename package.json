@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "description": "Word Oasis - clear, Scripture-based answers to Bible questions.",
   "scripts": {
-    "prerender": "node scripts/prerender.js"
+    "prerender": "node scripts/prerender.js",
+    "sync-unsplash-hero": "node scripts/sync-unsplash-hero.js"
   },
   "devDependencies": {
     "jsdom": "^30.0.1"

@@ -1,0 +1,52 @@
+name: Sync Bible Studies hero photos
+
+# Keeps the Bible Studies page hero background in sync with the Unsplash
+# collection at https://unsplash.com/collections/V5AZZAmP4ZY/bible-study.
+# Runs on a schedule and can also be triggered manually. Add any new photos
+# to the collection and this workflow will download them, regenerate
+# studies/hero-images.json, and commit the change automatically - no code
+# changes needed.
+#
+# Requires a repo secret named UNSPLASH_ACCESS_KEY (Settings > Secrets and
+# variables > Actions). See the comment at the top of
+# scripts/sync-unsplash-hero.js for how to get a free Unsplash Access Key.
+
+on:
+  schedule:
+    - cron: "0 6 * * *" # daily at 06:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Sync hero photos from Unsplash
+        env:
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+        run: node scripts/sync-unsplash-hero.js
+
+      - name: Regenerate quiz/study permalink pages
+        run: node scripts/generate-permalinks.js
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git add -A
+          git commit -m "Sync Bible Studies hero photos from Unsplash"
+          git push
