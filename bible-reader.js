@@ -879,6 +879,15 @@
     if (!copyLinkButton) return;
     const { book, chapter, translation } = selectedState();
     const url = buildReaderUrl(book, chapter, translation);
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: `${book.name} ${chapter} | Word Oasis`, text: `Read ${book.name} ${chapter} on Word Oasis.`, url });
+        return;
+      } catch (error) {
+        if (error.name === "AbortError") return;
+        // Fall through to clipboard copy below if native sharing failed.
+      }
+    }
     let copied = true;
     try {
       await copyText(url);
@@ -892,7 +901,7 @@
     }
     copyLinkResetTimer = setTimeout(() => {
       copyLinkButton.classList.remove("is-copied");
-      if (copyLinkLabel) copyLinkLabel.textContent = "Copy link";
+      if (copyLinkLabel) copyLinkLabel.textContent = "Share";
     }, 2200);
   }
 

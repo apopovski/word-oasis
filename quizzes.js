@@ -895,18 +895,26 @@
     });
   }
 
+  function quizPermalink(quizId) {
+    return new URL(`/quizzes/${quizId}/`, window.location.origin);
+  }
+
+  function quizIdFromPath() {
+    const match = window.location.pathname.match(/^\/quizzes\/([^/]+)\/?$/);
+    if (!match || !match[1] || match[1] === "index.html") return null;
+    return match[1];
+  }
+
   function setQuizUrl(quizId, preserveSharedScore = false) {
-    const url = new URL(window.location.href);
-    if (quizId) {
-      url.searchParams.set("quiz", quizId);
-    } else {
-      url.searchParams.delete("quiz");
+    const current = new URL(window.location.href);
+    const target = quizId ? quizPermalink(quizId) : new URL("/quizzes/", window.location.origin);
+    if (preserveSharedScore) {
+      const score = current.searchParams.get("score");
+      const total = current.searchParams.get("total");
+      if (score !== null) target.searchParams.set("score", score);
+      if (total !== null) target.searchParams.set("total", total);
     }
-    if (!preserveSharedScore) {
-      url.searchParams.delete("score");
-      url.searchParams.delete("total");
-    }
-    history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+    history.replaceState(null, "", `${target.pathname}${target.search}${target.hash}`);
   }
 
   function showDirectory() {
@@ -932,8 +940,7 @@
   }
 
   function resultShareUrl() {
-    const url = new URL("/quizzes/", window.location.origin);
-    url.searchParams.set("quiz", activeQuiz.id);
+    const url = quizPermalink(activeQuiz.id);
     url.searchParams.set("score", String(currentScore()));
     url.searchParams.set("total", String(activeQuestions.length));
     return url.href;
@@ -974,15 +981,24 @@
 
   let copyLinkResetTimer = null;
 
-  async function copyQuizPageLink() {
-    if (!elements.copyLink) return;
-    const url = new URL(window.location.href);
-    url.searchParams.delete("score");
-    url.searchParams.delete("total");
-    if (activeQuiz) {
-      url.searchParams.set("quiz", activeQuiz.id);
+  async function shareQuizPage() {
+    if (!elements.copyLink || !activeQuiz) return;
+    const url = quizPermalink(activeQuiz.id).toString();
+    const shareData = {
+      title: `${activeQuiz.title} Bible Quiz | Word Oasis`,
+      text: `Take the “${activeQuiz.title}” Bible quiz at Word Oasis.`,
+      url
+    };
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+        return;
+      } catch (error) {
+        if (error.name === "AbortError") return;
+        // Fall through to clipboard copy below if native sharing failed.
+      }
     }
-    const copied = await copyTextToClipboard(url.toString());
+    const copied = await copyTextToClipboard(url);
     if (copyLinkResetTimer) clearTimeout(copyLinkResetTimer);
     elements.copyLink.classList.toggle("is-copied", copied);
     if (elements.copyLinkLabel) {
@@ -990,7 +1006,7 @@
     }
     copyLinkResetTimer = setTimeout(() => {
       elements.copyLink.classList.remove("is-copied");
-      if (elements.copyLinkLabel) elements.copyLinkLabel.textContent = "Copy link";
+      if (elements.copyLinkLabel) elements.copyLinkLabel.textContent = "Share";
     }, 2200);
   }
 
@@ -1190,7 +1206,7 @@
     }
     const copyLinkButton = event.target.closest("[data-quiz-copy-link]");
     if (copyLinkButton) {
-      copyQuizPageLink();
+      shareQuizPage();
     }
   });
 
@@ -1220,7 +1236,7 @@
   });
 
   const initialParams = new URLSearchParams(window.location.search);
-  const sharedQuiz = initialParams.get("quiz");
+  const sharedQuiz = quizIdFromPath() || initialParams.get("quiz");
   const sharedScore = Number(initialParams.get("score"));
   const sharedTotal = Number(initialParams.get("total"));
   if (quizzes.some((quiz) => quiz.id === sharedQuiz)) {

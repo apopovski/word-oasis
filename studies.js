@@ -918,15 +918,36 @@
     return copied;
   }
 
+  function studyPermalink(studyId) {
+    return new URL(`/studies/${studyId}/`, window.location.origin);
+  }
+
+  function studyIdFromPath() {
+    const match = window.location.pathname.match(/^\/studies\/([^/]+)\/?$/);
+    if (!match || !match[1] || match[1] === "index.html") return null;
+    return match[1];
+  }
+
   let copyLinkResetTimer = null;
 
-  async function copyStudyPageLink() {
-    if (!elements.copyLink) return;
-    const url = new URL(window.location.href);
-    if (activeStudy) {
-      url.searchParams.set("study", activeStudy.id);
+  async function shareStudyPage() {
+    if (!elements.copyLink || !activeStudy) return;
+    const url = studyPermalink(activeStudy.id).toString();
+    const shareData = {
+      title: `${activeStudy.title} | Word Oasis Bible Study`,
+      text: `Take the “${activeStudy.title}” Bible study at Word Oasis.`,
+      url
+    };
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+        return;
+      } catch (error) {
+        if (error.name === "AbortError") return;
+        // Fall through to clipboard copy below if native sharing failed.
+      }
     }
-    const copied = await copyTextToClipboard(url.toString());
+    const copied = await copyTextToClipboard(url);
     if (copyLinkResetTimer) clearTimeout(copyLinkResetTimer);
     elements.copyLink.classList.toggle("is-copied", copied);
     if (elements.copyLinkLabel) {
@@ -934,7 +955,7 @@
     }
     copyLinkResetTimer = setTimeout(() => {
       elements.copyLink.classList.remove("is-copied");
-      if (elements.copyLinkLabel) elements.copyLinkLabel.textContent = "Copy link";
+      if (elements.copyLinkLabel) elements.copyLinkLabel.textContent = "Share";
     }, 2200);
   }
 
@@ -942,9 +963,7 @@
     player.hidden = true;
     directory.hidden = false;
     renderDirectoryProgress();
-    const url = new URL(window.location.href);
-    url.searchParams.delete("study");
-    window.history.replaceState({}, "", url);
+    window.history.replaceState({}, "", "/studies/");
   }
 
   function startStudy(studyId, forceNew = false) {
@@ -963,9 +982,8 @@
     player.hidden = false;
     elements.saveStatus.textContent = saved ? "Your saved progress has been restored." : "Progress saves automatically on this device.";
     if (elements.translationSelect) elements.translationSelect.value = getTranslation();
-    const url = new URL(window.location.href);
-    url.searchParams.set("study", activeStudy.id);
-    window.history.replaceState({}, "", url);
+    const url = studyPermalink(activeStudy.id);
+    window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
     renderStatement();
     saveState();
     player.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -1011,7 +1029,7 @@
     }
     const copyLinkButton = event.target.closest("[data-study-copy-link]");
     if (copyLinkButton) {
-      copyStudyPageLink();
+      shareStudyPage();
     }
   });
 
@@ -1063,7 +1081,7 @@
   renderDirectoryProgress();
 
   const initialParams = new URLSearchParams(window.location.search);
-  const sharedStudy = initialParams.get("study");
+  const sharedStudy = studyIdFromPath() || initialParams.get("study");
   if (studies.some((study) => study.id === sharedStudy)) {
     startStudy(sharedStudy);
   }

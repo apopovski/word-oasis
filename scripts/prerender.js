@@ -1067,7 +1067,27 @@ function resetGeneratedDirectory(relativePath) {
   });
 }
 
+function extractQuizIds() {
+  const src = fs.readFileSync(path.join(ROOT, "quizzes.js"), "utf8");
+  const re = /id:\s*"([^"]+)",\s*\n\s*title:\s*"([^"]+)"/g;
+  const ids = [];
+  let match;
+  while ((match = re.exec(src))) ids.push(match[1]);
+  return ids;
+}
+
+function extractStudyIds() {
+  const src = fs.readFileSync(path.join(ROOT, "studies.js"), "utf8");
+  const re = /id:\s*"([^"]+)",\s*\n\s*category:\s*"[^"]+",\s*\n\s*categoryLabel:/g;
+  const ids = [];
+  let match;
+  while ((match = re.exec(src))) ids.push(match[1]);
+  return ids;
+}
+
 function writeSitemap(answers, topics) {
+  const quizIds = extractQuizIds();
+  const studyIds = extractStudyIds();
   const entries = [
     { loc: "/", priority: "1.0" },
     { loc: "/answers/", priority: "0.9" },
@@ -1076,7 +1096,9 @@ function writeSitemap(answers, topics) {
     { loc: "/studies/", priority: "0.8" },
     { loc: "/topics/", priority: "0.8" },
     ...answers.map((answer) => ({ loc: answerPath(answer), priority: "0.8" })),
-    ...topics.map((topic) => ({ loc: topicPath(topic), priority: "0.7" }))
+    ...topics.map((topic) => ({ loc: topicPath(topic), priority: "0.7" })),
+    ...quizIds.map((id) => ({ loc: `/quizzes/${id}/`, priority: "0.7" })),
+    ...studyIds.map((id) => ({ loc: `/studies/${id}/`, priority: "0.7" }))
   ]
     .map(
       ({ loc, priority }) => `  <url>
