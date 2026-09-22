@@ -26,7 +26,8 @@
         { text: "The steadfast love of the LORD never ceases; his mercies never come to an end; they are new every ___.", options: ["morning","season","generation","century"], answer: 0, reference: "Lamentations 3:22-23", insight: "God's love doesn't run out — it renews itself daily, no matter how the day before went." }
       ],
       closingThought: "God's love for you isn't a reward for good behavior — it's the reason good things become possible at all. You are not loved because you are good; you are loved because that is who God is.",
-      decision: "Will you accept that God loves you today, as you are, right now?"
+      decision: "Will you accept that God loves you today, as you are, right now?",
+      goingDeeper: { intro: "See God's love traced through the rest of Scripture.", refs: ["Psalm 103:11-13", "Ephesians 3:17-19", "1 John 4:9-10"] },
     },
     {
       id: "can-we-trust-the-bible",
@@ -48,7 +49,8 @@
         { text: "Every word of God is pure... Add not to his words, lest he ___ you, and you be found a liar.", options: ["reprove","ignore","forget","ridicule"], answer: 0, reference: "Proverbs 30:5-6", insight: "The Bible invites careful, honest handling — not adding to it or twisting it to fit an agenda." }
       ],
       closingThought: "The most convincing case for Scripture isn't a debate you win — it's a habit you build. Read it for yourself, and let it speak.",
-      decision: "Are you willing to test the Bible's promises for yourself, one page at a time?"
+      decision: "Are you willing to test the Bible's promises for yourself, one page at a time?",
+      goingDeeper: { intro: "Explore more of what Scripture says about itself.", refs: ["Psalm 12:6", "Matthew 5:18", "Hebrews 4:12"] },
     },
     {
       id: "who-is-jesus",
@@ -70,7 +72,8 @@
         { text: "For in him all the fullness of the ___ dwells in bodily form.", options: ["Godhead","Spirit","glory","law"], answer: 0, reference: "Colossians 2:9", insight: "Paul leaves no ambiguity: in Jesus, God Himself took on a body." }
       ],
       closingThought: "If Jesus is who Scripture says He is, then the question isn't really 'who is He?' — it's 'what will you do with Him?'",
-      decision: "Will you settle, today, who you believe Jesus is?"
+      decision: "Will you settle, today, who you believe Jesus is?",
+      goingDeeper: { intro: "Trace the claims Jesus made about who He is.", refs: ["John 8:58", "Colossians 1:15-17", "Philippians 2:5-11"] },
     },
     {
       id: "why-did-jesus-die",
@@ -92,7 +95,8 @@
         { text: "Being justified freely by his ___ through the redemption that is in Christ Jesus.", options: ["grace","works","law","wisdom"], answer: 0, reference: "Romans 3:24", insight: "'Justified' means declared right with God — and it comes free, through grace." }
       ],
       closingThought: "The cross says two things at once: sin is serious enough that it cost everything, and you are loved enough that God paid it.",
-      decision: "Will you receive what the cross already accomplished, instead of trying to earn it yourself?"
+      decision: "Will you receive what the cross already accomplished, instead of trying to earn it yourself?",
+      goingDeeper: { intro: "Read more about what the cross accomplished.", refs: ["Isaiah 53:5-6", "2 Corinthians 5:21", "1 Peter 2:24"] },
     },
     {
       id: "gods-law-today",
@@ -114,7 +118,8 @@
         { text: "For this is the love of God, that we keep his commandments, and his commandments are not ___.", options: ["burdensome","optional","temporary","hidden"], answer: 0, reference: "1 John 5:3", insight: "When obedience flows from love rather than fear, it stops feeling like a weight to carry." }
       ],
       closingThought: "God's commandments were never meant to be a ladder to climb toward His approval — they're a portrait of the character His grace produces in a willing heart.",
-      decision: "Will you ask God to write His law on your heart, not just in a book?"
+      decision: "Will you ask God to write His law on your heart, not just in a book?",
+      goingDeeper: { intro: "See how Scripture describes the law's ongoing purpose.", refs: ["Psalm 19:7-8", "Romans 7:12", "James 2:10-12"] },
     },
     {
       id: "the-sabbath-rest",
@@ -136,7 +141,8 @@
         { text: "From one new moon to another, and from one Sabbath to another, all flesh will come to ___ before me, says the LORD.", options: ["worship","rest","trade","travel"], answer: 0, reference: "Isaiah 66:23", insight: "Scripture points to the Sabbath having a lasting future significance, not just a past one." }
       ],
       closingThought: "The Sabbath is a standing invitation — one day in seven, set apart to stop, breathe, and remember who holds the other six.",
-      decision: "Could you set aside time this week to actually rest in God's presence?"
+      decision: "Could you set aside time this week to actually rest in God's presence?",
+      goingDeeper: { intro: "Explore the Sabbath's place from creation to the New Testament.", refs: ["Genesis 2:2-3", "Isaiah 58:13-14", "Mark 2:27-28"] },
     },
     {
       id: "what-happens-after-death",
@@ -158,7 +164,8 @@
         { text: "Blessed and holy is he who has part in the first ___.", options: ["resurrection","judgment","rapture","kingdom"], answer: 0, reference: "Revelation 20:6", insight: "Scripture's hope is future and physical — a resurrection at Christ's return, not an instant departure to another realm." }
       ],
       closingThought: "Because death is described as a sleep, it isn't something to be afraid of for the believer — it's simply the last thing you'll remember before Jesus wakes you.",
-      decision: "Does this change how you think about loved ones who have died in faith?"
+      decision: "Does this change how you think about loved ones who have died in faith?",
+      goingDeeper: { intro: "Read more of what Scripture teaches about death and resurrection.", refs: ["Job 14:12-14", "1 Corinthians 15:51-54", "1 Thessalonians 4:16-17"] },
     },
     {
       id: "second-coming",
@@ -180,7 +187,8 @@
         { text: "And so we will always be with the ___.", options: ["Lord","angels","saints","elders"], answer: 0, reference: "1 Thessalonians 4:17", insight: "The goal of the second coming isn't just an event — it's an unending relationship with Christ." }
       ],
       closingThought: "The promise of Christ's return isn't meant to fill us with anxiety about timing, but with readiness and hope — He is coming back for you.",
-      decision: "If Jesus returned today, would you be ready to meet Him?"
+      decision: "If Jesus returned today, would you be ready to meet Him?",
+      goingDeeper: { intro: "See more of what Scripture says will accompany Christ's return.", refs: ["Matthew 24:30-31", "1 Thessalonians 4:16-17", "Titus 2:13"] },
     },
     {
       id: "daniel-roadmap",
@@ -202,7 +210,8 @@
         { text: "But the ___ shall understand.", options: ["wise","proud","powerful","wealthy"], answer: 0, reference: "Daniel 12:10", insight: "Understanding prophecy isn't reserved for scholars — it's promised to those who seek it with a humble, wise heart." }
       ],
       closingThought: "History isn't random, and it isn't out of control — Daniel's visions show a God who already knows how the story ends, and who invites you to trust Him with the chapters still ahead.",
-      decision: "Want to go deeper? The Daniel prophecy quizzes on this site walk through each vision chapter by chapter."
+      decision: "Want to go deeper? The Daniel prophecy quizzes on this site walk through each vision chapter by chapter.",
+      goingDeeper: { intro: "Explore the details behind Daniel's prophetic outline.", refs: ["Daniel 2:44", "Daniel 7:13-14", "Daniel 12:1-3"] },
     },
     {
       id: "great-controversy",
@@ -224,7 +233,8 @@
         { text: "Yahweh said to Satan, \"Behold, all that he has is in your power; only on himself don't stretch out your ___.\"", options: ["hand","sword","voice","anger"], answer: 0, reference: "Job 1:12", insight: "Even at his worst, Satan operates only within limits God allows — he is not equal to God." }
       ],
       closingThought: "Evil did not begin with humanity, and it will not last forever. It began with a created being's choice, and the Bible traces its certain end. Understanding this frees you from blaming God for suffering He never designed.",
-      decision: "Now that you've seen where this conflict began, does that change how you view the struggles you face today?"
+      decision: "Now that you've seen where this conflict began, does that change how you view the struggles you face today?",
+      goingDeeper: { intro: "Trace the conflict between good and evil further.", refs: ["Isaiah 14:12-14", "Ezekiel 28:14-17", "Revelation 12:7-9"] },
     },
     {
       id: "holy-spirit-helper",
@@ -246,7 +256,8 @@
         { text: "Repent and be baptized... for the forgiveness of sins, and you will receive the gift of the Holy ___.", options: ["Spirit","Law","Kingdom","Word"], answer: 0, reference: "Acts 2:38", insight: "The gift of the Spirit was promised to everyone who responds to God, not a select few." }
       ],
       closingThought: "The Holy Spirit is not a vague feeling or an impersonal force — He is God's own presence, sent to guide, comfort, empower, and quietly reshape ordinary people from the inside out.",
-      decision: "Have you ever asked the Holy Spirit to fill and guide your life the way Scripture describes?"
+      decision: "Have you ever asked the Holy Spirit to fill and guide your life the way Scripture describes?",
+      goingDeeper: { intro: "See more of the Spirit's work described in Scripture.", refs: ["Acts 1:8", "Romans 8:26-27", "Galatians 5:22-23"] },
     },
     {
       id: "power-of-prayer",
@@ -268,7 +279,8 @@
         { text: "When you pray, enter into your ___ room, and having shut your door, pray to your Father who is in secret.", options: ["inner","public","upper","empty"], answer: 0, reference: "Matthew 6:6", insight: "Jesus modeled prayer as intimate and personal, not performed for an audience." }
       ],
       closingThought: "Prayer is not a formality God requires — it's a relationship He invites. Every promise about prayer in Scripture points to a God who is genuinely listening and ready to respond.",
-      decision: "What would change in your life if you truly believed God was listening every time you prayed?"
+      decision: "What would change in your life if you truly believed God was listening every time you prayed?",
+      goingDeeper: { intro: "Explore more of the Bible's promises about prayer.", refs: ["Jeremiah 33:3", "Matthew 7:7-8", "Philippians 4:6-7"] },
     },
     {
       id: "baptism-new-life",
@@ -290,7 +302,8 @@
         { text: "They came to some water, and the eunuch said, \"Behold, here is water. What is keeping me from being ___?\"", options: ["baptized","forgiven","saved","healed"], answer: 0, reference: "Acts 8:36", insight: "As soon as this man understood the gospel, his very next question was about baptism." }
       ],
       closingThought: "Baptism isn't a ritual to check off a list — it's a public yes to a whole new direction in life, a burial of the old and a rising to walk with Christ.",
-      decision: "Have you taken this step, or is it something you sense God inviting you toward?"
+      decision: "Have you taken this step, or is it something you sense God inviting you toward?",
+      goingDeeper: { intro: "Read more about baptism's meaning in Scripture.", refs: ["Acts 2:38", "Galatians 3:27", "Colossians 2:12"] },
     },
     {
       id: "church-body-of-christ",
@@ -312,7 +325,8 @@
         { text: "You are no longer strangers and foreigners, but fellow ___ with the saints, and of the household of God.", options: ["citizens","travelers","servants","guests"], answer: 0, reference: "Ephesians 2:19", insight: "Belonging to God's family comes with genuine belonging to His people." }
       ],
       closingThought: "Church was never meant to be a building you attend — it's a family you belong to, where your gifts are needed and no one is meant to walk alone.",
-      decision: "Is there a step you sense you need to take toward deeper connection with other believers?"
+      decision: "Is there a step you sense you need to take toward deeper connection with other believers?",
+      goingDeeper: { intro: "See more of what Scripture says about belonging together.", refs: ["Acts 2:42-47", "1 Corinthians 12:12-14", "Hebrews 10:24-25"] },
     },
     {
       id: "spiritual-gifts",
@@ -334,7 +348,8 @@
         { text: "There are various kinds of ___, but the same Spirit.", options: ["gifts","churches","prayers","battles"], answer: 0, reference: "1 Corinthians 12:4", insight: "Different gifts all trace back to the same source, so there's no room for rivalry." }
       ],
       closingThought: "You were not given a gift by accident. Somewhere in the body of Christ, there's a role only you can fill the way you can fill it.",
-      decision: "Have you identified how God has gifted you to serve others?"
+      decision: "Have you identified how God has gifted you to serve others?",
+      goingDeeper: { intro: "Explore the range of gifts Scripture describes.", refs: ["Romans 12:4-8", "1 Corinthians 12:4-11", "1 Peter 4:10-11"] },
     },
     {
       id: "stewardship-tithe",
@@ -356,7 +371,8 @@
         { text: "Who am I... that we should be able to offer so ___ as this?", options: ["willingly","cheaply","carelessly","reluctantly"], answer: 0, reference: "1 Chronicles 29:14", insight: "Even a king recognized that everything he gave to God had come from God first." }
       ],
       closingThought: "Giving isn't about filling God's need — He owns everything already. It's about loosening money's grip on our hearts and practicing trust in the God who provides.",
-      decision: "What would change if you saw giving as an act of trust rather than a financial loss?"
+      decision: "What would change if you saw giving as an act of trust rather than a financial loss?",
+      goingDeeper: { intro: "Read more of what Scripture says about giving.", refs: ["Genesis 14:18-20", "Proverbs 3:9-10", "2 Corinthians 9:6-7"] },
     },
     {
       id: "health-temple",
@@ -378,7 +394,8 @@
         { text: "Don't you know that you are a temple of God, and that God's ___ lives in you?", options: ["Spirit","glory","law","name"], answer: 0, reference: "1 Corinthians 3:16", insight: "This isn't just about individual habits — it's about honoring the God who lives within you." }
       ],
       closingThought: "Taking care of your body isn't vanity — it's stewardship of the very place where God has chosen to dwell.",
-      decision: "Is there one habit you sense God inviting you to change for the sake of your health?"
+      decision: "Is there one habit you sense God inviting you to change for the sake of your health?",
+      goingDeeper: { intro: "See more of what Scripture says about caring for the body.", refs: ["Daniel 1:8-15", "Romans 12:1-2", "3 John 1:2"] },
     },
     {
       id: "marriage-family",
@@ -400,7 +417,8 @@
         { text: "Whoever finds a wife finds a good thing, and obtains ___ of Yahweh.", options: ["favor","riches","wisdom","peace"], answer: 0, reference: "Proverbs 18:22", insight: "A good marriage is described as a gift from God, worth genuine gratitude." }
       ],
       closingThought: "Marriage and family were never meant to be perfect on their own — they were designed to point people toward a love bigger than themselves, sustained by grace along the way.",
-      decision: "What would it look like to invite God more intentionally into your marriage or family life?"
+      decision: "What would it look like to invite God more intentionally into your marriage or family life?",
+      goingDeeper: { intro: "Explore more of Scripture's design for the home.", refs: ["Genesis 2:24", "Ephesians 5:25-33", "Joshua 24:15"] },
     },
     {
       id: "sanctuary-judgment",
@@ -422,7 +440,8 @@
         { text: "Fear the Lord, and give him glory; for the hour of his ___ has come.", options: ["judgment","mercy","kingdom","harvest"], answer: 0, reference: "Revelation 14:7", insight: "This announcement of judgment is framed as good news, not a threat — an invitation to trust the One who judges fairly." }
       ],
       closingThought: "The sanctuary was never just a building or a ritual — it was God's way of showing, step by step, exactly how He deals with sin and how completely Christ has taken care of it on our behalf.",
-      decision: "Does knowing Christ is actively at work for you right now change how you face today?"
+      decision: "Does knowing Christ is actively at work for you right now change how you face today?",
+      goingDeeper: { intro: "Trace the sanctuary theme further through Scripture.", refs: ["Exodus 25:8-9", "Daniel 8:14", "Hebrews 9:11-12"] },
     },
     {
       id: "three-angels-messages",
@@ -444,7 +463,8 @@
         { text: "Blessed are the dead who die in the Lord from now on... that they may rest from their ___; for their works follow with them.", options: ["labors","sins","battles","doubts"], answer: 0, reference: "Revelation 14:13", insight: "Faithfulness to the end is met with rest, not exhaustion." }
       ],
       closingThought: "This final message isn't meant to frighten — it's meant to prepare. It calls people everywhere to worship the true God before the world's confusion reaches its climax.",
-      decision: "Does this final call change how you think about the choices you're making today?"
+      decision: "Does this final call change how you think about the choices you're making today?",
+      goingDeeper: { intro: "Read the full message in its original setting.", refs: ["Revelation 14:6-7", "Revelation 14:8", "Revelation 14:9-12"] },
     },
     {
       id: "new-earth-millennium",
@@ -466,7 +486,8 @@
         { text: "I watched until thrones were placed, and one who was ancient of days sat. His throne was fiery flames, and its wheels burning ___.", options: ["fire","light","glory","gold"], answer: 0, reference: "Daniel 7:9", insight: "The same God who judges with perfect fairness is the one who welcomes His people home." }
       ],
       closingThought: "The story doesn't end in ashes — it ends in restoration. Every tear, every loss, every question is finally answered face to face with the God who makes all things new.",
-      decision: "Does this picture of the future give you hope for whatever you're facing today?"
+      decision: "Does this picture of the future give you hope for whatever you're facing today?",
+      goingDeeper: { intro: "Explore more of Scripture's picture of the world made new.", refs: ["Revelation 20:4-6", "Revelation 21:1-4", "2 Peter 3:13"] },
     }
   ];
 
@@ -499,6 +520,9 @@
     resultScore: player.querySelector("[data-study-result-score]"),
     resultMessage: player.querySelector("[data-study-result-message]"),
     resultDecision: player.querySelector("[data-study-result-decision]"),
+    resultGoingDeeper: player.querySelector("[data-study-going-deeper]"),
+    resultGoingDeeperIntro: player.querySelector("[data-study-going-deeper-intro]"),
+    resultGoingDeeperList: player.querySelector("[data-study-going-deeper-list]"),
     resultCertificateBanner: player.querySelector("[data-study-certificate-banner]"),
     retake: player.querySelector("[data-study-retake]"),
     progressBanner: directory.querySelector("[data-study-progress-banner]"),
@@ -833,12 +857,38 @@
     elements.resultMessage.replaceChildren();
     appendScriptureLinks(elements.resultMessage, activeStudy.closingThought);
     elements.resultDecision.textContent = activeStudy.decision;
+    renderGoingDeeper();
     clearSavedState(activeStudy.id);
     const completed = markStudyCompleted(activeStudy.id);
     const justCompletedAll = allStudiesCompleted(completed);
     if (elements.resultCertificateBanner) elements.resultCertificateBanner.hidden = !justCompletedAll;
     renderDirectoryProgress();
     elements.resultScore.focus();
+  }
+
+  function renderGoingDeeper() {
+    if (!elements.resultGoingDeeper || !elements.resultGoingDeeperList) return;
+    const goingDeeper = activeStudy.goingDeeper;
+    if (!goingDeeper || !Array.isArray(goingDeeper.refs) || !goingDeeper.refs.length) {
+      elements.resultGoingDeeper.hidden = true;
+      return;
+    }
+    elements.resultGoingDeeper.hidden = false;
+    if (elements.resultGoingDeeperIntro) {
+      elements.resultGoingDeeperIntro.textContent = goingDeeper.intro || "";
+      elements.resultGoingDeeperIntro.hidden = !goingDeeper.intro;
+    }
+    elements.resultGoingDeeperList.replaceChildren();
+    goingDeeper.refs.forEach((reference) => {
+      const item = document.createElement("li");
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "study-reference scripture-link scripture-link-inline";
+      button.dataset.scripture = reference;
+      button.textContent = reference;
+      item.appendChild(button);
+      elements.resultGoingDeeperList.appendChild(item);
+    });
   }
 
   function showDirectory() {
