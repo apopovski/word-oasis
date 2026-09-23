@@ -6528,6 +6528,356 @@ const answers = [
       "holy spirit",
       "baptism"
     ]
+  },
+  {
+    "id": "answer-how-can-i-be-saved",
+    "question": "How Can I Be Saved According to the Bible?",
+    "shortAnswer": "The Bible teaches that salvation is God's gift of grace received through faith in Jesus Christ. Those who respond to God's love with repentance and trust are forgiven, justified, and called into a new life of obedience.",
+    "longAnswer": "When the jailer asked what he must do to be saved, Paul and Silas answered, “Believe on the Lord Jesus Christ” (Acts 16:30-31). Jesus also said that whoever believes in Him should not perish but have everlasting life (John 3:16). Salvation is not earned by human merit. “By grace are ye saved through faith” (Ephesians 2:8-9). Yet grace does not leave a person unchanged. God calls people to repent, surrender their lives to Christ, and walk in the good works He prepares for them (Acts 2:38; Ephesians 2:10). Faith accepts Christ and His sacrifice; obedience is the fruit of that living faith, not a substitute for grace. The Bible therefore presents salvation as both pardon and transformation. A person can come to God honestly, confess sin, believe His promise of forgiveness, and continue growing through prayer, Scripture, and the power of the Holy Spirit (1 John 1:9; Romans 12:1-2).",
+    "topics": [
+      "Salvation",
+      "Faith"
+    ],
+    "category": "Salvation and the Gospel",
+    "scriptures": [
+      "John 3:16",
+      "Acts 2:38",
+      "Acts 16:30-31",
+      "Romans 3:23-26",
+      "Ephesians 2:8-10",
+      "Titus 3:4-7"
+    ],
+    "keywords": [
+      "how to be saved",
+      "salvation",
+      "saved by grace",
+      "accept Jesus",
+      "repentance",
+      "faith",
+      "eternal life"
+    ]
+  },
+  {
+    "id": "answer-know-truly-saved",
+    "question": "How Do I Know Whether I Am Truly Saved?",
+    "shortAnswer": "Assurance rests in God's promise through Jesus, not in a fluctuating feeling of worthiness. Scripture invites believers to trust Christ, examine the direction of their lives, and see the evidence of His love and obedience growing in them.",
+    "longAnswer": "John wrote so believers could know that they have eternal life: those who believe in the Son of God may have confidence in God's testimony (1 John 5:11-13). Assurance begins with Christ's finished work and God's promise, not with perfection or an emotion that changes from day to day. At the same time, Scripture encourages self-examination (2 Corinthians 13:5). The evidence of genuine faith is not sinless performance but a changed direction: love for God, love for others, confession when we fall, and a desire to obey Jesus (1 John 2:3-6; 1 John 4:7-12). Believers can therefore hold together two truths: salvation is a gift received by faith, and saving faith produces a new life. When doubt comes, return to the promises of Scripture, confess known sin, ask God for the Spirit's help, and keep your eyes on Jesus rather than measuring yourself by fear.",
+    "topics": [
+      "Salvation",
+      "Christian Living"
+    ],
+    "category": "Salvation and the Gospel",
+    "scriptures": [
+      "John 10:27-28",
+      "Romans 8:1",
+      "2 Corinthians 13:5",
+      "1 John 2:3-6",
+      "1 John 4:7-12",
+      "1 John 5:11-13"
+    ],
+    "keywords": [
+      "am I saved",
+      "assurance of salvation",
+      "know I am saved",
+      "doubt",
+      "eternal life",
+      "faith",
+      "salvation"
+    ]
+  },
+  {
+    "id": "answer-bible-reliable-trustworthy",
+    "question": "Is the Bible Reliable and Trustworthy?",
+    "shortAnswer": "The Bible presents itself as God's trustworthy revelation, points readers to Jesus, and invites careful examination rather than blind acceptance. Its message should be tested by Scripture itself and understood in context.",
+    "longAnswer": "Paul says that Scripture is inspired by God and useful for teaching, correction, and training in righteousness (2 Timothy 3:15-17). Peter describes the prophetic word as a light and explains that holy men spoke as they were moved by the Holy Spirit (2 Peter 1:19-21). The Bible's reliability is not based on every reader having identical interpretations; it is grounded in God's truthfulness and in the consistent testimony of Scripture to God's character and saving work. Jesus treated Scripture as authoritative and quoted it as the Word of God (Matthew 4:4, 7, 10; John 10:35). The Bereans were commended because they examined Paul's teaching daily to see whether it agreed with Scripture (Acts 17:11). That is a healthy model: read passages in context, compare Scripture with Scripture, distinguish clear teaching from speculation, and allow the Bible to point you to Christ (John 5:39).",
+    "topics": [
+      "Bible",
+      "Faith"
+    ],
+    "category": "Understanding Scripture",
+    "scriptures": [
+      "Isaiah 8:20",
+      "Matthew 4:4",
+      "John 10:35",
+      "John 17:17",
+      "Acts 17:11",
+      "2 Timothy 3:15-17",
+      "2 Peter 1:19-21"
+    ],
+    "keywords": [
+      "is the Bible reliable",
+      "can I trust the Bible",
+      "Bible truth",
+      "inspiration",
+      "Scripture",
+      "Bible evidence",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-christians-eat-pork",
+    "question": "Can Christians Eat Pork?",
+    "shortAnswer": "The Bible distinguishes between clean and unclean animals, and the New Testament does not present Jesus as abolishing God's distinction. Christians should study the passages carefully and make health and conscience decisions with humility rather than judgment.",
+    "longAnswer": "The distinction between clean and unclean animals appears before Sinai in the account of Noah (Genesis 7:2) and is described in Leviticus 11 and Deuteronomy 14. In those passages, swine is listed among the animals not intended for food. Jesus' teaching in Mark 7 addresses the traditions of religious leaders and the source of moral defilement; the context is eating with unwashed hands, not a discussion of the animal categories in Leviticus (Mark 7:1-23). Peter's vision in Acts 10 also explains that God was teaching him not to call Gentile people common or unclean (Acts 10:28, 34-35), rather than giving Peter permission to ignore the vision's stated meaning. Paul teaches that the body belongs to God and should be cared for (1 Corinthians 6:19-20). Christians should therefore avoid treating food rules as a way to earn salvation, while also taking biblical principles of holiness, stewardship, and health seriously. Whatever a person eats, it should be done to God's glory and without condemning others (Romans 14:1-4; 1 Corinthians 10:31).",
+    "topics": [
+      "Health",
+      "Christian Living"
+    ],
+    "category": "Health and Stewardship",
+    "scriptures": [
+      "Genesis 7:2",
+      "Leviticus 11:1-8",
+      "Deuteronomy 14:3-8",
+      "Mark 7:1-23",
+      "Acts 10:9-35",
+      "1 Corinthians 6:19-20",
+      "1 Corinthians 10:31"
+    ],
+    "keywords": [
+      "can Christians eat pork",
+      "is pork forbidden",
+      "clean and unclean meats",
+      "unclean food",
+      "Christian diet",
+      "health",
+      "Bible food laws"
+    ]
+  },
+  {
+    "id": "answer-bible-dreams",
+    "question": "What Does the Bible Say About Dreams?",
+    "shortAnswer": "The Bible records that God sometimes used dreams to reveal His purposes, but it also warns against trusting every claimed message. Dreams should be tested by Scripture and never replace God's written Word.",
+    "longAnswer": "God used dreams at significant points in biblical history, including Joseph's dreams, Pharaoh's dreams, and Nebuchadnezzar's dream (Genesis 37:5-11; Genesis 41:14-32; Daniel 2:1-23). Joel also spoke of dreams in connection with the outpouring of God's Spirit (Joel 2:28; Acts 2:17). Yet the Bible does not teach that every dream is a divine message. Ecclesiastes notes that dreams can arise from the many concerns of life (Ecclesiastes 5:3, 7), and Scripture warns against prophets whose messages contradict God's revealed Word (Deuteronomy 13:1-4; Isaiah 8:20). A dream must never lead a person away from God's commands or become a replacement for prayerful study. If a dream seems spiritually significant, compare its message with Scripture, seek wise counsel, and remain humble. God has given His clearest revelation in Scripture and in Jesus Christ (Hebrews 1:1-2).",
+    "topics": [
+      "Bible",
+      "Prophecy"
+    ],
+    "category": "Understanding Scripture",
+    "scriptures": [
+      "Deuteronomy 13:1-4",
+      "Ecclesiastes 5:3, 7",
+      "Isaiah 8:20",
+      "Joel 2:28",
+      "Daniel 2:17-23",
+      "Acts 2:17",
+      "Hebrews 1:1-2"
+    ],
+    "keywords": [
+      "Bible dreams",
+      "meaning of dreams",
+      "dream from God",
+      "Christian dreams",
+      "prophetic dreams",
+      "visions",
+      "Scripture"
+    ]
+  },
+  {
+    "id": "answer-hear-gods-voice",
+    "question": "How Can I Hear God's Voice?",
+    "shortAnswer": "God speaks most reliably through Scripture, the life and teaching of Jesus, and the guidance of the Holy Spirit. His leading will never contradict the Bible or produce a character unlike Christ.",
+    "longAnswer": "Jesus said that His sheep hear His voice and follow Him (John 10:27). God has spoken through prophets and, most fully, through His Son (Hebrews 1:1-2). The Bible is therefore the primary standard for recognizing God's will. The Holy Spirit brings Scripture to mind, convicts of sin, develops Christlike character, and guides believers into truth (John 14:26; John 16:13; Galatians 5:22-23). Prayer and wise counsel are also important, but impressions must be tested. A voice or feeling that contradicts Scripture, excuses sin, feeds pride, or produces cruelty is not God's leading (Isaiah 8:20; James 3:13-18). To seek God's guidance, pray honestly, read Scripture in context, obey what is already clear, ask for wisdom, and give decisions time when possible (Psalm 119:105; James 1:5). God may guide through circumstances, but circumstances alone should not be treated as a higher authority than His Word.",
+    "topics": [
+      "Holy Spirit",
+      "Prayer",
+      "Faith"
+    ],
+    "category": "Knowing God",
+    "scriptures": [
+      "Psalm 119:105",
+      "Isaiah 8:20",
+      "John 10:27",
+      "John 14:26",
+      "John 16:13",
+      "Galatians 5:22-23",
+      "James 1:5"
+    ],
+    "keywords": [
+      "hear God's voice",
+      "how God speaks",
+      "know God's will",
+      "Holy Spirit guidance",
+      "Bible guidance",
+      "prayer",
+      "discernment"
+    ]
+  },
+  {
+    "id": "answer-how-to-study-bible",
+    "question": "How Do I Study the Bible?",
+    "shortAnswer": "Study the Bible prayerfully, in context, by comparing related passages and asking what the text meant before applying it to life. The goal is not merely information but a clearer view of God and a faithful response to His Word.",
+    "longAnswer": "The Bereans were praised because they searched the Scriptures daily to test what they heard (Acts 17:11). Paul told Timothy to handle the word of truth accurately (2 Timothy 2:15). These examples call for careful, teachable study rather than using isolated verses to support a conclusion already chosen. Begin by praying for wisdom, read the whole passage, identify its speaker and audience, notice repeated words and themes, and compare it with clearer passages on the same subject (James 1:5; Isaiah 28:9-10). Ask how the passage reveals God's character and points to Christ, then consider how its principles apply today. Helpful tools can illuminate language and history, but no commentary or teacher should replace Scripture. The result of study should be faith, obedience, love, and hope—not pride in winning arguments (John 5:39; 2 Timothy 3:16-17).",
+    "topics": [
+      "Bible",
+      "Faith"
+    ],
+    "category": "Understanding Scripture",
+    "scriptures": [
+      "Isaiah 28:9-10",
+      "John 5:39",
+      "Acts 17:11",
+      "2 Timothy 2:15",
+      "2 Timothy 3:16-17",
+      "James 1:5",
+      "James 1:22-25"
+    ],
+    "keywords": [
+      "how to study the Bible",
+      "Bible study method",
+      "understand Scripture",
+      "Bible reading",
+      "Bible interpretation",
+      "study God's Word",
+      "faith"
+    ]
+  },
+  {
+    "id": "answer-new-covenant",
+    "question": "What Is the New Covenant?",
+    "shortAnswer": "The new covenant is God's promise to forgive sin, write His law in the heart, and bring people into a living relationship with Him through Jesus Christ. It is not a promise of lawlessness but of inward transformation.",
+    "longAnswer": "God promised through Jeremiah that He would make a new covenant in which His law would be written within His people and He would remember their sins no more (Jeremiah 31:31-34). Jesus identified His sacrifice as the blood of the new covenant (Luke 22:20), and Hebrews applies Jeremiah's promise to Christ's priestly ministry (Hebrews 8:6-13). Under the new covenant, God's commands are not merely external words; the Holy Spirit works them into the heart and produces a willing obedience (Romans 8:3-4; Hebrews 10:15-16). The covenant is established by God's grace, not human achievement. It includes forgiveness, access to God, a new heart, and the hope of eternal life. The old covenant's ceremonial shadows pointed forward to Christ, while the moral character of God's law continues to reveal what love and faithfulness look like (Matthew 5:17-19; Romans 13:8-10).",
+    "topics": [
+      "Salvation",
+      "Law",
+      "Faith"
+    ],
+    "category": "Salvation and the Gospel",
+    "scriptures": [
+      "Jeremiah 31:31-34",
+      "Luke 22:20",
+      "Romans 8:3-4",
+      "Hebrews 8:6-13",
+      "Hebrews 10:15-17",
+      "Matthew 5:17-19"
+    ],
+    "keywords": [
+      "new covenant",
+      "old and new covenant",
+      "law written on heart",
+      "Jesus new covenant",
+      "Christian law",
+      "forgiveness",
+      "salvation"
+    ]
+  },
+  {
+    "id": "answer-investigative-judgment",
+    "question": "What Happens in the Investigative Judgment?",
+    "shortAnswer": "The Bible teaches that God judges with complete knowledge, justice, and mercy before Christ returns. The judgment reveals God's righteous character, considers every person's response to His grace, and points believers to Christ as their Advocate and High Priest.",
+    "longAnswer": "Scripture presents a heavenly judgment scene in which the Ancient of Days sits in judgment, books are opened, and the Son of man receives the kingdom (Daniel 7:9-14). Revelation describes an announcement that the hour of God's judgment has come and connects it with worship of the Creator and the everlasting gospel (Revelation 14:6-7). Judgment is not God discovering information He lacks; it is His public demonstration that His decisions are true and fair (Ecclesiastes 12:13-14; Romans 2:16). The good news is that believers do not face judgment alone. Jesus is our Advocate and High Priest, and His sacrifice provides forgiveness for those who trust Him (1 John 2:1-2; Hebrews 4:14-16). This teaching should lead neither to panic nor presumption. It calls us to remain in Christ, confess sin, accept His righteousness, and live faithfully while trusting God's mercy and justice.",
+    "topics": [
+      "Prophecy",
+      "Salvation",
+      "Bible"
+    ],
+    "category": "Hope and Prophecy",
+    "scriptures": [
+      "Daniel 7:9-14",
+      "Ecclesiastes 12:13-14",
+      "Matthew 22:1-14",
+      "Romans 2:16",
+      "Hebrews 4:14-16",
+      "1 John 2:1-2",
+      "Revelation 14:6-7"
+    ],
+    "keywords": [
+      "investigative judgment",
+      "what is the judgment",
+      "heavenly judgment",
+      "judgment before second coming",
+      "Jesus advocate",
+      "high priest",
+      "prophecy"
+    ]
+  },
+  {
+    "id": "answer-biblical-purpose",
+    "question": "What Is My Purpose According to the Bible?",
+    "shortAnswer": "The Bible describes humanity's purpose as knowing and loving God, reflecting His character, serving others, caring for creation, and sharing the good news of Jesus. Purpose is not limited to a job or public achievement.",
+    "longAnswer": "Ecclesiastes concludes that the central duty of humanity is to fear God and keep His commandments (Ecclesiastes 12:13-14). Jesus summarized the law as love for God and love for neighbor (Matthew 22:37-40). Every believer is also called to serve according to the gifts God provides, while the whole church is sent to make disciples and bear witness to Christ (1 Peter 4:10-11; Matthew 28:18-20). Scripture teaches that people are created in God's image and entrusted with responsible care for the world He made (Genesis 1:26-28). Your purpose may be expressed through family, work, ministry, creativity, compassion, or quiet faithfulness. Ephesians says that believers are created in Christ for good works that God prepared beforehand (Ephesians 2:10). Begin with the purposes Scripture makes clear, ask God for wisdom about your particular responsibilities, and measure success by faithfulness rather than comparison.",
+    "topics": [
+      "Christian Living",
+      "Faith"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Genesis 1:26-28",
+      "Ecclesiastes 12:13-14",
+      "Micah 6:8",
+      "Matthew 22:37-40",
+      "Matthew 28:18-20",
+      "Ephesians 2:10",
+      "1 Peter 4:10-11"
+    ],
+    "keywords": [
+      "what is my purpose",
+      "purpose in life",
+      "God's will for my life",
+      "Christian purpose",
+      "calling",
+      "meaning of life",
+      "Christian living"
+    ]
+  },
+  {
+    "id": "answer-which-day-biblical-sabbath",
+    "question": "Which Day Is the Biblical Sabbath, and Why Does It Matter?",
+    "shortAnswer": "The Bible identifies the seventh day as the Sabbath, a day blessed and set apart by God at creation. It is a gift for worship, rest, mercy, and remembering that God is the Creator and Redeemer.",
+    "longAnswer": "The Sabbath begins in the creation account, before there was a Jewish nation or ceremonial system. God rested on the seventh day, blessed it, and sanctified it (Genesis 2:1-3). The fourth commandment identifies that day as the Sabbath and grounds its observance in creation (Exodus 20:8-11). Jesus called the Sabbath a gift made for humanity and declared Himself Lord of it (Mark 2:27-28). He regularly worshiped on the Sabbath (Luke 4:16), and the Gospel accounts show His followers resting on the Sabbath after His crucifixion (Luke 23:54-56). Sabbath observance does not purchase salvation; salvation is received through faith in Christ. Instead, the Sabbath is a loving response to God's invitation to rest in Him, worship the Creator, serve others, and remember His work of redemption (Deuteronomy 5:12-15; Isaiah 58:13-14). It should be kept as a delight, not as a legalistic burden or a reason to condemn people.",
+    "topics": [
+      "Sabbath",
+      "Law",
+      "Creation"
+    ],
+    "category": "Bible and Christian Living",
+    "scriptures": [
+      "Genesis 2:1-3",
+      "Exodus 20:8-11",
+      "Deuteronomy 5:12-15",
+      "Isaiah 58:13-14",
+      "Mark 2:27-28",
+      "Luke 4:16",
+      "Luke 23:54-56"
+    ],
+    "keywords": [
+      "which day is the Sabbath",
+      "biblical Sabbath",
+      "seventh day Sabbath",
+      "Sabbath day",
+      "is Sabbath still required",
+      "worship",
+      "creation"
+    ]
+  },
+  {
+    "id": "answer-new-testament-change-sabbath",
+    "question": "Does the New Testament Change the Sabbath Command?",
+    "shortAnswer": "The New Testament shows Jesus and the apostles honoring the Sabbath, but it does not record a command changing the seventh day to another day. The Sabbath points to God's continuing gifts of creation, rest, worship, and grace.",
+    "longAnswer": "Jesus said He did not come to destroy the law or the prophets and warned against teaching people to set aside God's commandments (Matthew 5:17-19). He corrected human traditions that made the Sabbath harsh, while restoring its purpose as a day for worship and doing good (Mark 2:23-28; Mark 3:1-5). After the crucifixion, the women who followed Jesus rested on the Sabbath according to the commandment (Luke 23:54-56). Paul preached in synagogues on the Sabbath, and Gentiles asked to hear the gospel on the following Sabbath (Acts 13:14, 42-44). Hebrews speaks of a Sabbath rest that remains for God's people and connects it with trusting God's finished work (Hebrews 4:9-11). The New Testament does not describe a transfer of the Sabbath to Sunday. Christians are saved by grace, not by selecting a day as a merit badge, yet grace invites willing obedience and joyful worship. The Sabbath should be approached through Christ, with mercy, humility, and respect for conscience.",
+    "topics": [
+      "Sabbath",
+      "Law",
+      "Salvation"
+    ],
+    "category": "Bible and Christian Living",
+    "scriptures": [
+      "Matthew 5:17-19",
+      "Mark 2:23-28",
+      "Mark 3:1-5",
+      "Luke 23:54-56",
+      "Acts 13:14",
+      "Acts 13:42-44",
+      "Hebrews 4:9-11"
+    ],
+    "keywords": [
+      "New Testament Sabbath",
+      "was Sabbath changed",
+      "Sabbath command",
+      "Sunday worship",
+      "Jesus and Sabbath",
+      "apostles Sabbath",
+      "law and grace"
+    ]
   }
 ];
 
