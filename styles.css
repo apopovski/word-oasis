@@ -2673,6 +2673,23 @@ h1 {
   letter-spacing: 0.01em;
 }
 
+.answer-review-meta {
+  max-width: 720px;
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.answer-review-meta a,
+.trust-page-card a {
+  color: var(--brand-dark);
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
 .page-hero-stats {
   display: flex;
   flex-wrap: wrap;
@@ -3226,6 +3243,49 @@ h1 {
 
 .answer-editorial-note p {
   margin: 5px 0 0;
+}
+
+.trust-page-layout {
+  display: grid;
+  gap: 20px;
+}
+
+.trust-page-card {
+  padding: clamp(24px, 4vw, 38px);
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--card-shadow);
+}
+
+.trust-page-card h2 {
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.trust-page-card p {
+  max-width: 860px;
+  margin: 0 0 14px;
+}
+
+.trust-page-card p:last-child {
+  margin-bottom: 0;
+}
+
+.trust-policy-list {
+  display: grid;
+  gap: 12px;
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+.trust-policy-list li {
+  padding-left: 0.25rem;
+}
+
+.trust-small-note {
+  font-size: 0.92rem;
 }
 
 .answer-share-panel .promise-share-label {

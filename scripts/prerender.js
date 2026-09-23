@@ -22,7 +22,9 @@ const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZ
 const BIBLE_STUDY_URL = "https://www.amazingbiblestudies.com/";
 const SITE_PUBLISHED_DATE = "2026-09-13";
 const BUILD_DATE = new Date().toISOString().slice(0, 10);
-const STYLES_VERSION = "20261143";
+const STYLES_VERSION = "20261144";
+const EDITORIAL_TEAM_NAME = "Word Oasis Editorial Team";
+const EDITORIAL_TEAM_ID = `${SITE_URL}/about/#editorial-team`;
 
 function extractAnswersData(scriptSource) {
   const start = scriptSource.indexOf("const answers = [");
@@ -161,8 +163,27 @@ function siteOrganizationJsonLd() {
       width: 512,
       height: 512
     },
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "corrections and reader questions",
+      email: "wordoasis7@gmail.com",
+      url: `${SITE_URL}/about/#contact`
+    },
     description:
-      "Word Oasis publishes clear, Scripture-based Bible answers, Bible studies, quizzes, and topic guides for everyday questions about faith, salvation, prayer, prophecy, Sabbath, health, forgiveness, and Christian living."
+      "Word Oasis publishes clear, Scripture-based Bible answers, Bible studies, quizzes, and topic guides for everyday questions about faith, salvation, prayer, prophecy, Sabbath, health, forgiveness, and Christian living.",
+    publishingPrinciples: `${SITE_URL}/about/#editorial-policy`
+  };
+}
+
+function editorialTeamJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": EDITORIAL_TEAM_ID,
+    name: EDITORIAL_TEAM_NAME,
+    url: `${SITE_URL}/about/#editorial-team`,
+    parentOrganization: { "@id": `${SITE_URL}/#organization` },
+    publishingPrinciples: `${SITE_URL}/about/#editorial-policy`
   };
 }
 
@@ -317,9 +338,11 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
       ? "topics"
       : canonicalPath.startsWith("/bible/")
         ? "bible"
-        : "home";
+        : canonicalPath.startsWith("/about/")
+          ? "about"
+          : "home";
   const currentPage = (section) => activeSection === section ? ' aria-current="page"' : "";
-  const jsonLd = [siteOrganizationJsonLd(), siteWebSiteJsonLd(), ...structuredData]
+  const jsonLd = [siteOrganizationJsonLd(), siteWebSiteJsonLd(), editorialTeamJsonLd(), ...structuredData]
     .map((data) => `<script type="application/ld+json">\n${JSON.stringify(data, null, 2)}\n    </script>`)
     .join("\n    ");
 
@@ -406,7 +429,7 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
         </button>
         <ul id="primary-menu" class="nav-links">
           <li><a href="/"${currentPage("home")}>Home</a></li>
-          <li><a href="/#about">About</a></li>
+          <li><a href="/about/"${currentPage("about")}>About</a></li>
           <li><a href="/answers/"${currentPage("answers")}>Answers</a></li>
           <li><a href="/topics/"${currentPage("topics")}>Topics</a></li>
           <li class="nav-item-dropdown">
@@ -490,7 +513,7 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
               <li><a href="/bible/">Read the Bible</a></li>
               <li><a href="/quizzes/">Bible quizzes</a></li>
               <li><a href="/studies/">Bible studies</a></li>
-              <li><a href="/#about">About Word Oasis</a></li>
+              <li><a href="/about/">About Word Oasis</a></li>
             </ul>
           </nav>
 
@@ -510,7 +533,7 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
             <h2>Connect</h2>
             <ul class="footer-list">
               <li><a href="/#ask">Ask a question</a></li>
-              <li><a href="/#ask">Email us</a></li>
+              <li><a href="/about/#contact">Email us</a></li>
               <li><a href="#top">Back to top</a></li>
             </ul>
           </nav>
@@ -743,15 +766,18 @@ function answerPage(answer, answers, perspectivesByAnswer) {
         dateModified: BUILD_DATE,
         inLanguage: "en",
         isPartOf: { "@id": `${SITE_URL}/#website` },
-        author: { "@id": `${SITE_URL}/#organization` },
+        author: { "@id": EDITORIAL_TEAM_ID },
+        reviewedBy: { "@id": EDITORIAL_TEAM_ID },
         publisher: { "@id": `${SITE_URL}/#organization` },
+        accountablePerson: { "@id": EDITORIAL_TEAM_ID },
+        publishingPrinciples: `${SITE_URL}/about/#editorial-policy`,
         about: answer.topics.map((topic) => ({ "@type": "Thing", name: topic })),
         keywords: Array.from(new Set([primaryTopic, answer.category, ...(answer.keywords || [])])).join(", "),
         mainEntity: {
           "@type": "Question",
           name: answer.question,
           dateCreated: SITE_PUBLISHED_DATE,
-          author: { "@id": `${SITE_URL}/#organization` },
+          author: { "@id": EDITORIAL_TEAM_ID },
           about: primaryTopic,
           acceptedAnswer: {
             "@type": "Answer",
@@ -759,7 +785,8 @@ function answerPage(answer, answers, perspectivesByAnswer) {
             dateCreated: SITE_PUBLISHED_DATE,
             dateModified: BUILD_DATE,
             url: absoluteUrl(canonicalPath),
-            author: { "@id": `${SITE_URL}/#organization` }
+            author: { "@id": EDITORIAL_TEAM_ID },
+            reviewedBy: { "@id": EDITORIAL_TEAM_ID }
           }
         }
       }
@@ -773,6 +800,7 @@ function answerPage(answer, answers, perspectivesByAnswer) {
           <h1>${escapeHtml(answer.question)}</h1>
           <p class="page-intro">${escapeHtml(answer.shortAnswer)}</p>
           <p class="answer-date-meta">Published ${SITE_PUBLISHED_DATE} · Updated ${BUILD_DATE}</p>
+          <p class="answer-review-meta">Written and reviewed by the <a href="/about/#editorial-team">${EDITORIAL_TEAM_NAME}</a>. <a href="/about/#editorial-policy">Read our editorial policy</a>.</p>
           <div class="answer-public-stats" data-answer-public-stats hidden aria-label="Article readership">
             <span>
               <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -902,7 +930,7 @@ function answerPage(answer, answers, perspectivesByAnswer) {
             </div>
             <div class="answer-editorial-note">
               <strong>Editorial note</strong>
-              <p>This answer is presented with its supporting references so you can examine each passage in context. If you notice an error or unclear statement, please <a href="/?inquiry=general#ask">suggest a correction</a>.</p>
+              <p>This answer is written and reviewed by the Word Oasis Editorial Team, and is presented with supporting references so you can examine each passage in context. If you notice an error or unclear statement, please <a href="/about/#contact">suggest a correction</a>.</p>
             </div>
           </article>
           <aside class="related-card" aria-label="Related answers">
@@ -1250,6 +1278,87 @@ function topicPage(topic, answers, topicIcons, topicDescriptions) {
   });
 }
 
+function aboutPage() {
+  return pageShell({
+    title: "About Word Oasis | Editorial Policy and Bible Answer Review",
+    description: "Learn about Word Oasis, our Scripture-first editorial process, correction policy, beliefs, and how Bible answers are written and reviewed.",
+    canonicalPath: "/about/",
+    ogType: "website",
+    structuredData: [
+      breadcrumbJsonLd([
+        { name: "Home", path: "/" },
+        { name: "About Word Oasis", path: "/about/" }
+      ]),
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "@id": `${SITE_URL}/about/#about-page`,
+        name: "About Word Oasis",
+        description: "Word Oasis publishes clear, Scripture-based Bible answers, studies, quizzes, and Bible reading tools.",
+        url: `${SITE_URL}/about/`,
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        reviewedBy: { "@id": EDITORIAL_TEAM_ID },
+        datePublished: SITE_PUBLISHED_DATE,
+        dateModified: BUILD_DATE,
+        mainEntity: {
+          "@id": `${SITE_URL}/#organization`
+        }
+      }
+    ],
+    body: `
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / About Word Oasis</nav>
+          <p class="eyebrow">About Word Oasis</p>
+          <h1>Clear Bible answers with an open editorial process</h1>
+          <p class="page-intro">Word Oasis exists to help people understand Scripture, examine Bible passages in context, and apply biblical truth with clarity, humility, and hope.</p>
+        </div>
+      </section>
+      <section class="section section-soft">
+        <div class="container trust-page-layout">
+          <article class="trust-page-card">
+            <h2>Our mission</h2>
+            <p>Word Oasis points readers back to the Bible. Every answer is designed to give a direct response, show the supporting passages, and encourage personal study rather than asking readers to accept a claim without checking Scripture.</p>
+            <p>We write for people asking honest questions about God, salvation, prayer, suffering, prophecy, Christian living, and the hope found in Jesus Christ.</p>
+          </article>
+
+          <article class="trust-page-card" id="editorial-team">
+            <h2>Who writes and reviews the answers?</h2>
+            <p>Word Oasis content is written and reviewed by the <strong>Word Oasis Editorial Team</strong>. The team reviews answers for biblical faithfulness, clarity, tone, and whether the cited passages support the answer being given.</p>
+            <p>Because Word Oasis is built as a Scripture study resource, our authority claim is not personal celebrity. Our aim is transparency: each answer should provide enough references for readers to examine the reasoning for themselves.</p>
+          </article>
+
+          <article class="trust-page-card" id="editorial-policy">
+            <h2>Editorial policy</h2>
+            <ol class="trust-policy-list">
+              <li><strong>Scripture first.</strong> Answers should be anchored in Bible passages and should not treat opinion as equal to Scripture.</li>
+              <li><strong>Context matters.</strong> We aim to cite passages in a way that respects the surrounding chapter, book, and biblical theme.</li>
+              <li><strong>Clear language.</strong> We avoid needlessly technical wording and write for readers who may be new to the Bible.</li>
+              <li><strong>Practical application.</strong> Where appropriate, answers explain how biblical truth connects to daily life.</li>
+              <li><strong>Corrections welcome.</strong> If an answer is unclear, incomplete, or inaccurate, readers can contact us and request review.</li>
+            </ol>
+          </article>
+
+          <article class="trust-page-card">
+            <h2>What we believe</h2>
+            <p>Word Oasis is guided by historic biblical Christianity: the Bible is God’s inspired Word, Jesus Christ is the divine Son of God and Savior, salvation is God’s gift of grace received through faith, and genuine faith bears fruit in a transformed life.</p>
+            <p>We also emphasize the authority of Scripture, the hope of Christ’s return, the resurrection, prayer, obedience flowing from love, and the restoration of all things in God’s kingdom.</p>
+          </article>
+
+          <article class="trust-page-card" id="contact">
+            <h2>Contact and corrections</h2>
+            <p>If you find an error, unclear wording, a broken link, or a Bible reference that should be reconsidered, please contact Word Oasis. Correction requests are reviewed and, when appropriate, reflected in the updated date shown on answer pages.</p>
+            <p><a class="text-link" href="/?inquiry=general#ask">Send a correction or question <span aria-hidden="true">→</span></a></p>
+            <p class="trust-small-note">Email contact: <a href="mailto:wordoasis7@gmail.com">wordoasis7@gmail.com</a></p>
+          </article>
+        </div>
+      </section>
+    </main>`
+  });
+}
+
 function replaceTagContent(html, regex, replacement, label) {
   if (!regex.test(html)) {
     throw new Error(`Could not update ${label} in Bible chapter template`);
@@ -1411,6 +1520,7 @@ function writeSitemap(answers, topics, bibleBooks = []) {
   );
   const entries = [
     { loc: "/", priority: "1.0" },
+    { loc: "/about/", priority: "0.9" },
     { loc: "/answers/", priority: "0.9" },
     { loc: "/bible/", priority: "0.9" },
     { loc: "/quizzes/", priority: "0.8" },
@@ -1451,6 +1561,7 @@ function writeStaticPages(answers, perspectivesByAnswer, topicIcons, topicDescri
 
   writePage("answers/index.html", answersIndexPage(answers));
   writePage("topics/index.html", topicsIndexPage(answers, topics, topicIcons, topicDescriptions));
+  writePage("about/index.html", aboutPage());
 
   answers.forEach((answer) => {
     writePage(path.join(answerPath(answer).slice(1), "index.html"), answerPage(answer, answers, perspectivesByAnswer));

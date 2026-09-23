@@ -103,7 +103,7 @@
           stylesRequested = true;
           const link = document.createElement("link");
           link.rel = "stylesheet";
-          link.href = "styles.css?v=20261143";
+          link.href = "styles.css?v=20261144";
           document.head.append(link);
         }
 
@@ -132,7 +132,7 @@
       })();
     </script>
     <noscript>
-      <link rel="stylesheet" href="styles.css?v=20261143">
+      <link rel="stylesheet" href="styles.css?v=20261144">
       <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap"
         rel="stylesheet"
@@ -182,7 +182,27 @@
           "width": 512,
           "height": 512
         },
-        "description": "Word Oasis publishes clear, Scripture-based Bible answers, Bible studies, quizzes, and topic guides for everyday questions about faith, salvation, prayer, prophecy, Sabbath, health, forgiveness, and Christian living."
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "corrections and reader questions",
+          "email": "wordoasis7@gmail.com",
+          "url": "https://wordoasis.org/about/#contact"
+        },
+        "description": "Word Oasis publishes clear, Scripture-based Bible answers, Bible studies, quizzes, and topic guides for everyday questions about faith, salvation, prayer, prophecy, Sabbath, health, forgiveness, and Christian living.",
+        "publishingPrinciples": "https://wordoasis.org/about/#editorial-policy"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://wordoasis.org/about/#editorial-team",
+        "name": "Word Oasis Editorial Team",
+        "url": "https://wordoasis.org/about/#editorial-team",
+        "parentOrganization": {
+          "@id": "https://wordoasis.org/#organization"
+        },
+        "publishingPrinciples": "https://wordoasis.org/about/#editorial-policy"
       }
     </script>
     <script type="application/ld+json">
@@ -398,7 +418,7 @@
         </button>
         <ul id="primary-menu" class="nav-links">
           <li><a href="/" aria-current="page">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="/about/">About</a></li>
           <li><a href="/answers/">Answers</a></li>
           <li><a href="/topics/">Topics</a></li>
           <li class="nav-item-dropdown">
@@ -1052,6 +1072,7 @@
               <p class="eyebrow">About Word Oasis</p>
               <h2 id="about-heading">Explore Scripture with clarity and hope</h2>
               <p>Word Oasis helps people understand the Bible, discover the character of God, and apply biblical truth to real life. Every answer includes Scripture references so you can examine the passages and continue studying for yourself.</p>
+              <p><a class="text-link" href="/about/">Read about our editorial process <span aria-hidden="true">→</span></a></p>
               <div class="about-principles" aria-label="How Word Oasis helps">
                 <span>Easy to explore</span>
                 <span>Grounded in Scripture</span>
@@ -1116,7 +1137,7 @@
               <li><a href="/bible/">Read the Bible</a></li>
               <li><a href="/quizzes/">Bible quizzes</a></li>
               <li><a href="/studies/">Bible studies</a></li>
-              <li><a href="#about">About Word Oasis</a></li>
+              <li><a href="/about/">About Word Oasis</a></li>
             </ul>
           </nav>
 
@@ -1136,7 +1157,7 @@
             <h2>Connect</h2>
             <ul class="footer-list">
               <li><a href="#ask">Ask a question</a></li>
-              <li><a href="#ask">Email us</a></li>
+              <li><a href="/about/#contact">Email us</a></li>
               <li><a href="#top">Back to top</a></li>
             </ul>
           </nav>
