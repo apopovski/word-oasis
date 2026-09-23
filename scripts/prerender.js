@@ -22,7 +22,7 @@ const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZ
 const BIBLE_STUDY_URL = "https://www.amazingbiblestudies.com/";
 const SITE_PUBLISHED_DATE = "2026-09-13";
 const BUILD_DATE = new Date().toISOString().slice(0, 10);
-const STYLES_VERSION = "20261142";
+const STYLES_VERSION = "20261143";
 
 function extractAnswersData(scriptSource) {
   const start = scriptSource.indexOf("const answers = [");
