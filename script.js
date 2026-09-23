@@ -4613,13 +4613,19 @@ const answers = [
     "id": "answer-gospel",
     "question": "What is the gospel?",
     "shortAnswer": "The gospel is the good news of God's infinite love to humanity, through the life, sacrifice, and righteousness of Jesus Christ as our only hope of eternal life. It restores the image of God in the soul and offers salvation as a free gift received by faith.",
-    "longAnswer": "The gospel is the good news of God's infinite love to humanity, through the life, the sacrifice, and the righteousness of Jesus Christ as our only hope of eternal life. The gospel restores the image of God in the soul. The plan of salvation was not an afterthought; it was an eternal purpose of love formulated before the world began. When humanity fell, Jesus stepped forward as our Substitute and Surety, offering to bear the weight of the sins of the whole world so that we might be reconciled to the Father. The gospel is the “counsel of peace” between the Father and the Son, proving that God's law is as immutable as His throne, while His mercy is deep enough to reach the lowest sinner. Salvation is a free gift. We cannot earn it through any merit or good works, for it is received wholly by faith.",
+    "longAnswer": "The gospel is the good news that Jesus Christ died for our sins, was buried, and rose again. Salvation is God's gift, received by faith, and it leads to a transformed life of love, obedience, and hope in Christ's return. Before sin entered our world, God warned humanity about the gravity of disobedience. In Genesis 2:17, He declared, “But of the tree of the knowledge of good and evil, thou shalt not eat of it: for in the day that thou eatest thereof thou shalt surely die.” Four thousand years later, the apostle Paul affirmed this same principle: “For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord” (Romans 6:23). Who needed to understand this danger? Not only Adam and Eve, but the angels and unfallen created beings throughout the universe, as implied in Job 1:6. Genesis shows that God warned our first parents, and Revelation 12:7-9 reveals that the angels were also aware of the peril following the war in heaven. Yet a profound problem remained: how could perfect beings, who had known only harmony for ages, truly comprehend the full outcome of sin? How could they imagine that eating forbidden fruit would unleash thousands of years of disease, hatred, war, and death? Satan's temptation did not sound evil to Eve; he framed it as self-improvement, promising, “Ye shall be as gods” (Genesis 3:4-5). Because the true weight of rebellion could not be fully grasped in theory, the full results of sin had to be demonstrated so that universe-wide rebellion would never rise again. This is why Christ came to earth. For thousands of years, God had restricted Satan's actions against humanity, but in Christ, God permitted Satan to reveal his true motives without limit. Satan, who claimed he only wanted to improve the universe, exposed his actual character: he inspired human beings to torture and attempt to destroy their own Creator and Sustainer (Colossians 1:16-17). At the cross, two characters were fully unveiled: Satan's hatred and pride, and God's self-sacrificing love and humility. Satan sought to destroy the very Being who upholds his existence, proving that rebellion against the Source of life inevitably leads to death (Genesis 2:17; Romans 6:23).",
     "topics": [
       "Salvation"
     ],
     "category": "Faith and Salvation",
     "scriptures": [
       "John 3:16",
+      "Genesis 2:17",
+      "Romans 6:23",
+      "Job 1:6",
+      "Genesis 3:4-5",
+      "Revelation 12:7-9",
+      "Colossians 1:16-17",
       "2 Corinthians 4:7",
       "Revelation 13:8",
       "2 Corinthians 5:19",
@@ -4634,6 +4640,8 @@ const answers = [
       "saved",
       "grace",
       "obedience",
+      "great controversy",
+      "sacrifice",
       "salvation"
     ]
   },
