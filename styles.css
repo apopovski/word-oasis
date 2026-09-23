@@ -4102,10 +4102,15 @@ h1 {
   border-bottom: 1px solid var(--border);
 }
 
+.bible-reader-head > div:first-child {
+  min-width: 0;
+}
+
 .bible-reader-head h2 {
   margin-bottom: 8px;
   font-family: "Libre Baskerville", Georgia, serif;
   font-size: clamp(2rem, 4vw, 3.2rem);
+  overflow-wrap: anywhere;
 }
 
 .bible-reader-head p:last-child {
@@ -7709,12 +7714,50 @@ body.modal-open {
   }
 
   .bible-reader-head {
-    gap: 14px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .bible-reader-head h2 {
+    font-size: clamp(2.25rem, 12vw, 3.1rem);
+    line-height: 1.08;
+  }
+
+  .bible-reader-head p:last-child {
+    max-width: 28ch;
+    font-size: 0.98rem;
+    line-height: 1.45;
+  }
+
+  .bible-reader-head-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .bible-reader-head-actions .quiz-link-button {
+    min-width: 0;
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  .bible-reader-arrows {
+    gap: 8px;
+    justify-self: end;
   }
 
   .bible-reader-arrows button {
     width: 42px;
     height: 42px;
+  }
+
+  .bible-chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(44px, 1fr));
+    gap: 10px;
   }
 
   .bible-selection-panel {
