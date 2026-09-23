@@ -978,15 +978,9 @@ function answersIndexPage(answers) {
                 const answerTopicSlugs = answer.topics.map(slugify);
                 return `
                   <article class="directory-answer-card" data-answer-topics="${answerTopicSlugs.join(" ")}" data-answer-search-text="${escapeAttribute(`${answer.question} ${answer.shortAnswer} ${answer.topics.join(" ")} ${answer.keywords.join(" ")}`.toLowerCase())}">
-                    <span class="directory-answer-meta">${escapeHtml(answer.topics[0])}</span>
+                    <button type="button" class="directory-answer-meta" data-answer-topic-filter="${slugify(answer.topics[0])}" aria-label="Filter answers by ${escapeAttribute(answer.topics[0])}">${escapeHtml(answer.topics[0])}</button>
                     <h2><a class="directory-answer-title" href="${answerPath(answer)}">${escapeHtml(answer.question)}</a></h2>
                     <p>${escapeHtml(answer.shortAnswer)}</p>
-                    <div class="directory-answer-topics" aria-label="Related topics">
-                      ${answer.topics
-                        .slice(0, 3)
-                        .map((topic) => `<a href="#topic-${slugify(topic)}" data-answer-topic-filter="${slugify(topic)}">${escapeHtml(topic)}</a>`)
-                        .join("")}
-                    </div>
                     <a class="directory-read-more" href="${answerPath(answer)}" aria-label="Read the full answer to ${escapeAttribute(answer.question)}">Read the full answer</a>
                   </article>
                 `;
@@ -1004,7 +998,7 @@ function answersIndexPage(answers) {
     <script>
       (() => {
         const topicSelect = document.querySelector("[data-answer-topic-select]");
-        const topicLinks = Array.from(document.querySelectorAll(".directory-answer-topics [data-answer-topic-filter]"));
+        const topicLinks = Array.from(document.querySelectorAll("[data-answer-topic-filter]"));
         const cards = Array.from(document.querySelectorAll("[data-answer-topics]"));
         const count = document.querySelector("[data-answer-topic-count]");
         const searchInput = document.querySelector("[data-answer-search]");

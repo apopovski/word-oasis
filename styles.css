@@ -3655,9 +3655,12 @@ h1 {
 }
 
 .directory-answer-meta {
+  display: block;
+  margin: 0;
   width: fit-content;
   padding: 4px 9px;
   color: var(--brand-dark);
+  font: inherit;
   font-size: 0.72rem;
   font-weight: 800;
   line-height: 1.2;
@@ -3666,6 +3669,16 @@ h1 {
   background: #e9f1ff;
   border: 1px solid rgba(37, 99, 235, 0.14);
   border-radius: 999px;
+  cursor: pointer;
+}
+
+.directory-answer-meta:hover,
+.directory-answer-meta:focus-visible {
+  color: var(--brand-dark);
+  background: #dceaff;
+  border-color: rgba(37, 99, 235, 0.38);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
 }
 
 .directory-answer-topics {
