@@ -510,6 +510,7 @@
     score: player.querySelector("[data-study-score]"),
     reference: player.querySelector("[data-study-reference]"),
     statement: player.querySelector("[data-study-statement]"),
+    answerStepTitle: player.querySelector(".study-step-answer .study-step-title"),
     options: player.querySelector("[data-study-options]"),
     feedback: player.querySelector("[data-study-feedback]"),
     next: player.querySelector("[data-study-next]"),
@@ -541,11 +542,53 @@
   let activeStudy = null;
   let statementIndex = 0;
   let answers = [];
+  let answerCorrect = [];
+  let readState = [];
+  let advancedAttempts = [];
+  let studyMode = "easy";
   const savedStatePrefix = "word-oasis-study:";
 
   const TRANSLATION_KEY = "word-oasis-bible-translation";
   const LEGACY_TRANSLATION_KEY = "word-oasis-promise-translation";
+  const STUDY_MODE_KEY = "word-oasis-study-mode";
   const KNOWN_TRANSLATIONS = ["web", "kjv", "asv"];
+
+  function normalizeAnswer(value) {
+    return String(value || "").trim().replace(/[^a-z0-9]+/gi, " ").replace(/\s+/g, " ").toLowerCase();
+  }
+
+  function isCorrectAnswer(item, value, translation) {
+    if (value === null || value === undefined) return false;
+    if (typeof value === "number") return value === item.answer;
+    const acceptedWords = new Set([item.options[item.answer], getAnswerWord(item, translation || getTranslation())]);
+    return [...acceptedWords].some((word) => normalizeAnswer(value) === normalizeAnswer(word));
+  }
+
+  function getStudyMode() {
+    try {
+      const stored = localStorage.getItem(STUDY_MODE_KEY);
+      return stored === "advanced" ? "advanced" : "easy";
+    } catch (error) {
+      return "easy";
+    }
+  }
+
+  function setStudyMode(mode) {
+    const nextMode = mode === "advanced" ? "advanced" : "easy";
+    studyMode = nextMode;
+    try {
+      localStorage.setItem(STUDY_MODE_KEY, nextMode);
+    } catch (error) {
+      // Ignore storage errors (e.g. private browsing).
+    }
+    const buttons = player.querySelectorAll("[data-study-mode-button]");
+    buttons.forEach((button) => {
+      const isActive = button.dataset.studyModeButton === nextMode;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-selected", String(isActive));
+    });
+    if (activeStudy) renderStatement();
+  }
 
   function getTranslation() {
     try {
@@ -601,7 +644,7 @@
 
   function currentScore() {
     return answers.reduce((total, answer, index) => (
-      total + (answer !== null && answer === activeStudy.statements[index].answer ? 1 : 0)
+      total + (answer !== null && answerCorrect[index] ? 1 : 0)
     ), 0);
   }
 
@@ -612,7 +655,7 @@
   function saveState() {
     if (!activeStudy) return;
     try {
-      localStorage.setItem(savedStateKey(activeStudy.id), JSON.stringify({ answers, statementIndex }));
+      localStorage.setItem(savedStateKey(activeStudy.id), JSON.stringify({ answers, answerCorrect, statementIndex, readState, advancedAttempts, studyMode }));
       elements.saveStatus.textContent = "Progress saved on this device.";
     } catch (error) {
       elements.saveStatus.textContent = "Progress could not be saved in this browser.";
@@ -631,9 +674,17 @@
     try {
       const saved = JSON.parse(localStorage.getItem(savedStateKey(study.id)) || "null");
       if (!saved || !Array.isArray(saved.answers) || saved.answers.length !== study.statements.length) return null;
+      const answerCorrectSaved = Array.isArray(saved.answerCorrect) && saved.answerCorrect.length === study.statements.length
+        ? saved.answerCorrect
+        // Older saved sessions predate answerCorrect tracking — recompute once as a one-time migration.
+        : saved.answers.map((answer, index) => answer !== null && isCorrectAnswer(study.statements[index], answer));
       return {
         answers: saved.answers,
-        statementIndex: Math.min(Math.max(Number(saved.statementIndex) || 0, 0), study.statements.length - 1)
+        answerCorrect: answerCorrectSaved,
+        readState: Array.isArray(saved.readState) && saved.readState.length === study.statements.length ? saved.readState : Array(study.statements.length).fill(false),
+        advancedAttempts: Array.isArray(saved.advancedAttempts) && saved.advancedAttempts.length === study.statements.length ? saved.advancedAttempts : Array(study.statements.length).fill(0),
+        statementIndex: Math.min(Math.max(Number(saved.statementIndex) || 0, 0), study.statements.length - 1),
+        studyMode: saved.studyMode === "advanced" ? "advanced" : "easy"
       };
     } catch (error) {
       return null;
@@ -737,7 +788,10 @@
 
   function appendScriptureLinks(container, text) {
     const bookPattern = "(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|1 Samuel|2 Samuel|1 Kings|2 Kings|1 Chronicles|2 Chronicles|Ezra|Nehemiah|Esther|Job|Psalms?|Proverbs|Ecclesiastes|Song of Solomon|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|1 Corinthians|2 Corinthians|Galatians|Ephesians|Philippians|Colossians|1 Thessalonians|2 Thessalonians|1 Timothy|2 Timothy|Titus|Philemon|Hebrews|James|1 Peter|2 Peter|1 John|2 John|3 John|Jude|Revelation)";
-    const referencePattern = new RegExp(`\\b${bookPattern}\\s+\\d+(?::\\d+(?:[-–]\\d+)?)?`, "g");
+    const referencePattern = new RegExp(
+      `\\b${bookPattern}\\s+\\d+(?::\\d+(?:[-–]\\d+)?(?:,\\s*\\d+(?:[-–]\\d+)?)*)?`,
+      "g"
+    );
     let lastIndex = 0;
     let match;
     while ((match = referencePattern.exec(text))) {
@@ -753,8 +807,7 @@
     container.append(document.createTextNode(text.slice(lastIndex)));
   }
 
-  function renderFeedback(item, selectedAnswer) {
-    const correct = selectedAnswer === item.answer;
+  function renderFeedback(item, selectedAnswer, correct) {
     const answerWord = getAnswerWord(item, getTranslation());
     const status = document.createElement("div");
     status.className = "study-feedback-status";
@@ -784,6 +837,7 @@
     const hasAnswer = selectedAnswer !== null;
     const translation = getTranslation();
     const answerWord = getAnswerWord(item, translation);
+    const hasReadVerse = readState[statementIndex] || hasAnswer;
     elements.feedback.hidden = true;
     elements.feedback.replaceChildren();
     elements.progress.textContent = `Statement ${statementIndex + 1} of ${activeStudy.statements.length}`;
@@ -801,11 +855,41 @@
     const before = split ? split.before : item.text.split("___")[0];
     const matchedText = split ? split.match : answerWord;
     const after = split ? split.after : (item.text.split("___")[1] || "");
+
+    if (elements.answerStepTitle) {
+      elements.answerStepTitle.textContent = hasReadVerse
+        ? (studyMode === "advanced" ? "Type the missing word" : "Choose the missing word")
+        : "Confirm you’ve read it";
+    }
+
+    if (!hasReadVerse) {
+      const verseText = fullVerseText || item.text.replace(/___/g, "_____ ");
+      elements.statement.className = "study-statement is-reading-card";
+      elements.statement.textContent = verseText;
+      elements.options.replaceChildren();
+      const readActions = document.createElement("div");
+      readActions.className = "study-reading-actions";
+      const readHint = document.createElement("p");
+      readHint.className = "study-read-hint";
+      readHint.textContent = "Read the verse carefully above, then answer from what you remember — no peeking once you continue.";
+      const readButton = document.createElement("button");
+      readButton.type = "button";
+      readButton.className = "study-read-action";
+      readButton.dataset.studyMarkRead = "true";
+      readButton.textContent = "I’ve read it — answer the question";
+      readActions.append(readHint, readButton);
+      elements.options.append(readActions);
+      elements.previous.hidden = statementIndex === 0;
+      elements.next.hidden = true;
+      return;
+    }
+
+    elements.statement.className = "study-statement";
     elements.statement.append(document.createTextNode(before));
     const blank = document.createElement("span");
     blank.textContent = matchedText;
     if (hasAnswer) {
-      blank.className = `study-blank ${selectedAnswer === item.answer ? "is-correct" : "is-revealed"}`;
+      blank.className = `study-blank ${answerCorrect[statementIndex] ? "is-correct" : "is-revealed"}`;
     } else {
       blank.className = "study-blank is-blurred";
       blank.setAttribute("aria-hidden", "true");
@@ -820,25 +904,72 @@
     }
 
     elements.options.replaceChildren();
-    item.options.forEach((option, optionIndex) => {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "study-option";
-      button.dataset.optionIndex = String(optionIndex);
-      button.textContent = optionIndex === item.answer ? answerWord : option;
-      if (hasAnswer) {
-        button.disabled = true;
-        if (optionIndex === item.answer) button.classList.add("is-correct");
-        if (optionIndex === selectedAnswer && selectedAnswer !== item.answer) button.classList.add("is-incorrect");
+    if (studyMode === "advanced") {
+      const attempts = advancedAttempts[statementIndex] || 0;
+      const group = document.createElement("div");
+      group.className = "study-answer-input-group";
+      const input = document.createElement("input");
+      input.type = "text";
+      input.className = "study-answer-input";
+      input.placeholder = "Type the missing word";
+      input.autocomplete = "off";
+      input.autocapitalize = "none";
+      input.spellcheck = false;
+      input.value = typeof selectedAnswer === "string" && selectedAnswer !== "(no answer given)" ? selectedAnswer : "";
+      input.placeholder = selectedAnswer === "(no answer given)" ? "(no answer given)" : "Type the missing word";
+      input.disabled = hasAnswer;
+      input.dataset.studyAnswerInput = "true";
+      const submit = document.createElement("button");
+      submit.type = "button";
+      submit.className = "study-submit-answer";
+      submit.dataset.studyCheckAnswer = "true";
+      submit.disabled = hasAnswer;
+      submit.textContent = hasAnswer ? "Answer checked" : attempts > 0 ? "Try again" : "Check answer";
+      group.append(input, submit);
+      elements.options.append(group);
+
+      if (!hasAnswer && attempts > 0) {
+        const retryRow = document.createElement("div");
+        retryRow.className = "study-retry-row";
+        const retryNote = document.createElement("p");
+        retryNote.className = "study-retry-note";
+        retryNote.textContent = attempts === 1
+          ? "Not quite — take another look at the verse and try once more."
+          : "Still not matching. Try again, or reveal the answer to keep going.";
+        const revealButton = document.createElement("button");
+        revealButton.type = "button";
+        revealButton.className = "study-reveal-answer";
+        revealButton.dataset.studyRevealAnswer = "true";
+        revealButton.textContent = "Show answer & continue";
+        retryRow.append(retryNote, revealButton);
+        elements.options.append(retryRow);
       }
-      elements.options.append(button);
-    });
+
+      const helper = document.createElement("small");
+      helper.className = "study-answer-helper";
+      helper.textContent = "Write the missing word from memory without looking at the answer choices.";
+      elements.options.append(helper);
+    } else {
+      item.options.forEach((option, optionIndex) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "study-option";
+        button.dataset.optionIndex = String(optionIndex);
+        button.textContent = optionIndex === item.answer ? answerWord : option;
+        if (hasAnswer) {
+          button.disabled = true;
+          if (optionIndex === item.answer) button.classList.add("is-correct");
+          if (typeof selectedAnswer === "number" && optionIndex === selectedAnswer && selectedAnswer !== item.answer) button.classList.add("is-incorrect");
+        }
+        elements.options.append(button);
+      });
+    }
     elements.previous.hidden = statementIndex === 0;
     elements.next.hidden = !hasAnswer;
     elements.next.textContent = statementIndex === activeStudy.statements.length - 1 && answeredCount() === activeStudy.statements.length
       ? "See my summary →"
       : "Next →";
-    if (hasAnswer) renderFeedback(item, selectedAnswer);
+    if (hasAnswer) renderFeedback(item, selectedAnswer, answerCorrect[statementIndex]);
   }
 
   function selectAnswer(button) {
@@ -846,6 +977,46 @@
     const item = activeStudy.statements[statementIndex];
     const selected = Number(button.dataset.optionIndex);
     answers[statementIndex] = selected;
+    answerCorrect[statementIndex] = selected === item.answer;
+    renderStatement();
+    saveState();
+    elements.next.focus();
+  }
+
+  function submitAdvancedAnswer() {
+    if (answers[statementIndex] !== null) return;
+    const item = activeStudy.statements[statementIndex];
+    const input = elements.options.querySelector("[data-study-answer-input]");
+    if (!input) return;
+    const value = input.value.trim();
+    if (!value) {
+      input.focus();
+      return;
+    }
+    if (isCorrectAnswer(item, value)) {
+      answers[statementIndex] = value;
+      answerCorrect[statementIndex] = true;
+      renderStatement();
+      saveState();
+      elements.next.focus();
+      return;
+    }
+    advancedAttempts[statementIndex] = (advancedAttempts[statementIndex] || 0) + 1;
+    renderStatement();
+    saveState();
+    const retryInput = elements.options.querySelector("[data-study-answer-input]");
+    if (retryInput) {
+      retryInput.focus();
+      retryInput.select();
+    }
+  }
+
+  function revealAdvancedAnswer() {
+    if (answers[statementIndex] !== null) return;
+    const input = elements.options.querySelector("[data-study-answer-input]");
+    const typedValue = input ? input.value.trim() : "";
+    answers[statementIndex] = typedValue || "(no answer given)";
+    answerCorrect[statementIndex] = false;
     renderStatement();
     saveState();
     elements.next.focus();
@@ -966,12 +1137,44 @@
     window.history.replaceState({}, "", "/studies/");
   }
 
+  function renderStudyModeControls() {
+    if (!player) return;
+    let modeBar = player.querySelector("[data-study-mode]");
+    if (!modeBar) {
+      modeBar = document.createElement("div");
+      modeBar.className = "study-mode-bar";
+      modeBar.dataset.studyMode = "";
+      modeBar.innerHTML = `
+        <span class="study-mode-label">Difficulty</span>
+        <div class="study-mode-toggle" role="tablist" aria-label="Study difficulty">
+          <button type="button" class="study-mode-button is-active" data-study-mode-button="easy" role="tab" aria-selected="true">Easy</button>
+          <button type="button" class="study-mode-button" data-study-mode-button="advanced" role="tab" aria-selected="false">Advanced</button>
+        </div>
+      `;
+      const translationBar = player.querySelector("[data-study-translation]")?.closest(".study-version-bar");
+      if (translationBar) {
+        translationBar.insertAdjacentElement("afterend", modeBar);
+      } else {
+        player.querySelector(".study-key-thought")?.after(modeBar);
+      }
+    }
+    modeBar.querySelectorAll("[data-study-mode-button]").forEach((button) => {
+      const isActive = button.dataset.studyModeButton === studyMode;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-selected", String(isActive));
+    });
+  }
+
   function startStudy(studyId, forceNew = false) {
     activeStudy = studies.find((study) => study.id === studyId);
     if (!activeStudy) return;
     const saved = forceNew ? null : loadSavedState(activeStudy);
     answers = saved?.answers || Array(activeStudy.statements.length).fill(null);
+    answerCorrect = saved?.answerCorrect || Array(activeStudy.statements.length).fill(false);
+    readState = saved?.readState || Array(activeStudy.statements.length).fill(false);
+    advancedAttempts = saved?.advancedAttempts || Array(activeStudy.statements.length).fill(0);
     statementIndex = saved?.statementIndex || 0;
+    studyMode = saved?.studyMode || getStudyMode();
     elements.eyebrow.textContent = `${activeStudy.categoryLabel} · ${activeStudy.duration}`;
     elements.title.textContent = activeStudy.title;
     elements.summary.textContent = activeStudy.summary;
@@ -980,6 +1183,7 @@
     elements.statementPanel.hidden = false;
     directory.hidden = true;
     player.hidden = false;
+    renderStudyModeControls();
     elements.saveStatus.textContent = saved ? "Your saved progress has been restored." : "Progress saves automatically on this device.";
     if (elements.translationSelect) elements.translationSelect.value = getTranslation();
     const url = studyPermalink(activeStudy.id);
@@ -1004,6 +1208,28 @@
       directory.querySelectorAll("[data-study-card]").forEach((card) => {
         card.hidden = filter !== "all" && card.dataset.studyCard !== filter;
       });
+      return;
+    }
+    const modeButton = event.target.closest("[data-study-mode-button]");
+    if (modeButton) {
+      setStudyMode(modeButton.dataset.studyModeButton);
+      return;
+    }
+    const readAction = event.target.closest("[data-study-mark-read]");
+    if (readAction) {
+      readState[statementIndex] = true;
+      renderStatement();
+      saveState();
+      return;
+    }
+    const advancedCheck = event.target.closest("[data-study-check-answer]");
+    if (advancedCheck) {
+      submitAdvancedAnswer();
+      return;
+    }
+    const revealAnswer = event.target.closest("[data-study-reveal-answer]");
+    if (revealAnswer) {
+      revealAdvancedAnswer();
       return;
     }
     const optionButton = event.target.closest(".study-option");
@@ -1069,6 +1295,14 @@
   elements.translationSelect?.addEventListener("change", () => {
     setTranslation(elements.translationSelect.value);
     if (activeStudy) renderStatement();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter") return;
+    const input = document.activeElement?.closest("[data-study-answer-input]");
+    if (!input) return;
+    event.preventDefault();
+    submitAdvancedAnswer();
   });
 
   window.addEventListener("wordoasis:translationchange", (event) => {

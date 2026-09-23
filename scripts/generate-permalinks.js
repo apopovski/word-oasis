@@ -64,7 +64,7 @@ function buildQuizPage(baseHtml, quiz) {
   html = replaceOnce(html, "<title>Bible Knowledge Quizzes | Word Oasis</title>", `<title>${escapeAttribute(title)}</title>`, "title");
   html = replaceOnce(
     html,
-    '<meta name="description" content="Test your Bible knowledge with free quizzes about Bible basics, Jesus, the Old and New Testaments, and the prophecies of Daniel.">',
+    '<meta name="description" content="Test your Bible knowledge with free quizzes on Bible basics, Jesus, parables, miracles, the Old and New Testaments, Bible characters, and Bible prophecy.">',
     `<meta name="description" content="${escapeAttribute(description)}">`,
     "meta description"
   );
@@ -102,7 +102,7 @@ function buildQuizPage(baseHtml, quiz) {
   );
   html = replaceOnce(
     html,
-    `"name": "Bible Knowledge Quizzes",\n        "url": "https://wordoasis.org/quizzes/",\n        "description": "Ten free Bible knowledge quizzes with Scripture references and shareable scores."`,
+    `"name": "Bible Knowledge Quizzes",\n        "url": "https://wordoasis.org/quizzes/",\n        "description": "Sixteen free Bible knowledge quizzes with Scripture references and shareable scores."`,
     `"name": "${title.replace(/"/g, '\\"')}",\n        "url": "${canonical}",\n        "description": "${description.replace(/"/g, '\\"')}"`,
     "json-ld"
   );

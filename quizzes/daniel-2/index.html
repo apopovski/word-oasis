@@ -46,7 +46,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261144">
+    <link rel="stylesheet" href="/styles.css?v=20261152">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Daniel 2: Kingdoms &amp; the Stone Bible Quiz | Word Oasis">
     <meta property="og:description" content="Trace the great image from Babylon through divided kingdoms to God's everlasting kingdom.">
@@ -130,7 +130,7 @@
     </header>
 
     <main>
-      <section class="quiz-hero">
+      <section class="quiz-hero study-hero" data-hero-json="/studies/hero-images.json">
         <div class="container quiz-hero-grid">
           <div>
             <nav class="breadcrumb quiz-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / Quizzes</nav>
@@ -138,8 +138,8 @@
             <h1 tabindex="-1">Bible knowledge quizzes</h1>
             <p>Choose a topic, answer 10 questions, learn from Scripture references, and share your score with friends.</p>
             <div class="quiz-hero-stats" aria-label="Quiz collection overview">
-                  <span><strong>10</strong> quizzes</span>
-                  <span><strong>100</strong> questions</span>
+                  <span><strong>16</strong> quizzes</span>
+                  <span><strong>160</strong> questions</span>
               <span>Scripture references included</span>
             </div>
           </div>
@@ -147,6 +147,10 @@
             <svg viewBox="0 0 24 24"><path d="M3 6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1Zm1.5 4.5h4v-4h-4Zm8.25-5a.75.75 0 0 0 0 1.5h7.5a.75.75 0 0 0 0-1.5h-7.5Zm0 6a.75.75 0 0 0 0 1.5h7.5a.75.75 0 0 0 0-1.5h-7.5Zm0 6a.75.75 0 0 0 0 1.5h7.5a.75.75 0 0 0 0-1.5h-7.5Zm-2.97-2.53a.75.75 0 0 1 0 1.06l-3.5 3.5a.75.75 0 0 1-1.06 0l-2-2a.75.75 0 1 1 1.06-1.06l1.47 1.47 2.97-2.97a.75.75 0 0 1 1.06 0Z"/></svg>
           </div>
         </div>
+        <p class="hero-photo-credit" data-study-hero-credit hidden>
+          Photo by <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer" data-study-hero-photographer>an Unsplash photographer</a>
+          on <a href="https://unsplash.com/collections/V5AZZAmP4ZY/bible-study" target="_blank" rel="noopener noreferrer" data-study-hero-photo-link>Unsplash</a>
+        </p>
       </section>
 
       <section class="section quiz-directory-section" data-quiz-directory>
@@ -154,118 +158,239 @@
           <div class="section-heading">
             <p class="eyebrow">Choose your challenge</p>
             <h2>Which quiz will you try first?</h2>
-            <p>Each quiz has 10 multiple-choice questions with immediate feedback and a Bible reference for further study.</p>
+            <p>16 quizzes, organized by theme. Each has 10 multiple-choice questions with immediate feedback and a Bible reference for further study.</p>
           </div>
-          <div class="quiz-grid">
-            <article class="quiz-card">
-              <span class="quiz-card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"/></svg>
-              </span>
-              <span class="quiz-card-meta">10 questions · Beginner</span>
-              <h3>Bible Basics</h3>
-              <p>Books, structure, and some of Scripture's best-known passages.</p>
-              <button type="button" data-start-quiz="bible-basics">Start quiz <span aria-hidden="true">→</span></button>
-            </article>
-            <article class="quiz-card">
-              <span class="quiz-card-icon quiz-card-icon-gold" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 19a7 7 0 1 1 0-14 7 7 0 0 1 0 14Zm0-1.5a5.5 5.5 0 1 0 0-11 5.5 5.5 0 1 0 0 11Zm-5.657.157a.75.75 0 0 1 0 1.06l-1.768 1.768a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.767-1.768a.75.75 0 0 1 1.061 0ZM3.515 3.515a.75.75 0 0 1 1.06 0l1.768 1.768a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L3.515 4.575a.75.75 0 0 1 0-1.06ZM12 0a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 12 0ZM4 12a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h2.5A.75.75 0 0 1 4 12Zm8 8a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0v-2.5A.75.75 0 0 1 12 20Zm12-8a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h2.5A.75.75 0 0 1 24 12Zm-6.343 5.657a.75.75 0 0 1 1.06 0l1.768 1.768a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-1.768-1.767a.75.75 0 0 1 0-1.061Zm2.828-14.142a.75.75 0 0 1 0 1.06l-1.768 1.768a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l1.767-1.768a.75.75 0 0 1 1.061 0Z"/></svg>
-              </span>
-              <span class="quiz-card-meta">10 questions · Beginner</span>
-              <h3>The Life of Jesus</h3>
-              <p>Jesus' birth, ministry, miracles, death, resurrection, and commission.</p>
-              <button type="button" data-start-quiz="life-of-jesus">Start quiz <span aria-hidden="true">→</span></button>
-            </article>
-            <article class="quiz-card">
-              <span class="quiz-card-icon quiz-card-icon-purple" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M.683 23.174V.826a.826.826 0 0 1 1.653 0v22.348a.826.826 0 0 1-1.653 0m5.406 0V7.354a.826.826 0 0 1 1.652 0v15.82a.827.827 0 0 1-1.652 0m5.363 0V3.542a.826.826 0 0 1 1.652 0v19.632a.827.827 0 0 1-1.652 0m5.975-18.899a.827.827 0 0 1 1.012.585l4.85 18.1a.826.826 0 0 1-1.597.428l-4.85-18.1a.827.827 0 0 1 .585-1.013"/></svg>
-              </span>
-              <span class="quiz-card-meta">10 questions · Intermediate</span>
+
+          <nav class="quiz-jump-nav" aria-label="Jump to a quiz category">
+            <a href="#quiz-category-foundations">Foundations</a>
+            <a href="#quiz-category-gospels">Life of Jesus</a>
+            <a href="#quiz-category-old-testament">Old Testament</a>
+            <a href="#quiz-category-new-testament">New Testament</a>
+            <a href="#quiz-category-characters">Bible Characters</a>
+            <a href="#quiz-category-prophecy">Prophecy</a>
+          </nav>
+
+          <div class="quiz-category" id="quiz-category-foundations">
+            <div class="quiz-category-header">
+              <p class="eyebrow">Start here</p>
+              <h3>Bible Foundations</h3>
+              <p>The Bible's books, structure, and best-known passages.</p>
+            </div>
+            <div class="quiz-grid">
+              <article class="quiz-card">
+                <span class="quiz-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"/></svg>
+                </span>
+                <span class="quiz-card-meta">10 questions · Beginner</span>
+                <h3>Bible Basics</h3>
+                <p>Books, structure, and some of Scripture's best-known passages.</p>
+                <button type="button" data-start-quiz="bible-basics">Start quiz <span aria-hidden="true">→</span></button>
+              </article>
+            </div>
+          </div>
+
+          <div class="quiz-category" id="quiz-category-gospels">
+            <div class="quiz-category-header">
+              <p class="eyebrow">Gospels</p>
+              <h3>Life of Jesus &amp; the Gospels</h3>
+              <p>His birth, ministry, parables, miracles, death, and resurrection.</p>
+            </div>
+            <div class="quiz-grid">
+              <article class="quiz-card">
+                <span class="quiz-card-icon quiz-card-icon-gold" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 19a7 7 0 1 1 0-14 7 7 0 0 1 0 14Zm0-1.5a5.5 5.5 0 1 0 0-11 5.5 5.5 0 1 0 0 11Zm-5.657.157a.75.75 0 0 1 0 1.06l-1.768 1.768a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.767-1.768a.75.75 0 0 1 1.061 0ZM3.515 3.515a.75.75 0 0 1 1.06 0l1.768 1.768a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L3.515 4.575a.75.75 0 0 1 0-1.06ZM12 0a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 12 0ZM4 12a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h2.5A.75.75 0 0 1 4 12Zm8 8a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-1.5 0v-2.5A.75.75 0 0 1 12 20Zm12-8a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h2.5A.75.75 0 0 1 24 12Zm-6.343 5.657a.75.75 0 0 1 1.06 0l1.768 1.768a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-1.768-1.767a.75.75 0 0 1 0-1.061Zm2.828-14.142a.75.75 0 0 1 0 1.06l-1.768 1.768a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l1.767-1.768a.75.75 0 0 1 1.061 0Z"/></svg>
+                </span>
+                <span class="quiz-card-meta">10 questions · Beginner</span>
+                <h3>The Life of Jesus</h3>
+                <p>Jesus' birth, ministry, miracles, death, resurrection, and commission.</p>
+                <button type="button" data-start-quiz="life-of-jesus">Start quiz <span aria-hidden="true">→</span></button>
+              </article>
+              <article class="quiz-card">
+                <span class="quiz-card-icon quiz-card-icon-teal" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M4.5 3A2.5 2.5 0 0 0 2 5.5v11A2.5 2.5 0 0 0 4.5 19H9l3 3 3-3h4.5A2.5 2.5 0 0 0 22 16.5v-11A2.5 2.5 0 0 0 19.5 3Zm-1 2.5a1 1 0 0 1 1-1h15a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-5.121l-2.086 2.086a.5.5 0 0 1-.586 0L9.621 17.5H4.5a1 1 0 0 1-1-1Z"/></svg>
+                </span>
+                <span class="quiz-card-meta">10 questions · Beginner</span>
+                <h3>Parables of Jesus</h3>
+                <p>The stories Jesus told to reveal the kingdom of heaven.</p>
+                <button type="button" data-start-quiz="parables-of-jesus">Start quiz <span aria-hidden="true">→</span></button>
+              </article>
+              <article class="quiz-card">
+                <span class="quiz-card-icon quiz-card-icon-indigo" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 2l2 7 7 2-7 2-2 7-2-7-7-2 7-2Z"/></svg>
+                </span>
+                <span class="quiz-card-meta">10 questions · Beginner</span>
+                <h3>Miracles of Jesus</h3>
+                <p>His healings, provisions, and power over nature and death.</p>
+                <button type="button" data-start-quiz="miracles-of-jesus">Start quiz <span aria-hidden="true">→</span></button>
+              </article>
+            </div>
+          </div>
+
+          <div class="quiz-category" id="quiz-category-old-testament">
+            <div class="quiz-category-header">
+              <p class="eyebrow">Genesis to Malachi</p>
               <h3>Old Testament</h3>
               <p>Creation, Israel's history, kings, wisdom, and the prophets.</p>
-              <button type="button" data-start-quiz="old-testament">Start quiz <span aria-hidden="true">→</span></button>
-            </article>
-            <article class="quiz-card">
-              <span class="quiz-card-icon quiz-card-icon-green" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M1.75 3h20.5c.966 0 1.75.784 1.75 1.75v14a1.75 1.75 0 0 1-1.75 1.75H1.75A1.75 1.75 0 0 1 0 18.75v-14C0 3.784.784 3 1.75 3ZM1.5 7.412V18.75c0 .138.112.25.25.25h20.5a.25.25 0 0 0 .25-.25V7.412l-9.52 6.433c-.592.4-1.368.4-1.96 0Zm0-2.662v.852l10.36 7a.25.25 0 0 0 .28 0l10.36-7V4.75a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25Z"/></svg>
-              </span>
-              <span class="quiz-card-meta">10 questions · Intermediate</span>
-              <h3>New Testament</h3>
-              <p>Acts, the apostles, the early church, and New Testament teaching.</p>
-              <button type="button" data-start-quiz="new-testament">Start quiz <span aria-hidden="true">→</span></button>
-            </article>
-            <article class="quiz-card">
-              <span class="quiz-card-icon quiz-card-icon-rose" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M3.5 8a5.5 5.5 0 1 1 8.596 4.547 9.005 9.005 0 0 1 5.9 8.18.751.751 0 0 1-1.5.045 7.5 7.5 0 0 0-14.993 0 .75.75 0 0 1-1.499-.044 9.005 9.005 0 0 1 5.9-8.181A5.496 5.496 0 0 1 3.5 8ZM9 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm8.29 4c-.148 0-.292.01-.434.03a.75.75 0 1 1-.212-1.484 4.53 4.53 0 0 1 3.38 8.097 6.69 6.69 0 0 1 3.956 6.107.75.75 0 0 1-1.5 0 5.193 5.193 0 0 0-3.696-4.972l-.534-.16v-1.676l.41-.209A3.03 3.03 0 0 0 17.29 8Z"/></svg>
-              </span>
-              <span class="quiz-card-meta">10 questions · Mixed</span>
-              <h3>People &amp; Places</h3>
-              <p>Families, journeys, callings, cities, rivers, and memorable encounters.</p>
-              <button type="button" data-start-quiz="people-and-places">Start quiz <span aria-hidden="true">→</span></button>
-            </article>
-            <article class="quiz-card quiz-card-book">
-              <span class="quiz-card-icon quiz-card-icon-prophecy" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M.408 15.13a2 2 0 0 1 .59-2.642L17.038 1.33a1.999 1.999 0 0 1 2.85.602l2.828 4.644a2 2 0 0 1-.851 2.847l-17.762 8.43a2 2 0 0 1-2.59-.807Zm5.263-4.066 1.987 3.44 8.712-4.135-2.857-4.76Zm12.06-1.34.001-.001 3.49-1.656a.498.498 0 0 0 .212-.712l-2.826-4.644a.503.503 0 0 0-.713-.151l-3.148 2.19Zm-13.295 2.2L1.854 13.72a.5.5 0 0 0-.147.66l1.105 1.915a.5.5 0 0 0 .648.201l2.838-1.347ZM17.155 22.87a.75.75 0 0 0 .226-1.036l-4-6.239a.75.75 0 0 0-.941-.278l-2.75 1.25a.75.75 0 0 0-.318.274l-3.25 4.989a.75.75 0 0 0 1.256.819l3.131-4.806.51-.232v5.64a.75.75 0 1 0 1.5 0v-6.22l3.6 5.613a.75.75 0 0 0 1.036.226Z"/></svg>
-              </span>
-              <span class="quiz-card-meta">5 quizzes · Prophecy</span>
-              <h3>Book of Daniel</h3>
-              <p>Trace prophecy from ancient kingdoms to the time of the end through five focused quizzes.</p>
-              <button type="button" data-open-daniel>Explore Daniel <span aria-hidden="true">→</span></button>
-            </article>
-            <div class="quiz-series-heading" data-daniel-directory hidden>
-              <p class="eyebrow">Daniel prophecy series</p>
-              <h3>Trace prophecy from ancient kingdoms to the time of the end.</h3>
-              <p>These quizzes follow a historicist, sanctuary-centered reading and distinguish direct biblical identifications from later historical interpretation.</p>
             </div>
-            <div class="quiz-daniel-grid" data-daniel-directory hidden>
-            <article class="quiz-card quiz-card-prophecy">
-              <span class="quiz-card-icon quiz-card-icon-prophecy" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M11.063 1.456a1.749 1.749 0 0 1 1.874 0l8.383 5.316a1.751 1.751 0 0 1 0 2.956l-8.383 5.316a1.749 1.749 0 0 1-1.874 0L2.68 9.728a1.751 1.751 0 0 1 0-2.956Zm1.071 1.267a.25.25 0 0 0-.268 0L3.483 8.039a.25.25 0 0 0 0 .422l8.383 5.316a.25.25 0 0 0 .268 0l8.383-5.316a.25.25 0 0 0 0-.422Z"/><path d="M1.867 12.324a.75.75 0 0 1 1.035-.232l8.964 5.685a.25.25 0 0 0 .268 0l8.964-5.685a.75.75 0 0 1 .804 1.267l-8.965 5.685a1.749 1.749 0 0 1-1.874 0l-8.965-5.685a.75.75 0 0 1-.231-1.035Z"/><path d="M1.867 16.324a.75.75 0 0 1 1.035-.232l8.964 5.685a.25.25 0 0 0 .268 0l8.964-5.685a.75.75 0 0 1 .804 1.267l-8.965 5.685a1.749 1.749 0 0 1-1.874 0l-8.965-5.685a.75.75 0 0 1-.231-1.035Z"/></svg>
-              </span>
-              <span class="quiz-card-meta">10 questions · Prophecy</span>
-              <h3>Daniel 2: Kingdoms &amp; the Stone</h3>
-              <p>The great image, successive kingdoms, divided powers, and God's everlasting kingdom.</p>
-              <button type="button" data-start-quiz="daniel-2">Start quiz <span aria-hidden="true">→</span></button>
-            </article>
-            <article class="quiz-card quiz-card-prophecy">
-              <span class="quiz-card-icon quiz-card-icon-prophecy" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M13 15.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5Z"/><path d="M11.46.637a1.748 1.748 0 0 1 1.08 0l8.25 2.675A1.75 1.75 0 0 1 22 4.976V10c0 6.19-3.77 10.705-9.401 12.83a1.704 1.704 0 0 1-1.198 0C5.771 20.704 2 16.19 2 10V4.976c0-.76.49-1.43 1.21-1.664Zm.617 1.426a.253.253 0 0 0-.154 0L3.673 4.74a.25.25 0 0 0-.173.237V10c0 5.461 3.28 9.483 8.43 11.426a.199.199 0 0 0 .14 0C17.22 19.483 20.5 15.46 20.5 10V4.976a.25.25 0 0 0-.173-.237Z"/></svg>
-              </span>
-              <span class="quiz-card-meta">10 questions · Prophecy</span>
-              <h3>Daniel 7: Beasts &amp; Judgment</h3>
-              <p>The four beasts, little horn, heavenly judgment, and the kingdom of the saints.</p>
-              <button type="button" data-start-quiz="daniel-7">Start quiz <span aria-hidden="true">→</span></button>
-            </article>
-            <article class="quiz-card quiz-card-prophecy">
-              <span class="quiz-card-icon quiz-card-icon-prophecy" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M4.75 2h14.5a.75.75 0 0 1 0 1.5h-.75v2.982a4.75 4.75 0 0 1-2.215 4.017l-2.044 1.29a.25.25 0 0 0 0 .422l2.044 1.29a4.75 4.75 0 0 1 2.215 4.017V20.5h.75a.75.75 0 0 1 0 1.5H4.75a.75.75 0 0 1 0-1.5h.75v-2.982a4.75 4.75 0 0 1 2.215-4.017l2.044-1.29a.25.25 0 0 0 0-.422l-2.044-1.29A4.75 4.75 0 0 1 5.5 6.482V3.5h-.75a.75.75 0 0 1 0-1.5ZM17 3.5H7v2.982A3.25 3.25 0 0 0 8.516 9.23l2.044 1.29a1.75 1.75 0 0 1 0 2.96l-2.044 1.29A3.25 3.25 0 0 0 7 17.518V20.5h10v-2.982a3.25 3.25 0 0 0-1.516-2.748l-2.044-1.29a1.75 1.75 0 0 1 0-2.96l2.044-1.29A3.25 3.25 0 0 0 17 6.482Z"/></svg>
-              </span>
-              <span class="quiz-card-meta">10 questions · Prophecy</span>
-              <h3>Daniel 8–9: The 2,300 Days</h3>
-              <p>The ram, goat, sanctuary, seventy weeks, Messiah, and one connected prophetic timeline.</p>
-              <button type="button" data-start-quiz="daniel-8-9">Start quiz <span aria-hidden="true">→</span></button>
-            </article>
-            <article class="quiz-card quiz-card-prophecy">
-              <span class="quiz-card-icon quiz-card-icon-prophecy" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-<path d="M19.99 14.37V4.92C19.99 4.84 19.97 4.77 19.94 4.69C19.94 4.67 19.94 4.65 19.93 4.63C19.91 4.58 19.88 4.55 19.85 4.51C19.82 4.47 19.8 4.43 19.77 4.4C19.76 4.39 19.73 4.38 19.72 4.37C19.66 4.32 19.6 4.27 19.53 4.24C16.3 2.95 13.8 3.9 11.38 4.83C9.18 5.67 7.1 6.45 4.5 5.48V3.75C4.5 3.34 4.16 3 3.75 3C3.34 3 3 3.34 3 3.75V20.31C3 20.72 3.34 21.06 3.75 21.06C4.16 21.06 4.5 20.72 4.5 20.31V7.06C5.35 7.32 6.15 7.43 6.91 7.43C8.73 7.43 10.34 6.82 11.91 6.22C14.02 5.41 16.03 4.67 18.49 5.47V13.36C15.7 12.62 13.34 13.5 11.24 14.29C9.62 14.9 8.1 15.47 6.45 15.37C6.07 15.35 5.68 15.66 5.65 16.07C5.62 16.48 5.94 16.84 6.35 16.87C6.52 16.88 6.68 16.89 6.84 16.89C8.61 16.89 10.21 16.28 11.76 15.7C14.07 14.83 16.25 14 18.96 15.09C19.02 15.11 19.08 15.11 19.14 15.12C19.17 15.12 19.21 15.14 19.24 15.14C19.33 15.14 19.42 15.12 19.5 15.09C19.5 15.09 19.52 15.09 19.53 15.09C19.65 15.04 19.74 14.95 19.82 14.85C19.86 14.8 19.9 14.75 19.93 14.68C19.95 14.63 19.95 14.58 19.96 14.53C19.96 14.49 19.99 14.45 19.99 14.4V14.37Z" fill="currentColor"/>
-</svg>
-              </span>
-              <span class="quiz-card-meta">10 questions · Prophecy</span>
-              <h3>Daniel 11: The Great Conflict</h3>
-              <p>Persia, Greece, Rome, the kings of north and south, and the final crisis.</p>
-              <button type="button" data-start-quiz="daniel-11">Start quiz <span aria-hidden="true">→</span></button>
-            </article>
-            <article class="quiz-card quiz-card-prophecy">
-              <span class="quiz-card-icon quiz-card-icon-prophecy" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12.5 7.25a.75.75 0 0 0-1.5 0v5.5c0 .27.144.518.378.651l3.5 2a.75.75 0 0 0 .744-1.302L12.5 12.315V7.25Z"/><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"/></svg>
-              </span>
-              <span class="quiz-card-meta">10 questions · Prophecy</span>
-              <h3>Daniel 12: The Time of the End</h3>
-              <p>Michael, deliverance, resurrection, the unsealed book, and final prophetic periods.</p>
-              <button type="button" data-start-quiz="daniel-12">Start quiz <span aria-hidden="true">→</span></button>
-            </article>
+            <div class="quiz-grid">
+              <article class="quiz-card">
+                <span class="quiz-card-icon quiz-card-icon-purple" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M.683 23.174V.826a.826.826 0 0 1 1.653 0v22.348a.826.826 0 0 1-1.653 0m5.406 0V7.354a.826.826 0 0 1 1.652 0v15.82a.827.827 0 0 1-1.652 0m5.363 0V3.542a.826.826 0 0 1 1.652 0v19.632a.827.827 0 0 1-1.652 0m5.975-18.899a.827.827 0 0 1 1.012.585l4.85 18.1a.826.826 0 0 1-1.597.428l-4.85-18.1a.827.827 0 0 1 .585-1.013"/></svg>
+                </span>
+                <span class="quiz-card-meta">10 questions · Intermediate</span>
+                <h3>Old Testament</h3>
+                <p>Creation, Israel's history, kings, wisdom, and the prophets.</p>
+                <button type="button" data-start-quiz="old-testament">Start quiz <span aria-hidden="true">→</span></button>
+              </article>
             </div>
           </div>
+
+          <div class="quiz-category" id="quiz-category-new-testament">
+            <div class="quiz-category-header">
+              <p class="eyebrow">Matthew to Revelation</p>
+              <h3>New Testament</h3>
+              <p>The apostles, the early church, and New Testament teaching.</p>
+            </div>
+            <div class="quiz-grid">
+              <article class="quiz-card">
+                <span class="quiz-card-icon quiz-card-icon-green" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M1.75 3h20.5c.966 0 1.75.784 1.75 1.75v14a1.75 1.75 0 0 1-1.75 1.75H1.75A1.75 1.75 0 0 1 0 18.75v-14C0 3.784.784 3 1.75 3ZM1.5 7.412V18.75c0 .138.112.25.25.25h20.5a.25.25 0 0 0 .25-.25V7.412l-9.52 6.433c-.592.4-1.368.4-1.96 0Zm0-2.662v.852l10.36 7a.25.25 0 0 0 .28 0l10.36-7V4.75a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25Z"/></svg>
+                </span>
+                <span class="quiz-card-meta">10 questions · Intermediate</span>
+                <h3>New Testament</h3>
+                <p>Acts, the apostles, the early church, and New Testament teaching.</p>
+                <button type="button" data-start-quiz="new-testament">Start quiz <span aria-hidden="true">→</span></button>
+              </article>
+              <article class="quiz-card">
+                <span class="quiz-card-icon quiz-card-icon-teal" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 2c1.5 2 4 5 4 9a4 4 0 0 1-8 0c0-1 .3-2 1-3 .2 1.4 1 2 2 2a1.5 1.5 0 0 0 1.5-1.5c0-1-1-2-1-4 0-1 .2-2 .5-2.5Z"/></svg>
+                </span>
+                <span class="quiz-card-meta">10 questions · Intermediate</span>
+                <h3>Book of Acts</h3>
+                <p>The Holy Spirit's work through the apostles and the early church.</p>
+                <button type="button" data-start-quiz="book-of-acts">Start quiz <span aria-hidden="true">→</span></button>
+              </article>
+            </div>
+          </div>
+
+          <div class="quiz-category" id="quiz-category-characters">
+            <div class="quiz-category-header">
+              <p class="eyebrow">People of the Book</p>
+              <h3>Bible Characters</h3>
+              <p>Families, journeys, callings, and the women and men who shaped Scripture's story.</p>
+            </div>
+            <div class="quiz-grid">
+              <article class="quiz-card">
+                <span class="quiz-card-icon quiz-card-icon-rose" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M3.5 8a5.5 5.5 0 1 1 8.596 4.547 9.005 9.005 0 0 1 5.9 8.18.751.751 0 0 1-1.5.045 7.5 7.5 0 0 0-14.993 0 .75.75 0 0 1-1.499-.044 9.005 9.005 0 0 1 5.9-8.181A5.496 5.496 0 0 1 3.5 8ZM9 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm8.29 4c-.148 0-.292.01-.434.03a.75.75 0 1 1-.212-1.484 4.53 4.53 0 0 1 3.38 8.097 6.69 6.69 0 0 1 3.956 6.107.75.75 0 0 1-1.5 0 5.193 5.193 0 0 0-3.696-4.972l-.534-.16v-1.676l.41-.209A3.03 3.03 0 0 0 17.29 8Z"/></svg>
+                </span>
+                <span class="quiz-card-meta">10 questions · Mixed</span>
+                <h3>People &amp; Places</h3>
+                <p>Families, journeys, callings, cities, rivers, and memorable encounters.</p>
+                <button type="button" data-start-quiz="people-and-places">Start quiz <span aria-hidden="true">→</span></button>
+              </article>
+              <article class="quiz-card">
+                <span class="quiz-card-icon quiz-card-icon-indigo" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-10-9.5C.6 8.1 2.3 4 6 4c2 0 3.4 1.1 4 2.4C10.6 5.1 12 4 14 4c3.7 0 5.4 4.1 4 7.5C19.5 16.4 12 21 12 21Z"/></svg>
+                </span>
+                <span class="quiz-card-meta">10 questions · Mixed</span>
+                <h3>Women of the Bible</h3>
+                <p>The faithful, courageous, and pivotal women found throughout Scripture.</p>
+                <button type="button" data-start-quiz="women-of-the-bible">Start quiz <span aria-hidden="true">→</span></button>
+              </article>
+            </div>
+          </div>
+
+          <div class="quiz-category" id="quiz-category-prophecy">
+            <div class="quiz-category-header">
+              <p class="eyebrow">Daniel &amp; Revelation</p>
+              <h3>Prophecy</h3>
+              <p>Symbols, beasts, and timelines from Daniel to the book of Revelation.</p>
+            </div>
+            <div class="quiz-grid">
+              <article class="quiz-card">
+                <span class="quiz-card-icon quiz-card-icon-prophecy" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 5c-5.5 0-9.5 4.5-10.5 7 1 2.5 5 7 10.5 7s9.5-4.5 10.5-7c-1-2.5-5-7-10.5-7Zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-2.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/></svg>
+                </span>
+                <span class="quiz-card-meta">10 questions · Prophecy</span>
+                <h3>Prophetic Symbols</h3>
+                <p>Learn what beasts, horns, and other symbols mean in Bible prophecy.</p>
+                <button type="button" data-start-quiz="prophetic-symbols">Start quiz <span aria-hidden="true">→</span></button>
+              </article>
+              <article class="quiz-card">
+                <span class="quiz-card-icon quiz-card-icon-prophecy" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><rect x="6" y="4" width="12" height="16" rx="1"/><circle cx="6" cy="4" r="2"/><circle cx="18" cy="4" r="2"/><circle cx="6" cy="20" r="2"/><circle cx="18" cy="20" r="2"/></svg>
+                </span>
+                <span class="quiz-card-meta">10 questions · Prophecy</span>
+                <h3>Book of Revelation</h3>
+                <p>The churches, seals, trumpets, and the new heaven and earth.</p>
+                <button type="button" data-start-quiz="book-of-revelation">Start quiz <span aria-hidden="true">→</span></button>
+              </article>
+              <article class="quiz-card quiz-card-book">
+                <span class="quiz-card-icon quiz-card-icon-prophecy" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M.408 15.13a2 2 0 0 1 .59-2.642L17.038 1.33a1.999 1.999 0 0 1 2.85.602l2.828 4.644a2 2 0 0 1-.851 2.847l-17.762 8.43a2 2 0 0 1-2.59-.807Zm5.263-4.066 1.987 3.44 8.712-4.135-2.857-4.76Zm12.06-1.34.001-.001 3.49-1.656a.498.498 0 0 0 .212-.712l-2.826-4.644a.503.503 0 0 0-.713-.151l-3.148 2.19Zm-13.295 2.2L1.854 13.72a.5.5 0 0 0-.147.66l1.105 1.915a.5.5 0 0 0 .648.201l2.838-1.347ZM17.155 22.87a.75.75 0 0 0 .226-1.036l-4-6.239a.75.75 0 0 0-.941-.278l-2.75 1.25a.75.75 0 0 0-.318.274l-3.25 4.989a.75.75 0 0 0 1.256.819l3.131-4.806.51-.232v5.64a.75.75 0 1 0 1.5 0v-6.22l3.6 5.613a.75.75 0 0 0 1.036.226Z"/></svg>
+                </span>
+                <span class="quiz-card-meta">5 quizzes · Prophecy</span>
+                <h3>Book of Daniel</h3>
+                <p>Trace prophecy from ancient kingdoms to the time of the end through five focused quizzes.</p>
+                <button type="button" data-open-series="daniel">Explore Daniel <span aria-hidden="true">→</span></button>
+              </article>
+              <div class="quiz-series-heading" data-series-directory="daniel" hidden>
+                <p class="eyebrow">Daniel prophecy series</p>
+                <h3>Trace prophecy from ancient kingdoms to the time of the end.</h3>
+                <p>These quizzes follow a historicist, sanctuary-centered reading and distinguish direct biblical identifications from later historical interpretation.</p>
+              </div>
+              <div class="quiz-daniel-grid" data-series-directory="daniel" hidden>
+              <article class="quiz-card quiz-card-prophecy">
+                <span class="quiz-card-icon quiz-card-icon-prophecy" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M11.063 1.456a1.749 1.749 0 0 1 1.874 0l8.383 5.316a1.751 1.751 0 0 1 0 2.956l-8.383 5.316a1.749 1.749 0 0 1-1.874 0L2.68 9.728a1.751 1.751 0 0 1 0-2.956Zm1.071 1.267a.25.25 0 0 0-.268 0L3.483 8.039a.25.25 0 0 0 0 .422l8.383 5.316a.25.25 0 0 0 .268 0l8.383-5.316a.25.25 0 0 0 0-.422Z"/><path d="M1.867 12.324a.75.75 0 0 1 1.035-.232l8.964 5.685a.25.25 0 0 0 .268 0l8.964-5.685a.75.75 0 0 1 .804 1.267l-8.965 5.685a1.749 1.749 0 0 1-1.874 0l-8.965-5.685a.75.75 0 0 1-.231-1.035Z"/><path d="M1.867 16.324a.75.75 0 0 1 1.035-.232l8.964 5.685a.25.25 0 0 0 .268 0l8.964-5.685a.75.75 0 0 1 .804 1.267l-8.965 5.685a1.749 1.749 0 0 1-1.874 0l-8.965-5.685a.75.75 0 0 1-.231-1.035Z"/></svg>
+                </span>
+                <span class="quiz-card-meta">10 questions · Prophecy</span>
+                <h3>Daniel 2: Kingdoms &amp; the Stone</h3>
+                <p>The great image, successive kingdoms, divided powers, and God's everlasting kingdom.</p>
+                <button type="button" data-start-quiz="daniel-2">Start quiz <span aria-hidden="true">→</span></button>
+              </article>
+              <article class="quiz-card quiz-card-prophecy">
+                <span class="quiz-card-icon quiz-card-icon-prophecy" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M13 15.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5Z"/><path d="M11.46.637a1.748 1.748 0 0 1 1.08 0l8.25 2.675A1.75 1.75 0 0 1 22 4.976V10c0 6.19-3.77 10.705-9.401 12.83a1.704 1.704 0 0 1-1.198 0C5.771 20.704 2 16.19 2 10V4.976c0-.76.49-1.43 1.21-1.664Zm.617 1.426a.253.253 0 0 0-.154 0L3.673 4.74a.25.25 0 0 0-.173.237V10c0 5.461 3.28 9.483 8.43 11.426a.199.199 0 0 0 .14 0C17.22 19.483 20.5 15.46 20.5 10V4.976a.25.25 0 0 0-.173-.237Z"/></svg>
+                </span>
+                <span class="quiz-card-meta">10 questions · Prophecy</span>
+                <h3>Daniel 7: Beasts &amp; Judgment</h3>
+                <p>The four beasts, little horn, heavenly judgment, and the kingdom of the saints.</p>
+                <button type="button" data-start-quiz="daniel-7">Start quiz <span aria-hidden="true">→</span></button>
+              </article>
+              <article class="quiz-card quiz-card-prophecy">
+                <span class="quiz-card-icon quiz-card-icon-prophecy" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M4.75 2h14.5a.75.75 0 0 1 0 1.5h-.75v2.982a4.75 4.75 0 0 1-2.215 4.017l-2.044 1.29a.25.25 0 0 0 0 .422l2.044 1.29a4.75 4.75 0 0 1 2.215 4.017V20.5h.75a.75.75 0 0 1 0 1.5H4.75a.75.75 0 0 1 0-1.5h.75v-2.982a4.75 4.75 0 0 1 2.215-4.017l2.044-1.29a.25.25 0 0 0 0-.422l-2.044-1.29A4.75 4.75 0 0 1 5.5 6.482V3.5h-.75a.75.75 0 0 1 0-1.5ZM17 3.5H7v2.982A3.25 3.25 0 0 0 8.516 9.23l2.044 1.29a1.75 1.75 0 0 1 0 2.96l-2.044 1.29A3.25 3.25 0 0 0 7 17.518V20.5h10v-2.982a3.25 3.25 0 0 0-1.516-2.748l-2.044-1.29a1.75 1.75 0 0 1 0-2.96l2.044-1.29A3.25 3.25 0 0 0 17 6.482Z"/></svg>
+                </span>
+                <span class="quiz-card-meta">10 questions · Prophecy</span>
+                <h3>Daniel 8–9: The 2,300 Days</h3>
+                <p>The ram, goat, sanctuary, seventy weeks, Messiah, and one connected prophetic timeline.</p>
+                <button type="button" data-start-quiz="daniel-8-9">Start quiz <span aria-hidden="true">→</span></button>
+              </article>
+              <article class="quiz-card quiz-card-prophecy">
+                <span class="quiz-card-icon quiz-card-icon-prophecy" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M19.99 14.37V4.92C19.99 4.84 19.97 4.77 19.94 4.69C19.94 4.67 19.94 4.65 19.93 4.63C19.91 4.58 19.88 4.55 19.85 4.51C19.82 4.47 19.8 4.43 19.77 4.4C19.76 4.39 19.73 4.38 19.72 4.37C19.66 4.32 19.6 4.27 19.53 4.24C16.3 2.95 13.8 3.9 11.38 4.83C9.18 5.67 7.1 6.45 4.5 5.48V3.75C4.5 3.34 4.16 3 3.75 3C3.34 3 3 3.34 3 3.75V20.31C3 20.72 3.34 21.06 3.75 21.06C4.16 21.06 4.5 20.72 4.5 20.31V7.06C5.35 7.32 6.15 7.43 6.91 7.43C8.73 7.43 10.34 6.82 11.91 6.22C14.02 5.41 16.03 4.67 18.49 5.47V13.36C15.7 12.62 13.34 13.5 11.24 14.29C9.62 14.9 8.1 15.47 6.45 15.37C6.07 15.35 5.68 15.66 5.65 16.07C5.62 16.48 5.94 16.84 6.35 16.87C6.52 16.88 6.68 16.89 6.84 16.89C8.61 16.89 10.21 16.28 11.76 15.7C14.07 14.83 16.25 14 18.96 15.09C19.02 15.11 19.08 15.11 19.14 15.12C19.17 15.12 19.21 15.14 19.24 15.14C19.33 15.14 19.42 15.12 19.5 15.09C19.5 15.09 19.52 15.09 19.53 15.09C19.65 15.04 19.74 14.95 19.82 14.85C19.86 14.8 19.9 14.75 19.93 14.68C19.95 14.63 19.95 14.58 19.96 14.53C19.96 14.49 19.99 14.45 19.99 14.4V14.37Z" fill="currentColor"/>
+</svg>
+                </span>
+                <span class="quiz-card-meta">10 questions · Prophecy</span>
+                <h3>Daniel 11: The Great Conflict</h3>
+                <p>Persia, Greece, Rome, the kings of north and south, and the final crisis.</p>
+                <button type="button" data-start-quiz="daniel-11">Start quiz <span aria-hidden="true">→</span></button>
+              </article>
+              <article class="quiz-card quiz-card-prophecy">
+                <span class="quiz-card-icon quiz-card-icon-prophecy" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12.5 7.25a.75.75 0 0 0-1.5 0v5.5c0 .27.144.518.378.651l3.5 2a.75.75 0 0 0 .744-1.302L12.5 12.315V7.25Z"/><path d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM2.5 12a9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5-9.5A9.5 9.5 0 0 0 12 2.5 9.5 9.5 0 0 0 2.5 12Z"/></svg>
+                </span>
+                <span class="quiz-card-meta">10 questions · Prophecy</span>
+                <h3>Daniel 12: The Time of the End</h3>
+                <p>Michael, deliverance, resurrection, the unsealed book, and final prophetic periods.</p>
+                <button type="button" data-start-quiz="daniel-12">Start quiz <span aria-hidden="true">→</span></button>
+              </article>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -316,6 +441,11 @@
               <strong class="quiz-result-score" data-quiz-result-score>0/10</strong>
               <h3 tabindex="-1" data-quiz-result-title>Well done!</h3>
               <p data-quiz-result-message></p>
+              <div class="quiz-result-study" data-quiz-result-study hidden>
+                <p class="quiz-result-study-label">Go deeper</p>
+                <p class="quiz-result-study-intro" data-quiz-result-study-intro>Continue learning with a related Bible study:</p>
+                <div class="quiz-result-study-links" data-quiz-result-study-links></div>
+              </div>
               <div class="quiz-result-actions">
                 <button type="button" class="quiz-retake" data-quiz-retake>Try again</button>
                 <button type="button" class="quiz-choose" data-quiz-back>Choose another quiz</button>
@@ -413,8 +543,9 @@
     </div>
 
     <script src="/theme.js?v=20261073"></script>
+    <script src="/studies-hero-rotation.js?v=20261128"></script>
     <script src="/pwa.js?v=20261073"></script>
     <script src="/verse-modal.js?v=20261125"></script>
-    <script src="/quizzes.js?v=20261131"></script>
+    <script src="/quizzes.js?v=20261151"></script>
   </body>
 </html>

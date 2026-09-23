@@ -2,6 +2,7 @@
   const hero = document.querySelector(".study-hero");
   if (!hero) return;
 
+  const heroImagesUrl = hero.dataset.heroJson || "/studies/hero-images.json";
   const previousKey = "word-oasis-previous-study-hero";
 
   function applyPhoto(photo) {
@@ -25,7 +26,7 @@
     credit.hidden = false;
   }
 
-  fetch("/studies/hero-images.json")
+  fetch(heroImagesUrl)
     .then((response) => (response.ok ? response.json() : null))
     .then((data) => {
       const photos = data && Array.isArray(data.images) ? data.images : [];

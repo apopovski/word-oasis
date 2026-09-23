@@ -21,7 +21,7 @@ const SITE_URL = "https://wordoasis.org";
 const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZSB_Tf-MEbTUrmSkEqwNn2gjtxqF4cv16pMCDMmV3voJeJAFhIYBQ/exec";
 const SITE_PUBLISHED_DATE = "2026-09-13";
 const BUILD_DATE = new Date().toISOString().slice(0, 10);
-const STYLES_VERSION = "20261144";
+const STYLES_VERSION = "20261152";
 const EDITORIAL_TEAM_NAME = "Word Oasis Editorial Team";
 const EDITORIAL_TEAM_ID = `${SITE_URL}/about/#editorial-team`;
 
@@ -1053,9 +1053,30 @@ function answersIndexPage(answers) {
           });
         });
 
-        const initialTopic = location.hash.replace("#topic-", "");
-        if (initialTopic && cards.some((card) => card.dataset.answerTopics.split(" ").includes(initialTopic))) {
-          applyFilter(initialTopic);
+        const toSlug = (value) =>
+          value
+            .toLowerCase()
+            .replace(/&/g, " and ")
+            .replace(/['\u2019]/g, "")
+            .replace(/[^a-z0-9]+/g, "-")
+            .replace(/^-+|-+$/g, "");
+
+        const params = new URLSearchParams(location.search);
+        const queryParam = (params.get("q") || "").trim();
+        if (queryParam && searchInput) {
+          searchInput.value = queryParam;
+        }
+
+        const topicParam = params.get("topic");
+        const hashTopic = location.hash.replace("#topic-", "");
+        const candidateTopic = topicParam ? toSlug(topicParam) : hashTopic;
+        const initialTopic =
+          candidateTopic && cards.some((card) => card.dataset.answerTopics.split(" ").includes(candidateTopic))
+            ? candidateTopic
+            : "all";
+
+        if (initialTopic !== "all" || queryParam) {
+          applyFilter(initialTopic, queryParam);
         }
       })();
     </script>`
@@ -1277,7 +1298,6 @@ function aboutPage() {
             <h2>Contact and corrections</h2>
             <p>If you find an error, unclear wording, a broken link, or a Bible reference that should be reconsidered, please contact Word Oasis. Correction requests are reviewed and, when appropriate, reflected in the updated date shown on answer pages.</p>
             <p><a class="text-link" href="/?inquiry=general#ask">Send a correction or question <span aria-hidden="true">→</span></a></p>
-            <p class="trust-small-note">Email contact: <a href="mailto:wordoasis7@gmail.com">wordoasis7@gmail.com</a></p>
           </article>
         </div>
       </section>

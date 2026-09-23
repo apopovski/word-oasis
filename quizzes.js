@@ -781,8 +781,518 @@
           explanation: "Daniel is told to go his way, rest, and stand in his allotted inheritance at the end of the days."
         }
       ]
+    },
+    {
+      id: "prophetic-symbols",
+      title: "Prophetic Symbols",
+      description: "Learn what beasts, horns, and other symbols mean in Bible prophecy.",
+      icon: "prophecy",
+      questions: [
+        {
+          question: "In Daniel 7, what do the four beasts represent?",
+          options: ["Four kings or kingdoms", "Four literal animals", "Four angels", "Four rivers"],
+          answer: 0,
+          reference: "Daniel 7:17, 23",
+          explanation: "Daniel is told directly that the four great beasts are four kings, or kingdoms, that arise on the earth."
+        },
+        {
+          question: "According to Revelation 17:15, what do “waters” symbolize?",
+          options: ["Peoples, multitudes, nations, and languages", "Literal oceans only", "Angels", "The New Jerusalem"],
+          answer: 0,
+          reference: "Revelation 17:15",
+          explanation: "The angel explains that the waters where the woman sits are peoples, multitudes, nations, and tongues."
+        },
+        {
+          question: "In apocalyptic prophecy, what does a \"woman\" commonly symbolize?",
+          options: ["The church", "A literal government", "A prophet", "A single nation only"],
+          answer: 0,
+          reference: "Revelation 12:1-2; 2 Corinthians 11:2",
+          explanation: "Scripture uses a woman as a symbol of the church, whether faithful (Revelation 12) or corrupt (Revelation 17)."
+        },
+        {
+          question: "Using the day-year principle drawn from Ezekiel 4:6 and Numbers 14:34, what does one prophetic day represent?",
+          options: ["One literal year", "One literal day", "One thousand years", "One week"],
+          answer: 0,
+          reference: "Ezekiel 4:6; Numbers 14:34",
+          explanation: "These passages establish the principle that in symbolic prophecy, a day stands for a literal year."
+        },
+        {
+          question: "In Revelation 1:20, what do the seven stars represent?",
+          options: ["The angels of the seven churches", "Seven literal planets", "Seven kings of Rome", "Seven seals"],
+          answer: 0,
+          reference: "Revelation 1:20",
+          explanation: "Jesus explains that the seven stars are the angels, or messengers, of the seven churches."
+        },
+        {
+          question: "In Revelation 1:20, what do the seven lampstands represent?",
+          options: ["The seven churches", "Seven altars", "Seven mountains", "Seven trumpets"],
+          answer: 0,
+          reference: "Revelation 1:20",
+          explanation: "The seven golden lampstands are identified as the seven churches John was writing to."
+        },
+        {
+          question: "In Daniel 7, what does a \"horn\" typically represent?",
+          options: ["A king or ruling power", "A literal trumpet", "A mountain range", "A river"],
+          answer: 0,
+          reference: "Daniel 7:24",
+          explanation: "The angel tells Daniel that the ten horns are ten kings, and the little horn is another king who arises among them."
+        },
+        {
+          question: "Who does the \"great dragon\" represent in Revelation 12?",
+          options: ["Satan, the devil", "A literal Roman emperor", "A wild beast", "An earthly kingdom only"],
+          answer: 0,
+          reference: "Revelation 12:9",
+          explanation: "Revelation directly identifies the great dragon as \"that old serpent, called the Devil, and Satan.\""
+        },
+        {
+          question: "What does Revelation 17:5 call end-time Babylon?",
+          options: ["The mother of prostitutes and of the abominations of the earth", "A literal river in Persia", "The New Jerusalem", "A faithful remnant church"],
+          answer: 0,
+          reference: "Revelation 17:5",
+          explanation: "Babylon is symbolically named as the source of spiritual confusion and corrupted worship opposed to God."
+        },
+        {
+          question: "According to Revelation 17:9-10, what do the beast's seven heads represent?",
+          options: ["Seven mountains and seven kings", "Seven churches", "Seven trumpets", "Seven angels"],
+          answer: 0,
+          reference: "Revelation 17:9-10",
+          explanation: "John is told plainly that the seven heads are seven mountains and also seven kings."
+        }
+      ]
+    },
+    {
+      id: "book-of-revelation",
+      title: "Book of Revelation",
+      description: "Journey through John's apocalypse: the churches, seals, trumpets, and the new heaven and earth.",
+      icon: "prophecy",
+      questions: [
+        {
+          question: "Who received the Revelation recorded in this book?",
+          options: ["The apostle John", "The apostle Paul", "Daniel", "Peter"],
+          answer: 0,
+          reference: "Revelation 1:1",
+          explanation: "The book opens by identifying John as the one to whom Jesus Christ revealed these things."
+        },
+        {
+          question: "On what island did John receive this vision?",
+          options: ["Patmos", "Crete", "Cyprus", "Malta"],
+          answer: 0,
+          reference: "Revelation 1:9",
+          explanation: "John says he was on the island called Patmos for the word of God and the testimony of Jesus."
+        },
+        {
+          question: "How many churches of Asia are addressed in Revelation 2-3?",
+          options: ["Seven", "Twelve", "Three", "Ten"],
+          answer: 0,
+          reference: "Revelation 1:11",
+          explanation: "John is told to write to the seven churches: Ephesus, Smyrna, Pergamos, Thyatira, Sardis, Philadelphia, and Laodicea."
+        },
+        {
+          question: "Which church is famously described as \"lukewarm\"?",
+          options: ["Laodicea", "Smyrna", "Philadelphia", "Ephesus"],
+          answer: 0,
+          reference: "Revelation 3:16",
+          explanation: "Laodicea is rebuked for being neither cold nor hot, but lukewarm."
+        },
+        {
+          question: "In Revelation 5, who alone is found worthy to open the sealed scroll?",
+          options: ["The Lamb, Jesus Christ", "An elder", "A mighty angel", "John himself"],
+          answer: 0,
+          reference: "Revelation 5:5-7",
+          explanation: "The Lion of the tribe of Judah, seen as a Lamb, is the only one worthy to take and open the scroll."
+        },
+        {
+          question: "What is the rider of the fourth, pale horse in Revelation 6 called?",
+          options: ["Death", "War", "Famine", "Conquest"],
+          answer: 0,
+          reference: "Revelation 6:8",
+          explanation: "The rider of the pale (or ashen) horse is named Death, with Hades following him."
+        },
+        {
+          question: "What is \"the number of the beast\" given in Revelation 13:18?",
+          options: ["666", "144", "1000", "777"],
+          answer: 0,
+          reference: "Revelation 13:18",
+          explanation: "John calls for wisdom to count the number of the beast, which is the number of a man: 666."
+        },
+        {
+          question: "In Revelation 20, for how long is Satan bound?",
+          options: ["A thousand years", "Seventy years", "Forty days", "Three and a half years"],
+          answer: 0,
+          reference: "Revelation 20:2-3",
+          explanation: "An angel binds Satan for a thousand years, commonly called the millennium."
+        },
+        {
+          question: "What does Revelation 21:4 say God will do for His people?",
+          options: ["Wipe away every tear from their eyes", "Send them back to Babylon", "Give them another law", "Seal the book forever"],
+          answer: 0,
+          reference: "Revelation 21:4",
+          explanation: "In the new heaven and earth, God wipes away every tear, and death, sorrow, and pain are no more."
+        },
+        {
+          question: "What grows on either side of the river of life in Revelation 22?",
+          options: ["The tree of life, bearing twelve kinds of fruit", "Cedars of Lebanon", "A fig tree", "Thorns and thistles"],
+          answer: 0,
+          reference: "Revelation 22:2",
+          explanation: "The tree of life yields its fruit every month, and its leaves are for the healing of the nations."
+        }
+      ]
+    },
+    {
+      id: "parables-of-jesus",
+      title: "Parables of Jesus",
+      description: "Explore the stories Jesus told to reveal the kingdom of heaven.",
+      icon: "cross",
+      questions: [
+        {
+          question: "In the Parable of the Sower, what do the seeds represent?",
+          options: ["The word of God", "Literal grain", "Money", "The apostles"],
+          answer: 0,
+          reference: "Luke 8:11",
+          explanation: "Jesus explains that the seed sown by the sower is the word of God."
+        },
+        {
+          question: "In the Parable of the Good Samaritan, who stopped to help the injured traveler?",
+          options: ["A Samaritan", "A priest", "A Levite", "A Pharisee"],
+          answer: 0,
+          reference: "Luke 10:33-34",
+          explanation: "After a priest and a Levite passed by, a Samaritan showed mercy and cared for the wounded man."
+        },
+        {
+          question: "In the Parable of the Prodigal Son, what did the father do when he saw his son returning?",
+          options: ["Ran to him, embraced, and kissed him", "Sent a servant to turn him away", "Waited for an apology first", "Ignored him"],
+          answer: 0,
+          reference: "Luke 15:20",
+          explanation: "While the son was still far off, his father saw him, was moved with compassion, and ran to embrace him."
+        },
+        {
+          question: "In the Parable of the Lost Sheep, how many sheep did the shepherd leave to search for the one?",
+          options: ["Ninety-nine", "Fifty", "Ten", "None, he took them all"],
+          answer: 0,
+          reference: "Luke 15:4",
+          explanation: "The shepherd leaves the ninety-nine in the open country to go after the one that is lost."
+        },
+        {
+          question: "In the Parable of the Mustard Seed, what does the tiny seed grow into?",
+          options: ["A large tree where birds can nest", "A field of wheat", "A vineyard", "A cedar forest"],
+          answer: 0,
+          reference: "Matthew 13:31-32",
+          explanation: "Though the smallest of seeds, it grows into a tree large enough for birds to nest in its branches."
+        },
+        {
+          question: "In the Parable of the Talents, how many talents did the servant who was punished receive?",
+          options: ["One", "Two", "Five", "Ten"],
+          answer: 0,
+          reference: "Matthew 25:14-30",
+          explanation: "The servant who received one talent buried it and was rebuked for his fear and unfaithfulness."
+        },
+        {
+          question: "In the Parable of the Ten Virgins, what did the five foolish virgins forget to bring?",
+          options: ["Extra oil for their lamps", "Wedding gifts", "Food for the feast", "Their invitations"],
+          answer: 0,
+          reference: "Matthew 25:1-13",
+          explanation: "The foolish virgins took their lamps but no extra oil, and were shut out when the bridegroom came."
+        },
+        {
+          question: "In the Parable of the Workers in the Vineyard, what did all the workers receive regardless of hours worked?",
+          options: ["The same wage, a denarius", "Different wages based on hours", "Nothing at all", "A place in the master's house"],
+          answer: 0,
+          reference: "Matthew 20:1-16",
+          explanation: "The landowner paid every worker a denarius, showing God's generous grace rather than strict merit."
+        },
+        {
+          question: "In the Parable of the Rich Fool, what did the man plan to build to store his abundant crops?",
+          options: ["Bigger barns", "A new house", "A city wall", "A temple"],
+          answer: 0,
+          reference: "Luke 12:16-21",
+          explanation: "The rich man planned to tear down his barns and build bigger ones, not knowing his life would end that night."
+        },
+        {
+          question: "In the Parable of the Wise and Foolish Builders, what did the wise man build his house on?",
+          options: ["The rock", "The sand", "A hill of clay", "Pillars of wood"],
+          answer: 0,
+          reference: "Matthew 7:24-27",
+          explanation: "The wise man's house on the rock withstood the storm, while the foolish man's house on sand fell."
+        }
+      ]
+    },
+    {
+      id: "miracles-of-jesus",
+      title: "Miracles of Jesus",
+      description: "Witness the power of Christ through His healings, provisions, and control over nature.",
+      icon: "cross",
+      questions: [
+        {
+          question: "What was Jesus' first recorded miracle?",
+          options: ["Turning water into wine at a wedding in Cana", "Healing a blind man", "Feeding the five thousand", "Calming a storm"],
+          answer: 0,
+          reference: "John 2:1-11",
+          explanation: "At a wedding in Cana, Jesus turned water into wine, the first of His signs."
+        },
+        {
+          question: "How many loaves and fish did Jesus use to feed the five thousand?",
+          options: ["Five loaves and two fish", "Two loaves and five fish", "Seven loaves and a few fish", "Ten loaves and no fish"],
+          answer: 0,
+          reference: "Matthew 14:13-21",
+          explanation: "Jesus took five loaves and two fish, blessed them, and fed a crowd of about five thousand men."
+        },
+        {
+          question: "Whom did Jesus raise from the dead after four days in the tomb?",
+          options: ["Lazarus", "Jairus's son", "A widow's son at Nain", "Stephen"],
+          answer: 0,
+          reference: "John 11:1-44",
+          explanation: "Jesus called Lazarus out of the tomb four days after his death, showing His power over death."
+        },
+        {
+          question: "What did Jesus say to calm the storm on the Sea of Galilee?",
+          options: ["\"Peace, be still\"", "\"Depart from me\"", "\"It is finished\"", "\"Talitha koum\""],
+          answer: 0,
+          reference: "Mark 4:39",
+          explanation: "Jesus rebuked the wind and said to the sea, \"Peace, be still,\" and the storm ceased."
+        },
+        {
+          question: "How did Jesus heal the man born blind in John 9?",
+          options: ["Made mud with saliva and told him to wash in Siloam", "Touched his eyes only", "Spoke a word from a distance", "Prayed over him for a day"],
+          answer: 0,
+          reference: "John 9:6-7",
+          explanation: "Jesus made clay with spit, put it on the man's eyes, and sent him to wash in the pool of Siloam."
+        },
+        {
+          question: "What happened when Peter tried to walk on the water to Jesus?",
+          options: ["He began to sink when he doubted, and Jesus caught him", "He walked all the way without trouble", "He fell in immediately", "He refused to leave the boat"],
+          answer: 0,
+          reference: "Matthew 14:28-31",
+          explanation: "Peter walked on the water but began to sink when he saw the wind, and Jesus reached out and caught him."
+        },
+        {
+          question: "In Luke 17, how many lepers did Jesus heal, and how many returned to thank Him?",
+          options: ["Ten healed, one returned", "Five healed, all returned", "One healed, none returned", "Ten healed, none returned"],
+          answer: 0,
+          reference: "Luke 17:11-19",
+          explanation: "Jesus healed ten lepers, but only one, a Samaritan, came back to give thanks."
+        },
+        {
+          question: "What miraculous provision did Jesus give the disciples after a night of catching nothing?",
+          options: ["A great catch of fish that filled their nets", "Bread from heaven", "A school of dolphins", "Calm seas for the rest of the night"],
+          answer: 0,
+          reference: "Luke 5:1-11",
+          explanation: "At Jesus' word, the disciples let down their nets and caught so many fish their nets began to break."
+        },
+        {
+          question: "Whose daughter did Jesus raise, saying \"Talitha koum\"?",
+          options: ["Jairus's daughter", "Herodias's daughter", "The widow of Nain's daughter", "Martha's daughter"],
+          answer: 0,
+          reference: "Mark 5:21-43",
+          explanation: "Jesus took the hand of Jairus's dead daughter and said, \"Talitha koum,\" meaning, \"Little girl, arise.\""
+        },
+        {
+          question: "What did Jesus do after Peter cut off the ear of Malchus in Gethsemane?",
+          options: ["He healed the ear", "He rebuked Malchus", "He left it unhealed", "He healed Peter's hand instead"],
+          answer: 0,
+          reference: "Luke 22:50-51",
+          explanation: "Jesus touched the servant's ear and healed him, even as He was being arrested."
+        }
+      ]
+    },
+    {
+      id: "book-of-acts",
+      title: "Book of Acts",
+      description: "Follow the Holy Spirit's work through the apostles and the birth of the early church.",
+      icon: "book",
+      questions: [
+        {
+          question: "On what day did the Holy Spirit come upon the believers with tongues of fire?",
+          options: ["The Day of Pentecost", "Passover", "The Day of Atonement", "The Feast of Tabernacles"],
+          answer: 0,
+          reference: "Acts 2:1-4",
+          explanation: "When the Day of Pentecost had fully come, the Holy Spirit filled the believers gathered in Jerusalem."
+        },
+        {
+          question: "Who was chosen by lot to replace Judas among the twelve apostles?",
+          options: ["Matthias", "Barnabas", "Silas", "Timothy"],
+          answer: 0,
+          reference: "Acts 1:23-26",
+          explanation: "The lot fell on Matthias, and he was numbered with the eleven apostles."
+        },
+        {
+          question: "Who was the first Christian martyr, stoned for his faith?",
+          options: ["Stephen", "James", "Peter", "Philip"],
+          answer: 0,
+          reference: "Acts 7:54-60",
+          explanation: "Stephen was stoned to death while Saul (later Paul) approved of his execution."
+        },
+        {
+          question: "On the road to which city was Saul confronted by the risen Jesus?",
+          options: ["Damascus", "Antioch", "Tarsus", "Jerusalem"],
+          answer: 0,
+          reference: "Acts 9:1-9",
+          explanation: "Saul was traveling to Damascus to arrest Christians when a light from heaven stopped him."
+        },
+        {
+          question: "What was Saul's name changed to after his conversion and calling?",
+          options: ["Paul", "Silas", "Cephas", "Barnabas"],
+          answer: 0,
+          reference: "Acts 13:9",
+          explanation: "Saul, also called Paul, became the name most used for him as he ministered to the Gentiles."
+        },
+        {
+          question: "Whom did Philip baptize after explaining the prophecy of Isaiah to him?",
+          options: ["An Ethiopian official", "A Roman centurion", "A Philippian jailer", "A synagogue ruler"],
+          answer: 0,
+          reference: "Acts 8:26-39",
+          explanation: "Philip explained Isaiah 53 to the Ethiopian eunuch, the treasurer of Queen Candace, who was then baptized."
+        },
+        {
+          question: "In Acts 10, who was the first Gentile convert Peter visited after receiving a vision?",
+          options: ["Cornelius", "Felix", "Festus", "Agrippa"],
+          answer: 0,
+          reference: "Acts 10",
+          explanation: "Peter visited the Roman centurion Cornelius, whose household received the Holy Spirit and was baptized."
+        },
+        {
+          question: "In which city were believers first called \"Christians\"?",
+          options: ["Antioch", "Jerusalem", "Corinth", "Ephesus"],
+          answer: 0,
+          reference: "Acts 11:26",
+          explanation: "It was in Antioch that the disciples were first called Christians."
+        },
+        {
+          question: "What happened to Paul and Silas in prison at Philippi that led to the jailer's conversion?",
+          options: ["An earthquake opened the doors and loosed their chains", "An angel led them out quietly", "They escaped through a window", "They were released by the governor"],
+          answer: 0,
+          reference: "Acts 16:25-34",
+          explanation: "A midnight earthquake opened every door and loosed everyone's chains, leading the jailer and his household to believe."
+        },
+        {
+          question: "Where was Paul held prisoner for two years awaiting trial before being sent to Rome?",
+          options: ["Caesarea", "Damascus", "Corinth", "Athens"],
+          answer: 0,
+          reference: "Acts 23-26",
+          explanation: "Paul was held in Caesarea before Felix and Festus before appealing to Caesar and being sent to Rome."
+        }
+      ]
+    },
+    {
+      id: "women-of-the-bible",
+      title: "Women of the Bible",
+      description: "Meet the faithful, courageous, and pivotal women found throughout Scripture.",
+      icon: "people",
+      questions: [
+        {
+          question: "Who was the first woman, created by God from Adam's rib?",
+          options: ["Eve", "Sarah", "Rebekah", "Rachel"],
+          answer: 0,
+          reference: "Genesis 2:22",
+          explanation: "God formed Eve from the rib He took from Adam."
+        },
+        {
+          question: "Which judge and prophetess led Israel and helped defeat Sisera's army?",
+          options: ["Deborah", "Miriam", "Huldah", "Jael"],
+          answer: 0,
+          reference: "Judges 4-5",
+          explanation: "Deborah judged Israel and, with Barak, led Israel to victory over Sisera's forces."
+        },
+        {
+          question: "Which Moabite woman left her homeland with Naomi and became an ancestor of David?",
+          options: ["Ruth", "Orpah", "Rahab", "Tamar"],
+          answer: 0,
+          reference: "Ruth 1; Ruth 4:13-17",
+          explanation: "Ruth's loyalty to Naomi led her to Bethlehem, where she became the great-grandmother of David."
+        },
+        {
+          question: "Who hid the Israelite spies in Jericho and was later listed in Jesus' genealogy?",
+          options: ["Rahab", "Deborah", "Esther", "Abigail"],
+          answer: 0,
+          reference: "Joshua 2; Matthew 1:5",
+          explanation: "Rahab protected the spies in Jericho and is named among the ancestors of Jesus in Matthew's genealogy."
+        },
+        {
+          question: "Which queen risked her life to save the Jewish people from Haman's plot?",
+          options: ["Esther", "Vashti", "Bathsheba", "Jezebel"],
+          answer: 0,
+          reference: "Esther 4-7",
+          explanation: "Esther approached the king uninvited and exposed Haman's plan, saving her people."
+        },
+        {
+          question: "Who was chosen to be the mother of Jesus, the Son of God?",
+          options: ["Mary", "Elizabeth", "Anna", "Martha"],
+          answer: 0,
+          reference: "Luke 1:26-38",
+          explanation: "The angel Gabriel announced to Mary that she would conceive and bear the Son of God."
+        },
+        {
+          question: "Which sister of Lazarus sat at Jesus' feet listening to His teaching while her sister served?",
+          options: ["Mary of Bethany", "Martha", "Salome", "Joanna"],
+          answer: 0,
+          reference: "Luke 10:38-42",
+          explanation: "Mary chose to sit and listen to Jesus, which He said was the good part that would not be taken from her."
+        },
+        {
+          question: "Who was the first person Jesus appeared to after His resurrection?",
+          options: ["Mary Magdalene", "Peter", "Thomas", "John"],
+          answer: 0,
+          reference: "John 20:11-18",
+          explanation: "Jesus first appeared to Mary Magdalene at the tomb and sent her to tell the disciples."
+        },
+        {
+          question: "Which businesswoman, a seller of purple cloth, became one of Paul's first converts in Philippi?",
+          options: ["Lydia", "Priscilla", "Phoebe", "Chloe"],
+          answer: 0,
+          reference: "Acts 16:14-15",
+          explanation: "Lydia, a dealer in purple cloth, opened her heart to Paul's message and was baptized with her household."
+        },
+        {
+          question: "Which prophetess recognized the baby Jesus as the Messiah at the temple?",
+          options: ["Anna", "Deborah", "Huldah", "Elizabeth"],
+          answer: 0,
+          reference: "Luke 2:36-38",
+          explanation: "Anna, a prophetess who worshiped in the temple, gave thanks and spoke of Jesus to all who awaited redemption."
+        }
+      ]
     }
   ];
+
+  // Suggests free Bible studies related to each quiz topic so learners can
+  // keep studying after they finish, rather than just checking answers.
+  const relatedStudies = {
+    "bible-basics": [{ id: "can-we-trust-the-bible", title: "Can We Trust the Bible?" }],
+    "life-of-jesus": [
+      { id: "who-is-jesus", title: "Who Is Jesus, Really?" },
+      { id: "why-did-jesus-die", title: "Saved by Grace: Why Did Jesus Have to Die?" }
+    ],
+    "old-testament": [
+      { id: "great-controversy", title: "Where Did Evil Come From?" },
+      { id: "can-we-trust-the-bible", title: "Can We Trust the Bible?" }
+    ],
+    "new-testament": [
+      { id: "holy-spirit-helper", title: "Who Is the Holy Spirit?" },
+      { id: "church-body-of-christ", title: "Why Belong to a Church?" }
+    ],
+    "people-and-places": [{ id: "can-we-trust-the-bible", title: "Can We Trust the Bible?" }],
+    "daniel-2": [{ id: "daniel-roadmap", title: "Bible Prophecy: A Roadmap to the Future" }],
+    "daniel-7": [{ id: "daniel-roadmap", title: "Bible Prophecy: A Roadmap to the Future" }],
+    "daniel-8-9": [
+      { id: "daniel-roadmap", title: "Bible Prophecy: A Roadmap to the Future" },
+      { id: "sanctuary-judgment", title: "Where Heaven Touches Earth" }
+    ],
+    "daniel-11": [{ id: "daniel-roadmap", title: "Bible Prophecy: A Roadmap to the Future" }],
+    "daniel-12": [
+      { id: "daniel-roadmap", title: "Bible Prophecy: A Roadmap to the Future" },
+      { id: "what-happens-after-death", title: "What Really Happens After Death?" }
+    ],
+    "prophetic-symbols": [{ id: "daniel-roadmap", title: "Bible Prophecy: A Roadmap to the Future" }],
+    "book-of-revelation": [
+      { id: "three-angels-messages", title: "A Final Message to the World" },
+      { id: "second-coming", title: "Is Jesus Really Coming Back?" }
+    ],
+    "parables-of-jesus": [{ id: "who-is-jesus", title: "Who Is Jesus, Really?" }],
+    "miracles-of-jesus": [{ id: "who-is-jesus", title: "Who Is Jesus, Really?" }],
+    "book-of-acts": [
+      { id: "holy-spirit-helper", title: "Who Is the Holy Spirit?" },
+      { id: "church-body-of-christ", title: "Why Belong to a Church?" }
+    ],
+    "women-of-the-bible": [{ id: "does-god-love-you", title: "Does God Really Love You?" }]
+  };
 
   const directory = document.querySelector("[data-quiz-directory]");
   const player = document.querySelector("[data-quiz-player]");
@@ -813,6 +1323,8 @@
     resultTitle: player.querySelector("[data-quiz-result-title]"),
     resultMessage: player.querySelector("[data-quiz-result-message]"),
     resultReference: player.querySelector("[data-quiz-result-reference]"),
+    resultStudy: player.querySelector("[data-quiz-result-study]"),
+    resultStudyLinks: player.querySelector("[data-quiz-result-study-links]"),
     retake: player.querySelector("[data-quiz-retake]"),
     copyLink: player.querySelector("[data-quiz-copy-link]"),
     copyLinkLabel: player.querySelector("[data-quiz-copy-link-label]")
@@ -1040,6 +1552,23 @@
     await copyResult();
   }
 
+  function renderRelatedStudies() {
+    if (!elements.resultStudy || !elements.resultStudyLinks) return;
+    const studies = relatedStudies[activeQuiz.id];
+    if (!studies || !studies.length) {
+      elements.resultStudy.hidden = true;
+      return;
+    }
+    elements.resultStudyLinks.replaceChildren();
+    studies.forEach((study) => {
+      const link = document.createElement("a");
+      link.href = `/studies/${study.id}/`;
+      link.textContent = study.title;
+      elements.resultStudyLinks.append(link);
+    });
+    elements.resultStudy.hidden = false;
+  }
+
   function finishQuiz() {
     const score = currentScore();
     const [title, message] = scoreMessage(score, activeQuestions.length);
@@ -1049,6 +1578,7 @@
     elements.resultTitle.textContent = title;
     elements.resultMessage.textContent = message;
     elements.resultReference.textContent = "Your result is stored only on this page and is not sent to Word Oasis.";
+    renderRelatedStudies();
     clearSavedState(activeQuiz.id);
     elements.resultTitle.focus();
   }
@@ -1090,7 +1620,10 @@
 
   function appendScriptureLinks(container, text) {
     const bookPattern = "(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|1 Samuel|2 Samuel|1 Kings|2 Kings|1 Chronicles|2 Chronicles|Ezra|Nehemiah|Esther|Job|Psalms?|Proverbs|Ecclesiastes|Song of Solomon|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|1 Corinthians|2 Corinthians|Galatians|Ephesians|Philippians|Colossians|1 Thessalonians|2 Thessalonians|1 Timothy|2 Timothy|Titus|Philemon|Hebrews|James|1 Peter|2 Peter|1 John|2 John|3 John|Jude|Revelation)";
-    const referencePattern = new RegExp(`\\b${bookPattern}\\s+\\d+(?::\\d+(?:[-–]\\d+)?)?`, "g");
+    const referencePattern = new RegExp(
+      `\\b${bookPattern}\\s+\\d+(?::\\d+(?:[-–]\\d+)?(?:,\\s*\\d+(?:[-–]\\d+)?)*)?`,
+      "g"
+    );
     let lastIndex = 0;
     let match;
     while ((match = referencePattern.exec(text))) {
@@ -1181,16 +1714,18 @@
   }
 
   document.addEventListener("click", (event) => {
-    const danielButton = event.target.closest("[data-open-daniel]");
-    if (danielButton) {
-      document.querySelectorAll("[data-daniel-directory]").forEach((element) => {
+    const seriesButton = event.target.closest("[data-open-series]");
+    if (seriesButton) {
+      const seriesName = seriesButton.dataset.openSeries;
+      const selector = `[data-series-directory="${seriesName}"]`;
+      document.querySelectorAll(selector).forEach((element) => {
         element.hidden = false;
       });
-      danielButton.closest(".quiz-card").hidden = true;
+      seriesButton.closest(".quiz-card").hidden = true;
       if (window.matchMedia("(max-width: 700px)").matches) {
-        const danielDirectory = document.querySelector("[data-daniel-directory]");
+        const seriesDirectory = document.querySelector(selector);
         requestAnimationFrame(() => {
-          danielDirectory?.scrollIntoView({ behavior: "smooth", block: "start" });
+          seriesDirectory?.scrollIntoView({ behavior: "smooth", block: "start" });
         });
       }
       return;
