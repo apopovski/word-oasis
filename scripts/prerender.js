@@ -18,7 +18,9 @@ const SCRIPT_PATH = path.join(ROOT, "script.js");
 const SITE_URL = "https://wordoasis.org";
 const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZSB_Tf-MEbTUrmSkEqwNn2gjtxqF4cv16pMCDMmV3voJeJAFhIYBQ/exec";
 const BIBLE_STUDY_URL = "https://www.amazingbiblestudies.com/";
+const SITE_PUBLISHED_DATE = "2026-09-13";
 const BUILD_DATE = new Date().toISOString().slice(0, 10);
+const STYLES_VERSION = "20261141";
 
 function extractAnswersData(scriptSource) {
   const start = scriptSource.indexOf("const answers = [");
@@ -111,6 +113,57 @@ function topicIconMarkup(topic, topicIcons) {
 
 function absoluteUrl(urlPath) {
   return `${SITE_URL}${urlPath}`;
+}
+
+function siteOrganizationJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
+    name: "Word Oasis",
+    alternateName: ["WordOasis", "Word Oasis Bible Answers"],
+    url: `${SITE_URL}/`,
+    logo: {
+      "@type": "ImageObject",
+      url: `${SITE_URL}/apple-touch-icon-512.png`,
+      width: 512,
+      height: 512
+    },
+    description:
+      "Word Oasis publishes clear, Scripture-based Bible answers, Bible studies, quizzes, and topic guides for everyday questions about faith, salvation, prayer, prophecy, Sabbath, health, forgiveness, and Christian living."
+  };
+}
+
+function siteWebSiteJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+    name: "Word Oasis",
+    alternateName: "Word Oasis Bible Answers",
+    url: `${SITE_URL}/`,
+    description: "Clear Bible answers grounded in Scripture, with references for deeper study.",
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    inLanguage: "en",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${SITE_URL}/?q={search_term_string}`,
+      "query-input": "required name=search_term_string"
+    }
+  };
+}
+
+function breadcrumbJsonLd(items) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: absoluteUrl(item.path)
+    }))
+  };
 }
 
 function buildTopicListJsonLd(answers) {
@@ -234,7 +287,7 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
         ? "bible"
         : "home";
   const currentPage = (section) => activeSection === section ? ' aria-current="page"' : "";
-  const jsonLd = structuredData
+  const jsonLd = [siteOrganizationJsonLd(), siteWebSiteJsonLd(), ...structuredData]
     .map((data) => `<script type="application/ld+json">\n${JSON.stringify(data, null, 2)}\n    </script>`)
     .join("\n    ");
 
@@ -290,7 +343,7 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20261126">
+    <link rel="stylesheet" href="/styles.css?v=${STYLES_VERSION}">
     <meta property="og:type" content="${ogType}">
     <meta property="og:title" content="${escapeAttribute(title)}">
     <meta property="og:description" content="${escapeAttribute(description)}">
@@ -634,21 +687,47 @@ function answerPage(answer, answers, perspectivesByAnswer) {
   const title = `${answer.question} | Word Oasis`;
   const description = metaDescription(answer);
   const usedTopics = new Set();
+  const primaryTopic = answer.topics[0] || answer.category;
 
   return pageShell({
     title,
     description,
     canonicalPath,
     structuredData: [
+      breadcrumbJsonLd([
+        { name: "Home", path: "/" },
+        { name: "Bible Questions and Answers", path: "/answers/" },
+        { name: answer.question, path: canonicalPath }
+      ]),
       {
         "@context": "https://schema.org",
         "@type": "QAPage",
+        "@id": `${absoluteUrl(canonicalPath)}#qa`,
+        name: answer.question,
+        headline: answer.question,
+        description,
+        url: absoluteUrl(canonicalPath),
+        datePublished: SITE_PUBLISHED_DATE,
+        dateModified: BUILD_DATE,
+        inLanguage: "en",
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        author: { "@id": `${SITE_URL}/#organization` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        about: answer.topics.map((topic) => ({ "@type": "Thing", name: topic })),
+        keywords: Array.from(new Set([primaryTopic, answer.category, ...(answer.keywords || [])])).join(", "),
         mainEntity: {
           "@type": "Question",
           name: answer.question,
+          dateCreated: SITE_PUBLISHED_DATE,
+          author: { "@id": `${SITE_URL}/#organization` },
+          about: primaryTopic,
           acceptedAnswer: {
             "@type": "Answer",
-            text: `${answer.shortAnswer} ${answer.longAnswer} (${answer.scriptures.join(", ")})`
+            text: `${answer.shortAnswer} ${answer.longAnswer} (${answer.scriptures.join(", ")})`,
+            dateCreated: SITE_PUBLISHED_DATE,
+            dateModified: BUILD_DATE,
+            url: absoluteUrl(canonicalPath),
+            author: { "@id": `${SITE_URL}/#organization` }
           }
         }
       }
@@ -661,6 +740,7 @@ function answerPage(answer, answers, perspectivesByAnswer) {
           <p class="eyebrow">${escapeHtml(answer.category)}</p>
           <h1>${escapeHtml(answer.question)}</h1>
           <p class="page-intro">${escapeHtml(answer.shortAnswer)}</p>
+          <p class="answer-date-meta">Published ${SITE_PUBLISHED_DATE} · Updated ${BUILD_DATE}</p>
           <div class="answer-public-stats" data-answer-public-stats hidden aria-label="Article readership">
             <span>
               <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -813,6 +893,34 @@ function answersIndexPage(answers) {
     description: "Browse every Word Oasis Bible answer by topic and category, with Scripture references for further study.",
     canonicalPath: "/answers/",
     ogType: "website",
+    structuredData: [
+      breadcrumbJsonLd([
+        { name: "Home", path: "/" },
+        { name: "Bible Questions and Answers", path: "/answers/" }
+      ]),
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": `${SITE_URL}/answers/#collection`,
+        name: "Bible Questions and Answers",
+        description: "Browse every Word Oasis Bible answer by topic and category, with Scripture references for further study.",
+        url: `${SITE_URL}/answers/`,
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        datePublished: SITE_PUBLISHED_DATE,
+        dateModified: BUILD_DATE,
+        mainEntity: {
+          "@type": "ItemList",
+          numberOfItems: answers.length,
+          itemListElement: answers.slice(0, 50).map((answer, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: answer.question,
+            url: absoluteUrl(answerPath(answer))
+          }))
+        }
+      }
+    ],
     body: `
     <main>
       <section class="page-hero">
@@ -974,6 +1082,34 @@ function topicsIndexPage(answers, topics, topicIcons, topicDescriptions) {
     description: "Explore Word Oasis Bible answers by topic, including salvation, prayer, prophecy, Sabbath, Christian living, comfort, and more.",
     canonicalPath: "/topics/",
     ogType: "website",
+    structuredData: [
+      breadcrumbJsonLd([
+        { name: "Home", path: "/" },
+        { name: "Bible Topics", path: "/topics/" }
+      ]),
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": `${SITE_URL}/topics/#collection`,
+        name: "Bible Topics",
+        description: "Explore Word Oasis Bible answers by topic, including salvation, prayer, prophecy, Sabbath, Christian living, comfort, and more.",
+        url: `${SITE_URL}/topics/`,
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        datePublished: SITE_PUBLISHED_DATE,
+        dateModified: BUILD_DATE,
+        mainEntity: {
+          "@type": "ItemList",
+          numberOfItems: topics.length,
+          itemListElement: topics.map((topic, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: topic,
+            url: absoluteUrl(topicPath(topic))
+          }))
+        }
+      }
+    ],
     body: `
     <main>
       <section class="page-hero">
@@ -1015,6 +1151,36 @@ function topicPage(topic, answers, topicIcons, topicDescriptions) {
     description: `Browse Scripture-based answers about ${topic.toLowerCase()} from Word Oasis, with Bible references for further study.`,
     canonicalPath: topicPath(topic),
     ogType: "website",
+    structuredData: [
+      breadcrumbJsonLd([
+        { name: "Home", path: "/" },
+        { name: "Bible Topics", path: "/topics/" },
+        { name: `${topic} Bible Answers`, path: topicPath(topic) }
+      ]),
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": `${absoluteUrl(topicPath(topic))}#collection`,
+        name: `${topic} Bible Answers`,
+        description: `Browse Scripture-based answers about ${topic.toLowerCase()} from Word Oasis, with Bible references for further study.`,
+        url: absoluteUrl(topicPath(topic)),
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        datePublished: SITE_PUBLISHED_DATE,
+        dateModified: BUILD_DATE,
+        about: { "@type": "Thing", name: topic },
+        mainEntity: {
+          "@type": "ItemList",
+          numberOfItems: topicAnswers.length,
+          itemListElement: topicAnswers.map((answer, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: answer.question,
+            url: absoluteUrl(answerPath(answer))
+          }))
+        }
+      }
+    ],
     body: `
     <main>
       <section class="page-hero">

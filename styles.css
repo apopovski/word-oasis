@@ -2661,6 +2661,14 @@ h1 {
   font-size: 1.12rem;
 }
 
+.answer-date-meta {
+  margin: 14px 0 0;
+  color: color-mix(in srgb, var(--muted) 82%, transparent);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
 .page-hero-stats {
   display: flex;
   flex-wrap: wrap;
