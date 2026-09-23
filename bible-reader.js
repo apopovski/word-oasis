@@ -30,7 +30,6 @@
   const textSizeStorageKey = "word-oasis-bible-text-size";
   const translationStorageKey = "word-oasis-bible-translation";
   const legacyTranslationStorageKey = "word-oasis-promise-translation";
-  const siteUrl = "https://wordoasis.org/bible/";
 
   const books = [
     { name: "Genesis", chapters: 50, audioCode: "GEN" },
@@ -370,16 +369,46 @@
     return Math.min(numericChapter, book.chapters);
   }
 
+  function slugify(value) {
+    return String(value)
+      .toLowerCase()
+      .replace(/&/g, " and ")
+      .replace(/['’]/g, "")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+  }
+
+  function chapterPath(book, chapter) {
+    return `/bible/${slugify(book.name)}-${chapter}/`;
+  }
+
+  function chapterFromPath() {
+    const match = window.location.pathname.match(/^\/bible\/([^/]+)\/?$/);
+    if (!match) {
+      return null;
+    }
+    const slug = match[1];
+    for (const book of books) {
+      const bookSlug = slugify(book.name);
+      const prefix = `${bookSlug}-`;
+      if (slug.startsWith(prefix)) {
+        const chapter = sanitizeChapter(book, slug.slice(prefix.length));
+        return { book, chapter };
+      }
+    }
+    return null;
+  }
+
   function updateUrl(book, chapter, translation, verse) {
-    const params = new URLSearchParams({
-      book: book.name,
-      chapter: String(chapter),
-      translation: translation.id
-    });
+    const params = new URLSearchParams();
+    if (translation.id !== "web") {
+      params.set("translation", translation.id);
+    }
     if (verse) {
       params.set("verse", String(verse));
     }
-    window.history.replaceState({}, "", `${window.location.pathname}?${params.toString()}`);
+    const query = params.toString();
+    window.history.replaceState({}, "", `${chapterPath(book, chapter)}${query ? `?${query}` : ""}`);
   }
 
   function trackAnalyticsEvent(name, params) {
@@ -505,15 +534,15 @@
   }
 
   function buildReaderUrl(book, chapter, translation, verse) {
-    const params = new URLSearchParams({
-      book: book.name,
-      chapter: String(chapter),
-      translation: translation.id
-    });
+    const params = new URLSearchParams();
+    if (translation.id !== "web") {
+      params.set("translation", translation.id);
+    }
     if (verse) {
       params.set("verse", String(verse));
     }
-    return `${siteUrl}?${params.toString()}`;
+    const query = params.toString();
+    return `${window.location.origin}${chapterPath(book, chapter)}${query ? `?${query}` : ""}`;
   }
 
   function selectedRange() {
@@ -1484,8 +1513,9 @@
 
   function applyInitialState() {
     const params = new URLSearchParams(window.location.search);
-    const initialBook = findBook(params.get("book") || "John");
-    const initialChapter = sanitizeChapter(initialBook, params.get("chapter") || "3");
+    const pathChapter = chapterFromPath();
+    const initialBook = pathChapter?.book || findBook(params.get("book") || "John");
+    const initialChapter = pathChapter?.chapter || sanitizeChapter(initialBook, params.get("chapter") || "3");
     let storedTranslation = "web";
     try {
       storedTranslation =

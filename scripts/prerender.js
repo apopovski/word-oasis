@@ -15,6 +15,8 @@ const { JSDOM } = require("jsdom");
 const ROOT = path.join(__dirname, "..");
 const INDEX_PATH = path.join(ROOT, "index.html");
 const SCRIPT_PATH = path.join(ROOT, "script.js");
+const BIBLE_INDEX_PATH = path.join(ROOT, "bible", "index.html");
+const BIBLE_READER_PATH = path.join(ROOT, "bible-reader.js");
 const SITE_URL = "https://wordoasis.org";
 const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZSB_Tf-MEbTUrmSkEqwNn2gjtxqF4cv16pMCDMmV3voJeJAFhIYBQ/exec";
 const BIBLE_STUDY_URL = "https://www.amazingbiblestudies.com/";
@@ -46,6 +48,32 @@ function extractAnswersData(scriptSource) {
   }
   // eslint-disable-next-line no-eval
   return eval(scriptSource.slice(arrayStart, end));
+}
+
+function extractArrayData(source, constName) {
+  const start = source.indexOf(`const ${constName} = [`);
+  if (start === -1) {
+    throw new Error(`Could not find \`const ${constName} = [\``);
+  }
+  const arrayStart = source.indexOf("[", start);
+  let depth = 0;
+  let end = -1;
+  for (let i = arrayStart; i < source.length; i += 1) {
+    const char = source[i];
+    if (char === "[") depth += 1;
+    if (char === "]") {
+      depth -= 1;
+      if (depth === 0) {
+        end = i + 1;
+        break;
+      }
+    }
+  }
+  if (end === -1) {
+    throw new Error(`Could not find end of ${constName} array`);
+  }
+  // eslint-disable-next-line no-eval
+  return eval(source.slice(arrayStart, end));
 }
 
 function extractConstData(scriptSource, constName) {
@@ -104,6 +132,10 @@ function answerPath(answer) {
 
 function topicPath(topic) {
   return `/topics/${slugify(topic)}/`;
+}
+
+function bibleChapterPath(book, chapter) {
+  return `/bible/${slugify(book.name)}-${chapter}/`;
 }
 
 function topicIconMarkup(topic, topicIcons) {
@@ -1218,6 +1250,123 @@ function topicPage(topic, answers, topicIcons, topicDescriptions) {
   });
 }
 
+function replaceTagContent(html, regex, replacement, label) {
+  if (!regex.test(html)) {
+    throw new Error(`Could not update ${label} in Bible chapter template`);
+  }
+  return html.replace(regex, replacement);
+}
+
+function bibleChapterPage(baseHtml, book, chapter) {
+  const canonicalPath = bibleChapterPath(book, chapter);
+  const canonical = absoluteUrl(canonicalPath);
+  const title = `${book.name} ${chapter} | Read the Bible Online | Word Oasis`;
+  const description = `Read ${book.name} ${chapter} online in WEB, KJV, or ASV. Copy, share, search, and study this Bible chapter with Word Oasis.`;
+  const safeTitle = escapeAttribute(title);
+  const safeDescription = escapeAttribute(description);
+  const chapterJsonLd = [
+    siteOrganizationJsonLd(),
+    siteWebSiteJsonLd(),
+    breadcrumbJsonLd([
+      { name: "Home", path: "/" },
+      { name: "Read the Bible", path: "/bible/" },
+      { name: `${book.name} ${chapter}`, path: canonicalPath }
+    ]),
+    {
+      "@context": "https://schema.org",
+      "@type": "Chapter",
+      "@id": `${canonical}#chapter`,
+      name: `${book.name} ${chapter}`,
+      headline: `${book.name} ${chapter}`,
+      url: canonical,
+      isPartOf: {
+        "@type": "Book",
+        name: "The Bible",
+        url: `${SITE_URL}/bible/`
+      },
+      inLanguage: "en",
+      datePublished: SITE_PUBLISHED_DATE,
+      dateModified: BUILD_DATE,
+      publisher: { "@id": `${SITE_URL}/#organization` },
+      about: [
+        { "@type": "Thing", name: "Bible chapter" },
+        { "@type": "Thing", name: book.name },
+        { "@type": "Thing", name: "Scripture reading" }
+      ],
+      potentialAction: {
+        "@type": "ReadAction",
+        target: canonical
+      }
+    }
+  ];
+
+  let html = baseHtml;
+  html = replaceTagContent(html, /<title>[\s\S]*?<\/title>/, `<title>${safeTitle}</title>`, "title");
+  html = replaceTagContent(
+    html,
+    /<meta name="description" content="[^"]*">/,
+    `<meta name="description" content="${safeDescription}">`,
+    "description"
+  );
+  html = replaceTagContent(
+    html,
+    /<meta name="keywords" content="[^"]*">/,
+    `<meta name="keywords" content="${escapeAttribute(`${book.name} ${chapter}, read ${book.name} ${chapter}, Bible chapter, online Bible, KJV Bible, WEB Bible, ASV Bible`)}">`,
+    "keywords"
+  );
+  html = replaceTagContent(html, /<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${canonical}">`, "canonical");
+  html = replaceTagContent(html, /<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${safeTitle}">`, "og:title");
+  html = replaceTagContent(html, /<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${safeDescription}">`, "og:description");
+  html = replaceTagContent(html, /<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${canonical}">`, "og:url");
+  html = replaceTagContent(html, /<meta property="og:image:alt" content="[^"]*">/, `<meta property="og:image:alt" content="${escapeAttribute(`${book.name} ${chapter} on Word Oasis`)}">`, "og:image:alt");
+  html = replaceTagContent(html, /<meta name="twitter:title" content="[^"]*">/, `<meta name="twitter:title" content="${safeTitle}">`, "twitter:title");
+  html = replaceTagContent(html, /<meta name="twitter:description" content="[^"]*">/, `<meta name="twitter:description" content="${safeDescription}">`, "twitter:description");
+  html = replaceTagContent(
+    html,
+    /<script type="application\/ld\+json">[\s\S]*?<\/script>/,
+    `<script type="application/ld+json">\n${JSON.stringify(chapterJsonLd, null, 2)}\n    </script>`,
+    "structured data"
+  );
+  html = replaceTagContent(
+    html,
+    /<nav class="breadcrumb" aria-label="Breadcrumb"><a href="\/">Home<\/a> \/ Bible<\/nav>/,
+    `<nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/bible/">Bible</a> / ${escapeHtml(book.name)} ${chapter}</nav>`,
+    "chapter breadcrumb"
+  );
+  html = replaceTagContent(html, /<p class="eyebrow">Read and search<\/p>/, '<p class="eyebrow">Bible chapter</p>', "chapter eyebrow");
+  html = replaceTagContent(html, /<h1>Read and search the Bible online\.<\/h1>/, `<h1>Read ${escapeHtml(book.name)} ${chapter}</h1>`, "chapter heading");
+  html = replaceTagContent(
+    html,
+    /<p class="page-intro">\s*Browse all 66 books in WEB, KJV, or ASV, search Scripture across the whole\s*Bible or selected sections, and copy, share, or memorize selected verse ranges\.\s*<\/p>/,
+    `<p class="page-intro">Read ${escapeHtml(book.name)} ${chapter} online, choose WEB, KJV, or ASV, search Scripture, select verses, copy passages, and share this Bible chapter.</p>`,
+    "chapter intro"
+  );
+  html = html.replace('<h2 id="bible-reader-title">John 3</h2>', `<h2 id="bible-reader-title">${escapeHtml(book.name)} ${chapter}</h2>`);
+  return html;
+}
+
+function writeBibleChapterPages(books) {
+  const bibleBaseHtml = fs.readFileSync(BIBLE_INDEX_PATH, "utf8");
+  const bibleDir = path.join(ROOT, "bible");
+  fs.readdirSync(bibleDir, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .forEach((entry) => fs.rmSync(path.join(bibleDir, entry.name), {
+      recursive: true,
+      force: true,
+      maxRetries: 5,
+      retryDelay: 100
+    }));
+
+  let count = 0;
+  books.forEach((book) => {
+    for (let chapter = 1; chapter <= book.chapters; chapter += 1) {
+      writePage(path.join(bibleChapterPath(book, chapter).slice(1), "index.html"), bibleChapterPage(bibleBaseHtml, book, chapter));
+      count += 1;
+    }
+  });
+  return count;
+}
+
 function writePage(relativePath, content) {
   const outputPath = path.join(ROOT, relativePath);
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });
@@ -1251,9 +1400,15 @@ function extractStudyIds() {
   return ids;
 }
 
-function writeSitemap(answers, topics) {
+function writeSitemap(answers, topics, bibleBooks = []) {
   const quizIds = extractQuizIds();
   const studyIds = extractStudyIds();
+  const bibleChapterEntries = bibleBooks.flatMap((book) =>
+    Array.from({ length: book.chapters }, (_item, index) => ({
+      loc: bibleChapterPath(book, index + 1),
+      priority: "0.6"
+    }))
+  );
   const entries = [
     { loc: "/", priority: "1.0" },
     { loc: "/answers/", priority: "0.9" },
@@ -1264,7 +1419,8 @@ function writeSitemap(answers, topics) {
     ...answers.map((answer) => ({ loc: answerPath(answer), priority: "0.8" })),
     ...topics.map((topic) => ({ loc: topicPath(topic), priority: "0.7" })),
     ...quizIds.map((id) => ({ loc: `/quizzes/${id}/`, priority: "0.7" })),
-    ...studyIds.map((id) => ({ loc: `/studies/${id}/`, priority: "0.7" }))
+    ...studyIds.map((id) => ({ loc: `/studies/${id}/`, priority: "0.7" })),
+    ...bibleChapterEntries
   ]
     .map(
       ({ loc, priority }) => `  <url>
@@ -1287,7 +1443,7 @@ ${entries}
   );
 }
 
-function writeStaticPages(answers, perspectivesByAnswer, topicIcons, topicDescriptions) {
+function writeStaticPages(answers, perspectivesByAnswer, topicIcons, topicDescriptions, bibleBooks) {
   const topics = Array.from(new Set(answers.flatMap((answer) => answer.topics))).sort();
 
   resetGeneratedDirectory("answers");
@@ -1304,17 +1460,21 @@ function writeStaticPages(answers, perspectivesByAnswer, topicIcons, topicDescri
     writePage(path.join(topicPath(topic).slice(1), "index.html"), topicPage(topic, answers, topicIcons, topicDescriptions));
   });
 
-  writeSitemap(answers, topics);
+  const bibleChapterCount = writeBibleChapterPages(bibleBooks);
+  writeSitemap(answers, topics, bibleBooks);
+  console.log(`Generated ${bibleChapterCount} Bible chapter permalink pages`);
   return topics;
 }
 
 function main() {
   const html = fs.readFileSync(INDEX_PATH, "utf8");
   const scriptSource = fs.readFileSync(SCRIPT_PATH, "utf8");
+  const bibleReaderSource = fs.readFileSync(BIBLE_READER_PATH, "utf8");
   const answers = extractAnswersData(scriptSource);
   const perspectivesByAnswer = extractConstData(scriptSource, "perspectivesByAnswer");
   const topicIcons = extractConstData(scriptSource, "topicIcons");
   const topicDescriptions = extractConstData(scriptSource, "topicDescriptions");
+  const bibleBooks = extractArrayData(bibleReaderSource, "books");
 
   const { topicGridHtml, answersListHtml, resultMetaText, spotlightBodyHtml, questionTopicOptions } = renderWithJsdom(
     html,
@@ -1335,7 +1495,8 @@ function main() {
     answers,
     perspectivesByAnswer,
     topicIcons,
-    topicDescriptions
+    topicDescriptions,
+    bibleBooks
   );
   console.log(`Prerendered ${answers.length} answers, ${topics.length} topics, and sitemap.xml`);
 }
