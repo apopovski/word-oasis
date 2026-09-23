@@ -7109,7 +7109,4330 @@ const answers = [
       "diet and faith",
       "creation"
     ]
-  }
+  },
+  {
+      "id": "answer-why-are-there-four-gospels",
+      "question": "Why Are There Four Gospels in the Bible?",
+      "shortAnswer": "The four Gospels—Matthew, Mark, Luke, and John—each present the life and ministry of Jesus from a distinct perspective and to a distinct audience, together forming a fuller portrait of Christ than any single account could give.",
+      "longAnswer": "Matthew writes largely to a Jewish audience, showing Jesus as the promised Messiah who fulfills Old Testament prophecy. Mark presents a fast-moving account emphasizing Jesus as the suffering Servant who acts with authority. Luke, writing to Theophilus, offers a carefully researched narrative highlighting Jesus's compassion for the outcast (Luke 1:1-4). John writes later, emphasizing Christ's divine nature and offering theological reflection so “that ye might believe that Jesus is the Christ, the Son of God” (John 20:31). Rather than contradicting one another, the four Gospels complement each other the way four witnesses might describe the same event from different vantage points, each preserving details the others omit. Together they give a rich, harmonious testimony to who Jesus is and what He accomplished.",
+      "topics": [
+        "Bible",
+        "Bible Study"
+      ],
+      "category": "Understanding Scripture",
+      "scriptures": [
+        "Luke 1:1-4",
+        "John 20:30-31",
+        "Matthew 1:22-23",
+        "Mark 1:1"
+      ],
+      "keywords": [
+        "gospels",
+        "bible books",
+        "matthew mark luke john"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-purpose-of-the-book-of-revelation",
+      "question": "What Is the Purpose of the Book of Revelation?",
+      "shortAnswer": "Revelation was written to reveal Jesus Christ, to comfort a persecuted church, and to assure believers of God's ultimate victory over evil and the certainty of Christ's return.",
+      "longAnswer": "The very first verse states its purpose: “The Revelation of Jesus Christ, which God gave unto him, to shew unto his servants things which must shortly come to pass” (Revelation 1:1). Written to seven churches facing pressure and false teaching, the book uses vivid symbolic language rooted in Old Testament imagery to describe the great conflict between Christ and the forces of evil. Its central themes are the sovereignty of God, the worthiness of the Lamb who was slain (Revelation 5:9-12), and the final establishment of a new heaven and new earth (Revelation 21:1-4). Rather than a puzzle meant to frighten readers, Revelation is described as a blessing to those who read, hear, and keep its words (Revelation 1:3), offering hope that God's people will ultimately triumph through Christ.",
+      "topics": [
+        "Prophecy",
+        "Bible"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Revelation 1:1-3",
+        "Revelation 5:9-12",
+        "Revelation 21:1-4"
+      ],
+      "keywords": [
+        "revelation",
+        "apocalypse",
+        "end times book"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-old-testament-and-new-testament-relationship",
+      "question": "How Do the Old and New Testaments Relate to Each Other?",
+      "shortAnswer": "The Old Testament lays the foundation through God's covenant with Israel and the promise of a coming Messiah, while the New Testament reveals the fulfillment of that promise in Jesus Christ.",
+      "longAnswer": "Jesus Himself affirmed the unity of Scripture, saying that all things written of Him in the Law, Prophets, and Psalms must be fulfilled (Luke 24:44). The sacrificial system, festivals, and prophecies of the Old Testament find their meaning in Christ, who is described as the Lamb of God (John 1:29) and the one who fulfilled rather than destroyed the Law (Matthew 5:17). Paul explains that the Old Testament writings were “written for our learning” (Romans 15:4) and remain profitable for teaching and correction (2 Timothy 3:16-17). Reading both Testaments together reveals one unified redemptive story, tracing God's plan from creation and the fall through the promise of a Redeemer to His arrival, death, resurrection, and coming return.",
+      "topics": [
+        "Bible",
+        "Bible Study"
+      ],
+      "category": "Understanding Scripture",
+      "scriptures": [
+        "Luke 24:44-47",
+        "Matthew 5:17",
+        "Romans 15:4",
+        "2 Timothy 3:16-17"
+      ],
+      "keywords": [
+        "old testament new testament",
+        "bible unity",
+        "covenant"
+      ]
+    },
+    {
+      "id": "answer-how-do-i-study-the-bible-effectively",
+      "question": "How Do I Study the Bible Effectively?",
+      "shortAnswer": "Effective Bible study combines prayerful dependence on the Holy Spirit, attention to context, comparison of Scripture with Scripture, and consistent practice, so the Word can be understood and applied rather than merely read.",
+      "longAnswer": "Before opening Scripture, it is helpful to ask God for understanding, since “the entrance of thy words giveth light” (Psalm 119:130) and the Spirit is promised to guide believers into truth (John 16:13). Paying attention to the historical setting, literary type, and immediate context of a passage keeps interpretation grounded rather than speculative. The Bereans were commended because they searched the Scriptures daily to test what they were taught (Acts 17:11), a pattern that shows Scripture is meant to interpret Scripture, with clearer passages shedding light on more difficult ones. Consistency matters more than intensity; a modest daily habit of reading and reflection, paired with prayer and, where possible, discussion with other believers, builds lasting familiarity with God's Word and its application to daily life.",
+      "topics": [
+        "Bible Study",
+        "Bible"
+      ],
+      "category": "Understanding Scripture",
+      "scriptures": [
+        "Psalm 119:105",
+        "Psalm 119:130",
+        "Acts 17:11",
+        "John 16:13",
+        "2 Timothy 2:15"
+      ],
+      "keywords": [
+        "bible study",
+        "how to read bible",
+        "scripture interpretation"
+      ]
+    },
+    {
+      "id": "answer-who-wrote-the-book-of-genesis",
+      "question": "Who Wrote the Book of Genesis?",
+      "shortAnswer": "Scripture and long-standing tradition attribute the book of Genesis, along with the rest of the Pentateuch, to Moses, who was uniquely positioned through his upbringing and calling to record Israel's origins and early history.",
+      "longAnswer": "Later biblical writers repeatedly refer to “the book of Moses” or “the law of Moses” in ways that include material from Genesis (Mark 12:26; Luke 24:27). Moses, raised in Pharaoh's household and educated in Egyptian learning, was well equipped to compile and record Israel's early history under divine inspiration, likely drawing on preserved family records, oral tradition, and direct revelation from God concerning creation and the flood. Genesis was written to establish essential truths: that God created the heavens and the earth, that sin entered through human choice, and that God began working out a plan of redemption through Abraham's descendants (Genesis 12:1-3). Its purpose is theological and historical, grounding Israel's identity and the entire biblical storyline in the character and purposes of God.",
+      "topics": [
+        "Bible",
+        "Creation"
+      ],
+      "category": "Understanding Scripture",
+      "scriptures": [
+        "Mark 12:26",
+        "Luke 24:27",
+        "Genesis 1:1",
+        "Genesis 12:1-3"
+      ],
+      "keywords": [
+        "genesis authorship",
+        "moses",
+        "pentateuch"
+      ]
+    },
+    {
+      "id": "answer-what-are-the-psalms-about",
+      "question": "What Are the Psalms About and How Should I Use Them?",
+      "shortAnswer": "The Psalms are a collection of inspired songs and prayers that express the full range of human emotion before God—praise, lament, confession, and trust—and they can be used as a model and companion for personal prayer and worship.",
+      "longAnswer": "Written largely by David and other inspired poets over many centuries, the Psalms give voice to joy, grief, fear, repentance, and hope, often within the same psalm (Psalm 42:5, 11). They teach that honest, unfiltered communication with God is welcomed rather than shameful; David openly cries out in distress yet consistently returns to trust in God's character (Psalm 13:1-6). Many psalms point forward to the Messiah, describing His suffering (Psalm 22) and His eternal reign (Psalm 2). Reading a psalm slowly, praying its words back to God, and noticing how it moves from struggle to trust can be a rich pattern for personal devotion, reminding believers that Scripture gives language for seasons when their own words fail.",
+      "topics": [
+        "Bible",
+        "Prayer"
+      ],
+      "category": "Understanding Scripture",
+      "scriptures": [
+        "Psalm 13:1-6",
+        "Psalm 22:1",
+        "Psalm 42:5",
+        "Psalm 119:105"
+      ],
+      "keywords": [
+        "psalms",
+        "poetry",
+        "worship songs"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-meaning-of-the-book-of-job",
+      "question": "What Is the Meaning of the Book of Job?",
+      "shortAnswer": "Job addresses the problem of suffering, showing that a righteous person can suffer for reasons unrelated to personal sin and that trust in God's wisdom and character can remain intact even when His purposes are not fully understood.",
+      "longAnswer": "Job was described by God Himself as “perfect and upright” (Job 1:8), yet he lost his possessions, children, and health in rapid succession. His friends wrongly assumed his suffering proved hidden sin, but God ultimately rebuked their simplistic theology (Job 42:7). The book never fully explains to Job why he suffered; instead, God responds by revealing His own wisdom and power in creation (Job 38-41), inviting Job to trust Him even without complete answers. Job's response—“I know that my redeemer liveth” (Job 19:25)—shows that faith can endure real anguish without abandoning confidence in God. The book comforts sufferers today by affirming that unexplained pain is not necessarily divine punishment and that God remains present and trustworthy in the midst of it.",
+      "topics": [
+        "Bible",
+        "Comfort"
+      ],
+      "category": "Understanding Scripture",
+      "scriptures": [
+        "Job 1:8",
+        "Job 19:25",
+        "Job 38:1-4",
+        "Job 42:7-10"
+      ],
+      "keywords": [
+        "book of job",
+        "suffering",
+        "problem of pain"
+      ]
+    },
+    {
+      "id": "answer-what-is-typology-in-the-bible",
+      "question": "What Is Typology in the Bible?",
+      "shortAnswer": "Typology refers to the way certain Old Testament people, events, or institutions foreshadow and find deeper fulfillment in Jesus Christ and His work of salvation.",
+      "longAnswer": "Paul describes Adam as “the figure of him that was to come,” referring to Christ (Romans 5:14), and calls Old Testament events “ensamples” written for the instruction of later generations (1 Corinthians 10:11). The Passover lamb points forward to Christ, “our passover,” who was sacrificed for us (1 Corinthians 5:7). The sanctuary and its services similarly foreshadow the ministry of Christ, described in Hebrews as “a shadow of heavenly things” (Hebrews 8:5). Recognizing these patterns helps readers see the unity of Scripture and deepens appreciation for how thoroughly God planned redemption in advance, using historical events to teach spiritual truths that reach their full meaning in Jesus.",
+      "topics": [
+        "Bible",
+        "Sanctuary"
+      ],
+      "category": "Understanding Scripture",
+      "scriptures": [
+        "Romans 5:14",
+        "1 Corinthians 5:7",
+        "1 Corinthians 10:11",
+        "Hebrews 8:5"
+      ],
+      "keywords": [
+        "typology",
+        "old testament symbols",
+        "shadow of things to come"
+      ]
+    },
+    {
+      "id": "answer-how-do-i-reconcile-apparent-bible-contradictions",
+      "question": "How Do I Reconcile Apparent Contradictions in the Bible?",
+      "shortAnswer": "Apparent difficulties exist between certain passages, but careful study of context, different purposes of authors, and complementary details typically resolves these tensions, and Scripture as a whole presents a consistent, unified message.",
+      "longAnswer": "Different Gospel writers, for example, sometimes report events with varying details because they wrote to different audiences and selected material for different purposes, much like multiple honest witnesses to the same event. Jesus affirmed that “the scripture cannot be broken” (John 10:35), and Paul described all Scripture as inspired by God (2 Timothy 3:16). Many alleged contradictions dissolve when historical, cultural, and literary context is considered, when translation differences are accounted for, or when apparent discrepancies turn out to be complementary rather than contradictory details. Approaching Scripture with humility, comparing passage with passage, and consulting reliable study resources allows believers to work through difficult texts without abandoning confidence in the Bible's trustworthiness.",
+      "topics": [
+        "Bible",
+        "Bible Study"
+      ],
+      "category": "Understanding Scripture",
+      "scriptures": [
+        "John 10:35",
+        "2 Timothy 3:16-17",
+        "Isaiah 28:10",
+        "Acts 17:11"
+      ],
+      "keywords": [
+        "bible contradictions",
+        "biblical inerrancy",
+        "difficult passages"
+      ]
+    },
+    {
+      "id": "answer-original-languages-of-scripture",
+      "question": "What Are the Original Languages of Scripture?",
+      "shortAnswer": "The Old Testament was written mainly in Hebrew, with a few Aramaic portions, while the New Testament was written in Koine Greek, the common language of the eastern Mediterranean world in the first century.",
+      "longAnswer": "Hebrew, a Semitic language, carried the Old Testament narratives, poetry, and prophecy for roughly a thousand years of composition, while portions of Daniel and Ezra appear in Aramaic, the diplomatic language of the era. By the time of the New Testament, Greek had become the common trade and cultural language following Alexander's conquests, making it a fitting vehicle for the gospel to spread widely (Acts 1:8; Romans 1:16). Translators throughout history, guided by careful scholarship, have worked to render these original languages faithfully into other tongues so that people everywhere can read God's Word in their own language. While no translation is perfect, the essential message of salvation in Christ has been reliably preserved and transmitted across centuries and cultures.",
+      "topics": [
+        "Bible",
+        "Bible Study"
+      ],
+      "category": "Understanding Scripture",
+      "scriptures": [
+        "Acts 1:8",
+        "Romans 1:16",
+        "Daniel 2:4",
+        "Nehemiah 8:8"
+      ],
+      "keywords": [
+        "bible languages",
+        "hebrew greek aramaic",
+        "bible translation"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-role-of-the-holy-spirit-in-understanding-scripture",
+      "question": "What Role Does the Holy Spirit Play in Understanding Scripture?",
+      "shortAnswer": "The Holy Spirit illuminates the mind of the sincere reader, helping believers grasp spiritual truth in Scripture that could not be understood by human reasoning alone.",
+      "longAnswer": "Jesus promised that the Spirit of truth would guide His followers “into all truth” (John 16:13), and Paul explains that spiritual truths are “spiritually discerned” and require the Spirit's help to be understood (1 Corinthians 2:10-14). This does not replace careful study, context, or reasoning, but it means Bible study should be accompanied by humble prayer for insight, since the same Spirit who inspired the writers can open the mind of the reader (2 Peter 1:20-21). Believers are encouraged to ask, as the psalmist did, “Open thou mine eyes, that I may behold wondrous things out of thy law” (Psalm 119:18), trusting that God is willing to grant understanding to those who sincerely seek it.",
+      "topics": [
+        "Holy Spirit",
+        "Bible Study"
+      ],
+      "category": "Understanding Scripture",
+      "scriptures": [
+        "John 16:13",
+        "1 Corinthians 2:10-14",
+        "2 Peter 1:20-21",
+        "Psalm 119:18"
+      ],
+      "keywords": [
+        "holy spirit bible study",
+        "spiritual discernment",
+        "illumination"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-difference-between-law-and-prophets-and-writings",
+      "question": "What Are the Law, the Prophets, and the Writings in the Old Testament?",
+      "shortAnswer": "The Old Testament is traditionally organized into three sections—the Law (Torah), the Prophets, and the Writings—which together Jesus referenced as encompassing all of Old Testament Scripture.",
+      "longAnswer": "The Law consists of the first five books, Genesis through Deuteronomy, containing foundational history and instruction. The Prophets include both the historical books, often called the Former Prophets, and the prophetic books proper, such as Isaiah and Jeremiah, called the Latter Prophets. The Writings gather poetic and wisdom literature such as Psalms, Proverbs, and Job, along with additional historical works. Jesus referred to this threefold division when He said that everything written about Him “in the law of Moses, and in the prophets, and in the psalms” must be fulfilled (Luke 24:44), affirming that the entire Hebrew Scripture testified to His identity and mission and forms a unified, authoritative body of revelation.",
+      "topics": [
+        "Bible"
+      ],
+      "category": "Understanding Scripture",
+      "scriptures": [
+        "Luke 24:44",
+        "Deuteronomy 31:24-26",
+        "Isaiah 1:1",
+        "Psalm 1:1-2"
+      ],
+      "keywords": [
+        "old testament structure",
+        "torah prophets writings",
+        "hebrew bible"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-purpose-of-the-book-of-proverbs",
+      "question": "What Is the Purpose of the Book of Proverbs?",
+      "shortAnswer": "Proverbs was written to impart practical, God-centered wisdom for everyday decisions, relationships, work, and character, teaching that true wisdom begins with reverence for God.",
+      "longAnswer": "The book opens by stating its aim: to know wisdom and instruction, to receive instruction in wise dealing, and to give prudence to the simple (Proverbs 1:2-4). Its central theme is stated plainly: “The fear of the LORD is the beginning of knowledge” (Proverbs 1:7), meaning that genuine wisdom is rooted in a right relationship with God rather than mere cleverness. Proverbs covers a wide range of practical topics including speech, finances, friendship, work ethic, and self-control, using memorable, concise sayings meant to be repeated and applied. While proverbs express general patterns rather than absolute guarantees, they offer time-tested guidance for living skillfully and honorably in a world that often rewards folly, calling readers to choose the path of wisdom over foolishness (Proverbs 9:10).",
+      "topics": [
+        "Bible",
+        "Christian Living"
+      ],
+      "category": "Understanding Scripture",
+      "scriptures": [
+        "Proverbs 1:2-7",
+        "Proverbs 3:5-6",
+        "Proverbs 9:10"
+      ],
+      "keywords": [
+        "proverbs",
+        "wisdom literature",
+        "practical wisdom"
+      ]
+    },
+    {
+      "id": "answer-how-do-i-interpret-difficult-old-testament-passages",
+      "question": "How Should I Interpret Difficult Old Testament Passages About War or Judgment?",
+      "shortAnswer": "Difficult passages about war or judgment should be read within their historical and covenantal context, recognizing God's patience, justice, and long-term redemptive purposes rather than isolating verses from the larger biblical narrative.",
+      "longAnswer": "Many of these accounts occur within a specific covenant context involving Israel's unique calling and surrounding nations that had reached extreme moral corruption, described as filling up their iniquity (Genesis 15:16). Scripture consistently portrays God as “merciful and gracious, longsuffering, and abundant in goodness and truth” (Exodus 34:6), showing that judgment came only after extended patience and warning. These passages are also framed within a larger story that ultimately reveals God's character fully in Jesus Christ, who taught love even for enemies (Matthew 5:44) and who bore judgment Himself at the cross. Reading such texts alongside the full witness of Scripture, rather than in isolation, helps preserve a balanced understanding of God as both just and loving.",
+      "topics": [
+        "Bible",
+        "Bible Study"
+      ],
+      "category": "Understanding Scripture",
+      "scriptures": [
+        "Genesis 15:16",
+        "Exodus 34:6-7",
+        "Matthew 5:44",
+        "Romans 2:4"
+      ],
+      "keywords": [
+        "old testament violence",
+        "difficult scripture",
+        "god's justice"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-sermon-on-the-mount-about",
+      "question": "What Is the Sermon on the Mount About?",
+      "shortAnswer": "The Sermon on the Mount, found in Matthew 5-7, presents Jesus's core teaching on kingdom character, contrasting outward religious performance with genuine inward transformation of heart and motive.",
+      "longAnswer": "Jesus begins with the Beatitudes, blessing qualities the world often overlooks, such as humility, mourning, meekness, and a hunger for righteousness (Matthew 5:3-10). He then addresses anger, lust, honesty, retaliation, and love for enemies, repeatedly showing that God's law reaches beyond external behavior into the heart's intentions (Matthew 5:21-22, 27-28). The sermon also teaches about prayer, giving the model known as the Lord's Prayer (Matthew 6:9-13), and warns against anxious striving for material security, urging listeners to “seek ye first the kingdom of God” (Matthew 6:33). It closes with the parable of two builders, showing that hearing Jesus's words is not enough; true wisdom is shown by putting them into practice (Matthew 7:24-27).",
+      "topics": [
+        "Bible",
+        "Christian Living"
+      ],
+      "category": "Understanding Scripture",
+      "scriptures": [
+        "Matthew 5:3-12",
+        "Matthew 6:9-13",
+        "Matthew 6:33",
+        "Matthew 7:24-27"
+      ],
+      "keywords": [
+        "sermon on the mount",
+        "beatitudes",
+        "matthew 5-7"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-book-of-daniel-about",
+      "question": "What Is the Book of Daniel About?",
+      "shortAnswer": "Daniel combines historical narrative with prophetic vision, demonstrating God's sovereignty over history and nations while outlining a prophetic timeline that points forward to the Messiah and the end of the age.",
+      "longAnswer": "The first half of the book records Daniel and his companions maintaining faithfulness to God under pressure in a pagan empire, including the fiery furnace and the lions' den (Daniel 3; 6), showing that God protects and honors those who remain loyal to Him despite danger. The second half contains symbolic visions of successive world empires and a prophetic countdown to the Messiah's arrival (Daniel 2, 7, 9), remarkable for their historical precision. Daniel's prophecies repeatedly affirm that “the most High ruleth in the kingdom of men” (Daniel 4:17), a theme meant to reassure God's people that no earthly power operates outside His ultimate control, and that His kingdom will finally triumph over every human empire (Daniel 2:44).",
+      "topics": [
+        "Prophecy",
+        "Bible"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Daniel 2:44",
+        "Daniel 3:16-18",
+        "Daniel 4:17",
+        "Daniel 9:24-27"
+      ],
+      "keywords": [
+        "book of daniel",
+        "prophecy",
+        "daniel visions"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-meaning-of-selah-in-psalms",
+      "question": "What Does 'Selah' Mean in the Psalms?",
+      "shortAnswer": "Selah is a Hebrew term appearing frequently throughout the Psalms whose exact meaning is uncertain, but it is generally understood as a musical or liturgical pause inviting reflection on what has just been said.",
+      "longAnswer": "Scholars have proposed various explanations, including a musical interlude, a call to raise the voice, or simply a pause for meditation, but no definitive consensus exists since the term's precise technical meaning has not survived in surviving records. What is clear from its placement is that Selah often follows a significant statement about God's character or a turning point in the psalm's emotional tone (Psalm 3:2, 4). Its practical value for readers today lies in its implicit invitation: rather than rushing through Scripture, believers are encouraged to pause, reflect, and let the truths of God's Word settle deeply into the heart before moving on, a practice consistent with the broader biblical call to meditate on God's Word (Psalm 1:2).",
+      "topics": [
+        "Bible",
+        "Prayer"
+      ],
+      "category": "Understanding Scripture",
+      "scriptures": [
+        "Psalm 3:2-4",
+        "Psalm 1:2",
+        "Psalm 46:1-3"
+      ],
+      "keywords": [
+        "selah meaning",
+        "psalms terms",
+        "bible study"
+      ]
+    },
+    {
+      "id": "answer-why-are-genealogies-included-in-the-bible",
+      "question": "Why Are Genealogies Included in the Bible?",
+      "shortAnswer": "Genealogies establish historical continuity, confirm the fulfillment of God's covenant promises, and, in the case of Jesus, demonstrate His legitimate legal and lineal right to the Messianic throne of David.",
+      "longAnswer": "While lists of names can seem tedious to modern readers, they served crucial purposes in the ancient world, verifying tribal identity, land inheritance, and priestly qualification (Ezra 2:62). The genealogies of Jesus in Matthew and Luke trace His ancestry back through David and Abraham, and even to Adam, anchoring the incarnation in real human history and confirming that the Messianic promises made to Abraham and David were literally fulfilled in Christ (Matthew 1:1; Luke 3:23-38). These lists also quietly include unexpected figures, including women and Gentiles, hinting at the wideness of God's grace long before the gospel's explicit expansion to all nations. Rather than filler material, genealogies anchor the Bible's redemptive story in verifiable history.",
+      "topics": [
+        "Bible"
+      ],
+      "category": "Understanding Scripture",
+      "scriptures": [
+        "Matthew 1:1-17",
+        "Luke 3:23-38",
+        "Ezra 2:62",
+        "Genesis 12:1-3"
+      ],
+      "keywords": [
+        "bible genealogies",
+        "jesus lineage",
+        "biblical history"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-purpose-of-the-book-of-acts",
+      "question": "What Is the Purpose of the Book of Acts?",
+      "shortAnswer": "Acts records the birth and early expansion of the Christian church, showing how the Holy Spirit empowered ordinary believers to carry the gospel from Jerusalem to the wider Roman world.",
+      "longAnswer": "Written by Luke as a sequel to his Gospel, Acts begins with the promise of the Holy Spirit's outpouring (Acts 1:8) and its fulfillment at Pentecost (Acts 2:1-4), which launched a rapid spread of the gospel despite persecution, imprisonment, and opposition. The book traces the ministry of Peter and the early Jerusalem church, then follows Paul's missionary journeys as the gospel moves increasingly toward the Gentile world, fulfilling Jesus's commission to be witnesses “unto the uttermost part of the earth” (Acts 1:8). Acts demonstrates that the church's growth depended not on human strategy alone but on the Spirit's power working through faithful, often ordinary people, offering a pattern of Spirit-empowered witness for the church in every generation.",
+      "topics": [
+        "Bible",
+        "Church",
+        "Holy Spirit"
+      ],
+      "category": "Understanding Scripture",
+      "scriptures": [
+        "Acts 1:8",
+        "Acts 2:1-4",
+        "Acts 2:41-47",
+        "Acts 13:2-3"
+      ],
+      "keywords": [
+        "book of acts",
+        "early church history",
+        "pentecost"
+      ]
+    },
+    {
+      "id": "answer-what-does-inspired-mean-for-the-bible",
+      "question": "What Does It Mean That the Bible Is 'Inspired'?",
+      "shortAnswer": "Inspiration means that God worked through human writers by His Spirit so that what they wrote conveys His truth reliably, even though He used their individual personalities, vocabulary, and writing styles.",
+      "longAnswer": "Paul states that “all scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness” (2 Timothy 3:16), while Peter explains that “holy men of God spake as they were moved by the Holy Ghost” (2 Peter 1:21). This describes a genuine partnership rather than mechanical dictation; each biblical author's voice, culture, and vocabulary remain visible, yet the Spirit ensured the message conveyed is trustworthy and authoritative for faith and practice. This is why the Bible can address vastly different situations across many centuries with consistent theological unity, while still displaying the rich diversity of human authorship God chose to use as His instrument.",
+      "topics": [
+        "Bible",
+        "Faith"
+      ],
+      "category": "Understanding Scripture",
+      "scriptures": [
+        "2 Timothy 3:16-17",
+        "2 Peter 1:20-21",
+        "Hebrews 1:1"
+      ],
+      "keywords": [
+        "biblical inspiration",
+        "inerrancy",
+        "how bible was written"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-purpose-of-the-book-of-romans",
+      "question": "What Is the Purpose of the Book of Romans?",
+      "shortAnswer": "Romans systematically presents the gospel, explaining humanity's need for salvation, justification by faith in Christ, and the practical implications of grace for daily Christian living.",
+      "longAnswer": "Paul opens by establishing that all people, both Jew and Gentile, stand guilty before God (Romans 1:18-3:23), then explains that righteousness comes only through faith in Jesus Christ, not through law-keeping (Romans 3:21-26). He addresses questions about grace and continued obedience (Romans 6), the believer's struggle with sin (Romans 7), the security believers have in Christ (Romans 8), and God's ongoing purposes for Israel (Romans 9-11). The letter concludes with practical instructions for transformed living, urging believers to present their bodies as a living sacrifice (Romans 12:1-2) and to love one another in community. Romans remains one of the clearest, most comprehensive expositions of the gospel in all of Scripture.",
+      "topics": [
+        "Bible",
+        "Salvation"
+      ],
+      "category": "Understanding Scripture",
+      "scriptures": [
+        "Romans 1:16-17",
+        "Romans 3:23-26",
+        "Romans 8:1",
+        "Romans 12:1-2"
+      ],
+      "keywords": [
+        "book of romans",
+        "justification by faith",
+        "pauline theology"
+      ]
+    },
+    {
+      "id": "answer-why-did-jesus-have-to-die-on-the-cross",
+      "question": "Why Did Jesus Have to Die on the Cross?",
+      "shortAnswer": "Jesus died on the cross to pay the penalty for human sin, satisfying the just requirements of God's law while offering forgiveness and reconciliation to all who trust in Him.",
+      "longAnswer": "Scripture teaches that “the wages of sin is death” (Romans 6:23), and since all have sinned (Romans 3:23), a penalty stood against humanity that people could not pay themselves. Jesus, who knew no sin, was made sin for us, so that believers might become the righteousness of God in Him (2 Corinthians 5:21). Isaiah prophesied centuries earlier that He would be “wounded for our transgressions” and that “the LORD hath laid on him the iniquity of us all” (Isaiah 53:5-6). The cross was not a plan forced upon God from outside; it flowed from His love, since “God commendeth his love toward us, in that, while we were yet sinners, Christ died for us” (Romans 5:8). Through His death, the debt of sin was paid, satisfying justice while opening the way for mercy and eternal life to all who believe.",
+      "topics": [
+        "Salvation",
+        "Faith"
+      ],
+      "category": "Faith and Salvation",
+      "scriptures": [
+        "Isaiah 53:5-6",
+        "Romans 3:23",
+        "Romans 5:8",
+        "Romans 6:23",
+        "2 Corinthians 5:21"
+      ],
+      "keywords": [
+        "why did jesus die",
+        "cross",
+        "atonement"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-born-again-experience",
+      "question": "What Is the Born-Again Experience in Christianity?",
+      "shortAnswer": "Being born again refers to the spiritual transformation that occurs when a person is renewed by the Holy Spirit through faith in Jesus Christ, receiving new spiritual life and a changed heart.",
+      "longAnswer": "Jesus told Nicodemus plainly, “Except a man be born again, he cannot see the kingdom of God” (John 3:3), explaining that this new birth is “of water and of the Spirit” rather than a physical process (John 3:5-6). Paul describes this transformation as becoming “a new creature,” with old things passing away and all things becoming new (2 Corinthians 5:17). This new birth begins the moment a person genuinely repents and places faith in Christ, and it results in a changed direction of life, described elsewhere as walking “in newness of life” (Romans 6:4). It is not a one-time emotional experience alone but the beginning of an ongoing relationship in which the Holy Spirit continues to renew the believer's mind and character over time (Titus 3:5).",
+      "topics": [
+        "Salvation",
+        "Holy Spirit"
+      ],
+      "category": "Faith and Salvation",
+      "scriptures": [
+        "John 3:3-7",
+        "2 Corinthians 5:17",
+        "Romans 6:4",
+        "Titus 3:5"
+      ],
+      "keywords": [
+        "born again",
+        "new birth",
+        "regeneration"
+      ]
+    },
+    {
+      "id": "answer-what-is-grace-in-christianity",
+      "question": "What Is Grace in Christianity?",
+      "shortAnswer": "Grace is God's unmerited favor toward sinners, His freely given gift of forgiveness and salvation that cannot be earned by human effort or good works.",
+      "longAnswer": "Paul explains that “by grace are ye saved through faith; and that not of yourselves: it is the gift of God: Not of works, lest any man should boast” (Ephesians 2:8-9). Grace stands in contrast to earning salvation through personal merit; it is God freely extending mercy to those who deserve judgment. This does not make good works meaningless—Paul continues that believers are created for good works (Ephesians 2:10)—but such works flow out of gratitude for grace already received, not as a means of earning it. Grace also sustains believers throughout the Christian life, as Paul learned that God's grace is sufficient even in weakness (2 Corinthians 12:9), meaning grace is not only how a person is saved but how they are sustained daily.",
+      "topics": [
+        "Salvation",
+        "Faith"
+      ],
+      "category": "Faith and Salvation",
+      "scriptures": [
+        "Ephesians 2:8-10",
+        "Romans 3:24",
+        "2 Corinthians 12:9",
+        "Titus 2:11"
+      ],
+      "keywords": [
+        "grace",
+        "unmerited favor",
+        "salvation by grace"
+      ]
+    },
+    {
+      "id": "answer-how-can-i-know-i-am-saved",
+      "question": "How Can I Know I Am Saved?",
+      "shortAnswer": "Assurance of salvation is grounded not in feelings but in God's promises to those who genuinely believe in and follow Jesus Christ, and Scripture explicitly says believers may know they possess eternal life.",
+      "longAnswer": "John states his purpose plainly: “These things have I written unto you that believe on the name of the Son of God; that ye may know that ye have eternal life” (1 John 5:13). Assurance rests on the finished work of Christ and the trustworthiness of His promises rather than on the strength of one's own emotions, which naturally fluctuate. Evidence of genuine faith includes a growing love for God and others, a desire to obey His Word, and the witness of the Spirit within (1 John 3:14; Romans 8:16). When doubts arise, believers are encouraged to return again and again to what God has promised in Scripture rather than to their changing feelings, resting confidently on Christ's finished work rather than personal performance.",
+      "topics": [
+        "Salvation",
+        "Faith"
+      ],
+      "category": "Faith and Salvation",
+      "scriptures": [
+        "1 John 5:11-13",
+        "1 John 3:14",
+        "Romans 8:16",
+        "John 10:28-29"
+      ],
+      "keywords": [
+        "assurance of salvation",
+        "know you are saved",
+        "eternal life"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-difference-between-justification-and-sanctification",
+      "question": "What Is the Difference Between Justification and Sanctification?",
+      "shortAnswer": "Justification is the instant declaration of righteousness God grants a believer through faith in Christ, while sanctification is the ongoing, lifelong process of growing in holiness and Christlike character.",
+      "longAnswer": "Justification happens the moment a person believes, when God legally declares the sinner righteous based on Christ's righteousness credited to them, “being justified freely by his grace through the redemption that is in Christ Jesus” (Romans 3:24). Sanctification, by contrast, is a continuing process in which the Holy Spirit progressively transforms the believer's thoughts, desires, and behavior to reflect Christ, described as being “changed into the same image from glory to glory” (2 Corinthians 3:18). Justification addresses a believer's legal standing before God; sanctification addresses their practical growth in godliness. Both are essential and connected—justification is the foundation, and sanctification is the lifelong fruit that naturally follows genuine faith.",
+      "topics": [
+        "Salvation",
+        "Christian Living"
+      ],
+      "category": "Faith and Salvation",
+      "scriptures": [
+        "Romans 3:24",
+        "Romans 5:1",
+        "2 Corinthians 3:18",
+        "1 Thessalonians 5:23"
+      ],
+      "keywords": [
+        "justification sanctification",
+        "growth in holiness",
+        "christian growth"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-faith-versus-works",
+      "question": "What Does the Bible Say About Faith Versus Works?",
+      "shortAnswer": "Salvation comes through faith in Jesus Christ alone, not by human works, but genuine saving faith naturally produces good works as its evidence and fruit.",
+      "longAnswer": "Paul is clear that salvation is “not of works, lest any man should boast” (Ephesians 2:9), placing the basis of salvation entirely on grace received through faith. James, addressing a different concern, teaches that “faith without works is dead” (James 2:17, 26), emphasizing that genuine faith always shows itself through action. These teachings are not contradictory but complementary: Paul addresses how a person is saved, while James addresses how genuine faith is recognized. A tree is known by its fruit (Matthew 7:17-20); good works do not earn salvation, but their absence raises questions about whether faith is truly present. Works are the evidence of salvation, not its cause.",
+      "topics": [
+        "Salvation",
+        "Faith"
+      ],
+      "category": "Faith and Salvation",
+      "scriptures": [
+        "Ephesians 2:8-10",
+        "James 2:17-26",
+        "Matthew 7:17-20",
+        "Titus 3:5"
+      ],
+      "keywords": [
+        "faith and works",
+        "james and paul",
+        "good works salvation"
+      ]
+    },
+    {
+      "id": "answer-who-is-jesus-christ-according-to-the-bible",
+      "question": "Who Is Jesus Christ According to the Bible?",
+      "shortAnswer": "The Bible presents Jesus Christ as fully God and fully human—the eternal Son of God who took on human nature to reveal the Father, live a sinless life, die for sin, and rise again to secure salvation.",
+      "longAnswer": "John's Gospel opens by declaring that “the Word was God” and that “the Word was made flesh, and dwelt among us” (John 1:1, 14), affirming both Christ's eternal deity and His genuine humanity. Paul describes Him as the one “in whom dwelleth all the fulness of the Godhead bodily” (Colossians 2:9), while also emphasizing that He was made in human likeness and was obedient even unto death (Philippians 2:6-8). Jesus performed miracles, forgave sins, accepted worship, and claimed unity with the Father (John 10:30), all indicating His divine identity, while also experiencing hunger, weariness, temptation, and death, showing genuine humanity. This unique combination allowed Him to serve as the perfect mediator between God and humanity (1 Timothy 2:5).",
+      "topics": [
+        "Faith"
+      ],
+      "category": "Knowing God",
+      "scriptures": [
+        "John 1:1-14",
+        "Colossians 2:9",
+        "Philippians 2:6-8",
+        "1 Timothy 2:5"
+      ],
+      "keywords": [
+        "who is jesus",
+        "deity of christ",
+        "christology"
+      ]
+    },
+    {
+      "id": "answer-what-does-repentance-mean",
+      "question": "What Does Repentance Mean in the Bible?",
+      "shortAnswer": "Repentance is a genuine change of mind and heart about sin that results in turning away from it and turning toward God, involving sincere sorrow, confession, and a decisive redirection of life.",
+      "longAnswer": "John the Baptist and Jesus both began their ministries with the call to “repent” (Matthew 3:2; Mark 1:15), showing that repentance is foundational to receiving the gospel. Paul describes “godly sorrow” as producing repentance that leads to salvation, distinguishing it from mere worldly regret over consequences (2 Corinthians 7:10). True repentance is more than feeling bad; it involves confessing sin honestly to God, who is “faithful and just to forgive us our sins” (1 John 1:9), and it is accompanied by a real change in direction, described as bringing forth “fruits meet for repentance” (Matthew 3:8). Repentance is not a one-time event only at conversion but an ongoing posture of humility and honesty before God throughout the Christian life.",
+      "topics": [
+        "Salvation",
+        "Forgiveness"
+      ],
+      "category": "Faith and Salvation",
+      "scriptures": [
+        "Matthew 3:2-8",
+        "Mark 1:15",
+        "2 Corinthians 7:10",
+        "1 John 1:9"
+      ],
+      "keywords": [
+        "repentance meaning",
+        "turning from sin",
+        "godly sorrow"
+      ]
+    },
+    {
+      "id": "answer-what-happens-when-someone-accepts-jesus",
+      "question": "What Happens When Someone Accepts Jesus as Savior?",
+      "shortAnswer": "When a person places genuine faith in Jesus, they receive forgiveness of sins, are spiritually reborn, become part of God's family, and begin a new relationship marked by the indwelling presence of the Holy Spirit.",
+      "longAnswer": "John writes that “as many as received him, to them gave he power to become the sons of God, even to them that believe on his name” (John 1:12), describing an immediate change in spiritual standing and identity. Paul explains that believers are sealed with the Holy Spirit of promise at this point (Ephesians 1:13), and that they pass “from death unto life” (John 5:24). This decision marks the beginning, not the end, of the Christian journey; it should be followed by baptism as a public declaration of faith (Acts 2:38), ongoing growth through prayer and Scripture, and involvement in a community of believers, since spiritual growth was never intended to happen in isolation.",
+      "topics": [
+        "Salvation",
+        "Baptism"
+      ],
+      "category": "Faith and Salvation",
+      "scriptures": [
+        "John 1:12",
+        "John 5:24",
+        "Ephesians 1:13",
+        "Acts 2:38"
+      ],
+      "keywords": [
+        "accepting jesus",
+        "salvation experience",
+        "becoming a christian"
+      ]
+    },
+    {
+      "id": "answer-can-a-christian-lose-their-salvation",
+      "question": "Can a Christian Lose Their Salvation?",
+      "shortAnswer": "Scripture emphasizes the security believers have in Christ while also warning against turning away from Him through persistent unbelief or willful rejection, meaning genuine faith is meant to be maintained through ongoing trust, not treated as a one-time guarantee regardless of one's relationship with God.",
+      "longAnswer": "Jesus promises that no one can pluck His sheep out of His hand (John 10:28-29), and Paul expresses confidence that nothing can separate believers from God's love in Christ (Romans 8:38-39), offering deep assurance to those who continue trusting Him. At the same time, Scripture contains sober warnings about apostasy and the danger of falling away through hardened unbelief (Hebrews 3:12-14; Hebrews 6:4-6), showing that continued faith and faithfulness matter. These passages are best held together rather than pitted against each other: salvation is secure for those who remain in genuine, persevering faith in Christ, while willful, ongoing rejection of Him is what Scripture warns against, not momentary struggle or doubt.",
+      "topics": [
+        "Salvation",
+        "Faith"
+      ],
+      "category": "Faith and Salvation",
+      "scriptures": [
+        "John 10:27-29",
+        "Romans 8:38-39",
+        "Hebrews 3:12-14",
+        "Hebrews 6:4-6"
+      ],
+      "keywords": [
+        "losing salvation",
+        "eternal security",
+        "apostasy"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-gospel-message",
+      "question": "What Is the Gospel Message in Simple Terms?",
+      "shortAnswer": "The gospel is the good news that Jesus Christ died for our sins, was buried, and rose again on the third day, offering forgiveness and eternal life to all who believe in Him.",
+      "longAnswer": "Paul summarizes the gospel concisely: “that Christ died for our sins according to the scriptures; And that he was buried, and that he rose again the third day according to the scriptures” (1 Corinthians 15:3-4). This message addresses humanity's core problem—sin and separation from God—and its solution, entirely provided through Christ's substitutionary death and victorious resurrection. The gospel is received, not achieved; it calls for faith and repentance rather than religious performance (Acts 20:21). This good news is described as “the power of God unto salvation to every one that believeth” (Romans 1:16), meaning it is not merely information to know but a message with power to transform anyone who receives it in genuine faith.",
+      "topics": [
+        "Salvation"
+      ],
+      "category": "Faith and Salvation",
+      "scriptures": [
+        "1 Corinthians 15:3-4",
+        "Romans 1:16",
+        "Acts 20:21",
+        "John 3:16"
+      ],
+      "keywords": [
+        "gospel message",
+        "good news",
+        "simple gospel"
+      ]
+    },
+    {
+      "id": "answer-why-do-i-need-a-savior",
+      "question": "Why Do I Need a Savior?",
+      "shortAnswer": "Every person needs a Savior because all have sinned and fall short of God's holy standard, and no amount of personal effort can pay the debt sin creates or restore the broken relationship with God.",
+      "longAnswer": "Paul states plainly that “all have sinned, and come short of the glory of God” (Romans 3:23), a condition that applies universally regardless of a person's background or moral effort. Sin's penalty is described as death, both physical and spiritual separation from God (Romans 6:23), and no human being can atone for their own guilt through good deeds, since “by the deeds of the law there shall no flesh be justified” (Romans 3:20). Jesus stepped into this impossible situation as the only qualified substitute, since He alone lived a sinless life and could bear the penalty on behalf of others (2 Corinthians 5:21). Recognizing this need is the first honest step toward receiving the salvation God freely offers through Christ.",
+      "topics": [
+        "Salvation"
+      ],
+      "category": "Faith and Salvation",
+      "scriptures": [
+        "Romans 3:20-23",
+        "Romans 6:23",
+        "2 Corinthians 5:21",
+        "Isaiah 64:6"
+      ],
+      "keywords": [
+        "need a savior",
+        "why jesus",
+        "sin and salvation"
+      ]
+    },
+    {
+      "id": "answer-what-does-it-mean-that-jesus-is-the-lamb-of-god",
+      "question": "What Does It Mean That Jesus Is the Lamb of God?",
+      "shortAnswer": "Calling Jesus the “Lamb of God” connects Him to the Old Testament sacrificial system, presenting Him as the perfect, sinless sacrifice whose blood takes away sin once for all.",
+      "longAnswer": "John the Baptist introduced Jesus with these words: “Behold the Lamb of God, which taketh away the sin of the world” (John 1:29), deliberately echoing the Passover lamb whose blood protected Israel from judgment in Egypt (Exodus 12:13) and the daily sacrificial lambs offered in the sanctuary. Unlike animal sacrifices, which had to be repeated endlessly and could never truly remove sin (Hebrews 10:1-4), Jesus offered Himself once, and “by his own blood he entered in once into the holy place, having obtained eternal redemption for us” (Hebrews 9:12). Revelation continues this imagery, describing the redeemed singing “the song of the Lamb” in heaven (Revelation 15:3), showing that Christ's sacrificial identity remains central to the story of redemption from beginning to end.",
+      "topics": [
+        "Salvation",
+        "Sanctuary"
+      ],
+      "category": "Faith and Salvation",
+      "scriptures": [
+        "John 1:29",
+        "Exodus 12:13",
+        "Hebrews 9:12",
+        "Hebrews 10:1-4",
+        "Revelation 15:3"
+      ],
+      "keywords": [
+        "lamb of god",
+        "jesus sacrifice",
+        "passover typology"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-difference-between-mercy-and-grace",
+      "question": "What Is the Difference Between Mercy and Grace?",
+      "shortAnswer": "Mercy is God withholding the punishment that sin deserves, while grace is God freely giving the blessing and salvation that sin could never earn; together they express the fullness of His compassionate love toward sinners.",
+      "longAnswer": "The psalmist praises God as one who does “not deal with us after our sins; nor reward us according to our iniquities” (Psalm 103:10), a picture of mercy withholding deserved judgment. Grace goes further, actively giving what is entirely undeserved, as Paul explains that believers are saved “by grace... through faith” as “the gift of God” (Ephesians 2:8). Hebrews invites believers to come boldly to the throne of grace, that they may “obtain mercy, and find grace to help in time of need” (Hebrews 4:16), showing both qualities working together in God's dealings with His people. Understanding this distinction deepens gratitude, since believers are spared what they deserved and given what they could never have earned.",
+      "topics": [
+        "Faith",
+        "Forgiveness"
+      ],
+      "category": "Faith and Salvation",
+      "scriptures": [
+        "Psalm 103:8-10",
+        "Ephesians 2:4-9",
+        "Hebrews 4:16",
+        "Titus 3:4-5"
+      ],
+      "keywords": [
+        "mercy vs grace",
+        "god's compassion",
+        "unmerited favor"
+      ]
+    },
+    {
+      "id": "answer-what-does-jesus-mean-by-i-am-the-way-the-truth-and-the-life",
+      "question": "What Does Jesus Mean by 'I Am the Way, the Truth, and the Life'?",
+      "shortAnswer": "In this statement, Jesus declares Himself the exclusive path to the Father, the ultimate standard of truth, and the source of true spiritual life, meaning salvation and relationship with God are found in Him alone.",
+      "longAnswer": "Speaking to His troubled disciples before His crucifixion, Jesus said, “I am the way, the truth, and the life: no man cometh unto the Father, but by me” (John 14:6), directly answering Thomas's question about how to reach where Jesus was going. This claim is exclusive rather than merely descriptive; Jesus does not present Himself as one of several equally valid ways to God but as the singular way. Peter later affirms this same exclusivity, declaring that “there is none other name under heaven given among men, whereby we must be saved” (Acts 4:12). This teaching calls for genuine trust in Christ specifically, rather than a vague spirituality or generalized morality, as the only sufficient path to God.",
+      "topics": [
+        "Salvation",
+        "Faith"
+      ],
+      "category": "Faith and Salvation",
+      "scriptures": [
+        "John 14:6",
+        "Acts 4:12",
+        "John 10:9",
+        "1 Timothy 2:5"
+      ],
+      "keywords": [
+        "i am the way",
+        "jesus exclusivity",
+        "only way to god"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-new-covenant",
+      "question": "What Is the New Covenant in the Bible?",
+      "shortAnswer": "The new covenant is God's promise, sealed through Christ's blood, to forgive sin completely and write His law on believers' hearts, replacing an external system of ceremonial law-keeping with an internal, Spirit-empowered relationship.",
+      "longAnswer": "Jeremiah prophesied of a coming covenant in which God would put His law “in their inward parts, and write it in their hearts” and would remember their sin no more (Jeremiah 31:31-34). Jesus fulfilled this promise at the Last Supper, saying, “this cup is the new testament in my blood, which is shed for you” (Luke 22:20), and Hebrews explains that this new covenant, established on better promises, makes the old sacrificial system obsolete (Hebrews 8:6-13). Under this covenant, obedience flows from a transformed heart empowered by the Holy Spirit rather than mere external compliance, fulfilling God's original intention that His people would love and obey Him from genuine devotion rather than obligation alone.",
+      "topics": [
+        "Salvation",
+        "Law"
+      ],
+      "category": "Faith and Salvation",
+      "scriptures": [
+        "Jeremiah 31:31-34",
+        "Luke 22:20",
+        "Hebrews 8:6-13",
+        "2 Corinthians 3:6"
+      ],
+      "keywords": [
+        "new covenant",
+        "old vs new covenant",
+        "law written on heart"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-blood-of-jesus-do",
+      "question": "What Does the Blood of Jesus Accomplish?",
+      "shortAnswer": "The blood of Jesus atones for sin, cleanses the conscience, and secures redemption, making possible forgiveness and reconciliation with God that no other sacrifice could achieve.",
+      "longAnswer": "Peter reminds believers they were redeemed “with the precious blood of Christ, as of a lamb without blemish and without spot” (1 Peter 1:18-19), emphasizing both the costliness and purity of this sacrifice. John describes the ongoing cleansing effect of Christ's blood on those who walk in the light, since “the blood of Jesus Christ his Son cleanseth us from all sin” (1 John 1:7). Hebrews teaches that Christ's blood can “purge your conscience from dead works to serve the living God” (Hebrews 9:14), addressing not only guilt before God but the burden of guilt within the human heart. Through this one sacrifice, believers receive full forgiveness, a clear conscience, and confident access into God's presence (Hebrews 10:19-22).",
+      "topics": [
+        "Salvation",
+        "Sanctuary"
+      ],
+      "category": "Faith and Salvation",
+      "scriptures": [
+        "1 Peter 1:18-19",
+        "1 John 1:7",
+        "Hebrews 9:14",
+        "Hebrews 10:19-22"
+      ],
+      "keywords": [
+        "blood of jesus",
+        "atonement",
+        "cleansing from sin"
+      ]
+    },
+    {
+      "id": "answer-what-is-substitutionary-atonement",
+      "question": "What Is Substitutionary Atonement?",
+      "shortAnswer": "Substitutionary atonement is the biblical teaching that Jesus took the place of sinners, bearing the punishment they deserved so that they could receive the righteousness and life He deserved.",
+      "longAnswer": "Isaiah's prophecy captures this exchange centuries in advance: “he was wounded for our transgressions, he was bruised for our iniquities: the chastisement of our peace was upon him” (Isaiah 53:5). Paul describes the same exchange, writing that God “made him to be sin for us, who knew no sin; that we might be made the righteousness of God in him” (2 Corinthians 5:21). This is not a picture of an angry God punishing an unwilling victim; rather, Scripture presents Father and Son united in the plan of redemption, with Christ willingly laying down His life (John 10:17-18). Substitution lies at the very heart of the gospel, explaining how a holy God can justly forgive guilty sinners.",
+      "topics": [
+        "Salvation"
+      ],
+      "category": "Faith and Salvation",
+      "scriptures": [
+        "Isaiah 53:4-6",
+        "2 Corinthians 5:21",
+        "John 10:17-18",
+        "Romans 5:8"
+      ],
+      "keywords": [
+        "substitutionary atonement",
+        "jesus took our place",
+        "penal substitution"
+      ]
+    },
+    {
+      "id": "answer-what-does-it-mean-that-jesus-is-our-high-priest",
+      "question": "What Does It Mean That Jesus Is Our High Priest?",
+      "shortAnswer": "Jesus serves as our great High Priest, continually interceding for believers in heaven and applying the benefits of His sacrifice, offering sympathetic help to those who come to Him in weakness and temptation.",
+      "longAnswer": "Hebrews describes Jesus as one who, having passed through the heavens, can be “touched with the feeling of our infirmities,” having been tempted in every way as we are, yet without sin (Hebrews 4:15). Because of this, believers are invited to “come boldly unto the throne of grace, that we may obtain mercy, and find grace to help in time of need” (Hebrews 4:16). Unlike the Levitical priests who had to offer repeated sacrifices for their own sins as well as the people's, Jesus's priesthood is permanent and unchangeable, and “he ever liveth to make intercession” for those who come to God through Him (Hebrews 7:24-25). This ongoing priestly ministry means believers always have present, personal access to God through Christ.",
+      "topics": [
+        "Salvation",
+        "Sanctuary"
+      ],
+      "category": "Faith and Salvation",
+      "scriptures": [
+        "Hebrews 4:14-16",
+        "Hebrews 7:24-25",
+        "Hebrews 8:1-2"
+      ],
+      "keywords": [
+        "jesus high priest",
+        "heavenly intercession",
+        "priestly ministry"
+      ]
+    },
+    {
+      "id": "answer-how-is-jesus-different-from-other-religious-leaders",
+      "question": "How Is Jesus Different From Other Religious Leaders?",
+      "shortAnswer": "Unlike other religious founders, Jesus claimed to be God in the flesh, lived a sinless life, died as a sacrifice for sin, and rose bodily from the grave, offering not merely teaching but salvation itself.",
+      "longAnswer": "Many respected religious teachers offered moral instruction, but Jesus made unique claims about His own identity, saying “I and my Father are one” (John 10:30) and accepting worship as God (John 20:28-29). His sinless life is affirmed throughout the New Testament; Peter writes that He “did no sin, neither was guile found in his mouth” (1 Peter 2:22). Most significantly, Jesus's resurrection distinguishes Him decisively, since it was witnessed by many and is described as the central proof of His claims and the guarantee of resurrection for believers (1 Corinthians 15:3-8, 20). Jesus did not simply point the way to God; He claimed, and demonstrated through His life, death, and resurrection, to be the way itself.",
+      "topics": [
+        "Faith"
+      ],
+      "category": "Knowing God",
+      "scriptures": [
+        "John 10:30",
+        "John 20:28-29",
+        "1 Peter 2:22",
+        "1 Corinthians 15:3-8"
+      ],
+      "keywords": [
+        "jesus vs other leaders",
+        "uniqueness of christ",
+        "who is jesus"
+      ]
+    },
+    {
+      "id": "answer-what-does-propitiation-mean-in-the-bible",
+      "question": "What Does 'Propitiation' Mean in the Bible?",
+      "shortAnswer": "Propitiation refers to Christ's sacrifice satisfying God's righteous judgment against sin, turning away deserved wrath and making forgiveness possible through His atoning death.",
+      "longAnswer": "John writes that Jesus “is the propitiation for our sins: and not for ours only, but also for the sins of the whole world” (1 John 2:2), and Paul similarly describes Christ as one “whom God hath set forth to be a propitiation through faith in his blood” (Romans 3:25). This word conveys that sin is a genuine offense against God's holy character requiring real satisfaction, not merely a debt to be waived without cost. Christ's death fully satisfied this requirement, allowing God to remain both “just, and the justifier of him which believeth in Jesus” (Romans 3:26). Understanding propitiation helps believers see the cross not as a demonstration of love alone but as the place where God's justice and mercy meet completely in Christ.",
+      "topics": [
+        "Salvation"
+      ],
+      "category": "Faith and Salvation",
+      "scriptures": [
+        "1 John 2:2",
+        "1 John 4:10",
+        "Romans 3:25-26"
+      ],
+      "keywords": [
+        "propitiation meaning",
+        "atonement terms",
+        "wrath of god satisfied"
+      ]
+    },
+    {
+      "id": "answer-how-do-i-pray-effectively",
+      "question": "How Do I Pray Effectively?",
+      "shortAnswer": "Effective prayer is not about eloquent words but honest, humble communication with God, offered in Jesus's name, in faith, and aligned with His will as revealed in Scripture.",
+      "longAnswer": "Jesus taught His disciples to avoid empty repetition and instead pray simply and sincerely, giving them the model prayer that addresses God's character, His kingdom, daily needs, forgiveness, and protection from temptation (Matthew 6:7-13). James teaches that prayer should be offered “in faith, nothing wavering” (James 1:6), while John explains that confidence in prayer grows when requests align with God's will (1 John 5:14-15). Prayer is strengthened through consistency, honesty about struggles, and combining requests with thanksgiving (Philippians 4:6-7), and it is enriched by praying Scripture back to God. Ultimately, effective prayer flows from a genuine relationship with God rather than a formula guaranteed to produce a desired outcome.",
+      "topics": [
+        "Prayer"
+      ],
+      "category": "Prayer and Spiritual Growth",
+      "scriptures": [
+        "Matthew 6:7-13",
+        "James 1:5-6",
+        "1 John 5:14-15",
+        "Philippians 4:6-7"
+      ],
+      "keywords": [
+        "how to pray",
+        "effective prayer",
+        "prayer tips"
+      ]
+    },
+    {
+      "id": "answer-why-does-god-not-always-answer-prayer-the-way-i-want",
+      "question": "Why Doesn't God Always Answer Prayer the Way I Want?",
+      "shortAnswer": "God answers prayer according to His perfect wisdom and love, which sometimes means a different answer, a delay, or a \"no\" that ultimately serves a greater good than what was requested.",
+      "longAnswer": "Paul prayed three times for a specific trial to be removed, yet God's answer was not removal but sufficient grace to endure it, since God's strength “is made perfect in weakness” (2 Corinthians 12:8-9). Jesus Himself, in Gethsemane, prayed that the cup of suffering might pass, yet submitted His request to the Father's greater purpose, saying, “not as I will, but as thou wilt” (Matthew 26:39). This does not mean prayer is pointless; James affirms that “the effectual fervent prayer of a righteous man availeth much” (James 5:16), but it does mean prayer is a relationship of trust, not a mechanism for controlling outcomes. Believers are invited to keep bringing requests honestly to God while trusting His timing and wisdom above their own understanding.",
+      "topics": [
+        "Prayer",
+        "Faith"
+      ],
+      "category": "Prayer and Spiritual Growth",
+      "scriptures": [
+        "2 Corinthians 12:8-9",
+        "Matthew 26:39",
+        "James 5:16",
+        "Isaiah 55:8-9"
+      ],
+      "keywords": [
+        "unanswered prayer",
+        "why prayers not answered",
+        "god's will"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-lords-prayer-and-how-should-i-use-it",
+      "question": "What Is the Lord's Prayer and How Should I Use It?",
+      "shortAnswer": "The Lord's Prayer, given by Jesus in Matthew 6:9-13, is both a model for structuring personal prayer and a prayer that can be prayed directly, covering worship, submission to God's will, daily needs, forgiveness, and protection from temptation.",
+      "longAnswer": "Jesus introduced this prayer by instructing His disciples to pray “after this manner” (Matthew 6:9), suggesting a pattern rather than a rigid, exclusive formula. It begins with worship of God's holy name, moves to submission to His kingdom and will, then addresses practical daily needs, the need for forgiveness both received and extended, and a request for protection from temptation and evil. Using this prayer as a template—expanding each phrase with personal, specific requests—helps believers develop a balanced prayer life that includes adoration, submission, provision, confession, and protection, rather than prayer that consists only of requests. It remains one of the most widely used and treasured prayers in Christian devotion.",
+      "topics": [
+        "Prayer"
+      ],
+      "category": "Prayer and Spiritual Growth",
+      "scriptures": [
+        "Matthew 6:9-13",
+        "Luke 11:1-4"
+      ],
+      "keywords": [
+        "lords prayer",
+        "our father prayer",
+        "how to pray matthew 6"
+      ]
+    },
+    {
+      "id": "answer-how-can-i-grow-closer-to-god",
+      "question": "How Can I Grow Closer to God?",
+      "shortAnswer": "Growing closer to God happens through consistent time in Scripture and prayer, obedience to what He reveals, fellowship with other believers, and a willingness to let the Holy Spirit shape one's character over time.",
+      "longAnswer": "James promises that those who draw near to God will find Him drawing near to them (James 4:8), describing spiritual closeness as a responsive relationship rather than a distant, impersonal one. Regular engagement with Scripture renews the mind (Romans 12:2), while consistent prayer maintains ongoing communication (1 Thessalonians 5:17). Fellowship with other believers provides encouragement and accountability that individual devotion alone cannot supply (Hebrews 10:24-25). Growth in closeness to God is gradual, much like any meaningful relationship, built through small, faithful choices repeated over time rather than a single dramatic experience, and it is ultimately the Spirit's work of transformation within the willing heart (2 Corinthians 3:18).",
+      "topics": [
+        "Christian Living",
+        "Prayer"
+      ],
+      "category": "Prayer and Spiritual Growth",
+      "scriptures": [
+        "James 4:8",
+        "Romans 12:2",
+        "1 Thessalonians 5:17",
+        "Hebrews 10:24-25"
+      ],
+      "keywords": [
+        "growing closer to god",
+        "spiritual growth",
+        "closer relationship with god"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-role-of-fasting-in-prayer",
+      "question": "What Is the Role of Fasting in Prayer?",
+      "shortAnswer": "Fasting is voluntarily abstaining from food for a time to focus more intently on prayer and seeking God, expressing humility and dependence, though Scripture never presents it as a way to manipulate God or earn favor.",
+      "longAnswer": "Jesus assumed His followers would fast, saying “when ye fast,” and instructed them to do so without outward show, seeking the Father's attention rather than human approval (Matthew 6:16-18). Nehemiah, Daniel, and the early church all fasted in connection with serious prayer, repentance, or significant decisions (Nehemiah 1:4; Daniel 9:3; Acts 13:2-3). Isaiah warns against fasting that focuses on outward ritual while ignoring justice and compassion toward others, teaching that true fasting includes caring for the oppressed and needy (Isaiah 58:6-7). Fasting can sharpen focus during prayer for significant matters, but its value lies in genuine humility before God, not in the practice itself as a guaranteed spiritual technique; anyone considering an extended fast should also be mindful of their physical health.",
+      "topics": [
+        "Prayer",
+        "Health"
+      ],
+      "category": "Prayer and Spiritual Growth",
+      "scriptures": [
+        "Matthew 6:16-18",
+        "Nehemiah 1:4",
+        "Daniel 9:3",
+        "Isaiah 58:6-7"
+      ],
+      "keywords": [
+        "fasting",
+        "prayer and fasting",
+        "biblical fasting"
+      ]
+    },
+    {
+      "id": "answer-what-does-it-mean-to-pray-without-ceasing",
+      "question": "What Does It Mean to 'Pray Without Ceasing'?",
+      "shortAnswer": "Praying without ceasing describes maintaining an ongoing attitude of communication and dependence on God throughout daily life, rather than only during formal, set-apart prayer times.",
+      "longAnswer": "Paul's instruction, “Pray without ceasing” (1 Thessalonians 5:17), appears among a series of brief exhortations to rejoice always and give thanks in everything, suggesting a continual disposition of the heart rather than uninterrupted verbal speech. This looks like turning to God spontaneously throughout the day—offering brief thanks, seeking guidance before decisions, or crying out in moments of stress—while still maintaining dedicated, focused times of prayer as well. It reflects the kind of constant awareness of God's presence modeled throughout Scripture, where believers are encouraged to “cast all your care upon him; for he careth for you” (1 Peter 5:7) at any moment, not merely during scheduled devotions.",
+      "topics": [
+        "Prayer"
+      ],
+      "category": "Prayer and Spiritual Growth",
+      "scriptures": [
+        "1 Thessalonians 5:16-18",
+        "1 Peter 5:7",
+        "Philippians 4:6"
+      ],
+      "keywords": [
+        "pray without ceasing",
+        "constant prayer",
+        "1 thessalonians 5 17"
+      ]
+    },
+    {
+      "id": "answer-how-do-i-hear-god-speak-to-me",
+      "question": "How Do I Hear God Speak to Me?",
+      "shortAnswer": "God primarily speaks today through Scripture, and He also guides through prayer, the conviction of the Holy Spirit, wise counsel, and providential circumstances, all of which should be tested against the written Word.",
+      "longAnswer": "The Bible is described as “profitable for doctrine, for reproof, for correction, for instruction in righteousness” (2 Timothy 3:16), making it the primary and most reliable place to hear God's voice with certainty. Jesus said His sheep “hear my voice” (John 10:27), and the Spirit works to bring conviction, peace, or unease as believers seek God's direction (John 16:13). Impressions, circumstances, and the counsel of mature believers can also be part of guidance, but any sense of direction should always be measured against Scripture, since God will never lead in a way that contradicts what He has already revealed in His Word (Isaiah 8:20).",
+      "topics": [
+        "Prayer",
+        "Holy Spirit"
+      ],
+      "category": "Prayer and Spiritual Growth",
+      "scriptures": [
+        "2 Timothy 3:16-17",
+        "John 10:27",
+        "John 16:13",
+        "Isaiah 8:20"
+      ],
+      "keywords": [
+        "hearing god",
+        "god's guidance",
+        "how god speaks"
+      ]
+    },
+    {
+      "id": "answer-what-is-meditation-in-the-bible",
+      "question": "What Is Biblical Meditation?",
+      "shortAnswer": "Biblical meditation is the practice of thoughtfully reflecting on Scripture and God's character, allowing His truth to shape the mind and heart, distinct from emptying the mind as practiced in some other traditions.",
+      "longAnswer": "The psalmist describes the blessed person as one whose delight is in God's law, meditating on it “day and night” (Psalm 1:2), and Joshua was told that meditating on the book of the law would lead to prosperity and success in following God's ways (Joshua 1:8). This kind of meditation is active and content-focused, involving turning a passage over in the mind, considering its meaning, and applying it personally, rather than seeking to empty the mind of all thought. Practically, this might involve slowly reading a short passage, asking what it reveals about God, and praying its truths back to Him, allowing Scripture to renew the mind over time (Romans 12:2).",
+      "topics": [
+        "Bible Study",
+        "Prayer"
+      ],
+      "category": "Prayer and Spiritual Growth",
+      "scriptures": [
+        "Psalm 1:1-2",
+        "Joshua 1:8",
+        "Psalm 119:15",
+        "Romans 12:2"
+      ],
+      "keywords": [
+        "biblical meditation",
+        "meditate on scripture",
+        "psalm 1"
+      ]
+    },
+    {
+      "id": "answer-how-do-i-develop-a-daily-devotional-habit",
+      "question": "How Do I Develop a Daily Devotional Habit?",
+      "shortAnswer": "A sustainable devotional habit combines a consistent time and place, a manageable portion of Scripture, honest prayer, and grace for imperfect consistency, built gradually rather than through unsustainable intensity.",
+      "longAnswer": "The pattern of “morning by morning” seeking God, as David describes (Psalm 5:3), suggests the value of a regular rhythm, though the specific time of day is not commanded and can be adapted to individual schedules. Starting small—a short passage and a few minutes of prayer—is more sustainable than an ambitious plan abandoned after a few days; consistency over time matters more than length in any single sitting. Keeping a simple journal of insights or prayer requests can help maintain focus and track how God answers over time. Missing a day is not a moral failure to be ashamed of but simply an invitation to begin again, since God's mercies are new every morning (Lamentations 3:22-23).",
+      "topics": [
+        "Prayer",
+        "Bible Study"
+      ],
+      "category": "Prayer and Spiritual Growth",
+      "scriptures": [
+        "Psalm 5:3",
+        "Lamentations 3:22-23",
+        "Mark 1:35"
+      ],
+      "keywords": [
+        "daily devotions",
+        "quiet time habit",
+        "devotional routine"
+      ]
+    },
+    {
+      "id": "answer-what-does-it-mean-to-walk-in-the-spirit",
+      "question": "What Does It Mean to 'Walk in the Spirit'?",
+      "shortAnswer": "Walking in the Spirit means allowing the Holy Spirit to guide daily thoughts, decisions, and behavior, in contrast to living according to sinful desires, resulting in a life marked by growing spiritual fruit.",
+      "longAnswer": "Paul contrasts walking in the Spirit with fulfilling “the lust of the flesh,” explaining that the Spirit and the flesh are in constant opposition (Galatians 5:16-17). When a believer yields to the Spirit's leading, the natural result is described as fruit: “love, joy, peace, longsuffering, gentleness, goodness, faith, meekness, temperance” (Galatians 5:22-23), qualities that develop gradually rather than instantly. This walk is maintained through ongoing dependence, described elsewhere as being continually “filled with the Spirit” (Ephesians 5:18), which involves surrendering control moment by moment rather than relying on willpower alone. It is a daily choice to submit to the Spirit's direction rather than a single completed event.",
+      "topics": [
+        "Holy Spirit",
+        "Christian Living"
+      ],
+      "category": "Prayer and Spiritual Growth",
+      "scriptures": [
+        "Galatians 5:16-25",
+        "Ephesians 5:18",
+        "Romans 8:5-6"
+      ],
+      "keywords": [
+        "walk in the spirit",
+        "fruit of the spirit",
+        "living by the spirit"
+      ]
+    },
+    {
+      "id": "answer-how-do-i-overcome-a-besetting-sin",
+      "question": "How Do I Overcome a Besetting or Recurring Sin?",
+      "shortAnswer": "Overcoming a persistent sin involves honest confession, dependence on the Holy Spirit rather than willpower alone, practical avoidance of triggers, and accountability within a supportive Christian community.",
+      "longAnswer": "Hebrews describes laying aside “every weight, and the sin which doth so easily beset us,” running the Christian race “with patience” while keeping focus on Jesus (Hebrews 12:1-2), suggesting that ongoing effort and endurance are part of overcoming sin. Paul's own struggle in Romans 7 shows that even mature believers wrestle honestly with sin, yet he finds hope not in self-effort but in deliverance “through Jesus Christ our Lord” (Romans 7:24-25). Practical steps include confessing the struggle to a trusted, mature believer (James 5:16), removing or avoiding known triggers, replacing the behavior with a positive habit, and returning again to God's grace after every failure rather than giving up, since He is “faithful and just to forgive” (1 John 1:9). For sins connected to addiction or compulsive patterns, seeking support from a counselor or support group alongside spiritual practices can be a wise and appropriate step.",
+      "topics": [
+        "Christian Living",
+        "Forgiveness"
+      ],
+      "category": "Prayer and Spiritual Growth",
+      "scriptures": [
+        "Hebrews 12:1-2",
+        "Romans 7:24-25",
+        "James 5:16",
+        "1 John 1:9"
+      ],
+      "keywords": [
+        "overcoming sin",
+        "besetting sin",
+        "breaking bad habits"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-armor-of-god",
+      "question": "What Is the Armor of God?",
+      "shortAnswer": "The armor of God, described in Ephesians 6, is a set of spiritual resources—truth, righteousness, the gospel, faith, salvation, and God's Word—that equip believers to stand firm against spiritual temptation and opposition.",
+      "longAnswer": "Paul explains that believers wrestle “not against flesh and blood, but against principalities, against powers, against the rulers of the darkness of this world” (Ephesians 6:12), framing the Christian life as involving real spiritual conflict. He then lists the armor piece by piece: the belt of truth, the breastplate of righteousness, the readiness of the gospel of peace, the shield of faith, the helmet of salvation, and the sword of the Spirit, described as the Word of God (Ephesians 6:14-17). Prayer is added as the means by which this armor is put into active use (Ephesians 6:18). Rather than physical weapons, these represent spiritual disciplines and truths that protect believers as they resist temptation and stand firm in daily faith.",
+      "topics": [
+        "Christian Living",
+        "Faith"
+      ],
+      "category": "Prayer and Spiritual Growth",
+      "scriptures": [
+        "Ephesians 6:10-18",
+        "2 Corinthians 10:3-5",
+        "James 4:7"
+      ],
+      "keywords": [
+        "armor of god",
+        "spiritual warfare",
+        "ephesians 6"
+      ]
+    },
+    {
+      "id": "answer-what-does-it-mean-to-abide-in-christ",
+      "question": "What Does It Mean to 'Abide in Christ'?",
+      "shortAnswer": "Abiding in Christ means maintaining continual, dependent connection with Him through faith, obedience, and communion, much like a branch remains attached to a vine, producing spiritual fruit as a result.",
+      "longAnswer": "Jesus taught, “I am the vine, ye are the branches: He that abideth in me, and I in him, the same bringeth forth much fruit: for without me ye can do nothing” (John 15:5). Abiding involves keeping His commandments and remaining in His love (John 15:9-10), showing that this connection is relational, not merely mystical or passive. Practically, abiding is nurtured through regular prayer, Scripture, and obedience, much as a branch draws continual nourishment from the vine rather than storing up sap for later use. A believer who neglects this ongoing connection gradually becomes fruitless, while one who abides consistently experiences steady growth and answered prayer aligned with God's will (John 15:7).",
+      "topics": [
+        "Christian Living",
+        "Faith"
+      ],
+      "category": "Prayer and Spiritual Growth",
+      "scriptures": [
+        "John 15:4-10",
+        "John 15:1-2"
+      ],
+      "keywords": [
+        "abide in christ",
+        "vine and branches",
+        "john 15"
+      ]
+    },
+    {
+      "id": "answer-how-do-i-know-gods-will-for-my-life",
+      "question": "How Do I Know God's Will for My Life?",
+      "shortAnswer": "God's revealed will in Scripture—regarding character, holiness, and priorities—is clear and applies to everyone, while His specific will for individual decisions is discerned through prayer, wisdom, godly counsel, and attentiveness to circumstances.",
+      "longAnswer": "Scripture explicitly reveals God's general will for every believer, including sanctification (1 Thessalonians 4:3), giving thanks in all circumstances (1 Thessalonians 5:18), and not being conformed to the world (Romans 12:2). For specific decisions—career, relationships, or major life choices—Scripture encourages seeking wisdom, since God “giveth to all men liberally” to those who ask (James 1:5), and trusting Him rather than leaning solely on personal understanding (Proverbs 3:5-6). Practical discernment often involves prayer, examining whether a choice aligns with biblical principles, seeking counsel from mature believers, and paying attention to the doors God opens or closes, all while resting in the confidence that sincere seekers will be guided rather than left to guess in the dark.",
+      "topics": [
+        "Faith",
+        "Prayer"
+      ],
+      "category": "Prayer and Spiritual Growth",
+      "scriptures": [
+        "Proverbs 3:5-6",
+        "James 1:5",
+        "Romans 12:2",
+        "1 Thessalonians 4:3"
+      ],
+      "keywords": [
+        "god's will for my life",
+        "finding god's will",
+        "guidance"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-difference-between-worry-and-legitimate-concern",
+      "question": "What Is the Difference Between Worry and Legitimate Concern?",
+      "shortAnswer": "Legitimate concern leads to responsible action and prayerful trust in God, while worry is anxious, repetitive fretting that fails to release the outcome to Him and often reflects a lack of trust in His care.",
+      "longAnswer": "Paul instructs believers to “be careful for nothing,” meaning not consumed by anxiety, but instead to bring every situation to God “by prayer and supplication with thanksgiving,” resulting in a peace that guards the heart and mind (Philippians 4:6-7). Jesus similarly taught against anxious preoccupation with tomorrow's needs, pointing to God's care for the birds and lilies as evidence of His far greater care for people (Matthew 6:25-34). Concern that leads to planning, wise action, and continued trust is appropriate stewardship, while worry that spirals without resolution and steals peace signals a need to consciously release the situation to God in prayer. Persistent, overwhelming anxiety that disrupts daily functioning may also benefit from support from a counselor or physician alongside spiritual practices.",
+      "topics": [
+        "Prayer",
+        "Health"
+      ],
+      "category": "Prayer and Spiritual Growth",
+      "scriptures": [
+        "Philippians 4:6-7",
+        "Matthew 6:25-34",
+        "1 Peter 5:7"
+      ],
+      "keywords": [
+        "worry vs concern",
+        "anxiety and faith",
+        "overcoming worry"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-purpose-of-corporate-worship",
+      "question": "What Is the Purpose of Corporate Worship?",
+      "shortAnswer": "Corporate worship gathers believers together to honor God collectively, encourage one another, receive teaching from His Word, and remember and proclaim what He has done, strengthening faith in ways private devotion cannot fully accomplish.",
+      "longAnswer": "Hebrews specifically warns against neglecting to assemble together, encouraging believers instead to gather for mutual encouragement, “and so much the more, as ye see the day approaching” (Hebrews 10:24-25). The early church devoted itself to teaching, fellowship, communal worship, and prayer as core practices (Acts 2:42), showing that corporate gatherings were foundational, not optional, to early Christian life. Congregational worship also provides accountability, shared celebration of God's goodness, and collective prayer that reflects Jesus's promise that where two or three gather in His name, He is present among them (Matthew 18:20). While personal devotion remains essential, it was never intended to replace the strength and encouragement found in gathering with other believers.",
+      "topics": [
+        "Church"
+      ],
+      "category": "Prayer and Spiritual Growth",
+      "scriptures": [
+        "Hebrews 10:24-25",
+        "Acts 2:42-47",
+        "Matthew 18:20",
+        "Psalm 122:1"
+      ],
+      "keywords": [
+        "purpose of church attendance",
+        "corporate worship",
+        "why go to church"
+      ]
+    },
+    {
+      "id": "answer-how-can-i-strengthen-my-faith-during-hard-times",
+      "question": "How Can I Strengthen My Faith During Hard Times?",
+      "shortAnswer": "Faith is strengthened during trials by remembering God's past faithfulness, immersing oneself in Scripture, maintaining prayer even when it feels difficult, and staying connected to a supportive community of believers.",
+      "longAnswer": "James teaches that trials, though difficult, can produce patience and maturity when faith is tested (James 1:2-4), reframing hardship as an opportunity for growth rather than only a burden to endure. Remembering specific instances of God's past faithfulness, as the psalmist often did by recounting His deeds (Psalm 77:11-12), builds a foundation of trust for present difficulty. Continuing to pray honestly, even amid confusion or pain, keeps the relationship with God active rather than allowing distance to grow, and Scripture provides both comfort and perspective during suffering (Romans 15:4). Isolation tends to weaken faith during trials, so staying connected with fellow believers for encouragement, prayer, and practical support is a vital part of enduring well, and seeking professional counseling alongside spiritual support is wise when hardship involves significant emotional or mental strain.",
+      "topics": [
+        "Faith",
+        "Comfort"
+      ],
+      "category": "Prayer and Spiritual Growth",
+      "scriptures": [
+        "James 1:2-4",
+        "Psalm 77:11-12",
+        "Romans 15:4",
+        "Romans 5:3-5"
+      ],
+      "keywords": [
+        "faith during trials",
+        "strengthening faith",
+        "hard times"
+      ]
+    },
+    {
+      "id": "answer-what-is-spiritual-warfare",
+      "question": "What Is Spiritual Warfare According to the Bible?",
+      "shortAnswer": "Spiritual warfare refers to the unseen conflict between God's kingdom and the forces of evil, in which believers resist temptation and deception through prayer, Scripture, and reliance on the power God provides rather than personal strength.",
+      "longAnswer": "Paul explains that the real struggle believers face is “not against flesh and blood, but against principalities, against powers, against the rulers of the darkness of this world” (Ephesians 6:12), reframing many everyday conflicts and temptations within a larger spiritual context. Believers are instructed to “resist the devil,” with the promise that he will flee (James 4:7), and to remain sober and vigilant because an adversary seeks to devour the unprepared (1 Peter 5:8-9). Victory in this conflict does not come through human effort or fear-driven rituals but through submission to God, use of Scripture as described in the armor of God (Ephesians 6:11-17), and confidence that “greater is he that is in you, than he that is in the world” (1 John 4:4).",
+      "topics": [
+        "Christian Living",
+        "Faith"
+      ],
+      "category": "Prayer and Spiritual Growth",
+      "scriptures": [
+        "Ephesians 6:10-12",
+        "James 4:7",
+        "1 Peter 5:8-9",
+        "1 John 4:4"
+      ],
+      "keywords": [
+        "spiritual warfare",
+        "resisting the devil",
+        "unseen battle"
+      ]
+    },
+    {
+      "id": "answer-what-does-it-mean-to-deny-yourself-and-take-up-your-cross",
+      "question": "What Does It Mean to 'Deny Yourself and Take Up Your Cross'?",
+      "shortAnswer": "This phrase describes the call to surrender personal ambitions and self-centered desires in order to follow Jesus wholeheartedly, even when that path involves sacrifice, suffering, or social cost.",
+      "longAnswer": "Jesus told His disciples, “If any man will come after me, let him deny himself, and take up his cross, and follow me” (Matthew 16:24), using the image of a cross, understood by His original audience as an instrument of execution, to convey total surrender rather than a minor inconvenience. This does not mean rejecting one's identity or worth but reordering priorities so that following Christ takes precedence over comfort, reputation, or personal ambition (Luke 9:23-25). Paul embodies this principle, writing that he counted his former achievements as loss “for the excellency of the knowledge of Christ Jesus” (Philippians 3:7-8). Denying self is ultimately not a path to loss but to true life, since Jesus taught that whoever loses his life for His sake will find it (Matthew 16:25).",
+      "topics": [
+        "Christian Living",
+        "Faith"
+      ],
+      "category": "Prayer and Spiritual Growth",
+      "scriptures": [
+        "Matthew 16:24-25",
+        "Luke 9:23-25",
+        "Philippians 3:7-8"
+      ],
+      "keywords": [
+        "deny yourself",
+        "take up your cross",
+        "matthew 16 24"
+      ]
+    },
+    {
+      "id": "answer-how-do-i-pray-for-someone-who-is-sick",
+      "question": "How Should I Pray for Someone Who Is Sick?",
+      "shortAnswer": "Praying for the sick includes bringing specific needs to God in faith, asking for healing according to His will, and involving the support and encouragement of the faith community, while also encouraging appropriate medical care.",
+      "longAnswer": "James instructs believers to call for the elders of the church to pray over the sick, anointing with oil, and promises that “the prayer of faith shall save the sick” (James 5:14-15), showing that prayer for physical healing has a place within corporate church life. Prayer for the sick should include trust that God is able to heal while also submitting to His wisdom, since healing is not always granted in this life, and Paul himself experienced an unhealed “thorn in the flesh” despite persistent prayer (2 Corinthians 12:7-9). Alongside prayer, believers are wise to encourage and support the use of appropriate medical care, since God often works through physicians and treatment as means of healing, and both prayer and medical help can be pursued together rather than as opposing options.",
+      "topics": [
+        "Prayer",
+        "Health"
+      ],
+      "category": "Prayer and Spiritual Growth",
+      "scriptures": [
+        "James 5:14-16",
+        "2 Corinthians 12:7-9",
+        "Psalm 103:2-3"
+      ],
+      "keywords": [
+        "praying for the sick",
+        "prayer for healing",
+        "james 5 anointing"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-difference-between-praise-and-worship",
+      "question": "What Is the Difference Between Praise and Worship?",
+      "shortAnswer": "Praise focuses on specifically thanking and celebrating God for what He has done and who He is, while worship is the broader posture of reverent surrender and devotion offered to God with the whole life, not only through words.",
+      "longAnswer": "The Psalms repeatedly call believers to praise God for specific acts—His deliverance, creation, and faithfulness (Psalm 150:1-6)—making praise often expressive and vocal, whether spoken, sung, or shouted. Worship, however, encompasses far more than expression; Paul urges believers to present their bodies “a living sacrifice” as their “reasonable service,” describing this whole-life devotion as true worship (Romans 12:1). Jesus told the woman at the well that true worshippers would worship the Father “in spirit and in truth” (John 4:23-24), emphasizing sincerity of heart over location or ritual. In practice, praise is often one expression within the larger, ongoing posture of worship that touches every area of a believer's life.",
+      "topics": [
+        "Church",
+        "Faith"
+      ],
+      "category": "Prayer and Spiritual Growth",
+      "scriptures": [
+        "Psalm 150:1-6",
+        "Romans 12:1",
+        "John 4:23-24"
+      ],
+      "keywords": [
+        "praise vs worship",
+        "true worship",
+        "worship meaning"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-dating",
+      "question": "What Does the Bible Say About Dating?",
+      "shortAnswer": "While the Bible does not mention modern dating directly, its principles on purity, honoring others, and choosing companions wisely provide clear guidance for pursuing a relationship that honors God and prepares for marriage.",
+      "longAnswer": "Scripture repeatedly warns against being “unequally yoked” with unbelievers in binding relationships, since light and darkness have little common ground (2 Corinthians 6:14). Paul instructs believers to treat one another with purity, addressing the opposite sex “with all purity” as one would a family member (1 Timothy 5:1-2), and to flee sexual immorality rather than testing personal limits (1 Corinthians 6:18). Wisdom, shared faith, character, and clear communication about intentions matter more than surface qualities like appearance alone (Proverbs 31:30). A dating relationship pursued with prayer, accountability, and a clear goal of discerning marriage compatibility, rather than as mere entertainment, honors both people and God.",
+      "topics": [
+        "Marriage and Family",
+        "Christian Living"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "2 Corinthians 6:14",
+        "1 Timothy 5:1-2",
+        "1 Corinthians 6:18-20",
+        "Proverbs 31:30"
+      ],
+      "keywords": [
+        "christian dating",
+        "dating advice bible",
+        "purity in relationships"
+      ]
+    },
+    {
+      "id": "answer-how-do-i-forgive-someone-who-hurt-me-deeply",
+      "question": "How Do I Forgive Someone Who Hurt Me Deeply?",
+      "shortAnswer": "Forgiveness is a deliberate choice to release the desire for revenge and entrust justice to God, made possible by remembering how much we ourselves have been forgiven, even though it may take time and does not require ignoring real harm.",
+      "longAnswer": "Jesus taught His disciples to forgive repeatedly, even “seventy times seven” (Matthew 18:21-22), and told the parable of the unmerciful servant to illustrate that those who have received great forgiveness from God are called to extend it to others (Matthew 18:23-35). Forgiveness does not mean pretending an offense did not happen or automatically restoring trust without any change, and Scripture allows for wise boundaries even while releasing bitterness (Romans 12:18-19). Paul instructs believers to be “kind one to another, tenderhearted, forgiving one another, even as God for Christ's sake hath forgiven you” (Ephesians 4:32). When wounds are especially deep, working through the process with a trusted pastor or counselor alongside prayer can provide valuable support as forgiveness unfolds over time.",
+      "topics": [
+        "Forgiveness",
+        "Christian Living"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Matthew 18:21-35",
+        "Ephesians 4:32",
+        "Romans 12:18-19",
+        "Colossians 3:13"
+      ],
+      "keywords": [
+        "how to forgive",
+        "forgiving someone who hurt you",
+        "letting go of bitterness"
+      ]
+    },
+    {
+      "id": "answer-biblical-purpose-of-marriage",
+      "question": "What Does the Bible Teach About the Purpose of Marriage?",
+      "shortAnswer": "The Bible presents marriage as a lifelong covenant between one man and one woman, established by God at creation, designed for companionship, mutual love, and reflecting the relationship between Christ and the church.",
+      "longAnswer": "God's original design is stated in Genesis: a man leaves his parents and is joined to his wife, and “they shall be one flesh” (Genesis 2:24), a pattern Jesus affirmed and reinforced by adding, “What therefore God hath joined together, let not man put asunder” (Matthew 19:4-6). Paul describes the mutual submission and sacrificial love that should characterize marriage, comparing a husband's love for his wife to Christ's love for the church, which He gave Himself for (Ephesians 5:25). Marriage is intended to be marked by faithfulness, honor (Hebrews 13:4), and enduring commitment through both easy and difficult seasons, reflecting God's own faithful covenant love toward His people.",
+      "topics": [
+        "Marriage and Family"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Genesis 2:24",
+        "Matthew 19:4-6",
+        "Ephesians 5:22-33",
+        "Hebrews 13:4"
+      ],
+      "keywords": [
+        "biblical marriage",
+        "what is marriage",
+        "christian marriage"
+      ]
+    },
+    {
+      "id": "answer-how-should-christians-handle-conflict-in-relationships",
+      "question": "How Should Christians Handle Conflict in Relationships?",
+      "shortAnswer": "Christians are called to address conflict directly and humbly, seeking reconciliation quickly, speaking truth in love, and being willing to forgive rather than allowing resentment to grow.",
+      "longAnswer": "Jesus outlines a clear process for addressing offenses: go privately to the person first, then involve one or two witnesses if needed, escalating only if reconciliation is refused (Matthew 18:15-17), showing that private, direct conversation should be the first step rather than gossip or avoidance. Paul instructs believers to speak “the truth in love” (Ephesians 4:15) and warns against letting the sun go down on anger, urging prompt resolution rather than prolonged resentment (Ephesians 4:26). Where possible, believers are urged to “live peaceably with all men” (Romans 12:18), recognizing that reconciliation may not always be fully achieved but that pursuing it honestly and humbly remains the biblical calling.",
+      "topics": [
+        "Christian Living",
+        "Marriage and Family"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Matthew 18:15-17",
+        "Ephesians 4:15",
+        "Ephesians 4:26",
+        "Romans 12:18"
+      ],
+      "keywords": [
+        "resolving conflict christian",
+        "handling disagreements",
+        "matthew 18 conflict"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-raising-children",
+      "question": "What Does the Bible Say About Raising Children?",
+      "shortAnswer": "Scripture calls parents to train children in godly wisdom and discipline with patience and love, modeling faith consistently rather than provoking children to anger through harshness or neglect.",
+      "longAnswer": "Parents are instructed to “train up a child in the way he should go,” with the promise that this foundation shapes character for life (Proverbs 22:6), and to teach God's commandments diligently in the course of everyday life, whether at home or away (Deuteronomy 6:6-7). Paul specifically warns fathers not to provoke their children to anger but to bring them up “in the nurture and admonition of the Lord” (Ephesians 6:4), balancing correction with genuine love and encouragement. Discipline in Scripture is presented as an expression of love intended to shape character (Hebrews 12:6, 11), not harsh or abusive treatment, and parents are called to model consistent faith and integrity as the most powerful teaching tool of all.",
+      "topics": [
+        "Marriage and Family"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Proverbs 22:6",
+        "Deuteronomy 6:6-7",
+        "Ephesians 6:4",
+        "Hebrews 12:6-11"
+      ],
+      "keywords": [
+        "raising children biblically",
+        "christian parenting",
+        "training up a child"
+      ]
+    },
+    {
+      "id": "answer-how-do-i-deal-with-a-difficult-family-member",
+      "question": "How Do I Deal with a Difficult Family Member?",
+      "shortAnswer": "Dealing with a difficult family member calls for patience, honest but gracious communication, prayer for wisdom and for them, and, where needed, healthy boundaries that protect wellbeing without abandoning love.",
+      "longAnswer": "Paul instructs believers to live peaceably with others “as much as lieth in you” (Romans 12:18), acknowledging that full reconciliation is not always possible even with sincere effort. Jesus's teaching to love even enemies and pray for those who mistreat us (Matthew 5:44) applies powerfully within difficult family dynamics, though love does not require tolerating ongoing abuse or being a passive victim of harmful behavior. Wisdom literature repeatedly commends careful, thoughtful speech in tense relationships, noting that “a soft answer turneth away wrath” (Proverbs 15:1). When family conflict involves ongoing harm, abuse, or serious dysfunction, seeking guidance from a pastor, counselor, or appropriate support resource alongside prayer is a wise and often necessary step.",
+      "topics": [
+        "Marriage and Family",
+        "Christian Living"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Romans 12:18",
+        "Matthew 5:44",
+        "Proverbs 15:1",
+        "Ephesians 4:2-3"
+      ],
+      "keywords": [
+        "difficult family member",
+        "family conflict christian",
+        "toxic relatives"
+      ]
+    },
+    {
+      "id": "answer-scripture-on-divorce-and-remarriage",
+      "question": "What Does Scripture Teach About Divorce and Remarriage?",
+      "shortAnswer": "The Bible presents God's original design for marriage as permanent, but it also acknowledges that divorce can occur in cases of sexual immorality or abandonment, and it calls believers to pursue reconciliation and healing wherever possible.",
+      "longAnswer": "Jesus taught that Moses permitted divorce because of hardness of heart, but “from the beginning it was not so,” affirming marriage's intended permanence (Matthew 19:8), while also naming sexual immorality as grounds that could lead to divorce (Matthew 19:9). Paul addresses cases where an unbelieving spouse abandons the marriage, stating that the believer is “not under bondage” in such situations (1 Corinthians 7:15). These passages show that while God's ideal is lifelong faithfulness, Scripture recognizes real brokenness caused by sin can fracture marriages beyond repair. Those facing these painful circumstances are encouraged to seek godly counsel, pursue reconciliation where safe and possible, and find compassionate support from their church community rather than isolation or shame.",
+      "topics": [
+        "Marriage and Family"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Matthew 19:3-9",
+        "1 Corinthians 7:10-15",
+        "Malachi 2:16"
+      ],
+      "keywords": [
+        "biblical grounds for divorce",
+        "christian view of divorce",
+        "what bible says about divorce"
+      ]
+    },
+    {
+      "id": "answer-how-do-i-know-if-someone-is-the-right-person-to-marry",
+      "question": "How Do I Know If Someone Is the Right Person to Marry?",
+      "shortAnswer": "Discerning a wise marriage partner involves evaluating shared faith and values, godly character, mutual respect, and compatibility in life goals, while relying on prayer and godly counsel rather than emotion alone.",
+      "longAnswer": "Shared spiritual commitment matters deeply, since Scripture warns against being unequally yoked in significant partnerships (2 Corinthians 6:14), making a partner's genuine relationship with God a foundational consideration rather than an afterthought. Character is a stronger predictor of a healthy marriage than surface attraction; Proverbs praises a spouse of noble character above outward charm or beauty, which fade over time (Proverbs 31:10, 30). Seeking counsel from parents, mentors, or pastors, and observing how a potential spouse handles conflict, money, and relationships with others provides valuable insight beyond the emotions of infatuation (Proverbs 15:22). Prayerful patience, rather than rushing the decision, allows time for character and compatibility to become clear before making a lifelong commitment.",
+      "topics": [
+        "Marriage and Family"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "2 Corinthians 6:14",
+        "Proverbs 31:10-30",
+        "Proverbs 15:22",
+        "1 Corinthians 7:39"
+      ],
+      "keywords": [
+        "choosing a spouse",
+        "how to know if someone is right to marry",
+        "christian marriage advice"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-friendship",
+      "question": "What Does the Bible Say About Friendship?",
+      "shortAnswer": "The Bible highly values loyal, honest friendship, describing true friends as those who offer faithful support, wise counsel, and love that endures through both good and difficult times.",
+      "longAnswer": "Proverbs describes a genuine friend as one who “loveth at all times” and who is “born for adversity” (Proverbs 17:17), and notes that “a friend that sticketh closer than a brother” exists in true relationships (Proverbs 18:24). The friendship between David and Jonathan illustrates deep loyalty, self-sacrifice, and mutual encouragement in God (1 Samuel 18:1-4; 20:41-42). Solomon also observes the practical value of companionship, noting that two are better than one, since they can help each other up when one falls (Ecclesiastes 4:9-10). Choosing friends wisely matters too, since “he that walketh with wise men shall be wise: but a companion of fools shall be destroyed” (Proverbs 13:20).",
+      "topics": [
+        "Christian Living"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Proverbs 17:17",
+        "Proverbs 18:24",
+        "Proverbs 13:20",
+        "Ecclesiastes 4:9-10"
+      ],
+      "keywords": [
+        "biblical friendship",
+        "true friends bible",
+        "proverbs on friendship"
+      ]
+    },
+    {
+      "id": "answer-how-do-i-love-difficult-people",
+      "question": "How Do I Love Difficult or Unkind People?",
+      "shortAnswer": "Loving difficult people involves choosing patience, kindness, and prayer for them despite their behavior, following Christ's example of loving others sacrificially even when it is not reciprocated.",
+      "longAnswer": "Jesus's command goes beyond loving those who are easy to love, teaching, “Love your enemies, bless them that curse you, do good to them that hate you, and pray for them which despitefully use you” (Matthew 5:44). Paul describes love in practical terms—patient, kind, not easily provoked, bearing and enduring all things (1 Corinthians 13:4-7)—showing that biblical love is a decision and practice more than merely an emotion. This kind of love does not require ignoring harmful behavior or eliminating healthy boundaries; it can coexist with limiting exposure to abusive situations while still praying for the other person's good and refusing to return evil for evil (Romans 12:17, 21). Loving difficult people ultimately reflects the character of God, who showed love to humanity while it was still in rebellion against Him (Romans 5:8).",
+      "topics": [
+        "Christian Living"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Matthew 5:44",
+        "1 Corinthians 13:4-7",
+        "Romans 12:17-21",
+        "Romans 5:8"
+      ],
+      "keywords": [
+        "loving difficult people",
+        "loving your enemies",
+        "how to love unkind people"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-honesty",
+      "question": "What Does the Bible Say About Honesty?",
+      "shortAnswer": "The Bible consistently commands truthfulness in speech and conduct, condemning lying and deception while calling believers to reflect God's own truthful character in every area of life.",
+      "longAnswer": "One of the Ten Commandments directly addresses this, prohibiting false witness against a neighbor (Exodus 20:16), and Proverbs describes lying lips as an abomination to the Lord, while those who deal truly are His delight (Proverbs 12:22). Paul instructs believers to put away lying and to speak truth with one another, since they are “members one of another” within the body of Christ (Ephesians 4:25). Honesty is rooted in reflecting God's own character, since He “cannot lie” (Titus 1:2), meaning truthfulness is not just a moral rule but an expression of being made in His image, extending into business dealings, relationships, and personal integrity.",
+      "topics": [
+        "Christian Living"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Exodus 20:16",
+        "Proverbs 12:22",
+        "Ephesians 4:25",
+        "Titus 1:2"
+      ],
+      "keywords": [
+        "biblical honesty",
+        "lying in the bible",
+        "truthfulness"
+      ]
+    },
+    {
+      "id": "answer-how-do-i-set-healthy-boundaries-as-a-christian",
+      "question": "How Do I Set Healthy Boundaries as a Christian?",
+      "shortAnswer": "Setting healthy boundaries as a Christian involves loving others honestly while also stewarding one's time, energy, and wellbeing responsibly, recognizing that saying no to some things is often necessary to say yes to God's priorities.",
+      "longAnswer": "Jesus Himself modeled boundaries, regularly withdrawing from crowds to pray and rest even amid great demand for His time and healing (Luke 5:15-16), showing that limiting availability is not selfish but wise stewardship. Paul instructs believers to let their communication be “Yea, yea; Nay, nay,” encouraging clear, honest limits rather than vague or manipulated commitments (Matthew 5:37). Boundaries are compatible with love; Galatians reminds believers to bear one another's burdens (Galatians 6:2) while also teaching that each person is responsible to carry their own load (Galatians 6:5), suggesting a balance between generous support and personal responsibility. Setting limits around time, relationships, or harmful behavior is a legitimate expression of wise self-stewardship rather than a failure of Christian love.",
+      "topics": [
+        "Christian Living"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Luke 5:15-16",
+        "Matthew 5:37",
+        "Galatians 6:2-5"
+      ],
+      "keywords": [
+        "christian boundaries",
+        "healthy boundaries bible",
+        "saying no as a christian"
+      ]
+    },
+    {
+      "id": "answer-what-is-biblical-love-1-corinthians-13",
+      "question": "What Is Biblical Love According to 1 Corinthians 13?",
+      "shortAnswer": "First Corinthians 13 describes love as patient, kind, selfless, and enduring, presenting it as more valuable than any spiritual gift or achievement and as the defining mark of genuine Christian character.",
+      "longAnswer": "Paul begins by stating that even impressive gifts or sacrifice mean nothing without love (1 Corinthians 13:1-3), establishing love as the essential foundation for all other spiritual pursuits. He then describes love in action: it “suffereth long, and is kind... is not easily provoked... beareth all things, believeth all things, hopeth all things, endureth all things” (1 Corinthians 13:4-7), presenting love as a set of consistent choices rather than fleeting feeling. Unlike prophecies, tongues, or knowledge, which will eventually cease or be surpassed, love is described as permanent, standing alongside faith and hope as one of the things that abide, with love identified as “the greatest” (1 Corinthians 13:8-13).",
+      "topics": [
+        "Christian Living"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "1 Corinthians 13:1-13"
+      ],
+      "keywords": [
+        "1 corinthians 13 meaning",
+        "love chapter bible",
+        "biblical definition of love"
+      ]
+    },
+    {
+      "id": "answer-how-should-christians-handle-money-and-debt",
+      "question": "How Should Christians Handle Money and Debt?",
+      "shortAnswer": "Scripture encourages careful financial planning, contentment, generosity, and caution about debt, teaching believers to be faithful stewards of resources rather than either greedy or careless with money.",
+      "longAnswer": "Proverbs warns that “the borrower is servant to the lender” (Proverbs 22:7), urging caution before taking on obligations that could compromise financial freedom or the ability to give generously. Paul teaches contentment as a discipline learned over time regardless of circumstances (Philippians 4:11-12), while also warning that “the love of money is the root of all evil” (1 Timothy 6:10), a warning against the attitude toward money rather than money itself. Faithful stewardship includes planning ahead, as the ant is commended for preparing in advance (Proverbs 6:6-8), while also practicing generosity, since believers are called to give cheerfully rather than reluctantly (2 Corinthians 9:7). Seeking sound financial counsel alongside these biblical principles can help apply them wisely to individual circumstances.",
+      "topics": [
+        "Stewardship"
+      ],
+      "category": "Health and Stewardship",
+      "scriptures": [
+        "Proverbs 22:7",
+        "Proverbs 6:6-8",
+        "Philippians 4:11-12",
+        "1 Timothy 6:6-10",
+        "2 Corinthians 9:7"
+      ],
+      "keywords": [
+        "christian view of money",
+        "debt and the bible",
+        "financial stewardship"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-workplace-ethics",
+      "question": "What Does the Bible Say About Workplace Ethics?",
+      "shortAnswer": "The Bible calls believers to work diligently, honestly, and with integrity, treating employers, coworkers, and employees fairly, ultimately working as if serving the Lord rather than merely people.",
+      "longAnswer": "Paul instructs workers to obey their masters with sincerity, “not with eyeservice, as menpleasers; but... doing the will of God from the heart,” working “as to the Lord, and not to men” (Ephesians 6:5-7), transforming even mundane tasks into an act of devotion to God. Employers, too, are held accountable for treating workers justly, since Scripture warns against oppressing the hired servant or withholding fair wages (Deuteronomy 24:14-15; James 5:4). Honesty in business dealings is repeatedly commanded, with dishonest scales described as an abomination to the Lord, while a just weight is His delight (Proverbs 11:1). Diligence is also praised, since “he becometh poor that dealeth with a slack hand” while the diligent prosper (Proverbs 10:4).",
+      "topics": [
+        "Christian Living",
+        "Stewardship"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Ephesians 6:5-9",
+        "Colossians 3:23-24",
+        "Proverbs 11:1",
+        "Proverbs 10:4"
+      ],
+      "keywords": [
+        "christian work ethic",
+        "workplace integrity",
+        "working as unto the lord"
+      ]
+    },
+    {
+      "id": "answer-how-do-i-deal-with-loneliness-as-a-christian",
+      "question": "How Do I Deal with Loneliness as a Christian?",
+      "shortAnswer": "Loneliness can be addressed by remembering God's constant presence, actively pursuing genuine community within a local church, and being intentional about building meaningful friendships rather than waiting passively for connection.",
+      "longAnswer": "God's promise that He will “never leave thee, nor forsake thee” (Hebrews 13:5) offers deep comfort in seasons of isolation, reminding believers that they are never truly alone even when human companionship feels absent. Scripture consistently emphasizes life in community, describing believers as members of one body who need each other (1 Corinthians 12:12-27), suggesting that combating loneliness often requires actively seeking out a small group, church ministry, or service opportunity rather than remaining isolated. Practical steps include reaching out first rather than waiting to be noticed, being vulnerable about the struggle with a trusted friend or pastor, and recognizing that persistent, overwhelming loneliness accompanied by hopelessness may also benefit from support from a counselor or mental health professional alongside spiritual care.",
+      "topics": [
+        "Comfort",
+        "Christian Living"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Hebrews 13:5",
+        "1 Corinthians 12:12-27",
+        "Psalm 68:6",
+        "Ecclesiastes 4:9-12"
+      ],
+      "keywords": [
+        "christian loneliness",
+        "feeling alone as a believer",
+        "overcoming isolation"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-gossip",
+      "question": "What Does the Bible Say About Gossip?",
+      "shortAnswer": "The Bible strongly condemns gossip as harmful and destructive to relationships and community, calling believers instead to speak words that build others up and to address concerns directly and privately.",
+      "longAnswer": "Proverbs warns that “a talebearer revealeth secrets: but he that is of a faithful spirit concealeth the matter” (Proverbs 11:13), and describes how contention ceases when gossip stops, since “where no wood is, there the fire goeth out” (Proverbs 26:20). Paul lists “whisperers” and “backbiters” among serious sins in Romans 1:29-30, showing how seriously Scripture treats destructive speech about others. Instead, believers are instructed to let no corrupt communication proceed from their mouth, but only what is “good to the use of edifying” (Ephesians 4:29). When there is a genuine concern about someone's behavior, Jesus's model of going directly and privately to address it (Matthew 18:15) is the appropriate biblical alternative to gossip.",
+      "topics": [
+        "Christian Living"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Proverbs 11:13",
+        "Proverbs 26:20",
+        "Ephesians 4:29",
+        "Matthew 18:15"
+      ],
+      "keywords": [
+        "gossip in the bible",
+        "talebearing",
+        "destructive speech"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-pride-and-humility",
+      "question": "What Does the Bible Say About Pride and Humility?",
+      "shortAnswer": "Scripture consistently warns against pride as a dangerous root of sin and failure, while commending humility as the pathway to honor, wisdom, and closeness with God.",
+      "longAnswer": "Proverbs states plainly that “pride goeth before destruction, and an haughty spirit before a fall” (Proverbs 16:18), showing that self-exaltation ultimately leads to downfall rather than lasting success. James and Peter both quote the same principle: “God resisteth the proud, but giveth grace unto the humble” (James 4:6; 1 Peter 5:5), indicating that humility positions a person to receive God's help, while pride actively works against it. Jesus modeled humility perfectly, taking on “the form of a servant” and humbling Himself even unto death (Philippians 2:7-8), giving believers the ultimate example to imitate. Micah summarizes God's requirement concisely: to do justly, love mercy, and “walk humbly with thy God” (Micah 6:8).",
+      "topics": [
+        "Christian Living"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Proverbs 16:18",
+        "James 4:6",
+        "1 Peter 5:5-6",
+        "Philippians 2:5-8",
+        "Micah 6:8"
+      ],
+      "keywords": [
+        "pride and humility bible",
+        "biblical humility",
+        "danger of pride"
+      ]
+    },
+    {
+      "id": "answer-what-does-it-mean-to-honor-your-parents",
+      "question": "What Does It Mean to Honor Your Parents?",
+      "shortAnswer": "Honoring parents means showing them respect, gratitude, and appropriate obedience or care throughout life, a command significant enough to be included among the Ten Commandments with an attached promise.",
+      "longAnswer": "The fifth commandment instructs, “Honour thy father and thy mother: that thy days may be long upon the land” (Exodus 20:12), and Paul repeats this command in Ephesians, calling it “the first commandment with promise” (Ephesians 6:2-3). For children, this includes obedience while under parental authority (Ephesians 6:1), while for adult children it shifts toward respect, gratitude, and practical care, especially as parents age, illustrated by Jesus's own concern that His mother be cared for even while He was dying on the cross (John 19:26-27). Honoring parents does not require agreeing with every decision they make or tolerating abuse, but it calls for a consistent posture of respect and appropriate care throughout every season of life.",
+      "topics": [
+        "Marriage and Family"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Exodus 20:12",
+        "Ephesians 6:1-3",
+        "John 19:26-27",
+        "1 Timothy 5:4"
+      ],
+      "keywords": [
+        "honor your parents",
+        "fifth commandment",
+        "caring for aging parents"
+      ]
+    },
+    {
+      "id": "answer-how-do-i-encourage-someone-who-is-struggling",
+      "question": "How Do I Encourage Someone Who Is Struggling?",
+      "shortAnswer": "Encouraging someone who is struggling involves listening well, offering genuine comfort rooted in God's promises, practical help where appropriate, and patient presence rather than quick or dismissive answers.",
+      "longAnswer": "Paul instructs believers to “weep with them that weep” (Romans 12:15) before rushing to offer solutions, showing that empathy and presence often matter more initially than advice. Believers are also called to comfort others with the same comfort they themselves have received from God in their own trials (2 Corinthians 1:3-4), meaning personal experience of God's care equips a person to encourage others meaningfully. Practical support—a meal, a listening ear, tangible help—often communicates love more powerfully than words alone, echoing James's warning against offering only well-wishes without meeting real needs (James 2:15-16). When someone's struggle involves serious mental health concerns, gently encouraging them to seek professional help alongside spiritual and relational support shows genuine care rather than replacing needed care.",
+      "topics": [
+        "Comfort",
+        "Christian Living"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Romans 12:15",
+        "2 Corinthians 1:3-4",
+        "James 2:15-16",
+        "Galatians 6:2"
+      ],
+      "keywords": [
+        "encouraging someone struggling",
+        "how to comfort a friend",
+        "supporting others biblically"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-forgiveness-and-reconciliation",
+      "question": "What Is the Difference Between Forgiveness and Reconciliation?",
+      "shortAnswer": "Forgiveness is an internal release of resentment that one person can choose to give regardless of the other's response, while reconciliation is the restoration of relationship, which requires cooperation, changed behavior, and often takes time.",
+      "longAnswer": "Believers are commanded to forgive as they have been forgiven (Ephesians 4:32), a decision that does not depend on the offender's repentance or awareness. Reconciliation, however, is described as a two-party process; Paul urges believers, “if it be possible, as much as lieth in you, live peaceably with all men” (Romans 12:18), acknowledging that full reconciliation is not always achievable even with sincere effort from one side. Scripture distinguishes these concepts elsewhere as well, showing that God's forgiveness of humanity was offered freely, while full relational restoration still requires a genuine response of faith and repentance from the individual (2 Corinthians 5:19-20). Understanding this difference protects people from feeling obligated to restore unsafe relationships while still being called to release bitterness through forgiveness.",
+      "topics": [
+        "Forgiveness",
+        "Christian Living"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Ephesians 4:32",
+        "Romans 12:18",
+        "2 Corinthians 5:19-20",
+        "Matthew 5:24"
+      ],
+      "keywords": [
+        "forgiveness vs reconciliation",
+        "do i have to reconcile",
+        "letting go without restoring trust"
+      ]
+    },
+    {
+      "id": "answer-does-the-bible-say-anything-about-diet-and-health",
+      "question": "Does the Bible Say Anything About Diet and Health?",
+      "shortAnswer": "The Bible presents the body as belonging to God and worth caring for wisely, offering principles of moderation and clean eating without functioning as a medical guide, so specific health decisions should be made with a qualified professional.",
+      "longAnswer": "Paul reminds believers that their body is “the temple of the Holy Ghost” and that they are to “glorify God” in their bodies (1 Corinthians 6:19-20), framing physical stewardship as a spiritual matter rather than simply personal preference. The Old Testament distinguishes between clean and unclean foods (Leviticus 11), and Daniel's choice to avoid the king's rich food and wine, requesting vegetables and water instead, resulted in noticeably better health after a period of testing (Daniel 1:8-15). Scripture consistently commends moderation over excess, warning against gluttony and overindulgence (Proverbs 23:20-21). These principles offer general wisdom about honoring God with the body, but individual dietary needs, especially involving medical conditions, should be discussed with a doctor or registered dietitian.",
+      "topics": [
+        "Health",
+        "Stewardship"
+      ],
+      "category": "Health and Stewardship",
+      "scriptures": [
+        "1 Corinthians 6:19-20",
+        "Leviticus 11:1-47",
+        "Daniel 1:8-15",
+        "Proverbs 23:20-21"
+      ],
+      "keywords": [
+        "biblical diet",
+        "clean foods bible",
+        "christian health principles"
+      ]
+    },
+    {
+      "id": "answer-what-does-it-mean-that-the-body-is-a-temple",
+      "question": "What Does It Mean That the Body Is a Temple of the Holy Spirit?",
+      "shortAnswer": "This teaching means that believers' bodies are indwelt by God's Spirit and therefore belong to Him, calling for care and respect for physical health as an expression of honoring God rather than something separate from spiritual life.",
+      "longAnswer": "Paul asks the Corinthian believers, “What? know ye not that your body is the temple of the Holy Ghost which is in you, which ye have of God, and ye are not your own?” concluding that believers should “glorify God in your body, and in your spirit, which are God's” (1 Corinthians 6:19-20). This truth elevates physical stewardship—rest, nutrition, exercise, and avoiding harmful substances—into a matter of spiritual significance rather than mere personal preference. It also implies dignity and respect for the body against practices Scripture warns against, such as sexual immorality (1 Corinthians 6:18) or substance abuse that damages health. Caring wisely for physical health, while not making it an idol, honors the God who chose to dwell within believers by His Spirit.",
+      "topics": [
+        "Health"
+      ],
+      "category": "Health and Stewardship",
+      "scriptures": [
+        "1 Corinthians 6:19-20",
+        "1 Corinthians 3:16-17",
+        "Romans 12:1"
+      ],
+      "keywords": [
+        "body is a temple",
+        "1 corinthians 6 19",
+        "honoring god with your body"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-alcohol",
+      "question": "What Does the Bible Say About Alcohol?",
+      "shortAnswer": "The Bible warns strongly against drunkenness and its destructive consequences while recognizing that some biblical figures used wine in moderation, though many believers choose complete abstinence given the serious risks of impaired judgment and addiction.",
+      "longAnswer": "Proverbs vividly describes the dangers of overindulgence, warning that wine “biteth like a serpent, and stingeth like an adder” for those who linger over it (Proverbs 23:29-32), and Paul instructs believers not to be drunk with wine, “wherein is excess,” but instead to be filled with the Spirit (Ephesians 5:18). Scripture also warns that leaders and those in positions of responsibility should be especially cautious around alcohol (Proverbs 31:4-5; 1 Timothy 3:2-3). Because alcohol carries genuine risks of addiction, impaired judgment, and harm to oneself and others, many believers choose to abstain entirely as a matter of wisdom and testimony, and anyone struggling with alcohol dependency is encouraged to seek support from a medical professional or addiction counselor alongside prayer and church support.",
+      "topics": [
+        "Health"
+      ],
+      "category": "Health and Stewardship",
+      "scriptures": [
+        "Proverbs 23:29-32",
+        "Ephesians 5:18",
+        "Proverbs 20:1",
+        "1 Timothy 3:2-3"
+      ],
+      "keywords": [
+        "bible and alcohol",
+        "drunkenness bible",
+        "christian view of drinking"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-rest-and-work-balance",
+      "question": "What Does the Bible Say About Balancing Work and Rest?",
+      "shortAnswer": "The Bible models a rhythm of purposeful work balanced with regular rest, rooted in God's own example at creation, warning against both laziness and burnout from relentless overwork.",
+      "longAnswer": "God Himself rested on the seventh day after completing creation, not from exhaustion but to establish a pattern for humanity, and He blessed and sanctified that day of rest (Genesis 2:2-3). Jesus modeled intentional withdrawal from demanding ministry to rest and pray, even inviting weary disciples to “come ye yourselves apart... and rest a while” (Mark 6:31). At the same time, Scripture commends diligence and warns against laziness, describing the sluggard's poverty as the natural result of neglecting responsible work (Proverbs 6:6-11). A healthy Christian life holds both truths together: consistent, honest labor paired with regular rest, recognizing that ongoing burnout without rest is neither sustainable nor honoring to the God who designed rhythms of rest into creation itself.",
+      "topics": [
+        "Health",
+        "Sabbath"
+      ],
+      "category": "Health and Stewardship",
+      "scriptures": [
+        "Genesis 2:2-3",
+        "Mark 6:31",
+        "Proverbs 6:6-11",
+        "Exodus 20:9-10"
+      ],
+      "keywords": [
+        "work life balance bible",
+        "rest and productivity",
+        "burnout christian"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-caring-for-the-environment",
+      "question": "What Does the Bible Say About Caring for the Environment?",
+      "shortAnswer": "God gave humanity the responsibility to care for and wisely manage creation as stewards rather than owners, meaning environmental responsibility flows from honoring God's world rather than treating it carelessly.",
+      "longAnswer": "At creation, God placed the first humans in the garden “to dress it and to keep it” (Genesis 2:15), establishing a pattern of responsible cultivation and care rather than exploitation. Psalm 24:1 declares that “the earth is the LORD's, and the fulness thereof,” reminding believers that creation belongs to God, and humans function as stewards accountable to Him for how it is treated. Scripture also envisions the created world as groaning under the effects of sin, awaiting future restoration (Romans 8:19-22), which does not diminish present responsibility but places it within a larger redemptive story. Practically, this calls believers toward reasonable conservation, avoiding waste, and respecting the created order as something entrusted to their care rather than something to be exploited without regard for consequences.",
+      "topics": [
+        "Stewardship",
+        "Creation"
+      ],
+      "category": "Health and Stewardship",
+      "scriptures": [
+        "Genesis 2:15",
+        "Psalm 24:1",
+        "Romans 8:19-22",
+        "Genesis 1:28"
+      ],
+      "keywords": [
+        "stewardship of creation",
+        "christian view of environment",
+        "caring for earth"
+      ]
+    },
+    {
+      "id": "answer-how-tithing-works-biblically",
+      "question": "How Does Tithing Work According to Scripture?",
+      "shortAnswer": "Tithing, giving a tenth of one's income, is a biblical practice of returning a portion to God in recognition that everything ultimately belongs to Him, intended to support ministry and be offered cheerfully rather than under compulsion.",
+      "longAnswer": "The tithe principle appears early in Scripture, with Abraham giving a tenth to Melchizedek (Genesis 14:20) and Jacob vowing to give God a tenth of all he received (Genesis 28:22). Malachi records God's invitation to “bring ye all the tithes into the storehouse” and to test Him in this, with a promise of abundant blessing in return (Malachi 3:10). In the New Testament, giving is emphasized more in terms of the heart's attitude than a strict percentage, with Paul teaching that “God loveth a cheerful giver” and that giving should be done “not grudgingly, or of necessity” (2 Corinthians 9:7). Whether following the specific tithe or giving generously according to ability, Scripture consistently frames financial giving as an act of worship and trust in God's provision.",
+      "topics": [
+        "Stewardship"
+      ],
+      "category": "Health and Stewardship",
+      "scriptures": [
+        "Genesis 14:20",
+        "Malachi 3:10",
+        "2 Corinthians 9:6-7",
+        "Matthew 23:23"
+      ],
+      "keywords": [
+        "biblical tithing",
+        "malachi 3 10",
+        "should christians tithe"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-caring-for-the-poor",
+      "question": "What Does the Bible Say About Caring for the Poor?",
+      "shortAnswer": "Scripture repeatedly commands generosity and justice toward the poor, presenting care for the needy as a central expression of genuine faith rather than an optional act of charity.",
+      "longAnswer": "Proverbs teaches that “he that hath pity upon the poor lendeth unto the LORD; and that which he hath given will he pay him again” (Proverbs 19:17), connecting generosity toward the needy directly to one's relationship with God. The prophets frequently condemned neglect of the poor as serious injustice, with Isaiah calling God's people to “loose the bands of wickedness” and to share bread with the hungry (Isaiah 58:6-7). James defines “pure religion” partly as visiting orphans and widows in their affliction (James 1:27), while John asks how the love of God can dwell in someone who has resources yet shuts up compassion toward a brother in need (1 John 3:17). Practical generosity—whether through direct giving, volunteering, or supporting organizations serving the poor—remains a consistent biblical priority.",
+      "topics": [
+        "Stewardship",
+        "Christian Living"
+      ],
+      "category": "Health and Stewardship",
+      "scriptures": [
+        "Proverbs 19:17",
+        "Isaiah 58:6-7",
+        "James 1:27",
+        "1 John 3:17-18"
+      ],
+      "keywords": [
+        "biblical view of poverty",
+        "caring for the poor bible",
+        "generosity to the needy"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-exercise-and-physical-fitness",
+      "question": "What Does the Bible Say About Exercise and Physical Fitness?",
+      "shortAnswer": "While the Bible does not give a specific exercise program, its emphasis on caring for the body as God's temple and its portrayal of physical discipline as a positive metaphor support reasonable, consistent physical activity as wise stewardship.",
+      "longAnswer": "Paul acknowledges that “bodily exercise profiteth little,” while godliness profits in all things (1 Timothy 4:8), a statement that puts physical training in proper perspective rather than dismissing its value entirely—it is described as having some benefit, even if less significant than spiritual discipline. He elsewhere uses the image of an athlete's rigorous training and self-control as a metaphor for spiritual discipline, describing himself as one who keeps his body “under” to avoid disqualification (1 Corinthians 9:24-27), an analogy that assumes physical training is a recognizable, worthwhile pursuit. Since the body is described as belonging to God and worth honoring (1 Corinthians 6:19-20), reasonable physical activity fits within a broader pattern of healthy stewardship, though specific fitness plans should be tailored with guidance from a qualified professional based on individual health needs.",
+      "topics": [
+        "Health"
+      ],
+      "category": "Health and Stewardship",
+      "scriptures": [
+        "1 Timothy 4:8",
+        "1 Corinthians 9:24-27",
+        "1 Corinthians 6:19-20"
+      ],
+      "keywords": [
+        "exercise and the bible",
+        "physical fitness christian",
+        "1 timothy 4 8"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-mental-health",
+      "question": "What Does the Bible Say About Mental Health and Emotional Struggles?",
+      "shortAnswer": "The Bible honestly portrays believers experiencing depression, anxiety, and despair, offering comfort through God's presence and promises while also supporting the wisdom of seeking appropriate professional help for ongoing struggles.",
+      "longAnswer": "Figures such as Elijah experienced deep despair, even asking to die, yet God responded with gentle care, rest, nourishment, and renewed purpose rather than condemnation (1 Kings 19:4-8). The Psalms give language for genuine emotional anguish, with David crying out, “My soul is also sore vexed” (Psalm 6:2-3), showing that honest lament has a legitimate place in faith rather than being suppressed. Scripture offers real comfort, promising that God is “nigh unto them that are of a broken heart” (Psalm 34:18) and inviting believers to cast their anxieties on Him (1 Peter 5:7), but it does not present these promises as a replacement for practical help. Persistent depression, anxiety, or other mental health struggles are appropriately addressed through both spiritual support and care from a qualified counselor, therapist, or physician, since seeking such help reflects wisdom rather than a lack of faith.",
+      "topics": [
+        "Health",
+        "Comfort"
+      ],
+      "category": "Health and Stewardship",
+      "scriptures": [
+        "1 Kings 19:4-8",
+        "Psalm 34:18",
+        "Psalm 42:11",
+        "1 Peter 5:7"
+      ],
+      "keywords": [
+        "mental health and faith",
+        "depression in the bible",
+        "christian view of anxiety"
+      ]
+    },
+    {
+      "id": "answer-should-christians-see-doctors",
+      "question": "Should Christians Seek Medical Treatment or Rely Only on Prayer?",
+      "shortAnswer": "The Bible presents prayer and medical treatment as complementary rather than opposing, recognizing physicians and medicine as legitimate means through which God often provides healing.",
+      "longAnswer": "Luke, one of the Gospel writers, was himself described as “the beloved physician” (Colossians 4:14), and his presence among the apostles suggests no inherent conflict between medical practice and genuine faith. James instructs believers to call for the elders to pray over the sick, even while anointing with oil, a substance sometimes used medicinally in the ancient world, suggesting that prayer and practical means were not seen as contradictory (James 5:14-15). Scripture nowhere instructs believers to reject available, appropriate medical care in favor of prayer alone; rather, prayer for healing and wisdom can be combined with seeking treatment from qualified medical professionals, trusting that God can work through both supernatural means and the skill He has given to physicians.",
+      "topics": [
+        "Health",
+        "Prayer"
+      ],
+      "category": "Health and Stewardship",
+      "scriptures": [
+        "Colossians 4:14",
+        "James 5:14-15",
+        "Luke 5:31",
+        "Proverbs 17:22"
+      ],
+      "keywords": [
+        "prayer or medicine",
+        "should christians see doctors",
+        "faith and healthcare"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-substance-abuse-and-addiction",
+      "question": "What Does the Bible Say About Substance Abuse and Addiction?",
+      "shortAnswer": "Scripture warns against being enslaved to any substance or habit that overtakes self-control, teaching that believers are called to freedom in Christ rather than bondage, while also encouraging practical support for those struggling with addiction.",
+      "longAnswer": "Paul writes that believers should not be brought “under the power of any” substance or influence, emphasizing the value of self-control and freedom rather than enslavement (1 Corinthians 6:12). He also describes believers as no longer servants of sin but instruments of righteousness, offering hope for genuine transformation and freedom from destructive patterns (Romans 6:12-14). Addiction is a serious struggle that often involves both spiritual and physical dimensions, and Scripture's call to “be not drunk with wine... but be filled with the Spirit” (Ephesians 5:18) points toward Spirit-empowered freedom as the ultimate goal. Alongside prayer, confession, and church support, addiction recovery is often greatly aided by professional treatment programs, counseling, and medical support, which can be pursued together with spiritual growth rather than as a substitute for it.",
+      "topics": [
+        "Health"
+      ],
+      "category": "Health and Stewardship",
+      "scriptures": [
+        "1 Corinthians 6:12",
+        "Romans 6:12-14",
+        "Ephesians 5:18",
+        "Galatians 5:1"
+      ],
+      "keywords": [
+        "addiction and the bible",
+        "substance abuse christian",
+        "freedom from addiction"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-sleep-and-rest",
+      "question": "What Does the Bible Say About Sleep and Rest?",
+      "shortAnswer": "The Bible presents sleep as a good gift from God, closely connected to trust in His care, and consistently warns against the kind of restless anxiety or overwork that robs the body of needed rest.",
+      "longAnswer": "The psalmist observes that God “giveth his beloved sleep” (Psalm 127:2), presenting restful sleep as a blessing tied to trusting God rather than anxiously striving through sleepless labor. Proverbs also links peaceful sleep to a clear conscience and trust in God's protection, noting that one who trusts God can lie down and sleep in safety (Proverbs 3:24; Psalm 4:8). Jesus Himself modeled the need for physical rest, sleeping soundly even during a storm at sea, trusting the Father's care (Mark 4:38). Persistent sleeplessness or chronic exhaustion, especially when connected to anxiety or other underlying issues, may benefit from both prayer for peace and appropriate medical or professional evaluation.",
+      "topics": [
+        "Health",
+        "Comfort"
+      ],
+      "category": "Health and Stewardship",
+      "scriptures": [
+        "Psalm 127:2",
+        "Psalm 4:8",
+        "Proverbs 3:24",
+        "Mark 4:37-39"
+      ],
+      "keywords": [
+        "sleep in the bible",
+        "psalm 127 2",
+        "biblical rest and trust"
+      ]
+    },
+    {
+      "id": "answer-what-is-biblical-stewardship",
+      "question": "What Is Biblical Stewardship?",
+      "shortAnswer": "Biblical stewardship is the recognition that everything a person has—time, money, abilities, and possessions—ultimately belongs to God, and believers are called to manage these resources faithfully and responsibly on His behalf.",
+      "longAnswer": "The parable of the talents illustrates this principle vividly: a master entrusts resources to servants and later evaluates how faithfully each one managed what was given, commending those who invested wisely and rebuking the one who buried his portion out of fear (Matthew 25:14-30). Paul's summary of a steward's core requirement is direct: “it is required in stewards, that a man be found faithful” (1 Corinthians 4:2), placing the emphasis on faithful management rather than the amount entrusted. Peter extends this principle to spiritual gifts as well, urging believers to minister to one another “as good stewards of the manifold grace of God” (1 Peter 4:10). Stewardship therefore touches every area of life—finances, time, talents, relationships, and health—viewed as resources entrusted by God for faithful use rather than personal ownership.",
+      "topics": [
+        "Stewardship"
+      ],
+      "category": "Health and Stewardship",
+      "scriptures": [
+        "Matthew 25:14-30",
+        "1 Corinthians 4:2",
+        "1 Peter 4:10",
+        "Psalm 24:1"
+      ],
+      "keywords": [
+        "what is stewardship",
+        "parable of the talents",
+        "faithful steward"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-overeating-and-gluttony",
+      "question": "What Does the Bible Say About Overeating and Gluttony?",
+      "shortAnswer": "The Bible warns against gluttony as a lack of self-control that can harm both body and character, encouraging moderation and self-discipline as expressions of honoring God with the body.",
+      "longAnswer": "Proverbs advises putting “a knife to thy throat” figuratively, meaning exercising strong self-restraint, when facing food that tempts toward excess (Proverbs 23:1-3), and warns that “the drunkard and the glutton shall come to poverty” due to lack of self-discipline (Proverbs 23:20-21). Paul describes some as having “their god” as their appetite, whose focus is on earthly things rather than spiritual priorities (Philippians 3:19), a caution against letting food or any physical desire dominate one's life. Since the body is described as the temple of the Holy Spirit (1 Corinthians 6:19-20), moderation in eating fits within broader biblical stewardship, while struggles with disordered eating patterns are appropriately addressed with support from a physician, dietitian, or counselor alongside spiritual care.",
+      "topics": [
+        "Health"
+      ],
+      "category": "Health and Stewardship",
+      "scriptures": [
+        "Proverbs 23:1-3",
+        "Proverbs 23:20-21",
+        "Philippians 3:19",
+        "1 Corinthians 6:19-20"
+      ],
+      "keywords": [
+        "gluttony bible",
+        "overeating christian",
+        "self control and food"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-time-management",
+      "question": "What Does the Bible Say About Time Management?",
+      "shortAnswer": "Scripture calls believers to use time wisely and intentionally, recognizing life's brevity and the importance of prioritizing what matters most rather than drifting through days without purpose.",
+      "longAnswer": "Moses prayed, “So teach us to number our days, that we may apply our hearts unto wisdom” (Psalm 90:12), framing the awareness of life's shortness as motivation for intentional living rather than despair. Paul instructs believers to walk “circumspectly,” redeeming the time “because the days are evil” (Ephesians 5:15-16), suggesting deliberate, thoughtful use of time rather than passive drifting. Ecclesiastes reminds readers that there is “a time to every purpose under the heaven” (Ecclesiastes 3:1), acknowledging different seasons call for different priorities rather than a rigid, identical schedule for every stage of life. Practically, this means setting priorities that reflect what matters eternally—relationship with God, family, and service to others—rather than allowing urgent but less important demands to consume all available time.",
+      "topics": [
+        "Stewardship",
+        "Christian Living"
+      ],
+      "category": "Health and Stewardship",
+      "scriptures": [
+        "Psalm 90:12",
+        "Ephesians 5:15-17",
+        "Ecclesiastes 3:1"
+      ],
+      "keywords": [
+        "biblical time management",
+        "redeeming the time",
+        "using time wisely"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-vanity-and-outward-appearance",
+      "question": "What Does the Bible Say About Vanity and Outward Appearance?",
+      "shortAnswer": "While the Bible does not condemn caring for one's appearance, it consistently warns against making outward beauty a primary source of identity or worth, teaching that inward character matters far more to God than external looks.",
+      "longAnswer": "Samuel was reminded when selecting a king that “man looketh on the outward appearance, but the LORD looketh on the heart” (1 Samuel 16:7), establishing a clear priority on character over physical appearance. Peter instructs women specifically not to let their adornment be merely outward, but the “hidden man of the heart... even the ornament of a meek and quiet spirit” (1 Peter 3:3-4), a principle whose underlying value applies broadly to all believers regardless of gender. Proverbs similarly notes that “favour is deceitful, and beauty is vain,” praising instead a woman who fears the Lord (Proverbs 31:30). These teachings do not forbid reasonable attention to appearance but caution against building identity, pride, or worth around it.",
+      "topics": [
+        "Christian Living"
+      ],
+      "category": "Health and Stewardship",
+      "scriptures": [
+        "1 Samuel 16:7",
+        "1 Peter 3:3-4",
+        "Proverbs 31:30"
+      ],
+      "keywords": [
+        "vanity in the bible",
+        "inner beauty vs outer",
+        "1 peter 3 appearance"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-caring-for-your-body-during-illness",
+      "question": "How Should I Think About My Health When Facing a Chronic Illness?",
+      "shortAnswer": "Chronic illness can be faced with honest lament, continued trust in God's presence and sovereignty, and diligent use of appropriate medical care, recognizing that healing is not always immediate or complete in this life.",
+      "longAnswer": "Paul experienced an unhealed physical affliction, described as a “thorn in the flesh,” and though he prayed repeatedly for its removal, God's answer was sufficient grace rather than immediate healing (2 Corinthians 12:7-9), showing that ongoing illness does not necessarily indicate a lack of faith or God's disfavor. The Psalms give ample room for honest lament in suffering, while also returning again and again to trust in God's steadfast character (Psalm 73:26). Believers facing chronic illness are encouraged to continue seeking appropriate medical treatment, lean on the support of the faith community, and find comfort in God's promise of ultimate restoration in the resurrection, even while trusting Him through present limitations (Revelation 21:4).",
+      "topics": [
+        "Health",
+        "Comfort"
+      ],
+      "category": "Health and Stewardship",
+      "scriptures": [
+        "2 Corinthians 12:7-9",
+        "Psalm 73:26",
+        "Psalm 41:3",
+        "Revelation 21:4"
+      ],
+      "keywords": [
+        "chronic illness and faith",
+        "living with illness christian",
+        "trusting god in sickness"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-generosity",
+      "question": "What Does the Bible Say About Generosity?",
+      "shortAnswer": "The Bible presents generosity as a natural overflow of a grateful heart that trusts God's provision, teaching that cheerful, sacrificial giving reflects God's own generous character toward humanity.",
+      "longAnswer": "Jesus taught that “it is more blessed to give than to receive” (Acts 20:35), reversing the world's usual assumption that receiving brings greater satisfaction than giving. Paul commends the Macedonian churches, who gave generously even out of deep poverty, showing that generosity is not determined by wealth but by willingness (2 Corinthians 8:1-5). He also promises that God is able to make all grace abound so that believers, having all sufficiency, may abound in every good work, including generous giving (2 Corinthians 9:8). Ultimately, generosity flows from remembering God's own extravagant gift in Christ, since “though he was rich, yet for your sakes he became poor, that ye through his poverty might be rich” (2 Corinthians 8:9).",
+      "topics": [
+        "Stewardship"
+      ],
+      "category": "Health and Stewardship",
+      "scriptures": [
+        "Acts 20:35",
+        "2 Corinthians 8:1-9",
+        "2 Corinthians 9:6-8"
+      ],
+      "keywords": [
+        "biblical generosity",
+        "giving cheerfully",
+        "why give to others"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-self-care",
+      "question": "Does the Bible Support the Idea of Self-Care?",
+      "shortAnswer": "While the Bible does not use the modern term \"self-care,\" its teaching on rest, wise stewardship of the body, and Jesus's own pattern of withdrawing to rest and pray affirms the value of caring responsibly for one's physical and emotional wellbeing.",
+      "longAnswer": "Jesus regularly withdrew from ministry demands to rest and pray in solitude, even when crowds sought Him (Luke 5:16; Mark 6:31), modeling that attending to one's own spiritual and physical needs is not selfish but necessary for sustained, healthy service. Paul's teaching that the body is the temple of the Holy Spirit implies responsible care of physical and mental health as an act of honoring God (1 Corinthians 6:19-20). At the same time, biblical self-care differs from self-indulgence or self-centeredness; it is meant to restore capacity for love and service rather than become an end in itself (Galatians 5:13). Practicing rest, healthy boundaries, and seeking support when overwhelmed reflects wise stewardship of the life God has given, not a failure of faith or selflessness.",
+      "topics": [
+        "Health",
+        "Christian Living"
+      ],
+      "category": "Health and Stewardship",
+      "scriptures": [
+        "Luke 5:16",
+        "Mark 6:31",
+        "1 Corinthians 6:19-20",
+        "Galatians 5:13"
+      ],
+      "keywords": [
+        "self care and the bible",
+        "is self care biblical",
+        "rest and wellbeing christian"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-caring-for-the-sick-and-elderly",
+      "question": "What Does the Bible Say About Caring for the Sick and Elderly?",
+      "shortAnswer": "Scripture consistently calls believers to compassionate practical care for the sick and elderly, honoring them and meeting their needs as an expression of genuine faith and love for neighbor.",
+      "longAnswer": "Leviticus instructs believers to rise up before the aged and honor the presence of the elderly (Leviticus 19:32), reflecting a broader biblical value of respect toward those advanced in years. Jesus's compassion for the sick is displayed throughout the Gospels, as He repeatedly healed and showed personal attention to suffering individuals rather than treating illness as merely an inconvenience (Matthew 9:35-36). James identifies visiting those in affliction as part of “pure religion” (James 1:27), while Paul instructs Timothy about the church's responsibility to care for widows, especially those without family support (1 Timothy 5:3-10). Practical acts of care—visits, meals, transportation to appointments, and simple companionship—embody this biblical call in tangible ways.",
+      "topics": [
+        "Christian Living",
+        "Health"
+      ],
+      "category": "Health and Stewardship",
+      "scriptures": [
+        "Leviticus 19:32",
+        "Matthew 9:35-36",
+        "James 1:27",
+        "1 Timothy 5:3-10"
+      ],
+      "keywords": [
+        "caring for the elderly bible",
+        "visiting the sick",
+        "honoring aged"
+      ]
+    },
+    {
+      "id": "answer-why-is-the-sabbath-on-saturday",
+      "question": "Why Is the Sabbath on Saturday Rather Than Sunday?",
+      "shortAnswer": "The seventh-day Sabbath was established at creation on the day following six days of work, later confirmed in the Ten Commandments as Saturday, the seventh day of the week, distinct from the first day, Sunday.",
+      "longAnswer": "Genesis records that God rested on the seventh day after completing creation in six days, blessing and sanctifying that specific day (Genesis 2:1-3), establishing the Sabbath before any covenant with Israel existed. The fourth commandment identifies this day explicitly: “the seventh day is the sabbath of the LORD thy God” (Exodus 20:10), a day consistently distinguished throughout Scripture from “the first day of the week,” the day of the resurrection (Luke 24:1; Mark 16:9). Historical and linguistic evidence, including the continued use of “Sabado” for Saturday in many languages, supports the seventh day of the week as Saturday, the same day observed since creation and reaffirmed at Sinai, rather than the first day.",
+      "topics": [
+        "Sabbath",
+        "Law"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Genesis 2:1-3",
+        "Exodus 20:8-11",
+        "Luke 23:56",
+        "Mark 16:9"
+      ],
+      "keywords": [
+        "saturday sabbath",
+        "why sabbath is saturday",
+        "seventh day"
+      ]
+    },
+    {
+      "id": "answer-is-the-sabbath-still-binding-for-christians-today",
+      "question": "Is the Sabbath Still Binding for Christians Today?",
+      "shortAnswer": "The Sabbath, established at creation for all humanity and included in the unchanging Ten Commandments, remains a meaningful principle for believers today, honored as a gift of rest and worship rather than a burdensome obligation.",
+      "longAnswer": "The Sabbath was instituted before sin entered the world, at creation, “because that in it he had rested from all his work” (Genesis 2:2-3), suggesting its purpose extends beyond a temporary arrangement for ancient Israel alone. Jesus stated that “the sabbath was made for man,” describing Himself as “Lord also of the sabbath” (Mark 2:27-28), affirming its ongoing value while correcting legalistic distortions of its purpose. Isaiah even envisions Sabbath observance continuing into the new earth (Isaiah 66:22-23). While believers differ on how the Sabbath principle applies today, its core purpose—rest, worship, and remembering God as Creator and Redeemer—remains a rich source of spiritual refreshment.",
+      "topics": [
+        "Sabbath",
+        "Law"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Genesis 2:2-3",
+        "Exodus 20:8-11",
+        "Mark 2:27-28",
+        "Isaiah 66:22-23"
+      ],
+      "keywords": [
+        "sabbath for christians today",
+        "is sabbath still valid",
+        "fourth commandment"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-purpose-of-the-ten-commandments",
+      "question": "What Is the Purpose of the Ten Commandments?",
+      "shortAnswer": "The Ten Commandments reveal God's moral standard, showing humanity both how to love God and neighbor and exposing the reality of sin, functioning as a guide for righteous living rather than a means of earning salvation.",
+      "longAnswer": "Given at Sinai, the commandments are summarized by Jesus into two great principles: loving God supremely and loving one's neighbor as oneself (Matthew 22:37-40), showing that they are fundamentally relational rather than merely legalistic rules. Paul explains that the law functions partly to reveal sin, since “by the law is the knowledge of sin” (Romans 3:20), acting like a mirror that shows a person's true condition rather than a means of achieving righteousness through obedience alone. The commandments remain a description of God's unchanging moral character, and Jesus explicitly said He did not come to destroy the law but to fulfill it (Matthew 5:17), meaning obedience remains an appropriate response of love for those already saved by grace (John 14:15).",
+      "topics": [
+        "Law"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Exodus 20:1-17",
+        "Matthew 22:37-40",
+        "Romans 3:20",
+        "Matthew 5:17",
+        "John 14:15"
+      ],
+      "keywords": [
+        "ten commandments purpose",
+        "why keep the law",
+        "moral law"
+      ]
+    },
+    {
+      "id": "answer-are-christians-still-required-to-keep-the-law",
+      "question": "Are Christians Still Required to Keep the Law?",
+      "shortAnswer": "Believers are not saved by keeping the law, since salvation comes through faith in Christ, but the moral law expressed in the Ten Commandments continues to describe God's unchanging standard of love, now kept through the Spirit's power rather than mere external effort.",
+      "longAnswer": "Paul is emphatic that “by the deeds of the law there shall no flesh be justified” (Romans 3:20), ruling out law-keeping as a means of earning salvation. Yet he immediately clarifies, “Do we then make void the law through faith? God forbid: yea, we establish the law” (Romans 3:31), showing that grace does not eliminate the law's ongoing relevance as a moral standard. Under the new covenant, God's law is written on the heart by the Spirit rather than kept through mere external compliance (Jeremiah 31:33; Hebrews 8:10), meaning obedience flows from love and gratitude rather than obligation or fear. John summarizes this relationship simply: “This is the love of God, that we keep his commandments” (1 John 5:3).",
+      "topics": [
+        "Law",
+        "Salvation"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Romans 3:20-31",
+        "Jeremiah 31:33",
+        "Hebrews 8:10",
+        "1 John 5:3"
+      ],
+      "keywords": [
+        "christians and the law",
+        "do christians keep the law",
+        "law and grace"
+      ]
+    },
+    {
+      "id": "answer-what-does-it-mean-that-christ-is-the-end-of-the-law",
+      "question": "What Does It Mean That 'Christ Is the End of the Law'?",
+      "shortAnswer": "This phrase refers to Christ fulfilling the law's purpose of pointing to righteousness, meaning that Christ is the goal or culmination the law was always leading toward, rather than the abolition of God's moral standard.",
+      "longAnswer": "Paul writes that “Christ is the end of the law for righteousness to every one that believeth” (Romans 10:4), placed in a context discussing how righteousness is achieved—not through law-keeping but through faith in Christ. This does not contradict Jesus's statement that He did not come to destroy the law but to fulfill it (Matthew 5:17); rather, it clarifies that the law's sacrificial and ceremonial system, along with its demand for perfect righteousness, finds its intended goal and completion in Christ's perfect life and atoning death. The moral law's standard of love for God and neighbor remains valid, but the means of achieving righteousness before God shifts from law-keeping to faith in the one the law always pointed toward.",
+      "topics": [
+        "Law",
+        "Salvation"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Romans 10:4",
+        "Matthew 5:17",
+        "Galatians 3:24-25",
+        "Colossians 2:14-17"
+      ],
+      "keywords": [
+        "christ is the end of the law",
+        "romans 10 4 meaning",
+        "law and christ"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-difference-between-moral-and-ceremonial-law",
+      "question": "What Is the Difference Between Moral Law and Ceremonial Law in the Bible?",
+      "shortAnswer": "Moral law, summarized in the Ten Commandments, reflects God's unchanging character and remains binding for all people, while ceremonial law consisted of sacrifices, festivals, and rituals pointing forward to Christ, fulfilled and no longer required after His sacrifice.",
+      "longAnswer": "The Ten Commandments were written directly by God's own finger on stone and placed inside the ark (Exodus 31:18; Deuteronomy 10:1-5), signifying their permanent, foundational nature. Ceremonial regulations, by contrast, including sacrifices, festivals, and dietary distinctions tied to the sanctuary system, were recorded by Moses in a book placed beside the ark, described as “the book of the law” (Deuteronomy 31:24-26), a distinction hinting at their different status. Colossians describes these ceremonial ordinances as “a shadow of things to come,” with the substance found in Christ (Colossians 2:16-17), showing that their purpose was fulfilled at the cross, while the moral law continues to express God's timeless standard for human conduct and relationships.",
+      "topics": [
+        "Law"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Exodus 31:18",
+        "Deuteronomy 31:24-26",
+        "Colossians 2:14-17",
+        "Hebrews 10:1"
+      ],
+      "keywords": [
+        "moral law vs ceremonial law",
+        "which laws still apply",
+        "law categories bible"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-the-golden-rule",
+      "question": "What Is the Golden Rule and Why Does It Matter?",
+      "shortAnswer": "The Golden Rule, taught by Jesus, calls believers to treat others as they themselves would want to be treated, summarizing practical love for neighbor as the heart of ethical living rather than a set of rigid legal rules.",
+      "longAnswer": "Jesus stated, “Therefore all things whatsoever ye would that men should do to you, do ye even so to them: for this is the law and the prophets” (Matthew 7:12), presenting this simple principle as a summary of the entire ethical teaching of Scripture. This standard requires imaginative empathy, actively considering how one's words and actions would feel from another person's perspective before acting. It echoes and applies the second great commandment, to love one's neighbor as oneself (Matthew 22:39), turning an abstract command into a practical daily test for decisions. Applying the Golden Rule consistently, in workplaces, families, and casual encounters, provides a simple but powerful guide for living out genuine Christian love.",
+      "topics": [
+        "Christian Living",
+        "Law"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Matthew 7:12",
+        "Matthew 22:39",
+        "Luke 6:31"
+      ],
+      "keywords": [
+        "golden rule bible",
+        "matthew 7 12",
+        "treat others as you want to be treated"
+      ]
+    },
+    {
+      "id": "answer-what-is-legalism-and-why-is-it-a-problem",
+      "question": "What Is Legalism and Why Is It a Problem?",
+      "shortAnswer": "Legalism is the belief that a person can earn favor with God or become righteous through rule-keeping and religious performance, a problem the New Testament repeatedly confronts because it distorts grace and can foster pride or despair.",
+      "longAnswer": "Jesus condemned the Pharisees for meticulously tithing even small herbs while neglecting “the weightier matters of the law,” such as judgment, mercy, and faith (Matthew 23:23), showing that legalism can focus on minor external details while missing the heart of God's law entirely. Paul confronted a similar problem in Galatia, warning believers not to seek justification through the law after having begun in the Spirit (Galatians 3:1-3), since this approach denies the sufficiency of Christ's finished work. Legalism can produce either pride, when a person feels they have kept enough rules to be acceptable, or despair, when they inevitably fail to keep every standard perfectly. The alternative Scripture offers is grace received by faith, followed by obedience that flows from love and gratitude rather than fear or self-righteous effort (Ephesians 2:8-10).",
+      "topics": [
+        "Law",
+        "Salvation"
+      ],
+      "category": "Faith and Salvation",
+      "scriptures": [
+        "Matthew 23:23-24",
+        "Galatians 3:1-3",
+        "Ephesians 2:8-10",
+        "Romans 3:20"
+      ],
+      "keywords": [
+        "what is legalism",
+        "problem with legalism",
+        "grace vs legalism"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-clean-and-unclean-foods",
+      "question": "What Does the Bible Say About Clean and Unclean Foods?",
+      "shortAnswer": "Leviticus 11 distinguishes between clean and unclean animals for food, a distinction some believers continue to observe as wise dietary guidance, while others view it as part of the ceremonial system fulfilled in Christ; either way, moderation and health remain relevant considerations.",
+      "longAnswer": "Leviticus 11 provides detailed criteria for clean and unclean land animals, water creatures, and birds, associated with both ceremonial purity and practical health benefits in the ancient context (Leviticus 11:1-47). Peter's vision in Acts 10, showing a sheet with various animals, is understood by many primarily as addressing table fellowship between Jews and Gentiles rather than necessarily abolishing dietary distinctions altogether, since the vision's stated interpretation concerned not calling any man common or unclean (Acts 10:28). Believers hold different views on the ongoing application of these dietary laws, but there is wide agreement that moderation, avoiding excess, and honoring the body as God's temple remain relevant principles regardless of one's specific dietary conclusions (1 Corinthians 6:19-20).",
+      "topics": [
+        "Law",
+        "Health"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Leviticus 11:1-47",
+        "Acts 10:9-16",
+        "Acts 10:28",
+        "1 Corinthians 6:19-20"
+      ],
+      "keywords": [
+        "clean and unclean foods",
+        "leviticus 11",
+        "biblical food laws"
+      ]
+    },
+    {
+      "id": "answer-what-does-jesus-mean-by-fulfilling-the-law",
+      "question": "What Does Jesus Mean When He Says He Came to Fulfill the Law?",
+      "shortAnswer": "Jesus's statement that He came to fulfill rather than destroy the law means He perfectly obeyed its requirements, brought out its full intended meaning, and completed the sacrificial system it pointed toward, rather than abolishing God's moral standard.",
+      "longAnswer": "Jesus said plainly, “Think not that I am come to destroy the law, or the prophets: I am not come to destroy, but to fulfil” (Matthew 5:17), immediately followed by teaching that intensifies the law's demands by addressing the heart's intentions behind anger and lust, not merely outward actions (Matthew 5:21-28). This shows that fulfilling the law involved revealing its full depth and true intent, going beyond mere external compliance. As the perfect sacrifice foreshadowed by the Old Testament sacrificial system, Jesus also fulfilled the ceremonial law's ultimate purpose (Hebrews 10:1, 10), while His sinless life fulfilled the law's requirement of perfect righteousness on behalf of those who trust in Him (Romans 8:3-4).",
+      "topics": [
+        "Law"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Matthew 5:17-20",
+        "Hebrews 10:1-10",
+        "Romans 8:3-4"
+      ],
+      "keywords": [
+        "jesus fulfill the law",
+        "matthew 5 17",
+        "law and christ's mission"
+      ]
+    },
+    {
+      "id": "answer-what-was-the-purpose-of-the-sanctuary-services",
+      "question": "What Was the Purpose of the Old Testament Sanctuary Services?",
+      "shortAnswer": "The sanctuary and its sacrificial services taught God's people about sin's seriousness, the necessity of atonement, and God's plan of redemption, foreshadowing the future ministry and sacrifice of Jesus Christ.",
+      "longAnswer": "God instructed Moses to build the sanctuary “that I may dwell among them” (Exodus 25:8), establishing a visible, structured system through which sinful people could approach a holy God. Daily and yearly sacrifices, along with the various furnishings and rituals, taught profound lessons about substitutionary atonement, since the innocent animal died in the place of the guilty sinner (Leviticus 4:29). Hebrews explains that this entire system served as “a figure for the time then present,” a shadow pointing to the reality found in Christ's superior, once-for-all sacrifice (Hebrews 9:9-12). Understanding the sanctuary deepens appreciation for the gospel, since its detailed symbolism repeatedly points toward the person and work of Jesus as the true fulfillment of every sacrifice.",
+      "topics": [
+        "Sanctuary",
+        "Salvation"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Exodus 25:8-9",
+        "Leviticus 4:27-31",
+        "Hebrews 9:9-12",
+        "Hebrews 10:1"
+      ],
+      "keywords": [
+        "sanctuary services purpose",
+        "old testament sacrifices meaning",
+        "tabernacle typology"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-mean-by-mark-of-the-beast",
+      "question": "What Does the Bible Mean by the 'Mark of the Beast'?",
+      "shortAnswer": "The mark of the beast, described in Revelation 13-14, symbolizes ultimate allegiance to a system opposed to God's authority, contrasted with the seal of God representing loyalty to Him, and Christians are wise to focus on its underlying principle of worship and allegiance rather than speculative predictions about specific technology.",
+      "longAnswer": "Revelation describes a future crisis in which people must choose whether to receive “a mark in their right hand, or in their foreheads” connected to worship of a beast power, or to remain faithful to God despite economic and social pressure (Revelation 13:16-17; 14:9-12). This imagery draws on Old Testament symbolism of marks representing devotion or ownership, contrasted directly with the “seal of the living God” placed upon His faithful people (Revelation 7:2-3). Rather than focusing primarily on identifying a specific physical mark or technology, the core issue Scripture emphasizes is the choice between worshiping God as Creator, keeping His commandments, and having faith in Jesus (Revelation 14:12), or submitting to counterfeit worship under pressure.",
+      "topics": [
+        "Prophecy",
+        "Three Angels"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Revelation 13:16-17",
+        "Revelation 14:9-12",
+        "Revelation 7:2-3"
+      ],
+      "keywords": [
+        "mark of the beast",
+        "revelation 13",
+        "end time mark"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-difference-between-the-old-covenant-and-new-covenant-law",
+      "question": "How Does the New Covenant Change the Way Believers Relate to God's Law?",
+      "shortAnswer": "Under the new covenant, God's law is written on the believer's heart by the Holy Spirit, meaning obedience flows from an internal, Spirit-empowered desire to please God rather than external compulsion or fear of punishment alone.",
+      "longAnswer": "Jeremiah's prophecy of the new covenant promises, “I will put my law in their inward parts, and write it in their hearts” (Jeremiah 31:33), a promise Hebrews explicitly applies to believers under Christ's new covenant (Hebrews 8:10). This does not change what the law requires—love for God and neighbor remains the standard—but it changes the motivation and empowerment behind obedience, shifting from mere external rule-following toward heartfelt devotion produced by the Spirit (Ezekiel 36:26-27). Paul contrasts the old covenant's “letter,” which brings condemnation, with the new covenant's Spirit, which gives life (2 Corinthians 3:6), summarizing this transformation from externally imposed law to internally motivated obedience through grace.",
+      "topics": [
+        "Law",
+        "Holy Spirit"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Jeremiah 31:31-34",
+        "Hebrews 8:10",
+        "Ezekiel 36:26-27",
+        "2 Corinthians 3:6"
+      ],
+      "keywords": [
+        "new covenant and law",
+        "law written on heart",
+        "old vs new covenant obedience"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-swearing-oaths",
+      "question": "What Does the Bible Say About Swearing Oaths?",
+      "shortAnswer": "Jesus taught His followers to be so consistently truthful that formal oaths become unnecessary, instructing that a simple \"yes\" or \"no\" should be reliable enough on its own.",
+      "longAnswer": "Jesus instructed, “Swear not at all... But let your communication be, Yea, yea; Nay, nay: for whatsoever is more than these cometh of evil” (Matthew 5:34-37), addressing a practice in His day where people used elaborate oaths to appear more trustworthy while sometimes finding loopholes to avoid keeping simpler promises. James repeats this same principle, urging believers, “above all things,” to avoid oaths and simply let their yes be yes and their no be no (James 5:12). This teaching calls believers toward a consistent, transparent integrity in daily speech, where trustworthiness does not depend on formal ceremony or special vows but on a settled reputation for truthfulness in all circumstances.",
+      "topics": [
+        "Christian Living",
+        "Law"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Matthew 5:33-37",
+        "James 5:12",
+        "Ecclesiastes 5:4-5"
+      ],
+      "keywords": [
+        "swearing oaths bible",
+        "matthew 5 34",
+        "let your yes be yes"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-the-sabbath-and-rest",
+      "question": "How Should I Observe the Sabbath in a Meaningful Way?",
+      "shortAnswer": "Meaningful Sabbath observance involves setting aside ordinary work to focus on worship, rest, family, and fellowship with God, treating the day as a joyful gift rather than a burdensome restriction.",
+      "longAnswer": "Isaiah describes the Sabbath as a delight rather than a chore, calling God's people to honor the day by not pursuing their own pleasure or ordinary business, promising that doing so leads to delighting in the Lord Himself (Isaiah 58:13-14). Jesus's example of attending synagogue “as his custom was” on the Sabbath shows the value of regular corporate worship on this day (Luke 4:16), while His healing miracles performed on the Sabbath demonstrate that acts of mercy and compassion fit appropriately within its spirit (Mark 3:1-5). Practically, this can include worship, unhurried time with family, nature walks, visiting the sick, and intentionally setting aside typical work and commerce to focus fully on rest and communion with God.",
+      "topics": [
+        "Sabbath"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Isaiah 58:13-14",
+        "Luke 4:16",
+        "Mark 3:1-5",
+        "Exodus 20:8-11"
+      ],
+      "keywords": [
+        "how to keep the sabbath",
+        "meaningful sabbath observance",
+        "sabbath rest ideas"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-idolatry-today",
+      "question": "What Does the Bible Say About Idolatry Today?",
+      "shortAnswer": "While few people today literally bow to carved images, idolatry remains relevant as anything—money, success, relationships, or self—that takes the place God alone should hold in a person's affections and priorities.",
+      "longAnswer": "The second commandment forbids making or worshiping graven images (Exodus 20:4-5), a command originally addressing literal idol worship common throughout the ancient world. Paul broadens this principle by describing covetousness as “idolatry” (Colossians 3:5), showing that misplaced devotion to money or possessions functions the same way ancient idols once did, competing for ultimate loyalty that belongs to God. John's closing exhortation, “Little children, keep yourselves from idols” (1 John 5:21), applies broadly to anything that captures a believer's heart and trust more than God does. Recognizing modern idols—whether career, comfort, approval, or self-image—and consciously prioritizing God above them keeps the second commandment's principle alive today.",
+      "topics": [
+        "Law"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Exodus 20:3-5",
+        "Colossians 3:5",
+        "1 John 5:21",
+        "Matthew 6:24"
+      ],
+      "keywords": [
+        "modern idolatry",
+        "what is an idol today",
+        "colossians 3 5"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-relationship-between-faith-and-obedience",
+      "question": "What Is the Relationship Between Faith and Obedience?",
+      "shortAnswer": "Genuine faith naturally produces obedience, since trusting God includes trusting His commands, while true obedience flows from love and faith rather than fear or an attempt to earn salvation.",
+      "longAnswer": "Abraham's faith is repeatedly demonstrated through obedient action, most dramatically when he was willing to offer Isaac, showing his trust in God's promise even in the most difficult circumstance (Hebrews 11:8, 17; James 2:21-22). Jesus taught, “If ye love me, keep my commandments” (John 14:15), directly linking love, which flows from genuine faith, to a natural desire for obedience. James summarizes this relationship by stating that faith without corresponding action “is dead” (James 2:26), not because works save a person, but because genuine faith inevitably produces them. Obedience, then, is not the root of salvation but its evidence and fruit, growing naturally out of a transformed relationship with God.",
+      "topics": [
+        "Law",
+        "Salvation"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Hebrews 11:8-17",
+        "James 2:14-26",
+        "John 14:15",
+        "Romans 1:5"
+      ],
+      "keywords": [
+        "faith and obedience",
+        "does faith require obedience",
+        "james 2 obedience"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-capital-punishment",
+      "question": "What Does the Bible Say About Capital Punishment?",
+      "shortAnswer": "The Old Testament permitted capital punishment for certain serious crimes under Israel's civil law, while the New Testament emphasizes government's God-given authority to administer justice, though Christians hold differing views today on how these principles apply.",
+      "longAnswer": "Old Testament civil law prescribed capital punishment for specific offenses within the covenant nation of Israel (Exodus 21:12; Genesis 9:6), reflecting the seriousness with which God views the taking of innocent life. Paul teaches that governing authorities do not “bear the sword in vain,” describing government as God's instrument to execute wrath upon wrongdoers (Romans 13:4), acknowledging a legitimate governmental role in maintaining justice. At the same time, Jesus's mercy toward the woman caught in adultery, refusing to condemn her while calling her to repentance (John 8:3-11), shows a consistent emphasis on grace and restoration alongside justice. Christians today hold a range of views on the application of capital punishment within modern civil government, generally agreeing that any such questions deserve careful, prayerful, and humble consideration.",
+      "topics": [
+        "Law"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Genesis 9:6",
+        "Exodus 21:12",
+        "Romans 13:1-4",
+        "John 8:3-11"
+      ],
+      "keywords": [
+        "capital punishment bible",
+        "death penalty christian view",
+        "romans 13 government"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-difference-between-sin-and-crime",
+      "question": "What Is the Difference Between Sin and Crime?",
+      "shortAnswer": "Sin refers to any violation of God's moral law, whether known publicly or hidden entirely, while crime refers specifically to violations of human civil law, meaning not every sin is punishable by civil authorities, and not every legal violation is necessarily sinful in every context.",
+      "longAnswer": "John defines sin broadly as “the transgression of the law,” referring to God's moral standard rather than civil codes (1 John 3:4), showing that sin encompasses attitudes and private actions that civil law cannot address, such as pride, lust, or unforgiveness (Matthew 5:21-28). Civil government, by contrast, is tasked with maintaining public order and addressing specific behaviors that harm society, described as bearing the sword against evildoers (Romans 13:3-4), a narrower and more limited scope than God's moral law. This distinction explains why some sins carry no civil penalty at all, such as covetousness, while some civil regulations, like certain traffic laws, are not moral issues in themselves but matters of practical order for the common good.",
+      "topics": [
+        "Law"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "1 John 3:4",
+        "Matthew 5:21-28",
+        "Romans 13:1-4"
+      ],
+      "keywords": [
+        "sin vs crime",
+        "difference between sin and crime",
+        "1 john 3 4"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-civil-disobedience",
+      "question": "What Does the Bible Say About Civil Disobedience?",
+      "shortAnswer": "Scripture generally calls believers to respect and obey governing authorities, while also teaching that obedience to God takes precedence when human law directly requires disobeying His clear commands.",
+      "longAnswer": "Paul instructs believers to be subject to governing authorities, since they are established by God for good order (Romans 13:1-2), and Peter gives similar instruction to honor civil authority (1 Peter 2:13-14). When the Jewish council commanded the apostles to stop preaching about Jesus, however, Peter and the apostles responded, “We ought to obey God rather than men” (Acts 5:29), showing that submission to human authority has limits when it directly conflicts with clear divine commands. The Hebrew midwives similarly disobeyed Pharaoh's order to kill Hebrew infants, and Scripture commends their reverence for God over compliance with an unjust command (Exodus 1:17-21). These examples suggest civil disobedience is reserved for situations of direct conflict with God's clear moral commands, not general disagreement with policy or preference.",
+      "topics": [
+        "Law",
+        "Christian Living"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Romans 13:1-2",
+        "Acts 5:27-29",
+        "Exodus 1:15-21",
+        "1 Peter 2:13-17"
+      ],
+      "keywords": [
+        "civil disobedience bible",
+        "obey god or man",
+        "acts 5 29"
+      ]
+    },
+    {
+      "id": "answer-what-are-the-signs-of-the-second-coming",
+      "question": "What Are the Signs of the Second Coming of Jesus?",
+      "shortAnswer": "Jesus described a combination of natural, social, and spiritual signs—including wars, disasters, moral decline, and worldwide gospel proclamation—that indicate His return is drawing near, though the exact time remains unknown.",
+      "longAnswer": "In His discourse on the Mount of Olives, Jesus described wars, earthquakes, famines, and pestilences as recurring signs pointing toward the end (Matthew 24:6-8), along with increasing lawlessness and a love that grows cold in many hearts (Matthew 24:12). He also emphasized a positive sign: “this gospel of the kingdom shall be preached in all the world for a witness unto all nations; and then shall the end come” (Matthew 24:14), showing that worldwide gospel proclamation is a purposeful part of end-time events rather than incidental. Paul adds warnings about increasing selfishness and rejection of godliness in the last days (2 Timothy 3:1-5). While no single sign confirms an exact date, Jesus urged watchfulness rather than date-setting, comparing His return to a thief coming unexpectedly (Matthew 24:42-44).",
+      "topics": [
+        "Second Coming",
+        "Prophecy"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Matthew 24:3-14",
+        "Matthew 24:42-44",
+        "2 Timothy 3:1-5",
+        "Luke 21:25-28"
+      ],
+      "keywords": [
+        "signs of second coming",
+        "matthew 24 signs",
+        "end time signs"
+      ]
+    },
+    {
+      "id": "answer-will-anyone-know-the-exact-date-of-jesus-return",
+      "question": "Will Anyone Know the Exact Date of Jesus's Return?",
+      "shortAnswer": "No one knows the exact day or hour of Christ's return; Jesus explicitly stated that even He, in His humanity, did not know this timing, which the Father alone holds, making date-setting contrary to His own teaching.",
+      "longAnswer": "Jesus stated plainly, “But of that day and hour knoweth no man, no, not the angels of heaven, but my Father only” (Matthew 24:36), directly addressing and refuting any confident predictions of a specific date. He compared His unexpected return to the days of Noah, when people continued ordinary life unaware of impending judgment until it arrived (Matthew 24:37-39), teaching readiness rather than calculation. Paul similarly describes the day of the Lord coming “as a thief in the night,” urging believers instead to remain spiritually alert (1 Thessalonians 5:1-6). Rather than attempting to calculate dates, Scripture consistently calls believers to watchfulness, faithful living, and continual readiness (Matthew 24:44).",
+      "topics": [
+        "Second Coming",
+        "Prophecy"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Matthew 24:36-39",
+        "1 Thessalonians 5:1-6",
+        "Mark 13:32-33"
+      ],
+      "keywords": [
+        "date of second coming",
+        "matthew 24 36",
+        "no man knows the hour"
+      ]
+    },
+    {
+      "id": "answer-what-happens-during-the-millennium",
+      "question": "What Happens During the Thousand Years (Millennium) in Revelation?",
+      "shortAnswer": "Revelation 20 describes a thousand-year period during which the redeemed reign with Christ, judgment is exercised, and Satan is bound and restricted from deceiving the nations, preceding the final destruction of evil and creation of a new earth.",
+      "longAnswer": "Revelation 20:1-4 describes an angel binding Satan for a thousand years, restricting his ability to deceive the nations during this period, while the redeemed are pictured reigning with Christ and participating in judgment. This binding is understood as circumstantial, since with the wicked dead and the righteous taken to heaven, Satan is left with no one on earth to tempt, effectively confined during this time (Revelation 20:5). At the close of the thousand years, the wicked are raised for final judgment, Satan is loosed briefly, and evil is ultimately and permanently destroyed (Revelation 20:7-10), clearing the way for the creation of the new heavens and new earth (Revelation 21:1). This period highlights God's just and thorough resolution of the great controversy between good and evil.",
+      "topics": [
+        "Prophecy",
+        "Second Coming"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Revelation 20:1-10",
+        "Revelation 21:1"
+      ],
+      "keywords": [
+        "millennium bible",
+        "thousand years revelation 20",
+        "what is the millennium"
+      ]
+    },
+    {
+      "id": "answer-who-is-described-as-antichrist-in-scripture",
+      "question": "Who or What Is the Antichrist?",
+      "shortAnswer": "The term \"antichrist\" in Scripture refers broadly to any spirit or power that denies Christ's true nature and opposes His work, described by John as already present in the world through false teaching, while other prophetic passages describe a specific end-time power in similar terms.",
+      "longAnswer": "John writes that “even now are there many antichrists” and defines the spirit of antichrist as one who denies that Jesus is the Christ or denies the Father and Son (1 John 2:18, 22; 4:3), showing the term applies broadly to ongoing deception rather than one single individual alone. Paul describes a “man of sin” who exalts himself above God and sits “in the temple of God, shewing himself that he is God” (2 Thessalonians 2:3-4), language many understand as describing a specific end-time system of counterfeit religious authority. Revelation's descriptions of beast powers similarly depict entities that claim worship and authority belonging to God alone (Revelation 13:1-8). Across these passages, the unifying theme is a counterfeit power opposing Christ's authority and true worship, calling believers to discernment rooted firmly in Scripture.",
+      "topics": [
+        "Prophecy"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "1 John 2:18-22",
+        "1 John 4:1-3",
+        "2 Thessalonians 2:3-4",
+        "Revelation 13:1-8"
+      ],
+      "keywords": [
+        "who is the antichrist",
+        "1 john 2 18",
+        "2 thessalonians 2 man of sin"
+      ]
+    },
+    {
+      "id": "answer-meaning-of-armageddon-in-revelation",
+      "question": "What Is Armageddon According to the Bible?",
+      "shortAnswer": "Armageddon is described in Revelation as the symbolic gathering place for a final great conflict between the forces aligned with evil and God, representing the climactic confrontation before Christ's return settles the great controversy.",
+      "longAnswer": "Revelation describes unclean spirits gathering the kings of the earth “to the battle of that great day of God Almighty” at a place called in Hebrew “Armageddon” (Revelation 16:14-16), a term likely referencing the region near Megiddo, historically the site of many decisive battles in Israel's history. This imagery is understood by many as symbolic of a final, worldwide spiritual and political confrontation rather than necessarily a single literal battlefield, emphasizing the intensity and finality of the conflict between deceptive powers and God's people. The passage's placement among the plagues just before Christ's return (Revelation 16:15) underscores its role as part of the final crisis preceding Christ's visible second coming, when He alone brings resolution to this cosmic conflict.",
+      "topics": [
+        "Prophecy",
+        "Second Coming"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Revelation 16:13-16",
+        "Revelation 19:19-21"
+      ],
+      "keywords": [
+        "armageddon meaning",
+        "battle of armageddon",
+        "revelation 16 16"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-rapture-and-is-it-biblical",
+      "question": "What Is the Rapture and Is It a Biblical Teaching?",
+      "shortAnswer": "Scripture teaches that believers will be caught up to meet Christ at His visible, audible, worldwide return, an event some call the \"rapture,\" though the Bible does not describe a separate secret return distinct from His final, glorious second coming.",
+      "longAnswer": "Paul describes believers being “caught up together... in the clouds, to meet the Lord in the air” at His return, an event accompanied by a shout, the voice of the archangel, and the trump of God (1 Thessalonians 4:16-17), making it a public, unmistakable event rather than a secret occurrence. Jesus similarly describes His return as visible “as the lightning cometh out of the east, and shineth even unto the west” (Matthew 24:27), and “every eye shall see him” according to Revelation (Revelation 1:7). Rather than a separate secret rapture followed later by a second, distinct visible return, these passages together describe a single, glorious, worldwide event in which Christ returns and believers are gathered to meet Him.",
+      "topics": [
+        "Second Coming",
+        "Prophecy"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "1 Thessalonians 4:16-17",
+        "Matthew 24:27",
+        "Revelation 1:7"
+      ],
+      "keywords": [
+        "is the rapture biblical",
+        "1 thessalonians 4 16",
+        "what is the rapture"
+      ]
+    },
+    {
+      "id": "answer-what-are-the-three-angels-messages",
+      "question": "What Are the Three Angels' Messages in Revelation 14?",
+      "shortAnswer": "The three angels' messages in Revelation 14 present a final worldwide call to worship God as Creator, a warning against spiritual compromise, and a warning against false worship, urging believers to remain faithful to Christ during the end-time crisis.",
+      "longAnswer": "The first angel proclaims “the everlasting gospel,” calling all people to fear God and worship Him as the One who “made heaven, and earth, and the sea, and the fountains of waters” (Revelation 14:6-7), grounding true worship in recognition of God as Creator. The second angel announces the symbolic fall of “Babylon,” representing systems of false or compromised religion (Revelation 14:8). The third angel gives a solemn warning against worshiping the beast and receiving its mark, contrasted with the description of God's faithful people who “keep the commandments of God, and the faith of Jesus” (Revelation 14:9-12). Together, these messages call believers to genuine worship, faithful obedience, and steadfast trust in Christ during the final period of earth's history.",
+      "topics": [
+        "Three Angels",
+        "Prophecy"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Revelation 14:6-12"
+      ],
+      "keywords": [
+        "three angels messages",
+        "revelation 14 6-12",
+        "everlasting gospel"
+      ]
+    },
+    {
+      "id": "answer-symbolic-meaning-of-babylon-in-revelation",
+      "question": "What Does 'Babylon' Symbolize in the Book of Revelation?",
+      "shortAnswer": "Babylon in Revelation symbolizes a system of religious confusion and compromise opposed to true worship of God, drawing on the historical city's association with idolatry, pride, and opposition to God's people throughout Scripture.",
+      "longAnswer": "The historical city of Babylon repeatedly appears in Scripture as a symbol of human pride and rebellion against God, from the tower of Babel (Genesis 11:1-9) to its role as the empire that destroyed Jerusalem and its temple (2 Kings 25:8-10). Revelation describes end-time “Babylon” as “the mother of harlots,” a system that has corrupted spiritual truth and made the nations drink of her false teachings (Revelation 17:1-5; 18:2-3). Believers are called to “come out of her,” a call to spiritual separation from compromised or false worship systems, choosing loyalty to God alone (Revelation 18:4). Rather than referring only to the ancient city, this symbolic Babylon represents any end-time system that opposes genuine, Spirit-led worship of the true God.",
+      "topics": [
+        "Prophecy",
+        "Three Angels"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Genesis 11:1-9",
+        "Revelation 14:8",
+        "Revelation 17:1-5",
+        "Revelation 18:2-4"
+      ],
+      "keywords": [
+        "babylon in revelation meaning",
+        "mystery babylon",
+        "revelation 17 18"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-new-earth-like",
+      "question": "What Will the New Earth Be Like According to the Bible?",
+      "shortAnswer": "The Bible describes the new earth as a restored, perfect creation without sin, suffering, or death, where the redeemed live eternally in God's direct presence, enjoying meaningful work, relationships, and unbroken fellowship with Him.",
+      "longAnswer": "John describes “a new heaven and a new earth,” where God Himself will dwell among His people, wiping away every tear, with no more death, sorrow, crying, or pain, for “the former things are passed away” (Revelation 21:1-4). Isaiah's earlier vision of this coming world describes lasting joy, meaningful labor without frustration, and even harmony among the animal kingdom (Isaiah 65:17-25), portraying a full restoration beyond mere absence of evil to genuine flourishing. This eternal home is described not as an abstract spiritual existence but as a physical, renewed creation, echoing the goodness of the original creation before sin (Revelation 22:1-5). This hope grounds Christian confidence that present suffering, however real, is not the final word.",
+      "topics": [
+        "Second Coming",
+        "Prophecy"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Revelation 21:1-5",
+        "Isaiah 65:17-25",
+        "Revelation 22:1-5"
+      ],
+      "keywords": [
+        "what is the new earth",
+        "revelation 21 new heaven",
+        "heaven on earth"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-investigative-judgment",
+      "question": "What Is the Judgment Described in Daniel and Revelation?",
+      "shortAnswer": "Daniel and Revelation describe a heavenly judgment process in which the records of every life are reviewed before Christ's return, vindicating God's character and determining final outcomes, based entirely on relationship with Christ rather than human merit.",
+      "longAnswer": "Daniel's vision describes a scene where “the judgment was set, and the books were opened” before the “Ancient of days,” connected to the Son of man receiving an everlasting kingdom (Daniel 7:9-14). Revelation similarly describes books being opened, with the dead judged “according to their works,” and any not found written in the book of life facing final consequences (Revelation 20:12-15). This judgment does not determine salvation by human performance but reviews the sincerity and genuineness of professed faith, since works are described elsewhere as the evidence, not the cause, of salvation (James 2:18). This process ultimately vindicates God's justice and mercy before the entire universe, assuring believers that their standing rests secure in Christ (Hebrews 9:24).",
+      "topics": [
+        "Prophecy",
+        "Sanctuary"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Daniel 7:9-14",
+        "Daniel 8:14",
+        "Revelation 20:12-15",
+        "Hebrews 9:24"
+      ],
+      "keywords": [
+        "investigative judgment",
+        "daniel 7 judgment",
+        "books of judgment"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-great-controversy",
+      "question": "What Is the 'Great Controversy' Between Good and Evil?",
+      "shortAnswer": "The great controversy refers to the cosmic conflict between Christ and Satan that began with Lucifer's rebellion in heaven, unfolds through the history of sin on earth, and will conclude with the final eradication of evil and the restoration of God's perfect creation.",
+      "longAnswer": "Scripture describes a rebellion originating with a being of great beauty and authority who was “lifted up” with pride and sought to exalt himself above God (Isaiah 14:12-14; Ezekiel 28:14-17), an event later described as a war in heaven in which the dragon and his angels were cast out (Revelation 12:7-9). This conflict extended to earth through the temptation and fall of humanity (Genesis 3:1-6), unfolding across history as opposition between truth and deception, good and evil. Scripture assures believers of the controversy's certain and final resolution, when Satan and his followers face complete destruction and “there shall be no more death, neither sorrow, nor crying” (Revelation 20:9-10; 21:4). Understanding this larger conflict provides context for suffering, temptation, and the urgency of the gospel's message today.",
+      "topics": [
+        "Great Controversy",
+        "Prophecy"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Isaiah 14:12-14",
+        "Ezekiel 28:14-17",
+        "Revelation 12:7-9",
+        "Revelation 21:4"
+      ],
+      "keywords": [
+        "great controversy explained",
+        "satan's rebellion",
+        "cosmic conflict good and evil"
+      ]
+    },
+    {
+      "id": "answer-understanding-the-seven-last-plagues",
+      "question": "What Are the Seven Last Plagues in Revelation?",
+      "shortAnswer": "The seven last plagues, described in Revelation 16, represent final judgments poured out on a world that has rejected God's final call to repentance, occurring after probation closes and just before Christ's return.",
+      "longAnswer": "John describes seven angels pouring out “the seven last plagues; for in them is filled up the wrath of God” (Revelation 15:1), affecting the earth, sea, rivers, sun, and culminating in a final devastating judgment (Revelation 16:1-21). These plagues are distinguished from earlier judgments in Revelation because they fall specifically on those who have received the mark of the beast and worship its image, after the opportunity for repentance has closed (Revelation 16:2). Their severity underscores the seriousness of persistent, willful rejection of God's mercy, while also demonstrating His justice being fully and finally executed. This period immediately precedes Christ's visible return, described in the following chapters (Revelation 19:11-16).",
+      "topics": [
+        "Prophecy"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Revelation 15:1",
+        "Revelation 16:1-21",
+        "Revelation 19:11-16"
+      ],
+      "keywords": [
+        "seven last plagues",
+        "revelation 16 plagues",
+        "final judgments revelation"
+      ]
+    },
+    {
+      "id": "answer-how-should-christians-think-about-current-events-and-prophecy",
+      "question": "How Should Christians Think About Current Events in Light of Bible Prophecy?",
+      "shortAnswer": "Believers should view current events through the lens of God's overarching sovereignty and prophetic promises without engaging in speculative date-setting or excessive anxiety, focusing instead on faithful living and readiness for Christ's return.",
+      "longAnswer": "Jesus warned against being troubled by wars and rumors of wars, describing these as expected occurrences rather than definitive final signs demanding immediate calculation (Matthew 24:6). Prophetic Scripture is intended to build confidence in God's sovereignty over history, since He “declaring the end from the beginning” demonstrates His trustworthy control over unfolding events (Isaiah 46:9-10). Rather than reacting with fear or speculative predictions to every headline, believers are called to remain spiritually alert, faithfully serving and sharing the gospel, since no one knows the specific timing of final events (Matthew 24:36, 44). A balanced view holds prophetic awareness together with practical, faithful daily living rather than either indifference or anxious obsession.",
+      "topics": [
+        "Prophecy"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Matthew 24:6",
+        "Isaiah 46:9-10",
+        "Matthew 24:36-44",
+        "Luke 21:34-36"
+      ],
+      "keywords": [
+        "prophecy and current events",
+        "should i worry about end times",
+        "bible prophecy today"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-false-prophets",
+      "question": "How Can I Recognize False Prophets or False Teaching?",
+      "shortAnswer": "The Bible instructs believers to test all teaching against Scripture, examine the fruit of a teacher's life and message, and be especially cautious of teaching that denies core truths about Jesus Christ.",
+      "longAnswer": "Jesus warned that false prophets would come “in sheep's clothing,” but that they could be recognized “by their fruits,” meaning the outcomes and character produced by their teaching over time (Matthew 7:15-20). John gives a specific doctrinal test, teaching that any spirit which denies that Jesus Christ has come in the flesh is not of God (1 John 4:1-3), showing that sound teaching about Christ's identity is a crucial marker of truth. The Bereans provide a positive model, searching the Scriptures daily to verify whether what they were taught was accurate (Acts 17:11), a pattern that remains the best safeguard against deception today. Persistent focus on Scripture, rather than personal charisma or popularity, protects believers from being led astray.",
+      "topics": [
+        "Prophecy",
+        "Bible Study"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Matthew 7:15-20",
+        "1 John 4:1-3",
+        "Acts 17:11",
+        "2 Peter 2:1-3"
+      ],
+      "keywords": [
+        "recognizing false prophets",
+        "testing teaching against scripture",
+        "matthew 7 15"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-time-of-trouble",
+      "question": "What Is the 'Time of Trouble' Mentioned in Daniel?",
+      "shortAnswer": "Daniel describes a coming period of unprecedented distress just before final deliverance, during which God's people face intense pressure yet are ultimately protected and delivered by divine intervention.",
+      "longAnswer": "Daniel prophesies “a time of trouble, such as never was since there was a nation even to that same time,” immediately followed by the promise that “thy people shall be delivered, every one that shall be found written in the book” (Daniel 12:1). Jesus echoes similar language describing “great tribulation, such as was not since the beginning of the world” (Matthew 24:21), connecting this period to the final events preceding His return. Rather than a cause for despair, this prophecy is framed with the assurance of God's protective care for His faithful people even amid the most severe testing, culminating in resurrection and deliverance for those who remain faithful (Daniel 12:2-3). This encourages perseverance and trust in God's ultimate justice rather than fear.",
+      "topics": [
+        "Prophecy"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Daniel 12:1-3",
+        "Matthew 24:21-22",
+        "Jeremiah 30:7"
+      ],
+      "keywords": [
+        "time of trouble daniel 12",
+        "great tribulation",
+        "daniel 12 1"
+      ]
+    },
+    {
+      "id": "answer-what-will-happen-to-satan-in-the-end",
+      "question": "What Will Ultimately Happen to Satan According to the Bible?",
+      "shortAnswer": "Scripture teaches that Satan, along with all evil, will ultimately be completely and permanently destroyed, ending sin and suffering forever and vindicating God's just and loving character before the universe.",
+      "longAnswer": "Ezekiel describes the fall of the being behind the king of Tyre, likely referring symbolically to Satan, declaring he would be brought “to ashes upon the earth” and would “never shalt thou be any more” (Ezekiel 28:18-19), language pointing to complete, final destruction rather than ongoing eternal torment as an active tormentor. Revelation describes the devil finally being “cast into the lake of fire,” along with death and hell themselves ultimately destroyed (Revelation 20:10, 14), part of a purging that eliminates evil entirely from the restored universe. This final resolution answers the question of why a loving God permits evil for a time; it demonstrates His patience and justice, allowing the true nature of rebellion to be fully revealed before its complete and everlasting removal (Nahum 1:9).",
+      "topics": [
+        "Great Controversy",
+        "Prophecy"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Ezekiel 28:18-19",
+        "Revelation 20:10-15",
+        "Nahum 1:9",
+        "Malachi 4:1"
+      ],
+      "keywords": [
+        "what happens to satan",
+        "satan's final destruction",
+        "lake of fire satan"
+      ]
+    },
+    {
+      "id": "answer-meaning-of-abomination-of-desolation",
+      "question": "What Is the 'Abomination of Desolation' Mentioned by Jesus?",
+      "shortAnswer": "The abomination of desolation, referenced by Jesus from Daniel's prophecy, points to a specific act of desecration and false worship associated with Jerusalem's destruction, with broader end-time application to counterfeit religious systems opposing true worship.",
+      "longAnswer": "Jesus told His disciples, “When ye therefore shall see the abomination of desolation, spoken of by Daniel the prophet, stand in the holy place... then let them which be in Judaea flee into the mountains” (Matthew 24:15-16), directly connecting this warning to a historical crisis, understood by many to be fulfilled when Roman armies surrounded and eventually destroyed Jerusalem in A.D. 70 (Luke 21:20-21). Daniel's original prophecy describes similar desecration of the sanctuary connected to persistent opposition against God's people and worship (Daniel 9:27; 11:31). Many interpreters also see broader end-time application, in which counterfeit religious and political powers similarly attempt to substitute false worship for the truth, calling believers in every era to discernment and faithfulness to God's revealed Word.",
+      "topics": [
+        "Prophecy"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Matthew 24:15-16",
+        "Daniel 9:27",
+        "Luke 21:20-21"
+      ],
+      "keywords": [
+        "abomination of desolation",
+        "matthew 24 15",
+        "daniel 9 27 meaning"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-latter-rain-in-the-bible",
+      "question": "What Is the 'Latter Rain' Mentioned in the Bible?",
+      "shortAnswer": "The latter rain refers both to a literal agricultural rainfall pattern in ancient Israel and, symbolically, to a final outpouring of the Holy Spirit's power that will equip believers for their concluding work before Christ's return.",
+      "longAnswer": "Joel prophesies of God restoring “the former rain, and the latter rain” to the land (Joel 2:23), imagery tied to Israel's agricultural cycle where early and late rains were both necessary for a successful harvest. This same chapter connects rain imagery to a future outpouring of God's Spirit “upon all flesh” (Joel 2:28-29), a promise Peter identifies as beginning its fulfillment at Pentecost (Acts 2:16-21). Many understand this to point toward a final, greater empowerment of the Holy Spirit preceding Christ's return, enabling the completion of the gospel's proclamation worldwide, paralleling the initial outpouring that empowered the early church's rapid growth. This encourages believers to seek the Spirit's ongoing work earnestly rather than relying on human strength alone.",
+      "topics": [
+        "Holy Spirit",
+        "Prophecy"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Joel 2:23-29",
+        "Acts 2:16-21",
+        "Zechariah 10:1"
+      ],
+      "keywords": [
+        "latter rain bible",
+        "joel 2 23",
+        "outpouring of holy spirit end times"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-the-144000",
+      "question": "Who Are the 144,000 Mentioned in Revelation?",
+      "shortAnswer": "Revelation describes 144,000 sealed servants of God, understood by many as a symbolic representation of God's faithful, redeemed people who remain loyal to Him through the final crisis before Christ's return.",
+      "longAnswer": "John describes 144,000 sealed “out of every tribe of the children of Israel” (Revelation 7:4-8), followed immediately by a vision of “a great multitude, which no man could number, of all nations, and kindreds, and people, and tongues,” standing before the throne (Revelation 7:9), suggesting these two groups may represent complementary descriptions of the same redeemed community using both a specific symbolic number and an uncountable multitude. This group is described as following the Lamb wherever He goes, being “without fault before the throne of God,” and having Christ's name and the Father's name written on their foreheads (Revelation 14:1-5), symbolizing complete loyalty and character transformation. Rather than a literal, limited headcount excluding other believers, this passage is widely understood to portray the full company of God's faithful people who endure through the end-time crisis.",
+      "topics": [
+        "Prophecy"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Revelation 7:1-9",
+        "Revelation 14:1-5"
+      ],
+      "keywords": [
+        "144000 bible",
+        "revelation 7 144000",
+        "who are the 144000"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-difference-between-the-first-and-second-resurrection",
+      "question": "What Is the Difference Between the First and Second Resurrection?",
+      "shortAnswer": "The first resurrection, occurring at Christ's return, raises the righteous dead to eternal life, while the second resurrection, occurring after the millennium, raises the wicked for final judgment, resulting in the complete and final destruction of sin and death.",
+      "longAnswer": "Revelation describes those who are part of “the first resurrection” as blessed and holy, since “on such the second death hath no power” (Revelation 20:5-6), specifically identifying this resurrection with the righteous who reign with Christ for a thousand years. After this period, “the rest of the dead lived not again until the thousand years were finished,” describing a second resurrection of the unrighteous for final judgment (Revelation 20:5, 12-13). This sequence matches Jesus's own teaching about “the resurrection of life” and “the resurrection of damnation” (John 5:28-29), portraying two distinct resurrections separated by the millennium, culminating in the final removal of sin, death, and suffering forever (Revelation 20:14-15; 21:4).",
+      "topics": [
+        "Prophecy",
+        "State of the Dead"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Revelation 20:4-15",
+        "John 5:28-29"
+      ],
+      "keywords": [
+        "first and second resurrection",
+        "revelation 20 resurrections",
+        "resurrection of life and damnation"
+      ]
+    },
+    {
+      "id": "answer-why-does-god-allow-evil-and-suffering",
+      "question": "Why Does God Allow Evil and Suffering to Continue?",
+      "shortAnswer": "God allows evil to continue for a time in order to fully demonstrate its destructive nature and vindicate His own just and loving character before the entire universe, while promising its complete and final end through Christ.",
+      "longAnswer": "The origin of evil traces back to a rebellion of pride within a created being who sought to be like God (Isaiah 14:13-14), introducing a genuine conflict that required time to be fully revealed and resolved rather than instantly erased without explanation. Peter explains that God is “longsuffering... not willing that any should perish, but that all should come to repentance” (2 Peter 3:9), showing that the continuation of evil for a time is connected to God's patience in giving people opportunity to respond to His grace. Job's experience shows that even the righteous may suffer for reasons beyond simple explanation, yet God remains present, wise, and ultimately trustworthy (Job 42:1-6). Scripture consistently promises this state is temporary, with a certain future when God will make “all things new” and evil is permanently ended (Revelation 21:4-5).",
+      "topics": [
+        "Great Controversy",
+        "Comfort"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Isaiah 14:12-14",
+        "2 Peter 3:9",
+        "Job 42:1-6",
+        "Revelation 21:4-5"
+      ],
+      "keywords": [
+        "why does god allow suffering",
+        "problem of evil bible",
+        "origin of evil"
+      ]
+    },
+    {
+      "id": "answer-what-happens-to-us-when-we-die",
+      "question": "What Happens to Us When We Die, According to the Bible?",
+      "shortAnswer": "The Bible describes death as an unconscious sleep, a temporary state in which the dead await the resurrection, rather than an immediate transition to conscious existence in heaven or elsewhere.",
+      "longAnswer": "Genesis describes death as a return to dust, with the breath of life departing (Genesis 3:19; Ecclesiastes 12:7), and Ecclesiastes states plainly that “the dead know not any thing” (Ecclesiastes 9:5). Scripture repeatedly uses the metaphor of sleep for death, as when Jesus described Lazarus as merely “asleep” before raising him (John 11:11-14), and Paul comforted grieving believers with hope centered on a future resurrection at Christ's return rather than an immediate reunion (1 Thessalonians 4:13-17). This teaching offers comfort by grounding hope not in an uncertain immediate afterlife experience but in the certain, physical resurrection promised when Jesus returns, when death will be fully and finally defeated (1 Corinthians 15:51-54).",
+      "topics": [
+        "State of the Dead"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Ecclesiastes 9:5-6",
+        "Ecclesiastes 12:7",
+        "John 11:11-14",
+        "1 Thessalonians 4:13-17"
+      ],
+      "keywords": [
+        "what happens when we die",
+        "state of the dead bible",
+        "death is like sleep"
+      ]
+    },
+    {
+      "id": "answer-is-there-an-immortal-soul",
+      "question": "Does the Bible Teach That Humans Have an Immortal Soul?",
+      "shortAnswer": "Scripture teaches that humans are mortal, with immortality being a gift promised specifically to believers at the resurrection through Christ, rather than an inherent quality every soul automatically possesses at creation.",
+      "longAnswer": "Genesis describes the first human becoming “a living soul” only after God breathed life into formed dust (Genesis 2:7), portraying the soul as the result of body and breath combined rather than a separate, independently immortal entity. Paul explains that God alone “hath immortality” inherently (1 Timothy 6:15-16), and describes immortality as something believers “put on” at the resurrection, not something already possessed (1 Corinthians 15:53-54). This teaching does not diminish the value or reality of the individual person but redirects the basis of eternal hope away from an inherently immortal soul and toward the resurrection promise secured through Christ's victory over death (John 11:25-26).",
+      "topics": [
+        "State of the Dead"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Genesis 2:7",
+        "1 Timothy 6:15-16",
+        "1 Corinthians 15:51-54",
+        "John 11:25-26"
+      ],
+      "keywords": [
+        "is the soul immortal",
+        "immortality of the soul bible",
+        "1 timothy 6 16"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-resurrection-of-the-dead",
+      "question": "What Is the Resurrection of the Dead?",
+      "shortAnswer": "The resurrection of the dead is the future event when Christ returns and raises the righteous dead to eternal life with glorified bodies, fulfilling the central Christian hope of victory over death.",
+      "longAnswer": "Paul describes this future event vividly: “the Lord himself shall descend from heaven with a shout... and the dead in Christ shall rise first” (1 Thessalonians 4:16), an event coordinated precisely with Christ's visible return. He also explains the nature of the resurrected body, describing it as imperishable, glorious, and powerful, unlike the natural body that dies (1 Corinthians 15:42-44), while affirming genuine continuity between the mortal and resurrected body, much as a seed relates to the plant it becomes (1 Corinthians 15:35-38). Paul calls this the Christian's central hope, without which faith would be in vain (1 Corinthians 15:14, 19-20), since Christ's own resurrection guarantees and previews this future victory for all who trust in Him.",
+      "topics": [
+        "State of the Dead",
+        "Second Coming"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "1 Thessalonians 4:13-18",
+        "1 Corinthians 15:12-23",
+        "1 Corinthians 15:42-44"
+      ],
+      "keywords": [
+        "resurrection of the dead",
+        "future resurrection bible",
+        "1 corinthians 15 resurrection"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-heaven",
+      "question": "What Does the Bible Say About Heaven?",
+      "shortAnswer": "The Bible describes heaven as God's dwelling place and, ultimately, the future home of the redeemed after Christ's return, a place of unbroken fellowship with God, free from sin, sorrow, and death.",
+      "longAnswer": "Jesus told His disciples He was going to prepare a place for them, promising to return and receive them so that they could be with Him (John 14:1-3), presenting heaven as a genuine, personal destination secured through relationship with Christ rather than an abstract concept. Revelation ultimately describes God's dwelling coming to be with humanity permanently, on the renewed earth, where He will wipe away every tear and there will be no more death, sorrow, or pain (Revelation 21:1-4), suggesting that the final hope is not merely a disembodied heavenly existence but a restored, physical new creation. Scripture consistently frames heaven's central joy as unbroken fellowship with God Himself, described as the ultimate reward exceeding anything material creation could offer (Psalm 73:25-26).",
+      "topics": [
+        "State of the Dead",
+        "Prophecy"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "John 14:1-3",
+        "Revelation 21:1-4",
+        "Psalm 73:25-26"
+      ],
+      "keywords": [
+        "what is heaven like",
+        "bible description of heaven",
+        "john 14 prepare a place"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-hell",
+      "question": "What Does the Bible Say About Hell?",
+      "shortAnswer": "The Bible teaches that hell is the final, complete destruction of sin and unrepentant sinners, an event of finality rather than unending conscious torment, resulting in the total elimination of evil rather than its eternal continuation.",
+      "longAnswer": "Malachi describes the wicked being burned up “as stubble,” leaving them “neither root nor branch,” imagery of complete consumption rather than perpetual burning (Malachi 4:1). Jesus similarly warns of destruction of both soul and body, contrasting this fate with eternal life, framing the outcome as loss of existence rather than eternal conscious suffering (Matthew 10:28). Revelation describes this final punishment as “the second death” (Revelation 20:14; 21:8), a term implying a definitive, final end rather than an ongoing state, consistent with Paul's contrast between “the wages of sin,” which is death, and “the gift of God,” which is eternal life (Romans 6:23). This teaching underscores both the seriousness of persistent sin and God's ultimate, decisive victory in eliminating evil entirely.",
+      "topics": [
+        "State of the Dead",
+        "Hell"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Malachi 4:1",
+        "Matthew 10:28",
+        "Revelation 20:14-15",
+        "Romans 6:23"
+      ],
+      "keywords": [
+        "what does the bible say about hell",
+        "is hell eternal torment",
+        "second death revelation"
+      ]
+    },
+    {
+      "id": "answer-is-it-possible-to-contact-the-dead",
+      "question": "Is It Possible to Contact the Dead?",
+      "shortAnswer": "The Bible teaches that the dead are unconscious and unable to communicate with the living, and it strongly warns against seeking contact with the dead through mediums or spiritism, which Scripture identifies as demonic deception.",
+      "longAnswer": "Scripture states directly that “the dead know not any thing,” and that their memory, love, hatred, and involvement with earthly affairs have ended (Ecclesiastes 9:5-6). God explicitly forbade Israel from consulting mediums or those who claimed to speak with the dead, describing such practices as detestable and an act of unfaithfulness to Him (Deuteronomy 18:10-12; Leviticus 19:31). King Saul's tragic encounter with a medium at Endor illustrates the danger and deception surrounding such practices rather than genuine communication with the departed (1 Samuel 28:7-20), a passage many understand as involving a deceptive spirit rather than Samuel himself. Believers are instructed instead to seek God directly through prayer and Scripture rather than through any form of spiritism.",
+      "topics": [
+        "State of the Dead"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Ecclesiastes 9:5-6",
+        "Deuteronomy 18:10-12",
+        "Isaiah 8:19-20",
+        "1 Samuel 28:7-20"
+      ],
+      "keywords": [
+        "can the dead communicate",
+        "spiritism bible",
+        "talking to the dead forbidden"
+      ]
+    },
+    {
+      "id": "answer-what-happens-to-babies-and-children-who-die",
+      "question": "What Happens to Babies and Children Who Die?",
+      "shortAnswer": "While Scripture does not address this question exhaustively, its consistent portrayal of God's justice, mercy, and compassion for the innocent gives strong confidence that young children who die are graciously received by Him.",
+      "longAnswer": "David's response to the death of his infant son, expressing confidence that “I shall go to him, but he shall not return to me” (2 Samuel 12:22-23), suggests hope of future reunion rather than despair, reflecting trust in God's mercy toward the child. Jesus welcomed little children, declaring that “of such is the kingdom of heaven” (Matthew 19:14), showing His particular tenderness and acceptance toward the young and vulnerable. Passages describing salvation as requiring conscious faith and repentance are generally understood to apply to those capable of moral responsibility, implying that those without capacity for such response, including infants and young children, are graciously covered under God's mercy rather than judged by a standard beyond their comprehension. Grieving parents can find genuine comfort in trusting God's perfect justice and boundless compassion in this matter.",
+      "topics": [
+        "State of the Dead",
+        "Comfort"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "2 Samuel 12:22-23",
+        "Matthew 19:14",
+        "Matthew 18:2-4",
+        "Romans 2:12-14"
+      ],
+      "keywords": [
+        "death of children bible",
+        "do babies go to heaven",
+        "2 samuel 12 22"
+      ]
+    },
+    {
+      "id": "answer-how-do-i-cope-with-grief-after-losing-a-loved-one",
+      "question": "How Do I Cope with Grief After Losing a Loved One?",
+      "shortAnswer": "Grief can be processed through honest lament before God, drawing comfort from His promises of resurrection and reunion, and leaning on the support of the faith community rather than grieving in isolation.",
+      "longAnswer": "Scripture makes clear room for genuine sorrow; even Jesus wept at the tomb of His friend Lazarus despite knowing the resurrection was near (John 11:35), showing that grief and faith are not contradictory. Paul instructs believers not to “sorrow, even as others which have no hope,” affirming that grief itself is appropriate while grounding it in the certain hope of future reunion at the resurrection (1 Thessalonians 4:13-14). The psalmist models honest lament to God even amid deep anguish, while consistently returning to trust in His comfort (Psalm 34:18). Alongside spiritual practices, walking through grief with supportive friends, a pastor, or a grief counselor can provide valuable help during this painful process, since community and time are both part of healthy healing.",
+      "topics": [
+        "Comfort",
+        "State of the Dead"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "John 11:32-36",
+        "1 Thessalonians 4:13-14",
+        "Psalm 34:18",
+        "Revelation 21:4"
+      ],
+      "keywords": [
+        "coping with grief christian",
+        "grieving a loved one bible",
+        "comfort after death"
+      ]
+    },
+    {
+      "id": "answer-understanding-the-second-death-in-revelation",
+      "question": "What Is the 'Second Death' in the Bible?",
+      "shortAnswer": "The second death, described in Revelation, refers to the final, permanent destruction of the unrepentant wicked following the last judgment, distinct from ordinary physical death, which believers who trust in Christ will never experience.",
+      "longAnswer": "Revelation identifies “the lake of fire” as “the second death” (Revelation 20:14), a judgment that occurs after the general resurrection of the wicked and the final judgment described earlier in the chapter (Revelation 20:11-13). This second death results in complete and irreversible destruction rather than ongoing existence in torment, contrasted directly with the promise that those who overcome “shall not be hurt of the second death” (Revelation 2:11). This teaching underscores the seriousness of persistent rejection of God's grace while also affirming the ultimate, permanent removal of evil, sin, and suffering from the universe, since after this final judgment God makes “all things new” (Revelation 21:5).",
+      "topics": [
+        "State of the Dead",
+        "Hell"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Revelation 20:11-15",
+        "Revelation 2:11",
+        "Revelation 21:5-8"
+      ],
+      "keywords": [
+        "second death bible meaning",
+        "revelation 20 14",
+        "what is the second death"
+      ]
+    },
+    {
+      "id": "answer-what-happens-at-the-second-coming-to-those-who-are-alive",
+      "question": "What Happens to Believers Who Are Still Alive at Christ's Second Coming?",
+      "shortAnswer": "Believers who are alive at Christ's return will be instantly transformed and given glorified, immortal bodies, joining the resurrected righteous to meet Christ together in the air.",
+      "longAnswer": "Paul explains this mystery directly: “We shall not all sleep, but we shall all be changed, In a moment, in the twinkling of an eye, at the last trump... and this mortal must put on immortality” (1 Corinthians 15:51-53), describing an instantaneous transformation rather than a gradual process. This transformation is coordinated precisely with the resurrection of those who have died in Christ, since “the dead in Christ shall rise first: Then we which are alive and remain shall be caught up together with them” (1 Thessalonians 4:16-17). Living and resurrected believers together meet Christ at His return, sharing simultaneously in the same glorious change and eternal reward, showing there is no advantage or disadvantage between those who die before Christ's return and those still living at that time.",
+      "topics": [
+        "Second Coming",
+        "State of the Dead"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "1 Corinthians 15:51-54",
+        "1 Thessalonians 4:15-17"
+      ],
+      "keywords": [
+        "what happens to living believers at second coming",
+        "1 corinthians 15 51",
+        "rapture living believers"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-christian-hope-regarding-death",
+      "question": "What Is the Christian Hope Regarding Death?",
+      "shortAnswer": "The Christian hope regarding death rests on Christ's own resurrection, which guarantees a future bodily resurrection and eternal life for all who trust in Him, transforming death from a final defeat into a temporary sleep awaiting reunion with God.",
+      "longAnswer": "Paul anchors this hope firmly in historical fact, arguing that if Christ has not risen, faith would be futile and hope in Christ would be limited to this present life only (1 Corinthians 15:17-19), but affirms instead that “now is Christ risen from the dead, and become the firstfruits of them that slept” (1 Corinthians 15:20), guaranteeing believers' future resurrection follows the same pattern. Death is described not as a permanent state but a defeated enemy, with the promise that it will ultimately be “swallowed up in victory” (1 Corinthians 15:54-55). This hope allows believers to face death, whether their own or a loved one's, not with the hopeless grief of those without this promise but with confident expectation of the coming resurrection (1 Thessalonians 4:13).",
+      "topics": [
+        "State of the Dead",
+        "Comfort"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "1 Corinthians 15:12-22",
+        "1 Corinthians 15:54-57",
+        "1 Thessalonians 4:13"
+      ],
+      "keywords": [
+        "christian hope death",
+        "resurrection hope",
+        "1 corinthians 15 victory over death"
+      ]
+    },
+    {
+      "id": "answer-is-cremation-acceptable-for-christians",
+      "question": "Is Cremation Acceptable for Christians?",
+      "shortAnswer": "The Bible does not explicitly forbid or command a specific method of handling human remains, and since the resurrection does not depend on the state or method of burial, cremation is generally considered an acceptable personal or family decision.",
+      "longAnswer": "Scripture records both burial (Genesis 23:19) and instances of remains being burned, such as the bodies of Saul and his sons after being recovered by the men of Jabesh-gilead, without moral condemnation attached to the method itself (1 Samuel 31:12-13). Since God's power to resurrect the dead is not limited by the condition of the body, having created life from dust originally and being able to restore even bodies long decayed or destroyed (Job 19:25-27), no physical method of burial is presented as a barrier to future resurrection. Decisions about burial or cremation are best made based on personal conviction, family wishes, cultural context, and practical considerations rather than any explicit biblical command favoring one method over another.",
+      "topics": [
+        "State of the Dead"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Genesis 23:19",
+        "1 Samuel 31:12-13",
+        "Job 19:25-27",
+        "1 Corinthians 15:42-44"
+      ],
+      "keywords": [
+        "is cremation biblical",
+        "christian burial practices",
+        "cremation and resurrection"
+      ]
+    },
+    {
+      "id": "answer-what-does-absent-from-the-body-present-with-the-lord-mean",
+      "question": "What Does 'Absent from the Body, Present with the Lord' Mean?",
+      "shortAnswer": "This phrase from Paul expresses confident hope that whatever happens to the body, ultimate security rests with the Lord, and it is best understood within Paul's broader teaching that the next conscious experience believers anticipate is the resurrection at Christ's return.",
+      "longAnswer": "Paul writes, “We are confident, I say, and willing rather to be absent from the body, and to be present with the Lord” (2 Corinthians 5:8), expressing bold confidence in the face of death rather than describing a detailed timeline of the afterlife. Elsewhere Paul explains that the next event believers anticipate is the resurrection accompanying Christ's return, when the dead in Christ rise and living believers are transformed together (1 Thessalonians 4:16-17), suggesting that from the believer's own perspective, the experience of death and the resurrection would feel immediate, without conscious awareness of time passing in between. Read together, these passages express unwavering confidence that death cannot separate a believer from the Lord's ultimate care and the certainty of resurrection.",
+      "topics": [
+        "State of the Dead"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "2 Corinthians 5:6-8",
+        "1 Thessalonians 4:16-17",
+        "Philippians 1:21-23"
+      ],
+      "keywords": [
+        "absent from body present with lord",
+        "2 corinthians 5 8 meaning",
+        "paul's confidence in death"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-suicide",
+      "question": "What Does the Bible Say About Suicide, and Where Can Someone in Crisis Find Help?",
+      "shortAnswer": "The Bible values human life as sacred and does not present suicide as an unforgivable sin, while strongly affirming God's compassion for those in deep despair and the importance of seeking immediate help during a mental health crisis.",
+      "longAnswer": "Scripture consistently affirms the sacredness of human life as made in God's image (Genesis 1:27), and several biblical figures, including Elijah and Jonah, expressed a genuine desire to die during seasons of deep despair, yet God responded with patient compassion, care, and renewed purpose rather than condemnation (1 Kings 19:4-8; Jonah 4:3-11). No single sin, including suicide, is described in Scripture as unforgivable apart from ongoing, willful rejection of God (Matthew 12:31-32), and God's grace and understanding toward those suffering from overwhelming despair should never be underestimated. If you or someone you know is experiencing thoughts of suicide, please reach out immediately to a crisis line, mental health professional, trusted pastor, or emergency services, since help and hope are available and every life matters deeply to God.",
+      "topics": [
+        "Health",
+        "Comfort"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Genesis 1:27",
+        "1 Kings 19:4-8",
+        "Psalm 34:18",
+        "Matthew 12:31-32"
+      ],
+      "keywords": [
+        "bible and suicide",
+        "is suicide unforgivable",
+        "mental health crisis help"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-difference-between-soul-sleep-and-purgatory",
+      "question": "What Is the Biblical View Compared to the Idea of Purgatory?",
+      "shortAnswer": "The Bible does not teach the existence of purgatory, a place of purification after death; instead, Scripture describes death as an unconscious sleep, with salvation secured completely through Christ's finished work rather than requiring further post-death purification.",
+      "longAnswer": "Scripture teaches that salvation is a completed gift received by faith, with Jesus declaring on the cross, “It is finished” (John 19:30), and Paul affirming that believers are “complete in him” (Colossians 2:10), leaving no biblical basis for an additional purifying process after death. The state of the dead is instead described as an unconscious rest, awaiting the resurrection, with no indication of intermediate suffering or purification occurring during this time (Ecclesiastes 9:5-6; 1 Thessalonians 4:13-14). Hebrews teaches that it is appointed for people to die once, followed by judgment, without describing any intervening purgatorial process (Hebrews 9:27), reinforcing that Christ's sacrifice alone fully addresses the believer's need for cleansing and righteousness before God.",
+      "topics": [
+        "State of the Dead"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "John 19:30",
+        "Colossians 2:9-10",
+        "Hebrews 9:27",
+        "Ecclesiastes 9:5-6"
+      ],
+      "keywords": [
+        "is purgatory biblical",
+        "soul sleep vs purgatory",
+        "hebrews 9 27"
+      ]
+    },
+    {
+      "id": "answer-what-does-today-thou-shalt-be-with-me-in-paradise-mean",
+      "question": "What Does 'Today Thou Shalt Be With Me in Paradise' Mean?",
+      "shortAnswer": "This statement by Jesus to the repentant thief on the cross is understood, in light of the rest of Scripture's teaching on death as sleep, as a promise of certain future presence in paradise rather than an immediate arrival that same day, since Jesus Himself did not enter paradise until after His resurrection.",
+      "longAnswer": "Jesus told the repentant thief, “Verily I say unto thee, To day shalt thou be with me in paradise” (Luke 23:43), a promise of profound grace and assurance to a dying man. Notably, Jesus told Mary Magdalene after His resurrection, three days later, that He had “not yet ascended to my Father” (John 20:17), indicating He had not yet entered paradise in the sense of heaven's full presence at the time of His own death, making a same-day arrival for the thief unlikely if paradise refers to heaven itself. Ancient Greek manuscripts had no punctuation, allowing this verse to be read as “Verily I say unto thee today, thou shalt be with me in paradise,” emphasizing the immediacy and certainty of the promise rather than specifying the exact day of its fulfillment, consistent with the Bible's broader teaching that the dead await the future resurrection.",
+      "topics": [
+        "State of the Dead"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Luke 23:39-43",
+        "John 20:17",
+        "1 Thessalonians 4:16-17"
+      ],
+      "keywords": [
+        "luke 23 43 today paradise",
+        "thief on the cross promise",
+        "with me in paradise meaning"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-difference-between-physical-death-and-spiritual-death",
+      "question": "What Is the Difference Between Physical Death and Spiritual Death?",
+      "shortAnswer": "Physical death is the cessation of bodily life that comes to every person, while spiritual death refers to separation from God caused by sin, a condition from which believers are rescued through faith in Christ even while still physically alive.",
+      "longAnswer": "Paul describes believers before conversion as “dead in trespasses and sins” (Ephesians 2:1), a spiritual condition of separation from God experienced even while a person remains physically alive and active. Physical death, by contrast, is the universal consequence of sin entering the world, affecting every human being regardless of their spiritual condition (Romans 5:12). Through faith in Christ, a person moves from spiritual death to spiritual life immediately, described as passing “from death unto life” (John 5:24), while physical death remains a reality still to be overcome fully at the future resurrection, when it will finally be abolished (1 Corinthians 15:26).",
+      "topics": [
+        "State of the Dead",
+        "Salvation"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Ephesians 2:1-5",
+        "Romans 5:12",
+        "John 5:24",
+        "1 Corinthians 15:26"
+      ],
+      "keywords": [
+        "physical death vs spiritual death",
+        "ephesians 2 1 dead in sins",
+        "what is spiritual death"
+      ]
+    },
+    {
+      "id": "answer-will-believers-know-each-other-in-afterlife",
+      "question": "Will Believers Know Each Other in the Afterlife?",
+      "shortAnswer": "While the Bible does not describe this in exhaustive detail, its portrayal of resurrection as a restoration of genuine, recognizable personal identity strongly suggests believers will know and recognize one another in the future kingdom.",
+      "longAnswer": "After His resurrection, Jesus retained a recognizable, physical identity, being known by His disciples, eating with them, and inviting Thomas to touch His wounds (Luke 24:36-43; John 20:26-28), showing that resurrection restores genuine personal identity rather than erasing it. Paul describes believers looking forward to a future reunion with loved ones who have died in Christ, offering this hope specifically as comfort for grieving believers (1 Thessalonians 4:13-18), a comfort that would carry less meaning if recognition were not implied. Jesus's own teaching about the future kingdom, describing a great gathering with the patriarchs of old (Matthew 8:11), further supports the expectation of continued relational recognition among the redeemed in God's eternal kingdom.",
+      "topics": [
+        "State of the Dead",
+        "Comfort"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Luke 24:36-43",
+        "John 20:26-28",
+        "1 Thessalonians 4:13-18",
+        "Matthew 8:11"
+      ],
+      "keywords": [
+        "recognize loved ones in heaven",
+        "reunion with family in heaven",
+        "resurrection identity"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-difference-between-death-in-adam-and-life-in-christ",
+      "question": "What Does It Mean That 'In Adam All Die, But in Christ All Shall Be Made Alive'?",
+      "shortAnswer": "This teaching contrasts humanity's universal inheritance of death through Adam's sin with the universal offer of resurrection life made possible through Christ, showing that Christ's victory fully answers and reverses Adam's failure.",
+      "longAnswer": "Paul writes, “For as in Adam all die, even so in Christ shall all be made alive” (1 Corinthians 15:22), framing salvation history around these two representative figures—Adam, whose sin brought death to the entire human race (Romans 5:12), and Christ, whose obedience and resurrection secure life for all who trust in Him. This does not teach universal salvation regardless of faith, since the passage continues by describing resurrection order and finally, the destruction of every enemy including death itself only after Christ's return and final reign (1 Corinthians 15:23-26). The comparison instead emphasizes the comprehensive sufficiency of Christ's victory, showing that whatever devastating consequence entered through the first Adam's failure is fully and more than adequately reversed through the second Adam's triumph (Romans 5:17-19).",
+      "topics": [
+        "Salvation",
+        "State of the Dead"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "1 Corinthians 15:20-26",
+        "Romans 5:12-19"
+      ],
+      "keywords": [
+        "in adam all die in christ all alive",
+        "1 corinthians 15 22 meaning",
+        "adam and christ comparison"
+      ]
+    },
+    {
+      "id": "answer-how-should-i-comfort-a-friend-whose-loved-one-died",
+      "question": "How Should I Comfort a Friend Whose Loved One Has Died?",
+      "shortAnswer": "Comforting a grieving friend involves being present, listening without rushing to explanations, offering practical help, and gently sharing the hope of the resurrection when appropriate, rather than minimizing their loss with quick spiritual clichés.",
+      "longAnswer": "Job's friends initially modeled good comfort by simply sitting with him in silence for seven days, sharing his grief without speaking (Job 2:11-13), a pattern that shows presence itself can be a powerful form of comfort before words are needed. Paul instructs believers to “weep with them that weep” (Romans 12:15), affirming that shared sorrow, rather than immediate correction or forced positivity, is the appropriate first response. When timing feels right, gently pointing to the hope of the resurrection can bring genuine comfort, since Paul used this same hope to comfort grieving believers in Thessalonica (1 Thessalonians 4:13-18), but this should never replace patient listening and practical support such as meals, help with tasks, or simply consistent presence over the following weeks and months.",
+      "topics": [
+        "Comfort"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Job 2:11-13",
+        "Romans 12:15",
+        "1 Thessalonians 4:13-18",
+        "2 Corinthians 1:3-4"
+      ],
+      "keywords": [
+        "comforting a grieving friend",
+        "what to say when someone dies",
+        "supporting someone in grief"
+      ]
+    },
+    {
+      "id": "answer-why-should-i-go-to-church",
+      "question": "Why Should I Go to Church If I Can Worship God on My Own?",
+      "shortAnswer": "Attending church provides essential fellowship, accountability, corporate worship, and teaching that private devotion alone cannot fully replace, reflecting the New Testament pattern of believers gathering together regularly as one body.",
+      "longAnswer": "Hebrews specifically instructs believers not to forsake “the assembling of ourselves together,” a practice some were already neglecting, urging instead mutual encouragement, especially as the day of Christ's return approaches (Hebrews 10:24-25). The early church devoted itself consistently to teaching, fellowship, communal meals, and prayer, showing that regular corporate gathering was foundational rather than optional for genuine Christian life (Acts 2:42). Believers are described as parts of one body, each needing the others to function properly, since no part can claim independence from the rest (1 Corinthians 12:12-21). While personal devotion remains vital, the church provides accountability, service opportunities, spiritual gifts exercised in community, and support that individual faith alone was never designed to replace.",
+      "topics": [
+        "Church"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Hebrews 10:24-25",
+        "Acts 2:42-47",
+        "1 Corinthians 12:12-27"
+      ],
+      "keywords": [
+        "why go to church",
+        "importance of church attendance",
+        "hebrews 10 25"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-purpose-of-the-church",
+      "question": "What Is the Purpose of the Church According to the Bible?",
+      "shortAnswer": "The church exists to worship God, make disciples, teach sound doctrine, provide fellowship and mutual support, and serve as Christ's visible representative body carrying out His mission in the world.",
+      "longAnswer": "Jesus's final instructions to His followers, often called the Great Commission, direct the church to “teach all nations, baptizing them... Teaching them to observe all things whatsoever I have commanded” (Matthew 28:19-20), establishing discipleship and gospel proclamation as central purposes. Paul describes the church as “the body of Christ,” with believers as individual members functioning together, each contributing distinct gifts for the common good (1 Corinthians 12:27; Ephesians 4:11-13). The early church's pattern of devoted teaching, fellowship, worship, and generous care for one another (Acts 2:42-47) further illustrates these interconnected purposes, showing that the church is meant to be both a worshiping community and an active agent of God's mission in the world.",
+      "topics": [
+        "Church"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Matthew 28:18-20",
+        "1 Corinthians 12:27",
+        "Ephesians 4:11-13",
+        "Acts 2:42-47"
+      ],
+      "keywords": [
+        "purpose of the church",
+        "why does the church exist",
+        "great commission"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-role-of-spiritual-gifts",
+      "question": "What Are Spiritual Gifts and How Do I Discover Mine?",
+      "shortAnswer": "Spiritual gifts are abilities given by the Holy Spirit to believers for building up the church and serving others, discovered through prayer, Scripture study, serving in various capacities, and confirmation from the faith community.",
+      "longAnswer": "Paul explains that “there are diversities of gifts, but the same Spirit,” with each gift given “to profit withal,” meaning for the benefit of the whole community rather than personal advantage (1 Corinthians 12:4-7). Lists of specific gifts appear in several passages, including teaching, service, encouragement, giving, leadership, and mercy (Romans 12:6-8; 1 Corinthians 12:8-10), showing a wide diversity of ways believers can contribute. Discovering one's gifts often happens through trial and service, prayerfully trying different areas of ministry, paying attention to where genuine effectiveness and joy intersect, and receiving honest feedback and confirmation from other believers who observe these gifts in action (1 Peter 4:10-11).",
+      "topics": [
+        "Church",
+        "Holy Spirit"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "1 Corinthians 12:4-11",
+        "Romans 12:4-8",
+        "1 Peter 4:10-11",
+        "Ephesians 4:11-12"
+      ],
+      "keywords": [
+        "spiritual gifts bible",
+        "discovering your spiritual gift",
+        "1 corinthians 12 gifts"
+      ]
+    },
+    {
+      "id": "answer-why-are-there-so-many-christian-denominations",
+      "question": "Why Are There So Many Christian Denominations?",
+      "shortAnswer": "Denominational differences have arisen historically through varying interpretations of secondary doctrines, cultural contexts, and historical events, while genuine believers across many traditions share core agreement on the essential truths of the gospel.",
+      "longAnswer": "Even the early church experienced significant disagreements requiring resolution through careful discussion and appeal to Scripture, as recorded in the Jerusalem council's handling of the question of Gentile believers and the law (Acts 15:1-29), showing that differences of understanding existed even among the apostles' generation. Paul repeatedly urged believers toward unity in essential matters while acknowledging differing convictions on secondary issues, such as dietary practices or observance of special days (Romans 14:1-6). What unites genuine believers across various traditions remains the essential gospel: salvation through faith in Jesus Christ's death and resurrection, and the authority of Scripture, even amid differing views on matters of practice, church governance, or interpretation of less central passages.",
+      "topics": [
+        "Church",
+        "Bible"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Acts 15:1-29",
+        "Romans 14:1-6",
+        "Ephesians 4:3-6",
+        "1 Corinthians 1:10-13"
+      ],
+      "keywords": [
+        "why so many denominations",
+        "christian unity and differences",
+        "acts 15 jerusalem council"
+      ]
+    },
+    {
+      "id": "answer-what-does-it-mean-to-be-part-of-the-body-of-christ",
+      "question": "What Does It Mean to Be Part of the 'Body of Christ'?",
+      "shortAnswer": "Being part of the body of Christ means belonging to a spiritually connected community of believers, each contributing distinct gifts and roles under Christ's headship, mutually dependent on one another for the health and function of the whole church.",
+      "longAnswer": "Paul develops this metaphor extensively, explaining that just as a physical body has many parts with different functions, so believers, though many, form one body in Christ, each member belonging to the others (Romans 12:4-5; 1 Corinthians 12:12-14). No part of the body can claim independence from the rest, and even parts that seem less prominent are described as necessary and worthy of honor (1 Corinthians 12:21-25). Christ Himself is described as the head of this body, directing its growth and unity (Ephesians 4:15-16; Colossians 1:18). This imagery emphasizes both genuine unity and celebrated diversity, calling believers to mutual care, humility, and cooperative service rather than isolated individualism or competition.",
+      "topics": [
+        "Church"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Romans 12:4-5",
+        "1 Corinthians 12:12-27",
+        "Ephesians 4:15-16",
+        "Colossians 1:18"
+      ],
+      "keywords": [
+        "body of christ meaning",
+        "1 corinthians 12 body metaphor",
+        "unity in the church"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-great-commission",
+      "question": "What Is the Great Commission?",
+      "shortAnswer": "The Great Commission is Jesus's final instruction to His disciples to make disciples of all nations, baptizing and teaching them, empowered by His authority and abiding presence with the church until the end of the age.",
+      "longAnswer": "Jesus commissioned His followers with these words: “All power is given unto me in heaven and in earth. Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost: Teaching them to observe all things whatsoever I have commanded you: and, lo, I am with you alway, even unto the end of the world” (Matthew 28:18-20). This command establishes the church's ongoing mission: evangelism, baptism, and discipleship training, grounded in Christ's complete authority rather than the church's own resources or strength. Luke's version adds the promise that believers would be “witnesses unto me... unto the uttermost part of the earth,” empowered specifically by the Holy Spirit for this task (Acts 1:8), a mission the book of Acts records unfolding through the early church's rapid expansion.",
+      "topics": [
+        "Church"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Matthew 28:18-20",
+        "Acts 1:8",
+        "Mark 16:15"
+      ],
+      "keywords": [
+        "great commission meaning",
+        "matthew 28 19-20",
+        "what is the great commission"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-church-leadership",
+      "question": "What Does the Bible Say About Church Leadership Qualifications?",
+      "shortAnswer": "Scripture sets high standards for church leaders, emphasizing godly character, sound doctrine, and a proven life of integrity above charisma, giftedness alone, or ambition for position.",
+      "longAnswer": "Paul provides detailed qualifications for elders and deacons, including being “blameless,” faithful in marriage, temperate, hospitable, able to teach, and not given to greed or quick anger (1 Timothy 3:1-13; Titus 1:5-9). These lists emphasize consistent, tested character over impressive gifts or public speaking ability alone, showing that spiritual maturity and integrity are prerequisites for leading others. Leaders are also called to serve humbly rather than domineer over those in their care, following Christ's own example of servant leadership, since “whosoever will be chief among you, let him be your servant” (Matthew 20:26-28; 1 Peter 5:2-3). These standards protect the church's health and credibility, ensuring leadership reflects the gospel it proclaims.",
+      "topics": [
+        "Church"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "1 Timothy 3:1-13",
+        "Titus 1:5-9",
+        "1 Peter 5:1-4",
+        "Matthew 20:25-28"
+      ],
+      "keywords": [
+        "church leadership qualifications",
+        "1 timothy 3 elders",
+        "biblical qualifications for pastors"
+      ]
+    },
+    {
+      "id": "answer-what-does-baptism-mean-and-why-is-it-important",
+      "question": "What Does Baptism Mean and Why Is It Important?",
+      "shortAnswer": "Baptism is a public declaration of faith in Jesus Christ, symbolizing the believer's identification with His death, burial, and resurrection, and marking the beginning of a new, transformed life in Him.",
+      "longAnswer": "Paul explains this symbolism directly: “we are buried with him by baptism into death: that like as Christ was raised up from the dead... even so we also should walk in newness of life” (Romans 6:3-4), showing baptism's meaning as a vivid picture of dying to the old life and rising to a new one in Christ. Jesus commanded baptism as part of the Great Commission, instructing disciples to be made “in the name of the Father, and of the Son, and of the Holy Ghost” (Matthew 28:19), and He Himself was baptized by John, setting an example of obedience (Matthew 3:13-17). While baptism itself does not earn salvation, which comes through faith, it serves as an important, obedient step of public commitment following genuine belief (Acts 2:38, 41).",
+      "topics": [
+        "Baptism",
+        "Salvation"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Romans 6:3-4",
+        "Matthew 28:19",
+        "Matthew 3:13-17",
+        "Acts 2:38"
+      ],
+      "keywords": [
+        "meaning of baptism",
+        "why get baptized",
+        "romans 6 baptism symbolism"
+      ]
+    },
+    {
+      "id": "answer-what-is-communion-or-the-lords-supper",
+      "question": "What Is Communion or the Lord's Supper?",
+      "shortAnswer": "Communion, also called the Lord's Supper, is a sacred ordinance instituted by Jesus in which believers eat bread and drink from the cup to remember His body broken and blood shed for their salvation, anticipating His future return.",
+      "longAnswer": "Jesus instituted this practice at the Last Supper, taking bread and saying, “this is my body,” and the cup, saying, “this is my blood of the new testament, which is shed for many for the remission of sins” (Matthew 26:26-28), giving concrete, tangible symbols to help believers remember His sacrifice. Paul instructs the church to continue this practice, explaining that “as often as ye eat this bread, and drink this cup, ye do shew the Lord's death till he come” (1 Corinthians 11:23-26), connecting communion both to remembrance of the past and anticipation of Christ's future return. He also urges believers to examine themselves honestly before participating, treating the ordinance with appropriate reverence rather than careless routine (1 Corinthians 11:27-29).",
+      "topics": [
+        "Church",
+        "Salvation"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Matthew 26:26-28",
+        "1 Corinthians 11:23-29",
+        "Luke 22:19-20"
+      ],
+      "keywords": [
+        "lords supper meaning",
+        "communion bible",
+        "1 corinthians 11 communion"
+      ]
+    },
+    {
+      "id": "answer-what-is-foot-washing-in-the-bible",
+      "question": "What Is the Significance of Foot Washing in the Bible?",
+      "shortAnswer": "Foot washing, practiced by Jesus at the Last Supper, symbolizes humble, sacrificial service and mutual humility among believers, teaching that greatness in God's kingdom is measured by willingness to serve others.",
+      "longAnswer": "Jesus, knowing His identity and impending return to the Father, took the humble role of a servant, washing His disciples' feet, a task typically reserved for the lowest household servants (John 13:3-5). After finishing, He explained the purpose of this act, instructing them, “If I then, your Lord and Master, have washed your feet; ye also ought to wash one another's feet... I have given you an example, that ye should do as I have done to you” (John 13:14-15). This act powerfully illustrates that true spiritual leadership involves humble service rather than seeking status, reversing common assumptions about greatness. Some Christian traditions continue this practice literally alongside communion, while the underlying principle of humble mutual service remains a universal call for all believers regardless of specific practice.",
+      "topics": [
+        "Church"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "John 13:1-17",
+        "Luke 22:24-27"
+      ],
+      "keywords": [
+        "foot washing meaning",
+        "john 13 significance",
+        "humble service example jesus"
+      ]
+    },
+    {
+      "id": "answer-how-do-i-find-a-good-church",
+      "question": "How Do I Find a Good Church to Attend?",
+      "shortAnswer": "A healthy church can be identified by faithful, Scripture-centered teaching, genuine community, Christ-centered worship, and a visible focus on discipleship and service rather than superficial factors like entertainment value alone.",
+      "longAnswer": "The Bereans were commended for their diligence in testing what they heard against Scripture (Acts 17:11), a model that applies well to evaluating a church's teaching, ensuring it aligns faithfully with the Bible rather than merely appealing preferences. A healthy congregation should reflect the early church's devotion to “the apostles' doctrine and fellowship, and in breaking of bread, and in prayers” (Acts 2:42), showing balanced priorities across teaching, community, worship, and prayer rather than emphasis on only one aspect. Observing how a church treats visitors, handles conflict, cares for the vulnerable, and encourages spiritual growth over time provides practical insight beyond a single visit, and prayerful patience in this search, seeking God's guidance, often proves more valuable than rushing the decision.",
+      "topics": [
+        "Church"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Acts 17:11",
+        "Acts 2:42-47",
+        "Hebrews 10:24-25"
+      ],
+      "keywords": [
+        "finding a good church",
+        "how to choose a church",
+        "signs of a healthy church"
+      ]
+    },
+    {
+      "id": "answer-what-does-it-mean-to-be-a-disciple-of-jesus",
+      "question": "What Does It Mean to Be a Disciple of Jesus?",
+      "shortAnswer": "A disciple of Jesus is a committed follower who learns from Him, obeys His teachings, and is willing to prioritize allegiance to Him above every other relationship or ambition, growing continually to reflect His character.",
+      "longAnswer": "Jesus described the cost and commitment of true discipleship plainly, teaching that whoever does not take up their cross and follow Him cannot be His disciple, and calling for a wholehearted priority over even close family relationships (Luke 14:26-27, 33). He also described the defining mark of genuine discipleship: continuing in His word and knowing the truth that sets people free (John 8:31-32), showing that discipleship is an ongoing process of learning and obedience rather than a single decision alone. Discipleship also involves multiplication, since Jesus's final instruction was for disciples to go and “make disciples” of others (Matthew 28:19), suggesting that mature followers of Christ are meant to invest in helping others grow in faith as well.",
+      "topics": [
+        "Church",
+        "Christian Living"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Luke 14:25-33",
+        "John 8:31-32",
+        "Matthew 28:19-20"
+      ],
+      "keywords": [
+        "what is a disciple",
+        "cost of discipleship",
+        "following jesus meaning"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-tithing-to-a-local-church",
+      "question": "Should Tithes and Offerings Go to a Local Church?",
+      "shortAnswer": "Scripture presents the tithe as belonging to God's storehouse, historically the priesthood and temple, which today is generally understood to correspond to supporting the local church and its ministry, though believers can also give additional offerings toward broader ministry needs.",
+      "longAnswer": "Malachi's instruction to “bring ye all the tithes into the storehouse” (Malachi 3:10) was directed toward supporting the Levitical priesthood's work in Israel's central place of worship, establishing a pattern of dedicated support for those who minister full-time. Paul applies a similar principle to New Testament ministry, teaching that “they which preach the gospel should live of the gospel” (1 Corinthians 9:13-14), affirming ongoing financial support for gospel ministry through the local church. Beyond regular tithes, believers are also encouraged to give generous offerings toward mission work, benevolence, and other ministry needs as they are led, since giving cheerfully and generously reflects gratitude for God's provision rather than mere obligation (2 Corinthians 9:6-7).",
+      "topics": [
+        "Stewardship",
+        "Church"
+      ],
+      "category": "Health and Stewardship",
+      "scriptures": [
+        "Malachi 3:10",
+        "1 Corinthians 9:13-14",
+        "2 Corinthians 9:6-7"
+      ],
+      "keywords": [
+        "tithing to local church",
+        "where should tithe go",
+        "malachi 3 10 storehouse"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-evangelism",
+      "question": "What Does the Bible Say About Sharing the Gospel with Others?",
+      "shortAnswer": "Believers are called to share the gospel with others through both words and lifestyle, motivated by love and compassion, trusting the Holy Spirit to work in hearts rather than relying on pressure or manipulation.",
+      "longAnswer": "Peter instructs believers to “be ready always to give an answer to every man that asketh you a reason of the hope that is in you with meekness and fear” (1 Peter 3:15), emphasizing gentle, respectful readiness rather than aggressive confrontation. Paul describes himself becoming “all things to all men, that I might by all means save some” (1 Corinthians 9:22), modeling flexibility and genuine care for the specific needs and context of those he sought to reach. Jesus's example of engaging individuals personally, such as the woman at the well, shows patient, relational evangelism that meets people where they are (John 4:7-26). Ultimately, believers plant and water, but God alone gives the growth in a person's heart (1 Corinthians 3:6-7), relieving the pressure to force results through human effort alone.",
+      "topics": [
+        "Church",
+        "Faith"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "1 Peter 3:15",
+        "1 Corinthians 9:19-23",
+        "John 4:7-26",
+        "1 Corinthians 3:6-7"
+      ],
+      "keywords": [
+        "how to share the gospel",
+        "biblical evangelism",
+        "1 peter 3 15 ready to answer"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-serving-others",
+      "question": "What Does the Bible Say About Serving Others?",
+      "shortAnswer": "The Bible calls believers to serve one another humbly and sacrificially, following Christ's own example of servant leadership, recognizing that true greatness in God's kingdom is measured by love expressed through service rather than status or recognition.",
+      "longAnswer": "Jesus explicitly reversed worldly definitions of greatness, teaching His disciples that “whosoever will be great among you, shall be your minister,” since even the Son of Man “came not to be ministered unto, but to minister, and to give his life a ransom for many” (Matthew 20:26-28). Paul instructs believers to serve one another through love, since freedom in Christ is not meant for selfish indulgence but for serving others (Galatians 5:13). Peter connects service directly to stewardship of spiritual gifts, urging believers to minister their gifts to one another “as good stewards of the manifold grace of God” (1 Peter 4:10). This pattern of humble service, rather than self-promotion, reflects the very character of Christ Himself.",
+      "topics": [
+        "Church",
+        "Christian Living"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Matthew 20:25-28",
+        "Galatians 5:13",
+        "1 Peter 4:10-11",
+        "Mark 10:43-45"
+      ],
+      "keywords": [
+        "serving others biblically",
+        "servant leadership bible",
+        "matthew 20 26 greatness"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-priesthood-of-all-believers",
+      "question": "What Does It Mean That All Believers Are Priests?",
+      "shortAnswer": "The priesthood of all believers means that every Christian has direct access to God through Christ and shares responsibility for ministry, worship, and spiritual service, without needing a separate human mediator between themselves and God.",
+      "longAnswer": "Peter describes believers collectively as “a royal priesthood, an holy nation,” called to “shew forth the praises of him who hath called you out of darkness into his marvellous light” (1 Peter 2:9). This priestly identity flows directly from Christ's own priesthood, since He alone is described as the one mediator between God and humanity, having opened access to God's presence through His sacrifice (1 Timothy 2:5; Hebrews 10:19-22). Rather than eliminating the value of pastors and teachers, who continue to serve important equipping roles (Ephesians 4:11-12), this teaching emphasizes that every believer has direct access to God in prayer and a shared responsibility to represent Him faithfully in daily life and service.",
+      "topics": [
+        "Church"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "1 Peter 2:9-10",
+        "1 Timothy 2:5",
+        "Hebrews 10:19-22",
+        "Ephesians 4:11-12"
+      ],
+      "keywords": [
+        "priesthood of all believers",
+        "1 peter 2 9 meaning",
+        "direct access to god"
+      ]
+    },
+    {
+      "id": "answer-what-does-unity-in-the-church-look-like",
+      "question": "What Does Unity in the Church Look Like According to the Bible?",
+      "shortAnswer": "Biblical unity means believers maintaining genuine love and cooperation despite differences in background, personality, or secondary opinions, centered on shared core doctrine and mutual submission to Christ rather than uniformity in every detail.",
+      "longAnswer": "Jesus prayed specifically for the future unity of His followers, asking that they “may be one,” a unity intended to visibly demonstrate God's love to the watching world (John 17:20-23). Paul urges believers to endeavor “to keep the unity of the Spirit in the bond of peace,” grounded in one Lord, one faith, and one baptism (Ephesians 4:1-6), showing that unity is rooted in shared essential truths rather than eliminating all individual differences. This unity is compatible with diversity, since believers are described as many members functioning differently within one body, all necessary and valuable (1 Corinthians 12:12-25). Genuine unity requires humility, patience, and a willingness to prioritize love and shared mission over personal preferences or minor disagreements.",
+      "topics": [
+        "Church"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "John 17:20-23",
+        "Ephesians 4:1-6",
+        "1 Corinthians 12:12-25",
+        "Philippians 2:1-4"
+      ],
+      "keywords": [
+        "church unity bible",
+        "john 17 unity prayer",
+        "ephesians 4 unity of the spirit"
+      ]
+    },
+    {
+      "id": "answer-what-is-the-role-of-women-in-ministry",
+      "question": "What Does the Bible Say About Women Serving in Ministry?",
+      "shortAnswer": "Scripture affirms the significant contributions of women throughout redemptive history in prophecy, ministry, and service, and Christians hold varying convictions today about the specific scope of formal ministry roles, generally agreeing that women are valued and gifted participants in the church's mission.",
+      "longAnswer": "The Bible records numerous women serving significant roles, including Deborah, who judged and led Israel (Judges 4:4-5), Priscilla, who taught Apollos more accurately alongside her husband (Acts 18:26), and Phoebe, described as a servant or deacon of the church, entrusted with delivering Paul's letter to Rome (Romans 16:1-2). Paul also affirms that in Christ there is “neither male nor female,” emphasizing shared spiritual standing and value before God (Galatians 3:28), while some passages address specific instructions regarding formal church leadership roles differently across various Christian traditions (1 Timothy 2:11-12; 1 Corinthians 14:34). Given this range of biblical evidence and interpretive perspectives, believers are encouraged to study these passages carefully alongside trusted teachers and to recognize the genuine value and giftedness women contribute throughout the life and mission of the church.",
+      "topics": [
+        "Church"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Judges 4:4-5",
+        "Acts 18:24-26",
+        "Romans 16:1-2",
+        "Galatians 3:28"
+      ],
+      "keywords": [
+        "women in ministry bible",
+        "biblical view of women serving",
+        "galatians 3 28"
+      ]
+    },
+    {
+      "id": "answer-what-does-it-mean-to-bear-one-anothers-burdens",
+      "question": "What Does It Mean to 'Bear One Another's Burdens'?",
+      "shortAnswer": "Bearing one another's burdens means offering practical help, emotional support, and prayer to fellow believers facing hardship, reflecting Christ's own selfless care and fulfilling His command to love one another.",
+      "longAnswer": "Paul instructs believers, “Bear ye one another's burdens, and so fulfil the law of Christ” (Galatians 6:2), connecting mutual care directly to the core command to love others as Christ loved His people. This same passage also affirms individual responsibility, teaching that “every man shall bear his own burden” (Galatians 6:5), showing a balance between generous support for others and personal accountability for one's own responsibilities. Practically, bearing burdens can look like meeting tangible needs, offering a listening ear during hardship, praying specifically for others, or simply showing up consistently during a difficult season, echoing the example of friends who carried a paralyzed man to Jesus for healing when he could not reach Him alone (Mark 2:3-5).",
+      "topics": [
+        "Church",
+        "Christian Living"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Galatians 6:1-5",
+        "Mark 2:1-5",
+        "Romans 12:15"
+      ],
+      "keywords": [
+        "bear one another's burdens",
+        "galatians 6 2 meaning",
+        "supporting fellow believers"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-church-discipline",
+      "question": "What Does the Bible Say About Church Discipline?",
+      "shortAnswer": "Church discipline, as described in Scripture, involves a graduated, restorative process of confronting sin within the church community, aimed at restoring the offender to fellowship rather than simply punishing or excluding them.",
+      "longAnswer": "Jesus outlines a specific process: address the matter privately first, then with one or two witnesses if unresolved, and finally before the church if the person still refuses to listen (Matthew 18:15-17), showing that reconciliation and restoration are the goal at every stage rather than public shaming as a first resort. Paul instructs the Corinthian church to remove a member engaged in serious, unrepentant sin, yet later urges the church to forgive and comfort this same individual after apparent repentance, warning against excessive sorrow that could overwhelm him (1 Corinthians 5:1-5; 2 Corinthians 2:6-8). Galatians reinforces this restorative spirit, instructing spiritually mature believers to restore a fallen brother “in the spirit of meekness,” watching their own hearts carefully in the process (Galatians 6:1).",
+      "topics": [
+        "Church"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Matthew 18:15-17",
+        "1 Corinthians 5:1-5",
+        "2 Corinthians 2:6-8",
+        "Galatians 6:1"
+      ],
+      "keywords": [
+        "church discipline biblical",
+        "matthew 18 process",
+        "restoring a fallen believer"
+      ]
+    },
+    {
+      "id": "answer-how-do-i-start-reading-the-bible-as-a-beginner",
+      "question": "How Should a Beginner Start Reading the Bible?",
+      "shortAnswer": "A helpful starting point for beginners is one of the Gospels, especially John or Mark, followed by a simple reading plan through the New Testament, paired with brief prayer before and after each reading session.",
+      "longAnswer": "John's Gospel was written specifically “that ye might believe that Jesus is the Christ, the Son of God” (John 20:31), making it a clear, purposeful introduction to who Jesus is and why He matters. Starting with shorter, more accessible New Testament books before tackling more complex Old Testament material such as prophetic or genealogical sections helps build confidence and familiarity gradually. Praying briefly for understanding before reading, as the psalmist asked God to “open thou mine eyes” to see wondrous things in His Word (Psalm 119:18), invites the Holy Spirit's help in comprehension. A simple, sustainable pace, even just a few verses a day, builds a lasting habit far better than an ambitious plan quickly abandoned.",
+      "topics": [
+        "Bible Study",
+        "Bible"
+      ],
+      "category": "Understanding Scripture",
+      "scriptures": [
+        "John 20:30-31",
+        "Psalm 119:18",
+        "2 Timothy 3:16-17"
+      ],
+      "keywords": [
+        "how to start reading the bible",
+        "bible for beginners",
+        "where to start in the bible"
+      ]
+    },
+    {
+      "id": "answer-is-it-a-sin-to-doubt-god",
+      "question": "Is It a Sin to Doubt God?",
+      "shortAnswer": "Honest doubt and questions are not condemned in Scripture; many faithful believers experienced genuine uncertainty, and God consistently responds to sincere seekers with patience rather than rejection.",
+      "longAnswer": "John the Baptist, even after recognizing Jesus as the Messiah, later sent messengers from prison to ask directly, “Art thou he that should come, or do we look for another?” (Matthew 11:2-3), and Jesus responded not with rebuke but with gentle evidence pointing to His fulfilled works. Thomas openly doubted the resurrection until given direct evidence, and though Jesus gently noted the blessing of believing without seeing, He still graciously met Thomas in his doubt rather than condemning him (John 20:24-29). A father in Mark's Gospel honestly cried out, “Lord, I believe; help thou mine unbelief,” receiving Jesus's help despite acknowledging his imperfect faith (Mark 9:24). Bringing doubts honestly to God through prayer and Scripture study, rather than suppressing or hiding them, is a healthier path toward growing, resilient faith.",
+      "topics": [
+        "Faith"
+      ],
+      "category": "Faith and Salvation",
+      "scriptures": [
+        "Matthew 11:2-6",
+        "John 20:24-29",
+        "Mark 9:23-24"
+      ],
+      "keywords": [
+        "is doubt a sin",
+        "questioning faith bible",
+        "dealing with doubt christian"
+      ]
+    },
+    {
+      "id": "answer-how-do-i-know-if-i-am-truly-a-christian",
+      "question": "How Do I Know If I Am Truly a Christian?",
+      "shortAnswer": "Genuine faith is marked by trust in Christ's finished work for salvation, a growing love for God and others, an increasing desire to obey His Word, and the ongoing presence and conviction of the Holy Spirit in one's life.",
+      "longAnswer": "John gives a series of practical tests throughout his first epistle, including obedience to God's commandments, growing love for other believers, and belief that Jesus is the Christ, concluding that these evidences allow believers to “know that we are of the truth” (1 John 3:19; 1 John 2:3-6; 3:14). Paul describes the witness of the Holy Spirit confirming believers' identity as God's children directly to their spirit (Romans 8:16). It is normal for genuine faith to include ongoing struggle and imperfection, since these tests describe a direction of growth and desire rather than sinless perfection; the key markers are genuine trust in Christ alone for salvation and a heart increasingly oriented toward obedience and love, even amid continued growth.",
+      "topics": [
+        "Salvation",
+        "Faith"
+      ],
+      "category": "Faith and Salvation",
+      "scriptures": [
+        "1 John 2:3-6",
+        "1 John 3:14",
+        "1 John 5:13",
+        "Romans 8:16"
+      ],
+      "keywords": [
+        "how do i know im saved",
+        "signs of true faith",
+        "1 john tests of salvation"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-luck-and-coincidence",
+      "question": "Does the Bible Believe in Luck or Coincidence?",
+      "shortAnswer": "The Bible does not present a concept of blind luck or random chance governing events; instead, it teaches that God's providence oversees even seemingly small or coincidental circumstances within His overarching sovereign purposes.",
+      "longAnswer": "Proverbs states, “The lot is cast into the lap; but the whole disposing thereof is of the LORD” (Proverbs 16:33), referencing even the roll of ancient lots, a practice often associated with chance, as ultimately under God's sovereign direction. The book of Ruth illustrates this principle narratively, as Ruth “happened” to glean in the field belonging to Boaz, her eventual kinsman-redeemer, in a sequence of events the narrative frames as providentially guided rather than accidental (Ruth 2:3). Paul teaches that God works all things together for good for those who love Him and are called according to His purpose (Romans 8:28), suggesting that what appears to be mere coincidence often reflects God's unseen, purposeful involvement in the details of daily life.",
+      "topics": [
+        "Faith"
+      ],
+      "category": "Knowing God",
+      "scriptures": [
+        "Proverbs 16:33",
+        "Ruth 2:3",
+        "Romans 8:28",
+        "Matthew 10:29-30"
+      ],
+      "keywords": [
+        "does the bible believe in luck",
+        "coincidence or god's providence",
+        "proverbs 16 33 meaning"
+      ]
+    },
+    {
+      "id": "answer-is-getting-a-tattoo-against-biblical-principles",
+      "question": "Is Getting a Tattoo Against Biblical Principles?",
+      "shortAnswer": "The Old Testament contains a specific prohibition against tattoo marks connected to pagan mourning rituals in ancient Israel, and while views vary among believers today, the underlying principle of honoring God with one's body and avoiding harmful or impulsive decisions remains relevant.",
+      "longAnswer": "Leviticus instructs, “Ye shall not make any cuttings in your flesh for the dead, nor print any marks upon you” (Leviticus 19:28), a command given within a specific context of pagan mourning practices common among neighboring nations at that time. Because this command sits among many ceremonial regulations tied to Israel's unique covenant context, believers today hold different views about its direct application, generally agreeing on the underlying principle that decisions about the body should be made thoughtfully, honoring the truth that the body belongs to God (1 Corinthians 6:19-20) rather than being altered impulsively or in ways that could cause regret. Prayerful consideration, wisdom, and counsel from trusted believers can help guide personal decisions in this area, which Scripture does not address with universal, explicit New Testament instruction.",
+      "topics": [
+        "Health",
+        "Law"
+      ],
+      "category": "Health and Stewardship",
+      "scriptures": [
+        "Leviticus 19:28",
+        "1 Corinthians 6:19-20",
+        "1 Corinthians 10:31"
+      ],
+      "keywords": [
+        "bible and tattoos",
+        "leviticus 19 28 meaning",
+        "is it a sin to get a tattoo"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-astrology-and-horoscopes",
+      "question": "What Does the Bible Say About Astrology and Horoscopes?",
+      "shortAnswer": "The Bible consistently warns against astrology and divination practices such as horoscopes, calling believers instead to seek guidance and knowledge of the future through God alone rather than through stars, omens, or occult practices.",
+      "longAnswer": "Isaiah mocks the futility of relying on “astrologers, the stargazers, the monthly prognosticators” to save a nation from coming judgment, showing their ultimate powerlessness compared to God's sovereign control over history (Isaiah 47:13-14). God explicitly warned Israel against practices of divination, observing times, enchantments, and consulting with familiar spirits, identifying these as detestable practices associated with pagan nations (Deuteronomy 18:9-12). Rather than seeking guidance from horoscopes or astrological practices, believers are directed to seek wisdom and direction from “the law and to the testimony,” God's revealed Word (Isaiah 8:19-20), trusting His Word and provision over any human or occult attempt to predict or control the future.",
+      "topics": [
+        "Faith",
+        "Law"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Isaiah 47:13-14",
+        "Deuteronomy 18:9-12",
+        "Isaiah 8:19-20"
+      ],
+      "keywords": [
+        "bible and astrology",
+        "is horoscopes a sin",
+        "bible view of zodiac signs"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-halloween-and-holidays",
+      "question": "What Does the Bible Say About Celebrating Holidays Like Halloween?",
+      "shortAnswer": "The Bible does not specifically mention modern holidays such as Halloween, but its clear warnings against occult practices and its call for believers to act with wisdom and a clear conscience provide guidance for personal decisions about which customs to observe or avoid.",
+      "longAnswer": "Scripture repeatedly warns against practices connected to witchcraft, divination, and glorifying darkness or occult symbolism (Deuteronomy 18:10-12; Ephesians 5:11), which believers should weigh carefully when considering customs with such historical or symbolic associations. Paul addresses similar questions about observing or not observing certain days, teaching that believers should act “fully persuaded in his own mind” with a clear conscience before God rather than judging one another harshly over differing convictions (Romans 14:5-6, 22-23). Many believers choose alternative ways to mark such occasions that avoid occult symbolism while still engaging positively with their community, such as harvest celebrations or focusing on light rather than darkness, applying wisdom and personal conviction to a matter Scripture does not directly legislate.",
+      "topics": [
+        "Christian Living",
+        "Law"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Deuteronomy 18:10-12",
+        "Ephesians 5:8-11",
+        "Romans 14:5-6, 22-23"
+      ],
+      "keywords": [
+        "should christians celebrate halloween",
+        "bible and holidays",
+        "romans 14 disputable matters"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-social-media-use",
+      "question": "What Does the Bible Say About Social Media Use?",
+      "shortAnswer": "While the Bible does not address social media directly, its timeless principles about wise speech, guarding the heart, avoiding comparison, and stewarding time provide valuable guidance for using these platforms in a healthy, God-honoring way.",
+      "longAnswer": "Scripture repeatedly emphasizes the power and weight of words, warning that “death and life are in the power of the tongue” (Proverbs 18:21), a principle directly applicable to how believers communicate, comment, and share online. Paul's instruction to let no corrupt communication proceed from one's mouth, but only that which builds others up (Ephesians 4:29), applies just as forcefully to digital communication as to spoken words. Comparison and envy, easily triggered by curated online content, are warned against throughout Scripture, since “a sound heart is the life of the flesh: but envy the rottenness of the bones” (Proverbs 14:30). Intentional limits on time and content, guided by wisdom about what truly edifies rather than merely entertains or provokes comparison, honor the biblical call to redeem the time wisely (Ephesians 5:15-16).",
+      "topics": [
+        "Christian Living",
+        "Stewardship"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Proverbs 18:21",
+        "Ephesians 4:29",
+        "Proverbs 14:30",
+        "Ephesians 5:15-16"
+      ],
+      "keywords": [
+        "christian social media use",
+        "bible and technology",
+        "wise use of screen time"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-anger-management",
+      "question": "What Does the Bible Say About Managing Anger?",
+      "shortAnswer": "The Bible acknowledges anger as a genuine human emotion while calling believers to control its expression, avoid prolonged resentment, and pursue righteous rather than sinful responses when anger arises.",
+      "longAnswer": "Paul instructs, “Be ye angry, and sin not: let not the sun go down upon your wrath” (Ephesians 4:26), acknowledging that anger itself is not automatically sinful while urging quick resolution rather than allowing it to fester into long-term bitterness. James counsels believers to be “slow to wrath,” since human anger does not produce the righteousness God desires (James 1:19-20), pointing toward patience and self-control as the wiser response in most situations. Proverbs offers practical wisdom as well, noting that “he that is slow to anger is better than the mighty” and that “a soft answer turneth away wrath” (Proverbs 16:32; 15:1). When anger feels consistently overwhelming or leads to harmful behavior, seeking support from a counselor alongside these biblical principles can provide valuable additional help.",
+      "topics": [
+        "Christian Living",
+        "Health"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Ephesians 4:26-27",
+        "James 1:19-20",
+        "Proverbs 15:1",
+        "Proverbs 16:32"
+      ],
+      "keywords": [
+        "bible anger management",
+        "ephesians 4 26 be angry and sin not",
+        "controlling anger biblically"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-materialism-and-greed",
+      "question": "What Does the Bible Say About Materialism and Greed?",
+      "shortAnswer": "The Bible repeatedly warns against greed and excessive attachment to material possessions, teaching that true contentment and security come from a relationship with God rather than accumulated wealth.",
+      "longAnswer": "Jesus warned plainly, “Take heed, and beware of covetousness: for a man's life consisteth not in the abundance of the things which he possesseth” (Luke 12:15), illustrating this with the parable of a wealthy farmer whose life ended suddenly the very night he planned to enjoy his accumulated riches (Luke 12:16-21). Paul echoes this warning, teaching that “the love of money is the root of all evil,” leading some who eagerly pursue riches into ruin and grief (1 Timothy 6:9-10), while also instructing the wealthy to be generous and ready to share rather than trusting in uncertain riches (1 Timothy 6:17-19). Contentment is described as a learned discipline, since Paul testifies that he learned to be content whatever his circumstances, whether abased or abounding (Philippians 4:11-12).",
+      "topics": [
+        "Stewardship",
+        "Christian Living"
+      ],
+      "category": "Health and Stewardship",
+      "scriptures": [
+        "Luke 12:15-21",
+        "1 Timothy 6:9-10, 17-19",
+        "Philippians 4:11-13"
+      ],
+      "keywords": [
+        "bible and materialism",
+        "greed in the bible",
+        "luke 12 15 covetousness"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-following-your-dreams-and-passions",
+      "question": "How Do I Balance Following My Dreams with Following God's Will?",
+      "shortAnswer": "Following personal dreams and ambitions can honor God when they are submitted to His priorities and pursued with humility, recognizing that ultimate fulfillment and purpose are found in service to Him rather than personal achievement alone.",
+      "longAnswer": "Proverbs teaches believers to “commit thy works unto the LORD,” with the promise that this results in established, well-guided plans (Proverbs 16:3), suggesting that ambition itself is not condemned when submitted to God's direction rather than pursued independently of Him. James warns against presumptuous planning that ignores God's sovereignty, urging believers instead to say, “If the Lord will, we shall live, and do this, or that” (James 4:13-15), a posture of humble openness rather than rigid self-determined ambition. Jesus taught that seeking God's kingdom and righteousness first results in other needs and desires being provided as well (Matthew 6:33), reframing personal dreams and passions as most fulfilling when they flow from and serve a larger purpose centered on God rather than replacing devotion to Him.",
+      "topics": [
+        "Christian Living",
+        "Faith"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Proverbs 16:3",
+        "James 4:13-15",
+        "Matthew 6:33",
+        "Psalm 37:4-5"
+      ],
+      "keywords": [
+        "following your dreams and god's will",
+        "ambition and christianity",
+        "proverbs 16 3 commit your works"
+      ]
+    },
+    {
+      "id": "answer-scripture-teaching-on-modesty-in-appearance",
+      "question": "What Does Scripture Teach About Modesty in Appearance?",
+      "shortAnswer": "Biblical modesty involves humility and appropriate self-presentation that reflects inward character rather than seeking to draw attention through appearance, extending to attitudes and behavior as much as clothing choices.",
+      "longAnswer": "Paul instructs believers to adorn themselves “in modest apparel, with shamefacedness and sobriety,” contrasting outward extravagance with the far greater value of “good works” as true adornment (1 Timothy 2:9-10). Peter gives a parallel instruction, emphasizing that true beauty lies in “the hidden man of the heart... even the ornament of a meek and quiet spirit,” which is of great value in God's sight, rather than an exclusive focus on external appearance (1 Peter 3:3-4). While Scripture does not provide a detailed dress code, its consistent emphasis is on humility, self-control, and character taking priority over drawing attention through appearance, applying this principle wisely according to cultural context and personal conviction.",
+      "topics": [
+        "Christian Living",
+        "Health"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "1 Timothy 2:9-10",
+        "1 Peter 3:3-4",
+        "Proverbs 31:30"
+      ],
+      "keywords": [
+        "biblical modesty",
+        "1 timothy 2 9 modest apparel",
+        "what is modesty in the bible"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-music-and-entertainment-choices",
+      "question": "How Should I Choose What Music or Entertainment to Consume?",
+      "shortAnswer": "Believers are called to evaluate entertainment choices by whether they promote what is true, honorable, pure, and praiseworthy, using discernment rather than a rigid list of banned content, while being mindful of their influence on the heart and mind.",
+      "longAnswer": "Paul provides a clear filter for thought life, instructing believers to focus their minds on “whatsoever things are true... honest... just... pure... lovely... of good report,” anything virtuous or praiseworthy (Philippians 4:8), a principle readily applicable to media and entertainment choices. He also warns believers to “abstain from all appearance of evil” (1 Thessalonians 5:22), suggesting caution around content that normalizes or glamorizes clearly sinful behavior. Since “as a man thinketh in his heart, so is he” (Proverbs 23:7), the cumulative effect of regularly consumed media on the heart and mind deserves thoughtful, prayerful attention rather than casual disregard, applying personal discernment guided by these biblical principles to specific choices.",
+      "topics": [
+        "Christian Living"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Philippians 4:8",
+        "1 Thessalonians 5:21-22",
+        "Proverbs 23:7"
+      ],
+      "keywords": [
+        "christian entertainment choices",
+        "philippians 4 8 media filter",
+        "discernment in music and movies"
+      ]
+    },
+    {
+      "id": "answer-what-does-it-mean-to-take-the-lords-name-in-vain",
+      "question": "What Does It Mean to Take the Lord's Name in Vain?",
+      "shortAnswer": "Taking the Lord's name in vain means using God's name carelessly, disrespectfully, or in false, empty, or hypocritical ways, including casual cursing, false oaths, or professing faith without genuine sincerity of heart.",
+      "longAnswer": "The third commandment states, “Thou shalt not take the name of the LORD thy God in vain; for the LORD will not hold him guiltless that taketh his name in vain” (Exodus 20:7), addressing far more than merely using God's name as an exclamation, though that usage is certainly included in its broader scope. This command also addresses false oaths made in God's name that are not kept (Leviticus 19:12), as well as hypocritical religious profession, since Jesus warned of people who honor God “with their lips,” while their heart remains distant from Him (Matthew 15:8). At its core, this commandment calls for reverence toward God's character and name, both in speech and in the sincerity of one's professed faith, avoiding empty, careless, or deceptive use of His holy name.",
+      "topics": [
+        "Law"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Exodus 20:7",
+        "Leviticus 19:12",
+        "Matthew 15:7-9"
+      ],
+      "keywords": [
+        "taking lord's name in vain meaning",
+        "third commandment explained",
+        "exodus 20 7"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-technology-and-artificial-intelligence",
+      "question": "How Should Christians Think About New Technology Like Artificial Intelligence?",
+      "shortAnswer": "While the Bible does not address specific modern technologies, its timeless principles of stewardship, truthfulness, human dignity, and wise use of tools provide a framework for engaging thoughtfully and responsibly with new innovations like artificial intelligence.",
+      "longAnswer": "Scripture consistently treats tools and knowledge as morally neutral in themselves, with their moral value shaped by how humans choose to use them, whether for good or harmful purposes, reflecting the broader biblical theme of stewardship over creation and its resources (Genesis 1:28; 1 Corinthians 10:31). Because humans are made distinctly in God's image, possessing dignity, conscience, and relationship with Him unlike any created tool or system (Genesis 1:27), believers should thoughtfully consider how new technologies affect human relationships, truthfulness, and dependence on God rather than uncritically embracing every innovation. Paul's call to test all things and hold fast to what is good (1 Thessalonians 5:21) provides a helpful pattern for evaluating new technological developments with wisdom, discernment, and ongoing ethical reflection rather than either blanket rejection or uncritical adoption.",
+      "topics": [
+        "Christian Living",
+        "Stewardship"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "Genesis 1:26-28",
+        "1 Corinthians 10:31",
+        "1 Thessalonians 5:21"
+      ],
+      "keywords": [
+        "christians and artificial intelligence",
+        "bible and new technology",
+        "ethical use of technology"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-voting-and-political-involvement",
+      "question": "What Does the Bible Say About Voting and Political Involvement?",
+      "shortAnswer": "The Bible does not prescribe a specific political party or system, but its call to seek justice, love neighbor, and respect governing authorities provides principles for thoughtful, conscientious civic participation guided by biblical values.",
+      "longAnswer": "Paul instructs believers to pray for those in authority, so that people may lead peaceful and quiet lives in godliness and honesty (1 Timothy 2:1-2), suggesting civic engagement, including prayer for leaders, remains a meaningful responsibility for believers. Micah summarizes God's ethical priorities as doing justice, loving mercy, and walking humbly with God (Micah 6:8), principles that can inform how believers evaluate policies and candidates without dictating a single correct political affiliation. Jesus's own teaching to “render therefore unto Caesar the things which are Caesar's; and unto God the things that are God's” (Matthew 22:21) suggests believers can participate responsibly in civic life while maintaining ultimate allegiance to God above any political system or leader.",
+      "topics": [
+        "Christian Living",
+        "Law"
+      ],
+      "category": "Life and Relationships",
+      "scriptures": [
+        "1 Timothy 2:1-2",
+        "Micah 6:8",
+        "Matthew 22:15-21",
+        "Romans 13:1-7"
+      ],
+      "keywords": [
+        "christians and politics",
+        "bible and voting",
+        "should christians be politically involved"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-dreams-and-visions-today",
+      "question": "Does God Still Speak Through Dreams and Visions Today?",
+      "shortAnswer": "While God has communicated through dreams and visions throughout biblical history, Scripture remains the final and most reliable standard for testing any modern claim of dream or vision, since God will never contradict what He has already revealed in His written Word.",
+      "longAnswer": "Scripture records numerous instances of God communicating through dreams, including to Joseph, Daniel, and various individuals in both Old and New Testaments (Genesis 37:5-11; Daniel 2:19; Matthew 2:13), showing this as a legitimate historical means of divine communication. Joel's prophecy anticipates a future outpouring of the Spirit accompanied by dreams and visions among God's people (Joel 2:28), a promise Peter connects to the church age beginning at Pentecost (Acts 2:16-17). However, any modern claim of a dream, vision, or prophetic experience should be carefully tested against the full counsel of Scripture, since God's revealed Word remains sufficient and authoritative, and no genuine revelation from God will ever contradict what the Bible already teaches (Isaiah 8:20; Galatians 1:8).",
+      "topics": [
+        "Prophecy",
+        "Holy Spirit"
+      ],
+      "category": "Hope and Prophecy",
+      "scriptures": [
+        "Genesis 37:5-11",
+        "Joel 2:28",
+        "Acts 2:16-17",
+        "Isaiah 8:19-20"
+      ],
+      "keywords": [
+        "does god still speak in dreams",
+        "modern day visions bible",
+        "testing prophetic experiences"
+      ]
+    },
+    {
+      "id": "answer-what-does-the-bible-say-about-forgiveness-of-yourself",
+      "question": "How Do I Forgive Myself for Past Mistakes?",
+      "shortAnswer": "Self-forgiveness begins by fully receiving God's genuine forgiveness through Christ, since continuing to hold oneself guilty for a sin God has already forgiven can reflect a lack of trust in the completeness of His grace rather than genuine humility.",
+      "longAnswer": "John assures believers that “if we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness” (1 John 1:9), promising complete and genuine forgiveness rather than partial pardon requiring additional self-punishment. Paul's own history as a persecutor of the church before his conversion could easily have produced lasting self-condemnation, yet he described himself as forgiven and transformed, choosing to press forward rather than remain trapped by past failures, “forgetting those things which are behind” (Philippians 3:13-14). Continuing to punish oneself after receiving God's forgiveness can subtly suggest that Christ's sacrifice was insufficient, when Scripture teaches instead that “there is therefore now no condemnation to them which are in Christ Jesus” (Romans 8:1), inviting believers to walk forward in the freedom already secured for them.",
+      "topics": [
+        "Forgiveness",
+        "Christian Living"
+      ],
+      "category": "Faith and Salvation",
+      "scriptures": [
+        "1 John 1:9",
+        "Philippians 3:13-14",
+        "Romans 8:1",
+        "Psalm 103:12"
+      ],
+      "keywords": [
+        "how to forgive yourself",
+        "self condemnation christian",
+        "romans 8 1 no condemnation"
+      ]
+    }
 ];
 
 const state = {
