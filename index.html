@@ -1242,9 +1242,6 @@
           window.addEventListener(eventName, loadHomepageScript, { once: true, passive: true });
         });
 
-        window.addEventListener("load", () => {
-          setTimeout(loadHomepageScript, 6000);
-        }, { once: true });
       })();
     </script>
   </body>
