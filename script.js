@@ -6878,6 +6878,237 @@ const answers = [
       "apostles Sabbath",
       "law and grace"
     ]
+  },
+  {
+    "id": "answer-should-christians-celebrate-christmas",
+    "question": "Should Christians Celebrate Christmas?",
+    "shortAnswer": "The Bible does not command a yearly celebration of Jesus' birth, nor does it forbid setting aside a day to remember His incarnation. Christians should keep their focus on Christ, reject materialism, and respect sincere differences of conscience.",
+    "longAnswer": "Scripture does not give the date of Jesus' birth or establish an annual festival for it. It does, however, clearly teach the wonder of the incarnation: the eternal Word became flesh and lived among us (John 1:1-14). Angels announced Christ's birth, and the event deserves gratitude and worship (Luke 2:8-20). Paul teaches that believers may differ about observing particular days and should act with conviction before the Lord rather than judging one another (Romans 14:5-6). A Christian family may use a holiday season to read the birth narratives, give generously, serve neighbors, and point to Jesus. It should not become an excuse for greed, drunkenness, debt, or pressure to conform. The central question is not whether a calendar date earns spiritual credit, but whether the way it is observed honors Christ and reflects love for God and others (1 Corinthians 10:31; Philippians 2:5-8).",
+    "topics": [
+      "Christian Living",
+      "Faith"
+    ],
+    "category": "Bible and Christian Living",
+    "scriptures": [
+      "Matthew 1:18-25",
+      "Luke 2:8-20",
+      "John 1:1-14",
+      "Romans 14:5-6",
+      "1 Corinthians 10:31",
+      "Philippians 2:5-8"
+    ],
+    "keywords": [
+      "should Christians celebrate Christmas",
+      "Christmas biblical",
+      "is Christmas in the Bible",
+      "Jesus birth",
+      "Christian holidays",
+      "Christmas and Jesus",
+      "Christian living"
+    ]
+  },
+  {
+    "id": "answer-christian-meditation",
+    "question": "What Is Christian Meditation?",
+    "shortAnswer": "Biblical meditation means prayerfully dwelling on God's character, works, and Word so that truth shapes the mind and life. It is not emptying the mind or seeking spiritual guidance apart from God and Scripture.",
+    "longAnswer": "The Bible repeatedly calls God's people to meditate on His law and works. The blessed person delights in God's law and meditates on it day and night (Psalm 1:1-3), while Joshua was told to meditate on the book of the law in order to obey it carefully (Joshua 1:8). Christian meditation fills the mind with God's truth, rehearses His faithfulness, considers the meaning of Scripture, and turns reflection into prayer and action (Psalm 119:15-16; Philippians 4:8). It is different from practices that seek to empty the mind or access spiritual power without reference to God. A simple practice is to read a short passage slowly, notice what it reveals about God, respond in prayer, and choose one truth to live that day. The aim is not a special state of consciousness but a renewed mind and a life increasingly shaped by Christ (Romans 12:2; 2 Corinthians 3:18).",
+    "topics": [
+      "Prayer",
+      "Bible",
+      "Christian Living"
+    ],
+    "category": "Prayer and Spiritual Growth",
+    "scriptures": [
+      "Joshua 1:8",
+      "Psalm 1:1-3",
+      "Psalm 19:14",
+      "Psalm 119:15-16",
+      "Philippians 4:8",
+      "Romans 12:2",
+      "2 Corinthians 3:18"
+    ],
+    "keywords": [
+      "Christian meditation",
+      "biblical meditation",
+      "how to meditate on Scripture",
+      "meditate on God's Word",
+      "prayer",
+      "mindfulness Christian",
+      "spiritual growth"
+    ]
+  },
+  {
+    "id": "answer-christians-social-media",
+    "question": "What Does the Bible Say About Social Media?",
+    "shortAnswer": "The Bible does not mention modern social media by name, but it gives clear principles for speech, attention, truthfulness, purity, and love. Christians should use digital platforms in ways that honor God and build others up.",
+    "longAnswer": "Jesus taught that words reveal the heart, and Scripture repeatedly warns against gossip, slander, false witness, and careless speech (Matthew 12:34-37; Ephesians 4:29; Proverbs 16:28). Those principles apply online as much as in person. Before posting or sharing, ask whether something is true, necessary, kind, and helpful. Christians should reject outrage-driven arguments, protect the dignity and privacy of others, and avoid content that feeds envy, lust, pride, or fear (Philippians 4:8; 1 Thessalonians 5:22). Social media can be used for encouragement, education, witness, and connection, but constant scrolling can crowd out prayer, Scripture, work, family, and rest. Paul says that not everything permissible is beneficial and that believers should not be mastered by anything (1 Corinthians 6:12). Use technology as a servant, set wise boundaries, and let love—not attention or winning—guide your presence online.",
+    "topics": [
+      "Christian Living",
+      "Marriage and Family"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Proverbs 16:28",
+      "Matthew 12:34-37",
+      "1 Corinthians 6:12",
+      "Ephesians 4:29",
+      "Philippians 4:8",
+      "1 Thessalonians 5:22"
+    ],
+    "keywords": [
+      "Bible social media",
+      "Christians and social media",
+      "Christian online behavior",
+      "social media addiction",
+      "gossip",
+      "digital discipleship",
+      "Christian living"
+    ]
+  },
+  {
+    "id": "answer-make-wise-decisions",
+    "question": "How Can I Make Wise Decisions According to the Bible?",
+    "shortAnswer": "Biblical wisdom begins with reverence for God, grows through Scripture and prayer, and is tested by character, counsel, consequences, and love. God invites believers to ask for wisdom rather than rely only on impulse or appearance.",
+    "longAnswer": "James promises that God gives wisdom generously to those who ask in faith (James 1:5). Scripture also says that the fear of the Lord is the beginning of wisdom, meaning that wise decisions begin with surrender to God's authority rather than simply asking what is easiest (Proverbs 9:10). A biblical decision should agree with clear Scripture, reflect the character of Christ, and consider its effect on other people. Proverbs commends seeking wise counsel and warns against trusting one's own understanding without acknowledging God (Proverbs 11:14; Proverbs 3:5-7). Prayer is essential, but a strong feeling alone is not proof of divine guidance. Examine motives, gather facts, wait when emotions are intense, and be willing to obey what God has already made clear. Wisdom from above is pure, peaceable, gentle, and full of mercy (James 3:13-18).",
+    "topics": [
+      "Faith",
+      "Christian Living",
+      "Prayer"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Proverbs 3:5-7",
+      "Proverbs 9:10",
+      "Proverbs 11:14",
+      "Isaiah 30:21",
+      "James 1:5",
+      "James 3:13-18"
+    ],
+    "keywords": [
+      "how to make wise decisions",
+      "God's will",
+      "biblical wisdom",
+      "Christian decision making",
+      "how to know what to do",
+      "prayer",
+      "guidance"
+    ]
+  },
+  {
+    "id": "answer-grow-spiritually",
+    "question": "How Can I Grow Spiritually?",
+    "shortAnswer": "Spiritual growth comes from abiding in Christ through Scripture, prayer, obedience, fellowship, service, and the Holy Spirit's work. It is a lifelong relationship, not a quick technique or a competition with other believers.",
+    "longAnswer": "Jesus compared spiritual growth to a branch remaining connected to a vine: apart from Him we can do nothing, but abiding in Him produces fruit (John 15:1-8). Scripture calls believers to desire God's Word, pray continually, gather with other believers, and put faith into loving action (1 Peter 2:2; 1 Thessalonians 5:17; Hebrews 10:24-25; James 2:17-18). Growth includes learning truth, confessing sin, receiving forgiveness, practicing self-control, and serving others with the gifts God provides. The Holy Spirit produces Christlike character that cannot be manufactured by willpower alone (Galatians 5:22-25). Do not measure maturity only by how much information you know or by comparing your journey with someone else's. Choose regular time with God, obey the next clear step, seek accountable community, and return to Christ when you fail. God is faithful to continue the work He begins (Philippians 1:6).",
+    "topics": [
+      "Christian Living",
+      "Holy Spirit",
+      "Faith"
+    ],
+    "category": "Prayer and Spiritual Growth",
+    "scriptures": [
+      "John 15:1-8",
+      "Philippians 1:6",
+      "1 Thessalonians 5:17",
+      "Hebrews 10:24-25",
+      "1 Peter 2:2",
+      "Galatians 5:22-25",
+      "James 2:17-18"
+    ],
+    "keywords": [
+      "how to grow spiritually",
+      "spiritual growth",
+      "grow closer to God",
+      "Christian maturity",
+      "abide in Christ",
+      "Holy Spirit",
+      "Bible prayer"
+    ]
+  },
+  {
+    "id": "answer-bible-anger",
+    "question": "What Does the Bible Say About Anger?",
+    "shortAnswer": "The Bible recognizes that anger can arise from real wrongs, but it warns that uncontrolled anger damages people and opens the door to sin. Believers are called to be slow to anger, truthful, forgiving, and committed to peace.",
+    "longAnswer": "The Bible says that human anger does not produce the righteousness God desires (James 1:19-20). Paul tells believers to put away bitterness, rage, slander, and malice while practicing kindness and forgiveness (Ephesians 4:31-32). This does not mean ignoring injustice or pretending harm did not happen. Jesus confronted hypocrisy and oppression, yet His anger was never a license for personal revenge or cruelty (Mark 3:1-5; Romans 12:19-21). Anger should be brought honestly to God, examined for selfishness, and expressed without threats, abuse, or degrading speech. “Be ye angry, and sin not” includes resolving conflict rather than nursing resentment (Ephesians 4:26-27). Practical steps include pausing before responding, praying, listening carefully, setting safe boundaries, seeking counsel, and pursuing reconciliation when possible. Where anger is connected to violence or abuse, safety and qualified professional help are essential.",
+    "topics": [
+      "Christian Living",
+      "Marriage and Family"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "Proverbs 14:29",
+      "Proverbs 15:1",
+      "Mark 3:1-5",
+      "Ephesians 4:26-32",
+      "James 1:19-20",
+      "Romans 12:19-21"
+    ],
+    "keywords": [
+      "Bible anger",
+      "how to control anger",
+      "Christian anger",
+      "anger management Bible",
+      "forgiveness",
+      "conflict",
+      "peace"
+    ]
+  },
+  {
+    "id": "answer-biblical-modesty",
+    "question": "What Does the Bible Say About Modesty?",
+    "shortAnswer": "Biblical modesty is a humble concern for character, dignity, and the effect of our choices on others—not a tool for shaming bodies or controlling people. Scripture calls both men and women to self-control, wisdom, and love.",
+    "longAnswer": "Paul connects modesty with good judgment, reverence for God, and a life of good works rather than with a detailed dress code for every culture (1 Timothy 2:9-10). Peter likewise emphasizes the inner character of a gentle and quiet spirit rather than outward display as the source of true beauty (1 Peter 3:3-4). Jesus taught that moral responsibility begins in the heart, so modesty cannot be reduced to blaming another person for someone else's thoughts (Matthew 5:27-30). Christians should dress and behave in ways that respect themselves, honor God, and avoid deliberately seeking attention through pride or sensuality. At the same time, believers must not use modesty language to humiliate, police, or diminish others. Love does not parade itself, and it seeks the good of a neighbor (1 Corinthians 13:4-5; Philippians 2:3-4). Wisdom, cultural awareness, personal dignity, and compassion should guide application.",
+    "topics": [
+      "Christian Living",
+      "Marriage and Family"
+    ],
+    "category": "Life and Relationships",
+    "scriptures": [
+      "1 Samuel 16:7",
+      "Matthew 5:27-30",
+      "1 Corinthians 13:4-5",
+      "1 Timothy 2:9-10",
+      "1 Peter 3:3-4",
+      "Philippians 2:3-4"
+    ],
+    "keywords": [
+      "Bible modesty",
+      "Christian modesty",
+      "what should Christians wear",
+      "modest clothing",
+      "dress code Bible",
+      "self-control",
+      "Christian living"
+    ]
+  },
+  {
+    "id": "answer-christians-vegetarian",
+    "question": "Can Christians Be Vegetarian According to the Bible?",
+    "shortAnswer": "Yes. Scripture presents plant food as part of God's original diet and allows room for conscientious dietary choices. A vegetarian diet should not be treated as a way to earn salvation, and believers should avoid judging one another over food.",
+    "longAnswer": "In the creation account, God gives humanity plants, fruits, and seeds for food (Genesis 1:29). After sin, Scripture records permission to eat clean animals, but it never makes eating meat a requirement for every person (Genesis 9:3; Leviticus 11). Daniel and his companions chose a simple plant-based diet for a period and experienced good health under God's blessing (Daniel 1:8-16). The New Testament directs believers away from using food as a measure of spiritual worth. Paul says that God's kingdom is not a matter of eating and drinking, and he calls for mutual respect in conscientious differences (Romans 14:1-4, 17). The body belongs to God, so a Christian may choose a vegetarian diet for health, stewardship, compassion, or conscience, while remembering that diet does not justify anyone before God. Whatever a person eats should be done with gratitude and for God's glory (1 Corinthians 10:31).",
+    "topics": [
+      "Health",
+      "Creation",
+      "Christian Living"
+    ],
+    "category": "Health and Stewardship",
+    "scriptures": [
+      "Genesis 1:29",
+      "Genesis 9:3",
+      "Leviticus 11:1-8",
+      "Daniel 1:8-16",
+      "Romans 14:1-4",
+      "Romans 14:17",
+      "1 Corinthians 10:31"
+    ],
+    "keywords": [
+      "can Christians be vegetarian",
+      "vegetarian Christian",
+      "Bible vegetarian diet",
+      "plant based Christian",
+      "Christian health",
+      "diet and faith",
+      "creation"
+    ]
   }
 ];
 
