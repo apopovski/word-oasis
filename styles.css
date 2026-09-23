@@ -838,9 +838,9 @@ h1 {
   bottom: 14px;
   z-index: 2;
   margin: 0;
-  padding: 2px 5px;
+  padding: 4px 10px;
   color: rgba(255, 255, 255, 0.5);
-  font-size: 0.44rem;
+  font-size: 0.88rem;
   font-weight: 500;
   background: rgba(5, 20, 36, 0.2);
   border-radius: 999px;
@@ -5324,9 +5324,9 @@ body.modal-open {
 .study-hero .hero-photo-credit {
   right: 14px;
   bottom: 10px;
-  padding: 1px 4px;
+  padding: 2px 8px;
   color: rgba(255, 255, 255, 0.36);
-  font-size: 0.38rem;
+  font-size: 0.76rem;
   font-weight: 500;
   background: rgba(5, 20, 36, 0.14);
   opacity: 0.6;
