@@ -317,7 +317,19 @@ function injectHomepageAnswerCount(html, answerCount) {
 }
 
 function keyTakeaway(answer, perspectivesByAnswer) {
-  return perspectivesByAnswer[answer.id] || answer.shortAnswer;
+  if (perspectivesByAnswer[answer.id]) {
+    return perspectivesByAnswer[answer.id];
+  }
+
+  const sentences = answer.longAnswer.match(/[^.!?]+[.!?]+/g) || [];
+  const shortAnswer = answer.shortAnswer.trim();
+  const firstSentence = sentences[0]?.trim() || answer.longAnswer.trim();
+
+  if (firstSentence === shortAnswer && sentences[1]) {
+    return sentences.slice(0, 2).join(" ").trim();
+  }
+
+  return firstSentence;
 }
 
 function metaDescription(answer) {
@@ -936,7 +948,7 @@ function answerPage(answer, answers, perspectivesByAnswer) {
             <h2>Biblical explanation</h2>
             <p class="lead-answer">${renderAnswerText(answer.longAnswer, answer.topics, usedTopics)}</p>
             <div class="answer-key-takeaway">
-              <p class="eyebrow">Key takeaway</p>
+              <p class="eyebrow">In brief</p>
               <p>${renderAnswerText(takeaway, answer.topics, usedTopics)}</p>
             </div>
             <h2>Bible references</h2>
