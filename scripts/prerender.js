@@ -21,7 +21,7 @@ const SITE_URL = "https://wordoasis.org";
 const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZSB_Tf-MEbTUrmSkEqwNn2gjtxqF4cv16pMCDMmV3voJeJAFhIYBQ/exec";
 const SITE_PUBLISHED_DATE = "2026-09-13";
 const BUILD_DATE = new Date().toISOString().slice(0, 10);
-const STYLES_VERSION = "20261154";
+const STYLES_VERSION = "20261155";
 const EDITORIAL_TEAM_NAME = "Word Oasis Editorial Team";
 const EDITORIAL_TEAM_ID = `${SITE_URL}/about/#editorial-team`;
 
@@ -678,7 +678,7 @@ function studyRecommendationForTopic(topic) {
   };
 }
 
-function bibleStudyInvitation(topic, label = "Continue your Bible study") {
+function bibleStudyInvitation(topic, label = "Go deeper into this topic") {
   const study = studyRecommendationForTopic(topic);
   return `
     <a class="bible-study-invitation" href="/studies/${study.slug}/">
@@ -692,7 +692,7 @@ function bibleStudyInvitation(topic, label = "Continue your Bible study") {
         <small>${escapeHtml(study.title)}</small>
       </span>
       <span class="bible-study-summary-action">
-        Explore study
+        Start the study
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
       </span>
     </a>
@@ -941,7 +941,7 @@ function answerPage(answer, answers, perspectivesByAnswer) {
             </div>
             <h2>Bible references</h2>
             <div class="scriptures">${scripturesHtml(answer.scriptures)}</div>
-            ${bibleStudyInvitation(answer.topics[0] || "Bible Study", "Continue your Bible study") }
+            ${bibleStudyInvitation(answer.topics[0] || "Bible Study")}
             <div class="answer-share-panel" data-answer-share>
               <div class="share-action-group">
                 <span class="promise-share-label">Share this answer</span>
@@ -1310,7 +1310,7 @@ function topicPage(topic, answers, topicIcons, topicDescriptions) {
       </section>
       <section class="section section-soft">
         <div class="container">
-          ${bibleStudyInvitation(topic, "Continue your Bible study")}
+          ${bibleStudyInvitation(topic)}
           <div class="topic-answer-grid">
             ${topicAnswers
               .map(
