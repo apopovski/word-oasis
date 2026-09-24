@@ -3000,6 +3000,33 @@ h1 {
   text-decoration: none;
 }
 
+.bible-study-invitation.cta-reveal-pending {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.bible-study-invitation.cta-revealed {
+  animation: bible-study-cta-arrival 900ms ease-out both;
+}
+
+@keyframes bible-study-cta-arrival {
+  0% {
+    opacity: 0;
+    transform: translateY(14px);
+    box-shadow: 0 12px 28px color-mix(in srgb, var(--brand-dark) 12%, transparent);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: 0 16px 36px color-mix(in srgb, var(--brand-dark) 24%, transparent);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: 0 12px 28px color-mix(in srgb, var(--brand-dark) 12%, transparent);
+  }
+}
+
 .bible-study-invitation:hover,
 .bible-study-invitation:focus-visible {
   background:
@@ -3206,6 +3233,10 @@ h1 {
     grid-column: 1 / -1;
     justify-self: stretch;
     text-align: center;
+  }
+
+  .bible-study-invitation.cta-reveal-pending {
+    transform: translateY(10px);
   }
 
   .bible-study-content {

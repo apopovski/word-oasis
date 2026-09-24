@@ -21,7 +21,7 @@ const SITE_URL = "https://wordoasis.org";
 const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZSB_Tf-MEbTUrmSkEqwNn2gjtxqF4cv16pMCDMmV3voJeJAFhIYBQ/exec";
 const SITE_PUBLISHED_DATE = "2026-09-13";
 const BUILD_DATE = new Date().toISOString().slice(0, 10);
-const STYLES_VERSION = "20261155";
+const STYLES_VERSION = "20261156";
 const EDITORIAL_TEAM_NAME = "Word Oasis Editorial Team";
 const EDITORIAL_TEAM_ID = `${SITE_URL}/about/#editorial-team`;
 
@@ -575,7 +575,7 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
       </div>
     </div>
 
-    <script src="/theme.js?v=20261073"></script>
+    <script src="/theme.js?v=20261156"></script>
     <script src="/pwa.js?v=20261073"></script>
     <script src="/scripture-graphic.js?v=20261073"></script>
     <script src="/local-library.js?v=20261073"></script>

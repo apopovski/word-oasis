@@ -145,4 +145,32 @@
       }
     });
   }
+
+  const studyInvitations = document.querySelectorAll(".bible-study-invitation");
+  const reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+
+  if (studyInvitations.length && !reducedMotion) {
+    studyInvitations.forEach((invitation) => invitation.classList.add("cta-reveal-pending"));
+
+    const revealInvitation = (invitation) => {
+      invitation.classList.remove("cta-reveal-pending");
+      invitation.classList.add("cta-revealed");
+    };
+
+    if ("IntersectionObserver" in window) {
+      const invitationObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            revealInvitation(entry.target);
+            observer.unobserve(entry.target);
+          });
+        },
+        { threshold: 0.25, rootMargin: "0px 0px -8% 0px" }
+      );
+      studyInvitations.forEach((invitation) => invitationObserver.observe(invitation));
+    } else {
+      studyInvitations.forEach(revealInvitation);
+    }
+  }
 })();
