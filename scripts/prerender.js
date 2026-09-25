@@ -21,7 +21,7 @@ const SITE_URL = "https://wordoasis.org";
 const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZSB_Tf-MEbTUrmSkEqwNn2gjtxqF4cv16pMCDMmV3voJeJAFhIYBQ/exec";
 const SITE_PUBLISHED_DATE = "2026-09-13";
 const BUILD_DATE = new Date().toISOString().slice(0, 10);
-const STYLES_VERSION = "20261156";
+const STYLES_VERSION = "20261157";
 const EDITORIAL_TEAM_NAME = "Word Oasis Editorial Team";
 const EDITORIAL_TEAM_ID = `${SITE_URL}/about/#editorial-team`;
 
@@ -580,7 +580,7 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
     <script src="/scripture-graphic.js?v=20261073"></script>
     <script src="/local-library.js?v=20261073"></script>
     <script src="/verse-modal.js?v=20261125"></script>
-    <script src="/site-analytics.js?v=20261085"></script>
+    <script src="/site-analytics.js?v=20261157"></script>
   </body>
 </html>
 `;
@@ -929,7 +929,7 @@ function answerPage(answer, answers, perspectivesByAnswer) {
           <p class="page-intro">${escapeHtml(answer.shortAnswer)}</p>
           <p class="answer-date-meta">Published ${SITE_PUBLISHED_DATE} · Updated ${BUILD_DATE}</p>
           <p class="answer-review-meta">Written and reviewed by the <a href="/about/#editorial-team">${EDITORIAL_TEAM_NAME}</a>. <a href="/about/#editorial-policy">Read our editorial policy</a>.</p>
-          <div class="answer-public-stats" data-answer-public-stats hidden aria-label="Article readership">
+          <div class="answer-public-stats" data-answer-public-stats aria-label="Article views">
             <span>
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"></path>
@@ -937,7 +937,6 @@ function answerPage(answer, answers, perspectivesByAnswer) {
               </svg>
               <strong data-answer-view-count>0</strong> views
             </span>
-            <span><strong data-answer-reader-count>0</strong> readers</span>
           </div>
         </div>
       </section>

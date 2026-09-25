@@ -129,6 +129,7 @@
         throw new Error(result.error || "Article view was not recorded.");
       }
       finishViewRecord(answerId, true);
+      loadPublicStats();
     } catch (error) {
       finishViewRecord(answerId, false);
       console.error("Article readership tracking failed", error);
@@ -136,13 +137,17 @@
   }
 
   function renderAnswerStats(article) {
-    if (!answerStats || !article || !article.views) {
+    if (!answerStats) {
       return;
     }
+    const views = Number(article?.views || 0);
+    const readers = Number(article?.readers || 0);
     answerStats.querySelector("[data-answer-view-count]").textContent =
-      numberFormatter.format(article.views);
-    answerStats.querySelector("[data-answer-reader-count]").textContent =
-      numberFormatter.format(article.readers);
+      numberFormatter.format(views);
+    const readerCount = answerStats.querySelector("[data-answer-reader-count]");
+    if (readerCount) {
+      readerCount.textContent = numberFormatter.format(readers);
+    }
     answerStats.hidden = false;
   }
 

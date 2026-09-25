@@ -2738,7 +2738,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 9px;
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
 .answer-public-stats[hidden] {
@@ -2749,13 +2749,14 @@ h1 {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 7px 11px;
-  color: var(--muted);
-  font-size: 0.82rem;
+  padding: 8px 13px;
+  color: var(--brand-dark);
+  font-size: 0.84rem;
   font-weight: 700;
-  background: color-mix(in srgb, var(--surface) 82%, transparent);
-  border: 1px solid color-mix(in srgb, var(--brand) 14%, var(--border));
+  background: color-mix(in srgb, var(--brand) 11%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--brand) 28%, var(--border));
   border-radius: 999px;
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--brand-dark) 8%, transparent);
 }
 
 .answer-public-stats svg {
