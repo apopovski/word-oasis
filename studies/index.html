@@ -36,6 +36,9 @@
         window.gtag("config", "G-5WRW513RFW");
       }
     </script>
+    <script>
+      window.WORD_OASIS_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyp2hNuPJYtX-CGnZSB_Tf-MEbTUrmSkEqwNn2gjtxqF4cv16pMCDMmV3voJeJAFhIYBQ/exec";
+    </script>
     <link rel="canonical" href="https://wordoasis.org/studies/">
     <link rel="icon" href="/SVG/wordoasis-mark.svg" type="image/svg+xml">
     <link rel="alternate icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -492,6 +495,7 @@
                 <button type="button" class="quiz-retake" data-study-retake>Study it again</button>
                 <button type="button" class="quiz-choose" data-study-back>Choose another study</button>
               </div>
+              <p class="quiz-save-status" role="status" aria-live="polite" data-study-signup-result-status hidden></p>
             </div>
           </article>
         </div>
@@ -612,6 +616,37 @@
           </select>
         </div>
         <div class="verse-modal-body" id="verse-modal-body"></div>
+      </div>
+    </div>
+
+    <div class="verse-modal" data-study-signup-modal role="dialog" aria-modal="true" aria-labelledby="study-signup-title" hidden>
+      <div class="verse-modal-card">
+        <div class="verse-modal-header">
+          <h2 id="study-signup-title" data-study-signup-title>Save your Bible study journey</h2>
+          <button type="button" class="verse-modal-close" data-study-signup-close aria-label="Close sign-up form">
+            &times;
+          </button>
+        </div>
+        <div class="verse-modal-body">
+          <p data-study-signup-message>
+            Share your email so Word Oasis can track your completed lessons and send your next Bible study.
+          </p>
+          <form class="bible-study-form" data-study-signup-form novalidate>
+            <label>
+              Email <small>(required)</small>
+              <input type="email" name="email" autocomplete="email" required placeholder="you@example.com">
+            </label>
+            <label class="bible-study-consent">
+              <input type="checkbox" name="consent" required>
+              <span>I agree that Word Oasis may store my email to record Bible study completion and follow up with next-lesson invites.</span>
+            </label>
+            <div class="quiz-result-actions">
+              <button type="submit" class="bible-study-submit" data-study-signup-submit>Save and continue</button>
+              <button type="button" class="quiz-choose" data-study-signup-skip>Continue as guest</button>
+            </div>
+            <p class="bible-study-status" role="status" aria-live="polite" data-study-signup-status></p>
+          </form>
+        </div>
       </div>
     </div>
 

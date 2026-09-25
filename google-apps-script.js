@@ -50,6 +50,20 @@ var ANALYTICS_HEADER_ROW = [
   'Answer URL'
 ];
 
+var STUDY_FUNNEL_HEADER_ROW = [
+  'Timestamp',
+  'Visitor Hash',
+  'Stage',
+  'Study ID',
+  'Study Title',
+  'Completed Count',
+  'Total Studies',
+  'Email',
+  'Consent',
+  'Source',
+  'Page URL'
+];
+
 function jsonResponse(payload) {
   return ContentService.createTextOutput(JSON.stringify(payload)).setMimeType(
     ContentService.MimeType.JSON
@@ -381,6 +395,66 @@ function handleBibleStudyReferral(payload) {
   });
 }
 
+function handleStudyFunnel(payload) {
+  var stage = String(payload.stage || '').trim();
+  var allowedStages = {
+    'study-started': true,
+    'study-completed': true,
+    'course-completed': true,
+    'signup-submitted': true,
+    'signup-skipped': true
+  };
+  if (!allowedStages[stage]) {
+    return jsonResponse({ success: false, error: 'Invalid study funnel stage.' });
+  }
+
+  var occurredAt = payload.occurredAt || new Date().toISOString();
+  var studyId = String(payload.studyId || '').trim().slice(0, 120);
+  var studyTitle = String(payload.studyTitle || '').trim().slice(0, 180);
+  var completedCount = Number(payload.completedCount || 0);
+  var totalStudies = Number(payload.totalStudies || 0);
+  var source = String(payload.source || 'word-oasis-studies').trim().slice(0, 120);
+  var pageUrl = String(payload.pageUrl || '').trim().slice(0, 300);
+  var visitorToken = String(payload.visitorToken || '').trim().slice(0, 120);
+  var consent = payload.consent === true;
+  var email = consent ? String(payload.email || '').trim().slice(0, 180) : '';
+  var properties = PropertiesService.getScriptProperties();
+  var sheetId = properties.getProperty('SHEET_ID');
+  if (!sheetId) {
+    return jsonResponse({
+      success: false,
+      error: 'Study funnel spreadsheet is not configured.'
+    });
+  }
+
+  try {
+    var spreadsheet = SpreadsheetApp.openById(sheetId);
+    var sheetName =
+      properties.getProperty('STUDY_FUNNEL_SHEET_NAME') || 'Study Funnel';
+    var sheet = spreadsheet.getSheetByName(sheetName) || spreadsheet.insertSheet(sheetName);
+    ensureHeaderRow(sheet, STUDY_FUNNEL_HEADER_ROW);
+    sheet.appendRow([
+      safeSheetValue(occurredAt),
+      visitorToken ? analyticsVisitorHash(visitorToken) : '',
+      safeSheetValue(stage),
+      safeSheetValue(studyId),
+      safeSheetValue(studyTitle),
+      safeSheetValue(Number.isFinite(completedCount) ? Math.max(0, completedCount) : 0),
+      safeSheetValue(Number.isFinite(totalStudies) ? Math.max(0, totalStudies) : 0),
+      safeSheetValue(email || ''),
+      consent ? 'Yes' : 'No',
+      safeSheetValue(source),
+      safeSheetValue(pageUrl)
+    ]);
+    return jsonResponse({ success: true });
+  } catch (error) {
+    return jsonResponse({
+      success: false,
+      error: 'Study funnel logging failed: ' + error
+    });
+  }
+}
+
 function doPost(e) {
   try {
     var raw = e && e.postData && e.postData.contents ? e.postData.contents : '{}';
@@ -391,6 +465,9 @@ function doPost(e) {
     }
     if (payload.eventType === 'article-view') {
       return handleArticleView(payload);
+    }
+    if (payload.eventType === 'study-funnel') {
+      return handleStudyFunnel(payload);
     }
 
     var question = String(payload.question || '').trim();

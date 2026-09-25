@@ -71,6 +71,7 @@ In the Google Apps Script project, set these script properties:
 - `SHEET_NAME` = the worksheet name (for example, `Questions`)
 - `REFERRAL_SHEET_NAME` = the worksheet for Bible-study referrals (defaults to `Bible Study Referrals`)
 - `ANALYTICS_SHEET_NAME` = the worksheet for anonymous article views (defaults to `Article Analytics`)
+- `STUDY_FUNNEL_SHEET_NAME` = the worksheet for Bible study started/completed/signup events (defaults to `Study Funnel`)
 - `ANALYTICS_SALT` = a private random value used when hashing anonymous browser identifiers
 - `EMAIL_TO` = the inbox that should receive the notification email
 
@@ -84,6 +85,10 @@ You can add them in Apps Script by going to Project settings > Script properties
 - Open any generated answer page, expand “Want to go deeper into God's Word?”, and submit a test referral.
 - Confirm it appears in the `Bible Study Referrals` worksheet before the browser continues to Amazing Bible Studies.
 - Keep an answer page visible for at least eight seconds and confirm a hashed row appears in the `Article Analytics` worksheet.
+- Open `/studies/`, start one study, and complete it.
+- Confirm `Study Funnel` records a `study-started` event and a `study-completed` event.
+- Submit the optional study signup prompt and confirm a `signup-submitted` row appears with consent `Yes`.
+- Complete all studies and confirm `course-completed` is recorded.
 - Visit `/answers/` and confirm the aggregate readership and most-read answers appear.
 
 The referral worksheet records a visitor who requested to continue to the
@@ -92,6 +97,11 @@ finished enrolling because Amazing Facts does not provide Word Oasis with a
 completion callback. Name and email are required for identifying a referral;
 age range, gender, country, and faith background are optional. The form
 requires explicit consent before Word Oasis stores these details.
+
+On `/studies/`, visitors can start as guests with no signup wall. After a
+first completion, Word Oasis offers an optional email signup to track progress
+and send next-lesson invitations. The completion certificate is gated behind
+this signup step so completion milestones can be linked to one contact.
 
 ## Public readership analytics
 
