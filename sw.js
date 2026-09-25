@@ -1,4 +1,4 @@
-const CACHE_VERSION = "word-oasis-v89";
+const CACHE_VERSION = "word-oasis-v90";
 const PAGE_CACHE = `${CACHE_VERSION}-pages`;
 const ASSET_CACHE = `${CACHE_VERSION}-assets`;
 const BIBLE_CACHE = `${CACHE_VERSION}-bible`;
@@ -51,6 +51,8 @@ const APP_SHELL = [
   "/bible-study-referral.js",
   "/site-analytics.js",
   "/tracking-preferences.js",
+  "/daily-devotional.js",
+  "/daily-devotional.json",
   "/site.webmanifest?v=20261048",
   "/word-oasis.svg",
   "/SVG/wordoasis-mark.svg",

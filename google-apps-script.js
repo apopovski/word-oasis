@@ -50,6 +50,18 @@ var ANALYTICS_HEADER_ROW = [
   'Answer URL'
 ];
 
+var DAILY_DEVOTIONALS_HEADER_ROW = [
+  'Date',
+  'Title',
+  'Scripture',
+  'Reference',
+  'Body',
+  'Prayer',
+  'CTA Text',
+  'CTA URL',
+  'Published'
+];
+
 var STUDY_FUNNEL_HEADER_ROW = [
   'Timestamp',
   'Visitor Hash',
@@ -125,6 +137,127 @@ function analyticsVisitorHash(visitorToken) {
       return ('0' + value.toString(16)).slice(-2);
     })
     .join('');
+}
+
+function isoDateFromValue(value) {
+  if (!value && value !== 0) return '';
+  if (Object.prototype.toString.call(value) === '[object Date]' && !isNaN(value.getTime())) {
+    return Utilities.formatDate(value, Session.getScriptTimeZone(), 'yyyy-MM-dd');
+  }
+  var text = String(value).trim();
+  if (!text) return '';
+  var yyyyMmDd = text.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (yyyyMmDd) return yyyyMmDd[0];
+  var parsed = new Date(text);
+  if (isNaN(parsed.getTime())) return '';
+  return Utilities.formatDate(parsed, Session.getScriptTimeZone(), 'yyyy-MM-dd');
+}
+
+function todayIsoDate() {
+  return Utilities.formatDate(new Date(), Session.getScriptTimeZone(), 'yyyy-MM-dd');
+}
+
+function rowToMap(headers, row) {
+  var map = {};
+  headers.forEach(function (header, index) {
+    map[String(header || '').trim().toLowerCase()] = row[index];
+  });
+  return map;
+}
+
+function firstValue(map, keys) {
+  for (var index = 0; index < keys.length; index += 1) {
+    if (Object.prototype.hasOwnProperty.call(map, keys[index])) {
+      return map[keys[index]];
+    }
+  }
+  return '';
+}
+
+function handleDailyDevotionals() {
+  var properties = PropertiesService.getScriptProperties();
+  var sheetId = properties.getProperty('SHEET_ID');
+  if (!sheetId) {
+    return jsonResponse({
+      success: false,
+      error: 'Devotional spreadsheet is not configured.'
+    });
+  }
+
+  var sheetName =
+    properties.getProperty('DAILY_DEVOTIONALS_SHEET_NAME') || 'Daily Devotionals';
+
+  try {
+    var spreadsheet = SpreadsheetApp.openById(sheetId);
+    var sheet = spreadsheet.getSheetByName(sheetName) || spreadsheet.insertSheet(sheetName);
+    ensureHeaderRow(sheet, DAILY_DEVOTIONALS_HEADER_ROW);
+
+    if (sheet.getLastRow() <= 1) {
+      return jsonResponse({ success: true, today: todayIsoDate(), selected: null, entries: [] });
+    }
+
+    var values = sheet
+      .getRange(1, 1, sheet.getLastRow(), sheet.getLastColumn())
+      .getValues();
+    var headers = values[0].map(function (header) {
+      return String(header || '').trim();
+    });
+    var entries = values
+      .slice(1)
+      .map(function (row) {
+        var mapped = rowToMap(headers, row);
+        var date = isoDateFromValue(firstValue(mapped, ['date', 'publish date', 'day']));
+        var publishedValue = String(firstValue(mapped, ['published', 'is published']) || '').trim().toLowerCase();
+        var isPublished = !publishedValue || ['yes', 'true', '1', 'published', 'y'].indexOf(publishedValue) !== -1;
+        if (!isPublished || !date) return null;
+        return {
+          date: date,
+          title: String(firstValue(mapped, ['title']) || '').trim(),
+          scripture: String(firstValue(mapped, ['scripture', 'verse']) || '').trim(),
+          reference: String(firstValue(mapped, ['reference']) || '').trim(),
+          body: String(firstValue(mapped, ['body', 'devotional', 'reflection']) || '').trim(),
+          prayer: String(firstValue(mapped, ['prayer']) || '').trim(),
+          ctaText: String(firstValue(mapped, ['cta text', 'cta']) || '').trim(),
+          ctaUrl: String(firstValue(mapped, ['cta url', 'url']) || '').trim()
+        };
+      })
+      .filter(function (entry) {
+        return entry && (entry.body || entry.scripture);
+      })
+      .sort(function (first, second) {
+        return first.date.localeCompare(second.date);
+      });
+
+    var today = todayIsoDate();
+    var selected = null;
+    for (var idx = 0; idx < entries.length; idx += 1) {
+      if (entries[idx].date === today) {
+        selected = entries[idx];
+        break;
+      }
+    }
+    if (!selected) {
+      for (var reverse = entries.length - 1; reverse >= 0; reverse -= 1) {
+        if (entries[reverse].date <= today) {
+          selected = entries[reverse];
+          break;
+        }
+      }
+    }
+    if (!selected && entries.length) selected = entries[0];
+
+    return jsonResponse({
+      success: true,
+      today: today,
+      selected: selected,
+      entries: entries
+    });
+  } catch (error) {
+    return jsonResponse({
+      success: false,
+      error: 'Daily devotional feed failed: ' + error
+    });
+  }
 }
 
 function handleArticleView(payload) {
@@ -603,6 +736,9 @@ function doGet(e) {
     return publicArticleStats(
       e && e.parameter ? String(e.parameter.answerId || '') : ''
     );
+  }
+  if (action === 'daily-devotionals') {
+    return handleDailyDevotionals();
   }
   return jsonResponse({ ok: true, message: 'Word Oasis form endpoint is ready.' });
 }

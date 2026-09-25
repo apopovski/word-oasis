@@ -72,6 +72,7 @@ In the Google Apps Script project, set these script properties:
 - `REFERRAL_SHEET_NAME` = the worksheet for Bible-study referrals (defaults to `Bible Study Referrals`)
 - `ANALYTICS_SHEET_NAME` = the worksheet for anonymous article views (defaults to `Article Analytics`)
 - `STUDY_FUNNEL_SHEET_NAME` = the worksheet for Bible study started/completed/signup events (defaults to `Study Funnel`)
+- `DAILY_DEVOTIONALS_SHEET_NAME` = the worksheet for homepage devotionals (defaults to `Daily Devotionals`)
 - `ANALYTICS_SALT` = a private random value used when hashing anonymous browser identifiers
 - `EMAIL_TO` = the inbox that should receive the notification email
 
@@ -89,6 +90,7 @@ You can add them in Apps Script by going to Project settings > Script properties
 - Confirm `Study Funnel` records a `study-started` event and a `study-completed` event.
 - Submit the optional study signup prompt and confirm a `signup-submitted` row appears with consent `Yes`.
 - Complete all studies and confirm `course-completed` is recorded.
+- Open `https://.../exec?action=daily-devotionals` and confirm it returns `success: true` plus devotional entries.
 - Visit `/answers/` and confirm the aggregate readership and most-read answers appear.
 
 The referral worksheet records a visitor who requested to continue to the
@@ -102,6 +104,41 @@ On `/studies/`, visitors can start as guests with no signup wall. After a
 first completion, Word Oasis offers an optional email signup to track progress
 and send next-lesson invitations. The completion certificate is gated behind
 this signup step so completion milestones can be linked to one contact.
+
+## Daily devotional automation
+
+Word Oasis can auto-publish a homepage devotional from Google Sheets without
+manual daily edits.
+
+### Sheet structure (`Daily Devotionals`)
+
+Use a worksheet with this header row:
+
+`Date | Title | Scripture | Reference | Body | Prayer | CTA Text | CTA URL | Published`
+
+- `Date` should be `YYYY-MM-DD`.
+- `Body` or `Scripture` is required for each row.
+- `Published` can be blank/yes/true/1 to include a row.
+- `CTA URL` should be a site-relative URL (example: `/studies/`).
+
+The endpoint action `?action=daily-devotionals` returns all published entries,
+selects today’s devotional when available, and otherwise falls back to the
+latest published date.
+
+### Scheduled sync workflow
+
+The workflow `.github/workflows/sync-daily-devotional.yml` runs daily and
+updates `/daily-devotional.json` by calling the Apps Script endpoint.
+
+- Optional repository secret: `WORD_OASIS_FORM_ENDPOINT`
+  - If set, the workflow uses it.
+  - If not set, the sync script falls back to the endpoint URL in the script.
+
+You can also run manually:
+
+```bash
+node scripts/sync-daily-devotional.js
+```
 
 ## Public readership analytics
 
