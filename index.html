@@ -1267,14 +1267,34 @@
 
         let homepageScriptRequested = false;
 
-        function loadHomepageScript() {
+        async function loadHomepageScript() {
           if (homepageScriptRequested) {
             return;
           }
           homepageScriptRequested = true;
-          const script = document.createElement("script");
-          script.src = "script.js?v=20261137";
-          document.body.append(script);
+          try {
+            const response = await fetch("answers-data.json", { cache: "no-cache" });
+            if (!response.ok) {
+              throw new Error(`Could not load Bible answers (${response.status}).`);
+            }
+            const answers = await response.json();
+            if (!Array.isArray(answers)) {
+              throw new TypeError("Bible answers data is not an array.");
+            }
+            window.WORD_OASIS_ANSWERS = answers;
+            const script = document.createElement("script");
+            script.src = "script.js?v=20261158";
+            script.onerror = () => {
+              console.error("Could not load interactive Bible answers.");
+              document.querySelector("#result-meta").textContent =
+                "Could not load interactive Bible answers. Please refresh the page.";
+            };
+            document.body.append(script);
+          } catch (error) {
+            console.error("Could not load interactive Bible answers.", error);
+            document.querySelector("#result-meta").textContent =
+              "Could not load interactive Bible answers. Please refresh the page.";
+          }
         }
 
         ["pointerdown", "keydown", "touchstart", "mousemove"].forEach((eventName) => {

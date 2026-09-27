@@ -1,0 +1,70 @@
+name: Publish Bible answer edits
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - answers-data.json
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: publish-pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install build dependencies
+        run: npm ci
+
+      - name: Regenerate answer and topic pages
+        run: npm run prerender
+
+      - name: Commit generated pages
+        run: |
+          git add index.html answers topics sitemap.xml
+          if git diff --cached --quiet; then
+            echo "Generated pages already match the answer data."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Regenerate pages from Bible answer edits"
+            git push origin HEAD:main
+          fi
+
+      - name: Prepare website files
+        run: |
+          mkdir _site
+          git ls-files -z | tar --null -T - -cf - | tar -xf - -C _site
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4

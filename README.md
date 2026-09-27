@@ -161,24 +161,42 @@ A healthy endpoint returns JSON such as `{"success":true,...}`. Anything else
 - Apps Script's `ContentService` cannot set custom response headers, so the
   script must not call `setHeader`. Doing so throws and breaks every request.
 
-# SEO: keeping content crawlable
+# Editing Bible answers
 
-The Bible Q&A library, topic filters, and question-form topic list in
-`script.js` are rendered into the DOM at runtime. So that search engines and
-AI crawlers that do not execute JavaScript still see the full content, a
-build step (`scripts/prerender.js`) runs the site's own script inside a real
-DOM (via jsdom) and bakes the resulting markup into `index.html`, between
-`<!-- prerender:* -->` marker comments. It also regenerates the `FAQPage`
-JSON-LD block in `<head>` from the same answer data.
+All questions and their answers are in **[`answers-data.json`](answers-data.json)**.
+Search for a question (for example, `Can Demons Possess Christians?`), then
+edit its `shortAnswer` (the summary below the title) or `longAnswer` (the
+article's Biblical explanation). Each entry also lists `topics`, `scriptures`,
+and `keywords`. Keep the JSON punctuation (`"`, commas, and brackets) intact.
+You can reword `question` without changing the URL: leave `slug` and `id`
+unchanged to preserve links and saved references. The separate editorial "In brief" perspectives,
+where present, live in `script.js` under `perspectivesByAnswer`.
 
-**Whenever you add, edit, or remove a Bible Q&A entry in `script.js`,
-re-run the prerender step and commit the updated `index.html`:**
+The homepage fetches this file when visitors use the interactive Q&A tools.
+The build step (`scripts/prerender.js`) reads the **same file** to generate
+the homepage, answer-directory, individual answer pages, topic pages, and
+sitemap. This keeps article content visible to search engines without
+requiring them to run JavaScript. Do not edit generated answer pages directly:
+the next build will replace those edits.
+
+**Editing through the GitHub app:** save and commit your edit to
+`answers-data.json` on `main`. The "Publish Bible answer edits" GitHub
+Actions workflow validates the JSON, regenerates the pages, commits them,
+and publishes the site. No manual rebuild is needed. To enable automatic
+publishing, set **Settings > Pages > Build and deployment > Source** to
+**GitHub Actions** once. Ensure Actions is allowed to deploy to the
+`github-pages` environment. A failed build is shown in the Actions tab and
+does not replace the published site. The scheduled hero-photo sync workflow
+also deploys the updated website under this Pages setting. If the first run
+fails because Pages still uses branch publishing, switch the source and run
+"Publish Bible answer edits" from the Actions tab with **Run workflow**.
+
+For local edits, run:
 
 ```bash
-npm install   # first time only, installs jsdom as a dev dependency
+npm ci
 npm run prerender
 ```
 
-This is safe to run repeatedly — it fully regenerates the static content
-between the markers each time, and `script.js` re-renders the identical
-markup on page load, so nothing changes for visitors.
+Commit the source and regenerated pages together when editing locally. The
+build checks required fields and duplicate page URLs before writing pages.

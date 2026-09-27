@@ -1,4 +1,4 @@
-const CACHE_VERSION = "word-oasis-v89";
+const CACHE_VERSION = "word-oasis-v90";
 const PAGE_CACHE = `${CACHE_VERSION}-pages`;
 const ASSET_CACHE = `${CACHE_VERSION}-assets`;
 const BIBLE_CACHE = `${CACHE_VERSION}-bible`;
@@ -41,6 +41,7 @@ const APP_SHELL = [
   "/theme.js",
   "/pwa.js",
   "/script.js",
+  "/answers-data.json",
   "/quizzes.js",
   "/studies.js",
   "/studies-hero-rotation.js",
@@ -114,6 +115,11 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(request.url);
   if (request.mode === "navigate") {
     event.respondWith(networkFirst(request, PAGE_CACHE, "/offline.html"));
+    return;
+  }
+
+  if (url.origin === self.location.origin && url.pathname === "/answers-data.json") {
+    event.respondWith(networkFirst(request, ASSET_CACHE));
     return;
   }
 

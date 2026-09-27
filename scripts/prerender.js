@@ -15,6 +15,7 @@ const { JSDOM } = require("jsdom");
 const ROOT = path.join(__dirname, "..");
 const INDEX_PATH = path.join(ROOT, "index.html");
 const SCRIPT_PATH = path.join(ROOT, "script.js");
+const ANSWERS_PATH = path.join(ROOT, "answers-data.json");
 const BIBLE_INDEX_PATH = path.join(ROOT, "bible", "index.html");
 const BIBLE_READER_PATH = path.join(ROOT, "bible-reader.js");
 const SITE_URL = "https://wordoasis.org";
@@ -24,32 +25,6 @@ const BUILD_DATE = new Date().toISOString().slice(0, 10);
 const STYLES_VERSION = "20261157";
 const EDITORIAL_TEAM_NAME = "Word Oasis Editorial Team";
 const EDITORIAL_TEAM_ID = `${SITE_URL}/about/#editorial-team`;
-
-function extractAnswersData(scriptSource) {
-  const start = scriptSource.indexOf("const answers = [");
-  if (start === -1) {
-    throw new Error("Could not find `const answers = [` in script.js");
-  }
-  const arrayStart = scriptSource.indexOf("[", start);
-  let depth = 0;
-  let end = -1;
-  for (let i = arrayStart; i < scriptSource.length; i += 1) {
-    const char = scriptSource[i];
-    if (char === "[") depth += 1;
-    if (char === "]") {
-      depth -= 1;
-      if (depth === 0) {
-        end = i + 1;
-        break;
-      }
-    }
-  }
-  if (end === -1) {
-    throw new Error("Could not find end of answers array in script.js");
-  }
-  // eslint-disable-next-line no-eval
-  return eval(scriptSource.slice(arrayStart, end));
-}
 
 function extractArrayData(source, constName) {
   const start = source.indexOf(`const ${constName} = [`);
@@ -128,7 +103,7 @@ function slugify(value) {
 }
 
 function answerPath(answer) {
-  return `/answers/${slugify(answer.question)}/`;
+  return `/answers/${answer.slug}/`;
 }
 
 function topicPath(topic) {
@@ -239,7 +214,7 @@ function buildTopicListJsonLd(answers) {
   );
 }
 
-function renderWithJsdom(html, scriptSource) {
+function renderWithJsdom(html, scriptSource, answers) {
   const htmlWithoutAppScript = html.replace(
     /\s*<script src="script\.js(?:\?[^"]*)?"><\/script>\s*/,
     "\n"
@@ -260,6 +235,7 @@ function renderWithJsdom(html, scriptSource) {
     window.matchMedia = () => ({ matches: false, addListener() {}, removeListener() {} });
   }
   window.WORD_OASIS_PRERENDER = true;
+  window.WORD_OASIS_ANSWERS = answers;
 
   window.eval(scriptSource);
 
@@ -1644,7 +1620,32 @@ function main() {
   const html = fs.readFileSync(INDEX_PATH, "utf8");
   const scriptSource = fs.readFileSync(SCRIPT_PATH, "utf8");
   const bibleReaderSource = fs.readFileSync(BIBLE_READER_PATH, "utf8");
-  const answers = extractAnswersData(scriptSource);
+  const answers = JSON.parse(fs.readFileSync(ANSWERS_PATH, "utf8"));
+  if (!Array.isArray(answers)) {
+    throw new TypeError("answers-data.json must contain an array of Bible answers");
+  }
+  const ids = new Set();
+  const slugs = new Set();
+  answers.forEach((answer, index) => {
+    if (!answer || typeof answer !== "object" ||
+        !/^answer-[a-z0-9-]+$/.test(answer.id) ||
+        !/^[-a-z0-9]+$/.test(answer.slug) ||
+        !["question", "shortAnswer", "longAnswer", "category"].every((field) =>
+          typeof answer[field] === "string" && answer[field].trim()) ||
+        !Array.isArray(answer.topics) || !answer.topics.length ||
+        !answer.topics.every((topic) => typeof topic === "string" && topic.trim()) ||
+        !Array.isArray(answer.scriptures) ||
+        !answer.scriptures.every((ref) => typeof ref === "string" && ref.trim()) ||
+        !Array.isArray(answer.keywords) ||
+        !answer.keywords.every((keyword) => typeof keyword === "string")) {
+      throw new TypeError(`Invalid answer at index ${index} in answers-data.json`);
+    }
+    if (ids.has(answer.id) || slugs.has(answer.slug)) {
+      throw new Error(`Duplicate answer ID or question URL in answers-data.json: ${answer.question}`);
+    }
+    ids.add(answer.id);
+    slugs.add(answer.slug);
+  });
   const perspectivesByAnswer = extractConstData(scriptSource, "perspectivesByAnswer");
   const topicIcons = extractConstData(scriptSource, "topicIcons");
   const topicDescriptions = extractConstData(scriptSource, "topicDescriptions");
@@ -1652,7 +1653,8 @@ function main() {
 
   const { topicGridHtml, answersListHtml, resultMetaText, spotlightBodyHtml, questionTopicOptions } = renderWithJsdom(
     html,
-    scriptSource
+    scriptSource,
+    answers
   );
 
   let output = html;

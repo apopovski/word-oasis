@@ -18,10 +18,19 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: publish-pages
+  cancel-in-progress: false
 
 jobs:
   sync:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -45,8 +54,25 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if git diff --quiet && git diff --cached --quiet; then
             echo "No changes to commit."
-            exit 0
+          else
+            git add -A
+            git commit -m "Sync Bible Studies hero photos from Unsplash"
+            git push
           fi
-          git add -A
-          git commit -m "Sync Bible Studies hero photos from Unsplash"
-          git push
+
+      - name: Prepare website files
+        run: |
+          mkdir _site
+          git ls-files -z | tar --null -T - -cf - | tar -xf - -C _site
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
