@@ -50,6 +50,32 @@ var ANALYTICS_HEADER_ROW = [
   'Answer URL'
 ];
 
+var DAILY_DEVOTIONALS_HEADER_ROW = [
+  'Date',
+  'Title',
+  'Scripture',
+  'Reference',
+  'Body',
+  'Prayer',
+  'CTA Text',
+  'CTA URL',
+  'Published'
+];
+
+var STUDY_FUNNEL_HEADER_ROW = [
+  'Timestamp',
+  'Visitor Hash',
+  'Stage',
+  'Study ID',
+  'Study Title',
+  'Completed Count',
+  'Total Studies',
+  'Email',
+  'Consent',
+  'Source',
+  'Page URL'
+];
+
 function jsonResponse(payload) {
   return ContentService.createTextOutput(JSON.stringify(payload)).setMimeType(
     ContentService.MimeType.JSON
@@ -111,6 +137,127 @@ function analyticsVisitorHash(visitorToken) {
       return ('0' + value.toString(16)).slice(-2);
     })
     .join('');
+}
+
+function isoDateFromValue(value) {
+  if (!value && value !== 0) return '';
+  if (Object.prototype.toString.call(value) === '[object Date]' && !isNaN(value.getTime())) {
+    return Utilities.formatDate(value, Session.getScriptTimeZone(), 'yyyy-MM-dd');
+  }
+  var text = String(value).trim();
+  if (!text) return '';
+  var yyyyMmDd = text.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (yyyyMmDd) return yyyyMmDd[0];
+  var parsed = new Date(text);
+  if (isNaN(parsed.getTime())) return '';
+  return Utilities.formatDate(parsed, Session.getScriptTimeZone(), 'yyyy-MM-dd');
+}
+
+function todayIsoDate() {
+  return Utilities.formatDate(new Date(), Session.getScriptTimeZone(), 'yyyy-MM-dd');
+}
+
+function rowToMap(headers, row) {
+  var map = {};
+  headers.forEach(function (header, index) {
+    map[String(header || '').trim().toLowerCase()] = row[index];
+  });
+  return map;
+}
+
+function firstValue(map, keys) {
+  for (var index = 0; index < keys.length; index += 1) {
+    if (Object.prototype.hasOwnProperty.call(map, keys[index])) {
+      return map[keys[index]];
+    }
+  }
+  return '';
+}
+
+function handleDailyDevotionals() {
+  var properties = PropertiesService.getScriptProperties();
+  var sheetId = properties.getProperty('SHEET_ID');
+  if (!sheetId) {
+    return jsonResponse({
+      success: false,
+      error: 'Devotional spreadsheet is not configured.'
+    });
+  }
+
+  var sheetName =
+    properties.getProperty('DAILY_DEVOTIONALS_SHEET_NAME') || 'Daily Devotionals';
+
+  try {
+    var spreadsheet = SpreadsheetApp.openById(sheetId);
+    var sheet = spreadsheet.getSheetByName(sheetName) || spreadsheet.insertSheet(sheetName);
+    ensureHeaderRow(sheet, DAILY_DEVOTIONALS_HEADER_ROW);
+
+    if (sheet.getLastRow() <= 1) {
+      return jsonResponse({ success: true, today: todayIsoDate(), selected: null, entries: [] });
+    }
+
+    var values = sheet
+      .getRange(1, 1, sheet.getLastRow(), sheet.getLastColumn())
+      .getValues();
+    var headers = values[0].map(function (header) {
+      return String(header || '').trim();
+    });
+    var entries = values
+      .slice(1)
+      .map(function (row) {
+        var mapped = rowToMap(headers, row);
+        var date = isoDateFromValue(firstValue(mapped, ['date', 'publish date', 'day']));
+        var publishedValue = String(firstValue(mapped, ['published', 'is published']) || '').trim().toLowerCase();
+        var isPublished = !publishedValue || ['yes', 'true', '1', 'published', 'y'].indexOf(publishedValue) !== -1;
+        if (!isPublished || !date) return null;
+        return {
+          date: date,
+          title: String(firstValue(mapped, ['title']) || '').trim(),
+          scripture: String(firstValue(mapped, ['scripture', 'verse']) || '').trim(),
+          reference: String(firstValue(mapped, ['reference']) || '').trim(),
+          body: String(firstValue(mapped, ['body', 'devotional', 'reflection']) || '').trim(),
+          prayer: String(firstValue(mapped, ['prayer']) || '').trim(),
+          ctaText: String(firstValue(mapped, ['cta text', 'cta']) || '').trim(),
+          ctaUrl: String(firstValue(mapped, ['cta url', 'url']) || '').trim()
+        };
+      })
+      .filter(function (entry) {
+        return entry && (entry.body || entry.scripture);
+      })
+      .sort(function (first, second) {
+        return first.date.localeCompare(second.date);
+      });
+
+    var today = todayIsoDate();
+    var selected = null;
+    for (var idx = 0; idx < entries.length; idx += 1) {
+      if (entries[idx].date === today) {
+        selected = entries[idx];
+        break;
+      }
+    }
+    if (!selected) {
+      for (var reverse = entries.length - 1; reverse >= 0; reverse -= 1) {
+        if (entries[reverse].date <= today) {
+          selected = entries[reverse];
+          break;
+        }
+      }
+    }
+    if (!selected && entries.length) selected = entries[0];
+
+    return jsonResponse({
+      success: true,
+      today: today,
+      selected: selected,
+      entries: entries
+    });
+  } catch (error) {
+    return jsonResponse({
+      success: false,
+      error: 'Daily devotional feed failed: ' + error
+    });
+  }
 }
 
 function handleArticleView(payload) {
@@ -381,6 +528,66 @@ function handleBibleStudyReferral(payload) {
   });
 }
 
+function handleStudyFunnel(payload) {
+  var stage = String(payload.stage || '').trim();
+  var allowedStages = {
+    'study-started': true,
+    'study-completed': true,
+    'course-completed': true,
+    'signup-submitted': true,
+    'signup-skipped': true
+  };
+  if (!allowedStages[stage]) {
+    return jsonResponse({ success: false, error: 'Invalid study funnel stage.' });
+  }
+
+  var occurredAt = payload.occurredAt || new Date().toISOString();
+  var studyId = String(payload.studyId || '').trim().slice(0, 120);
+  var studyTitle = String(payload.studyTitle || '').trim().slice(0, 180);
+  var completedCount = Number(payload.completedCount || 0);
+  var totalStudies = Number(payload.totalStudies || 0);
+  var source = String(payload.source || 'word-oasis-studies').trim().slice(0, 120);
+  var pageUrl = String(payload.pageUrl || '').trim().slice(0, 300);
+  var visitorToken = String(payload.visitorToken || '').trim().slice(0, 120);
+  var consent = payload.consent === true;
+  var email = consent ? String(payload.email || '').trim().slice(0, 180) : '';
+  var properties = PropertiesService.getScriptProperties();
+  var sheetId = properties.getProperty('SHEET_ID');
+  if (!sheetId) {
+    return jsonResponse({
+      success: false,
+      error: 'Study funnel spreadsheet is not configured.'
+    });
+  }
+
+  try {
+    var spreadsheet = SpreadsheetApp.openById(sheetId);
+    var sheetName =
+      properties.getProperty('STUDY_FUNNEL_SHEET_NAME') || 'Study Funnel';
+    var sheet = spreadsheet.getSheetByName(sheetName) || spreadsheet.insertSheet(sheetName);
+    ensureHeaderRow(sheet, STUDY_FUNNEL_HEADER_ROW);
+    sheet.appendRow([
+      safeSheetValue(occurredAt),
+      visitorToken ? analyticsVisitorHash(visitorToken) : '',
+      safeSheetValue(stage),
+      safeSheetValue(studyId),
+      safeSheetValue(studyTitle),
+      safeSheetValue(Number.isFinite(completedCount) ? Math.max(0, completedCount) : 0),
+      safeSheetValue(Number.isFinite(totalStudies) ? Math.max(0, totalStudies) : 0),
+      safeSheetValue(email || ''),
+      consent ? 'Yes' : 'No',
+      safeSheetValue(source),
+      safeSheetValue(pageUrl)
+    ]);
+    return jsonResponse({ success: true });
+  } catch (error) {
+    return jsonResponse({
+      success: false,
+      error: 'Study funnel logging failed: ' + error
+    });
+  }
+}
+
 function doPost(e) {
   try {
     var raw = e && e.postData && e.postData.contents ? e.postData.contents : '{}';
@@ -391,6 +598,9 @@ function doPost(e) {
     }
     if (payload.eventType === 'article-view') {
       return handleArticleView(payload);
+    }
+    if (payload.eventType === 'study-funnel') {
+      return handleStudyFunnel(payload);
     }
 
     var question = String(payload.question || '').trim();
@@ -526,6 +736,9 @@ function doGet(e) {
     return publicArticleStats(
       e && e.parameter ? String(e.parameter.answerId || '') : ''
     );
+  }
+  if (action === 'daily-devotionals') {
+    return handleDailyDevotionals();
   }
   return jsonResponse({ ok: true, message: 'Word Oasis form endpoint is ready.' });
 }

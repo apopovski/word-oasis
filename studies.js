@@ -525,6 +525,7 @@
     resultGoingDeeperIntro: player.querySelector("[data-study-going-deeper-intro]"),
     resultGoingDeeperList: player.querySelector("[data-study-going-deeper-list]"),
     resultCertificateBanner: player.querySelector("[data-study-certificate-banner]"),
+    resultSignupStatus: player.querySelector("[data-study-signup-result-status]"),
     retake: player.querySelector("[data-study-retake]"),
     progressBanner: directory.querySelector("[data-study-progress-banner]"),
     progressText: directory.querySelector("[data-study-progress-text]"),
@@ -536,7 +537,16 @@
     diplomaList: document.querySelector("[data-diploma-list]"),
     translationSelect: player.querySelector("[data-study-translation]"),
     copyLink: player.querySelector("[data-study-copy-link]"),
-    copyLinkLabel: player.querySelector("[data-study-copy-link-label]")
+    copyLinkLabel: player.querySelector("[data-study-copy-link-label]"),
+    signupModal: document.querySelector("[data-study-signup-modal]"),
+    signupTitle: document.querySelector("[data-study-signup-title]"),
+    signupMessage: document.querySelector("[data-study-signup-message]"),
+    signupForm: document.querySelector("[data-study-signup-form]"),
+    signupEmail: document.querySelector("[data-study-signup-form] input[name='email']"),
+    signupConsent: document.querySelector("[data-study-signup-form] input[name='consent']"),
+    signupSubmit: document.querySelector("[data-study-signup-submit]"),
+    signupSkip: document.querySelector("[data-study-signup-skip]"),
+    signupStatus: document.querySelector("[data-study-signup-status]")
   };
 
   let activeStudy = null;
@@ -551,7 +561,119 @@
   const TRANSLATION_KEY = "word-oasis-bible-translation";
   const LEGACY_TRANSLATION_KEY = "word-oasis-promise-translation";
   const STUDY_MODE_KEY = "word-oasis-study-mode";
+  const STUDY_EMAIL_KEY = "word-oasis-study-email";
+  const STUDY_VISITOR_KEY = "word-oasis-study-visitor";
+  const STUDY_STARTED_PREFIX = "word-oasis-study-started:";
   const KNOWN_TRANSLATIONS = ["web", "kjv", "asv"];
+  const endpoint = window.WORD_OASIS_FORM_ENDPOINT || "";
+
+  let signupContext = null;
+
+  function track(eventName, parameters = {}) {
+    if (typeof window.gtag === "function") {
+      window.gtag("event", eventName, parameters);
+    }
+  }
+
+  function safeStudyVisitorToken() {
+    try {
+      const existing = localStorage.getItem(STUDY_VISITOR_KEY);
+      if (existing) return existing;
+      const token = typeof crypto.randomUUID === "function"
+        ? crypto.randomUUID()
+        : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+      localStorage.setItem(STUDY_VISITOR_KEY, token);
+      return token;
+    } catch (error) {
+      return "";
+    }
+  }
+
+  function getSavedStudyEmail() {
+    try {
+      return String(localStorage.getItem(STUDY_EMAIL_KEY) || "").trim();
+    } catch (error) {
+      return "";
+    }
+  }
+
+  function saveStudyEmail(email) {
+    try {
+      localStorage.setItem(STUDY_EMAIL_KEY, email);
+    } catch (error) {
+      // Ignore storage errors.
+    }
+  }
+
+  function hasStudySignup() {
+    return Boolean(getSavedStudyEmail());
+  }
+
+  function showSignupResultStatus(message) {
+    if (!elements.resultSignupStatus) return;
+    elements.resultSignupStatus.textContent = message;
+    elements.resultSignupStatus.hidden = !message;
+  }
+
+  async function postStudyFunnelEvent(payload) {
+    if (!endpoint) return;
+    const response = await fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(payload),
+      keepalive: true
+    });
+    const text = await response.text();
+    let result;
+    try {
+      result = JSON.parse(text);
+    } catch (error) {
+      throw new Error("Invalid tracking response.");
+    }
+    if (!response.ok || result.success === false) {
+      throw new Error(result.error || "Tracking request failed.");
+    }
+  }
+
+  function queueStudyFunnelEvent(stage, extra = {}) {
+    const completed = getCompletedStudies();
+    const payload = {
+      eventType: "study-funnel",
+      stage,
+      studyId: activeStudy?.id || "",
+      studyTitle: activeStudy?.title || "",
+      completedCount: completed.length,
+      totalStudies: studies.length,
+      visitorToken: safeStudyVisitorToken(),
+      email: getSavedStudyEmail(),
+      consent: hasStudySignup(),
+      source: "word-oasis-studies",
+      pageUrl: window.location.href,
+      occurredAt: new Date().toISOString(),
+      ...extra
+    };
+    track("study_funnel_event", {
+      stage,
+      study_id: payload.studyId,
+      completed_count: payload.completedCount,
+      total_studies: payload.totalStudies
+    });
+    postStudyFunnelEvent(payload).catch((error) => {
+      console.error("Study funnel tracking failed", error);
+    });
+  }
+
+  function markStudyStarted(studyId) {
+    if (!studyId) return false;
+    const key = `${STUDY_STARTED_PREFIX}${studyId}`;
+    try {
+      if (localStorage.getItem(key) === "1") return false;
+      localStorage.setItem(key, "1");
+      return true;
+    } catch (error) {
+      return true;
+    }
+  }
 
   function normalizeAnswer(value) {
     return String(value || "").trim().replace(/[^a-z0-9]+/gi, " ").replace(/\s+/g, " ").toLowerCase();
@@ -707,13 +829,14 @@
 
   function markStudyCompleted(studyId) {
     const completed = new Set(getCompletedStudies());
+    const alreadyCompleted = completed.has(studyId);
     completed.add(studyId);
     try {
       localStorage.setItem(COMPLETED_KEY, JSON.stringify([...completed]));
     } catch (error) {
       /* localStorage unavailable; progress simply won't persist */
     }
-    return [...completed];
+    return { completed: [...completed], isNewCompletion: !alreadyCompleted };
   }
 
   function allStudiesCompleted(completed) {
@@ -784,6 +907,38 @@
   function hideDiploma() {
     if (elements.diploma) elements.diploma.hidden = true;
     showDirectory();
+  }
+
+  function openSignupModal(options = {}) {
+    if (!elements.signupModal || !elements.signupForm) return;
+    const required = Boolean(options.required);
+    signupContext = {
+      required,
+      source: options.source || "study-progress",
+      onComplete: typeof options.onComplete === "function" ? options.onComplete : null
+    };
+    const title = required ? "Sign up to view your certificate" : "Save your Bible study journey";
+    const message = required
+      ? "To view your Word Oasis completion certificate, please share your email so we can record your completed studies."
+      : "You can keep studying as a guest, or share your email so Word Oasis can record completed lessons and send the next study.";
+    if (elements.signupTitle) elements.signupTitle.textContent = title;
+    if (elements.signupMessage) elements.signupMessage.textContent = message;
+    if (elements.signupEmail) elements.signupEmail.value = getSavedStudyEmail();
+    if (elements.signupConsent) elements.signupConsent.checked = hasStudySignup();
+    if (elements.signupSkip) elements.signupSkip.hidden = required;
+    if (elements.signupStatus) elements.signupStatus.textContent = "";
+    elements.signupModal.hidden = false;
+    elements.signupEmail?.focus();
+  }
+
+  function closeSignupModal() {
+    if (!elements.signupModal) return;
+    elements.signupModal.hidden = true;
+    signupContext = null;
+  }
+
+  function canViewCertificate() {
+    return hasStudySignup();
   }
 
   function appendScriptureLinks(container, text) {
@@ -1032,8 +1187,22 @@
     elements.resultDecision.textContent = activeStudy.decision;
     renderGoingDeeper();
     clearSavedState(activeStudy.id);
-    const completed = markStudyCompleted(activeStudy.id);
+    const completion = markStudyCompleted(activeStudy.id);
+    const completed = completion.completed;
     const justCompletedAll = allStudiesCompleted(completed);
+    showSignupResultStatus("");
+    if (completion.isNewCompletion) {
+      queueStudyFunnelEvent("study-completed", {
+        completedStudyId: activeStudy.id,
+        completedStudyTitle: activeStudy.title
+      });
+    }
+    if (justCompletedAll) {
+      queueStudyFunnelEvent("course-completed");
+    }
+    if (completion.isNewCompletion && completed.length === 1 && !hasStudySignup()) {
+      openSignupModal({ source: "first-completion" });
+    }
     if (elements.resultCertificateBanner) elements.resultCertificateBanner.hidden = !justCompletedAll;
     renderDirectoryProgress();
     elements.resultScore.focus();
@@ -1190,6 +1359,12 @@
     window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
     renderStatement();
     saveState();
+    if (markStudyStarted(activeStudy.id)) {
+      queueStudyFunnelEvent("study-started", {
+        startedStudyId: activeStudy.id,
+        startedStudyTitle: activeStudy.title
+      });
+    }
     player.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
@@ -1239,7 +1414,27 @@
     }
     const viewDiplomaButton = event.target.closest("[data-view-diploma]");
     if (viewDiplomaButton) {
+      if (!canViewCertificate()) {
+        openSignupModal({
+          required: true,
+          source: "certificate-gate",
+          onComplete: () => showDiploma()
+        });
+        showSignupResultStatus("Sign up with your email to unlock your certificate.");
+        return;
+      }
       showDiploma();
+      return;
+    }
+    const signupCloseButton = event.target.closest("[data-study-signup-close]");
+    if (signupCloseButton) {
+      if (!signupContext?.required) closeSignupModal();
+      return;
+    }
+    const signupSkipButton = event.target.closest("[data-study-signup-skip]");
+    if (signupSkipButton) {
+      queueStudyFunnelEvent("signup-skipped", { source: signupContext?.source || "study-progress" });
+      closeSignupModal();
       return;
     }
     const diplomaCloseButton = event.target.closest("[data-diploma-close]");
@@ -1261,6 +1456,30 @@
 
   window.addEventListener("afterprint", () => {
     document.body.classList.remove("is-printing-diploma");
+  });
+
+  elements.signupForm?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (!elements.signupForm.reportValidity()) return;
+    const email = String(elements.signupEmail?.value || "").trim();
+    const consent = Boolean(elements.signupConsent?.checked);
+    if (!email || !consent) return;
+    if (elements.signupSubmit) elements.signupSubmit.disabled = true;
+    if (elements.signupStatus) elements.signupStatus.textContent = "Saving your signup…";
+    saveStudyEmail(email);
+    queueStudyFunnelEvent("signup-submitted", {
+      email,
+      consent: true,
+      source: signupContext?.source || "study-progress"
+    });
+    showSignupResultStatus("Thanks! Your Bible study progress can now be tracked with your signup email.");
+    if (elements.signupStatus) elements.signupStatus.textContent = "Saved. You can continue.";
+    const callback = signupContext?.onComplete;
+    closeSignupModal();
+    if (elements.signupSubmit) elements.signupSubmit.disabled = false;
+    if (typeof callback === "function") {
+      callback();
+    }
   });
 
   elements.diplomaName?.addEventListener("input", () => {

@@ -591,6 +591,26 @@
         </div>
       </section>
 
+      <section class="section section-soft devotional-section" aria-label="Daily devotional">
+        <div class="container">
+          <article class="devotional-card" data-devotional-card>
+            <div class="devotional-copy">
+              <p class="eyebrow"><span aria-hidden="true">☀︎</span> Daily Devotional</p>
+              <h2 data-devotional-title>Today’s devotional</h2>
+              <p class="devotional-date" data-devotional-date></p>
+              <blockquote class="devotional-scripture" data-devotional-scripture></blockquote>
+              <p class="devotional-reference" data-devotional-reference></p>
+              <p class="devotional-body" data-devotional-body></p>
+              <p class="devotional-prayer" data-devotional-prayer hidden></p>
+              <div class="devotional-actions">
+                <a href="/studies/" data-devotional-cta>Continue in Bible studies</a>
+              </div>
+            </div>
+            <p class="devotional-status" data-devotional-status role="status" aria-live="polite">Loading today’s devotional…</p>
+          </article>
+        </div>
+      </section>
+
       <section class="section section-soft home-quiz-section">
         <div class="container">
           <div class="section-heading home-quiz-heading">
@@ -1231,6 +1251,7 @@
     <script src="theme.js?v=20261156"></script>
     <script src="pwa.js?v=20261069"></script>
     <script src="local-library.js?v=20261069"></script>
+    <script src="daily-devotional.js?v=20260925"></script>
     <script>
       (() => {
         const searchForm = document.querySelector("#search-form");
