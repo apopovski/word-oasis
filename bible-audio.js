@@ -12,6 +12,14 @@
     { id: "verse", label: "Verse loop" },
     { id: "selection", label: "Selection loop" }
   ];
+  const playIconSvg = `
+    <svg class="bible-audio-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M8.25 5.1v13.8a1.1 1.1 0 0 0 1.66.95l11.1-6.9a1.1 1.1 0 0 0 0-1.9l-11.1-6.9a1.1 1.1 0 0 0-1.66.95Z"/>
+    </svg>`;
+  const pauseIconSvg = `
+    <svg class="bible-audio-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M7.2 5.25h3.1c.58 0 1.05.47 1.05 1.05v11.4c0 .58-.47 1.05-1.05 1.05H7.2a1.05 1.05 0 0 1-1.05-1.05V6.3c0-.58.47-1.05 1.05-1.05Zm6.5 0h3.1c.58 0 1.05.47 1.05 1.05v11.4c0 .58-.47 1.05-1.05 1.05h-3.1a1.05 1.05 0 0 1-1.05-1.05V6.3c0-.58.47-1.05 1.05-1.05Z"/>
+    </svg>`;
 
   const readerCard = document.querySelector(".bible-reader-card");
   const readerBody = document.querySelector("#bible-reader-body");
@@ -45,9 +53,21 @@
         <p class="bible-audio-note" id="bible-audio-note">Listen continuously, or loop a verse to memorize.</p>
       </div>
       <div class="bible-audio-transport" role="group" aria-label="Playback controls">
-        <button type="button" id="bible-audio-prev" aria-label="Previous clip">⏮</button>
-        <button type="button" id="bible-audio-play" aria-label="Play chapter" class="bible-audio-play">▶</button>
-        <button type="button" id="bible-audio-next" aria-label="Next clip">⏭</button>
+        <button type="button" id="bible-audio-prev" aria-label="Previous clip">
+          <svg class="bible-audio-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6.2 5.4h2.1c.4 0 .7.3.7.7v11.8c0 .4-.3.7-.7.7H6.2a.7.7 0 0 1-.7-.7V6.1c0-.4.3-.7.7-.7Zm4.6 6.1 8.3-5.4c.7-.5 1.7 0 1.7.9v10c0 .9-1 1.4-1.7.9l-8.3-5.4a1.1 1.1 0 0 1 0-1.8Z"/>
+          </svg>
+        </button>
+        <button type="button" id="bible-audio-play" aria-label="Play chapter" class="bible-audio-play">
+          <svg class="bible-audio-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M8.25 5.1v13.8a1.1 1.1 0 0 0 1.66.95l11.1-6.9a1.1 1.1 0 0 0 0-1.9l-11.1-6.9a1.1 1.1 0 0 0-1.66.95Z"/>
+          </svg>
+        </button>
+        <button type="button" id="bible-audio-next" aria-label="Next clip">
+          <svg class="bible-audio-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M4.8 6.1c0-.9 1-1.4 1.7-.9l8.3 5.4a1.1 1.1 0 0 1 0 1.8l-8.3 5.4c-.7.5-1.7 0-1.7-.9V6.1Zm12.2-.7h2.1c.4 0 .7.3.7.7v11.8c0 .4-.3.7-.7.7h-2.1a.7.7 0 0 1-.7-.7V6.1c0-.4.3-.7.7-.7Z"/>
+          </svg>
+        </button>
       </div>
     </div>
     <div class="bible-audio-progress-row">
@@ -248,10 +268,33 @@
     row.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }
 
+  function currentQueueVerse() {
+    return queue[queueIndex]?.verse ?? null;
+  }
+
+  function setControlIcon(button, playing) {
+    button.innerHTML = playing ? pauseIconSvg : playIconSvg;
+  }
+
   function updatePlayButton() {
     const playing = !audio.paused && !audio.ended;
-    playButton.textContent = playing ? "⏸" : "▶";
+    setControlIcon(playButton, playing);
     playButton.setAttribute("aria-label", playing ? "Pause" : "Play");
+    playButton.classList.toggle("is-playing", playing);
+
+    const activeVerse = currentQueueVerse();
+    readerBody.querySelectorAll(".bible-verse-play").forEach((button) => {
+      const verse = Number.parseInt(button.dataset.verse, 10);
+      const isActivePlaying = playing && Number.isFinite(verse) && verse === activeVerse;
+      setControlIcon(button, isActivePlaying);
+      button.classList.toggle("is-active", Number.isFinite(verse) && verse === activeVerse);
+      button.classList.toggle("is-playing", isActivePlaying);
+      button.setAttribute(
+        "aria-label",
+        isActivePlaying ? `Pause verse ${verse}` : `Play verse ${verse}`
+      );
+      button.title = isActivePlaying ? "Pause verse" : "Play verse";
+    });
   }
 
   function updateNowPlaying() {
@@ -388,16 +431,41 @@
       const button = document.createElement("button");
       button.type = "button";
       button.className = "bible-verse-play";
+      button.dataset.verse = String(verse);
       button.setAttribute("aria-label", `Play verse ${verse}`);
       button.title = "Play verse";
-      button.textContent = "▶";
+      setControlIcon(button, false);
       button.addEventListener("click", (event) => {
         event.preventDefault();
         event.stopPropagation();
-        playFromVerse(verse);
+        toggleVersePlayback(verse);
       });
       row.append(button);
     });
+    updatePlayButton();
+  }
+
+  async function toggleVersePlayback(verse) {
+    const current = queue[queueIndex];
+    const sameVerse = current?.verse === verse && Boolean(audio.src);
+
+    if (sameVerse && !audio.paused && !audio.ended) {
+      audio.pause();
+      updatePlayButton();
+      return;
+    }
+
+    if (sameVerse && audio.paused && !audio.ended && audio.currentTime > 0) {
+      try {
+        await audio.play();
+        updatePlayButton();
+      } catch (error) {
+        await playFromVerse(verse);
+      }
+      return;
+    }
+
+    await playFromVerse(verse);
   }
 
   async function playFromVerse(verse, options = {}) {

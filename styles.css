@@ -4885,6 +4885,13 @@ h1 {
   gap: 8px;
 }
 
+.bible-audio-icon {
+  display: block;
+  width: 1.05em;
+  height: 1.05em;
+  fill: currentColor;
+}
+
 .bible-audio-transport button {
   display: inline-flex;
   width: 44px;
@@ -4892,7 +4899,7 @@ h1 {
   align-items: center;
   justify-content: center;
   color: var(--brand);
-  font-size: 1rem;
+  font-size: 1.05rem;
   background: color-mix(in srgb, var(--brand) 10%, var(--surface));
   border: 1px solid color-mix(in srgb, var(--brand) 24%, var(--border));
   border-radius: 999px;
@@ -4902,9 +4909,10 @@ h1 {
   width: 52px;
   height: 52px;
   color: #ffffff;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   background: var(--brand);
   border-color: var(--brand);
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--brand) 28%, transparent);
 }
 
 .bible-audio-transport button:hover,
@@ -4993,28 +5001,53 @@ h1 {
 
 .bible-verse-play {
   position: absolute;
-  top: 0.35em;
-  right: 0.2em;
+  top: 0.28em;
+  right: 0.15em;
   display: inline-flex;
-  width: 1.85em;
-  height: 1.85em;
+  width: 1.7rem;
+  height: 1.7rem;
   align-items: center;
   justify-content: center;
   color: var(--brand);
-  font-size: 0.62em;
   line-height: 1;
-  background: color-mix(in srgb, var(--brand) 8%, transparent);
-  border: 1px solid color-mix(in srgb, var(--brand) 24%, transparent);
+  background:
+    linear-gradient(
+      160deg,
+      color-mix(in srgb, var(--surface) 88%, #ffffff),
+      color-mix(in srgb, var(--brand) 10%, var(--surface))
+    );
+  border: 1px solid color-mix(in srgb, var(--brand) 26%, var(--border));
   border-radius: 999px;
-  opacity: 0.72;
+  box-shadow:
+    0 1px 0 color-mix(in srgb, #ffffff 70%, transparent) inset,
+    0 6px 14px color-mix(in srgb, var(--brand) 12%, transparent);
+  opacity: 0.92;
+  transition: transform 160ms ease, background-color 160ms ease, color 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+}
+
+.bible-verse-play .bible-audio-icon {
+  width: 0.72rem;
+  height: 0.72rem;
 }
 
 .bible-verse-play:hover,
-.bible-verse-play:focus-visible,
+.bible-verse-play:focus-visible {
+  color: #ffffff;
+  background: var(--brand);
+  border-color: var(--brand);
+  box-shadow: 0 10px 18px color-mix(in srgb, var(--brand) 28%, transparent);
+  opacity: 1;
+  transform: translateY(-1px) scale(1.04);
+}
+
+.bible-verse-play.is-active,
+.bible-verse-play.is-playing,
 .bible-verse.is-playing .bible-verse-play {
   color: #ffffff;
   background: var(--brand);
+  border-color: var(--brand);
   opacity: 1;
+  box-shadow: 0 10px 18px color-mix(in srgb, var(--brand) 30%, transparent);
 }
 
 .bible-verse-number {
