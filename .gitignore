@@ -4,3 +4,6 @@ node_modules/
 
 # Local working files and source assets that should not be published.
 local-assets/
+
+# ElevenLabs Bible audio source + studio manuscripts (normalize → local-assets/audio).
+BIble (KJV)/

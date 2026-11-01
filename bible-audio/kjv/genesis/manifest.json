@@ -1,0 +1,310 @@
+{
+  "translation": "kjv",
+  "name": "Genesis",
+  "slug": "genesis",
+  "bookUrl": "genesis/_book.mp3",
+  "chapterCount": 50,
+  "verseCount": 1533,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 31,
+      "manifest": "genesis/001.json",
+      "chapterUrl": "genesis/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 25,
+      "manifest": "genesis/002.json",
+      "chapterUrl": "genesis/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 24,
+      "manifest": "genesis/003.json",
+      "chapterUrl": "genesis/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 26,
+      "manifest": "genesis/004.json",
+      "chapterUrl": "genesis/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 32,
+      "manifest": "genesis/005.json",
+      "chapterUrl": "genesis/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 22,
+      "manifest": "genesis/006.json",
+      "chapterUrl": "genesis/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 24,
+      "manifest": "genesis/007.json",
+      "chapterUrl": "genesis/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 22,
+      "manifest": "genesis/008.json",
+      "chapterUrl": "genesis/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 29,
+      "manifest": "genesis/009.json",
+      "chapterUrl": "genesis/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 32,
+      "manifest": "genesis/010.json",
+      "chapterUrl": "genesis/010/_chapter.mp3"
+    },
+    {
+      "chapter": 11,
+      "verseCount": 32,
+      "manifest": "genesis/011.json",
+      "chapterUrl": "genesis/011/_chapter.mp3"
+    },
+    {
+      "chapter": 12,
+      "verseCount": 20,
+      "manifest": "genesis/012.json",
+      "chapterUrl": "genesis/012/_chapter.mp3"
+    },
+    {
+      "chapter": 13,
+      "verseCount": 18,
+      "manifest": "genesis/013.json",
+      "chapterUrl": "genesis/013/_chapter.mp3"
+    },
+    {
+      "chapter": 14,
+      "verseCount": 24,
+      "manifest": "genesis/014.json",
+      "chapterUrl": "genesis/014/_chapter.mp3"
+    },
+    {
+      "chapter": 15,
+      "verseCount": 21,
+      "manifest": "genesis/015.json",
+      "chapterUrl": "genesis/015/_chapter.mp3"
+    },
+    {
+      "chapter": 16,
+      "verseCount": 16,
+      "manifest": "genesis/016.json",
+      "chapterUrl": "genesis/016/_chapter.mp3"
+    },
+    {
+      "chapter": 17,
+      "verseCount": 27,
+      "manifest": "genesis/017.json",
+      "chapterUrl": "genesis/017/_chapter.mp3"
+    },
+    {
+      "chapter": 18,
+      "verseCount": 33,
+      "manifest": "genesis/018.json",
+      "chapterUrl": "genesis/018/_chapter.mp3"
+    },
+    {
+      "chapter": 19,
+      "verseCount": 38,
+      "manifest": "genesis/019.json",
+      "chapterUrl": "genesis/019/_chapter.mp3"
+    },
+    {
+      "chapter": 20,
+      "verseCount": 18,
+      "manifest": "genesis/020.json",
+      "chapterUrl": "genesis/020/_chapter.mp3"
+    },
+    {
+      "chapter": 21,
+      "verseCount": 34,
+      "manifest": "genesis/021.json",
+      "chapterUrl": "genesis/021/_chapter.mp3"
+    },
+    {
+      "chapter": 22,
+      "verseCount": 24,
+      "manifest": "genesis/022.json",
+      "chapterUrl": "genesis/022/_chapter.mp3"
+    },
+    {
+      "chapter": 23,
+      "verseCount": 20,
+      "manifest": "genesis/023.json",
+      "chapterUrl": "genesis/023/_chapter.mp3"
+    },
+    {
+      "chapter": 24,
+      "verseCount": 67,
+      "manifest": "genesis/024.json",
+      "chapterUrl": "genesis/024/_chapter.mp3"
+    },
+    {
+      "chapter": 25,
+      "verseCount": 34,
+      "manifest": "genesis/025.json",
+      "chapterUrl": "genesis/025/_chapter.mp3"
+    },
+    {
+      "chapter": 26,
+      "verseCount": 35,
+      "manifest": "genesis/026.json",
+      "chapterUrl": "genesis/026/_chapter.mp3"
+    },
+    {
+      "chapter": 27,
+      "verseCount": 46,
+      "manifest": "genesis/027.json",
+      "chapterUrl": "genesis/027/_chapter.mp3"
+    },
+    {
+      "chapter": 28,
+      "verseCount": 22,
+      "manifest": "genesis/028.json",
+      "chapterUrl": "genesis/028/_chapter.mp3"
+    },
+    {
+      "chapter": 29,
+      "verseCount": 35,
+      "manifest": "genesis/029.json",
+      "chapterUrl": "genesis/029/_chapter.mp3"
+    },
+    {
+      "chapter": 30,
+      "verseCount": 43,
+      "manifest": "genesis/030.json",
+      "chapterUrl": "genesis/030/_chapter.mp3"
+    },
+    {
+      "chapter": 31,
+      "verseCount": 55,
+      "manifest": "genesis/031.json",
+      "chapterUrl": "genesis/031/_chapter.mp3"
+    },
+    {
+      "chapter": 32,
+      "verseCount": 32,
+      "manifest": "genesis/032.json",
+      "chapterUrl": "genesis/032/_chapter.mp3"
+    },
+    {
+      "chapter": 33,
+      "verseCount": 20,
+      "manifest": "genesis/033.json",
+      "chapterUrl": "genesis/033/_chapter.mp3"
+    },
+    {
+      "chapter": 34,
+      "verseCount": 31,
+      "manifest": "genesis/034.json",
+      "chapterUrl": "genesis/034/_chapter.mp3"
+    },
+    {
+      "chapter": 35,
+      "verseCount": 29,
+      "manifest": "genesis/035.json",
+      "chapterUrl": "genesis/035/_chapter.mp3"
+    },
+    {
+      "chapter": 36,
+      "verseCount": 43,
+      "manifest": "genesis/036.json",
+      "chapterUrl": "genesis/036/_chapter.mp3"
+    },
+    {
+      "chapter": 37,
+      "verseCount": 36,
+      "manifest": "genesis/037.json",
+      "chapterUrl": "genesis/037/_chapter.mp3"
+    },
+    {
+      "chapter": 38,
+      "verseCount": 30,
+      "manifest": "genesis/038.json",
+      "chapterUrl": "genesis/038/_chapter.mp3"
+    },
+    {
+      "chapter": 39,
+      "verseCount": 23,
+      "manifest": "genesis/039.json",
+      "chapterUrl": "genesis/039/_chapter.mp3"
+    },
+    {
+      "chapter": 40,
+      "verseCount": 23,
+      "manifest": "genesis/040.json",
+      "chapterUrl": "genesis/040/_chapter.mp3"
+    },
+    {
+      "chapter": 41,
+      "verseCount": 57,
+      "manifest": "genesis/041.json",
+      "chapterUrl": "genesis/041/_chapter.mp3"
+    },
+    {
+      "chapter": 42,
+      "verseCount": 38,
+      "manifest": "genesis/042.json",
+      "chapterUrl": "genesis/042/_chapter.mp3"
+    },
+    {
+      "chapter": 43,
+      "verseCount": 34,
+      "manifest": "genesis/043.json",
+      "chapterUrl": "genesis/043/_chapter.mp3"
+    },
+    {
+      "chapter": 44,
+      "verseCount": 34,
+      "manifest": "genesis/044.json",
+      "chapterUrl": "genesis/044/_chapter.mp3"
+    },
+    {
+      "chapter": 45,
+      "verseCount": 28,
+      "manifest": "genesis/045.json",
+      "chapterUrl": "genesis/045/_chapter.mp3"
+    },
+    {
+      "chapter": 46,
+      "verseCount": 34,
+      "manifest": "genesis/046.json",
+      "chapterUrl": "genesis/046/_chapter.mp3"
+    },
+    {
+      "chapter": 47,
+      "verseCount": 31,
+      "manifest": "genesis/047.json",
+      "chapterUrl": "genesis/047/_chapter.mp3"
+    },
+    {
+      "chapter": 48,
+      "verseCount": 22,
+      "manifest": "genesis/048.json",
+      "chapterUrl": "genesis/048/_chapter.mp3"
+    },
+    {
+      "chapter": 49,
+      "verseCount": 33,
+      "manifest": "genesis/049.json",
+      "chapterUrl": "genesis/049/_chapter.mp3"
+    },
+    {
+      "chapter": 50,
+      "verseCount": 26,
+      "manifest": "genesis/050.json",
+      "chapterUrl": "genesis/050/_chapter.mp3"
+    }
+  ]
+}

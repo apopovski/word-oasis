@@ -1,0 +1,21 @@
+{
+  "translation": "kjv",
+  "book": "exodus",
+  "bookName": "Exodus",
+  "chapter": 11,
+  "chapterUrl": "exodus/011/_chapter.mp3",
+  "verseCount": 10,
+  "verses": [
+    "exodus/011/001.mp3",
+    "exodus/011/002.mp3",
+    "exodus/011/003.mp3",
+    "exodus/011/004.mp3",
+    "exodus/011/005.mp3",
+    "exodus/011/006.mp3",
+    "exodus/011/007.mp3",
+    "exodus/011/008.mp3",
+    "exodus/011/009.mp3",
+    "exodus/011/010.mp3"
+  ],
+  "bookUrl": "exodus/_book.mp3"
+}

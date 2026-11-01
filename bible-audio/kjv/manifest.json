@@ -1,0 +1,25 @@
+{
+  "translation": "kjv",
+  "voice": "elevenlabs",
+  "pathPrefix": "kjv",
+  "books": [
+    {
+      "name": "Genesis",
+      "slug": "genesis",
+      "chapterCount": 50,
+      "verseCount": 1533,
+      "manifest": "genesis/manifest.json",
+      "bookUrl": "genesis/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Exodus",
+      "slug": "exodus",
+      "chapterCount": 40,
+      "verseCount": 1213,
+      "manifest": "exodus/manifest.json",
+      "bookUrl": "exodus/_book.mp3",
+      "available": true
+    }
+  ]
+}

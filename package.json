@@ -5,9 +5,12 @@
   "description": "Word Oasis - clear, Scripture-based answers to Bible questions.",
   "scripts": {
     "prerender": "node scripts/prerender.js",
-    "sync-unsplash-hero": "node scripts/sync-unsplash-hero.js"
+    "sync-unsplash-hero": "node scripts/sync-unsplash-hero.js",
+    "normalize-bible-audio": "python3 scripts/normalize-bible-audio.py",
+    "upload-bible-audio": "node scripts/upload-bible-audio.mjs"
   },
   "devDependencies": {
-    "jsdom": "^30.0.1"
+    "jsdom": "^30.0.1",
+    "wrangler": "^4.156.0"
   }
 }

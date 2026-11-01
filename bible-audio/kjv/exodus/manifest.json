@@ -1,0 +1,250 @@
+{
+  "translation": "kjv",
+  "name": "Exodus",
+  "slug": "exodus",
+  "bookUrl": "exodus/_book.mp3",
+  "chapterCount": 40,
+  "verseCount": 1213,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 22,
+      "manifest": "exodus/001.json",
+      "chapterUrl": "exodus/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 25,
+      "manifest": "exodus/002.json",
+      "chapterUrl": "exodus/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 22,
+      "manifest": "exodus/003.json",
+      "chapterUrl": "exodus/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 31,
+      "manifest": "exodus/004.json",
+      "chapterUrl": "exodus/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 23,
+      "manifest": "exodus/005.json",
+      "chapterUrl": "exodus/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 30,
+      "manifest": "exodus/006.json",
+      "chapterUrl": "exodus/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 25,
+      "manifest": "exodus/007.json",
+      "chapterUrl": "exodus/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 32,
+      "manifest": "exodus/008.json",
+      "chapterUrl": "exodus/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 35,
+      "manifest": "exodus/009.json",
+      "chapterUrl": "exodus/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 29,
+      "manifest": "exodus/010.json",
+      "chapterUrl": "exodus/010/_chapter.mp3"
+    },
+    {
+      "chapter": 11,
+      "verseCount": 10,
+      "manifest": "exodus/011.json",
+      "chapterUrl": "exodus/011/_chapter.mp3"
+    },
+    {
+      "chapter": 12,
+      "verseCount": 51,
+      "manifest": "exodus/012.json",
+      "chapterUrl": "exodus/012/_chapter.mp3"
+    },
+    {
+      "chapter": 13,
+      "verseCount": 22,
+      "manifest": "exodus/013.json",
+      "chapterUrl": "exodus/013/_chapter.mp3"
+    },
+    {
+      "chapter": 14,
+      "verseCount": 31,
+      "manifest": "exodus/014.json",
+      "chapterUrl": "exodus/014/_chapter.mp3"
+    },
+    {
+      "chapter": 15,
+      "verseCount": 27,
+      "manifest": "exodus/015.json",
+      "chapterUrl": "exodus/015/_chapter.mp3"
+    },
+    {
+      "chapter": 16,
+      "verseCount": 36,
+      "manifest": "exodus/016.json",
+      "chapterUrl": "exodus/016/_chapter.mp3"
+    },
+    {
+      "chapter": 17,
+      "verseCount": 16,
+      "manifest": "exodus/017.json",
+      "chapterUrl": "exodus/017/_chapter.mp3"
+    },
+    {
+      "chapter": 18,
+      "verseCount": 27,
+      "manifest": "exodus/018.json",
+      "chapterUrl": "exodus/018/_chapter.mp3"
+    },
+    {
+      "chapter": 19,
+      "verseCount": 25,
+      "manifest": "exodus/019.json",
+      "chapterUrl": "exodus/019/_chapter.mp3"
+    },
+    {
+      "chapter": 20,
+      "verseCount": 26,
+      "manifest": "exodus/020.json",
+      "chapterUrl": "exodus/020/_chapter.mp3"
+    },
+    {
+      "chapter": 21,
+      "verseCount": 36,
+      "manifest": "exodus/021.json",
+      "chapterUrl": "exodus/021/_chapter.mp3"
+    },
+    {
+      "chapter": 22,
+      "verseCount": 31,
+      "manifest": "exodus/022.json",
+      "chapterUrl": "exodus/022/_chapter.mp3"
+    },
+    {
+      "chapter": 23,
+      "verseCount": 33,
+      "manifest": "exodus/023.json",
+      "chapterUrl": "exodus/023/_chapter.mp3"
+    },
+    {
+      "chapter": 24,
+      "verseCount": 18,
+      "manifest": "exodus/024.json",
+      "chapterUrl": "exodus/024/_chapter.mp3"
+    },
+    {
+      "chapter": 25,
+      "verseCount": 40,
+      "manifest": "exodus/025.json",
+      "chapterUrl": "exodus/025/_chapter.mp3"
+    },
+    {
+      "chapter": 26,
+      "verseCount": 37,
+      "manifest": "exodus/026.json",
+      "chapterUrl": "exodus/026/_chapter.mp3"
+    },
+    {
+      "chapter": 27,
+      "verseCount": 21,
+      "manifest": "exodus/027.json",
+      "chapterUrl": "exodus/027/_chapter.mp3"
+    },
+    {
+      "chapter": 28,
+      "verseCount": 43,
+      "manifest": "exodus/028.json",
+      "chapterUrl": "exodus/028/_chapter.mp3"
+    },
+    {
+      "chapter": 29,
+      "verseCount": 46,
+      "manifest": "exodus/029.json",
+      "chapterUrl": "exodus/029/_chapter.mp3"
+    },
+    {
+      "chapter": 30,
+      "verseCount": 38,
+      "manifest": "exodus/030.json",
+      "chapterUrl": "exodus/030/_chapter.mp3"
+    },
+    {
+      "chapter": 31,
+      "verseCount": 18,
+      "manifest": "exodus/031.json",
+      "chapterUrl": "exodus/031/_chapter.mp3"
+    },
+    {
+      "chapter": 32,
+      "verseCount": 35,
+      "manifest": "exodus/032.json",
+      "chapterUrl": "exodus/032/_chapter.mp3"
+    },
+    {
+      "chapter": 33,
+      "verseCount": 23,
+      "manifest": "exodus/033.json",
+      "chapterUrl": "exodus/033/_chapter.mp3"
+    },
+    {
+      "chapter": 34,
+      "verseCount": 35,
+      "manifest": "exodus/034.json",
+      "chapterUrl": "exodus/034/_chapter.mp3"
+    },
+    {
+      "chapter": 35,
+      "verseCount": 35,
+      "manifest": "exodus/035.json",
+      "chapterUrl": "exodus/035/_chapter.mp3"
+    },
+    {
+      "chapter": 36,
+      "verseCount": 38,
+      "manifest": "exodus/036.json",
+      "chapterUrl": "exodus/036/_chapter.mp3"
+    },
+    {
+      "chapter": 37,
+      "verseCount": 29,
+      "manifest": "exodus/037.json",
+      "chapterUrl": "exodus/037/_chapter.mp3"
+    },
+    {
+      "chapter": 38,
+      "verseCount": 31,
+      "manifest": "exodus/038.json",
+      "chapterUrl": "exodus/038/_chapter.mp3"
+    },
+    {
+      "chapter": 39,
+      "verseCount": 43,
+      "manifest": "exodus/039.json",
+      "chapterUrl": "exodus/039/_chapter.mp3"
+    },
+    {
+      "chapter": 40,
+      "verseCount": 38,
+      "manifest": "exodus/040.json",
+      "chapterUrl": "exodus/040/_chapter.mp3"
+    }
+  ]
+}

@@ -1484,9 +1484,15 @@
     try {
       const data = await fetchChapter(book, chapter, translation, currentRequest.signal);
       renderVerses(data);
+      if (window.WordOasisBibleAudio) {
+        window.WordOasisBibleAudio.bindChapter(book.name, chapter, translation.id);
+      }
     } catch (error) {
       if (error.name === "AbortError") {
         return;
+      }
+      if (window.WordOasisBibleAudio) {
+        window.WordOasisBibleAudio.stop();
       }
       setReaderStatus("Could not load this chapter right now. Please check your connection and try again.");
     }

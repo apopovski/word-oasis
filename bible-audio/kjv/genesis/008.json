@@ -1,0 +1,33 @@
+{
+  "translation": "kjv",
+  "book": "genesis",
+  "bookName": "Genesis",
+  "chapter": 8,
+  "chapterUrl": "genesis/008/_chapter.mp3",
+  "verseCount": 22,
+  "verses": [
+    "genesis/008/001.mp3",
+    "genesis/008/002.mp3",
+    "genesis/008/003.mp3",
+    "genesis/008/004.mp3",
+    "genesis/008/005.mp3",
+    "genesis/008/006.mp3",
+    "genesis/008/007.mp3",
+    "genesis/008/008.mp3",
+    "genesis/008/009.mp3",
+    "genesis/008/010.mp3",
+    "genesis/008/011.mp3",
+    "genesis/008/012.mp3",
+    "genesis/008/013.mp3",
+    "genesis/008/014.mp3",
+    "genesis/008/015.mp3",
+    "genesis/008/016.mp3",
+    "genesis/008/017.mp3",
+    "genesis/008/018.mp3",
+    "genesis/008/019.mp3",
+    "genesis/008/020.mp3",
+    "genesis/008/021.mp3",
+    "genesis/008/022.mp3"
+  ],
+  "bookUrl": "genesis/_book.mp3"
+}

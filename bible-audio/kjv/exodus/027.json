@@ -1,0 +1,32 @@
+{
+  "translation": "kjv",
+  "book": "exodus",
+  "bookName": "Exodus",
+  "chapter": 27,
+  "chapterUrl": "exodus/027/_chapter.mp3",
+  "verseCount": 21,
+  "verses": [
+    "exodus/027/001.mp3",
+    "exodus/027/002.mp3",
+    "exodus/027/003.mp3",
+    "exodus/027/004.mp3",
+    "exodus/027/005.mp3",
+    "exodus/027/006.mp3",
+    "exodus/027/007.mp3",
+    "exodus/027/008.mp3",
+    "exodus/027/009.mp3",
+    "exodus/027/010.mp3",
+    "exodus/027/011.mp3",
+    "exodus/027/012.mp3",
+    "exodus/027/013.mp3",
+    "exodus/027/014.mp3",
+    "exodus/027/015.mp3",
+    "exodus/027/016.mp3",
+    "exodus/027/017.mp3",
+    "exodus/027/018.mp3",
+    "exodus/027/019.mp3",
+    "exodus/027/020.mp3",
+    "exodus/027/021.mp3"
+  ],
+  "bookUrl": "exodus/_book.mp3"
+}

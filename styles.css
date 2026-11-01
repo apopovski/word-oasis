@@ -4823,10 +4823,154 @@ h1 {
   font-weight: 700;
 }
 
+.bible-audio-player {
+  display: grid;
+  gap: 14px;
+  margin: 0 0 22px;
+  padding: 16px 18px;
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--brand) 8%, var(--surface)),
+      color-mix(in srgb, var(--accent) 6%, var(--surface))
+    );
+  border: 1px solid color-mix(in srgb, var(--brand) 18%, var(--border));
+  border-radius: 18px;
+}
+
+.bible-audio-player[hidden] {
+  display: none !important;
+}
+
+.bible-audio-player-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.bible-audio-player-copy {
+  min-width: 0;
+}
+
+.bible-audio-eyebrow {
+  margin: 0 0 4px;
+  color: var(--brand);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bible-audio-now-playing {
+  display: block;
+  margin: 0;
+  color: var(--text);
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.bible-audio-note {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.bible-audio-transport {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.bible-audio-transport button {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand);
+  font-size: 1rem;
+  background: color-mix(in srgb, var(--brand) 10%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--brand) 24%, var(--border));
+  border-radius: 999px;
+}
+
+.bible-audio-transport .bible-audio-play {
+  width: 52px;
+  height: 52px;
+  color: #ffffff;
+  font-size: 1.15rem;
+  background: var(--brand);
+  border-color: var(--brand);
+}
+
+.bible-audio-transport button:hover,
+.bible-audio-transport button:focus-visible {
+  color: #ffffff;
+  background: var(--brand);
+}
+
+.bible-audio-progress-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.bible-audio-progress-row input[type="range"] {
+  width: 100%;
+  accent-color: var(--brand);
+}
+
+.bible-audio-settings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  align-items: end;
+}
+
+.bible-audio-field {
+  display: grid;
+  gap: 6px;
+  min-width: 132px;
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.bible-audio-field select {
+  min-height: 42px;
+  padding: 0 12px;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: var(--field-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.bible-audio-check {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  min-height: 42px;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
 .bible-verse {
   position: relative;
   margin: 0;
   padding: 4px 8px;
+  padding-right: 2.6em;
   color: var(--text);
   font-family: Georgia, "Times New Roman", serif;
   font-size: var(--bible-text-size);
@@ -4841,9 +4985,36 @@ h1 {
   box-shadow: inset 3px 0 0 var(--accent);
 }
 
-.bible-verse.is-highlighted {
+.bible-verse.is-highlighted,
+.bible-verse.is-playing {
   background: color-mix(in srgb, var(--brand) 13%, var(--surface));
   box-shadow: inset 3px 0 0 var(--brand);
+}
+
+.bible-verse-play {
+  position: absolute;
+  top: 0.35em;
+  right: 0.2em;
+  display: inline-flex;
+  width: 1.85em;
+  height: 1.85em;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand);
+  font-size: 0.62em;
+  line-height: 1;
+  background: color-mix(in srgb, var(--brand) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--brand) 24%, transparent);
+  border-radius: 999px;
+  opacity: 0.72;
+}
+
+.bible-verse-play:hover,
+.bible-verse-play:focus-visible,
+.bible-verse.is-playing .bible-verse-play {
+  color: #ffffff;
+  background: var(--brand);
+  opacity: 1;
 }
 
 .bible-verse-number {
@@ -7639,6 +7810,7 @@ body.modal-open {
 [data-theme="dark"] .topic-card,
 [data-theme="dark"] .bible-controls-card,
 [data-theme="dark"] .bible-reader-card,
+[data-theme="dark"] .bible-audio-player,
 [data-theme="dark"] .verse-modal-card {
   border-color: var(--border);
 }
@@ -8137,6 +8309,15 @@ body.modal-open {
     max-width: 28ch;
     font-size: 0.98rem;
     line-height: 1.45;
+  }
+
+  .bible-audio-player-main {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .bible-audio-transport {
+    justify-content: center;
   }
 
   .bible-reader-head-actions {
