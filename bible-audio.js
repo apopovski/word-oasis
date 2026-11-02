@@ -14,15 +14,31 @@
   ];
   const playIconSvg = `
     <svg class="bible-audio-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M8.25 5.1v13.8a1.1 1.1 0 0 0 1.66.95l11.1-6.9a1.1 1.1 0 0 0 0-1.9l-11.1-6.9a1.1 1.1 0 0 0-1.66.95Z"/>
+      <path d="M7.2 4.8v14.4a.9.9 0 0 0 1.38.76l11.2-7.2a.9.9 0 0 0 0-1.52l-11.2-7.2A.9.9 0 0 0 7.2 4.8Z"/>
     </svg>`;
   const pauseIconSvg = `
     <svg class="bible-audio-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M7.2 5.25h3.1c.58 0 1.05.47 1.05 1.05v11.4c0 .58-.47 1.05-1.05 1.05H7.2a1.05 1.05 0 0 1-1.05-1.05V6.3c0-.58.47-1.05 1.05-1.05Zm6.5 0h3.1c.58 0 1.05.47 1.05 1.05v11.4c0 .58-.47 1.05-1.05 1.05h-3.1a1.05 1.05 0 0 1-1.05-1.05V6.3c0-.58.47-1.05 1.05-1.05Z"/>
+      <rect x="6.2" y="5" width="4" height="14" rx="1.4"/>
+      <rect x="13.8" y="5" width="4" height="14" rx="1.4"/>
     </svg>`;
-  const loopIconSvg = `
+  const prevIconSvg = `
     <svg class="bible-audio-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M7.2 7.2h7.1a3.7 3.7 0 0 1 3.7 3.7v1.1h1.7l-2.8 3.2-2.8-3.2h1.7v-1.1a2 2 0 0 0-2-2H7.2V7.2Zm9.6 9.6H9.7a3.7 3.7 0 0 1-3.7-3.7v-1.1H4.3l2.8-3.2 2.8 3.2H8v1.1a2 2 0 0 0 2 2h6.8v1.7Z"/>
+      <path d="M6 5.4h2.2c.4 0 .7.3.7.7v11.8c0 .4-.3.7-.7.7H6a.7.7 0 0 1-.7-.7V6.1c0-.4.3-.7.7-.7Z"/>
+      <path d="M18.7 5.7a.9.9 0 0 1 .1 1.5L11.4 12l7.4 4.8a.9.9 0 0 1-.1 1.5.9.9 0 0 1-.5.2.9.9 0 0 1-.5-.1l-9-5.8a.9.9 0 0 1 0-1.5l9-5.8a.9.9 0 0 1 1-.1Z"/>
+    </svg>`;
+  const nextIconSvg = `
+    <svg class="bible-audio-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M5.2 5.7a.9.9 0 0 1 1.1-.1l9 5.8a.9.9 0 0 1 0 1.5l-9 5.8a.9.9 0 1 1-1-1.5L13.4 12 5.3 7.2a.9.9 0 0 1-.1-1.5Z"/>
+      <path d="M17.8 5.4h2c.4 0 .7.3.7.7v11.8c0 .4-.3.7-.7.7h-2a.7.7 0 0 1-.7-.7V6.1c0-.4.3-.7.7-.7Z"/>
+    </svg>`;
+  // Repeat arrows + "1" so single-verse loop is obvious.
+  const loopIconSvg = `
+    <svg class="bible-audio-icon bible-audio-icon-loop" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M17 2.8 20.2 6 17 9.2"/>
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 10.2V9a4 4 0 0 1 4-4h12.2"/>
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 21.2 3.8 18 7 14.8"/>
+      <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M20 13.8V15a4 4 0 0 1-4 4H3.8"/>
+      <path d="M11.15 9.15h1.2V15h-1.1v-3.7h-.1l-1.2.75v-1l1.2-1.05Z"/>
     </svg>`;
 
   const readerCard = document.querySelector(".bible-reader-card");
@@ -60,21 +76,9 @@
         <p class="bible-audio-note" id="bible-audio-note">Listen continuously, or loop a verse to memorize.</p>
       </div>
       <div class="bible-audio-transport" role="group" aria-label="Playback controls">
-        <button type="button" id="bible-audio-prev" aria-label="Previous clip">
-          <svg class="bible-audio-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M6.2 5.4h2.1c.4 0 .7.3.7.7v11.8c0 .4-.3.7-.7.7H6.2a.7.7 0 0 1-.7-.7V6.1c0-.4.3-.7.7-.7Zm4.6 6.1 8.3-5.4c.7-.5 1.7 0 1.7.9v10c0 .9-1 1.4-1.7.9l-8.3-5.4a1.1 1.1 0 0 1 0-1.8Z"/>
-          </svg>
-        </button>
-        <button type="button" id="bible-audio-play" aria-label="Play chapter" class="bible-audio-play">
-          <svg class="bible-audio-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M8.25 5.1v13.8a1.1 1.1 0 0 0 1.66.95l11.1-6.9a1.1 1.1 0 0 0 0-1.9l-11.1-6.9a1.1 1.1 0 0 0-1.66.95Z"/>
-          </svg>
-        </button>
-        <button type="button" id="bible-audio-next" aria-label="Next clip">
-          <svg class="bible-audio-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M4.8 6.1c0-.9 1-1.4 1.7-.9l8.3 5.4a1.1 1.1 0 0 1 0 1.8l-8.3 5.4c-.7.5-1.7 0-1.7-.9V6.1Zm12.2-.7h2.1c.4 0 .7.3.7.7v11.8c0 .4-.3.7-.7.7h-2.1a.7.7 0 0 1-.7-.7V6.1c0-.4.3-.7.7-.7Z"/>
-          </svg>
-        </button>
+        <button type="button" id="bible-audio-prev" aria-label="Previous clip">${prevIconSvg}</button>
+        <button type="button" id="bible-audio-play" aria-label="Play chapter" class="bible-audio-play">${playIconSvg}</button>
+        <button type="button" id="bible-audio-next" aria-label="Next clip">${nextIconSvg}</button>
       </div>
     </div>
     <div class="bible-audio-progress-row">
@@ -152,6 +156,11 @@
   modeSelect.value = readStorage(modeStorageKey, "continuous");
   if (![...modeSelect.options].some((option) => option.value === modeSelect.value)) {
     modeSelect.value = "continuous";
+  }
+  // Verse looping is controlled per verse now; don't inherit a sticky "verse" mode.
+  if (modeSelect.value === "verse") {
+    modeSelect.value = "continuous";
+    writeStorage(modeStorageKey, "continuous");
   }
   titlesCheckbox.checked = readStorage(titlesStorageKey, "0") === "1";
   audio.playbackRate = Number.parseFloat(speedSelect.value) || 1;
@@ -285,7 +294,7 @@
 
   function isVerseLoopEnabled(verse) {
     const button = readerBody.querySelector(`.bible-verse-loop[data-verse="${verse}"]`);
-    return Boolean(button?.classList.contains("is-active") || button?.getAttribute("aria-pressed") === "true");
+    return button?.getAttribute("aria-pressed") === "true";
   }
 
   function setVerseLoopEnabled(verse, enabled) {
@@ -297,16 +306,17 @@
     button.setAttribute("aria-pressed", enabled ? "true" : "false");
     button.setAttribute(
       "aria-label",
-      enabled ? `Stop looping verse ${verse}` : `Loop verse ${verse}`
+      enabled ? `Turn off loop for verse ${verse}` : `Loop verse ${verse}`
     );
-    button.title = enabled ? "Looping this verse" : "Loop this verse";
+    button.title = enabled ? "Loop on — tap to play through" : "Loop this verse";
   }
 
-  function syncVerseLoopButtons() {
+  function clearOtherVerseLoops(exceptVerse) {
     readerBody.querySelectorAll(".bible-verse-loop").forEach((button) => {
-      const verse = Number.parseInt(button.dataset.verse, 10);
-      const enabled = Number.isFinite(verse) && activeLoopVerse === verse && playbackIntent === "loop";
-      setVerseLoopEnabled(verse, enabled);
+      const other = Number.parseInt(button.dataset.verse, 10);
+      if (Number.isFinite(other) && other !== exceptVerse) {
+        setVerseLoopEnabled(other, false);
+      }
     });
   }
 
@@ -329,7 +339,11 @@
       );
       button.title = isActivePlaying ? "Pause verse" : "Play verse";
     });
-    syncVerseLoopButtons();
+
+    readerBody.querySelectorAll(".bible-verse-loop").forEach((button) => {
+      const armed = button.getAttribute("aria-pressed") === "true";
+      button.classList.toggle("is-active", armed);
+    });
   }
 
   function updateNowPlaying() {
@@ -511,17 +525,12 @@
     playbackIntent = intent;
     activeLoopVerse = intent === "loop" ? verse : null;
     if (intent === "loop") {
-      modeSelect.value = "verse";
-      writeStorage(modeStorageKey, "verse");
+      clearOtherVerseLoops(verse);
+      setVerseLoopEnabled(verse, true);
       queue = buildQueue(verse, { range: { start: verse, end: verse } });
     } else {
-      if (modeSelect.value === "verse") {
-        modeSelect.value = "continuous";
-        writeStorage(modeStorageKey, "continuous");
-      }
       queue = buildQueue(verse);
     }
-    syncVerseLoopButtons();
     if (!queue.length) {
       nowPlaying.textContent = "No audio for this selection";
       return false;
@@ -531,57 +540,36 @@
   }
 
   async function toggleVerseLoop(verse) {
-    const enabling = !(activeLoopVerse === verse && playbackIntent === "loop");
+    const enabling = !isVerseLoopEnabled(verse);
     const current = queue[queueIndex];
     const sameVerseLoaded = current?.verse === verse && Boolean(audio.src);
-    const wasPlaying = sameVerseLoaded && !audio.paused && !audio.ended;
-    const resumeTime = sameVerseLoaded ? audio.currentTime : 0;
 
     if (enabling) {
-      playbackIntent = "loop";
-      activeLoopVerse = verse;
-      modeSelect.value = "verse";
-      writeStorage(modeStorageKey, "verse");
+      clearOtherVerseLoops(verse);
       setVerseLoopEnabled(verse, true);
-      readerBody.querySelectorAll(".bible-verse-loop").forEach((button) => {
-        const other = Number.parseInt(button.dataset.verse, 10);
-        if (other !== verse) {
-          setVerseLoopEnabled(other, false);
-        }
-      });
-      queue = buildQueue(verse, { range: { start: verse, end: verse } });
-      queueIndex = 0;
-      updateNowPlaying();
-      highlightPlayingVerse(verse);
+      // Only change live playback if this verse is already loaded/playing.
       if (sameVerseLoaded) {
-        if (wasPlaying || resumeTime > 0) {
-          try {
-            if (audio.paused) {
-              await audio.play();
-            }
-          } catch (error) {
-            await playIndex(0);
-          }
-        } else {
-          await playIndex(0);
-        }
+        playbackIntent = "loop";
+        activeLoopVerse = verse;
+        queue = buildQueue(verse, { range: { start: verse, end: verse } });
+        queueIndex = 0;
+        updateNowPlaying();
+        highlightPlayingVerse(verse);
+        updatePlayButton();
       } else {
-        await playIndex(0);
+        updatePlayButton();
       }
-      updatePlayButton();
       return;
     }
 
-    playbackIntent = "continue";
-    activeLoopVerse = null;
-    if (modeSelect.value === "verse") {
-      modeSelect.value = "continuous";
-      writeStorage(modeStorageKey, "continuous");
-    }
     setVerseLoopEnabled(verse, false);
-    queue = buildQueue(verse);
-    queueIndex = Math.max(0, queue.findIndex((item) => item.verse === verse));
-    updateNowPlaying();
+    if (sameVerseLoaded && playbackIntent === "loop") {
+      playbackIntent = "continue";
+      activeLoopVerse = null;
+      queue = buildQueue(verse);
+      queueIndex = Math.max(0, queue.findIndex((item) => item.verse === verse));
+      updateNowPlaying();
+    }
     updatePlayButton();
   }
 
@@ -609,9 +597,8 @@
   }
 
   async function playFromVerse(verse, options = {}) {
-    const loopThisVerse = options.forceLoop === true
-      || isVerseLoopEnabled(verse)
-      || modeSelect.value === "verse";
+    // Loop only when this verse's loop control is explicitly on.
+    const loopThisVerse = options.forceLoop === true || isVerseLoopEnabled(verse);
 
     if (loopThisVerse) {
       await applyPlaybackIntent(verse, "loop");
@@ -622,7 +609,6 @@
       const range = options.range || selectedVerseRange() || { start: verse, end: verse };
       playbackIntent = "continue";
       activeLoopVerse = null;
-      syncVerseLoopButtons();
       queue = buildQueue(verse, { range });
       if (!queue.length) {
         nowPlaying.textContent = "No audio for this selection";
@@ -640,7 +626,14 @@
     if (modeSelect.value === "selection") {
       const range = selectedVerseRange();
       if (range) {
-        await playFromVerse(range.start, { range });
+        playbackIntent = "continue";
+        activeLoopVerse = null;
+        queue = buildQueue(range.start, { range });
+        if (!queue.length) {
+          nowPlaying.textContent = "No audio for this selection";
+          return;
+        }
+        await playIndex(0);
         return;
       }
     }
@@ -650,7 +643,6 @@
     }
     playbackIntent = "continue";
     activeLoopVerse = null;
-    syncVerseLoopButtons();
     queue = buildQueue(1);
     if (!queue.length) {
       nowPlaying.textContent = "No audio clips found";
