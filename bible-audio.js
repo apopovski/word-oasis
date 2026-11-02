@@ -101,36 +101,38 @@
   player.innerHTML = `
     <div class="bible-audio-dock-panel">
       <div class="bible-audio-dock-bar">
+        <div class="bible-audio-seek-wrap bible-audio-full-only">
+          <input id="bible-audio-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek in current clip">
+        </div>
         <div class="bible-audio-transport" role="group" aria-label="Playback controls">
-          <button type="button" class="bible-audio-full-only" id="bible-audio-prev" aria-label="Previous clip">${prevIconSvg}</button>
+          <button type="button" class="bible-audio-full-only bible-audio-desktop-only" id="bible-audio-prev" aria-label="Previous clip">${prevIconSvg}</button>
           <button type="button" id="bible-audio-play" aria-label="Play chapter" class="bible-audio-play">${playIconSvg}</button>
-          <button type="button" class="bible-audio-full-only" id="bible-audio-next" aria-label="Next clip">${nextIconSvg}</button>
+          <button type="button" class="bible-audio-full-only bible-audio-desktop-only" id="bible-audio-next" aria-label="Next clip">${nextIconSvg}</button>
         </div>
         <div class="bible-audio-dock-meta bible-audio-full-only">
           <p class="bible-audio-eyebrow">KJV</p>
           <strong class="bible-audio-now-playing" id="bible-audio-now-playing">Ready to listen</strong>
+          <span class="bible-audio-dock-time" id="bible-audio-time-display">0:00</span>
         </div>
-        <span class="bible-audio-dock-time bible-audio-full-only" id="bible-audio-time-display">0:00</span>
-        <div class="bible-audio-seek-wrap bible-audio-full-only">
-          <input id="bible-audio-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek in current clip">
-        </div>
-        <div class="bible-audio-volume bible-audio-full-only" title="Volume">
-          <span class="bible-audio-volume-icon" aria-hidden="true">${volumeIconSvg}</span>
-          <input id="bible-audio-volume" type="range" min="0" max="100" value="100" step="1" aria-label="Volume">
-        </div>
-        <label class="bible-audio-pill bible-audio-full-only" title="Speed">
-          <select id="bible-audio-speed" aria-label="Playback speed"></select>
-        </label>
-        <div class="bible-audio-mode-group bible-audio-full-only" role="group" aria-label="Repeat mode">
-          <button type="button" class="bible-audio-mode-btn" data-mode="continuous" aria-label="Continuous" title="Continuous">${continuousIconSvg}</button>
-          <button type="button" class="bible-audio-mode-btn" data-mode="chapter" aria-label="Chapter loop" title="Chapter loop">${chapterIconSvg}</button>
-          <button type="button" class="bible-audio-mode-btn" data-mode="verse" aria-label="Verse loop" title="Verse loop">${loopIconSvg}</button>
-          <button type="button" class="bible-audio-mode-btn" data-mode="selection" aria-label="Selection loop" title="Selection loop">${selectionIconSvg}</button>
+        <div class="bible-audio-dock-tools bible-audio-full-only">
+          <div class="bible-audio-volume bible-audio-desktop-only" title="Volume">
+            <span class="bible-audio-volume-icon" aria-hidden="true">${volumeIconSvg}</span>
+            <input id="bible-audio-volume" type="range" min="0" max="100" value="100" step="1" aria-label="Volume">
+          </div>
+          <label class="bible-audio-pill" title="Speed">
+            <select id="bible-audio-speed" aria-label="Playback speed"></select>
+          </label>
+          <div class="bible-audio-mode-group" role="group" aria-label="Repeat mode">
+            <button type="button" class="bible-audio-mode-btn" data-mode="continuous" aria-label="Continuous" title="Continuous">${continuousIconSvg}</button>
+            <button type="button" class="bible-audio-mode-btn" data-mode="chapter" aria-label="Chapter loop" title="Chapter loop">${chapterIconSvg}</button>
+            <button type="button" class="bible-audio-mode-btn" data-mode="verse" aria-label="Verse loop" title="Verse loop">${loopIconSvg}</button>
+            <button type="button" class="bible-audio-mode-btn" data-mode="selection" aria-label="Selection loop" title="Selection loop">${selectionIconSvg}</button>
+          </div>
+          <button type="button" class="bible-audio-tool bible-audio-desktop-only" id="bible-audio-titles" aria-pressed="false" aria-label="Play chapter titles" title="Play chapter titles">
+            ${typeIconSvg}
+          </button>
         </div>
         <select id="bible-audio-mode" class="bible-audio-mode-native" aria-hidden="true" tabindex="-1"></select>
-        <button type="button" class="bible-audio-tool bible-audio-full-only" id="bible-audio-titles" aria-pressed="false" aria-label="Play chapter titles" title="Play chapter titles">
-          ${typeIconSvg}
-        </button>
         <button type="button" class="bible-audio-dock-toggle" id="bible-audio-dock-toggle" aria-label="Minimize player" aria-expanded="true">
           ${minimizeIconSvg}
         </button>
@@ -482,7 +484,8 @@
     timeCurrent.textContent = currentLabel;
     timeTotal.textContent = totalLabel;
     if (timeDisplay) {
-      timeDisplay.textContent = `${currentLabel} / ${totalLabel}`;
+      const compactTime = window.matchMedia("(max-width: 620px)").matches;
+      timeDisplay.textContent = compactTime ? currentLabel : `${currentLabel} / ${totalLabel}`;
     }
     const ratio = Number.isFinite(duration) && duration > 0 ? current / duration : 0;
     const percent = Math.max(0, Math.min(100, ratio * 100));

@@ -4831,6 +4831,12 @@ body.bible-audio-dock-open.bible-audio-dock-collapsed {
   padding-bottom: 0;
 }
 
+@media (max-width: 720px) {
+  body.bible-audio-dock-open {
+    padding-bottom: calc(92px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
 .bible-audio-launcher {
   display: flex;
   align-items: center;
@@ -4946,17 +4952,41 @@ body.bible-audio-dock-open.bible-audio-dock-collapsed {
   display: grid;
   grid-template-columns:
     auto
-    minmax(88px, 150px)
-    auto
-    minmax(110px, 1fr)
-    auto
-    auto
-    auto
+    minmax(96px, 168px)
+    minmax(120px, 1fr)
     auto
     auto;
+  grid-template-areas: "transport meta seek tools toggle";
+  align-items: center;
+  gap: 8px 10px;
+  padding: 10px 12px;
+}
+
+.bible-audio-dock-bar > .bible-audio-transport {
+  grid-area: transport;
+}
+
+.bible-audio-dock-bar > .bible-audio-dock-meta {
+  grid-area: meta;
+}
+
+.bible-audio-dock-bar > .bible-audio-seek-wrap {
+  grid-area: seek;
+}
+
+.bible-audio-dock-bar > .bible-audio-dock-tools {
+  grid-area: tools;
+}
+
+.bible-audio-dock-bar > .bible-audio-dock-toggle {
+  grid-area: toggle;
+}
+
+.bible-audio-dock-tools {
+  display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 12px;
+  min-width: 0;
 }
 
 .bible-audio-dock.is-collapsed .bible-audio-dock-bar {
@@ -5088,10 +5118,18 @@ body.bible-audio-dock-open.bible-audio-dock-collapsed {
 }
 
 .bible-audio-dock-meta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "eyebrow eyebrow"
+    "title time";
+  align-items: center;
+  gap: 0 10px;
   min-width: 0;
 }
 
 .bible-audio-eyebrow {
+  grid-area: eyebrow;
   margin: 0 0 2px;
   color: var(--brand);
   font-size: 0.62rem;
@@ -5112,6 +5150,16 @@ body.bible-audio-dock-open.bible-audio-dock-collapsed {
   letter-spacing: -0.01em;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.bible-audio-dock-meta .bible-audio-now-playing {
+  grid-area: title;
+}
+
+.bible-audio-dock-meta .bible-audio-dock-time {
+  grid-area: time;
+  align-self: end;
+  padding-bottom: 1px;
 }
 
 .bible-audio-note {
@@ -8652,24 +8700,147 @@ body.modal-open {
     flex: 1 1 0;
   }
 
-  .bible-audio-dock-bar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 10px;
+  .bible-audio-dock:not(.is-collapsed) {
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 
-  .bible-audio-dock-meta {
-    flex: 1 1 140px;
+  .bible-audio-dock:not(.is-collapsed) .bible-audio-dock-panel {
+    width: 100%;
+    border-radius: 22px 22px 0 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    box-shadow:
+      0 1px 0 color-mix(in srgb, #ffffff 42%, transparent) inset,
+      0 -18px 48px rgba(15, 23, 42, 0.18);
   }
 
-  .bible-audio-seek-wrap {
-    flex: 1 1 100%;
+  .bible-audio-dock:not(.is-collapsed) .bible-audio-dock-bar {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas:
+      "seek seek seek"
+      "transport meta toggle"
+      "tools tools tools";
+    align-items: center;
+    gap: 0 8px;
+    padding: 0 12px calc(8px + env(safe-area-inset-bottom, 0px));
   }
 
-  .bible-audio-volume,
-  .bible-audio-pill,
-  .bible-audio-tool {
-    flex: 0 0 auto;
+  .bible-audio-dock:not(.is-collapsed) .bible-audio-seek-wrap {
+    grid-area: seek;
+    margin: 0 -12px 2px;
+    padding: 0 4px;
+  }
+
+  .bible-audio-dock:not(.is-collapsed) .bible-audio-seek-wrap input[type="range"] {
+    height: 18px;
+  }
+
+  .bible-audio-dock:not(.is-collapsed) .bible-audio-seek-wrap input[type="range"]::-webkit-slider-runnable-track {
+    height: 3px;
+  }
+
+  .bible-audio-dock:not(.is-collapsed) .bible-audio-seek-wrap input[type="range"]::-webkit-slider-thumb {
+    width: 11px;
+    height: 11px;
+    margin-top: -4px;
+  }
+
+  .bible-audio-dock:not(.is-collapsed) .bible-audio-seek-wrap input[type="range"]::-moz-range-track,
+  .bible-audio-dock:not(.is-collapsed) .bible-audio-seek-wrap input[type="range"]::-moz-range-progress {
+    height: 3px;
+  }
+
+  .bible-audio-dock:not(.is-collapsed) .bible-audio-seek-wrap input[type="range"]::-moz-range-thumb {
+    width: 11px;
+    height: 11px;
+  }
+
+  .bible-audio-dock:not(.is-collapsed) .bible-audio-transport {
+    grid-area: transport;
+  }
+
+  .bible-audio-dock:not(.is-collapsed) .bible-audio-dock-meta {
+    grid-area: meta;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "title time"
+      "eyebrow eyebrow";
+    column-gap: 8px;
+    row-gap: 0;
+  }
+
+  .bible-audio-dock:not(.is-collapsed) .bible-audio-eyebrow {
+    display: none;
+  }
+
+  .bible-audio-dock:not(.is-collapsed) .bible-audio-now-playing {
+    font-size: 0.88rem;
+    letter-spacing: -0.015em;
+  }
+
+  .bible-audio-dock:not(.is-collapsed) .bible-audio-dock-time {
+    align-self: center;
+    font-size: 0.68rem;
+    opacity: 0.86;
+  }
+
+  .bible-audio-dock:not(.is-collapsed) .bible-audio-dock-tools {
+    grid-area: tools;
+    justify-content: space-between;
+    gap: 6px;
+    min-width: 0;
+    padding: 4px 0 2px;
+  }
+
+  .bible-audio-dock:not(.is-collapsed) .bible-audio-dock-toggle {
+    grid-area: toggle;
+    width: 34px;
+    height: 34px;
+  }
+
+  .bible-audio-dock:not(.is-collapsed) .bible-audio-play {
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 8px 18px color-mix(in srgb, var(--brand) 26%, transparent);
+  }
+
+  .bible-audio-dock:not(.is-collapsed) .bible-audio-desktop-only {
+    display: none !important;
+  }
+
+  .bible-audio-dock:not(.is-collapsed) .bible-audio-mode-group {
+    flex: 1 1 auto;
+    justify-content: space-between;
+    min-width: 0;
+    padding: 2px;
+  }
+
+  .bible-audio-dock:not(.is-collapsed) .bible-audio-mode-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .bible-audio-dock:not(.is-collapsed) .bible-audio-mode-btn .bible-audio-icon {
+    width: 0.92rem;
+    height: 0.92rem;
+  }
+
+  .bible-audio-dock:not(.is-collapsed) .bible-audio-pill select {
+    min-height: 32px;
+    max-width: 3.9rem;
+    padding: 0 1.55rem 0 0.55rem;
+    font-size: 0.78rem;
+    background-position: right 0.5rem center;
+    background-size: 0.75rem;
+  }
+
+  .bible-audio-dock.is-collapsed {
+    right: max(10px, env(safe-area-inset-right));
+    bottom: max(10px, env(safe-area-inset-bottom));
   }
 
   .bible-reader-head-actions {
