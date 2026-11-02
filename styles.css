@@ -4978,7 +4978,7 @@ h1 {
   position: relative;
   margin: 0;
   padding: 4px 8px;
-  padding-right: 2.6em;
+  padding-right: 4.6rem;
   color: var(--text);
   font-family: Georgia, "Times New Roman", serif;
   font-size: var(--bible-text-size);
@@ -4999,10 +4999,17 @@ h1 {
   box-shadow: inset 3px 0 0 var(--brand);
 }
 
-.bible-verse-play {
+.bible-verse-audio-actions {
   position: absolute;
   top: 0.28em;
-  right: 0.15em;
+  right: 0.12em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+}
+
+.bible-verse-play,
+.bible-verse-loop {
   display: inline-flex;
   width: 1.7rem;
   height: 1.7rem;
@@ -5025,13 +5032,16 @@ h1 {
   transition: transform 160ms ease, background-color 160ms ease, color 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
 }
 
-.bible-verse-play .bible-audio-icon {
+.bible-verse-play .bible-audio-icon,
+.bible-verse-loop .bible-audio-icon {
   width: 0.72rem;
   height: 0.72rem;
 }
 
 .bible-verse-play:hover,
-.bible-verse-play:focus-visible {
+.bible-verse-play:focus-visible,
+.bible-verse-loop:hover,
+.bible-verse-loop:focus-visible {
   color: #ffffff;
   background: var(--brand);
   border-color: var(--brand);
@@ -5042,7 +5052,8 @@ h1 {
 
 .bible-verse-play.is-active,
 .bible-verse-play.is-playing,
-.bible-verse.is-playing .bible-verse-play {
+.bible-verse.is-playing .bible-verse-play,
+.bible-verse-loop.is-active {
   color: #ffffff;
   background: var(--brand);
   border-color: var(--brand);

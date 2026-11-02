@@ -20,6 +20,10 @@
     <svg class="bible-audio-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
       <path d="M7.2 5.25h3.1c.58 0 1.05.47 1.05 1.05v11.4c0 .58-.47 1.05-1.05 1.05H7.2a1.05 1.05 0 0 1-1.05-1.05V6.3c0-.58.47-1.05 1.05-1.05Zm6.5 0h3.1c.58 0 1.05.47 1.05 1.05v11.4c0 .58-.47 1.05-1.05 1.05h-3.1a1.05 1.05 0 0 1-1.05-1.05V6.3c0-.58.47-1.05 1.05-1.05Z"/>
     </svg>`;
+  const loopIconSvg = `
+    <svg class="bible-audio-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M7.2 7.2h7.1a3.7 3.7 0 0 1 3.7 3.7v1.1h1.7l-2.8 3.2-2.8-3.2h1.7v-1.1a2 2 0 0 0-2-2H7.2V7.2Zm9.6 9.6H9.7a3.7 3.7 0 0 1-3.7-3.7v-1.1H4.3l2.8-3.2 2.8 3.2H8v1.1a2 2 0 0 0 2 2h6.8v1.7Z"/>
+    </svg>`;
 
   const readerCard = document.querySelector(".bible-reader-card");
   const readerBody = document.querySelector("#bible-reader-body");
@@ -40,6 +44,9 @@
   let queueIndex = -1;
   let isSeeking = false;
   let prefetchAudio = null;
+  // Per-verse playback choice: "loop" repeats the active verse; "continue" keeps going.
+  let playbackIntent = "continue";
+  let activeLoopVerse = null;
 
   const player = document.createElement("section");
   player.className = "bible-audio-player";
@@ -276,6 +283,33 @@
     button.innerHTML = playing ? pauseIconSvg : playIconSvg;
   }
 
+  function isVerseLoopEnabled(verse) {
+    const button = readerBody.querySelector(`.bible-verse-loop[data-verse="${verse}"]`);
+    return Boolean(button?.classList.contains("is-active") || button?.getAttribute("aria-pressed") === "true");
+  }
+
+  function setVerseLoopEnabled(verse, enabled) {
+    const button = readerBody.querySelector(`.bible-verse-loop[data-verse="${verse}"]`);
+    if (!button) {
+      return;
+    }
+    button.classList.toggle("is-active", enabled);
+    button.setAttribute("aria-pressed", enabled ? "true" : "false");
+    button.setAttribute(
+      "aria-label",
+      enabled ? `Stop looping verse ${verse}` : `Loop verse ${verse}`
+    );
+    button.title = enabled ? "Looping this verse" : "Loop this verse";
+  }
+
+  function syncVerseLoopButtons() {
+    readerBody.querySelectorAll(".bible-verse-loop").forEach((button) => {
+      const verse = Number.parseInt(button.dataset.verse, 10);
+      const enabled = Number.isFinite(verse) && activeLoopVerse === verse && playbackIntent === "loop";
+      setVerseLoopEnabled(verse, enabled);
+    });
+  }
+
   function updatePlayButton() {
     const playing = !audio.paused && !audio.ended;
     setControlIcon(playButton, playing);
@@ -295,6 +329,7 @@
       );
       button.title = isActivePlaying ? "Pause verse" : "Play verse";
     });
+    syncVerseLoopButtons();
   }
 
   function updateNowPlaying() {
@@ -364,6 +399,8 @@
     audio.load();
     queue = [];
     queueIndex = -1;
+    playbackIntent = "continue";
+    activeLoopVerse = null;
     if (!keepHighlight) {
       clearPlayingHighlight();
     }
@@ -378,7 +415,12 @@
     const mode = modeSelect.value;
     const current = queue[queueIndex];
 
-    if (mode === "verse" && current) {
+    if (playbackIntent === "loop" && current) {
+      await playIndex(queueIndex);
+      return;
+    }
+
+    if (mode === "verse" && current && playbackIntent !== "continue") {
       await playIndex(queueIndex);
       return;
     }
@@ -402,7 +444,7 @@
       return;
     }
 
-    if (mode === "continuous") {
+    if (mode === "continuous" || playbackIntent === "continue") {
       const nextButtonEl = document.querySelector("#bible-reader-next");
       if (nextButtonEl && !nextButtonEl.disabled) {
         const resume = { book: currentBook, chapter: currentChapter };
@@ -421,27 +463,125 @@
 
   function enhanceVerseRows() {
     readerBody.querySelectorAll(".bible-verse").forEach((row) => {
-      if (row.querySelector(".bible-verse-play")) {
+      if (row.querySelector(".bible-verse-audio-actions")) {
         return;
       }
       const verse = Number.parseInt(row.dataset.verse, 10);
       if (!Number.isFinite(verse)) {
         return;
       }
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "bible-verse-play";
-      button.dataset.verse = String(verse);
-      button.setAttribute("aria-label", `Play verse ${verse}`);
-      button.title = "Play verse";
-      setControlIcon(button, false);
-      button.addEventListener("click", (event) => {
+
+      const actions = document.createElement("div");
+      actions.className = "bible-verse-audio-actions";
+
+      const playControl = document.createElement("button");
+      playControl.type = "button";
+      playControl.className = "bible-verse-play";
+      playControl.dataset.verse = String(verse);
+      playControl.setAttribute("aria-label", `Play verse ${verse}`);
+      playControl.title = "Play verse";
+      setControlIcon(playControl, false);
+      playControl.addEventListener("click", (event) => {
         event.preventDefault();
         event.stopPropagation();
         toggleVersePlayback(verse);
       });
-      row.append(button);
+
+      const loopControl = document.createElement("button");
+      loopControl.type = "button";
+      loopControl.className = "bible-verse-loop";
+      loopControl.dataset.verse = String(verse);
+      loopControl.innerHTML = loopIconSvg;
+      loopControl.setAttribute("aria-pressed", "false");
+      loopControl.setAttribute("aria-label", `Loop verse ${verse}`);
+      loopControl.title = "Loop this verse";
+      loopControl.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        toggleVerseLoop(verse);
+      });
+
+      actions.append(playControl, loopControl);
+      row.append(actions);
     });
+    updatePlayButton();
+  }
+
+  async function applyPlaybackIntent(verse, intent) {
+    playbackIntent = intent;
+    activeLoopVerse = intent === "loop" ? verse : null;
+    if (intent === "loop") {
+      modeSelect.value = "verse";
+      writeStorage(modeStorageKey, "verse");
+      queue = buildQueue(verse, { range: { start: verse, end: verse } });
+    } else {
+      if (modeSelect.value === "verse") {
+        modeSelect.value = "continuous";
+        writeStorage(modeStorageKey, "continuous");
+      }
+      queue = buildQueue(verse);
+    }
+    syncVerseLoopButtons();
+    if (!queue.length) {
+      nowPlaying.textContent = "No audio for this selection";
+      return false;
+    }
+    const startIndex = Math.max(0, queue.findIndex((item) => item.verse === verse));
+    return playIndex(startIndex === -1 ? 0 : startIndex);
+  }
+
+  async function toggleVerseLoop(verse) {
+    const enabling = !(activeLoopVerse === verse && playbackIntent === "loop");
+    const current = queue[queueIndex];
+    const sameVerseLoaded = current?.verse === verse && Boolean(audio.src);
+    const wasPlaying = sameVerseLoaded && !audio.paused && !audio.ended;
+    const resumeTime = sameVerseLoaded ? audio.currentTime : 0;
+
+    if (enabling) {
+      playbackIntent = "loop";
+      activeLoopVerse = verse;
+      modeSelect.value = "verse";
+      writeStorage(modeStorageKey, "verse");
+      setVerseLoopEnabled(verse, true);
+      readerBody.querySelectorAll(".bible-verse-loop").forEach((button) => {
+        const other = Number.parseInt(button.dataset.verse, 10);
+        if (other !== verse) {
+          setVerseLoopEnabled(other, false);
+        }
+      });
+      queue = buildQueue(verse, { range: { start: verse, end: verse } });
+      queueIndex = 0;
+      updateNowPlaying();
+      highlightPlayingVerse(verse);
+      if (sameVerseLoaded) {
+        if (wasPlaying || resumeTime > 0) {
+          try {
+            if (audio.paused) {
+              await audio.play();
+            }
+          } catch (error) {
+            await playIndex(0);
+          }
+        } else {
+          await playIndex(0);
+        }
+      } else {
+        await playIndex(0);
+      }
+      updatePlayButton();
+      return;
+    }
+
+    playbackIntent = "continue";
+    activeLoopVerse = null;
+    if (modeSelect.value === "verse") {
+      modeSelect.value = "continuous";
+      writeStorage(modeStorageKey, "continuous");
+    }
+    setVerseLoopEnabled(verse, false);
+    queue = buildQueue(verse);
+    queueIndex = Math.max(0, queue.findIndex((item) => item.verse === verse));
+    updateNowPlaying();
     updatePlayButton();
   }
 
@@ -469,18 +609,31 @@
   }
 
   async function playFromVerse(verse, options = {}) {
-    const range = modeSelect.value === "selection"
-      ? (options.range || selectedVerseRange() || { start: verse, end: verse })
-      : null;
-    queue = buildQueue(verse, { range });
-    if (!queue.length) {
-      nowPlaying.textContent = "No audio for this selection";
+    const loopThisVerse = options.forceLoop === true
+      || isVerseLoopEnabled(verse)
+      || modeSelect.value === "verse";
+
+    if (loopThisVerse) {
+      await applyPlaybackIntent(verse, "loop");
       return;
     }
-    const startIndex = range
-      ? Math.max(0, queue.findIndex((item) => item.verse === verse))
-      : 0;
-    await playIndex(startIndex === -1 ? 0 : startIndex);
+
+    if (modeSelect.value === "selection") {
+      const range = options.range || selectedVerseRange() || { start: verse, end: verse };
+      playbackIntent = "continue";
+      activeLoopVerse = null;
+      syncVerseLoopButtons();
+      queue = buildQueue(verse, { range });
+      if (!queue.length) {
+        nowPlaying.textContent = "No audio for this selection";
+        return;
+      }
+      const startIndex = Math.max(0, queue.findIndex((item) => item.verse === verse));
+      await playIndex(startIndex === -1 ? 0 : startIndex);
+      return;
+    }
+
+    await applyPlaybackIntent(verse, "continue");
   }
 
   async function playChapter() {
@@ -491,6 +644,13 @@
         return;
       }
     }
+    if (modeSelect.value === "verse") {
+      await applyPlaybackIntent(1, "loop");
+      return;
+    }
+    playbackIntent = "continue";
+    activeLoopVerse = null;
+    syncVerseLoopButtons();
     queue = buildQueue(1);
     if (!queue.length) {
       nowPlaying.textContent = "No audio clips found";
