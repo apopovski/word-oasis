@@ -4828,7 +4828,7 @@ body.bible-audio-dock-open {
 }
 
 body.bible-audio-dock-open.bible-audio-dock-collapsed {
-  padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+  padding-bottom: 0;
 }
 
 .bible-audio-launcher {
@@ -4897,6 +4897,13 @@ body.bible-audio-dock-open.bible-audio-dock-collapsed {
   display: flex;
   justify-content: center;
   pointer-events: none;
+  transition: left 220ms ease, right 220ms ease, width 220ms ease;
+}
+
+.bible-audio-dock.is-collapsed {
+  left: auto;
+  width: auto;
+  justify-content: flex-end;
 }
 
 .bible-audio-dock[hidden] {
@@ -4915,7 +4922,15 @@ body.bible-audio-dock-open.bible-audio-dock-collapsed {
     0 18px 50px rgba(15, 23, 42, 0.18);
   backdrop-filter: blur(18px) saturate(1.2);
   -webkit-backdrop-filter: blur(18px) saturate(1.2);
-  transition: box-shadow 220ms ease, transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: width 220ms cubic-bezier(0.22, 1, 0.36, 1), border-radius 220ms ease, box-shadow 220ms ease;
+}
+
+.bible-audio-dock.is-collapsed .bible-audio-dock-panel {
+  width: auto;
+  border-radius: 999px;
+  box-shadow:
+    0 1px 0 color-mix(in srgb, #ffffff 45%, transparent) inset,
+    0 14px 36px rgba(15, 23, 42, 0.2);
 }
 
 .bible-audio-dock.is-attention .bible-audio-dock-panel {
@@ -4931,25 +4946,83 @@ body.bible-audio-dock-open.bible-audio-dock-collapsed {
   display: grid;
   grid-template-columns:
     auto
-    minmax(96px, 160px)
+    minmax(88px, 150px)
     auto
-    minmax(120px, 1fr)
+    minmax(110px, 1fr)
     auto
     auto
     auto
     auto
     auto;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   padding: 10px 12px;
 }
 
 .bible-audio-dock.is-collapsed .bible-audio-dock-bar {
-  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  display: inline-flex;
+  gap: 4px;
+  padding: 6px 8px 6px 6px;
 }
 
 .bible-audio-dock.is-collapsed .bible-audio-full-only {
   display: none !important;
+}
+
+.bible-audio-dock.is-collapsed .bible-audio-transport {
+  gap: 0;
+}
+
+.bible-audio-dock.is-collapsed .bible-audio-play {
+  width: 40px;
+  height: 40px;
+}
+
+.bible-audio-dock.is-collapsed .bible-audio-dock-toggle {
+  width: 36px;
+  height: 36px;
+}
+
+.bible-audio-mode-native {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.bible-audio-mode-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  background: color-mix(in srgb, var(--field-bg) 90%, transparent);
+  border: 1px solid color-mix(in srgb, var(--brand) 12%, var(--border));
+  border-radius: 999px;
+}
+
+.bible-audio-mode-btn {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+}
+
+.bible-audio-mode-btn:hover,
+.bible-audio-mode-btn:focus-visible {
+  color: var(--brand);
+  background: color-mix(in srgb, var(--brand) 10%, transparent);
+}
+
+.bible-audio-mode-btn.is-active {
+  color: #ffffff;
+  background: var(--brand);
 }
 
 .bible-audio-transport {
@@ -5145,16 +5218,16 @@ body.bible-audio-dock-open.bible-audio-dock-collapsed {
 .bible-audio-pill select {
   min-width: 0;
   min-height: 36px;
-  max-width: 132px;
-  padding: 0 2.1rem 0 0.85rem;
+  max-width: 4.6rem;
+  padding: 0 1.9rem 0 0.7rem;
   color: var(--text);
-  font-size: 0.86rem;
+  font-size: 0.84rem;
   font-weight: 700;
   background-color: color-mix(in srgb, var(--field-bg) 94%, transparent);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2352677a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 0.75rem center;
-  background-size: 0.9rem;
+  background-position: right 0.7rem center;
+  background-size: 0.85rem;
   border: 1px solid color-mix(in srgb, var(--brand) 14%, var(--border));
   border-radius: 999px;
   outline: none;

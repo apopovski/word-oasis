@@ -27,10 +27,25 @@
   const prevIconSvg = lucideIcon('<polygon points="19 20 9 12 19 4 19 20"/><line x1="5" x2="5" y1="19" y2="5"/>');
   const nextIconSvg = lucideIcon('<polygon points="5 4 15 12 5 20 5 4"/><line x1="19" x2="19" y1="5" y2="19"/>');
   const loopIconSvg = lucideIcon('<path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/><path d="M11 10h1v4"/>');
+  const continuousIconSvg = lucideIcon('<path d="m6 17 5-5-5-5"/><path d="m13 17 5-5-5-5"/>');
+  const chapterIconSvg = lucideIcon('<path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/>');
+  const selectionIconSvg = lucideIcon('<path d="M3 5h.01"/><path d="M7 5h14"/><path d="M3 12h.01"/><path d="M7 12h14"/><path d="M3 19h.01"/><path d="M7 19h10"/>');
   const volumeIconSvg = lucideIcon('<path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.109 7.607a.7.7 0 0 1-.465.182H2.7a.7.7 0 0 0-.7.7v7.022a.7.7 0 0 0 .7.7h2.944a.7.7 0 0 1 .465.182l3.688 3.403A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/>');
   const minimizeIconSvg = lucideIcon('<path d="M8 3v3a2 2 0 0 1-2 2H3"/><path d="M21 8h-3a2 2 0 0 1-2-2V3"/><path d="M3 16h3a2 2 0 0 1 2 2v3"/><path d="M16 21v-3a2 2 0 0 1 2-2h3"/>');
   const expandIconSvg = lucideIcon('<path d="M15 3h6v6"/><path d="m21 3-7 7"/><path d="m3 21 7-7"/><path d="M9 21H3v-6"/>');
   const typeIconSvg = lucideIcon('<path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/>');
+  const modeIcons = {
+    continuous: continuousIconSvg,
+    chapter: chapterIconSvg,
+    verse: loopIconSvg,
+    selection: selectionIconSvg
+  };
+  const modeTitles = {
+    continuous: "Continuous",
+    chapter: "Chapter loop",
+    verse: "Verse loop",
+    selection: "Selection loop"
+  };
 
   const readerCard = document.querySelector(".bible-reader-card");
   const readerBody = document.querySelector("#bible-reader-body");
@@ -91,11 +106,11 @@
           <button type="button" id="bible-audio-play" aria-label="Play chapter" class="bible-audio-play">${playIconSvg}</button>
           <button type="button" class="bible-audio-full-only" id="bible-audio-next" aria-label="Next clip">${nextIconSvg}</button>
         </div>
-        <div class="bible-audio-dock-meta">
-          <p class="bible-audio-eyebrow">KJV audio</p>
+        <div class="bible-audio-dock-meta bible-audio-full-only">
+          <p class="bible-audio-eyebrow">KJV</p>
           <strong class="bible-audio-now-playing" id="bible-audio-now-playing">Ready to listen</strong>
         </div>
-        <span class="bible-audio-dock-time" id="bible-audio-time-display">0:00 / 0:00</span>
+        <span class="bible-audio-dock-time bible-audio-full-only" id="bible-audio-time-display">0:00</span>
         <div class="bible-audio-seek-wrap bible-audio-full-only">
           <input id="bible-audio-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek in current clip">
         </div>
@@ -103,12 +118,16 @@
           <span class="bible-audio-volume-icon" aria-hidden="true">${volumeIconSvg}</span>
           <input id="bible-audio-volume" type="range" min="0" max="100" value="100" step="1" aria-label="Volume">
         </div>
-        <label class="bible-audio-pill bible-audio-full-only">
+        <label class="bible-audio-pill bible-audio-full-only" title="Speed">
           <select id="bible-audio-speed" aria-label="Playback speed"></select>
         </label>
-        <label class="bible-audio-pill bible-audio-full-only">
-          <select id="bible-audio-mode" aria-label="Repeat mode"></select>
-        </label>
+        <div class="bible-audio-mode-group bible-audio-full-only" role="group" aria-label="Repeat mode">
+          <button type="button" class="bible-audio-mode-btn" data-mode="continuous" aria-label="Continuous" title="Continuous">${continuousIconSvg}</button>
+          <button type="button" class="bible-audio-mode-btn" data-mode="chapter" aria-label="Chapter loop" title="Chapter loop">${chapterIconSvg}</button>
+          <button type="button" class="bible-audio-mode-btn" data-mode="verse" aria-label="Verse loop" title="Verse loop">${loopIconSvg}</button>
+          <button type="button" class="bible-audio-mode-btn" data-mode="selection" aria-label="Selection loop" title="Selection loop">${selectionIconSvg}</button>
+        </div>
+        <select id="bible-audio-mode" class="bible-audio-mode-native" aria-hidden="true" tabindex="-1"></select>
         <button type="button" class="bible-audio-tool bible-audio-full-only" id="bible-audio-titles" aria-pressed="false" aria-label="Play chapter titles" title="Play chapter titles">
           ${typeIconSvg}
         </button>
@@ -138,6 +157,7 @@
   const miniTime = null;
   const speedSelect = player.querySelector("#bible-audio-speed");
   const modeSelect = player.querySelector("#bible-audio-mode");
+  const modeButtons = [...player.querySelectorAll(".bible-audio-mode-btn")];
   const titlesButton = player.querySelector("#bible-audio-titles");
   const titlesCheckbox = {
     get checked() {
@@ -170,6 +190,14 @@
     modeSelect.append(option);
   });
 
+  function syncModeButtons() {
+    modeButtons.forEach((button) => {
+      const active = button.dataset.mode === modeSelect.value;
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+  }
+
   function readStorage(key, fallback) {
     try {
       const value = window.localStorage.getItem(key);
@@ -200,6 +228,7 @@
     modeSelect.value = "continuous";
     writeStorage(modeStorageKey, "continuous");
   }
+  syncModeButtons();
   titlesCheckbox.checked = readStorage(titlesStorageKey, "0") === "1";
   const storedVolume = Number.parseFloat(readStorage(volumeStorageKey, "1"));
   audio.volume = Number.isFinite(storedVolume) ? Math.min(1, Math.max(0, storedVolume)) : 1;
@@ -859,6 +888,14 @@
   });
   modeSelect.addEventListener("change", () => {
     writeStorage(modeStorageKey, modeSelect.value);
+    syncModeButtons();
+  });
+  modeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      modeSelect.value = button.dataset.mode;
+      writeStorage(modeStorageKey, modeSelect.value);
+      syncModeButtons();
+    });
   });
   titlesButton?.addEventListener("click", () => {
     titlesCheckbox.checked = !titlesCheckbox.checked;
