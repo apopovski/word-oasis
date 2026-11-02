@@ -4,50 +4,33 @@
   const speedStorageKey = "word-oasis-bible-audio-speed";
   const modeStorageKey = "word-oasis-bible-audio-mode";
   const titlesStorageKey = "word-oasis-bible-audio-titles";
+  const volumeStorageKey = "word-oasis-bible-audio-volume";
   const dockCollapsedStorageKey = "word-oasis-bible-audio-dock-collapsed";
 
   const speeds = [0.75, 1, 1.25, 1.5, 1.75, 2];
   const modes = [
     { id: "continuous", label: "Continuous" },
-    { id: "chapter", label: "Chapter loop" },
-    { id: "verse", label: "Verse loop" },
-    { id: "selection", label: "Selection loop" }
+    { id: "chapter", label: "Chapter" },
+    { id: "verse", label: "Verse" },
+    { id: "selection", label: "Selection" }
   ];
-  const playIconSvg = `
-    <svg class="bible-audio-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M8 4.8v14.4c0 .9 1 1.45 1.75.96l11.05-7.2a1.12 1.12 0 0 0 0-1.92L9.75 3.84C9 3.35 8 3.9 8 4.8Z"/>
-    </svg>`;
-  const pauseIconSvg = `
-    <svg class="bible-audio-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <rect x="6" y="4.75" width="4.25" height="14.5" rx="1.6"/>
-      <rect x="13.75" y="4.75" width="4.25" height="14.5" rx="1.6"/>
-    </svg>`;
-  const prevIconSvg = `
-    <svg class="bible-audio-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M5.75 5h2.1c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1h-2.1a1 1 0 0 1-1-1V6c0-.55.45-1 1-1Z"/>
-      <path d="M19.3 5.55a1.05 1.05 0 0 1 .05 1.7L11.9 12l7.45 4.75a1.05 1.05 0 1 1-1.15 1.76l-9.2-5.87a1.05 1.05 0 0 1 0-1.76l9.2-5.87a1.05 1.05 0 0 1 1.1-.1Z"/>
-    </svg>`;
-  const nextIconSvg = `
-    <svg class="bible-audio-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M4.7 5.55a1.05 1.05 0 0 1 1.1.1l9.2 5.87a1.05 1.05 0 0 1 0 1.76l-9.2 5.87a1.05 1.05 0 1 1-1.15-1.76L12.1 12 4.65 7.25a1.05 1.05 0 0 1 .05-1.7Z"/>
-      <path d="M16.15 5h2.1c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1h-2.1a1 1 0 0 1-1-1V6c0-.55.45-1 1-1Z"/>
-    </svg>`;
-  const loopIconSvg = `
-    <svg class="bible-audio-icon bible-audio-icon-loop" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m17 3 3.2 3.2L17 9.4"/>
-      <path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M4 10.5V9.2A4.2 4.2 0 0 1 8.2 5h11"/>
-      <path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="m7 21-3.2-3.2L7 14.6"/>
-      <path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M20 13.5v1.3A4.2 4.2 0 0 1 15.8 19h-11"/>
-      <path d="M11.2 9.1h1.25V14.9h-1.15v-3.75h-.08l-1.25.78v-1.05l1.23-1.08Z"/>
-    </svg>`;
-  const minimizeIconSvg = `
-    <svg class="bible-audio-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 12h12"/>
-    </svg>`;
-  const expandIconSvg = `
-    <svg class="bible-audio-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M8 4H4v4M16 4h4v4M8 20H4v-4M16 20h4v-4"/>
-    </svg>`;
+
+  // Lucide icons (ISC) — stroke-based official paths.
+  function lucideIcon(inner) {
+    return `
+      <svg class="bible-audio-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        ${inner}
+      </svg>`;
+  }
+  const playIconSvg = lucideIcon('<polygon points="6 3 20 12 6 21 6 3"/>');
+  const pauseIconSvg = lucideIcon('<rect x="14" y="4" width="4" height="16" rx="1"/><rect x="6" y="4" width="4" height="16" rx="1"/>');
+  const prevIconSvg = lucideIcon('<polygon points="19 20 9 12 19 4 19 20"/><line x1="5" x2="5" y1="19" y2="5"/>');
+  const nextIconSvg = lucideIcon('<polygon points="5 4 15 12 5 20 5 4"/><line x1="19" x2="19" y1="5" y2="19"/>');
+  const loopIconSvg = lucideIcon('<path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/><path d="M11 10h1v4"/>');
+  const volumeIconSvg = lucideIcon('<path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.109 7.607a.7.7 0 0 1-.465.182H2.7a.7.7 0 0 0-.7.7v7.022a.7.7 0 0 0 .7.7h2.944a.7.7 0 0 1 .465.182l3.688 3.403A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/>');
+  const minimizeIconSvg = lucideIcon('<path d="M8 3v3a2 2 0 0 1-2 2H3"/><path d="M21 8h-3a2 2 0 0 1-2-2V3"/><path d="M3 16h3a2 2 0 0 1 2 2v3"/><path d="M16 21v-3a2 2 0 0 1 2-2h3"/>');
+  const expandIconSvg = lucideIcon('<path d="M15 3h6v6"/><path d="m21 3-7 7"/><path d="m3 21 7-7"/><path d="M9 21H3v-6"/>');
+  const typeIconSvg = lucideIcon('<path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/>');
 
   const readerCard = document.querySelector(".bible-reader-card");
   const readerBody = document.querySelector("#bible-reader-body");
@@ -79,14 +62,14 @@
     <div class="bible-audio-launcher-copy">
       <p class="bible-audio-eyebrow">KJV audio</p>
       <strong id="bible-audio-launcher-title">Ready to listen</strong>
-      <p id="bible-audio-note">Tap a verse to play, or start the chapter from the dock.</p>
+      <p id="bible-audio-note">Play any verse, or start from the dock.</p>
     </div>
     <div class="bible-audio-launcher-actions">
       <button type="button" class="bible-audio-launcher-play" id="bible-audio-launcher-play">
         ${playIconSvg}
         <span>Listen</span>
       </button>
-      <button type="button" class="bible-audio-launcher-open" id="bible-audio-launcher-open">Open player</button>
+      <button type="button" class="bible-audio-launcher-open" id="bible-audio-launcher-open">Player</button>
     </div>
   `;
 
@@ -102,54 +85,35 @@
   player.setAttribute("aria-label", "Bible audio player");
   player.innerHTML = `
     <div class="bible-audio-dock-panel">
-      <div class="bible-audio-dock-expanded">
-        <div class="bible-audio-dock-top">
-          <div class="bible-audio-dock-meta">
-            <p class="bible-audio-eyebrow">Now playing · KJV</p>
-            <strong class="bible-audio-now-playing" id="bible-audio-now-playing">Ready to listen</strong>
-          </div>
-          <button type="button" class="bible-audio-dock-minimize" id="bible-audio-minimize" aria-label="Minimize player">
-            ${minimizeIconSvg}
-          </button>
+      <div class="bible-audio-dock-bar">
+        <div class="bible-audio-transport" role="group" aria-label="Playback controls">
+          <button type="button" class="bible-audio-full-only" id="bible-audio-prev" aria-label="Previous clip">${prevIconSvg}</button>
+          <button type="button" id="bible-audio-play" aria-label="Play chapter" class="bible-audio-play">${playIconSvg}</button>
+          <button type="button" class="bible-audio-full-only" id="bible-audio-next" aria-label="Next clip">${nextIconSvg}</button>
         </div>
-        <div class="bible-audio-progress-row">
-          <span id="bible-audio-time-current">0:00</span>
-          <div class="bible-audio-seek-wrap">
-            <input id="bible-audio-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek in current clip">
-          </div>
-          <span id="bible-audio-time-total">0:00</span>
-        </div>
-        <div class="bible-audio-dock-controls">
-          <div class="bible-audio-transport" role="group" aria-label="Playback controls">
-            <button type="button" id="bible-audio-prev" aria-label="Previous clip">${prevIconSvg}</button>
-            <button type="button" id="bible-audio-play" aria-label="Play chapter" class="bible-audio-play">${playIconSvg}</button>
-            <button type="button" id="bible-audio-next" aria-label="Next clip">${nextIconSvg}</button>
-          </div>
-          <div class="bible-audio-settings">
-            <label class="bible-audio-field">
-              <span>Speed</span>
-              <select id="bible-audio-speed" aria-label="Playback speed"></select>
-            </label>
-            <label class="bible-audio-field">
-              <span>Repeat</span>
-              <select id="bible-audio-mode" aria-label="Repeat mode"></select>
-            </label>
-            <label class="bible-audio-check">
-              <input id="bible-audio-titles" type="checkbox">
-              <span>Titles</span>
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="bible-audio-dock-mini">
-        <button type="button" id="bible-audio-play-mini" class="bible-audio-play bible-audio-play-mini" aria-label="Play chapter">${playIconSvg}</button>
-        <div class="bible-audio-dock-mini-copy">
+        <div class="bible-audio-dock-meta">
           <p class="bible-audio-eyebrow">KJV audio</p>
-          <strong id="bible-audio-now-playing-mini">Ready to listen</strong>
+          <strong class="bible-audio-now-playing" id="bible-audio-now-playing">Ready to listen</strong>
         </div>
-        <span class="bible-audio-dock-mini-time" id="bible-audio-mini-time">0:00</span>
-        <button type="button" class="bible-audio-dock-expand" id="bible-audio-expand" aria-label="Expand player">
-          ${expandIconSvg}
+        <span class="bible-audio-dock-time" id="bible-audio-time-display">0:00 / 0:00</span>
+        <div class="bible-audio-seek-wrap bible-audio-full-only">
+          <input id="bible-audio-seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Seek in current clip">
+        </div>
+        <div class="bible-audio-volume bible-audio-full-only" title="Volume">
+          <span class="bible-audio-volume-icon" aria-hidden="true">${volumeIconSvg}</span>
+          <input id="bible-audio-volume" type="range" min="0" max="100" value="100" step="1" aria-label="Volume">
+        </div>
+        <label class="bible-audio-pill bible-audio-full-only">
+          <select id="bible-audio-speed" aria-label="Playback speed"></select>
+        </label>
+        <label class="bible-audio-pill bible-audio-full-only">
+          <select id="bible-audio-mode" aria-label="Repeat mode"></select>
+        </label>
+        <button type="button" class="bible-audio-tool bible-audio-full-only" id="bible-audio-titles" aria-pressed="false" aria-label="Play chapter titles" title="Play chapter titles">
+          ${typeIconSvg}
+        </button>
+        <button type="button" class="bible-audio-dock-toggle" id="bible-audio-dock-toggle" aria-label="Minimize player" aria-expanded="true">
+          ${minimizeIconSvg}
         </button>
       </div>
     </div>
@@ -157,25 +121,41 @@
   document.body.append(player);
 
   const nowPlaying = player.querySelector("#bible-audio-now-playing");
-  const nowPlayingMini = player.querySelector("#bible-audio-now-playing-mini");
+  const nowPlayingMini = null;
   const launcherTitle = launcher.querySelector("#bible-audio-launcher-title");
   const noteEl = launcher.querySelector("#bible-audio-note");
   const playButton = player.querySelector("#bible-audio-play");
-  const playButtonMini = player.querySelector("#bible-audio-play-mini");
+  const playButtonMini = null;
   const launcherPlayButton = launcher.querySelector("#bible-audio-launcher-play");
   const launcherOpenButton = launcher.querySelector("#bible-audio-launcher-open");
   const prevButton = player.querySelector("#bible-audio-prev");
   const nextButton = player.querySelector("#bible-audio-next");
   const seekInput = player.querySelector("#bible-audio-seek");
-  const timeCurrent = player.querySelector("#bible-audio-time-current");
-  const timeTotal = player.querySelector("#bible-audio-time-total");
-  const miniTime = player.querySelector("#bible-audio-mini-time");
+  const volumeInput = player.querySelector("#bible-audio-volume");
+  const timeDisplay = player.querySelector("#bible-audio-time-display");
+  const timeCurrent = { textContent: "" };
+  const timeTotal = { textContent: "" };
+  const miniTime = null;
   const speedSelect = player.querySelector("#bible-audio-speed");
   const modeSelect = player.querySelector("#bible-audio-mode");
-  const titlesCheckbox = player.querySelector("#bible-audio-titles");
-  const minimizeButton = player.querySelector("#bible-audio-minimize");
-  const expandButton = player.querySelector("#bible-audio-expand");
-  const playButtons = [playButton, playButtonMini];
+  const titlesButton = player.querySelector("#bible-audio-titles");
+  const titlesCheckbox = {
+    get checked() {
+      return titlesButton?.getAttribute("aria-pressed") === "true";
+    },
+    set checked(value) {
+      titlesButton?.setAttribute("aria-pressed", value ? "true" : "false");
+      titlesButton?.classList.toggle("is-active", Boolean(value));
+      titlesButton?.setAttribute("title", value ? "Playing chapter titles" : "Play chapter titles");
+    },
+    addEventListener(type, handler) {
+      titlesButton?.addEventListener(type, handler);
+    }
+  };
+  const dockToggleButton = player.querySelector("#bible-audio-dock-toggle");
+  const minimizeButton = dockToggleButton;
+  const expandButton = dockToggleButton;
+  const playButtons = [playButton].filter(Boolean);
 
   speeds.forEach((speed) => {
     const option = document.createElement("option");
@@ -221,6 +201,12 @@
     writeStorage(modeStorageKey, "continuous");
   }
   titlesCheckbox.checked = readStorage(titlesStorageKey, "0") === "1";
+  const storedVolume = Number.parseFloat(readStorage(volumeStorageKey, "1"));
+  audio.volume = Number.isFinite(storedVolume) ? Math.min(1, Math.max(0, storedVolume)) : 1;
+  if (volumeInput) {
+    volumeInput.value = String(Math.round(audio.volume * 100));
+    volumeInput.style.setProperty("--progress", `${audio.volume * 100}%`);
+  }
   audio.playbackRate = Number.parseFloat(speedSelect.value) || 1;
   setDockCollapsed(readStorage(dockCollapsedStorageKey, "0") === "1");
 
@@ -384,8 +370,12 @@
     player.classList.toggle("is-collapsed", collapsed);
     document.body.classList.toggle("bible-audio-dock-collapsed", collapsed);
     writeStorage(dockCollapsedStorageKey, collapsed ? "1" : "0");
-    minimizeButton?.setAttribute("aria-expanded", collapsed ? "false" : "true");
-    expandButton?.setAttribute("aria-expanded", collapsed ? "false" : "true");
+    if (dockToggleButton) {
+      dockToggleButton.innerHTML = collapsed ? expandIconSvg : minimizeIconSvg;
+      dockToggleButton.setAttribute("aria-expanded", collapsed ? "false" : "true");
+      dockToggleButton.setAttribute("aria-label", collapsed ? "Expand player" : "Minimize player");
+      dockToggleButton.title = collapsed ? "Expand player" : "Minimize player";
+    }
   }
 
   function setDockVisible(visible) {
@@ -458,12 +448,12 @@
   function updateProgress() {
     const duration = audio.duration;
     const current = audio.currentTime;
-    timeCurrent.textContent = formatTime(current);
-    timeTotal.textContent = formatTime(duration);
-    if (miniTime) {
-      miniTime.textContent = Number.isFinite(duration) && duration > 0
-        ? `${formatTime(current)} / ${formatTime(duration)}`
-        : "0:00";
+    const currentLabel = formatTime(current);
+    const totalLabel = formatTime(duration);
+    timeCurrent.textContent = currentLabel;
+    timeTotal.textContent = totalLabel;
+    if (timeDisplay) {
+      timeDisplay.textContent = `${currentLabel} / ${totalLabel}`;
     }
     const ratio = Number.isFinite(duration) && duration > 0 ? current / duration : 0;
     const percent = Math.max(0, Math.min(100, ratio * 100));
@@ -846,8 +836,9 @@
     player.classList.add("is-attention");
     window.setTimeout(() => player.classList.remove("is-attention"), 700);
   });
-  minimizeButton?.addEventListener("click", () => setDockCollapsed(true));
-  expandButton?.addEventListener("click", () => setDockCollapsed(false));
+  dockToggleButton?.addEventListener("click", () => {
+    setDockCollapsed(player.dataset.collapsed !== "true");
+  });
   prevButton.addEventListener("click", async () => {
     if (queueIndex > 0) {
       await playIndex(queueIndex - 1);
@@ -869,8 +860,15 @@
   modeSelect.addEventListener("change", () => {
     writeStorage(modeStorageKey, modeSelect.value);
   });
-  titlesCheckbox.addEventListener("change", () => {
+  titlesButton?.addEventListener("click", () => {
+    titlesCheckbox.checked = !titlesCheckbox.checked;
     writeStorage(titlesStorageKey, titlesCheckbox.checked ? "1" : "0");
+  });
+  volumeInput?.addEventListener("input", () => {
+    const nextVolume = Number.parseInt(volumeInput.value, 10) / 100;
+    audio.volume = Number.isFinite(nextVolume) ? Math.min(1, Math.max(0, nextVolume)) : 1;
+    volumeInput.style.setProperty("--progress", `${audio.volume * 100}%`);
+    writeStorage(volumeStorageKey, String(audio.volume));
   });
   seekInput.addEventListener("pointerdown", () => {
     isSeeking = true;
