@@ -137,17 +137,17 @@
   selectionPanel.className = "bible-selection-panel";
   selectionPanel.setAttribute("aria-label", "Selected Scripture tools");
   selectionPanel.innerHTML = `
-    <p class="bible-selection-hint" id="bible-selection-label">Click a verse number to select it. Click another verse number to select a range.</p>
-    <div class="share-action-group">
-      <h3 class="share-group-heading">Share Scripture</h3>
+    <div class="bible-selection-head">
+      <div class="bible-selection-copy">
+        <p class="bible-selection-eyebrow">Selected</p>
+        <p class="bible-selection-hint" id="bible-selection-label">Tap a verse number to select it</p>
+      </div>
       <div class="share-mode-selector" role="group" aria-label="Choose Scripture sharing format">
         <button type="button" id="bible-share-mode-text" class="active" aria-pressed="true">Text</button>
         <button type="button" id="bible-share-mode-graphic" aria-pressed="false">Graphic</button>
       </div>
-      <label class="bible-share-source">
-        <input type="checkbox" id="bible-include-source" checked>
-        Include Word Oasis link
-      </label>
+    </div>
+    <div class="bible-selection-share">
       <div class="bible-selection-actions bible-selection-primary-actions" id="bible-text-actions">
         <button type="button" id="bible-share-selection" disabled>Share</button>
         <button type="button" id="bible-copy-selection" disabled>Copy</button>
@@ -159,6 +159,10 @@
         <button type="button" class="promise-social-share promise-social-instagram" data-bible-share-platform="Instagram" aria-label="Share Scripture on Instagram" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M7.2 2h9.6A5.2 5.2 0 0 1 22 7.2v9.6a5.2 5.2 0 0 1-5.2 5.2H7.2A5.2 5.2 0 0 1 2 16.8V7.2A5.2 5.2 0 0 1 7.2 2Zm0 2A3.2 3.2 0 0 0 4 7.2v9.6A3.2 3.2 0 0 0 7.2 20h9.6a3.2 3.2 0 0 0 3.2-3.2V7.2A3.2 3.2 0 0 0 16.8 4H7.2Zm10.1 1.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg></button>
         <button type="button" class="promise-social-share answer-social-sms" data-bible-share-platform="Text" aria-label="Share Scripture by text" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.5L12 21l4.5-4H20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg></button>
       </div>
+      <label class="bible-share-source">
+        <input type="checkbox" id="bible-include-source" checked>
+        <span>Include link</span>
+      </label>
       <div class="bible-selection-actions bible-selection-primary-actions" id="bible-graphic-actions" hidden>
         <button type="button" id="bible-share-graphic" aria-expanded="false" disabled>Choose design</button>
       </div>
@@ -236,11 +240,10 @@
         <button type="button" id="bible-download-graphic">Download</button>
       </div>
     </div>
-    <div class="share-action-group">
-      <h3 class="share-group-heading">Study tools</h3>
+    <div class="bible-selection-study">
       <div class="bible-selection-actions bible-selection-primary-actions">
-        <button type="button" id="bible-save-selection" aria-pressed="false" disabled>Save passage</button>
-        <button type="button" id="bible-memorize-selection" disabled>Memorize passage</button>
+        <button type="button" id="bible-save-selection" aria-pressed="false" disabled>Save</button>
+        <button type="button" id="bible-memorize-selection" disabled>Memorize</button>
       </div>
     </div>
     <div class="bible-memory-lab" id="bible-memory-lab" hidden>
@@ -809,8 +812,9 @@
     const { book, chapter, translation } = selectedState();
     const reference = hasSelection ? referenceForRange(book, chapter, range, translation) : "";
     selectionLabel.textContent = hasSelection
-      ? `Selected: ${reference}`
-      : "Click a verse number to select it. Click another verse number to select a range.";
+      ? reference
+      : "Tap a verse number to select it";
+    selectionPanel.classList.toggle("has-selection", hasSelection);
     copySelectionButton.disabled = !hasSelection;
     shareSelectionButton.disabled = !hasSelection;
     shareGraphicButton.disabled = !hasSelection;
@@ -825,10 +829,10 @@
       const item = libraryItemForRange("passage", book, chapter, range, translation, currentChapterVerses);
       const saved = window.WordOasisLibrary.isSaved(item.id);
       saveSelectionButton.setAttribute("aria-pressed", String(saved));
-      saveSelectionButton.textContent = saved ? "Saved" : "Save passage";
+      saveSelectionButton.textContent = saved ? "Saved" : "Save";
     } else {
       saveSelectionButton.setAttribute("aria-pressed", "false");
-      saveSelectionButton.textContent = "Save passage";
+      saveSelectionButton.textContent = "Save";
     }
 
     if (hasSelection) {
