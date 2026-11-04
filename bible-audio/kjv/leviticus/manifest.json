@@ -1,0 +1,172 @@
+{
+  "translation": "kjv",
+  "name": "Leviticus",
+  "slug": "leviticus",
+  "bookUrl": "leviticus/_book.mp3",
+  "chapterCount": 27,
+  "verseCount": 859,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 17,
+      "manifest": "leviticus/001.json",
+      "chapterUrl": "leviticus/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 16,
+      "manifest": "leviticus/002.json",
+      "chapterUrl": "leviticus/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 17,
+      "manifest": "leviticus/003.json",
+      "chapterUrl": "leviticus/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 35,
+      "manifest": "leviticus/004.json",
+      "chapterUrl": "leviticus/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 19,
+      "manifest": "leviticus/005.json",
+      "chapterUrl": "leviticus/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 30,
+      "manifest": "leviticus/006.json",
+      "chapterUrl": "leviticus/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 38,
+      "manifest": "leviticus/007.json",
+      "chapterUrl": "leviticus/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 36,
+      "manifest": "leviticus/008.json",
+      "chapterUrl": "leviticus/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 24,
+      "manifest": "leviticus/009.json",
+      "chapterUrl": "leviticus/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 20,
+      "manifest": "leviticus/010.json",
+      "chapterUrl": "leviticus/010/_chapter.mp3"
+    },
+    {
+      "chapter": 11,
+      "verseCount": 47,
+      "manifest": "leviticus/011.json",
+      "chapterUrl": "leviticus/011/_chapter.mp3"
+    },
+    {
+      "chapter": 12,
+      "verseCount": 8,
+      "manifest": "leviticus/012.json",
+      "chapterUrl": "leviticus/012/_chapter.mp3"
+    },
+    {
+      "chapter": 13,
+      "verseCount": 59,
+      "manifest": "leviticus/013.json",
+      "chapterUrl": "leviticus/013/_chapter.mp3"
+    },
+    {
+      "chapter": 14,
+      "verseCount": 57,
+      "manifest": "leviticus/014.json",
+      "chapterUrl": "leviticus/014/_chapter.mp3"
+    },
+    {
+      "chapter": 15,
+      "verseCount": 33,
+      "manifest": "leviticus/015.json",
+      "chapterUrl": "leviticus/015/_chapter.mp3"
+    },
+    {
+      "chapter": 16,
+      "verseCount": 34,
+      "manifest": "leviticus/016.json",
+      "chapterUrl": "leviticus/016/_chapter.mp3"
+    },
+    {
+      "chapter": 17,
+      "verseCount": 16,
+      "manifest": "leviticus/017.json",
+      "chapterUrl": "leviticus/017/_chapter.mp3"
+    },
+    {
+      "chapter": 18,
+      "verseCount": 30,
+      "manifest": "leviticus/018.json",
+      "chapterUrl": "leviticus/018/_chapter.mp3"
+    },
+    {
+      "chapter": 19,
+      "verseCount": 37,
+      "manifest": "leviticus/019.json",
+      "chapterUrl": "leviticus/019/_chapter.mp3"
+    },
+    {
+      "chapter": 20,
+      "verseCount": 27,
+      "manifest": "leviticus/020.json",
+      "chapterUrl": "leviticus/020/_chapter.mp3"
+    },
+    {
+      "chapter": 21,
+      "verseCount": 24,
+      "manifest": "leviticus/021.json",
+      "chapterUrl": "leviticus/021/_chapter.mp3"
+    },
+    {
+      "chapter": 22,
+      "verseCount": 33,
+      "manifest": "leviticus/022.json",
+      "chapterUrl": "leviticus/022/_chapter.mp3"
+    },
+    {
+      "chapter": 23,
+      "verseCount": 44,
+      "manifest": "leviticus/023.json",
+      "chapterUrl": "leviticus/023/_chapter.mp3"
+    },
+    {
+      "chapter": 24,
+      "verseCount": 23,
+      "manifest": "leviticus/024.json",
+      "chapterUrl": "leviticus/024/_chapter.mp3"
+    },
+    {
+      "chapter": 25,
+      "verseCount": 55,
+      "manifest": "leviticus/025.json",
+      "chapterUrl": "leviticus/025/_chapter.mp3"
+    },
+    {
+      "chapter": 26,
+      "verseCount": 46,
+      "manifest": "leviticus/026.json",
+      "chapterUrl": "leviticus/026/_chapter.mp3"
+    },
+    {
+      "chapter": 27,
+      "verseCount": 34,
+      "manifest": "leviticus/027.json",
+      "chapterUrl": "leviticus/027/_chapter.mp3"
+    }
+  ]
+}

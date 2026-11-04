@@ -20,6 +20,15 @@
       "manifest": "exodus/manifest.json",
       "bookUrl": "exodus/_book.mp3",
       "available": true
+    },
+    {
+      "name": "Leviticus",
+      "slug": "leviticus",
+      "chapterCount": 27,
+      "verseCount": 859,
+      "manifest": "leviticus/manifest.json",
+      "bookUrl": "leviticus/_book.mp3",
+      "available": true
     }
   ]
 }

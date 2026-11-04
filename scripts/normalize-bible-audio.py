@@ -22,7 +22,7 @@ Output layout (CDN-ready):
 
 Usage:
   python3 scripts/normalize-bible-audio.py
-  python3 scripts/normalize-bible-audio.py --books genesis exodus
+  python3 scripts/normalize-bible-audio.py --books genesis exodus leviticus
   python3 scripts/normalize-bible-audio.py --copy   # copy instead of hardlink
 """
 
@@ -104,6 +104,29 @@ BOOK_BATCHES: dict[str, dict] = {
             {
                 "dir": "ElevenLabs_Bible_Chapter_38-40",
                 "chapters": (38, 40),
+                "include_book_title": False,
+            },
+        ],
+    },
+    "leviticus": {
+        "name": "Leviticus",
+        "slug": "leviticus",
+        "testament": "Old Testament",
+        "book_dir": "03-Leviticus",
+        "batches": [
+            {
+                "dir": "ElevenLabs_Bible_Leviticus_1-13",
+                "chapters": (1, 13),
+                "include_book_title": True,
+            },
+            {
+                "dir": "ElevenLabs_Bible_Leviticus_14-24",
+                "chapters": (14, 24),
+                "include_book_title": False,
+            },
+            {
+                "dir": "ElevenLabs_Bible_Leviticus_25-27",
+                "chapters": (25, 27),
                 "include_book_title": False,
             },
         ],

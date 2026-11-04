@@ -1,0 +1,19 @@
+{
+  "translation": "kjv",
+  "book": "leviticus",
+  "bookName": "Leviticus",
+  "chapter": 12,
+  "chapterUrl": "leviticus/012/_chapter.mp3",
+  "verseCount": 8,
+  "verses": [
+    "leviticus/012/001.mp3",
+    "leviticus/012/002.mp3",
+    "leviticus/012/003.mp3",
+    "leviticus/012/004.mp3",
+    "leviticus/012/005.mp3",
+    "leviticus/012/006.mp3",
+    "leviticus/012/007.mp3",
+    "leviticus/012/008.mp3"
+  ],
+  "bookUrl": "leviticus/_book.mp3"
+}

@@ -1,0 +1,28 @@
+{
+  "translation": "kjv",
+  "book": "leviticus",
+  "bookName": "Leviticus",
+  "chapter": 3,
+  "chapterUrl": "leviticus/003/_chapter.mp3",
+  "verseCount": 17,
+  "verses": [
+    "leviticus/003/001.mp3",
+    "leviticus/003/002.mp3",
+    "leviticus/003/003.mp3",
+    "leviticus/003/004.mp3",
+    "leviticus/003/005.mp3",
+    "leviticus/003/006.mp3",
+    "leviticus/003/007.mp3",
+    "leviticus/003/008.mp3",
+    "leviticus/003/009.mp3",
+    "leviticus/003/010.mp3",
+    "leviticus/003/011.mp3",
+    "leviticus/003/012.mp3",
+    "leviticus/003/013.mp3",
+    "leviticus/003/014.mp3",
+    "leviticus/003/015.mp3",
+    "leviticus/003/016.mp3",
+    "leviticus/003/017.mp3"
+  ],
+  "bookUrl": "leviticus/_book.mp3"
+}
