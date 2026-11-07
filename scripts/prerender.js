@@ -555,7 +555,7 @@ function pageShell({ title, description, canonicalPath, body, structuredData = [
     <script src="/pwa.js?v=20261073"></script>
     <script src="/scripture-graphic.js?v=20261073"></script>
     <script src="/local-library.js?v=20261073"></script>
-    <script src="/verse-modal.js?v=20261125"></script>
+    <script src="/verse-modal.js?v=20261167"></script>
     <script src="/site-analytics.js?v=20261157"></script>
   </body>
 </html>

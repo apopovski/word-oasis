@@ -358,9 +358,13 @@
 
   function cleanVerseText(text) {
     return String(text || "")
-      .trim()
+      .replace(/<S>.*?<\/S>/gi, "")
+      .replace(/<sup\b[^>]*>[\s\S]*?<\/sup>/gi, "")
+      .replace(/<sub\b[^>]*>[\s\S]*?<\/sub>/gi, "")
+      .replace(/<[^>]*>/g, "")
       .replace(/\s+/g, " ")
-      .replace(/"([^"]*)"/g, "“$1”");
+      .replace(/"([^"]*)"/g, "“$1”")
+      .trim();
   }
 
   async function fetchVerseText(reference, translation) {

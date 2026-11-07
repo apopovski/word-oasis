@@ -430,10 +430,14 @@
   }
 
   function cleanVerseText(text) {
-    return text
+    return String(text || "")
       .replace(/<S>.*?<\/S>/gi, "")
+      // Translator/margin notes from Bolls KJV (e.g. "<sup>the hall: or, Pilate's house</sup>")
+      .replace(/<sup\b[^>]*>[\s\S]*?<\/sup>/gi, "")
+      .replace(/<sub\b[^>]*>[\s\S]*?<\/sub>/gi, "")
       .replace(/<[^>]*>/g, "")
       .replace(/\s+/g, " ")
+      .replace(/\s+([,.;:!?])/g, "$1")
       .replace(/"([^"]*)"/g, "“$1”")
       .trim();
   }
