@@ -1,0 +1,24 @@
+{
+  "translation": "kjv",
+  "book": "numbers",
+  "bookName": "Numbers",
+  "chapter": 17,
+  "chapterUrl": "numbers/017/_chapter.mp3",
+  "verseCount": 13,
+  "verses": [
+    "numbers/017/001.mp3",
+    "numbers/017/002.mp3",
+    "numbers/017/003.mp3",
+    "numbers/017/004.mp3",
+    "numbers/017/005.mp3",
+    "numbers/017/006.mp3",
+    "numbers/017/007.mp3",
+    "numbers/017/008.mp3",
+    "numbers/017/009.mp3",
+    "numbers/017/010.mp3",
+    "numbers/017/011.mp3",
+    "numbers/017/012.mp3",
+    "numbers/017/013.mp3"
+  ],
+  "bookUrl": "numbers/_book.mp3"
+}

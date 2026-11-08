@@ -1,0 +1,214 @@
+{
+  "translation": "kjv",
+  "name": "Deuteronomy",
+  "slug": "deuteronomy",
+  "bookUrl": "deuteronomy/_book.mp3",
+  "chapterCount": 34,
+  "verseCount": 959,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 46,
+      "manifest": "deuteronomy/001.json",
+      "chapterUrl": "deuteronomy/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 37,
+      "manifest": "deuteronomy/002.json",
+      "chapterUrl": "deuteronomy/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 29,
+      "manifest": "deuteronomy/003.json",
+      "chapterUrl": "deuteronomy/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 49,
+      "manifest": "deuteronomy/004.json",
+      "chapterUrl": "deuteronomy/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 33,
+      "manifest": "deuteronomy/005.json",
+      "chapterUrl": "deuteronomy/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 25,
+      "manifest": "deuteronomy/006.json",
+      "chapterUrl": "deuteronomy/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 26,
+      "manifest": "deuteronomy/007.json",
+      "chapterUrl": "deuteronomy/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 20,
+      "manifest": "deuteronomy/008.json",
+      "chapterUrl": "deuteronomy/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 29,
+      "manifest": "deuteronomy/009.json",
+      "chapterUrl": "deuteronomy/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 22,
+      "manifest": "deuteronomy/010.json",
+      "chapterUrl": "deuteronomy/010/_chapter.mp3"
+    },
+    {
+      "chapter": 11,
+      "verseCount": 32,
+      "manifest": "deuteronomy/011.json",
+      "chapterUrl": "deuteronomy/011/_chapter.mp3"
+    },
+    {
+      "chapter": 12,
+      "verseCount": 32,
+      "manifest": "deuteronomy/012.json",
+      "chapterUrl": "deuteronomy/012/_chapter.mp3"
+    },
+    {
+      "chapter": 13,
+      "verseCount": 18,
+      "manifest": "deuteronomy/013.json",
+      "chapterUrl": "deuteronomy/013/_chapter.mp3"
+    },
+    {
+      "chapter": 14,
+      "verseCount": 29,
+      "manifest": "deuteronomy/014.json",
+      "chapterUrl": "deuteronomy/014/_chapter.mp3"
+    },
+    {
+      "chapter": 15,
+      "verseCount": 23,
+      "manifest": "deuteronomy/015.json",
+      "chapterUrl": "deuteronomy/015/_chapter.mp3"
+    },
+    {
+      "chapter": 16,
+      "verseCount": 22,
+      "manifest": "deuteronomy/016.json",
+      "chapterUrl": "deuteronomy/016/_chapter.mp3"
+    },
+    {
+      "chapter": 17,
+      "verseCount": 20,
+      "manifest": "deuteronomy/017.json",
+      "chapterUrl": "deuteronomy/017/_chapter.mp3"
+    },
+    {
+      "chapter": 18,
+      "verseCount": 22,
+      "manifest": "deuteronomy/018.json",
+      "chapterUrl": "deuteronomy/018/_chapter.mp3"
+    },
+    {
+      "chapter": 19,
+      "verseCount": 21,
+      "manifest": "deuteronomy/019.json",
+      "chapterUrl": "deuteronomy/019/_chapter.mp3"
+    },
+    {
+      "chapter": 20,
+      "verseCount": 20,
+      "manifest": "deuteronomy/020.json",
+      "chapterUrl": "deuteronomy/020/_chapter.mp3"
+    },
+    {
+      "chapter": 21,
+      "verseCount": 23,
+      "manifest": "deuteronomy/021.json",
+      "chapterUrl": "deuteronomy/021/_chapter.mp3"
+    },
+    {
+      "chapter": 22,
+      "verseCount": 30,
+      "manifest": "deuteronomy/022.json",
+      "chapterUrl": "deuteronomy/022/_chapter.mp3"
+    },
+    {
+      "chapter": 23,
+      "verseCount": 25,
+      "manifest": "deuteronomy/023.json",
+      "chapterUrl": "deuteronomy/023/_chapter.mp3"
+    },
+    {
+      "chapter": 24,
+      "verseCount": 22,
+      "manifest": "deuteronomy/024.json",
+      "chapterUrl": "deuteronomy/024/_chapter.mp3"
+    },
+    {
+      "chapter": 25,
+      "verseCount": 19,
+      "manifest": "deuteronomy/025.json",
+      "chapterUrl": "deuteronomy/025/_chapter.mp3"
+    },
+    {
+      "chapter": 26,
+      "verseCount": 19,
+      "manifest": "deuteronomy/026.json",
+      "chapterUrl": "deuteronomy/026/_chapter.mp3"
+    },
+    {
+      "chapter": 27,
+      "verseCount": 26,
+      "manifest": "deuteronomy/027.json",
+      "chapterUrl": "deuteronomy/027/_chapter.mp3"
+    },
+    {
+      "chapter": 28,
+      "verseCount": 68,
+      "manifest": "deuteronomy/028.json",
+      "chapterUrl": "deuteronomy/028/_chapter.mp3"
+    },
+    {
+      "chapter": 29,
+      "verseCount": 29,
+      "manifest": "deuteronomy/029.json",
+      "chapterUrl": "deuteronomy/029/_chapter.mp3"
+    },
+    {
+      "chapter": 30,
+      "verseCount": 20,
+      "manifest": "deuteronomy/030.json",
+      "chapterUrl": "deuteronomy/030/_chapter.mp3"
+    },
+    {
+      "chapter": 31,
+      "verseCount": 30,
+      "manifest": "deuteronomy/031.json",
+      "chapterUrl": "deuteronomy/031/_chapter.mp3"
+    },
+    {
+      "chapter": 32,
+      "verseCount": 52,
+      "manifest": "deuteronomy/032.json",
+      "chapterUrl": "deuteronomy/032/_chapter.mp3"
+    },
+    {
+      "chapter": 33,
+      "verseCount": 29,
+      "manifest": "deuteronomy/033.json",
+      "chapterUrl": "deuteronomy/033/_chapter.mp3"
+    },
+    {
+      "chapter": 34,
+      "verseCount": 12,
+      "manifest": "deuteronomy/034.json",
+      "chapterUrl": "deuteronomy/034/_chapter.mp3"
+    }
+  ]
+}

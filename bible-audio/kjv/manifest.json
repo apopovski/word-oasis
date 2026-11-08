@@ -29,6 +29,24 @@
       "manifest": "leviticus/manifest.json",
       "bookUrl": "leviticus/_book.mp3",
       "available": true
+    },
+    {
+      "name": "Numbers",
+      "slug": "numbers",
+      "chapterCount": 36,
+      "verseCount": 1288,
+      "manifest": "numbers/manifest.json",
+      "bookUrl": "numbers/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Deuteronomy",
+      "slug": "deuteronomy",
+      "chapterCount": 34,
+      "verseCount": 959,
+      "manifest": "deuteronomy/manifest.json",
+      "bookUrl": "deuteronomy/_book.mp3",
+      "available": true
     }
   ]
 }

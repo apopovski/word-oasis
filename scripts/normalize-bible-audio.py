@@ -22,7 +22,7 @@ Output layout (CDN-ready):
 
 Usage:
   python3 scripts/normalize-bible-audio.py
-  python3 scripts/normalize-bible-audio.py --books genesis exodus leviticus
+  python3 scripts/normalize-bible-audio.py --books genesis exodus leviticus numbers deuteronomy
   python3 scripts/normalize-bible-audio.py --copy   # copy instead of hardlink
 """
 
@@ -131,6 +131,57 @@ BOOK_BATCHES: dict[str, dict] = {
             },
         ],
     },
+    "numbers": {
+        "name": "Numbers",
+        "slug": "numbers",
+        "testament": "Old Testament",
+        "book_dir": "04-Numbers",
+        "batches": [
+            {
+                "dir": "ElevenLabs_Bible_Numbers_1-9",
+                "chapters": (1, 9),
+                "include_book_title": True,
+            },
+            {
+                "dir": "ElevenLabs_Bible_Numbers_10-21",
+                "chapters": (10, 21),
+                "include_book_title": False,
+            },
+            {
+                "dir": "ElevenLabs_Bible_Numbers_22-32",
+                "chapters": (22, 32),
+                "include_book_title": False,
+            },
+            {
+                "dir": "ElevenLabs_Bible_Numbers_33-36",
+                "chapters": (33, 36),
+                "include_book_title": False,
+            },
+        ],
+    },
+    "deuteronomy": {
+        "name": "Deuteronomy",
+        "slug": "deuteronomy",
+        "testament": "Old Testament",
+        "book_dir": "05-Deuteronomy",
+        "batches": [
+            {
+                "dir": "ElevenLabs_Bible_Deuteronomy_1-12",
+                "chapters": (1, 12),
+                "include_book_title": True,
+            },
+            {
+                "dir": "ElevenLabs_Bible_Deuteronomy_13-27",
+                "chapters": (13, 27),
+                "include_book_title": False,
+            },
+            {
+                "dir": "ElevenLabs_Bible_Deuteronomy_28-34",
+                "chapters": (28, 34),
+                "include_book_title": False,
+            },
+        ],
+    },
 }
 
 
@@ -229,11 +280,18 @@ def normalize_book(meta: dict, book: dict, copy: bool) -> dict:
         include_title = batch["include_book_title"]
         clips = list_clips(batch_dir)
         expected = expected_clip_count(book, start, end, include_title)
-        if len(clips) != expected:
+        if len(clips) < expected:
             raise SystemExit(
                 f"{meta['name']} {start}-{end}: expected {expected} clips, "
                 f"found {len(clips)} in {batch_dir.name}"
             )
+        if len(clips) > expected:
+            extra = len(clips) - expected
+            print(
+                f"  warning: {batch_dir.name} has {extra} trailing extra clip(s); "
+                f"using first {expected}"
+            )
+            clips = clips[:expected]
 
         i = 0
         if include_title:
