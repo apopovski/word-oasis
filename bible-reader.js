@@ -30,6 +30,7 @@
   const textSizeStorageKey = "word-oasis-bible-text-size";
   const translationStorageKey = "word-oasis-bible-translation";
   const legacyTranslationStorageKey = "word-oasis-promise-translation";
+  const lastPositionStorageKey = "word-oasis-bible-last-position";
 
   const books = [
     { name: "Genesis", chapters: 50, audioCode: "GEN" },
@@ -370,6 +371,37 @@
       return 1;
     }
     return Math.min(numericChapter, book.chapters);
+  }
+
+  function readLastPosition() {
+    try {
+      const raw = window.localStorage.getItem(lastPositionStorageKey);
+      if (!raw) {
+        return null;
+      }
+      const parsed = JSON.parse(raw);
+      if (!parsed || typeof parsed.book !== "string") {
+        return null;
+      }
+      const book = books.find((entry) => entry.name === parsed.book);
+      if (!book) {
+        return null;
+      }
+      return { book, chapter: sanitizeChapter(book, parsed.chapter) };
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function saveLastPosition(book, chapter) {
+    try {
+      window.localStorage.setItem(
+        lastPositionStorageKey,
+        JSON.stringify({ book: book.name, chapter })
+      );
+    } catch (error) {
+      console.warn("Could not save the Bible reading position.", error);
+    }
   }
 
   function slugify(value) {
@@ -1462,6 +1494,7 @@
 
   async function loadSelectedChapter() {
     const { book, chapter, translation } = selectedState();
+    saveLastPosition(book, chapter);
     try {
       window.localStorage.setItem(translationStorageKey, translation.id);
     } catch (error) {
@@ -1528,8 +1561,26 @@
   function applyInitialState() {
     const params = new URLSearchParams(window.location.search);
     const pathChapter = chapterFromPath();
-    const initialBook = pathChapter?.book || findBook(params.get("book") || "John");
-    const initialChapter = pathChapter?.chapter || sanitizeChapter(initialBook, params.get("chapter") || "3");
+    const storedPosition = readLastPosition();
+    const queryBook = params.get("book");
+    const queryChapter = params.get("chapter");
+
+    let initialBook;
+    let initialChapter;
+    if (pathChapter) {
+      initialBook = pathChapter.book;
+      initialChapter = pathChapter.chapter;
+    } else if (queryBook || queryChapter) {
+      initialBook = findBook(queryBook || storedPosition?.book.name || "Genesis");
+      initialChapter = sanitizeChapter(initialBook, queryChapter || "1");
+    } else if (storedPosition) {
+      initialBook = storedPosition.book;
+      initialChapter = storedPosition.chapter;
+    } else {
+      initialBook = findBook("Genesis");
+      initialChapter = 1;
+    }
+
     let storedTranslation = "web";
     try {
       storedTranslation =

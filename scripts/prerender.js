@@ -1489,7 +1489,7 @@ function bibleChapterPage(baseHtml, book, chapter) {
     `<p class="page-intro">Read ${escapeHtml(book.name)} ${chapter} online, choose WEB, KJV, or ASV, search Scripture, select verses, copy passages, and share this Bible chapter.</p>`,
     "chapter intro"
   );
-  html = html.replace('<h2 id="bible-reader-title">John 3</h2>', `<h2 id="bible-reader-title">${escapeHtml(book.name)} ${chapter}</h2>`);
+  html = html.replace('<h2 id="bible-reader-title">Genesis 1</h2>', `<h2 id="bible-reader-title">${escapeHtml(book.name)} ${chapter}</h2>`);
   return html;
 }
 

@@ -54,7 +54,9 @@
   }
 
   const audioBase = String(window.WORD_OASIS_AUDIO_BASE || DEFAULT_AUDIO_BASE).replace(/\/?$/, "/");
-  const audio = new Audio();
+  // Bump when re-encoding/replacing mp3s so browsers skip immutable CDN caches.
+  const audioAssetVersion = "20261169";
+  let audio = new Audio();
   audio.preload = "auto";
 
   let rootManifestPromise = null;
@@ -69,6 +71,74 @@
   // Per-verse playback choice: "loop" repeats the active verse; "continue" keeps going.
   let playbackIntent = "continue";
   let activeLoopVerse = null;
+  let handoffToken = 0;
+
+  function sameAudioUrl(left, right) {
+    if (!left || !right) {
+      return false;
+    }
+    try {
+      return new URL(left, window.location.href).href === new URL(right, window.location.href).href;
+    } catch (error) {
+      return String(left) === String(right);
+    }
+  }
+
+  function onAudioEnded() {
+    advanceAfterEnded();
+  }
+
+  function attachAudioListeners(el) {
+    el.addEventListener("timeupdate", updateProgress);
+    el.addEventListener("loadedmetadata", updateProgress);
+    el.addEventListener("play", updatePlayButton);
+    el.addEventListener("pause", updatePlayButton);
+    el.addEventListener("ended", onAudioEnded);
+  }
+
+  function detachAudioListeners(el) {
+    el.removeEventListener("timeupdate", updateProgress);
+    el.removeEventListener("loadedmetadata", updateProgress);
+    el.removeEventListener("play", updatePlayButton);
+    el.removeEventListener("pause", updatePlayButton);
+    el.removeEventListener("ended", onAudioEnded);
+  }
+
+  function retireAudioElement(el) {
+    if (!el) {
+      return;
+    }
+    detachAudioListeners(el);
+    try {
+      el.pause();
+    } catch (error) {
+      // ignore
+    }
+    el.removeAttribute("src");
+    try {
+      el.load();
+    } catch (error) {
+      // ignore
+    }
+  }
+
+  function promotePrefetchIfReady(expectedUrl) {
+    if (!prefetchAudio || !sameAudioUrl(prefetchAudio.src, expectedUrl)) {
+      return false;
+    }
+    // HAVE_CURRENT_DATA or better — enough to start without a reload gap.
+    if (prefetchAudio.readyState < 2) {
+      return false;
+    }
+    const retiring = audio;
+    audio = prefetchAudio;
+    prefetchAudio = null;
+    audio.playbackRate = Number.parseFloat(speedSelect.value) || 1;
+    audio.volume = retiring.volume;
+    attachAudioListeners(audio);
+    retireAudioElement(retiring);
+    return true;
+  }
 
   const launcher = document.createElement("aside");
   launcher.className = "bible-audio-launcher";
@@ -251,7 +321,10 @@
   }
 
   function mediaUrl(relativePath) {
-    return `${audioBase}${String(relativePath).replace(/^\//, "")}`;
+    const clean = String(relativePath).replace(/^\//, "");
+    const base = `${audioBase}${clean}`;
+    const join = base.includes("?") ? "&" : "?";
+    return `${base}${join}v=${encodeURIComponent(audioAssetVersion)}`;
   }
 
   function formatTime(seconds) {
@@ -510,14 +583,21 @@
     if (index < 0 || index >= queue.length) {
       return false;
     }
+    const token = ++handoffToken;
     queueIndex = index;
     const item = queue[queueIndex];
     updateNowPlaying();
     highlightPlayingVerse(item.verse);
-    audio.src = item.url;
+    const usedPrefetch = promotePrefetchIfReady(item.url);
+    if (!usedPrefetch) {
+      audio.src = item.url;
+    }
     audio.playbackRate = Number.parseFloat(speedSelect.value) || 1;
     try {
       await audio.play();
+      if (token !== handoffToken) {
+        return false;
+      }
       updatePlayButton();
       prefetchNext();
       trackAnalyticsEvent("bible_audio_play", {
@@ -528,6 +608,9 @@
       });
       return true;
     } catch (error) {
+      if (token !== handoffToken) {
+        return false;
+      }
       nowPlaying.textContent = "Could not play audio";
       noteEl.textContent = "Check your connection, or try again in a moment.";
       updatePlayButton();
@@ -923,13 +1006,7 @@
     audio.currentTime = (Number.parseInt(seekInput.value, 10) / 1000) * audio.duration;
     updateProgress();
   });
-  audio.addEventListener("timeupdate", updateProgress);
-  audio.addEventListener("loadedmetadata", updateProgress);
-  audio.addEventListener("play", updatePlayButton);
-  audio.addEventListener("pause", updatePlayButton);
-  audio.addEventListener("ended", () => {
-    advanceAfterEnded();
-  });
+  attachAudioListeners(audio);
 
   window.WordOasisBibleAudio = {
     bindChapter,
