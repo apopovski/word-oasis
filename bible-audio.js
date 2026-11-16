@@ -55,7 +55,7 @@
 
   const audioBase = String(window.WORD_OASIS_AUDIO_BASE || DEFAULT_AUDIO_BASE).replace(/\/?$/, "/");
   // Bump when re-encoding/replacing mp3s so browsers skip immutable CDN caches.
-  const audioAssetVersion = "20261170";
+  const audioAssetVersion = "20261171";
   // Keep a single element for playback. Swapping to a prefetched Audio() breaks
   // autoplay continuity on Safari/iOS (and sometimes Chrome), which stops after a verse.
   const audio = new Audio();
