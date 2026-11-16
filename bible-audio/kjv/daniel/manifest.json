@@ -1,0 +1,82 @@
+{
+  "translation": "kjv",
+  "name": "Daniel",
+  "slug": "daniel",
+  "bookUrl": "daniel/_book.mp3",
+  "chapterCount": 12,
+  "verseCount": 357,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 21,
+      "manifest": "daniel/001.json",
+      "chapterUrl": "daniel/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 49,
+      "manifest": "daniel/002.json",
+      "chapterUrl": "daniel/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 30,
+      "manifest": "daniel/003.json",
+      "chapterUrl": "daniel/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 37,
+      "manifest": "daniel/004.json",
+      "chapterUrl": "daniel/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 31,
+      "manifest": "daniel/005.json",
+      "chapterUrl": "daniel/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 28,
+      "manifest": "daniel/006.json",
+      "chapterUrl": "daniel/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 28,
+      "manifest": "daniel/007.json",
+      "chapterUrl": "daniel/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 27,
+      "manifest": "daniel/008.json",
+      "chapterUrl": "daniel/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 27,
+      "manifest": "daniel/009.json",
+      "chapterUrl": "daniel/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 21,
+      "manifest": "daniel/010.json",
+      "chapterUrl": "daniel/010/_chapter.mp3"
+    },
+    {
+      "chapter": 11,
+      "verseCount": 45,
+      "manifest": "daniel/011.json",
+      "chapterUrl": "daniel/011/_chapter.mp3"
+    },
+    {
+      "chapter": 12,
+      "verseCount": 13,
+      "manifest": "daniel/012.json",
+      "chapterUrl": "daniel/012/_chapter.mp3"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "translation": "kjv",
+  "book": "jeremiah",
+  "bookName": "Jeremiah",
+  "chapter": 24,
+  "chapterUrl": "jeremiah/024/_chapter.mp3",
+  "verseCount": 10,
+  "verses": [
+    "jeremiah/024/001.mp3",
+    "jeremiah/024/002.mp3",
+    "jeremiah/024/003.mp3",
+    "jeremiah/024/004.mp3",
+    "jeremiah/024/005.mp3",
+    "jeremiah/024/006.mp3",
+    "jeremiah/024/007.mp3",
+    "jeremiah/024/008.mp3",
+    "jeremiah/024/009.mp3",
+    "jeremiah/024/010.mp3"
+  ],
+  "bookUrl": "jeremiah/_book.mp3"
+}

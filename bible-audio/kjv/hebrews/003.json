@@ -1,0 +1,30 @@
+{
+  "translation": "kjv",
+  "book": "hebrews",
+  "bookName": "Hebrews",
+  "chapter": 3,
+  "chapterUrl": "hebrews/003/_chapter.mp3",
+  "verseCount": 19,
+  "verses": [
+    "hebrews/003/001.mp3",
+    "hebrews/003/002.mp3",
+    "hebrews/003/003.mp3",
+    "hebrews/003/004.mp3",
+    "hebrews/003/005.mp3",
+    "hebrews/003/006.mp3",
+    "hebrews/003/007.mp3",
+    "hebrews/003/008.mp3",
+    "hebrews/003/009.mp3",
+    "hebrews/003/010.mp3",
+    "hebrews/003/011.mp3",
+    "hebrews/003/012.mp3",
+    "hebrews/003/013.mp3",
+    "hebrews/003/014.mp3",
+    "hebrews/003/015.mp3",
+    "hebrews/003/016.mp3",
+    "hebrews/003/017.mp3",
+    "hebrews/003/018.mp3",
+    "hebrews/003/019.mp3"
+  ],
+  "bookUrl": "hebrews/_book.mp3"
+}

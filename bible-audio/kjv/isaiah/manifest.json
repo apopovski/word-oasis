@@ -1,0 +1,406 @@
+{
+  "translation": "kjv",
+  "name": "Isaiah",
+  "slug": "isaiah",
+  "bookUrl": "isaiah/_book.mp3",
+  "chapterCount": 66,
+  "verseCount": 1292,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 31,
+      "manifest": "isaiah/001.json",
+      "chapterUrl": "isaiah/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 22,
+      "manifest": "isaiah/002.json",
+      "chapterUrl": "isaiah/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 26,
+      "manifest": "isaiah/003.json",
+      "chapterUrl": "isaiah/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 6,
+      "manifest": "isaiah/004.json",
+      "chapterUrl": "isaiah/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 30,
+      "manifest": "isaiah/005.json",
+      "chapterUrl": "isaiah/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 13,
+      "manifest": "isaiah/006.json",
+      "chapterUrl": "isaiah/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 25,
+      "manifest": "isaiah/007.json",
+      "chapterUrl": "isaiah/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 22,
+      "manifest": "isaiah/008.json",
+      "chapterUrl": "isaiah/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 21,
+      "manifest": "isaiah/009.json",
+      "chapterUrl": "isaiah/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 34,
+      "manifest": "isaiah/010.json",
+      "chapterUrl": "isaiah/010/_chapter.mp3"
+    },
+    {
+      "chapter": 11,
+      "verseCount": 16,
+      "manifest": "isaiah/011.json",
+      "chapterUrl": "isaiah/011/_chapter.mp3"
+    },
+    {
+      "chapter": 12,
+      "verseCount": 6,
+      "manifest": "isaiah/012.json",
+      "chapterUrl": "isaiah/012/_chapter.mp3"
+    },
+    {
+      "chapter": 13,
+      "verseCount": 22,
+      "manifest": "isaiah/013.json",
+      "chapterUrl": "isaiah/013/_chapter.mp3"
+    },
+    {
+      "chapter": 14,
+      "verseCount": 32,
+      "manifest": "isaiah/014.json",
+      "chapterUrl": "isaiah/014/_chapter.mp3"
+    },
+    {
+      "chapter": 15,
+      "verseCount": 9,
+      "manifest": "isaiah/015.json",
+      "chapterUrl": "isaiah/015/_chapter.mp3"
+    },
+    {
+      "chapter": 16,
+      "verseCount": 14,
+      "manifest": "isaiah/016.json",
+      "chapterUrl": "isaiah/016/_chapter.mp3"
+    },
+    {
+      "chapter": 17,
+      "verseCount": 14,
+      "manifest": "isaiah/017.json",
+      "chapterUrl": "isaiah/017/_chapter.mp3"
+    },
+    {
+      "chapter": 18,
+      "verseCount": 7,
+      "manifest": "isaiah/018.json",
+      "chapterUrl": "isaiah/018/_chapter.mp3"
+    },
+    {
+      "chapter": 19,
+      "verseCount": 25,
+      "manifest": "isaiah/019.json",
+      "chapterUrl": "isaiah/019/_chapter.mp3"
+    },
+    {
+      "chapter": 20,
+      "verseCount": 6,
+      "manifest": "isaiah/020.json",
+      "chapterUrl": "isaiah/020/_chapter.mp3"
+    },
+    {
+      "chapter": 21,
+      "verseCount": 17,
+      "manifest": "isaiah/021.json",
+      "chapterUrl": "isaiah/021/_chapter.mp3"
+    },
+    {
+      "chapter": 22,
+      "verseCount": 25,
+      "manifest": "isaiah/022.json",
+      "chapterUrl": "isaiah/022/_chapter.mp3"
+    },
+    {
+      "chapter": 23,
+      "verseCount": 18,
+      "manifest": "isaiah/023.json",
+      "chapterUrl": "isaiah/023/_chapter.mp3"
+    },
+    {
+      "chapter": 24,
+      "verseCount": 23,
+      "manifest": "isaiah/024.json",
+      "chapterUrl": "isaiah/024/_chapter.mp3"
+    },
+    {
+      "chapter": 25,
+      "verseCount": 12,
+      "manifest": "isaiah/025.json",
+      "chapterUrl": "isaiah/025/_chapter.mp3"
+    },
+    {
+      "chapter": 26,
+      "verseCount": 21,
+      "manifest": "isaiah/026.json",
+      "chapterUrl": "isaiah/026/_chapter.mp3"
+    },
+    {
+      "chapter": 27,
+      "verseCount": 13,
+      "manifest": "isaiah/027.json",
+      "chapterUrl": "isaiah/027/_chapter.mp3"
+    },
+    {
+      "chapter": 28,
+      "verseCount": 29,
+      "manifest": "isaiah/028.json",
+      "chapterUrl": "isaiah/028/_chapter.mp3"
+    },
+    {
+      "chapter": 29,
+      "verseCount": 24,
+      "manifest": "isaiah/029.json",
+      "chapterUrl": "isaiah/029/_chapter.mp3"
+    },
+    {
+      "chapter": 30,
+      "verseCount": 33,
+      "manifest": "isaiah/030.json",
+      "chapterUrl": "isaiah/030/_chapter.mp3"
+    },
+    {
+      "chapter": 31,
+      "verseCount": 9,
+      "manifest": "isaiah/031.json",
+      "chapterUrl": "isaiah/031/_chapter.mp3"
+    },
+    {
+      "chapter": 32,
+      "verseCount": 20,
+      "manifest": "isaiah/032.json",
+      "chapterUrl": "isaiah/032/_chapter.mp3"
+    },
+    {
+      "chapter": 33,
+      "verseCount": 24,
+      "manifest": "isaiah/033.json",
+      "chapterUrl": "isaiah/033/_chapter.mp3"
+    },
+    {
+      "chapter": 34,
+      "verseCount": 17,
+      "manifest": "isaiah/034.json",
+      "chapterUrl": "isaiah/034/_chapter.mp3"
+    },
+    {
+      "chapter": 35,
+      "verseCount": 10,
+      "manifest": "isaiah/035.json",
+      "chapterUrl": "isaiah/035/_chapter.mp3"
+    },
+    {
+      "chapter": 36,
+      "verseCount": 22,
+      "manifest": "isaiah/036.json",
+      "chapterUrl": "isaiah/036/_chapter.mp3"
+    },
+    {
+      "chapter": 37,
+      "verseCount": 38,
+      "manifest": "isaiah/037.json",
+      "chapterUrl": "isaiah/037/_chapter.mp3"
+    },
+    {
+      "chapter": 38,
+      "verseCount": 22,
+      "manifest": "isaiah/038.json",
+      "chapterUrl": "isaiah/038/_chapter.mp3"
+    },
+    {
+      "chapter": 39,
+      "verseCount": 8,
+      "manifest": "isaiah/039.json",
+      "chapterUrl": "isaiah/039/_chapter.mp3"
+    },
+    {
+      "chapter": 40,
+      "verseCount": 31,
+      "manifest": "isaiah/040.json",
+      "chapterUrl": "isaiah/040/_chapter.mp3"
+    },
+    {
+      "chapter": 41,
+      "verseCount": 29,
+      "manifest": "isaiah/041.json",
+      "chapterUrl": "isaiah/041/_chapter.mp3"
+    },
+    {
+      "chapter": 42,
+      "verseCount": 25,
+      "manifest": "isaiah/042.json",
+      "chapterUrl": "isaiah/042/_chapter.mp3"
+    },
+    {
+      "chapter": 43,
+      "verseCount": 28,
+      "manifest": "isaiah/043.json",
+      "chapterUrl": "isaiah/043/_chapter.mp3"
+    },
+    {
+      "chapter": 44,
+      "verseCount": 28,
+      "manifest": "isaiah/044.json",
+      "chapterUrl": "isaiah/044/_chapter.mp3"
+    },
+    {
+      "chapter": 45,
+      "verseCount": 25,
+      "manifest": "isaiah/045.json",
+      "chapterUrl": "isaiah/045/_chapter.mp3"
+    },
+    {
+      "chapter": 46,
+      "verseCount": 13,
+      "manifest": "isaiah/046.json",
+      "chapterUrl": "isaiah/046/_chapter.mp3"
+    },
+    {
+      "chapter": 47,
+      "verseCount": 15,
+      "manifest": "isaiah/047.json",
+      "chapterUrl": "isaiah/047/_chapter.mp3"
+    },
+    {
+      "chapter": 48,
+      "verseCount": 22,
+      "manifest": "isaiah/048.json",
+      "chapterUrl": "isaiah/048/_chapter.mp3"
+    },
+    {
+      "chapter": 49,
+      "verseCount": 26,
+      "manifest": "isaiah/049.json",
+      "chapterUrl": "isaiah/049/_chapter.mp3"
+    },
+    {
+      "chapter": 50,
+      "verseCount": 11,
+      "manifest": "isaiah/050.json",
+      "chapterUrl": "isaiah/050/_chapter.mp3"
+    },
+    {
+      "chapter": 51,
+      "verseCount": 23,
+      "manifest": "isaiah/051.json",
+      "chapterUrl": "isaiah/051/_chapter.mp3"
+    },
+    {
+      "chapter": 52,
+      "verseCount": 15,
+      "manifest": "isaiah/052.json",
+      "chapterUrl": "isaiah/052/_chapter.mp3"
+    },
+    {
+      "chapter": 53,
+      "verseCount": 12,
+      "manifest": "isaiah/053.json",
+      "chapterUrl": "isaiah/053/_chapter.mp3"
+    },
+    {
+      "chapter": 54,
+      "verseCount": 17,
+      "manifest": "isaiah/054.json",
+      "chapterUrl": "isaiah/054/_chapter.mp3"
+    },
+    {
+      "chapter": 55,
+      "verseCount": 13,
+      "manifest": "isaiah/055.json",
+      "chapterUrl": "isaiah/055/_chapter.mp3"
+    },
+    {
+      "chapter": 56,
+      "verseCount": 12,
+      "manifest": "isaiah/056.json",
+      "chapterUrl": "isaiah/056/_chapter.mp3"
+    },
+    {
+      "chapter": 57,
+      "verseCount": 21,
+      "manifest": "isaiah/057.json",
+      "chapterUrl": "isaiah/057/_chapter.mp3"
+    },
+    {
+      "chapter": 58,
+      "verseCount": 14,
+      "manifest": "isaiah/058.json",
+      "chapterUrl": "isaiah/058/_chapter.mp3"
+    },
+    {
+      "chapter": 59,
+      "verseCount": 21,
+      "manifest": "isaiah/059.json",
+      "chapterUrl": "isaiah/059/_chapter.mp3"
+    },
+    {
+      "chapter": 60,
+      "verseCount": 22,
+      "manifest": "isaiah/060.json",
+      "chapterUrl": "isaiah/060/_chapter.mp3"
+    },
+    {
+      "chapter": 61,
+      "verseCount": 11,
+      "manifest": "isaiah/061.json",
+      "chapterUrl": "isaiah/061/_chapter.mp3"
+    },
+    {
+      "chapter": 62,
+      "verseCount": 12,
+      "manifest": "isaiah/062.json",
+      "chapterUrl": "isaiah/062/_chapter.mp3"
+    },
+    {
+      "chapter": 63,
+      "verseCount": 19,
+      "manifest": "isaiah/063.json",
+      "chapterUrl": "isaiah/063/_chapter.mp3"
+    },
+    {
+      "chapter": 64,
+      "verseCount": 12,
+      "manifest": "isaiah/064.json",
+      "chapterUrl": "isaiah/064/_chapter.mp3"
+    },
+    {
+      "chapter": 65,
+      "verseCount": 25,
+      "manifest": "isaiah/065.json",
+      "chapterUrl": "isaiah/065/_chapter.mp3"
+    },
+    {
+      "chapter": 66,
+      "verseCount": 24,
+      "manifest": "isaiah/066.json",
+      "chapterUrl": "isaiah/066/_chapter.mp3"
+    }
+  ]
+}

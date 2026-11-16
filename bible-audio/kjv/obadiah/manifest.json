@@ -1,0 +1,16 @@
+{
+  "translation": "kjv",
+  "name": "Obadiah",
+  "slug": "obadiah",
+  "bookUrl": "obadiah/_book.mp3",
+  "chapterCount": 1,
+  "verseCount": 21,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 21,
+      "manifest": "obadiah/001.json",
+      "chapterUrl": "obadiah/001/_chapter.mp3"
+    }
+  ]
+}

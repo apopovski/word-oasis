@@ -1,0 +1,40 @@
+{
+  "translation": "kjv",
+  "name": "1 John",
+  "slug": "1-john",
+  "bookUrl": "1-john/_book.mp3",
+  "chapterCount": 5,
+  "verseCount": 105,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 10,
+      "manifest": "1-john/001.json",
+      "chapterUrl": "1-john/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 29,
+      "manifest": "1-john/002.json",
+      "chapterUrl": "1-john/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 24,
+      "manifest": "1-john/003.json",
+      "chapterUrl": "1-john/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 21,
+      "manifest": "1-john/004.json",
+      "chapterUrl": "1-john/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 21,
+      "manifest": "1-john/005.json",
+      "chapterUrl": "1-john/005/_chapter.mp3"
+    }
+  ]
+}

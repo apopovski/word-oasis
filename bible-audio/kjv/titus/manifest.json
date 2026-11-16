@@ -1,0 +1,28 @@
+{
+  "translation": "kjv",
+  "name": "Titus",
+  "slug": "titus",
+  "bookUrl": "titus/_book.mp3",
+  "chapterCount": 3,
+  "verseCount": 46,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 16,
+      "manifest": "titus/001.json",
+      "chapterUrl": "titus/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 15,
+      "manifest": "titus/002.json",
+      "chapterUrl": "titus/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 15,
+      "manifest": "titus/003.json",
+      "chapterUrl": "titus/003/_chapter.mp3"
+    }
+  ]
+}

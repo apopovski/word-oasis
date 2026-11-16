@@ -1,0 +1,154 @@
+{
+  "translation": "kjv",
+  "name": "Luke",
+  "slug": "luke",
+  "bookUrl": "luke/_book.mp3",
+  "chapterCount": 24,
+  "verseCount": 1151,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 80,
+      "manifest": "luke/001.json",
+      "chapterUrl": "luke/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 52,
+      "manifest": "luke/002.json",
+      "chapterUrl": "luke/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 38,
+      "manifest": "luke/003.json",
+      "chapterUrl": "luke/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 44,
+      "manifest": "luke/004.json",
+      "chapterUrl": "luke/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 39,
+      "manifest": "luke/005.json",
+      "chapterUrl": "luke/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 49,
+      "manifest": "luke/006.json",
+      "chapterUrl": "luke/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 50,
+      "manifest": "luke/007.json",
+      "chapterUrl": "luke/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 56,
+      "manifest": "luke/008.json",
+      "chapterUrl": "luke/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 62,
+      "manifest": "luke/009.json",
+      "chapterUrl": "luke/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 42,
+      "manifest": "luke/010.json",
+      "chapterUrl": "luke/010/_chapter.mp3"
+    },
+    {
+      "chapter": 11,
+      "verseCount": 54,
+      "manifest": "luke/011.json",
+      "chapterUrl": "luke/011/_chapter.mp3"
+    },
+    {
+      "chapter": 12,
+      "verseCount": 59,
+      "manifest": "luke/012.json",
+      "chapterUrl": "luke/012/_chapter.mp3"
+    },
+    {
+      "chapter": 13,
+      "verseCount": 35,
+      "manifest": "luke/013.json",
+      "chapterUrl": "luke/013/_chapter.mp3"
+    },
+    {
+      "chapter": 14,
+      "verseCount": 35,
+      "manifest": "luke/014.json",
+      "chapterUrl": "luke/014/_chapter.mp3"
+    },
+    {
+      "chapter": 15,
+      "verseCount": 32,
+      "manifest": "luke/015.json",
+      "chapterUrl": "luke/015/_chapter.mp3"
+    },
+    {
+      "chapter": 16,
+      "verseCount": 31,
+      "manifest": "luke/016.json",
+      "chapterUrl": "luke/016/_chapter.mp3"
+    },
+    {
+      "chapter": 17,
+      "verseCount": 37,
+      "manifest": "luke/017.json",
+      "chapterUrl": "luke/017/_chapter.mp3"
+    },
+    {
+      "chapter": 18,
+      "verseCount": 43,
+      "manifest": "luke/018.json",
+      "chapterUrl": "luke/018/_chapter.mp3"
+    },
+    {
+      "chapter": 19,
+      "verseCount": 48,
+      "manifest": "luke/019.json",
+      "chapterUrl": "luke/019/_chapter.mp3"
+    },
+    {
+      "chapter": 20,
+      "verseCount": 47,
+      "manifest": "luke/020.json",
+      "chapterUrl": "luke/020/_chapter.mp3"
+    },
+    {
+      "chapter": 21,
+      "verseCount": 38,
+      "manifest": "luke/021.json",
+      "chapterUrl": "luke/021/_chapter.mp3"
+    },
+    {
+      "chapter": 22,
+      "verseCount": 71,
+      "manifest": "luke/022.json",
+      "chapterUrl": "luke/022/_chapter.mp3"
+    },
+    {
+      "chapter": 23,
+      "verseCount": 56,
+      "manifest": "luke/023.json",
+      "chapterUrl": "luke/023/_chapter.mp3"
+    },
+    {
+      "chapter": 24,
+      "verseCount": 53,
+      "manifest": "luke/024.json",
+      "chapterUrl": "luke/024/_chapter.mp3"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "translation": "kjv",
+  "name": "James",
+  "slug": "james",
+  "bookUrl": "james/_book.mp3",
+  "chapterCount": 5,
+  "verseCount": 108,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 27,
+      "manifest": "james/001.json",
+      "chapterUrl": "james/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 26,
+      "manifest": "james/002.json",
+      "chapterUrl": "james/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 18,
+      "manifest": "james/003.json",
+      "chapterUrl": "james/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 17,
+      "manifest": "james/004.json",
+      "chapterUrl": "james/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 20,
+      "manifest": "james/005.json",
+      "chapterUrl": "james/005/_chapter.mp3"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "translation": "kjv",
+  "name": "Haggai",
+  "slug": "haggai",
+  "bookUrl": "haggai/_book.mp3",
+  "chapterCount": 2,
+  "verseCount": 38,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 15,
+      "manifest": "haggai/001.json",
+      "chapterUrl": "haggai/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 23,
+      "manifest": "haggai/002.json",
+      "chapterUrl": "haggai/002/_chapter.mp3"
+    }
+  ]
+}

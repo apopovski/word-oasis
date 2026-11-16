@@ -1,0 +1,23 @@
+{
+  "translation": "kjv",
+  "book": "micah",
+  "bookName": "Micah",
+  "chapter": 3,
+  "chapterUrl": "micah/003/_chapter.mp3",
+  "verseCount": 12,
+  "verses": [
+    "micah/003/001.mp3",
+    "micah/003/002.mp3",
+    "micah/003/003.mp3",
+    "micah/003/004.mp3",
+    "micah/003/005.mp3",
+    "micah/003/006.mp3",
+    "micah/003/007.mp3",
+    "micah/003/008.mp3",
+    "micah/003/009.mp3",
+    "micah/003/010.mp3",
+    "micah/003/011.mp3",
+    "micah/003/012.mp3"
+  ],
+  "bookUrl": "micah/_book.mp3"
+}

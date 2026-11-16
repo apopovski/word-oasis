@@ -1,0 +1,46 @@
+{
+  "translation": "kjv",
+  "name": "Galatians",
+  "slug": "galatians",
+  "bookUrl": "galatians/_book.mp3",
+  "chapterCount": 6,
+  "verseCount": 149,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 24,
+      "manifest": "galatians/001.json",
+      "chapterUrl": "galatians/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 21,
+      "manifest": "galatians/002.json",
+      "chapterUrl": "galatians/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 29,
+      "manifest": "galatians/003.json",
+      "chapterUrl": "galatians/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 31,
+      "manifest": "galatians/004.json",
+      "chapterUrl": "galatians/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 26,
+      "manifest": "galatians/005.json",
+      "chapterUrl": "galatians/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 18,
+      "manifest": "galatians/006.json",
+      "chapterUrl": "galatians/006/_chapter.mp3"
+    }
+  ]
+}

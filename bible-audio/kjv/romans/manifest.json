@@ -1,0 +1,106 @@
+{
+  "translation": "kjv",
+  "name": "Romans",
+  "slug": "romans",
+  "bookUrl": "romans/_book.mp3",
+  "chapterCount": 16,
+  "verseCount": 433,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 32,
+      "manifest": "romans/001.json",
+      "chapterUrl": "romans/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 29,
+      "manifest": "romans/002.json",
+      "chapterUrl": "romans/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 31,
+      "manifest": "romans/003.json",
+      "chapterUrl": "romans/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 25,
+      "manifest": "romans/004.json",
+      "chapterUrl": "romans/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 21,
+      "manifest": "romans/005.json",
+      "chapterUrl": "romans/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 23,
+      "manifest": "romans/006.json",
+      "chapterUrl": "romans/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 25,
+      "manifest": "romans/007.json",
+      "chapterUrl": "romans/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 39,
+      "manifest": "romans/008.json",
+      "chapterUrl": "romans/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 33,
+      "manifest": "romans/009.json",
+      "chapterUrl": "romans/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 21,
+      "manifest": "romans/010.json",
+      "chapterUrl": "romans/010/_chapter.mp3"
+    },
+    {
+      "chapter": 11,
+      "verseCount": 36,
+      "manifest": "romans/011.json",
+      "chapterUrl": "romans/011/_chapter.mp3"
+    },
+    {
+      "chapter": 12,
+      "verseCount": 21,
+      "manifest": "romans/012.json",
+      "chapterUrl": "romans/012/_chapter.mp3"
+    },
+    {
+      "chapter": 13,
+      "verseCount": 14,
+      "manifest": "romans/013.json",
+      "chapterUrl": "romans/013/_chapter.mp3"
+    },
+    {
+      "chapter": 14,
+      "verseCount": 23,
+      "manifest": "romans/014.json",
+      "chapterUrl": "romans/014/_chapter.mp3"
+    },
+    {
+      "chapter": 15,
+      "verseCount": 33,
+      "manifest": "romans/015.json",
+      "chapterUrl": "romans/015/_chapter.mp3"
+    },
+    {
+      "chapter": 16,
+      "verseCount": 27,
+      "manifest": "romans/016.json",
+      "chapterUrl": "romans/016/_chapter.mp3"
+    }
+  ]
+}

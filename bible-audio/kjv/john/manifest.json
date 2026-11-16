@@ -1,0 +1,136 @@
+{
+  "translation": "kjv",
+  "name": "John",
+  "slug": "john",
+  "bookUrl": "john/_book.mp3",
+  "chapterCount": 21,
+  "verseCount": 879,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 51,
+      "manifest": "john/001.json",
+      "chapterUrl": "john/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 25,
+      "manifest": "john/002.json",
+      "chapterUrl": "john/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 36,
+      "manifest": "john/003.json",
+      "chapterUrl": "john/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 54,
+      "manifest": "john/004.json",
+      "chapterUrl": "john/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 47,
+      "manifest": "john/005.json",
+      "chapterUrl": "john/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 71,
+      "manifest": "john/006.json",
+      "chapterUrl": "john/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 53,
+      "manifest": "john/007.json",
+      "chapterUrl": "john/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 59,
+      "manifest": "john/008.json",
+      "chapterUrl": "john/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 41,
+      "manifest": "john/009.json",
+      "chapterUrl": "john/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 42,
+      "manifest": "john/010.json",
+      "chapterUrl": "john/010/_chapter.mp3"
+    },
+    {
+      "chapter": 11,
+      "verseCount": 57,
+      "manifest": "john/011.json",
+      "chapterUrl": "john/011/_chapter.mp3"
+    },
+    {
+      "chapter": 12,
+      "verseCount": 50,
+      "manifest": "john/012.json",
+      "chapterUrl": "john/012/_chapter.mp3"
+    },
+    {
+      "chapter": 13,
+      "verseCount": 38,
+      "manifest": "john/013.json",
+      "chapterUrl": "john/013/_chapter.mp3"
+    },
+    {
+      "chapter": 14,
+      "verseCount": 31,
+      "manifest": "john/014.json",
+      "chapterUrl": "john/014/_chapter.mp3"
+    },
+    {
+      "chapter": 15,
+      "verseCount": 27,
+      "manifest": "john/015.json",
+      "chapterUrl": "john/015/_chapter.mp3"
+    },
+    {
+      "chapter": 16,
+      "verseCount": 33,
+      "manifest": "john/016.json",
+      "chapterUrl": "john/016/_chapter.mp3"
+    },
+    {
+      "chapter": 17,
+      "verseCount": 26,
+      "manifest": "john/017.json",
+      "chapterUrl": "john/017/_chapter.mp3"
+    },
+    {
+      "chapter": 18,
+      "verseCount": 40,
+      "manifest": "john/018.json",
+      "chapterUrl": "john/018/_chapter.mp3"
+    },
+    {
+      "chapter": 19,
+      "verseCount": 42,
+      "manifest": "john/019.json",
+      "chapterUrl": "john/019/_chapter.mp3"
+    },
+    {
+      "chapter": 20,
+      "verseCount": 31,
+      "manifest": "john/020.json",
+      "chapterUrl": "john/020/_chapter.mp3"
+    },
+    {
+      "chapter": 21,
+      "verseCount": 25,
+      "manifest": "john/021.json",
+      "chapterUrl": "john/021/_chapter.mp3"
+    }
+  ]
+}

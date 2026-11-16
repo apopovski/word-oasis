@@ -1,0 +1,94 @@
+{
+  "translation": "kjv",
+  "name": "Zechariah",
+  "slug": "zechariah",
+  "bookUrl": "zechariah/_book.mp3",
+  "chapterCount": 14,
+  "verseCount": 211,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 21,
+      "manifest": "zechariah/001.json",
+      "chapterUrl": "zechariah/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 13,
+      "manifest": "zechariah/002.json",
+      "chapterUrl": "zechariah/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 10,
+      "manifest": "zechariah/003.json",
+      "chapterUrl": "zechariah/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 14,
+      "manifest": "zechariah/004.json",
+      "chapterUrl": "zechariah/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 11,
+      "manifest": "zechariah/005.json",
+      "chapterUrl": "zechariah/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 15,
+      "manifest": "zechariah/006.json",
+      "chapterUrl": "zechariah/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 14,
+      "manifest": "zechariah/007.json",
+      "chapterUrl": "zechariah/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 23,
+      "manifest": "zechariah/008.json",
+      "chapterUrl": "zechariah/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 17,
+      "manifest": "zechariah/009.json",
+      "chapterUrl": "zechariah/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 12,
+      "manifest": "zechariah/010.json",
+      "chapterUrl": "zechariah/010/_chapter.mp3"
+    },
+    {
+      "chapter": 11,
+      "verseCount": 17,
+      "manifest": "zechariah/011.json",
+      "chapterUrl": "zechariah/011/_chapter.mp3"
+    },
+    {
+      "chapter": 12,
+      "verseCount": 14,
+      "manifest": "zechariah/012.json",
+      "chapterUrl": "zechariah/012/_chapter.mp3"
+    },
+    {
+      "chapter": 13,
+      "verseCount": 9,
+      "manifest": "zechariah/013.json",
+      "chapterUrl": "zechariah/013/_chapter.mp3"
+    },
+    {
+      "chapter": 14,
+      "verseCount": 21,
+      "manifest": "zechariah/014.json",
+      "chapterUrl": "zechariah/014/_chapter.mp3"
+    }
+  ]
+}

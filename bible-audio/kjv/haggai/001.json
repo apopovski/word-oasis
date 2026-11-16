@@ -1,0 +1,26 @@
+{
+  "translation": "kjv",
+  "book": "haggai",
+  "bookName": "Haggai",
+  "chapter": 1,
+  "chapterUrl": "haggai/001/_chapter.mp3",
+  "verseCount": 15,
+  "verses": [
+    "haggai/001/001.mp3",
+    "haggai/001/002.mp3",
+    "haggai/001/003.mp3",
+    "haggai/001/004.mp3",
+    "haggai/001/005.mp3",
+    "haggai/001/006.mp3",
+    "haggai/001/007.mp3",
+    "haggai/001/008.mp3",
+    "haggai/001/009.mp3",
+    "haggai/001/010.mp3",
+    "haggai/001/011.mp3",
+    "haggai/001/012.mp3",
+    "haggai/001/013.mp3",
+    "haggai/001/014.mp3",
+    "haggai/001/015.mp3"
+  ],
+  "bookUrl": "haggai/_book.mp3"
+}

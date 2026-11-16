@@ -1,0 +1,22 @@
+{
+  "translation": "kjv",
+  "book": "ezekiel",
+  "bookName": "Ezekiel",
+  "chapter": 9,
+  "chapterUrl": "ezekiel/009/_chapter.mp3",
+  "verseCount": 11,
+  "verses": [
+    "ezekiel/009/001.mp3",
+    "ezekiel/009/002.mp3",
+    "ezekiel/009/003.mp3",
+    "ezekiel/009/004.mp3",
+    "ezekiel/009/005.mp3",
+    "ezekiel/009/006.mp3",
+    "ezekiel/009/007.mp3",
+    "ezekiel/009/008.mp3",
+    "ezekiel/009/009.mp3",
+    "ezekiel/009/010.mp3",
+    "ezekiel/009/011.mp3"
+  ],
+  "bookUrl": "ezekiel/_book.mp3"
+}

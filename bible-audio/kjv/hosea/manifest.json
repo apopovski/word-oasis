@@ -1,0 +1,94 @@
+{
+  "translation": "kjv",
+  "name": "Hosea",
+  "slug": "hosea",
+  "bookUrl": "hosea/_book.mp3",
+  "chapterCount": 14,
+  "verseCount": 197,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 11,
+      "manifest": "hosea/001.json",
+      "chapterUrl": "hosea/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 23,
+      "manifest": "hosea/002.json",
+      "chapterUrl": "hosea/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 5,
+      "manifest": "hosea/003.json",
+      "chapterUrl": "hosea/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 19,
+      "manifest": "hosea/004.json",
+      "chapterUrl": "hosea/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 15,
+      "manifest": "hosea/005.json",
+      "chapterUrl": "hosea/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 11,
+      "manifest": "hosea/006.json",
+      "chapterUrl": "hosea/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 16,
+      "manifest": "hosea/007.json",
+      "chapterUrl": "hosea/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 14,
+      "manifest": "hosea/008.json",
+      "chapterUrl": "hosea/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 17,
+      "manifest": "hosea/009.json",
+      "chapterUrl": "hosea/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 15,
+      "manifest": "hosea/010.json",
+      "chapterUrl": "hosea/010/_chapter.mp3"
+    },
+    {
+      "chapter": 11,
+      "verseCount": 12,
+      "manifest": "hosea/011.json",
+      "chapterUrl": "hosea/011/_chapter.mp3"
+    },
+    {
+      "chapter": 12,
+      "verseCount": 14,
+      "manifest": "hosea/012.json",
+      "chapterUrl": "hosea/012/_chapter.mp3"
+    },
+    {
+      "chapter": 13,
+      "verseCount": 16,
+      "manifest": "hosea/013.json",
+      "chapterUrl": "hosea/013/_chapter.mp3"
+    },
+    {
+      "chapter": 14,
+      "verseCount": 9,
+      "manifest": "hosea/014.json",
+      "chapterUrl": "hosea/014/_chapter.mp3"
+    }
+  ]
+}

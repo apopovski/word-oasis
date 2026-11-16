@@ -1,0 +1,28 @@
+{
+  "translation": "kjv",
+  "name": "Habakkuk",
+  "slug": "habakkuk",
+  "bookUrl": "habakkuk/_book.mp3",
+  "chapterCount": 3,
+  "verseCount": 56,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 17,
+      "manifest": "habakkuk/001.json",
+      "chapterUrl": "habakkuk/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 20,
+      "manifest": "habakkuk/002.json",
+      "chapterUrl": "habakkuk/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 19,
+      "manifest": "habakkuk/003.json",
+      "chapterUrl": "habakkuk/003/_chapter.mp3"
+    }
+  ]
+}

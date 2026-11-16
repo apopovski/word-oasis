@@ -1,0 +1,16 @@
+{
+  "translation": "kjv",
+  "name": "2 John",
+  "slug": "2-john",
+  "bookUrl": "2-john/_book.mp3",
+  "chapterCount": 1,
+  "verseCount": 13,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 13,
+      "manifest": "2-john/001.json",
+      "chapterUrl": "2-john/001/_chapter.mp3"
+    }
+  ]
+}

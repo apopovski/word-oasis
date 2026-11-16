@@ -200,6 +200,402 @@
       "manifest": "song-of-solomon/manifest.json",
       "bookUrl": "song-of-solomon/_book.mp3",
       "available": true
+    },
+    {
+      "name": "Isaiah",
+      "slug": "isaiah",
+      "chapterCount": 66,
+      "verseCount": 1292,
+      "manifest": "isaiah/manifest.json",
+      "bookUrl": "isaiah/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Jeremiah",
+      "slug": "jeremiah",
+      "chapterCount": 52,
+      "verseCount": 1364,
+      "manifest": "jeremiah/manifest.json",
+      "bookUrl": "jeremiah/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Lamentations",
+      "slug": "lamentations",
+      "chapterCount": 5,
+      "verseCount": 154,
+      "manifest": "lamentations/manifest.json",
+      "bookUrl": "lamentations/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Ezekiel",
+      "slug": "ezekiel",
+      "chapterCount": 48,
+      "verseCount": 1273,
+      "manifest": "ezekiel/manifest.json",
+      "bookUrl": "ezekiel/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Daniel",
+      "slug": "daniel",
+      "chapterCount": 12,
+      "verseCount": 357,
+      "manifest": "daniel/manifest.json",
+      "bookUrl": "daniel/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Hosea",
+      "slug": "hosea",
+      "chapterCount": 14,
+      "verseCount": 197,
+      "manifest": "hosea/manifest.json",
+      "bookUrl": "hosea/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Joel",
+      "slug": "joel",
+      "chapterCount": 3,
+      "verseCount": 73,
+      "manifest": "joel/manifest.json",
+      "bookUrl": "joel/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Amos",
+      "slug": "amos",
+      "chapterCount": 9,
+      "verseCount": 146,
+      "manifest": "amos/manifest.json",
+      "bookUrl": "amos/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Obadiah",
+      "slug": "obadiah",
+      "chapterCount": 1,
+      "verseCount": 21,
+      "manifest": "obadiah/manifest.json",
+      "bookUrl": "obadiah/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Jonah",
+      "slug": "jonah",
+      "chapterCount": 4,
+      "verseCount": 48,
+      "manifest": "jonah/manifest.json",
+      "bookUrl": "jonah/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Micah",
+      "slug": "micah",
+      "chapterCount": 7,
+      "verseCount": 105,
+      "manifest": "micah/manifest.json",
+      "bookUrl": "micah/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Nahum",
+      "slug": "nahum",
+      "chapterCount": 3,
+      "verseCount": 47,
+      "manifest": "nahum/manifest.json",
+      "bookUrl": "nahum/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Habakkuk",
+      "slug": "habakkuk",
+      "chapterCount": 3,
+      "verseCount": 56,
+      "manifest": "habakkuk/manifest.json",
+      "bookUrl": "habakkuk/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Zephaniah",
+      "slug": "zephaniah",
+      "chapterCount": 3,
+      "verseCount": 53,
+      "manifest": "zephaniah/manifest.json",
+      "bookUrl": "zephaniah/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Haggai",
+      "slug": "haggai",
+      "chapterCount": 2,
+      "verseCount": 38,
+      "manifest": "haggai/manifest.json",
+      "bookUrl": "haggai/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Zechariah",
+      "slug": "zechariah",
+      "chapterCount": 14,
+      "verseCount": 211,
+      "manifest": "zechariah/manifest.json",
+      "bookUrl": "zechariah/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Malachi",
+      "slug": "malachi",
+      "chapterCount": 4,
+      "verseCount": 55,
+      "manifest": "malachi/manifest.json",
+      "bookUrl": "malachi/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Matthew",
+      "slug": "matthew",
+      "chapterCount": 28,
+      "verseCount": 1071,
+      "manifest": "matthew/manifest.json",
+      "bookUrl": "matthew/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Mark",
+      "slug": "mark",
+      "chapterCount": 16,
+      "verseCount": 678,
+      "manifest": "mark/manifest.json",
+      "bookUrl": "mark/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Luke",
+      "slug": "luke",
+      "chapterCount": 24,
+      "verseCount": 1151,
+      "manifest": "luke/manifest.json",
+      "bookUrl": "luke/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "John",
+      "slug": "john",
+      "chapterCount": 21,
+      "verseCount": 879,
+      "manifest": "john/manifest.json",
+      "bookUrl": "john/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Acts",
+      "slug": "acts",
+      "chapterCount": 28,
+      "verseCount": 1007,
+      "manifest": "acts/manifest.json",
+      "bookUrl": "acts/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Romans",
+      "slug": "romans",
+      "chapterCount": 16,
+      "verseCount": 433,
+      "manifest": "romans/manifest.json",
+      "bookUrl": "romans/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "1 Corinthians",
+      "slug": "1-corinthians",
+      "chapterCount": 16,
+      "verseCount": 437,
+      "manifest": "1-corinthians/manifest.json",
+      "bookUrl": "1-corinthians/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "2 Corinthians",
+      "slug": "2-corinthians",
+      "chapterCount": 13,
+      "verseCount": 257,
+      "manifest": "2-corinthians/manifest.json",
+      "bookUrl": "2-corinthians/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Galatians",
+      "slug": "galatians",
+      "chapterCount": 6,
+      "verseCount": 149,
+      "manifest": "galatians/manifest.json",
+      "bookUrl": "galatians/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Ephesians",
+      "slug": "ephesians",
+      "chapterCount": 6,
+      "verseCount": 155,
+      "manifest": "ephesians/manifest.json",
+      "bookUrl": "ephesians/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Philippians",
+      "slug": "philippians",
+      "chapterCount": 4,
+      "verseCount": 104,
+      "manifest": "philippians/manifest.json",
+      "bookUrl": "philippians/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Colossians",
+      "slug": "colossians",
+      "chapterCount": 4,
+      "verseCount": 95,
+      "manifest": "colossians/manifest.json",
+      "bookUrl": "colossians/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "1 Thessalonians",
+      "slug": "1-thessalonians",
+      "chapterCount": 5,
+      "verseCount": 89,
+      "manifest": "1-thessalonians/manifest.json",
+      "bookUrl": "1-thessalonians/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "2 Thessalonians",
+      "slug": "2-thessalonians",
+      "chapterCount": 3,
+      "verseCount": 47,
+      "manifest": "2-thessalonians/manifest.json",
+      "bookUrl": "2-thessalonians/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "1 Timothy",
+      "slug": "1-timothy",
+      "chapterCount": 6,
+      "verseCount": 113,
+      "manifest": "1-timothy/manifest.json",
+      "bookUrl": "1-timothy/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "2 Timothy",
+      "slug": "2-timothy",
+      "chapterCount": 4,
+      "verseCount": 83,
+      "manifest": "2-timothy/manifest.json",
+      "bookUrl": "2-timothy/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Titus",
+      "slug": "titus",
+      "chapterCount": 3,
+      "verseCount": 46,
+      "manifest": "titus/manifest.json",
+      "bookUrl": "titus/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Philemon",
+      "slug": "philemon",
+      "chapterCount": 1,
+      "verseCount": 25,
+      "manifest": "philemon/manifest.json",
+      "bookUrl": "philemon/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Hebrews",
+      "slug": "hebrews",
+      "chapterCount": 13,
+      "verseCount": 303,
+      "manifest": "hebrews/manifest.json",
+      "bookUrl": "hebrews/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "James",
+      "slug": "james",
+      "chapterCount": 5,
+      "verseCount": 108,
+      "manifest": "james/manifest.json",
+      "bookUrl": "james/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "1 Peter",
+      "slug": "1-peter",
+      "chapterCount": 5,
+      "verseCount": 105,
+      "manifest": "1-peter/manifest.json",
+      "bookUrl": "1-peter/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "2 Peter",
+      "slug": "2-peter",
+      "chapterCount": 3,
+      "verseCount": 61,
+      "manifest": "2-peter/manifest.json",
+      "bookUrl": "2-peter/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "1 John",
+      "slug": "1-john",
+      "chapterCount": 5,
+      "verseCount": 105,
+      "manifest": "1-john/manifest.json",
+      "bookUrl": "1-john/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "2 John",
+      "slug": "2-john",
+      "chapterCount": 1,
+      "verseCount": 13,
+      "manifest": "2-john/manifest.json",
+      "bookUrl": "2-john/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "3 John",
+      "slug": "3-john",
+      "chapterCount": 1,
+      "verseCount": 14,
+      "manifest": "3-john/manifest.json",
+      "bookUrl": "3-john/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Jude",
+      "slug": "jude",
+      "chapterCount": 1,
+      "verseCount": 25,
+      "manifest": "jude/manifest.json",
+      "bookUrl": "jude/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Revelation",
+      "slug": "revelation",
+      "chapterCount": 22,
+      "verseCount": 404,
+      "manifest": "revelation/manifest.json",
+      "bookUrl": "revelation/_book.mp3",
+      "available": true
     }
   ]
 }

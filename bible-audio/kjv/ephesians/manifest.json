@@ -1,0 +1,46 @@
+{
+  "translation": "kjv",
+  "name": "Ephesians",
+  "slug": "ephesians",
+  "bookUrl": "ephesians/_book.mp3",
+  "chapterCount": 6,
+  "verseCount": 155,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 23,
+      "manifest": "ephesians/001.json",
+      "chapterUrl": "ephesians/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 22,
+      "manifest": "ephesians/002.json",
+      "chapterUrl": "ephesians/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 21,
+      "manifest": "ephesians/003.json",
+      "chapterUrl": "ephesians/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 32,
+      "manifest": "ephesians/004.json",
+      "chapterUrl": "ephesians/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 33,
+      "manifest": "ephesians/005.json",
+      "chapterUrl": "ephesians/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 24,
+      "manifest": "ephesians/006.json",
+      "chapterUrl": "ephesians/006/_chapter.mp3"
+    }
+  ]
+}

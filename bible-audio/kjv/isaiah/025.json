@@ -1,0 +1,23 @@
+{
+  "translation": "kjv",
+  "book": "isaiah",
+  "bookName": "Isaiah",
+  "chapter": 25,
+  "chapterUrl": "isaiah/025/_chapter.mp3",
+  "verseCount": 12,
+  "verses": [
+    "isaiah/025/001.mp3",
+    "isaiah/025/002.mp3",
+    "isaiah/025/003.mp3",
+    "isaiah/025/004.mp3",
+    "isaiah/025/005.mp3",
+    "isaiah/025/006.mp3",
+    "isaiah/025/007.mp3",
+    "isaiah/025/008.mp3",
+    "isaiah/025/009.mp3",
+    "isaiah/025/010.mp3",
+    "isaiah/025/011.mp3",
+    "isaiah/025/012.mp3"
+  ],
+  "bookUrl": "isaiah/_book.mp3"
+}

@@ -1,0 +1,16 @@
+{
+  "translation": "kjv",
+  "name": "Philemon",
+  "slug": "philemon",
+  "bookUrl": "philemon/_book.mp3",
+  "chapterCount": 1,
+  "verseCount": 25,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 25,
+      "manifest": "philemon/001.json",
+      "chapterUrl": "philemon/001/_chapter.mp3"
+    }
+  ]
+}

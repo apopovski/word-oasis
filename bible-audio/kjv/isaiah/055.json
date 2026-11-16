@@ -1,0 +1,24 @@
+{
+  "translation": "kjv",
+  "book": "isaiah",
+  "bookName": "Isaiah",
+  "chapter": 55,
+  "chapterUrl": "isaiah/055/_chapter.mp3",
+  "verseCount": 13,
+  "verses": [
+    "isaiah/055/001.mp3",
+    "isaiah/055/002.mp3",
+    "isaiah/055/003.mp3",
+    "isaiah/055/004.mp3",
+    "isaiah/055/005.mp3",
+    "isaiah/055/006.mp3",
+    "isaiah/055/007.mp3",
+    "isaiah/055/008.mp3",
+    "isaiah/055/009.mp3",
+    "isaiah/055/010.mp3",
+    "isaiah/055/011.mp3",
+    "isaiah/055/012.mp3",
+    "isaiah/055/013.mp3"
+  ],
+  "bookUrl": "isaiah/_book.mp3"
+}

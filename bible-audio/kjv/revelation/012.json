@@ -1,0 +1,28 @@
+{
+  "translation": "kjv",
+  "book": "revelation",
+  "bookName": "Revelation",
+  "chapter": 12,
+  "chapterUrl": "revelation/012/_chapter.mp3",
+  "verseCount": 17,
+  "verses": [
+    "revelation/012/001.mp3",
+    "revelation/012/002.mp3",
+    "revelation/012/003.mp3",
+    "revelation/012/004.mp3",
+    "revelation/012/005.mp3",
+    "revelation/012/006.mp3",
+    "revelation/012/007.mp3",
+    "revelation/012/008.mp3",
+    "revelation/012/009.mp3",
+    "revelation/012/010.mp3",
+    "revelation/012/011.mp3",
+    "revelation/012/012.mp3",
+    "revelation/012/013.mp3",
+    "revelation/012/014.mp3",
+    "revelation/012/015.mp3",
+    "revelation/012/016.mp3",
+    "revelation/012/017.mp3"
+  ],
+  "bookUrl": "revelation/_book.mp3"
+}

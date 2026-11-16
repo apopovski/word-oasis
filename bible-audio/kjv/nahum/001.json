@@ -1,0 +1,26 @@
+{
+  "translation": "kjv",
+  "book": "nahum",
+  "bookName": "Nahum",
+  "chapter": 1,
+  "chapterUrl": "nahum/001/_chapter.mp3",
+  "verseCount": 15,
+  "verses": [
+    "nahum/001/001.mp3",
+    "nahum/001/002.mp3",
+    "nahum/001/003.mp3",
+    "nahum/001/004.mp3",
+    "nahum/001/005.mp3",
+    "nahum/001/006.mp3",
+    "nahum/001/007.mp3",
+    "nahum/001/008.mp3",
+    "nahum/001/009.mp3",
+    "nahum/001/010.mp3",
+    "nahum/001/011.mp3",
+    "nahum/001/012.mp3",
+    "nahum/001/013.mp3",
+    "nahum/001/014.mp3",
+    "nahum/001/015.mp3"
+  ],
+  "bookUrl": "nahum/_book.mp3"
+}

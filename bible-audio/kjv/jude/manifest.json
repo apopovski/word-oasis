@@ -1,0 +1,16 @@
+{
+  "translation": "kjv",
+  "name": "Jude",
+  "slug": "jude",
+  "bookUrl": "jude/_book.mp3",
+  "chapterCount": 1,
+  "verseCount": 25,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 25,
+      "manifest": "jude/001.json",
+      "chapterUrl": "jude/001/_chapter.mp3"
+    }
+  ]
+}

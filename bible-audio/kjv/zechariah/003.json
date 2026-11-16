@@ -1,0 +1,21 @@
+{
+  "translation": "kjv",
+  "book": "zechariah",
+  "bookName": "Zechariah",
+  "chapter": 3,
+  "chapterUrl": "zechariah/003/_chapter.mp3",
+  "verseCount": 10,
+  "verses": [
+    "zechariah/003/001.mp3",
+    "zechariah/003/002.mp3",
+    "zechariah/003/003.mp3",
+    "zechariah/003/004.mp3",
+    "zechariah/003/005.mp3",
+    "zechariah/003/006.mp3",
+    "zechariah/003/007.mp3",
+    "zechariah/003/008.mp3",
+    "zechariah/003/009.mp3",
+    "zechariah/003/010.mp3"
+  ],
+  "bookUrl": "zechariah/_book.mp3"
+}

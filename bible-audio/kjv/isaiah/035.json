@@ -1,0 +1,21 @@
+{
+  "translation": "kjv",
+  "book": "isaiah",
+  "bookName": "Isaiah",
+  "chapter": 35,
+  "chapterUrl": "isaiah/035/_chapter.mp3",
+  "verseCount": 10,
+  "verses": [
+    "isaiah/035/001.mp3",
+    "isaiah/035/002.mp3",
+    "isaiah/035/003.mp3",
+    "isaiah/035/004.mp3",
+    "isaiah/035/005.mp3",
+    "isaiah/035/006.mp3",
+    "isaiah/035/007.mp3",
+    "isaiah/035/008.mp3",
+    "isaiah/035/009.mp3",
+    "isaiah/035/010.mp3"
+  ],
+  "bookUrl": "isaiah/_book.mp3"
+}

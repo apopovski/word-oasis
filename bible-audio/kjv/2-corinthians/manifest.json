@@ -1,0 +1,88 @@
+{
+  "translation": "kjv",
+  "name": "2 Corinthians",
+  "slug": "2-corinthians",
+  "bookUrl": "2-corinthians/_book.mp3",
+  "chapterCount": 13,
+  "verseCount": 257,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 24,
+      "manifest": "2-corinthians/001.json",
+      "chapterUrl": "2-corinthians/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 17,
+      "manifest": "2-corinthians/002.json",
+      "chapterUrl": "2-corinthians/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 18,
+      "manifest": "2-corinthians/003.json",
+      "chapterUrl": "2-corinthians/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 18,
+      "manifest": "2-corinthians/004.json",
+      "chapterUrl": "2-corinthians/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 21,
+      "manifest": "2-corinthians/005.json",
+      "chapterUrl": "2-corinthians/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 18,
+      "manifest": "2-corinthians/006.json",
+      "chapterUrl": "2-corinthians/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 16,
+      "manifest": "2-corinthians/007.json",
+      "chapterUrl": "2-corinthians/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 24,
+      "manifest": "2-corinthians/008.json",
+      "chapterUrl": "2-corinthians/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 15,
+      "manifest": "2-corinthians/009.json",
+      "chapterUrl": "2-corinthians/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 18,
+      "manifest": "2-corinthians/010.json",
+      "chapterUrl": "2-corinthians/010/_chapter.mp3"
+    },
+    {
+      "chapter": 11,
+      "verseCount": 33,
+      "manifest": "2-corinthians/011.json",
+      "chapterUrl": "2-corinthians/011/_chapter.mp3"
+    },
+    {
+      "chapter": 12,
+      "verseCount": 21,
+      "manifest": "2-corinthians/012.json",
+      "chapterUrl": "2-corinthians/012/_chapter.mp3"
+    },
+    {
+      "chapter": 13,
+      "verseCount": 14,
+      "manifest": "2-corinthians/013.json",
+      "chapterUrl": "2-corinthians/013/_chapter.mp3"
+    }
+  ]
+}

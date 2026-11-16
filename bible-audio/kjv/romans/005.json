@@ -1,0 +1,32 @@
+{
+  "translation": "kjv",
+  "book": "romans",
+  "bookName": "Romans",
+  "chapter": 5,
+  "chapterUrl": "romans/005/_chapter.mp3",
+  "verseCount": 21,
+  "verses": [
+    "romans/005/001.mp3",
+    "romans/005/002.mp3",
+    "romans/005/003.mp3",
+    "romans/005/004.mp3",
+    "romans/005/005.mp3",
+    "romans/005/006.mp3",
+    "romans/005/007.mp3",
+    "romans/005/008.mp3",
+    "romans/005/009.mp3",
+    "romans/005/010.mp3",
+    "romans/005/011.mp3",
+    "romans/005/012.mp3",
+    "romans/005/013.mp3",
+    "romans/005/014.mp3",
+    "romans/005/015.mp3",
+    "romans/005/016.mp3",
+    "romans/005/017.mp3",
+    "romans/005/018.mp3",
+    "romans/005/019.mp3",
+    "romans/005/020.mp3",
+    "romans/005/021.mp3"
+  ],
+  "bookUrl": "romans/_book.mp3"
+}

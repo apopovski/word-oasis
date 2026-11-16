@@ -1,0 +1,40 @@
+{
+  "translation": "kjv",
+  "name": "1 Thessalonians",
+  "slug": "1-thessalonians",
+  "bookUrl": "1-thessalonians/_book.mp3",
+  "chapterCount": 5,
+  "verseCount": 89,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 10,
+      "manifest": "1-thessalonians/001.json",
+      "chapterUrl": "1-thessalonians/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 20,
+      "manifest": "1-thessalonians/002.json",
+      "chapterUrl": "1-thessalonians/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 13,
+      "manifest": "1-thessalonians/003.json",
+      "chapterUrl": "1-thessalonians/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 18,
+      "manifest": "1-thessalonians/004.json",
+      "chapterUrl": "1-thessalonians/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 28,
+      "manifest": "1-thessalonians/005.json",
+      "chapterUrl": "1-thessalonians/005/_chapter.mp3"
+    }
+  ]
+}

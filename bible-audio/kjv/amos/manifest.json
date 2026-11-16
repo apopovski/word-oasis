@@ -1,0 +1,64 @@
+{
+  "translation": "kjv",
+  "name": "Amos",
+  "slug": "amos",
+  "bookUrl": "amos/_book.mp3",
+  "chapterCount": 9,
+  "verseCount": 146,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 15,
+      "manifest": "amos/001.json",
+      "chapterUrl": "amos/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 16,
+      "manifest": "amos/002.json",
+      "chapterUrl": "amos/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 15,
+      "manifest": "amos/003.json",
+      "chapterUrl": "amos/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 13,
+      "manifest": "amos/004.json",
+      "chapterUrl": "amos/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 27,
+      "manifest": "amos/005.json",
+      "chapterUrl": "amos/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 14,
+      "manifest": "amos/006.json",
+      "chapterUrl": "amos/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 17,
+      "manifest": "amos/007.json",
+      "chapterUrl": "amos/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 14,
+      "manifest": "amos/008.json",
+      "chapterUrl": "amos/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 15,
+      "manifest": "amos/009.json",
+      "chapterUrl": "amos/009/_chapter.mp3"
+    }
+  ]
+}

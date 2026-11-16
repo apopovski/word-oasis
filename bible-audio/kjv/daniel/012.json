@@ -1,0 +1,24 @@
+{
+  "translation": "kjv",
+  "book": "daniel",
+  "bookName": "Daniel",
+  "chapter": 12,
+  "chapterUrl": "daniel/012/_chapter.mp3",
+  "verseCount": 13,
+  "verses": [
+    "daniel/012/001.mp3",
+    "daniel/012/002.mp3",
+    "daniel/012/003.mp3",
+    "daniel/012/004.mp3",
+    "daniel/012/005.mp3",
+    "daniel/012/006.mp3",
+    "daniel/012/007.mp3",
+    "daniel/012/008.mp3",
+    "daniel/012/009.mp3",
+    "daniel/012/010.mp3",
+    "daniel/012/011.mp3",
+    "daniel/012/012.mp3",
+    "daniel/012/013.mp3"
+  ],
+  "bookUrl": "daniel/_book.mp3"
+}

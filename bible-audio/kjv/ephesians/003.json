@@ -1,0 +1,32 @@
+{
+  "translation": "kjv",
+  "book": "ephesians",
+  "bookName": "Ephesians",
+  "chapter": 3,
+  "chapterUrl": "ephesians/003/_chapter.mp3",
+  "verseCount": 21,
+  "verses": [
+    "ephesians/003/001.mp3",
+    "ephesians/003/002.mp3",
+    "ephesians/003/003.mp3",
+    "ephesians/003/004.mp3",
+    "ephesians/003/005.mp3",
+    "ephesians/003/006.mp3",
+    "ephesians/003/007.mp3",
+    "ephesians/003/008.mp3",
+    "ephesians/003/009.mp3",
+    "ephesians/003/010.mp3",
+    "ephesians/003/011.mp3",
+    "ephesians/003/012.mp3",
+    "ephesians/003/013.mp3",
+    "ephesians/003/014.mp3",
+    "ephesians/003/015.mp3",
+    "ephesians/003/016.mp3",
+    "ephesians/003/017.mp3",
+    "ephesians/003/018.mp3",
+    "ephesians/003/019.mp3",
+    "ephesians/003/020.mp3",
+    "ephesians/003/021.mp3"
+  ],
+  "bookUrl": "ephesians/_book.mp3"
+}

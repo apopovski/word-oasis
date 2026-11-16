@@ -1,0 +1,34 @@
+{
+  "translation": "kjv",
+  "name": "Philippians",
+  "slug": "philippians",
+  "bookUrl": "philippians/_book.mp3",
+  "chapterCount": 4,
+  "verseCount": 104,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 30,
+      "manifest": "philippians/001.json",
+      "chapterUrl": "philippians/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 30,
+      "manifest": "philippians/002.json",
+      "chapterUrl": "philippians/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 21,
+      "manifest": "philippians/003.json",
+      "chapterUrl": "philippians/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 23,
+      "manifest": "philippians/004.json",
+      "chapterUrl": "philippians/004/_chapter.mp3"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "translation": "kjv",
+  "book": "hosea",
+  "bookName": "Hosea",
+  "chapter": 7,
+  "chapterUrl": "hosea/007/_chapter.mp3",
+  "verseCount": 16,
+  "verses": [
+    "hosea/007/001.mp3",
+    "hosea/007/002.mp3",
+    "hosea/007/003.mp3",
+    "hosea/007/004.mp3",
+    "hosea/007/005.mp3",
+    "hosea/007/006.mp3",
+    "hosea/007/007.mp3",
+    "hosea/007/008.mp3",
+    "hosea/007/009.mp3",
+    "hosea/007/010.mp3",
+    "hosea/007/011.mp3",
+    "hosea/007/012.mp3",
+    "hosea/007/013.mp3",
+    "hosea/007/014.mp3",
+    "hosea/007/015.mp3",
+    "hosea/007/016.mp3"
+  ],
+  "bookUrl": "hosea/_book.mp3"
+}

@@ -1,0 +1,26 @@
+{
+  "translation": "kjv",
+  "book": "1-timothy",
+  "bookName": "1 Timothy",
+  "chapter": 2,
+  "chapterUrl": "1-timothy/002/_chapter.mp3",
+  "verseCount": 15,
+  "verses": [
+    "1-timothy/002/001.mp3",
+    "1-timothy/002/002.mp3",
+    "1-timothy/002/003.mp3",
+    "1-timothy/002/004.mp3",
+    "1-timothy/002/005.mp3",
+    "1-timothy/002/006.mp3",
+    "1-timothy/002/007.mp3",
+    "1-timothy/002/008.mp3",
+    "1-timothy/002/009.mp3",
+    "1-timothy/002/010.mp3",
+    "1-timothy/002/011.mp3",
+    "1-timothy/002/012.mp3",
+    "1-timothy/002/013.mp3",
+    "1-timothy/002/014.mp3",
+    "1-timothy/002/015.mp3"
+  ],
+  "bookUrl": "1-timothy/_book.mp3"
+}

@@ -1,0 +1,322 @@
+{
+  "translation": "kjv",
+  "name": "Jeremiah",
+  "slug": "jeremiah",
+  "bookUrl": "jeremiah/_book.mp3",
+  "chapterCount": 52,
+  "verseCount": 1364,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 19,
+      "manifest": "jeremiah/001.json",
+      "chapterUrl": "jeremiah/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 37,
+      "manifest": "jeremiah/002.json",
+      "chapterUrl": "jeremiah/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 25,
+      "manifest": "jeremiah/003.json",
+      "chapterUrl": "jeremiah/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 31,
+      "manifest": "jeremiah/004.json",
+      "chapterUrl": "jeremiah/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 31,
+      "manifest": "jeremiah/005.json",
+      "chapterUrl": "jeremiah/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 30,
+      "manifest": "jeremiah/006.json",
+      "chapterUrl": "jeremiah/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 34,
+      "manifest": "jeremiah/007.json",
+      "chapterUrl": "jeremiah/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 22,
+      "manifest": "jeremiah/008.json",
+      "chapterUrl": "jeremiah/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 26,
+      "manifest": "jeremiah/009.json",
+      "chapterUrl": "jeremiah/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 25,
+      "manifest": "jeremiah/010.json",
+      "chapterUrl": "jeremiah/010/_chapter.mp3"
+    },
+    {
+      "chapter": 11,
+      "verseCount": 23,
+      "manifest": "jeremiah/011.json",
+      "chapterUrl": "jeremiah/011/_chapter.mp3"
+    },
+    {
+      "chapter": 12,
+      "verseCount": 17,
+      "manifest": "jeremiah/012.json",
+      "chapterUrl": "jeremiah/012/_chapter.mp3"
+    },
+    {
+      "chapter": 13,
+      "verseCount": 27,
+      "manifest": "jeremiah/013.json",
+      "chapterUrl": "jeremiah/013/_chapter.mp3"
+    },
+    {
+      "chapter": 14,
+      "verseCount": 22,
+      "manifest": "jeremiah/014.json",
+      "chapterUrl": "jeremiah/014/_chapter.mp3"
+    },
+    {
+      "chapter": 15,
+      "verseCount": 21,
+      "manifest": "jeremiah/015.json",
+      "chapterUrl": "jeremiah/015/_chapter.mp3"
+    },
+    {
+      "chapter": 16,
+      "verseCount": 21,
+      "manifest": "jeremiah/016.json",
+      "chapterUrl": "jeremiah/016/_chapter.mp3"
+    },
+    {
+      "chapter": 17,
+      "verseCount": 27,
+      "manifest": "jeremiah/017.json",
+      "chapterUrl": "jeremiah/017/_chapter.mp3"
+    },
+    {
+      "chapter": 18,
+      "verseCount": 23,
+      "manifest": "jeremiah/018.json",
+      "chapterUrl": "jeremiah/018/_chapter.mp3"
+    },
+    {
+      "chapter": 19,
+      "verseCount": 15,
+      "manifest": "jeremiah/019.json",
+      "chapterUrl": "jeremiah/019/_chapter.mp3"
+    },
+    {
+      "chapter": 20,
+      "verseCount": 18,
+      "manifest": "jeremiah/020.json",
+      "chapterUrl": "jeremiah/020/_chapter.mp3"
+    },
+    {
+      "chapter": 21,
+      "verseCount": 14,
+      "manifest": "jeremiah/021.json",
+      "chapterUrl": "jeremiah/021/_chapter.mp3"
+    },
+    {
+      "chapter": 22,
+      "verseCount": 30,
+      "manifest": "jeremiah/022.json",
+      "chapterUrl": "jeremiah/022/_chapter.mp3"
+    },
+    {
+      "chapter": 23,
+      "verseCount": 40,
+      "manifest": "jeremiah/023.json",
+      "chapterUrl": "jeremiah/023/_chapter.mp3"
+    },
+    {
+      "chapter": 24,
+      "verseCount": 10,
+      "manifest": "jeremiah/024.json",
+      "chapterUrl": "jeremiah/024/_chapter.mp3"
+    },
+    {
+      "chapter": 25,
+      "verseCount": 38,
+      "manifest": "jeremiah/025.json",
+      "chapterUrl": "jeremiah/025/_chapter.mp3"
+    },
+    {
+      "chapter": 26,
+      "verseCount": 24,
+      "manifest": "jeremiah/026.json",
+      "chapterUrl": "jeremiah/026/_chapter.mp3"
+    },
+    {
+      "chapter": 27,
+      "verseCount": 22,
+      "manifest": "jeremiah/027.json",
+      "chapterUrl": "jeremiah/027/_chapter.mp3"
+    },
+    {
+      "chapter": 28,
+      "verseCount": 17,
+      "manifest": "jeremiah/028.json",
+      "chapterUrl": "jeremiah/028/_chapter.mp3"
+    },
+    {
+      "chapter": 29,
+      "verseCount": 32,
+      "manifest": "jeremiah/029.json",
+      "chapterUrl": "jeremiah/029/_chapter.mp3"
+    },
+    {
+      "chapter": 30,
+      "verseCount": 24,
+      "manifest": "jeremiah/030.json",
+      "chapterUrl": "jeremiah/030/_chapter.mp3"
+    },
+    {
+      "chapter": 31,
+      "verseCount": 40,
+      "manifest": "jeremiah/031.json",
+      "chapterUrl": "jeremiah/031/_chapter.mp3"
+    },
+    {
+      "chapter": 32,
+      "verseCount": 44,
+      "manifest": "jeremiah/032.json",
+      "chapterUrl": "jeremiah/032/_chapter.mp3"
+    },
+    {
+      "chapter": 33,
+      "verseCount": 26,
+      "manifest": "jeremiah/033.json",
+      "chapterUrl": "jeremiah/033/_chapter.mp3"
+    },
+    {
+      "chapter": 34,
+      "verseCount": 22,
+      "manifest": "jeremiah/034.json",
+      "chapterUrl": "jeremiah/034/_chapter.mp3"
+    },
+    {
+      "chapter": 35,
+      "verseCount": 19,
+      "manifest": "jeremiah/035.json",
+      "chapterUrl": "jeremiah/035/_chapter.mp3"
+    },
+    {
+      "chapter": 36,
+      "verseCount": 32,
+      "manifest": "jeremiah/036.json",
+      "chapterUrl": "jeremiah/036/_chapter.mp3"
+    },
+    {
+      "chapter": 37,
+      "verseCount": 21,
+      "manifest": "jeremiah/037.json",
+      "chapterUrl": "jeremiah/037/_chapter.mp3"
+    },
+    {
+      "chapter": 38,
+      "verseCount": 28,
+      "manifest": "jeremiah/038.json",
+      "chapterUrl": "jeremiah/038/_chapter.mp3"
+    },
+    {
+      "chapter": 39,
+      "verseCount": 18,
+      "manifest": "jeremiah/039.json",
+      "chapterUrl": "jeremiah/039/_chapter.mp3"
+    },
+    {
+      "chapter": 40,
+      "verseCount": 16,
+      "manifest": "jeremiah/040.json",
+      "chapterUrl": "jeremiah/040/_chapter.mp3"
+    },
+    {
+      "chapter": 41,
+      "verseCount": 18,
+      "manifest": "jeremiah/041.json",
+      "chapterUrl": "jeremiah/041/_chapter.mp3"
+    },
+    {
+      "chapter": 42,
+      "verseCount": 22,
+      "manifest": "jeremiah/042.json",
+      "chapterUrl": "jeremiah/042/_chapter.mp3"
+    },
+    {
+      "chapter": 43,
+      "verseCount": 13,
+      "manifest": "jeremiah/043.json",
+      "chapterUrl": "jeremiah/043/_chapter.mp3"
+    },
+    {
+      "chapter": 44,
+      "verseCount": 30,
+      "manifest": "jeremiah/044.json",
+      "chapterUrl": "jeremiah/044/_chapter.mp3"
+    },
+    {
+      "chapter": 45,
+      "verseCount": 5,
+      "manifest": "jeremiah/045.json",
+      "chapterUrl": "jeremiah/045/_chapter.mp3"
+    },
+    {
+      "chapter": 46,
+      "verseCount": 28,
+      "manifest": "jeremiah/046.json",
+      "chapterUrl": "jeremiah/046/_chapter.mp3"
+    },
+    {
+      "chapter": 47,
+      "verseCount": 7,
+      "manifest": "jeremiah/047.json",
+      "chapterUrl": "jeremiah/047/_chapter.mp3"
+    },
+    {
+      "chapter": 48,
+      "verseCount": 47,
+      "manifest": "jeremiah/048.json",
+      "chapterUrl": "jeremiah/048/_chapter.mp3"
+    },
+    {
+      "chapter": 49,
+      "verseCount": 39,
+      "manifest": "jeremiah/049.json",
+      "chapterUrl": "jeremiah/049/_chapter.mp3"
+    },
+    {
+      "chapter": 50,
+      "verseCount": 46,
+      "manifest": "jeremiah/050.json",
+      "chapterUrl": "jeremiah/050/_chapter.mp3"
+    },
+    {
+      "chapter": 51,
+      "verseCount": 64,
+      "manifest": "jeremiah/051.json",
+      "chapterUrl": "jeremiah/051/_chapter.mp3"
+    },
+    {
+      "chapter": 52,
+      "verseCount": 34,
+      "manifest": "jeremiah/052.json",
+      "chapterUrl": "jeremiah/052/_chapter.mp3"
+    }
+  ]
+}

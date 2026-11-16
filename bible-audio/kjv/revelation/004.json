@@ -1,0 +1,22 @@
+{
+  "translation": "kjv",
+  "book": "revelation",
+  "bookName": "Revelation",
+  "chapter": 4,
+  "chapterUrl": "revelation/004/_chapter.mp3",
+  "verseCount": 11,
+  "verses": [
+    "revelation/004/001.mp3",
+    "revelation/004/002.mp3",
+    "revelation/004/003.mp3",
+    "revelation/004/004.mp3",
+    "revelation/004/005.mp3",
+    "revelation/004/006.mp3",
+    "revelation/004/007.mp3",
+    "revelation/004/008.mp3",
+    "revelation/004/009.mp3",
+    "revelation/004/010.mp3",
+    "revelation/004/011.mp3"
+  ],
+  "bookUrl": "revelation/_book.mp3"
+}

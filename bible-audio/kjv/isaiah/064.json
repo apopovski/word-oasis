@@ -1,0 +1,23 @@
+{
+  "translation": "kjv",
+  "book": "isaiah",
+  "bookName": "Isaiah",
+  "chapter": 64,
+  "chapterUrl": "isaiah/064/_chapter.mp3",
+  "verseCount": 12,
+  "verses": [
+    "isaiah/064/001.mp3",
+    "isaiah/064/002.mp3",
+    "isaiah/064/003.mp3",
+    "isaiah/064/004.mp3",
+    "isaiah/064/005.mp3",
+    "isaiah/064/006.mp3",
+    "isaiah/064/007.mp3",
+    "isaiah/064/008.mp3",
+    "isaiah/064/009.mp3",
+    "isaiah/064/010.mp3",
+    "isaiah/064/011.mp3",
+    "isaiah/064/012.mp3"
+  ],
+  "bookUrl": "isaiah/_book.mp3"
+}

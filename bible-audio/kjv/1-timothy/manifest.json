@@ -1,0 +1,46 @@
+{
+  "translation": "kjv",
+  "name": "1 Timothy",
+  "slug": "1-timothy",
+  "bookUrl": "1-timothy/_book.mp3",
+  "chapterCount": 6,
+  "verseCount": 113,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 20,
+      "manifest": "1-timothy/001.json",
+      "chapterUrl": "1-timothy/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 15,
+      "manifest": "1-timothy/002.json",
+      "chapterUrl": "1-timothy/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 16,
+      "manifest": "1-timothy/003.json",
+      "chapterUrl": "1-timothy/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 16,
+      "manifest": "1-timothy/004.json",
+      "chapterUrl": "1-timothy/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 25,
+      "manifest": "1-timothy/005.json",
+      "chapterUrl": "1-timothy/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 21,
+      "manifest": "1-timothy/006.json",
+      "chapterUrl": "1-timothy/006/_chapter.mp3"
+    }
+  ]
+}

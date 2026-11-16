@@ -1,0 +1,26 @@
+{
+  "translation": "kjv",
+  "book": "acts",
+  "bookName": "Acts",
+  "chapter": 6,
+  "chapterUrl": "acts/006/_chapter.mp3",
+  "verseCount": 15,
+  "verses": [
+    "acts/006/001.mp3",
+    "acts/006/002.mp3",
+    "acts/006/003.mp3",
+    "acts/006/004.mp3",
+    "acts/006/005.mp3",
+    "acts/006/006.mp3",
+    "acts/006/007.mp3",
+    "acts/006/008.mp3",
+    "acts/006/009.mp3",
+    "acts/006/010.mp3",
+    "acts/006/011.mp3",
+    "acts/006/012.mp3",
+    "acts/006/013.mp3",
+    "acts/006/014.mp3",
+    "acts/006/015.mp3"
+  ],
+  "bookUrl": "acts/_book.mp3"
+}

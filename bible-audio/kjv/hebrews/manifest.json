@@ -1,0 +1,88 @@
+{
+  "translation": "kjv",
+  "name": "Hebrews",
+  "slug": "hebrews",
+  "bookUrl": "hebrews/_book.mp3",
+  "chapterCount": 13,
+  "verseCount": 303,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 14,
+      "manifest": "hebrews/001.json",
+      "chapterUrl": "hebrews/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 18,
+      "manifest": "hebrews/002.json",
+      "chapterUrl": "hebrews/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 19,
+      "manifest": "hebrews/003.json",
+      "chapterUrl": "hebrews/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 16,
+      "manifest": "hebrews/004.json",
+      "chapterUrl": "hebrews/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 14,
+      "manifest": "hebrews/005.json",
+      "chapterUrl": "hebrews/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 20,
+      "manifest": "hebrews/006.json",
+      "chapterUrl": "hebrews/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 28,
+      "manifest": "hebrews/007.json",
+      "chapterUrl": "hebrews/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 13,
+      "manifest": "hebrews/008.json",
+      "chapterUrl": "hebrews/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 28,
+      "manifest": "hebrews/009.json",
+      "chapterUrl": "hebrews/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 39,
+      "manifest": "hebrews/010.json",
+      "chapterUrl": "hebrews/010/_chapter.mp3"
+    },
+    {
+      "chapter": 11,
+      "verseCount": 40,
+      "manifest": "hebrews/011.json",
+      "chapterUrl": "hebrews/011/_chapter.mp3"
+    },
+    {
+      "chapter": 12,
+      "verseCount": 29,
+      "manifest": "hebrews/012.json",
+      "chapterUrl": "hebrews/012/_chapter.mp3"
+    },
+    {
+      "chapter": 13,
+      "verseCount": 25,
+      "manifest": "hebrews/013.json",
+      "chapterUrl": "hebrews/013/_chapter.mp3"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "translation": "kjv",
+  "name": "Micah",
+  "slug": "micah",
+  "bookUrl": "micah/_book.mp3",
+  "chapterCount": 7,
+  "verseCount": 105,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 16,
+      "manifest": "micah/001.json",
+      "chapterUrl": "micah/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 13,
+      "manifest": "micah/002.json",
+      "chapterUrl": "micah/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 12,
+      "manifest": "micah/003.json",
+      "chapterUrl": "micah/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 13,
+      "manifest": "micah/004.json",
+      "chapterUrl": "micah/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 15,
+      "manifest": "micah/005.json",
+      "chapterUrl": "micah/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 16,
+      "manifest": "micah/006.json",
+      "chapterUrl": "micah/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 20,
+      "manifest": "micah/007.json",
+      "chapterUrl": "micah/007/_chapter.mp3"
+    }
+  ]
+}

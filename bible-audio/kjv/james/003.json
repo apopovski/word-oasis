@@ -1,0 +1,29 @@
+{
+  "translation": "kjv",
+  "book": "james",
+  "bookName": "James",
+  "chapter": 3,
+  "chapterUrl": "james/003/_chapter.mp3",
+  "verseCount": 18,
+  "verses": [
+    "james/003/001.mp3",
+    "james/003/002.mp3",
+    "james/003/003.mp3",
+    "james/003/004.mp3",
+    "james/003/005.mp3",
+    "james/003/006.mp3",
+    "james/003/007.mp3",
+    "james/003/008.mp3",
+    "james/003/009.mp3",
+    "james/003/010.mp3",
+    "james/003/011.mp3",
+    "james/003/012.mp3",
+    "james/003/013.mp3",
+    "james/003/014.mp3",
+    "james/003/015.mp3",
+    "james/003/016.mp3",
+    "james/003/017.mp3",
+    "james/003/018.mp3"
+  ],
+  "bookUrl": "james/_book.mp3"
+}

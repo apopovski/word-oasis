@@ -1,0 +1,40 @@
+{
+  "translation": "kjv",
+  "name": "Lamentations",
+  "slug": "lamentations",
+  "bookUrl": "lamentations/_book.mp3",
+  "chapterCount": 5,
+  "verseCount": 154,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 22,
+      "manifest": "lamentations/001.json",
+      "chapterUrl": "lamentations/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 22,
+      "manifest": "lamentations/002.json",
+      "chapterUrl": "lamentations/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 66,
+      "manifest": "lamentations/003.json",
+      "chapterUrl": "lamentations/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 22,
+      "manifest": "lamentations/004.json",
+      "chapterUrl": "lamentations/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 22,
+      "manifest": "lamentations/005.json",
+      "chapterUrl": "lamentations/005/_chapter.mp3"
+    }
+  ]
+}

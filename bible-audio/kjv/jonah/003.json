@@ -1,0 +1,21 @@
+{
+  "translation": "kjv",
+  "book": "jonah",
+  "bookName": "Jonah",
+  "chapter": 3,
+  "chapterUrl": "jonah/003/_chapter.mp3",
+  "verseCount": 10,
+  "verses": [
+    "jonah/003/001.mp3",
+    "jonah/003/002.mp3",
+    "jonah/003/003.mp3",
+    "jonah/003/004.mp3",
+    "jonah/003/005.mp3",
+    "jonah/003/006.mp3",
+    "jonah/003/007.mp3",
+    "jonah/003/008.mp3",
+    "jonah/003/009.mp3",
+    "jonah/003/010.mp3"
+  ],
+  "bookUrl": "jonah/_book.mp3"
+}

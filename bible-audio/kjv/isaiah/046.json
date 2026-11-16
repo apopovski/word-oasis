@@ -1,0 +1,24 @@
+{
+  "translation": "kjv",
+  "book": "isaiah",
+  "bookName": "Isaiah",
+  "chapter": 46,
+  "chapterUrl": "isaiah/046/_chapter.mp3",
+  "verseCount": 13,
+  "verses": [
+    "isaiah/046/001.mp3",
+    "isaiah/046/002.mp3",
+    "isaiah/046/003.mp3",
+    "isaiah/046/004.mp3",
+    "isaiah/046/005.mp3",
+    "isaiah/046/006.mp3",
+    "isaiah/046/007.mp3",
+    "isaiah/046/008.mp3",
+    "isaiah/046/009.mp3",
+    "isaiah/046/010.mp3",
+    "isaiah/046/011.mp3",
+    "isaiah/046/012.mp3",
+    "isaiah/046/013.mp3"
+  ],
+  "bookUrl": "isaiah/_book.mp3"
+}

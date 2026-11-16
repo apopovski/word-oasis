@@ -1,0 +1,298 @@
+{
+  "translation": "kjv",
+  "name": "Ezekiel",
+  "slug": "ezekiel",
+  "bookUrl": "ezekiel/_book.mp3",
+  "chapterCount": 48,
+  "verseCount": 1273,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 28,
+      "manifest": "ezekiel/001.json",
+      "chapterUrl": "ezekiel/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 10,
+      "manifest": "ezekiel/002.json",
+      "chapterUrl": "ezekiel/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 27,
+      "manifest": "ezekiel/003.json",
+      "chapterUrl": "ezekiel/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 17,
+      "manifest": "ezekiel/004.json",
+      "chapterUrl": "ezekiel/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 17,
+      "manifest": "ezekiel/005.json",
+      "chapterUrl": "ezekiel/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 14,
+      "manifest": "ezekiel/006.json",
+      "chapterUrl": "ezekiel/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 27,
+      "manifest": "ezekiel/007.json",
+      "chapterUrl": "ezekiel/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 18,
+      "manifest": "ezekiel/008.json",
+      "chapterUrl": "ezekiel/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 11,
+      "manifest": "ezekiel/009.json",
+      "chapterUrl": "ezekiel/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 22,
+      "manifest": "ezekiel/010.json",
+      "chapterUrl": "ezekiel/010/_chapter.mp3"
+    },
+    {
+      "chapter": 11,
+      "verseCount": 25,
+      "manifest": "ezekiel/011.json",
+      "chapterUrl": "ezekiel/011/_chapter.mp3"
+    },
+    {
+      "chapter": 12,
+      "verseCount": 28,
+      "manifest": "ezekiel/012.json",
+      "chapterUrl": "ezekiel/012/_chapter.mp3"
+    },
+    {
+      "chapter": 13,
+      "verseCount": 23,
+      "manifest": "ezekiel/013.json",
+      "chapterUrl": "ezekiel/013/_chapter.mp3"
+    },
+    {
+      "chapter": 14,
+      "verseCount": 23,
+      "manifest": "ezekiel/014.json",
+      "chapterUrl": "ezekiel/014/_chapter.mp3"
+    },
+    {
+      "chapter": 15,
+      "verseCount": 8,
+      "manifest": "ezekiel/015.json",
+      "chapterUrl": "ezekiel/015/_chapter.mp3"
+    },
+    {
+      "chapter": 16,
+      "verseCount": 63,
+      "manifest": "ezekiel/016.json",
+      "chapterUrl": "ezekiel/016/_chapter.mp3"
+    },
+    {
+      "chapter": 17,
+      "verseCount": 24,
+      "manifest": "ezekiel/017.json",
+      "chapterUrl": "ezekiel/017/_chapter.mp3"
+    },
+    {
+      "chapter": 18,
+      "verseCount": 32,
+      "manifest": "ezekiel/018.json",
+      "chapterUrl": "ezekiel/018/_chapter.mp3"
+    },
+    {
+      "chapter": 19,
+      "verseCount": 14,
+      "manifest": "ezekiel/019.json",
+      "chapterUrl": "ezekiel/019/_chapter.mp3"
+    },
+    {
+      "chapter": 20,
+      "verseCount": 49,
+      "manifest": "ezekiel/020.json",
+      "chapterUrl": "ezekiel/020/_chapter.mp3"
+    },
+    {
+      "chapter": 21,
+      "verseCount": 32,
+      "manifest": "ezekiel/021.json",
+      "chapterUrl": "ezekiel/021/_chapter.mp3"
+    },
+    {
+      "chapter": 22,
+      "verseCount": 31,
+      "manifest": "ezekiel/022.json",
+      "chapterUrl": "ezekiel/022/_chapter.mp3"
+    },
+    {
+      "chapter": 23,
+      "verseCount": 49,
+      "manifest": "ezekiel/023.json",
+      "chapterUrl": "ezekiel/023/_chapter.mp3"
+    },
+    {
+      "chapter": 24,
+      "verseCount": 27,
+      "manifest": "ezekiel/024.json",
+      "chapterUrl": "ezekiel/024/_chapter.mp3"
+    },
+    {
+      "chapter": 25,
+      "verseCount": 17,
+      "manifest": "ezekiel/025.json",
+      "chapterUrl": "ezekiel/025/_chapter.mp3"
+    },
+    {
+      "chapter": 26,
+      "verseCount": 21,
+      "manifest": "ezekiel/026.json",
+      "chapterUrl": "ezekiel/026/_chapter.mp3"
+    },
+    {
+      "chapter": 27,
+      "verseCount": 36,
+      "manifest": "ezekiel/027.json",
+      "chapterUrl": "ezekiel/027/_chapter.mp3"
+    },
+    {
+      "chapter": 28,
+      "verseCount": 26,
+      "manifest": "ezekiel/028.json",
+      "chapterUrl": "ezekiel/028/_chapter.mp3"
+    },
+    {
+      "chapter": 29,
+      "verseCount": 21,
+      "manifest": "ezekiel/029.json",
+      "chapterUrl": "ezekiel/029/_chapter.mp3"
+    },
+    {
+      "chapter": 30,
+      "verseCount": 26,
+      "manifest": "ezekiel/030.json",
+      "chapterUrl": "ezekiel/030/_chapter.mp3"
+    },
+    {
+      "chapter": 31,
+      "verseCount": 18,
+      "manifest": "ezekiel/031.json",
+      "chapterUrl": "ezekiel/031/_chapter.mp3"
+    },
+    {
+      "chapter": 32,
+      "verseCount": 32,
+      "manifest": "ezekiel/032.json",
+      "chapterUrl": "ezekiel/032/_chapter.mp3"
+    },
+    {
+      "chapter": 33,
+      "verseCount": 33,
+      "manifest": "ezekiel/033.json",
+      "chapterUrl": "ezekiel/033/_chapter.mp3"
+    },
+    {
+      "chapter": 34,
+      "verseCount": 31,
+      "manifest": "ezekiel/034.json",
+      "chapterUrl": "ezekiel/034/_chapter.mp3"
+    },
+    {
+      "chapter": 35,
+      "verseCount": 15,
+      "manifest": "ezekiel/035.json",
+      "chapterUrl": "ezekiel/035/_chapter.mp3"
+    },
+    {
+      "chapter": 36,
+      "verseCount": 38,
+      "manifest": "ezekiel/036.json",
+      "chapterUrl": "ezekiel/036/_chapter.mp3"
+    },
+    {
+      "chapter": 37,
+      "verseCount": 28,
+      "manifest": "ezekiel/037.json",
+      "chapterUrl": "ezekiel/037/_chapter.mp3"
+    },
+    {
+      "chapter": 38,
+      "verseCount": 23,
+      "manifest": "ezekiel/038.json",
+      "chapterUrl": "ezekiel/038/_chapter.mp3"
+    },
+    {
+      "chapter": 39,
+      "verseCount": 29,
+      "manifest": "ezekiel/039.json",
+      "chapterUrl": "ezekiel/039/_chapter.mp3"
+    },
+    {
+      "chapter": 40,
+      "verseCount": 49,
+      "manifest": "ezekiel/040.json",
+      "chapterUrl": "ezekiel/040/_chapter.mp3"
+    },
+    {
+      "chapter": 41,
+      "verseCount": 26,
+      "manifest": "ezekiel/041.json",
+      "chapterUrl": "ezekiel/041/_chapter.mp3"
+    },
+    {
+      "chapter": 42,
+      "verseCount": 20,
+      "manifest": "ezekiel/042.json",
+      "chapterUrl": "ezekiel/042/_chapter.mp3"
+    },
+    {
+      "chapter": 43,
+      "verseCount": 27,
+      "manifest": "ezekiel/043.json",
+      "chapterUrl": "ezekiel/043/_chapter.mp3"
+    },
+    {
+      "chapter": 44,
+      "verseCount": 31,
+      "manifest": "ezekiel/044.json",
+      "chapterUrl": "ezekiel/044/_chapter.mp3"
+    },
+    {
+      "chapter": 45,
+      "verseCount": 25,
+      "manifest": "ezekiel/045.json",
+      "chapterUrl": "ezekiel/045/_chapter.mp3"
+    },
+    {
+      "chapter": 46,
+      "verseCount": 24,
+      "manifest": "ezekiel/046.json",
+      "chapterUrl": "ezekiel/046/_chapter.mp3"
+    },
+    {
+      "chapter": 47,
+      "verseCount": 23,
+      "manifest": "ezekiel/047.json",
+      "chapterUrl": "ezekiel/047/_chapter.mp3"
+    },
+    {
+      "chapter": 48,
+      "verseCount": 35,
+      "manifest": "ezekiel/048.json",
+      "chapterUrl": "ezekiel/048/_chapter.mp3"
+    }
+  ]
+}

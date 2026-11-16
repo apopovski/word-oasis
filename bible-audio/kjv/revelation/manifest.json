@@ -1,0 +1,142 @@
+{
+  "translation": "kjv",
+  "name": "Revelation",
+  "slug": "revelation",
+  "bookUrl": "revelation/_book.mp3",
+  "chapterCount": 22,
+  "verseCount": 404,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 20,
+      "manifest": "revelation/001.json",
+      "chapterUrl": "revelation/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 29,
+      "manifest": "revelation/002.json",
+      "chapterUrl": "revelation/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 22,
+      "manifest": "revelation/003.json",
+      "chapterUrl": "revelation/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 11,
+      "manifest": "revelation/004.json",
+      "chapterUrl": "revelation/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 14,
+      "manifest": "revelation/005.json",
+      "chapterUrl": "revelation/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 17,
+      "manifest": "revelation/006.json",
+      "chapterUrl": "revelation/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 17,
+      "manifest": "revelation/007.json",
+      "chapterUrl": "revelation/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 13,
+      "manifest": "revelation/008.json",
+      "chapterUrl": "revelation/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 21,
+      "manifest": "revelation/009.json",
+      "chapterUrl": "revelation/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 11,
+      "manifest": "revelation/010.json",
+      "chapterUrl": "revelation/010/_chapter.mp3"
+    },
+    {
+      "chapter": 11,
+      "verseCount": 19,
+      "manifest": "revelation/011.json",
+      "chapterUrl": "revelation/011/_chapter.mp3"
+    },
+    {
+      "chapter": 12,
+      "verseCount": 17,
+      "manifest": "revelation/012.json",
+      "chapterUrl": "revelation/012/_chapter.mp3"
+    },
+    {
+      "chapter": 13,
+      "verseCount": 18,
+      "manifest": "revelation/013.json",
+      "chapterUrl": "revelation/013/_chapter.mp3"
+    },
+    {
+      "chapter": 14,
+      "verseCount": 20,
+      "manifest": "revelation/014.json",
+      "chapterUrl": "revelation/014/_chapter.mp3"
+    },
+    {
+      "chapter": 15,
+      "verseCount": 8,
+      "manifest": "revelation/015.json",
+      "chapterUrl": "revelation/015/_chapter.mp3"
+    },
+    {
+      "chapter": 16,
+      "verseCount": 21,
+      "manifest": "revelation/016.json",
+      "chapterUrl": "revelation/016/_chapter.mp3"
+    },
+    {
+      "chapter": 17,
+      "verseCount": 18,
+      "manifest": "revelation/017.json",
+      "chapterUrl": "revelation/017/_chapter.mp3"
+    },
+    {
+      "chapter": 18,
+      "verseCount": 24,
+      "manifest": "revelation/018.json",
+      "chapterUrl": "revelation/018/_chapter.mp3"
+    },
+    {
+      "chapter": 19,
+      "verseCount": 21,
+      "manifest": "revelation/019.json",
+      "chapterUrl": "revelation/019/_chapter.mp3"
+    },
+    {
+      "chapter": 20,
+      "verseCount": 15,
+      "manifest": "revelation/020.json",
+      "chapterUrl": "revelation/020/_chapter.mp3"
+    },
+    {
+      "chapter": 21,
+      "verseCount": 27,
+      "manifest": "revelation/021.json",
+      "chapterUrl": "revelation/021/_chapter.mp3"
+    },
+    {
+      "chapter": 22,
+      "verseCount": 21,
+      "manifest": "revelation/022.json",
+      "chapterUrl": "revelation/022/_chapter.mp3"
+    }
+  ]
+}

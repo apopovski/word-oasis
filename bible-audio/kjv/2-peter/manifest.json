@@ -1,0 +1,28 @@
+{
+  "translation": "kjv",
+  "name": "2 Peter",
+  "slug": "2-peter",
+  "bookUrl": "2-peter/_book.mp3",
+  "chapterCount": 3,
+  "verseCount": 61,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 21,
+      "manifest": "2-peter/001.json",
+      "chapterUrl": "2-peter/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 22,
+      "manifest": "2-peter/002.json",
+      "chapterUrl": "2-peter/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 18,
+      "manifest": "2-peter/003.json",
+      "chapterUrl": "2-peter/003/_chapter.mp3"
+    }
+  ]
+}

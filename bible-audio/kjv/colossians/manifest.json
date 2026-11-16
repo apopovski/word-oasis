@@ -1,0 +1,34 @@
+{
+  "translation": "kjv",
+  "name": "Colossians",
+  "slug": "colossians",
+  "bookUrl": "colossians/_book.mp3",
+  "chapterCount": 4,
+  "verseCount": 95,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 29,
+      "manifest": "colossians/001.json",
+      "chapterUrl": "colossians/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 23,
+      "manifest": "colossians/002.json",
+      "chapterUrl": "colossians/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 25,
+      "manifest": "colossians/003.json",
+      "chapterUrl": "colossians/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 18,
+      "manifest": "colossians/004.json",
+      "chapterUrl": "colossians/004/_chapter.mp3"
+    }
+  ]
+}

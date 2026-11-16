@@ -1,0 +1,25 @@
+{
+  "translation": "kjv",
+  "book": "3-john",
+  "bookName": "3 John",
+  "chapter": 1,
+  "chapterUrl": "3-john/001/_chapter.mp3",
+  "verseCount": 14,
+  "verses": [
+    "3-john/001/001.mp3",
+    "3-john/001/002.mp3",
+    "3-john/001/003.mp3",
+    "3-john/001/004.mp3",
+    "3-john/001/005.mp3",
+    "3-john/001/006.mp3",
+    "3-john/001/007.mp3",
+    "3-john/001/008.mp3",
+    "3-john/001/009.mp3",
+    "3-john/001/010.mp3",
+    "3-john/001/011.mp3",
+    "3-john/001/012.mp3",
+    "3-john/001/013.mp3",
+    "3-john/001/014.mp3"
+  ],
+  "bookUrl": "3-john/_book.mp3"
+}

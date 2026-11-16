@@ -1,0 +1,24 @@
+{
+  "translation": "kjv",
+  "book": "hebrews",
+  "bookName": "Hebrews",
+  "chapter": 8,
+  "chapterUrl": "hebrews/008/_chapter.mp3",
+  "verseCount": 13,
+  "verses": [
+    "hebrews/008/001.mp3",
+    "hebrews/008/002.mp3",
+    "hebrews/008/003.mp3",
+    "hebrews/008/004.mp3",
+    "hebrews/008/005.mp3",
+    "hebrews/008/006.mp3",
+    "hebrews/008/007.mp3",
+    "hebrews/008/008.mp3",
+    "hebrews/008/009.mp3",
+    "hebrews/008/010.mp3",
+    "hebrews/008/011.mp3",
+    "hebrews/008/012.mp3",
+    "hebrews/008/013.mp3"
+  ],
+  "bookUrl": "hebrews/_book.mp3"
+}

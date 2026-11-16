@@ -1,0 +1,28 @@
+{
+  "translation": "kjv",
+  "name": "2 Thessalonians",
+  "slug": "2-thessalonians",
+  "bookUrl": "2-thessalonians/_book.mp3",
+  "chapterCount": 3,
+  "verseCount": 47,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 12,
+      "manifest": "2-thessalonians/001.json",
+      "chapterUrl": "2-thessalonians/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 17,
+      "manifest": "2-thessalonians/002.json",
+      "chapterUrl": "2-thessalonians/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 18,
+      "manifest": "2-thessalonians/003.json",
+      "chapterUrl": "2-thessalonians/003/_chapter.mp3"
+    }
+  ]
+}

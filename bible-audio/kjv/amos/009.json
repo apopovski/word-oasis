@@ -1,0 +1,26 @@
+{
+  "translation": "kjv",
+  "book": "amos",
+  "bookName": "Amos",
+  "chapter": 9,
+  "chapterUrl": "amos/009/_chapter.mp3",
+  "verseCount": 15,
+  "verses": [
+    "amos/009/001.mp3",
+    "amos/009/002.mp3",
+    "amos/009/003.mp3",
+    "amos/009/004.mp3",
+    "amos/009/005.mp3",
+    "amos/009/006.mp3",
+    "amos/009/007.mp3",
+    "amos/009/008.mp3",
+    "amos/009/009.mp3",
+    "amos/009/010.mp3",
+    "amos/009/011.mp3",
+    "amos/009/012.mp3",
+    "amos/009/013.mp3",
+    "amos/009/014.mp3",
+    "amos/009/015.mp3"
+  ],
+  "bookUrl": "amos/_book.mp3"
+}

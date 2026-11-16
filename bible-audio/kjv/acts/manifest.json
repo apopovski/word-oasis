@@ -1,0 +1,178 @@
+{
+  "translation": "kjv",
+  "name": "Acts",
+  "slug": "acts",
+  "bookUrl": "acts/_book.mp3",
+  "chapterCount": 28,
+  "verseCount": 1007,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 26,
+      "manifest": "acts/001.json",
+      "chapterUrl": "acts/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 47,
+      "manifest": "acts/002.json",
+      "chapterUrl": "acts/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 26,
+      "manifest": "acts/003.json",
+      "chapterUrl": "acts/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 37,
+      "manifest": "acts/004.json",
+      "chapterUrl": "acts/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 42,
+      "manifest": "acts/005.json",
+      "chapterUrl": "acts/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 15,
+      "manifest": "acts/006.json",
+      "chapterUrl": "acts/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 60,
+      "manifest": "acts/007.json",
+      "chapterUrl": "acts/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 40,
+      "manifest": "acts/008.json",
+      "chapterUrl": "acts/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 43,
+      "manifest": "acts/009.json",
+      "chapterUrl": "acts/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 48,
+      "manifest": "acts/010.json",
+      "chapterUrl": "acts/010/_chapter.mp3"
+    },
+    {
+      "chapter": 11,
+      "verseCount": 30,
+      "manifest": "acts/011.json",
+      "chapterUrl": "acts/011/_chapter.mp3"
+    },
+    {
+      "chapter": 12,
+      "verseCount": 25,
+      "manifest": "acts/012.json",
+      "chapterUrl": "acts/012/_chapter.mp3"
+    },
+    {
+      "chapter": 13,
+      "verseCount": 52,
+      "manifest": "acts/013.json",
+      "chapterUrl": "acts/013/_chapter.mp3"
+    },
+    {
+      "chapter": 14,
+      "verseCount": 28,
+      "manifest": "acts/014.json",
+      "chapterUrl": "acts/014/_chapter.mp3"
+    },
+    {
+      "chapter": 15,
+      "verseCount": 41,
+      "manifest": "acts/015.json",
+      "chapterUrl": "acts/015/_chapter.mp3"
+    },
+    {
+      "chapter": 16,
+      "verseCount": 40,
+      "manifest": "acts/016.json",
+      "chapterUrl": "acts/016/_chapter.mp3"
+    },
+    {
+      "chapter": 17,
+      "verseCount": 34,
+      "manifest": "acts/017.json",
+      "chapterUrl": "acts/017/_chapter.mp3"
+    },
+    {
+      "chapter": 18,
+      "verseCount": 28,
+      "manifest": "acts/018.json",
+      "chapterUrl": "acts/018/_chapter.mp3"
+    },
+    {
+      "chapter": 19,
+      "verseCount": 41,
+      "manifest": "acts/019.json",
+      "chapterUrl": "acts/019/_chapter.mp3"
+    },
+    {
+      "chapter": 20,
+      "verseCount": 38,
+      "manifest": "acts/020.json",
+      "chapterUrl": "acts/020/_chapter.mp3"
+    },
+    {
+      "chapter": 21,
+      "verseCount": 40,
+      "manifest": "acts/021.json",
+      "chapterUrl": "acts/021/_chapter.mp3"
+    },
+    {
+      "chapter": 22,
+      "verseCount": 30,
+      "manifest": "acts/022.json",
+      "chapterUrl": "acts/022/_chapter.mp3"
+    },
+    {
+      "chapter": 23,
+      "verseCount": 35,
+      "manifest": "acts/023.json",
+      "chapterUrl": "acts/023/_chapter.mp3"
+    },
+    {
+      "chapter": 24,
+      "verseCount": 27,
+      "manifest": "acts/024.json",
+      "chapterUrl": "acts/024/_chapter.mp3"
+    },
+    {
+      "chapter": 25,
+      "verseCount": 27,
+      "manifest": "acts/025.json",
+      "chapterUrl": "acts/025/_chapter.mp3"
+    },
+    {
+      "chapter": 26,
+      "verseCount": 32,
+      "manifest": "acts/026.json",
+      "chapterUrl": "acts/026/_chapter.mp3"
+    },
+    {
+      "chapter": 27,
+      "verseCount": 44,
+      "manifest": "acts/027.json",
+      "chapterUrl": "acts/027/_chapter.mp3"
+    },
+    {
+      "chapter": 28,
+      "verseCount": 31,
+      "manifest": "acts/028.json",
+      "chapterUrl": "acts/028/_chapter.mp3"
+    }
+  ]
+}
