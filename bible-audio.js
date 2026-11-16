@@ -55,8 +55,10 @@
 
   const audioBase = String(window.WORD_OASIS_AUDIO_BASE || DEFAULT_AUDIO_BASE).replace(/\/?$/, "/");
   // Bump when re-encoding/replacing mp3s so browsers skip immutable CDN caches.
-  const audioAssetVersion = "20261169";
-  let audio = new Audio();
+  const audioAssetVersion = "20261170";
+  // Keep a single element for playback. Swapping to a prefetched Audio() breaks
+  // autoplay continuity on Safari/iOS (and sometimes Chrome), which stops after a verse.
+  const audio = new Audio();
   audio.preload = "auto";
 
   let rootManifestPromise = null;
@@ -72,6 +74,7 @@
   let playbackIntent = "continue";
   let activeLoopVerse = null;
   let handoffToken = 0;
+  let advancingAfterError = false;
 
   function sameAudioUrl(left, right) {
     if (!left || !right) {
@@ -88,56 +91,40 @@
     advanceAfterEnded();
   }
 
-  function attachAudioListeners(el) {
-    el.addEventListener("timeupdate", updateProgress);
-    el.addEventListener("loadedmetadata", updateProgress);
-    el.addEventListener("play", updatePlayButton);
-    el.addEventListener("pause", updatePlayButton);
-    el.addEventListener("ended", onAudioEnded);
-  }
-
-  function detachAudioListeners(el) {
-    el.removeEventListener("timeupdate", updateProgress);
-    el.removeEventListener("loadedmetadata", updateProgress);
-    el.removeEventListener("play", updatePlayButton);
-    el.removeEventListener("pause", updatePlayButton);
-    el.removeEventListener("ended", onAudioEnded);
-  }
-
-  function retireAudioElement(el) {
-    if (!el) {
+  function onAudioError() {
+    if (advancingAfterError || queueIndex < 0 || !queue.length) {
       return;
     }
-    detachAudioListeners(el);
-    try {
-      el.pause();
-    } catch (error) {
-      // ignore
-    }
-    el.removeAttribute("src");
-    try {
-      el.load();
-    } catch (error) {
-      // ignore
-    }
+    // Skip a bad/missing clip instead of leaving the player stuck after a verse.
+    const failedIndex = queueIndex;
+    const tokenAtError = handoffToken;
+    advancingAfterError = true;
+    window.setTimeout(() => {
+      advancingAfterError = false;
+      if (tokenAtError !== handoffToken || failedIndex !== queueIndex) {
+        return;
+      }
+      if (playbackIntent === "loop" || modeSelect.value === "verse") {
+        nowPlaying.textContent = "Could not play audio";
+        noteEl.textContent = "Check your connection, or try again in a moment.";
+        updatePlayButton();
+        return;
+      }
+      advanceAfterEnded();
+    }, 0);
   }
 
-  function promotePrefetchIfReady(expectedUrl) {
-    if (!prefetchAudio || !sameAudioUrl(prefetchAudio.src, expectedUrl)) {
-      return false;
+  function clearPrefetch() {
+    if (!prefetchAudio) {
+      return;
     }
-    // HAVE_CURRENT_DATA or better — enough to start without a reload gap.
-    if (prefetchAudio.readyState < 2) {
-      return false;
+    try {
+      prefetchAudio.removeAttribute("src");
+      prefetchAudio.load();
+    } catch (error) {
+      // ignore
     }
-    const retiring = audio;
-    audio = prefetchAudio;
     prefetchAudio = null;
-    audio.playbackRate = Number.parseFloat(speedSelect.value) || 1;
-    audio.volume = retiring.volume;
-    attachAudioListeners(audio);
-    retireAudioElement(retiring);
-    return true;
   }
 
   const launcher = document.createElement("aside");
@@ -569,14 +556,39 @@
   }
 
   function prefetchNext() {
+    clearPrefetch();
     const next = queue[queueIndex + 1];
     if (!next) {
-      prefetchAudio = null;
       return;
     }
+    // Warm HTTP cache only — playback always stays on the same Audio element.
     prefetchAudio = new Audio();
     prefetchAudio.preload = "auto";
     prefetchAudio.src = next.url;
+  }
+
+  function waitForCanPlay(el, token, timeoutMs = 4000) {
+    if (el.readyState >= 2) {
+      return Promise.resolve(true);
+    }
+    return new Promise((resolve) => {
+      let settled = false;
+      const finish = (ok) => {
+        if (settled) {
+          return;
+        }
+        settled = true;
+        el.removeEventListener("canplay", onReady);
+        el.removeEventListener("error", onFail);
+        window.clearTimeout(timer);
+        resolve(ok);
+      };
+      const onReady = () => finish(token === handoffToken);
+      const onFail = () => finish(false);
+      const timer = window.setTimeout(() => finish(false), timeoutMs);
+      el.addEventListener("canplay", onReady, { once: true });
+      el.addEventListener("error", onFail, { once: true });
+    });
   }
 
   async function playIndex(index) {
@@ -588,9 +600,18 @@
     const item = queue[queueIndex];
     updateNowPlaying();
     highlightPlayingVerse(item.verse);
-    const usedPrefetch = promotePrefetchIfReady(item.url);
-    if (!usedPrefetch) {
+    // Prefetch is cache-warming only; drop it so the main element owns the request.
+    if (prefetchAudio && sameAudioUrl(prefetchAudio.src, item.url)) {
+      clearPrefetch();
+    }
+    if (!sameAudioUrl(audio.src, item.url)) {
       audio.src = item.url;
+    } else if (audio.ended || audio.currentTime > 0) {
+      try {
+        audio.currentTime = 0;
+      } catch (error) {
+        audio.src = item.url;
+      }
     }
     audio.playbackRate = Number.parseFloat(speedSelect.value) || 1;
     try {
@@ -608,8 +629,35 @@
       });
       return true;
     } catch (error) {
+      if (token !== handoffToken || error?.name === "AbortError") {
+        return false;
+      }
+      const ready = await waitForCanPlay(audio, token);
+      if (ready && token === handoffToken) {
+        try {
+          await audio.play();
+          if (token !== handoffToken) {
+            return false;
+          }
+          updatePlayButton();
+          prefetchNext();
+          return true;
+        } catch (retryError) {
+          if (token !== handoffToken || retryError?.name === "AbortError") {
+            return false;
+          }
+        }
+      }
       if (token !== handoffToken) {
         return false;
+      }
+      // Prefer skipping ahead over stalling mid-chapter; error handler may also catch this.
+      if (
+        playbackIntent !== "loop"
+        && modeSelect.value !== "verse"
+        && queueIndex < queue.length - 1
+      ) {
+        return playIndex(queueIndex + 1);
       }
       nowPlaying.textContent = "Could not play audio";
       noteEl.textContent = "Check your connection, or try again in a moment.";
@@ -619,6 +667,8 @@
   }
 
   function stopPlayback({ keepHighlight = false } = {}) {
+    handoffToken += 1;
+    clearPrefetch();
     audio.pause();
     audio.removeAttribute("src");
     audio.load();
@@ -1006,7 +1056,12 @@
     audio.currentTime = (Number.parseInt(seekInput.value, 10) / 1000) * audio.duration;
     updateProgress();
   });
-  attachAudioListeners(audio);
+  audio.addEventListener("timeupdate", updateProgress);
+  audio.addEventListener("loadedmetadata", updateProgress);
+  audio.addEventListener("play", updatePlayButton);
+  audio.addEventListener("pause", updatePlayButton);
+  audio.addEventListener("ended", onAudioEnded);
+  audio.addEventListener("error", onAudioError);
 
   window.WordOasisBibleAudio = {
     bindChapter,
