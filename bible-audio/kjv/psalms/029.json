@@ -1,0 +1,22 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 29,
+  "chapterUrl": "psalms/029/_chapter.mp3",
+  "verseCount": 11,
+  "verses": [
+    "psalms/029/001.mp3",
+    "psalms/029/002.mp3",
+    "psalms/029/003.mp3",
+    "psalms/029/004.mp3",
+    "psalms/029/005.mp3",
+    "psalms/029/006.mp3",
+    "psalms/029/007.mp3",
+    "psalms/029/008.mp3",
+    "psalms/029/009.mp3",
+    "psalms/029/010.mp3",
+    "psalms/029/011.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

@@ -1,0 +1,26 @@
+{
+  "translation": "kjv",
+  "book": "esther",
+  "bookName": "Esther",
+  "chapter": 3,
+  "chapterUrl": "esther/003/_chapter.mp3",
+  "verseCount": 15,
+  "verses": [
+    "esther/003/001.mp3",
+    "esther/003/002.mp3",
+    "esther/003/003.mp3",
+    "esther/003/004.mp3",
+    "esther/003/005.mp3",
+    "esther/003/006.mp3",
+    "esther/003/007.mp3",
+    "esther/003/008.mp3",
+    "esther/003/009.mp3",
+    "esther/003/010.mp3",
+    "esther/003/011.mp3",
+    "esther/003/012.mp3",
+    "esther/003/013.mp3",
+    "esther/003/014.mp3",
+    "esther/003/015.mp3"
+  ],
+  "bookUrl": "esther/_book.mp3"
+}

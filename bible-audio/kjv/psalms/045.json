@@ -1,0 +1,28 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 45,
+  "chapterUrl": "psalms/045/_chapter.mp3",
+  "verseCount": 17,
+  "verses": [
+    "psalms/045/001.mp3",
+    "psalms/045/002.mp3",
+    "psalms/045/003.mp3",
+    "psalms/045/004.mp3",
+    "psalms/045/005.mp3",
+    "psalms/045/006.mp3",
+    "psalms/045/007.mp3",
+    "psalms/045/008.mp3",
+    "psalms/045/009.mp3",
+    "psalms/045/010.mp3",
+    "psalms/045/011.mp3",
+    "psalms/045/012.mp3",
+    "psalms/045/013.mp3",
+    "psalms/045/014.mp3",
+    "psalms/045/015.mp3",
+    "psalms/045/016.mp3",
+    "psalms/045/017.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

@@ -1,0 +1,28 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 90,
+  "chapterUrl": "psalms/090/_chapter.mp3",
+  "verseCount": 17,
+  "verses": [
+    "psalms/090/001.mp3",
+    "psalms/090/002.mp3",
+    "psalms/090/003.mp3",
+    "psalms/090/004.mp3",
+    "psalms/090/005.mp3",
+    "psalms/090/006.mp3",
+    "psalms/090/007.mp3",
+    "psalms/090/008.mp3",
+    "psalms/090/009.mp3",
+    "psalms/090/010.mp3",
+    "psalms/090/011.mp3",
+    "psalms/090/012.mp3",
+    "psalms/090/013.mp3",
+    "psalms/090/014.mp3",
+    "psalms/090/015.mp3",
+    "psalms/090/016.mp3",
+    "psalms/090/017.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

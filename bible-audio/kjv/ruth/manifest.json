@@ -1,0 +1,34 @@
+{
+  "translation": "kjv",
+  "name": "Ruth",
+  "slug": "ruth",
+  "bookUrl": "ruth/_book.mp3",
+  "chapterCount": 4,
+  "verseCount": 85,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 22,
+      "manifest": "ruth/001.json",
+      "chapterUrl": "ruth/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 23,
+      "manifest": "ruth/002.json",
+      "chapterUrl": "ruth/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 18,
+      "manifest": "ruth/003.json",
+      "chapterUrl": "ruth/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 22,
+      "manifest": "ruth/004.json",
+      "chapterUrl": "ruth/004/_chapter.mp3"
+    }
+  ]
+}

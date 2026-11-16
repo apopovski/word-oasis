@@ -1,0 +1,22 @@
+{
+  "translation": "kjv",
+  "book": "song-of-solomon",
+  "bookName": "Song of Solomon",
+  "chapter": 3,
+  "chapterUrl": "song-of-solomon/003/_chapter.mp3",
+  "verseCount": 11,
+  "verses": [
+    "song-of-solomon/003/001.mp3",
+    "song-of-solomon/003/002.mp3",
+    "song-of-solomon/003/003.mp3",
+    "song-of-solomon/003/004.mp3",
+    "song-of-solomon/003/005.mp3",
+    "song-of-solomon/003/006.mp3",
+    "song-of-solomon/003/007.mp3",
+    "song-of-solomon/003/008.mp3",
+    "song-of-solomon/003/009.mp3",
+    "song-of-solomon/003/010.mp3",
+    "song-of-solomon/003/011.mp3"
+  ],
+  "bookUrl": "song-of-solomon/_book.mp3"
+}

@@ -1,0 +1,21 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 75,
+  "chapterUrl": "psalms/075/_chapter.mp3",
+  "verseCount": 10,
+  "verses": [
+    "psalms/075/001.mp3",
+    "psalms/075/002.mp3",
+    "psalms/075/003.mp3",
+    "psalms/075/004.mp3",
+    "psalms/075/005.mp3",
+    "psalms/075/006.mp3",
+    "psalms/075/007.mp3",
+    "psalms/075/008.mp3",
+    "psalms/075/009.mp3",
+    "psalms/075/010.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

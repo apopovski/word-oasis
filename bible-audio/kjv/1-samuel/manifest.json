@@ -1,0 +1,196 @@
+{
+  "translation": "kjv",
+  "name": "1 Samuel",
+  "slug": "1-samuel",
+  "bookUrl": "1-samuel/_book.mp3",
+  "chapterCount": 31,
+  "verseCount": 810,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 28,
+      "manifest": "1-samuel/001.json",
+      "chapterUrl": "1-samuel/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 36,
+      "manifest": "1-samuel/002.json",
+      "chapterUrl": "1-samuel/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 21,
+      "manifest": "1-samuel/003.json",
+      "chapterUrl": "1-samuel/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 22,
+      "manifest": "1-samuel/004.json",
+      "chapterUrl": "1-samuel/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 12,
+      "manifest": "1-samuel/005.json",
+      "chapterUrl": "1-samuel/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 21,
+      "manifest": "1-samuel/006.json",
+      "chapterUrl": "1-samuel/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 17,
+      "manifest": "1-samuel/007.json",
+      "chapterUrl": "1-samuel/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 22,
+      "manifest": "1-samuel/008.json",
+      "chapterUrl": "1-samuel/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 27,
+      "manifest": "1-samuel/009.json",
+      "chapterUrl": "1-samuel/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 27,
+      "manifest": "1-samuel/010.json",
+      "chapterUrl": "1-samuel/010/_chapter.mp3"
+    },
+    {
+      "chapter": 11,
+      "verseCount": 15,
+      "manifest": "1-samuel/011.json",
+      "chapterUrl": "1-samuel/011/_chapter.mp3"
+    },
+    {
+      "chapter": 12,
+      "verseCount": 25,
+      "manifest": "1-samuel/012.json",
+      "chapterUrl": "1-samuel/012/_chapter.mp3"
+    },
+    {
+      "chapter": 13,
+      "verseCount": 23,
+      "manifest": "1-samuel/013.json",
+      "chapterUrl": "1-samuel/013/_chapter.mp3"
+    },
+    {
+      "chapter": 14,
+      "verseCount": 52,
+      "manifest": "1-samuel/014.json",
+      "chapterUrl": "1-samuel/014/_chapter.mp3"
+    },
+    {
+      "chapter": 15,
+      "verseCount": 35,
+      "manifest": "1-samuel/015.json",
+      "chapterUrl": "1-samuel/015/_chapter.mp3"
+    },
+    {
+      "chapter": 16,
+      "verseCount": 23,
+      "manifest": "1-samuel/016.json",
+      "chapterUrl": "1-samuel/016/_chapter.mp3"
+    },
+    {
+      "chapter": 17,
+      "verseCount": 58,
+      "manifest": "1-samuel/017.json",
+      "chapterUrl": "1-samuel/017/_chapter.mp3"
+    },
+    {
+      "chapter": 18,
+      "verseCount": 30,
+      "manifest": "1-samuel/018.json",
+      "chapterUrl": "1-samuel/018/_chapter.mp3"
+    },
+    {
+      "chapter": 19,
+      "verseCount": 24,
+      "manifest": "1-samuel/019.json",
+      "chapterUrl": "1-samuel/019/_chapter.mp3"
+    },
+    {
+      "chapter": 20,
+      "verseCount": 42,
+      "manifest": "1-samuel/020.json",
+      "chapterUrl": "1-samuel/020/_chapter.mp3"
+    },
+    {
+      "chapter": 21,
+      "verseCount": 15,
+      "manifest": "1-samuel/021.json",
+      "chapterUrl": "1-samuel/021/_chapter.mp3"
+    },
+    {
+      "chapter": 22,
+      "verseCount": 23,
+      "manifest": "1-samuel/022.json",
+      "chapterUrl": "1-samuel/022/_chapter.mp3"
+    },
+    {
+      "chapter": 23,
+      "verseCount": 29,
+      "manifest": "1-samuel/023.json",
+      "chapterUrl": "1-samuel/023/_chapter.mp3"
+    },
+    {
+      "chapter": 24,
+      "verseCount": 22,
+      "manifest": "1-samuel/024.json",
+      "chapterUrl": "1-samuel/024/_chapter.mp3"
+    },
+    {
+      "chapter": 25,
+      "verseCount": 44,
+      "manifest": "1-samuel/025.json",
+      "chapterUrl": "1-samuel/025/_chapter.mp3"
+    },
+    {
+      "chapter": 26,
+      "verseCount": 25,
+      "manifest": "1-samuel/026.json",
+      "chapterUrl": "1-samuel/026/_chapter.mp3"
+    },
+    {
+      "chapter": 27,
+      "verseCount": 12,
+      "manifest": "1-samuel/027.json",
+      "chapterUrl": "1-samuel/027/_chapter.mp3"
+    },
+    {
+      "chapter": 28,
+      "verseCount": 25,
+      "manifest": "1-samuel/028.json",
+      "chapterUrl": "1-samuel/028/_chapter.mp3"
+    },
+    {
+      "chapter": 29,
+      "verseCount": 11,
+      "manifest": "1-samuel/029.json",
+      "chapterUrl": "1-samuel/029/_chapter.mp3"
+    },
+    {
+      "chapter": 30,
+      "verseCount": 31,
+      "manifest": "1-samuel/030.json",
+      "chapterUrl": "1-samuel/030/_chapter.mp3"
+    },
+    {
+      "chapter": 31,
+      "verseCount": 13,
+      "manifest": "1-samuel/031.json",
+      "chapterUrl": "1-samuel/031/_chapter.mp3"
+    }
+  ]
+}

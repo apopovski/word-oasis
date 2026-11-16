@@ -1,0 +1,24 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 65,
+  "chapterUrl": "psalms/065/_chapter.mp3",
+  "verseCount": 13,
+  "verses": [
+    "psalms/065/001.mp3",
+    "psalms/065/002.mp3",
+    "psalms/065/003.mp3",
+    "psalms/065/004.mp3",
+    "psalms/065/005.mp3",
+    "psalms/065/006.mp3",
+    "psalms/065/007.mp3",
+    "psalms/065/008.mp3",
+    "psalms/065/009.mp3",
+    "psalms/065/010.mp3",
+    "psalms/065/011.mp3",
+    "psalms/065/012.mp3",
+    "psalms/065/013.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

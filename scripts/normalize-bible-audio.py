@@ -23,6 +23,7 @@ Output layout (CDN-ready):
 Usage:
   python3 scripts/normalize-bible-audio.py
   python3 scripts/normalize-bible-audio.py --books genesis exodus leviticus numbers deuteronomy
+  python3 scripts/normalize-bible-audio.py --books joshua judges ruth 1-samuel 2-samuel
   python3 scripts/normalize-bible-audio.py --copy   # copy instead of hardlink
 """
 
@@ -182,7 +183,153 @@ BOOK_BATCHES: dict[str, dict] = {
             },
         ],
     },
+    "joshua": {
+        "name": "Joshua",
+        "slug": "joshua",
+        "testament": "Old Testament",
+        "book_dir": "06-Joshua",
+        "batches": [
+            {
+                "dir": "ElevenLabs_Bible_Joshua_1-14",
+                "chapters": (1, 14),
+                "include_book_title": True,
+            },
+            {
+                "dir": "ElevenLabs_Bible_Joshua_15-24",
+                "chapters": (15, 24),
+                "include_book_title": False,
+            },
+        ],
+    },
+    # API-generated books use one ElevenLabs_Bible_{Book}_{N}-{N} folder per chapter.
+    "judges": {
+        "name": "Judges",
+        "slug": "judges",
+        "testament": "Old Testament",
+        "book_dir": "07-Judges",
+        "per_chapter": True,
+    },
+    "ruth": {
+        "name": "Ruth",
+        "slug": "ruth",
+        "testament": "Old Testament",
+        "book_dir": "08-Ruth",
+        "per_chapter": True,
+    },
+    "1-samuel": {
+        "name": "1 Samuel",
+        "slug": "1-samuel",
+        "testament": "Old Testament",
+        "book_dir": "09-1 Samuel",
+        "per_chapter": True,
+    },
+    "2-samuel": {
+        "name": "2 Samuel",
+        "slug": "2-samuel",
+        "testament": "Old Testament",
+        "book_dir": "10-2 Samuel",
+        "per_chapter": True,
+    },
+    "1-kings": {
+        "name": "1 Kings",
+        "slug": "1-kings",
+        "testament": "Old Testament",
+        "book_dir": "11-1 Kings",
+        "per_chapter": True,
+    },
+    "2-kings": {
+        "name": "2 Kings",
+        "slug": "2-kings",
+        "testament": "Old Testament",
+        "book_dir": "12-2 Kings",
+        "per_chapter": True,
+    },
+    "1-chronicles": {
+        "name": "1 Chronicles",
+        "slug": "1-chronicles",
+        "testament": "Old Testament",
+        "book_dir": "13-1 Chronicles",
+        "per_chapter": True,
+    },
+    "2-chronicles": {
+        "name": "2 Chronicles",
+        "slug": "2-chronicles",
+        "testament": "Old Testament",
+        "book_dir": "14-2 Chronicles",
+        "per_chapter": True,
+    },
+    "ezra": {
+        "name": "Ezra",
+        "slug": "ezra",
+        "testament": "Old Testament",
+        "book_dir": "15-Ezra",
+        "per_chapter": True,
+    },
+    "nehemiah": {
+        "name": "Nehemiah",
+        "slug": "nehemiah",
+        "testament": "Old Testament",
+        "book_dir": "16-Nehemiah",
+        "per_chapter": True,
+    },
+    "esther": {
+        "name": "Esther",
+        "slug": "esther",
+        "testament": "Old Testament",
+        "book_dir": "17-Esther",
+        "per_chapter": True,
+    },
+    "job": {
+        "name": "Job",
+        "slug": "job",
+        "testament": "Old Testament",
+        "book_dir": "18-Job",
+        "per_chapter": True,
+    },
+    "psalms": {
+        "name": "Psalms",
+        "slug": "psalms",
+        "testament": "Old Testament",
+        "book_dir": "19-Psalms",
+        "per_chapter": True,
+    },
+    "proverbs": {
+        "name": "Proverbs",
+        "slug": "proverbs",
+        "testament": "Old Testament",
+        "book_dir": "20-Proverbs",
+        "per_chapter": True,
+    },
+    "ecclesiastes": {
+        "name": "Ecclesiastes",
+        "slug": "ecclesiastes",
+        "testament": "Old Testament",
+        "book_dir": "21-Ecclesiastes",
+        "per_chapter": True,
+    },
+    "song-of-solomon": {
+        "name": "Song of Solomon",
+        "slug": "song-of-solomon",
+        "testament": "Old Testament",
+        "book_dir": "22-Song of Solomon",
+        "per_chapter": True,
+    },
 }
+
+
+def resolve_batches(meta: dict, book: dict) -> list[dict]:
+    """Return batch descriptors; expand per-chapter API exports on the fly."""
+    if meta.get("per_chapter"):
+        name = meta["name"]
+        return [
+            {
+                "dir": f"ElevenLabs_Bible_{name}_{ch}-{ch}",
+                "chapters": (ch, ch),
+                "include_book_title": ch == 1,
+            }
+            for ch in range(1, len(book["chapters"]) + 1)
+        ]
+    return meta["batches"]
 
 
 def load_bible() -> list[dict]:
@@ -271,7 +418,7 @@ def normalize_book(meta: dict, book: dict, copy: bool) -> dict:
     chapter_manifests: dict[int, dict] = {}
     linked = copied = 0
 
-    for batch in meta["batches"]:
+    for batch in resolve_batches(meta, book):
         batch_dir = source_book / batch["dir"]
         if not batch_dir.is_dir():
             raise SystemExit(f"Missing batch folder: {batch_dir}")

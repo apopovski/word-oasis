@@ -1,0 +1,22 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 46,
+  "chapterUrl": "psalms/046/_chapter.mp3",
+  "verseCount": 11,
+  "verses": [
+    "psalms/046/001.mp3",
+    "psalms/046/002.mp3",
+    "psalms/046/003.mp3",
+    "psalms/046/004.mp3",
+    "psalms/046/005.mp3",
+    "psalms/046/006.mp3",
+    "psalms/046/007.mp3",
+    "psalms/046/008.mp3",
+    "psalms/046/009.mp3",
+    "psalms/046/010.mp3",
+    "psalms/046/011.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

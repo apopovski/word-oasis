@@ -1,0 +1,22 @@
+{
+  "translation": "kjv",
+  "book": "ezra",
+  "bookName": "Ezra",
+  "chapter": 1,
+  "chapterUrl": "ezra/001/_chapter.mp3",
+  "verseCount": 11,
+  "verses": [
+    "ezra/001/001.mp3",
+    "ezra/001/002.mp3",
+    "ezra/001/003.mp3",
+    "ezra/001/004.mp3",
+    "ezra/001/005.mp3",
+    "ezra/001/006.mp3",
+    "ezra/001/007.mp3",
+    "ezra/001/008.mp3",
+    "ezra/001/009.mp3",
+    "ezra/001/010.mp3",
+    "ezra/001/011.mp3"
+  ],
+  "bookUrl": "ezra/_book.mp3"
+}

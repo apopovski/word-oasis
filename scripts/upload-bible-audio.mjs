@@ -26,13 +26,20 @@ function parseArgs(argv) {
   const args = {
     bucket: "word-oasis-bible-audio",
     concurrency: 6,
-    dryRun: false
+    dryRun: false,
+    books: null
   };
   for (let i = 0; i < argv.length; i += 1) {
     const flag = argv[i];
     if (flag === "--bucket") args.bucket = argv[++i];
     else if (flag === "--concurrency") args.concurrency = Number.parseInt(argv[++i], 10) || 6;
     else if (flag === "--dry-run") args.dryRun = true;
+    else if (flag === "--books") {
+      args.books = [];
+      while (i + 1 < argv.length && !argv[i + 1].startsWith("--")) {
+        args.books.push(argv[++i]);
+      }
+    }
   }
   return args;
 }
@@ -139,7 +146,16 @@ async function main() {
     process.exit(1);
   }
 
-  const files = walkFiles(SOURCE);
+  let files = walkFiles(SOURCE);
+  if (args.books && args.books.length) {
+    const allowed = new Set(args.books.map((b) => b.toLowerCase()));
+    files = files.filter((filePath) => {
+      const relative = path.relative(SOURCE, filePath).split(path.sep).join("/");
+      if (relative === "manifest.json") return true;
+      const top = relative.split("/")[0].toLowerCase();
+      return allowed.has(top);
+    });
+  }
   console.log(`Uploading ${files.length} files to R2 bucket "${args.bucket}" (prefix kjv/)`);
   if (args.dryRun) {
     console.log("Dry run — no uploads.");

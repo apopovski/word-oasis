@@ -1,0 +1,22 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 57,
+  "chapterUrl": "psalms/057/_chapter.mp3",
+  "verseCount": 11,
+  "verses": [
+    "psalms/057/001.mp3",
+    "psalms/057/002.mp3",
+    "psalms/057/003.mp3",
+    "psalms/057/004.mp3",
+    "psalms/057/005.mp3",
+    "psalms/057/006.mp3",
+    "psalms/057/007.mp3",
+    "psalms/057/008.mp3",
+    "psalms/057/009.mp3",
+    "psalms/057/010.mp3",
+    "psalms/057/011.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

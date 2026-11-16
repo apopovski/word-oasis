@@ -1,0 +1,136 @@
+{
+  "translation": "kjv",
+  "name": "Judges",
+  "slug": "judges",
+  "bookUrl": "judges/_book.mp3",
+  "chapterCount": 21,
+  "verseCount": 618,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 36,
+      "manifest": "judges/001.json",
+      "chapterUrl": "judges/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 23,
+      "manifest": "judges/002.json",
+      "chapterUrl": "judges/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 31,
+      "manifest": "judges/003.json",
+      "chapterUrl": "judges/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 24,
+      "manifest": "judges/004.json",
+      "chapterUrl": "judges/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 31,
+      "manifest": "judges/005.json",
+      "chapterUrl": "judges/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 40,
+      "manifest": "judges/006.json",
+      "chapterUrl": "judges/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 25,
+      "manifest": "judges/007.json",
+      "chapterUrl": "judges/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 35,
+      "manifest": "judges/008.json",
+      "chapterUrl": "judges/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 57,
+      "manifest": "judges/009.json",
+      "chapterUrl": "judges/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 18,
+      "manifest": "judges/010.json",
+      "chapterUrl": "judges/010/_chapter.mp3"
+    },
+    {
+      "chapter": 11,
+      "verseCount": 40,
+      "manifest": "judges/011.json",
+      "chapterUrl": "judges/011/_chapter.mp3"
+    },
+    {
+      "chapter": 12,
+      "verseCount": 15,
+      "manifest": "judges/012.json",
+      "chapterUrl": "judges/012/_chapter.mp3"
+    },
+    {
+      "chapter": 13,
+      "verseCount": 25,
+      "manifest": "judges/013.json",
+      "chapterUrl": "judges/013/_chapter.mp3"
+    },
+    {
+      "chapter": 14,
+      "verseCount": 20,
+      "manifest": "judges/014.json",
+      "chapterUrl": "judges/014/_chapter.mp3"
+    },
+    {
+      "chapter": 15,
+      "verseCount": 20,
+      "manifest": "judges/015.json",
+      "chapterUrl": "judges/015/_chapter.mp3"
+    },
+    {
+      "chapter": 16,
+      "verseCount": 31,
+      "manifest": "judges/016.json",
+      "chapterUrl": "judges/016/_chapter.mp3"
+    },
+    {
+      "chapter": 17,
+      "verseCount": 13,
+      "manifest": "judges/017.json",
+      "chapterUrl": "judges/017/_chapter.mp3"
+    },
+    {
+      "chapter": 18,
+      "verseCount": 31,
+      "manifest": "judges/018.json",
+      "chapterUrl": "judges/018/_chapter.mp3"
+    },
+    {
+      "chapter": 19,
+      "verseCount": 30,
+      "manifest": "judges/019.json",
+      "chapterUrl": "judges/019/_chapter.mp3"
+    },
+    {
+      "chapter": 20,
+      "verseCount": 48,
+      "manifest": "judges/020.json",
+      "chapterUrl": "judges/020/_chapter.mp3"
+    },
+    {
+      "chapter": 21,
+      "verseCount": 25,
+      "manifest": "judges/021.json",
+      "chapterUrl": "judges/021/_chapter.mp3"
+    }
+  ]
+}

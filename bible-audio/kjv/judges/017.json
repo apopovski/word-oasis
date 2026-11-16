@@ -1,0 +1,24 @@
+{
+  "translation": "kjv",
+  "book": "judges",
+  "bookName": "Judges",
+  "chapter": 17,
+  "chapterUrl": "judges/017/_chapter.mp3",
+  "verseCount": 13,
+  "verses": [
+    "judges/017/001.mp3",
+    "judges/017/002.mp3",
+    "judges/017/003.mp3",
+    "judges/017/004.mp3",
+    "judges/017/005.mp3",
+    "judges/017/006.mp3",
+    "judges/017/007.mp3",
+    "judges/017/008.mp3",
+    "judges/017/009.mp3",
+    "judges/017/010.mp3",
+    "judges/017/011.mp3",
+    "judges/017/012.mp3",
+    "judges/017/013.mp3"
+  ],
+  "bookUrl": "judges/_book.mp3"
+}

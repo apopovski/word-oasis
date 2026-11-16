@@ -1,0 +1,70 @@
+{
+  "translation": "kjv",
+  "name": "Ezra",
+  "slug": "ezra",
+  "bookUrl": "ezra/_book.mp3",
+  "chapterCount": 10,
+  "verseCount": 280,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 11,
+      "manifest": "ezra/001.json",
+      "chapterUrl": "ezra/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 70,
+      "manifest": "ezra/002.json",
+      "chapterUrl": "ezra/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 13,
+      "manifest": "ezra/003.json",
+      "chapterUrl": "ezra/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 24,
+      "manifest": "ezra/004.json",
+      "chapterUrl": "ezra/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 17,
+      "manifest": "ezra/005.json",
+      "chapterUrl": "ezra/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 22,
+      "manifest": "ezra/006.json",
+      "chapterUrl": "ezra/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 28,
+      "manifest": "ezra/007.json",
+      "chapterUrl": "ezra/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 36,
+      "manifest": "ezra/008.json",
+      "chapterUrl": "ezra/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 15,
+      "manifest": "ezra/009.json",
+      "chapterUrl": "ezra/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 44,
+      "manifest": "ezra/010.json",
+      "chapterUrl": "ezra/010/_chapter.mp3"
+    }
+  ]
+}

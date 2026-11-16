@@ -1,0 +1,24 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 108,
+  "chapterUrl": "psalms/108/_chapter.mp3",
+  "verseCount": 13,
+  "verses": [
+    "psalms/108/001.mp3",
+    "psalms/108/002.mp3",
+    "psalms/108/003.mp3",
+    "psalms/108/004.mp3",
+    "psalms/108/005.mp3",
+    "psalms/108/006.mp3",
+    "psalms/108/007.mp3",
+    "psalms/108/008.mp3",
+    "psalms/108/009.mp3",
+    "psalms/108/010.mp3",
+    "psalms/108/011.mp3",
+    "psalms/108/012.mp3",
+    "psalms/108/013.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

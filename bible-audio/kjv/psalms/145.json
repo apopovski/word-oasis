@@ -1,0 +1,32 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 145,
+  "chapterUrl": "psalms/145/_chapter.mp3",
+  "verseCount": 21,
+  "verses": [
+    "psalms/145/001.mp3",
+    "psalms/145/002.mp3",
+    "psalms/145/003.mp3",
+    "psalms/145/004.mp3",
+    "psalms/145/005.mp3",
+    "psalms/145/006.mp3",
+    "psalms/145/007.mp3",
+    "psalms/145/008.mp3",
+    "psalms/145/009.mp3",
+    "psalms/145/010.mp3",
+    "psalms/145/011.mp3",
+    "psalms/145/012.mp3",
+    "psalms/145/013.mp3",
+    "psalms/145/014.mp3",
+    "psalms/145/015.mp3",
+    "psalms/145/016.mp3",
+    "psalms/145/017.mp3",
+    "psalms/145/018.mp3",
+    "psalms/145/019.mp3",
+    "psalms/145/020.mp3",
+    "psalms/145/021.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

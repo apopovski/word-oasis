@@ -1,0 +1,26 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 144,
+  "chapterUrl": "psalms/144/_chapter.mp3",
+  "verseCount": 15,
+  "verses": [
+    "psalms/144/001.mp3",
+    "psalms/144/002.mp3",
+    "psalms/144/003.mp3",
+    "psalms/144/004.mp3",
+    "psalms/144/005.mp3",
+    "psalms/144/006.mp3",
+    "psalms/144/007.mp3",
+    "psalms/144/008.mp3",
+    "psalms/144/009.mp3",
+    "psalms/144/010.mp3",
+    "psalms/144/011.mp3",
+    "psalms/144/012.mp3",
+    "psalms/144/013.mp3",
+    "psalms/144/014.mp3",
+    "psalms/144/015.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

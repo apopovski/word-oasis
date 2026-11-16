@@ -1,0 +1,17 @@
+{
+  "translation": "kjv",
+  "book": "job",
+  "bookName": "Job",
+  "chapter": 25,
+  "chapterUrl": "job/025/_chapter.mp3",
+  "verseCount": 6,
+  "verses": [
+    "job/025/001.mp3",
+    "job/025/002.mp3",
+    "job/025/003.mp3",
+    "job/025/004.mp3",
+    "job/025/005.mp3",
+    "job/025/006.mp3"
+  ],
+  "bookUrl": "job/_book.mp3"
+}

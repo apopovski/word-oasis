@@ -1,0 +1,24 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 79,
+  "chapterUrl": "psalms/079/_chapter.mp3",
+  "verseCount": 13,
+  "verses": [
+    "psalms/079/001.mp3",
+    "psalms/079/002.mp3",
+    "psalms/079/003.mp3",
+    "psalms/079/004.mp3",
+    "psalms/079/005.mp3",
+    "psalms/079/006.mp3",
+    "psalms/079/007.mp3",
+    "psalms/079/008.mp3",
+    "psalms/079/009.mp3",
+    "psalms/079/010.mp3",
+    "psalms/079/011.mp3",
+    "psalms/079/012.mp3",
+    "psalms/079/013.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

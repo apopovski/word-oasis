@@ -1,0 +1,24 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 39,
+  "chapterUrl": "psalms/039/_chapter.mp3",
+  "verseCount": 13,
+  "verses": [
+    "psalms/039/001.mp3",
+    "psalms/039/002.mp3",
+    "psalms/039/003.mp3",
+    "psalms/039/004.mp3",
+    "psalms/039/005.mp3",
+    "psalms/039/006.mp3",
+    "psalms/039/007.mp3",
+    "psalms/039/008.mp3",
+    "psalms/039/009.mp3",
+    "psalms/039/010.mp3",
+    "psalms/039/011.mp3",
+    "psalms/039/012.mp3",
+    "psalms/039/013.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

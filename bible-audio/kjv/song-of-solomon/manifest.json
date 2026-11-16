@@ -1,0 +1,58 @@
+{
+  "translation": "kjv",
+  "name": "Song of Solomon",
+  "slug": "song-of-solomon",
+  "bookUrl": "song-of-solomon/_book.mp3",
+  "chapterCount": 8,
+  "verseCount": 117,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 17,
+      "manifest": "song-of-solomon/001.json",
+      "chapterUrl": "song-of-solomon/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 17,
+      "manifest": "song-of-solomon/002.json",
+      "chapterUrl": "song-of-solomon/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 11,
+      "manifest": "song-of-solomon/003.json",
+      "chapterUrl": "song-of-solomon/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 16,
+      "manifest": "song-of-solomon/004.json",
+      "chapterUrl": "song-of-solomon/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 16,
+      "manifest": "song-of-solomon/005.json",
+      "chapterUrl": "song-of-solomon/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 13,
+      "manifest": "song-of-solomon/006.json",
+      "chapterUrl": "song-of-solomon/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 13,
+      "manifest": "song-of-solomon/007.json",
+      "chapterUrl": "song-of-solomon/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 14,
+      "manifest": "song-of-solomon/008.json",
+      "chapterUrl": "song-of-solomon/008/_chapter.mp3"
+    }
+  ]
+}

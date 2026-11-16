@@ -1,0 +1,32 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 135,
+  "chapterUrl": "psalms/135/_chapter.mp3",
+  "verseCount": 21,
+  "verses": [
+    "psalms/135/001.mp3",
+    "psalms/135/002.mp3",
+    "psalms/135/003.mp3",
+    "psalms/135/004.mp3",
+    "psalms/135/005.mp3",
+    "psalms/135/006.mp3",
+    "psalms/135/007.mp3",
+    "psalms/135/008.mp3",
+    "psalms/135/009.mp3",
+    "psalms/135/010.mp3",
+    "psalms/135/011.mp3",
+    "psalms/135/012.mp3",
+    "psalms/135/013.mp3",
+    "psalms/135/014.mp3",
+    "psalms/135/015.mp3",
+    "psalms/135/016.mp3",
+    "psalms/135/017.mp3",
+    "psalms/135/018.mp3",
+    "psalms/135/019.mp3",
+    "psalms/135/020.mp3",
+    "psalms/135/021.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

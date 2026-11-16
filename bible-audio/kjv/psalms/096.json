@@ -1,0 +1,24 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 96,
+  "chapterUrl": "psalms/096/_chapter.mp3",
+  "verseCount": 13,
+  "verses": [
+    "psalms/096/001.mp3",
+    "psalms/096/002.mp3",
+    "psalms/096/003.mp3",
+    "psalms/096/004.mp3",
+    "psalms/096/005.mp3",
+    "psalms/096/006.mp3",
+    "psalms/096/007.mp3",
+    "psalms/096/008.mp3",
+    "psalms/096/009.mp3",
+    "psalms/096/010.mp3",
+    "psalms/096/011.mp3",
+    "psalms/096/012.mp3",
+    "psalms/096/013.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

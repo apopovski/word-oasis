@@ -1,0 +1,17 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 150,
+  "chapterUrl": "psalms/150/_chapter.mp3",
+  "verseCount": 6,
+  "verses": [
+    "psalms/150/001.mp3",
+    "psalms/150/002.mp3",
+    "psalms/150/003.mp3",
+    "psalms/150/004.mp3",
+    "psalms/150/005.mp3",
+    "psalms/150/006.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

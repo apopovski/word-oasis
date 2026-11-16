@@ -1,0 +1,22 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 58,
+  "chapterUrl": "psalms/058/_chapter.mp3",
+  "verseCount": 11,
+  "verses": [
+    "psalms/058/001.mp3",
+    "psalms/058/002.mp3",
+    "psalms/058/003.mp3",
+    "psalms/058/004.mp3",
+    "psalms/058/005.mp3",
+    "psalms/058/006.mp3",
+    "psalms/058/007.mp3",
+    "psalms/058/008.mp3",
+    "psalms/058/009.mp3",
+    "psalms/058/010.mp3",
+    "psalms/058/011.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

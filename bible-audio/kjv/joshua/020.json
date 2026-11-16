@@ -1,0 +1,20 @@
+{
+  "translation": "kjv",
+  "book": "joshua",
+  "bookName": "Joshua",
+  "chapter": 20,
+  "chapterUrl": "joshua/020/_chapter.mp3",
+  "verseCount": 9,
+  "verses": [
+    "joshua/020/001.mp3",
+    "joshua/020/002.mp3",
+    "joshua/020/003.mp3",
+    "joshua/020/004.mp3",
+    "joshua/020/005.mp3",
+    "joshua/020/006.mp3",
+    "joshua/020/007.mp3",
+    "joshua/020/008.mp3",
+    "joshua/020/009.mp3"
+  ],
+  "bookUrl": "joshua/_book.mp3"
+}

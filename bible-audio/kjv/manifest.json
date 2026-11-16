@@ -47,6 +47,159 @@
       "manifest": "deuteronomy/manifest.json",
       "bookUrl": "deuteronomy/_book.mp3",
       "available": true
+    },
+    {
+      "name": "Joshua",
+      "slug": "joshua",
+      "chapterCount": 24,
+      "verseCount": 658,
+      "manifest": "joshua/manifest.json",
+      "bookUrl": "joshua/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Judges",
+      "slug": "judges",
+      "chapterCount": 21,
+      "verseCount": 618,
+      "manifest": "judges/manifest.json",
+      "bookUrl": "judges/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Ruth",
+      "slug": "ruth",
+      "chapterCount": 4,
+      "verseCount": 85,
+      "manifest": "ruth/manifest.json",
+      "bookUrl": "ruth/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "1 Samuel",
+      "slug": "1-samuel",
+      "chapterCount": 31,
+      "verseCount": 810,
+      "manifest": "1-samuel/manifest.json",
+      "bookUrl": "1-samuel/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "2 Samuel",
+      "slug": "2-samuel",
+      "chapterCount": 24,
+      "verseCount": 695,
+      "manifest": "2-samuel/manifest.json",
+      "bookUrl": "2-samuel/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "1 Kings",
+      "slug": "1-kings",
+      "chapterCount": 22,
+      "verseCount": 816,
+      "manifest": "1-kings/manifest.json",
+      "bookUrl": "1-kings/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "2 Kings",
+      "slug": "2-kings",
+      "chapterCount": 25,
+      "verseCount": 719,
+      "manifest": "2-kings/manifest.json",
+      "bookUrl": "2-kings/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "1 Chronicles",
+      "slug": "1-chronicles",
+      "chapterCount": 29,
+      "verseCount": 942,
+      "manifest": "1-chronicles/manifest.json",
+      "bookUrl": "1-chronicles/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "2 Chronicles",
+      "slug": "2-chronicles",
+      "chapterCount": 36,
+      "verseCount": 822,
+      "manifest": "2-chronicles/manifest.json",
+      "bookUrl": "2-chronicles/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Ezra",
+      "slug": "ezra",
+      "chapterCount": 10,
+      "verseCount": 280,
+      "manifest": "ezra/manifest.json",
+      "bookUrl": "ezra/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Nehemiah",
+      "slug": "nehemiah",
+      "chapterCount": 13,
+      "verseCount": 406,
+      "manifest": "nehemiah/manifest.json",
+      "bookUrl": "nehemiah/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Esther",
+      "slug": "esther",
+      "chapterCount": 10,
+      "verseCount": 167,
+      "manifest": "esther/manifest.json",
+      "bookUrl": "esther/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Job",
+      "slug": "job",
+      "chapterCount": 42,
+      "verseCount": 1070,
+      "manifest": "job/manifest.json",
+      "bookUrl": "job/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Psalms",
+      "slug": "psalms",
+      "chapterCount": 150,
+      "verseCount": 2461,
+      "manifest": "psalms/manifest.json",
+      "bookUrl": "psalms/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Proverbs",
+      "slug": "proverbs",
+      "chapterCount": 31,
+      "verseCount": 915,
+      "manifest": "proverbs/manifest.json",
+      "bookUrl": "proverbs/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Ecclesiastes",
+      "slug": "ecclesiastes",
+      "chapterCount": 12,
+      "verseCount": 222,
+      "manifest": "ecclesiastes/manifest.json",
+      "bookUrl": "ecclesiastes/_book.mp3",
+      "available": true
+    },
+    {
+      "name": "Song of Solomon",
+      "slug": "song-of-solomon",
+      "chapterCount": 8,
+      "verseCount": 117,
+      "manifest": "song-of-solomon/manifest.json",
+      "bookUrl": "song-of-solomon/_book.mp3",
+      "available": true
     }
   ]
 }

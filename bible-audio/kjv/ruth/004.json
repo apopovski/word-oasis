@@ -1,0 +1,33 @@
+{
+  "translation": "kjv",
+  "book": "ruth",
+  "bookName": "Ruth",
+  "chapter": 4,
+  "chapterUrl": "ruth/004/_chapter.mp3",
+  "verseCount": 22,
+  "verses": [
+    "ruth/004/001.mp3",
+    "ruth/004/002.mp3",
+    "ruth/004/003.mp3",
+    "ruth/004/004.mp3",
+    "ruth/004/005.mp3",
+    "ruth/004/006.mp3",
+    "ruth/004/007.mp3",
+    "ruth/004/008.mp3",
+    "ruth/004/009.mp3",
+    "ruth/004/010.mp3",
+    "ruth/004/011.mp3",
+    "ruth/004/012.mp3",
+    "ruth/004/013.mp3",
+    "ruth/004/014.mp3",
+    "ruth/004/015.mp3",
+    "ruth/004/016.mp3",
+    "ruth/004/017.mp3",
+    "ruth/004/018.mp3",
+    "ruth/004/019.mp3",
+    "ruth/004/020.mp3",
+    "ruth/004/021.mp3",
+    "ruth/004/022.mp3"
+  ],
+  "bookUrl": "ruth/_book.mp3"
+}

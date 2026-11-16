@@ -1,0 +1,19 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 82,
+  "chapterUrl": "psalms/082/_chapter.mp3",
+  "verseCount": 8,
+  "verses": [
+    "psalms/082/001.mp3",
+    "psalms/082/002.mp3",
+    "psalms/082/003.mp3",
+    "psalms/082/004.mp3",
+    "psalms/082/005.mp3",
+    "psalms/082/006.mp3",
+    "psalms/082/007.mp3",
+    "psalms/082/008.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

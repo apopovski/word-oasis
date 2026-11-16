@@ -1,0 +1,23 @@
+{
+  "translation": "kjv",
+  "book": "1-samuel",
+  "bookName": "1 Samuel",
+  "chapter": 27,
+  "chapterUrl": "1-samuel/027/_chapter.mp3",
+  "verseCount": 12,
+  "verses": [
+    "1-samuel/027/001.mp3",
+    "1-samuel/027/002.mp3",
+    "1-samuel/027/003.mp3",
+    "1-samuel/027/004.mp3",
+    "1-samuel/027/005.mp3",
+    "1-samuel/027/006.mp3",
+    "1-samuel/027/007.mp3",
+    "1-samuel/027/008.mp3",
+    "1-samuel/027/009.mp3",
+    "1-samuel/027/010.mp3",
+    "1-samuel/027/011.mp3",
+    "1-samuel/027/012.mp3"
+  ],
+  "bookUrl": "1-samuel/_book.mp3"
+}

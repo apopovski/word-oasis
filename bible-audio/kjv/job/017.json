@@ -1,0 +1,27 @@
+{
+  "translation": "kjv",
+  "book": "job",
+  "bookName": "Job",
+  "chapter": 17,
+  "chapterUrl": "job/017/_chapter.mp3",
+  "verseCount": 16,
+  "verses": [
+    "job/017/001.mp3",
+    "job/017/002.mp3",
+    "job/017/003.mp3",
+    "job/017/004.mp3",
+    "job/017/005.mp3",
+    "job/017/006.mp3",
+    "job/017/007.mp3",
+    "job/017/008.mp3",
+    "job/017/009.mp3",
+    "job/017/010.mp3",
+    "job/017/011.mp3",
+    "job/017/012.mp3",
+    "job/017/013.mp3",
+    "job/017/014.mp3",
+    "job/017/015.mp3",
+    "job/017/016.mp3"
+  ],
+  "bookUrl": "job/_book.mp3"
+}

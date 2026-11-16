@@ -1,0 +1,16 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 100,
+  "chapterUrl": "psalms/100/_chapter.mp3",
+  "verseCount": 5,
+  "verses": [
+    "psalms/100/001.mp3",
+    "psalms/100/002.mp3",
+    "psalms/100/003.mp3",
+    "psalms/100/004.mp3",
+    "psalms/100/005.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

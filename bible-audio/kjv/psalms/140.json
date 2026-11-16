@@ -1,0 +1,24 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 140,
+  "chapterUrl": "psalms/140/_chapter.mp3",
+  "verseCount": 13,
+  "verses": [
+    "psalms/140/001.mp3",
+    "psalms/140/002.mp3",
+    "psalms/140/003.mp3",
+    "psalms/140/004.mp3",
+    "psalms/140/005.mp3",
+    "psalms/140/006.mp3",
+    "psalms/140/007.mp3",
+    "psalms/140/008.mp3",
+    "psalms/140/009.mp3",
+    "psalms/140/010.mp3",
+    "psalms/140/011.mp3",
+    "psalms/140/012.mp3",
+    "psalms/140/013.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

@@ -1,0 +1,28 @@
+{
+  "translation": "kjv",
+  "book": "ezra",
+  "bookName": "Ezra",
+  "chapter": 5,
+  "chapterUrl": "ezra/005/_chapter.mp3",
+  "verseCount": 17,
+  "verses": [
+    "ezra/005/001.mp3",
+    "ezra/005/002.mp3",
+    "ezra/005/003.mp3",
+    "ezra/005/004.mp3",
+    "ezra/005/005.mp3",
+    "ezra/005/006.mp3",
+    "ezra/005/007.mp3",
+    "ezra/005/008.mp3",
+    "ezra/005/009.mp3",
+    "ezra/005/010.mp3",
+    "ezra/005/011.mp3",
+    "ezra/005/012.mp3",
+    "ezra/005/013.mp3",
+    "ezra/005/014.mp3",
+    "ezra/005/015.mp3",
+    "ezra/005/016.mp3",
+    "ezra/005/017.mp3"
+  ],
+  "bookUrl": "ezra/_book.mp3"
+}

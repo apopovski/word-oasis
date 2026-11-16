@@ -1,0 +1,28 @@
+{
+  "translation": "kjv",
+  "book": "joshua",
+  "bookName": "Joshua",
+  "chapter": 3,
+  "chapterUrl": "joshua/003/_chapter.mp3",
+  "verseCount": 17,
+  "verses": [
+    "joshua/003/001.mp3",
+    "joshua/003/002.mp3",
+    "joshua/003/003.mp3",
+    "joshua/003/004.mp3",
+    "joshua/003/005.mp3",
+    "joshua/003/006.mp3",
+    "joshua/003/007.mp3",
+    "joshua/003/008.mp3",
+    "joshua/003/009.mp3",
+    "joshua/003/010.mp3",
+    "joshua/003/011.mp3",
+    "joshua/003/012.mp3",
+    "joshua/003/013.mp3",
+    "joshua/003/014.mp3",
+    "joshua/003/015.mp3",
+    "joshua/003/016.mp3",
+    "joshua/003/017.mp3"
+  ],
+  "bookUrl": "joshua/_book.mp3"
+}

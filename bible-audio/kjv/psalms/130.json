@@ -1,0 +1,19 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 130,
+  "chapterUrl": "psalms/130/_chapter.mp3",
+  "verseCount": 8,
+  "verses": [
+    "psalms/130/001.mp3",
+    "psalms/130/002.mp3",
+    "psalms/130/003.mp3",
+    "psalms/130/004.mp3",
+    "psalms/130/005.mp3",
+    "psalms/130/006.mp3",
+    "psalms/130/007.mp3",
+    "psalms/130/008.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

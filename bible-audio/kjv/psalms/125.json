@@ -1,0 +1,16 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 125,
+  "chapterUrl": "psalms/125/_chapter.mp3",
+  "verseCount": 5,
+  "verses": [
+    "psalms/125/001.mp3",
+    "psalms/125/002.mp3",
+    "psalms/125/003.mp3",
+    "psalms/125/004.mp3",
+    "psalms/125/005.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

@@ -1,0 +1,82 @@
+{
+  "translation": "kjv",
+  "name": "Ecclesiastes",
+  "slug": "ecclesiastes",
+  "bookUrl": "ecclesiastes/_book.mp3",
+  "chapterCount": 12,
+  "verseCount": 222,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 18,
+      "manifest": "ecclesiastes/001.json",
+      "chapterUrl": "ecclesiastes/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 26,
+      "manifest": "ecclesiastes/002.json",
+      "chapterUrl": "ecclesiastes/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 22,
+      "manifest": "ecclesiastes/003.json",
+      "chapterUrl": "ecclesiastes/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 16,
+      "manifest": "ecclesiastes/004.json",
+      "chapterUrl": "ecclesiastes/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 20,
+      "manifest": "ecclesiastes/005.json",
+      "chapterUrl": "ecclesiastes/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 12,
+      "manifest": "ecclesiastes/006.json",
+      "chapterUrl": "ecclesiastes/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 29,
+      "manifest": "ecclesiastes/007.json",
+      "chapterUrl": "ecclesiastes/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 17,
+      "manifest": "ecclesiastes/008.json",
+      "chapterUrl": "ecclesiastes/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 18,
+      "manifest": "ecclesiastes/009.json",
+      "chapterUrl": "ecclesiastes/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 20,
+      "manifest": "ecclesiastes/010.json",
+      "chapterUrl": "ecclesiastes/010/_chapter.mp3"
+    },
+    {
+      "chapter": 11,
+      "verseCount": 10,
+      "manifest": "ecclesiastes/011.json",
+      "chapterUrl": "ecclesiastes/011/_chapter.mp3"
+    },
+    {
+      "chapter": 12,
+      "verseCount": 14,
+      "manifest": "ecclesiastes/012.json",
+      "chapterUrl": "ecclesiastes/012/_chapter.mp3"
+    }
+  ]
+}

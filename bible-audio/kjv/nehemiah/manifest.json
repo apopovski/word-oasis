@@ -1,0 +1,88 @@
+{
+  "translation": "kjv",
+  "name": "Nehemiah",
+  "slug": "nehemiah",
+  "bookUrl": "nehemiah/_book.mp3",
+  "chapterCount": 13,
+  "verseCount": 406,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 11,
+      "manifest": "nehemiah/001.json",
+      "chapterUrl": "nehemiah/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 20,
+      "manifest": "nehemiah/002.json",
+      "chapterUrl": "nehemiah/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 32,
+      "manifest": "nehemiah/003.json",
+      "chapterUrl": "nehemiah/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 23,
+      "manifest": "nehemiah/004.json",
+      "chapterUrl": "nehemiah/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 19,
+      "manifest": "nehemiah/005.json",
+      "chapterUrl": "nehemiah/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 19,
+      "manifest": "nehemiah/006.json",
+      "chapterUrl": "nehemiah/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 73,
+      "manifest": "nehemiah/007.json",
+      "chapterUrl": "nehemiah/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 18,
+      "manifest": "nehemiah/008.json",
+      "chapterUrl": "nehemiah/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 38,
+      "manifest": "nehemiah/009.json",
+      "chapterUrl": "nehemiah/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 39,
+      "manifest": "nehemiah/010.json",
+      "chapterUrl": "nehemiah/010/_chapter.mp3"
+    },
+    {
+      "chapter": 11,
+      "verseCount": 36,
+      "manifest": "nehemiah/011.json",
+      "chapterUrl": "nehemiah/011/_chapter.mp3"
+    },
+    {
+      "chapter": 12,
+      "verseCount": 47,
+      "manifest": "nehemiah/012.json",
+      "chapterUrl": "nehemiah/012/_chapter.mp3"
+    },
+    {
+      "chapter": 13,
+      "verseCount": 31,
+      "manifest": "nehemiah/013.json",
+      "chapterUrl": "nehemiah/013/_chapter.mp3"
+    }
+  ]
+}

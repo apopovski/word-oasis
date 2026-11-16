@@ -1,0 +1,14 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 131,
+  "chapterUrl": "psalms/131/_chapter.mp3",
+  "verseCount": 3,
+  "verses": [
+    "psalms/131/001.mp3",
+    "psalms/131/002.mp3",
+    "psalms/131/003.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

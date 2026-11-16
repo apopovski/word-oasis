@@ -1,0 +1,23 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 84,
+  "chapterUrl": "psalms/084/_chapter.mp3",
+  "verseCount": 12,
+  "verses": [
+    "psalms/084/001.mp3",
+    "psalms/084/002.mp3",
+    "psalms/084/003.mp3",
+    "psalms/084/004.mp3",
+    "psalms/084/005.mp3",
+    "psalms/084/006.mp3",
+    "psalms/084/007.mp3",
+    "psalms/084/008.mp3",
+    "psalms/084/009.mp3",
+    "psalms/084/010.mp3",
+    "psalms/084/011.mp3",
+    "psalms/084/012.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

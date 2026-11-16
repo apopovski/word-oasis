@@ -1,0 +1,26 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 92,
+  "chapterUrl": "psalms/092/_chapter.mp3",
+  "verseCount": 15,
+  "verses": [
+    "psalms/092/001.mp3",
+    "psalms/092/002.mp3",
+    "psalms/092/003.mp3",
+    "psalms/092/004.mp3",
+    "psalms/092/005.mp3",
+    "psalms/092/006.mp3",
+    "psalms/092/007.mp3",
+    "psalms/092/008.mp3",
+    "psalms/092/009.mp3",
+    "psalms/092/010.mp3",
+    "psalms/092/011.mp3",
+    "psalms/092/012.mp3",
+    "psalms/092/013.mp3",
+    "psalms/092/014.mp3",
+    "psalms/092/015.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

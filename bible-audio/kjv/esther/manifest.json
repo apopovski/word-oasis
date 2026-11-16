@@ -1,0 +1,70 @@
+{
+  "translation": "kjv",
+  "name": "Esther",
+  "slug": "esther",
+  "bookUrl": "esther/_book.mp3",
+  "chapterCount": 10,
+  "verseCount": 167,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 22,
+      "manifest": "esther/001.json",
+      "chapterUrl": "esther/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 23,
+      "manifest": "esther/002.json",
+      "chapterUrl": "esther/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 15,
+      "manifest": "esther/003.json",
+      "chapterUrl": "esther/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 17,
+      "manifest": "esther/004.json",
+      "chapterUrl": "esther/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 14,
+      "manifest": "esther/005.json",
+      "chapterUrl": "esther/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 14,
+      "manifest": "esther/006.json",
+      "chapterUrl": "esther/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 10,
+      "manifest": "esther/007.json",
+      "chapterUrl": "esther/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 17,
+      "manifest": "esther/008.json",
+      "chapterUrl": "esther/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 32,
+      "manifest": "esther/009.json",
+      "chapterUrl": "esther/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 3,
+      "manifest": "esther/010.json",
+      "chapterUrl": "esther/010/_chapter.mp3"
+    }
+  ]
+}

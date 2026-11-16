@@ -1,0 +1,26 @@
+{
+  "translation": "kjv",
+  "book": "joshua",
+  "bookName": "Joshua",
+  "chapter": 14,
+  "chapterUrl": "joshua/014/_chapter.mp3",
+  "verseCount": 15,
+  "verses": [
+    "joshua/014/001.mp3",
+    "joshua/014/002.mp3",
+    "joshua/014/003.mp3",
+    "joshua/014/004.mp3",
+    "joshua/014/005.mp3",
+    "joshua/014/006.mp3",
+    "joshua/014/007.mp3",
+    "joshua/014/008.mp3",
+    "joshua/014/009.mp3",
+    "joshua/014/010.mp3",
+    "joshua/014/011.mp3",
+    "joshua/014/012.mp3",
+    "joshua/014/013.mp3",
+    "joshua/014/014.mp3",
+    "joshua/014/015.mp3"
+  ],
+  "bookUrl": "joshua/_book.mp3"
+}

@@ -1,0 +1,14 @@
+{
+  "translation": "kjv",
+  "book": "esther",
+  "bookName": "Esther",
+  "chapter": 10,
+  "chapterUrl": "esther/010/_chapter.mp3",
+  "verseCount": 3,
+  "verses": [
+    "esther/010/001.mp3",
+    "esther/010/002.mp3",
+    "esther/010/003.mp3"
+  ],
+  "bookUrl": "esther/_book.mp3"
+}

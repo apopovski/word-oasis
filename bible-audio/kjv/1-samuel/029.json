@@ -1,0 +1,22 @@
+{
+  "translation": "kjv",
+  "book": "1-samuel",
+  "bookName": "1 Samuel",
+  "chapter": 29,
+  "chapterUrl": "1-samuel/029/_chapter.mp3",
+  "verseCount": 11,
+  "verses": [
+    "1-samuel/029/001.mp3",
+    "1-samuel/029/002.mp3",
+    "1-samuel/029/003.mp3",
+    "1-samuel/029/004.mp3",
+    "1-samuel/029/005.mp3",
+    "1-samuel/029/006.mp3",
+    "1-samuel/029/007.mp3",
+    "1-samuel/029/008.mp3",
+    "1-samuel/029/009.mp3",
+    "1-samuel/029/010.mp3",
+    "1-samuel/029/011.mp3"
+  ],
+  "bookUrl": "1-samuel/_book.mp3"
+}

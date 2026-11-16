@@ -1,0 +1,25 @@
+{
+  "translation": "kjv",
+  "book": "ecclesiastes",
+  "bookName": "Ecclesiastes",
+  "chapter": 12,
+  "chapterUrl": "ecclesiastes/012/_chapter.mp3",
+  "verseCount": 14,
+  "verses": [
+    "ecclesiastes/012/001.mp3",
+    "ecclesiastes/012/002.mp3",
+    "ecclesiastes/012/003.mp3",
+    "ecclesiastes/012/004.mp3",
+    "ecclesiastes/012/005.mp3",
+    "ecclesiastes/012/006.mp3",
+    "ecclesiastes/012/007.mp3",
+    "ecclesiastes/012/008.mp3",
+    "ecclesiastes/012/009.mp3",
+    "ecclesiastes/012/010.mp3",
+    "ecclesiastes/012/011.mp3",
+    "ecclesiastes/012/012.mp3",
+    "ecclesiastes/012/013.mp3",
+    "ecclesiastes/012/014.mp3"
+  ],
+  "bookUrl": "ecclesiastes/_book.mp3"
+}

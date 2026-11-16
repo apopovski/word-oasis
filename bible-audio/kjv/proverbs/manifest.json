@@ -1,0 +1,196 @@
+{
+  "translation": "kjv",
+  "name": "Proverbs",
+  "slug": "proverbs",
+  "bookUrl": "proverbs/_book.mp3",
+  "chapterCount": 31,
+  "verseCount": 915,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 33,
+      "manifest": "proverbs/001.json",
+      "chapterUrl": "proverbs/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 22,
+      "manifest": "proverbs/002.json",
+      "chapterUrl": "proverbs/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 35,
+      "manifest": "proverbs/003.json",
+      "chapterUrl": "proverbs/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 27,
+      "manifest": "proverbs/004.json",
+      "chapterUrl": "proverbs/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 23,
+      "manifest": "proverbs/005.json",
+      "chapterUrl": "proverbs/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 35,
+      "manifest": "proverbs/006.json",
+      "chapterUrl": "proverbs/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 27,
+      "manifest": "proverbs/007.json",
+      "chapterUrl": "proverbs/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 36,
+      "manifest": "proverbs/008.json",
+      "chapterUrl": "proverbs/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 18,
+      "manifest": "proverbs/009.json",
+      "chapterUrl": "proverbs/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 32,
+      "manifest": "proverbs/010.json",
+      "chapterUrl": "proverbs/010/_chapter.mp3"
+    },
+    {
+      "chapter": 11,
+      "verseCount": 31,
+      "manifest": "proverbs/011.json",
+      "chapterUrl": "proverbs/011/_chapter.mp3"
+    },
+    {
+      "chapter": 12,
+      "verseCount": 28,
+      "manifest": "proverbs/012.json",
+      "chapterUrl": "proverbs/012/_chapter.mp3"
+    },
+    {
+      "chapter": 13,
+      "verseCount": 25,
+      "manifest": "proverbs/013.json",
+      "chapterUrl": "proverbs/013/_chapter.mp3"
+    },
+    {
+      "chapter": 14,
+      "verseCount": 35,
+      "manifest": "proverbs/014.json",
+      "chapterUrl": "proverbs/014/_chapter.mp3"
+    },
+    {
+      "chapter": 15,
+      "verseCount": 33,
+      "manifest": "proverbs/015.json",
+      "chapterUrl": "proverbs/015/_chapter.mp3"
+    },
+    {
+      "chapter": 16,
+      "verseCount": 33,
+      "manifest": "proverbs/016.json",
+      "chapterUrl": "proverbs/016/_chapter.mp3"
+    },
+    {
+      "chapter": 17,
+      "verseCount": 28,
+      "manifest": "proverbs/017.json",
+      "chapterUrl": "proverbs/017/_chapter.mp3"
+    },
+    {
+      "chapter": 18,
+      "verseCount": 24,
+      "manifest": "proverbs/018.json",
+      "chapterUrl": "proverbs/018/_chapter.mp3"
+    },
+    {
+      "chapter": 19,
+      "verseCount": 29,
+      "manifest": "proverbs/019.json",
+      "chapterUrl": "proverbs/019/_chapter.mp3"
+    },
+    {
+      "chapter": 20,
+      "verseCount": 30,
+      "manifest": "proverbs/020.json",
+      "chapterUrl": "proverbs/020/_chapter.mp3"
+    },
+    {
+      "chapter": 21,
+      "verseCount": 31,
+      "manifest": "proverbs/021.json",
+      "chapterUrl": "proverbs/021/_chapter.mp3"
+    },
+    {
+      "chapter": 22,
+      "verseCount": 29,
+      "manifest": "proverbs/022.json",
+      "chapterUrl": "proverbs/022/_chapter.mp3"
+    },
+    {
+      "chapter": 23,
+      "verseCount": 35,
+      "manifest": "proverbs/023.json",
+      "chapterUrl": "proverbs/023/_chapter.mp3"
+    },
+    {
+      "chapter": 24,
+      "verseCount": 34,
+      "manifest": "proverbs/024.json",
+      "chapterUrl": "proverbs/024/_chapter.mp3"
+    },
+    {
+      "chapter": 25,
+      "verseCount": 28,
+      "manifest": "proverbs/025.json",
+      "chapterUrl": "proverbs/025/_chapter.mp3"
+    },
+    {
+      "chapter": 26,
+      "verseCount": 28,
+      "manifest": "proverbs/026.json",
+      "chapterUrl": "proverbs/026/_chapter.mp3"
+    },
+    {
+      "chapter": 27,
+      "verseCount": 27,
+      "manifest": "proverbs/027.json",
+      "chapterUrl": "proverbs/027/_chapter.mp3"
+    },
+    {
+      "chapter": 28,
+      "verseCount": 28,
+      "manifest": "proverbs/028.json",
+      "chapterUrl": "proverbs/028/_chapter.mp3"
+    },
+    {
+      "chapter": 29,
+      "verseCount": 27,
+      "manifest": "proverbs/029.json",
+      "chapterUrl": "proverbs/029/_chapter.mp3"
+    },
+    {
+      "chapter": 30,
+      "verseCount": 33,
+      "manifest": "proverbs/030.json",
+      "chapterUrl": "proverbs/030/_chapter.mp3"
+    },
+    {
+      "chapter": 31,
+      "verseCount": 31,
+      "manifest": "proverbs/031.json",
+      "chapterUrl": "proverbs/031/_chapter.mp3"
+    }
+  ]
+}

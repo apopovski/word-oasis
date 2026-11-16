@@ -1,0 +1,21 @@
+{
+  "translation": "kjv",
+  "book": "ecclesiastes",
+  "bookName": "Ecclesiastes",
+  "chapter": 11,
+  "chapterUrl": "ecclesiastes/011/_chapter.mp3",
+  "verseCount": 10,
+  "verses": [
+    "ecclesiastes/011/001.mp3",
+    "ecclesiastes/011/002.mp3",
+    "ecclesiastes/011/003.mp3",
+    "ecclesiastes/011/004.mp3",
+    "ecclesiastes/011/005.mp3",
+    "ecclesiastes/011/006.mp3",
+    "ecclesiastes/011/007.mp3",
+    "ecclesiastes/011/008.mp3",
+    "ecclesiastes/011/009.mp3",
+    "ecclesiastes/011/010.mp3"
+  ],
+  "bookUrl": "ecclesiastes/_book.mp3"
+}

@@ -1,0 +1,18 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 87,
+  "chapterUrl": "psalms/087/_chapter.mp3",
+  "verseCount": 7,
+  "verses": [
+    "psalms/087/001.mp3",
+    "psalms/087/002.mp3",
+    "psalms/087/003.mp3",
+    "psalms/087/004.mp3",
+    "psalms/087/005.mp3",
+    "psalms/087/006.mp3",
+    "psalms/087/007.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

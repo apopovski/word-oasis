@@ -1,0 +1,24 @@
+{
+  "translation": "kjv",
+  "book": "2-samuel",
+  "bookName": "2 Samuel",
+  "chapter": 9,
+  "chapterUrl": "2-samuel/009/_chapter.mp3",
+  "verseCount": 13,
+  "verses": [
+    "2-samuel/009/001.mp3",
+    "2-samuel/009/002.mp3",
+    "2-samuel/009/003.mp3",
+    "2-samuel/009/004.mp3",
+    "2-samuel/009/005.mp3",
+    "2-samuel/009/006.mp3",
+    "2-samuel/009/007.mp3",
+    "2-samuel/009/008.mp3",
+    "2-samuel/009/009.mp3",
+    "2-samuel/009/010.mp3",
+    "2-samuel/009/011.mp3",
+    "2-samuel/009/012.mp3",
+    "2-samuel/009/013.mp3"
+  ],
+  "bookUrl": "2-samuel/_book.mp3"
+}

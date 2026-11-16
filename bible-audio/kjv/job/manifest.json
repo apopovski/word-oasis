@@ -1,0 +1,262 @@
+{
+  "translation": "kjv",
+  "name": "Job",
+  "slug": "job",
+  "bookUrl": "job/_book.mp3",
+  "chapterCount": 42,
+  "verseCount": 1070,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 22,
+      "manifest": "job/001.json",
+      "chapterUrl": "job/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 13,
+      "manifest": "job/002.json",
+      "chapterUrl": "job/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 26,
+      "manifest": "job/003.json",
+      "chapterUrl": "job/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 21,
+      "manifest": "job/004.json",
+      "chapterUrl": "job/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 27,
+      "manifest": "job/005.json",
+      "chapterUrl": "job/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 30,
+      "manifest": "job/006.json",
+      "chapterUrl": "job/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 21,
+      "manifest": "job/007.json",
+      "chapterUrl": "job/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 22,
+      "manifest": "job/008.json",
+      "chapterUrl": "job/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 35,
+      "manifest": "job/009.json",
+      "chapterUrl": "job/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 22,
+      "manifest": "job/010.json",
+      "chapterUrl": "job/010/_chapter.mp3"
+    },
+    {
+      "chapter": 11,
+      "verseCount": 20,
+      "manifest": "job/011.json",
+      "chapterUrl": "job/011/_chapter.mp3"
+    },
+    {
+      "chapter": 12,
+      "verseCount": 25,
+      "manifest": "job/012.json",
+      "chapterUrl": "job/012/_chapter.mp3"
+    },
+    {
+      "chapter": 13,
+      "verseCount": 28,
+      "manifest": "job/013.json",
+      "chapterUrl": "job/013/_chapter.mp3"
+    },
+    {
+      "chapter": 14,
+      "verseCount": 22,
+      "manifest": "job/014.json",
+      "chapterUrl": "job/014/_chapter.mp3"
+    },
+    {
+      "chapter": 15,
+      "verseCount": 35,
+      "manifest": "job/015.json",
+      "chapterUrl": "job/015/_chapter.mp3"
+    },
+    {
+      "chapter": 16,
+      "verseCount": 22,
+      "manifest": "job/016.json",
+      "chapterUrl": "job/016/_chapter.mp3"
+    },
+    {
+      "chapter": 17,
+      "verseCount": 16,
+      "manifest": "job/017.json",
+      "chapterUrl": "job/017/_chapter.mp3"
+    },
+    {
+      "chapter": 18,
+      "verseCount": 21,
+      "manifest": "job/018.json",
+      "chapterUrl": "job/018/_chapter.mp3"
+    },
+    {
+      "chapter": 19,
+      "verseCount": 29,
+      "manifest": "job/019.json",
+      "chapterUrl": "job/019/_chapter.mp3"
+    },
+    {
+      "chapter": 20,
+      "verseCount": 29,
+      "manifest": "job/020.json",
+      "chapterUrl": "job/020/_chapter.mp3"
+    },
+    {
+      "chapter": 21,
+      "verseCount": 34,
+      "manifest": "job/021.json",
+      "chapterUrl": "job/021/_chapter.mp3"
+    },
+    {
+      "chapter": 22,
+      "verseCount": 30,
+      "manifest": "job/022.json",
+      "chapterUrl": "job/022/_chapter.mp3"
+    },
+    {
+      "chapter": 23,
+      "verseCount": 17,
+      "manifest": "job/023.json",
+      "chapterUrl": "job/023/_chapter.mp3"
+    },
+    {
+      "chapter": 24,
+      "verseCount": 25,
+      "manifest": "job/024.json",
+      "chapterUrl": "job/024/_chapter.mp3"
+    },
+    {
+      "chapter": 25,
+      "verseCount": 6,
+      "manifest": "job/025.json",
+      "chapterUrl": "job/025/_chapter.mp3"
+    },
+    {
+      "chapter": 26,
+      "verseCount": 14,
+      "manifest": "job/026.json",
+      "chapterUrl": "job/026/_chapter.mp3"
+    },
+    {
+      "chapter": 27,
+      "verseCount": 23,
+      "manifest": "job/027.json",
+      "chapterUrl": "job/027/_chapter.mp3"
+    },
+    {
+      "chapter": 28,
+      "verseCount": 28,
+      "manifest": "job/028.json",
+      "chapterUrl": "job/028/_chapter.mp3"
+    },
+    {
+      "chapter": 29,
+      "verseCount": 25,
+      "manifest": "job/029.json",
+      "chapterUrl": "job/029/_chapter.mp3"
+    },
+    {
+      "chapter": 30,
+      "verseCount": 31,
+      "manifest": "job/030.json",
+      "chapterUrl": "job/030/_chapter.mp3"
+    },
+    {
+      "chapter": 31,
+      "verseCount": 40,
+      "manifest": "job/031.json",
+      "chapterUrl": "job/031/_chapter.mp3"
+    },
+    {
+      "chapter": 32,
+      "verseCount": 22,
+      "manifest": "job/032.json",
+      "chapterUrl": "job/032/_chapter.mp3"
+    },
+    {
+      "chapter": 33,
+      "verseCount": 33,
+      "manifest": "job/033.json",
+      "chapterUrl": "job/033/_chapter.mp3"
+    },
+    {
+      "chapter": 34,
+      "verseCount": 37,
+      "manifest": "job/034.json",
+      "chapterUrl": "job/034/_chapter.mp3"
+    },
+    {
+      "chapter": 35,
+      "verseCount": 16,
+      "manifest": "job/035.json",
+      "chapterUrl": "job/035/_chapter.mp3"
+    },
+    {
+      "chapter": 36,
+      "verseCount": 33,
+      "manifest": "job/036.json",
+      "chapterUrl": "job/036/_chapter.mp3"
+    },
+    {
+      "chapter": 37,
+      "verseCount": 24,
+      "manifest": "job/037.json",
+      "chapterUrl": "job/037/_chapter.mp3"
+    },
+    {
+      "chapter": 38,
+      "verseCount": 41,
+      "manifest": "job/038.json",
+      "chapterUrl": "job/038/_chapter.mp3"
+    },
+    {
+      "chapter": 39,
+      "verseCount": 30,
+      "manifest": "job/039.json",
+      "chapterUrl": "job/039/_chapter.mp3"
+    },
+    {
+      "chapter": 40,
+      "verseCount": 24,
+      "manifest": "job/040.json",
+      "chapterUrl": "job/040/_chapter.mp3"
+    },
+    {
+      "chapter": 41,
+      "verseCount": 34,
+      "manifest": "job/041.json",
+      "chapterUrl": "job/041/_chapter.mp3"
+    },
+    {
+      "chapter": 42,
+      "verseCount": 17,
+      "manifest": "job/042.json",
+      "chapterUrl": "job/042/_chapter.mp3"
+    }
+  ]
+}

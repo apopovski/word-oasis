@@ -1,0 +1,23 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 143,
+  "chapterUrl": "psalms/143/_chapter.mp3",
+  "verseCount": 12,
+  "verses": [
+    "psalms/143/001.mp3",
+    "psalms/143/002.mp3",
+    "psalms/143/003.mp3",
+    "psalms/143/004.mp3",
+    "psalms/143/005.mp3",
+    "psalms/143/006.mp3",
+    "psalms/143/007.mp3",
+    "psalms/143/008.mp3",
+    "psalms/143/009.mp3",
+    "psalms/143/010.mp3",
+    "psalms/143/011.mp3",
+    "psalms/143/012.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

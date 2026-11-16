@@ -1,0 +1,33 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 33,
+  "chapterUrl": "psalms/033/_chapter.mp3",
+  "verseCount": 22,
+  "verses": [
+    "psalms/033/001.mp3",
+    "psalms/033/002.mp3",
+    "psalms/033/003.mp3",
+    "psalms/033/004.mp3",
+    "psalms/033/005.mp3",
+    "psalms/033/006.mp3",
+    "psalms/033/007.mp3",
+    "psalms/033/008.mp3",
+    "psalms/033/009.mp3",
+    "psalms/033/010.mp3",
+    "psalms/033/011.mp3",
+    "psalms/033/012.mp3",
+    "psalms/033/013.mp3",
+    "psalms/033/014.mp3",
+    "psalms/033/015.mp3",
+    "psalms/033/016.mp3",
+    "psalms/033/017.mp3",
+    "psalms/033/018.mp3",
+    "psalms/033/019.mp3",
+    "psalms/033/020.mp3",
+    "psalms/033/021.mp3",
+    "psalms/033/022.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

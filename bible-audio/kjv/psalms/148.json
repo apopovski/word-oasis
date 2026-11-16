@@ -1,0 +1,25 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 148,
+  "chapterUrl": "psalms/148/_chapter.mp3",
+  "verseCount": 14,
+  "verses": [
+    "psalms/148/001.mp3",
+    "psalms/148/002.mp3",
+    "psalms/148/003.mp3",
+    "psalms/148/004.mp3",
+    "psalms/148/005.mp3",
+    "psalms/148/006.mp3",
+    "psalms/148/007.mp3",
+    "psalms/148/008.mp3",
+    "psalms/148/009.mp3",
+    "psalms/148/010.mp3",
+    "psalms/148/011.mp3",
+    "psalms/148/012.mp3",
+    "psalms/148/013.mp3",
+    "psalms/148/014.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

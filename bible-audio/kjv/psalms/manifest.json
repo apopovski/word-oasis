@@ -1,0 +1,910 @@
+{
+  "translation": "kjv",
+  "name": "Psalms",
+  "slug": "psalms",
+  "bookUrl": "psalms/_book.mp3",
+  "chapterCount": 150,
+  "verseCount": 2461,
+  "chaptersIndex": [
+    {
+      "chapter": 1,
+      "verseCount": 6,
+      "manifest": "psalms/001.json",
+      "chapterUrl": "psalms/001/_chapter.mp3"
+    },
+    {
+      "chapter": 2,
+      "verseCount": 12,
+      "manifest": "psalms/002.json",
+      "chapterUrl": "psalms/002/_chapter.mp3"
+    },
+    {
+      "chapter": 3,
+      "verseCount": 8,
+      "manifest": "psalms/003.json",
+      "chapterUrl": "psalms/003/_chapter.mp3"
+    },
+    {
+      "chapter": 4,
+      "verseCount": 8,
+      "manifest": "psalms/004.json",
+      "chapterUrl": "psalms/004/_chapter.mp3"
+    },
+    {
+      "chapter": 5,
+      "verseCount": 12,
+      "manifest": "psalms/005.json",
+      "chapterUrl": "psalms/005/_chapter.mp3"
+    },
+    {
+      "chapter": 6,
+      "verseCount": 10,
+      "manifest": "psalms/006.json",
+      "chapterUrl": "psalms/006/_chapter.mp3"
+    },
+    {
+      "chapter": 7,
+      "verseCount": 17,
+      "manifest": "psalms/007.json",
+      "chapterUrl": "psalms/007/_chapter.mp3"
+    },
+    {
+      "chapter": 8,
+      "verseCount": 9,
+      "manifest": "psalms/008.json",
+      "chapterUrl": "psalms/008/_chapter.mp3"
+    },
+    {
+      "chapter": 9,
+      "verseCount": 20,
+      "manifest": "psalms/009.json",
+      "chapterUrl": "psalms/009/_chapter.mp3"
+    },
+    {
+      "chapter": 10,
+      "verseCount": 18,
+      "manifest": "psalms/010.json",
+      "chapterUrl": "psalms/010/_chapter.mp3"
+    },
+    {
+      "chapter": 11,
+      "verseCount": 7,
+      "manifest": "psalms/011.json",
+      "chapterUrl": "psalms/011/_chapter.mp3"
+    },
+    {
+      "chapter": 12,
+      "verseCount": 8,
+      "manifest": "psalms/012.json",
+      "chapterUrl": "psalms/012/_chapter.mp3"
+    },
+    {
+      "chapter": 13,
+      "verseCount": 6,
+      "manifest": "psalms/013.json",
+      "chapterUrl": "psalms/013/_chapter.mp3"
+    },
+    {
+      "chapter": 14,
+      "verseCount": 7,
+      "manifest": "psalms/014.json",
+      "chapterUrl": "psalms/014/_chapter.mp3"
+    },
+    {
+      "chapter": 15,
+      "verseCount": 5,
+      "manifest": "psalms/015.json",
+      "chapterUrl": "psalms/015/_chapter.mp3"
+    },
+    {
+      "chapter": 16,
+      "verseCount": 11,
+      "manifest": "psalms/016.json",
+      "chapterUrl": "psalms/016/_chapter.mp3"
+    },
+    {
+      "chapter": 17,
+      "verseCount": 15,
+      "manifest": "psalms/017.json",
+      "chapterUrl": "psalms/017/_chapter.mp3"
+    },
+    {
+      "chapter": 18,
+      "verseCount": 50,
+      "manifest": "psalms/018.json",
+      "chapterUrl": "psalms/018/_chapter.mp3"
+    },
+    {
+      "chapter": 19,
+      "verseCount": 14,
+      "manifest": "psalms/019.json",
+      "chapterUrl": "psalms/019/_chapter.mp3"
+    },
+    {
+      "chapter": 20,
+      "verseCount": 9,
+      "manifest": "psalms/020.json",
+      "chapterUrl": "psalms/020/_chapter.mp3"
+    },
+    {
+      "chapter": 21,
+      "verseCount": 13,
+      "manifest": "psalms/021.json",
+      "chapterUrl": "psalms/021/_chapter.mp3"
+    },
+    {
+      "chapter": 22,
+      "verseCount": 31,
+      "manifest": "psalms/022.json",
+      "chapterUrl": "psalms/022/_chapter.mp3"
+    },
+    {
+      "chapter": 23,
+      "verseCount": 6,
+      "manifest": "psalms/023.json",
+      "chapterUrl": "psalms/023/_chapter.mp3"
+    },
+    {
+      "chapter": 24,
+      "verseCount": 10,
+      "manifest": "psalms/024.json",
+      "chapterUrl": "psalms/024/_chapter.mp3"
+    },
+    {
+      "chapter": 25,
+      "verseCount": 22,
+      "manifest": "psalms/025.json",
+      "chapterUrl": "psalms/025/_chapter.mp3"
+    },
+    {
+      "chapter": 26,
+      "verseCount": 12,
+      "manifest": "psalms/026.json",
+      "chapterUrl": "psalms/026/_chapter.mp3"
+    },
+    {
+      "chapter": 27,
+      "verseCount": 14,
+      "manifest": "psalms/027.json",
+      "chapterUrl": "psalms/027/_chapter.mp3"
+    },
+    {
+      "chapter": 28,
+      "verseCount": 9,
+      "manifest": "psalms/028.json",
+      "chapterUrl": "psalms/028/_chapter.mp3"
+    },
+    {
+      "chapter": 29,
+      "verseCount": 11,
+      "manifest": "psalms/029.json",
+      "chapterUrl": "psalms/029/_chapter.mp3"
+    },
+    {
+      "chapter": 30,
+      "verseCount": 12,
+      "manifest": "psalms/030.json",
+      "chapterUrl": "psalms/030/_chapter.mp3"
+    },
+    {
+      "chapter": 31,
+      "verseCount": 24,
+      "manifest": "psalms/031.json",
+      "chapterUrl": "psalms/031/_chapter.mp3"
+    },
+    {
+      "chapter": 32,
+      "verseCount": 11,
+      "manifest": "psalms/032.json",
+      "chapterUrl": "psalms/032/_chapter.mp3"
+    },
+    {
+      "chapter": 33,
+      "verseCount": 22,
+      "manifest": "psalms/033.json",
+      "chapterUrl": "psalms/033/_chapter.mp3"
+    },
+    {
+      "chapter": 34,
+      "verseCount": 22,
+      "manifest": "psalms/034.json",
+      "chapterUrl": "psalms/034/_chapter.mp3"
+    },
+    {
+      "chapter": 35,
+      "verseCount": 28,
+      "manifest": "psalms/035.json",
+      "chapterUrl": "psalms/035/_chapter.mp3"
+    },
+    {
+      "chapter": 36,
+      "verseCount": 12,
+      "manifest": "psalms/036.json",
+      "chapterUrl": "psalms/036/_chapter.mp3"
+    },
+    {
+      "chapter": 37,
+      "verseCount": 40,
+      "manifest": "psalms/037.json",
+      "chapterUrl": "psalms/037/_chapter.mp3"
+    },
+    {
+      "chapter": 38,
+      "verseCount": 22,
+      "manifest": "psalms/038.json",
+      "chapterUrl": "psalms/038/_chapter.mp3"
+    },
+    {
+      "chapter": 39,
+      "verseCount": 13,
+      "manifest": "psalms/039.json",
+      "chapterUrl": "psalms/039/_chapter.mp3"
+    },
+    {
+      "chapter": 40,
+      "verseCount": 17,
+      "manifest": "psalms/040.json",
+      "chapterUrl": "psalms/040/_chapter.mp3"
+    },
+    {
+      "chapter": 41,
+      "verseCount": 13,
+      "manifest": "psalms/041.json",
+      "chapterUrl": "psalms/041/_chapter.mp3"
+    },
+    {
+      "chapter": 42,
+      "verseCount": 11,
+      "manifest": "psalms/042.json",
+      "chapterUrl": "psalms/042/_chapter.mp3"
+    },
+    {
+      "chapter": 43,
+      "verseCount": 5,
+      "manifest": "psalms/043.json",
+      "chapterUrl": "psalms/043/_chapter.mp3"
+    },
+    {
+      "chapter": 44,
+      "verseCount": 26,
+      "manifest": "psalms/044.json",
+      "chapterUrl": "psalms/044/_chapter.mp3"
+    },
+    {
+      "chapter": 45,
+      "verseCount": 17,
+      "manifest": "psalms/045.json",
+      "chapterUrl": "psalms/045/_chapter.mp3"
+    },
+    {
+      "chapter": 46,
+      "verseCount": 11,
+      "manifest": "psalms/046.json",
+      "chapterUrl": "psalms/046/_chapter.mp3"
+    },
+    {
+      "chapter": 47,
+      "verseCount": 9,
+      "manifest": "psalms/047.json",
+      "chapterUrl": "psalms/047/_chapter.mp3"
+    },
+    {
+      "chapter": 48,
+      "verseCount": 14,
+      "manifest": "psalms/048.json",
+      "chapterUrl": "psalms/048/_chapter.mp3"
+    },
+    {
+      "chapter": 49,
+      "verseCount": 20,
+      "manifest": "psalms/049.json",
+      "chapterUrl": "psalms/049/_chapter.mp3"
+    },
+    {
+      "chapter": 50,
+      "verseCount": 23,
+      "manifest": "psalms/050.json",
+      "chapterUrl": "psalms/050/_chapter.mp3"
+    },
+    {
+      "chapter": 51,
+      "verseCount": 19,
+      "manifest": "psalms/051.json",
+      "chapterUrl": "psalms/051/_chapter.mp3"
+    },
+    {
+      "chapter": 52,
+      "verseCount": 9,
+      "manifest": "psalms/052.json",
+      "chapterUrl": "psalms/052/_chapter.mp3"
+    },
+    {
+      "chapter": 53,
+      "verseCount": 6,
+      "manifest": "psalms/053.json",
+      "chapterUrl": "psalms/053/_chapter.mp3"
+    },
+    {
+      "chapter": 54,
+      "verseCount": 7,
+      "manifest": "psalms/054.json",
+      "chapterUrl": "psalms/054/_chapter.mp3"
+    },
+    {
+      "chapter": 55,
+      "verseCount": 23,
+      "manifest": "psalms/055.json",
+      "chapterUrl": "psalms/055/_chapter.mp3"
+    },
+    {
+      "chapter": 56,
+      "verseCount": 13,
+      "manifest": "psalms/056.json",
+      "chapterUrl": "psalms/056/_chapter.mp3"
+    },
+    {
+      "chapter": 57,
+      "verseCount": 11,
+      "manifest": "psalms/057.json",
+      "chapterUrl": "psalms/057/_chapter.mp3"
+    },
+    {
+      "chapter": 58,
+      "verseCount": 11,
+      "manifest": "psalms/058.json",
+      "chapterUrl": "psalms/058/_chapter.mp3"
+    },
+    {
+      "chapter": 59,
+      "verseCount": 17,
+      "manifest": "psalms/059.json",
+      "chapterUrl": "psalms/059/_chapter.mp3"
+    },
+    {
+      "chapter": 60,
+      "verseCount": 12,
+      "manifest": "psalms/060.json",
+      "chapterUrl": "psalms/060/_chapter.mp3"
+    },
+    {
+      "chapter": 61,
+      "verseCount": 8,
+      "manifest": "psalms/061.json",
+      "chapterUrl": "psalms/061/_chapter.mp3"
+    },
+    {
+      "chapter": 62,
+      "verseCount": 12,
+      "manifest": "psalms/062.json",
+      "chapterUrl": "psalms/062/_chapter.mp3"
+    },
+    {
+      "chapter": 63,
+      "verseCount": 11,
+      "manifest": "psalms/063.json",
+      "chapterUrl": "psalms/063/_chapter.mp3"
+    },
+    {
+      "chapter": 64,
+      "verseCount": 10,
+      "manifest": "psalms/064.json",
+      "chapterUrl": "psalms/064/_chapter.mp3"
+    },
+    {
+      "chapter": 65,
+      "verseCount": 13,
+      "manifest": "psalms/065.json",
+      "chapterUrl": "psalms/065/_chapter.mp3"
+    },
+    {
+      "chapter": 66,
+      "verseCount": 20,
+      "manifest": "psalms/066.json",
+      "chapterUrl": "psalms/066/_chapter.mp3"
+    },
+    {
+      "chapter": 67,
+      "verseCount": 7,
+      "manifest": "psalms/067.json",
+      "chapterUrl": "psalms/067/_chapter.mp3"
+    },
+    {
+      "chapter": 68,
+      "verseCount": 35,
+      "manifest": "psalms/068.json",
+      "chapterUrl": "psalms/068/_chapter.mp3"
+    },
+    {
+      "chapter": 69,
+      "verseCount": 36,
+      "manifest": "psalms/069.json",
+      "chapterUrl": "psalms/069/_chapter.mp3"
+    },
+    {
+      "chapter": 70,
+      "verseCount": 5,
+      "manifest": "psalms/070.json",
+      "chapterUrl": "psalms/070/_chapter.mp3"
+    },
+    {
+      "chapter": 71,
+      "verseCount": 24,
+      "manifest": "psalms/071.json",
+      "chapterUrl": "psalms/071/_chapter.mp3"
+    },
+    {
+      "chapter": 72,
+      "verseCount": 20,
+      "manifest": "psalms/072.json",
+      "chapterUrl": "psalms/072/_chapter.mp3"
+    },
+    {
+      "chapter": 73,
+      "verseCount": 28,
+      "manifest": "psalms/073.json",
+      "chapterUrl": "psalms/073/_chapter.mp3"
+    },
+    {
+      "chapter": 74,
+      "verseCount": 23,
+      "manifest": "psalms/074.json",
+      "chapterUrl": "psalms/074/_chapter.mp3"
+    },
+    {
+      "chapter": 75,
+      "verseCount": 10,
+      "manifest": "psalms/075.json",
+      "chapterUrl": "psalms/075/_chapter.mp3"
+    },
+    {
+      "chapter": 76,
+      "verseCount": 12,
+      "manifest": "psalms/076.json",
+      "chapterUrl": "psalms/076/_chapter.mp3"
+    },
+    {
+      "chapter": 77,
+      "verseCount": 20,
+      "manifest": "psalms/077.json",
+      "chapterUrl": "psalms/077/_chapter.mp3"
+    },
+    {
+      "chapter": 78,
+      "verseCount": 72,
+      "manifest": "psalms/078.json",
+      "chapterUrl": "psalms/078/_chapter.mp3"
+    },
+    {
+      "chapter": 79,
+      "verseCount": 13,
+      "manifest": "psalms/079.json",
+      "chapterUrl": "psalms/079/_chapter.mp3"
+    },
+    {
+      "chapter": 80,
+      "verseCount": 19,
+      "manifest": "psalms/080.json",
+      "chapterUrl": "psalms/080/_chapter.mp3"
+    },
+    {
+      "chapter": 81,
+      "verseCount": 16,
+      "manifest": "psalms/081.json",
+      "chapterUrl": "psalms/081/_chapter.mp3"
+    },
+    {
+      "chapter": 82,
+      "verseCount": 8,
+      "manifest": "psalms/082.json",
+      "chapterUrl": "psalms/082/_chapter.mp3"
+    },
+    {
+      "chapter": 83,
+      "verseCount": 18,
+      "manifest": "psalms/083.json",
+      "chapterUrl": "psalms/083/_chapter.mp3"
+    },
+    {
+      "chapter": 84,
+      "verseCount": 12,
+      "manifest": "psalms/084.json",
+      "chapterUrl": "psalms/084/_chapter.mp3"
+    },
+    {
+      "chapter": 85,
+      "verseCount": 13,
+      "manifest": "psalms/085.json",
+      "chapterUrl": "psalms/085/_chapter.mp3"
+    },
+    {
+      "chapter": 86,
+      "verseCount": 17,
+      "manifest": "psalms/086.json",
+      "chapterUrl": "psalms/086/_chapter.mp3"
+    },
+    {
+      "chapter": 87,
+      "verseCount": 7,
+      "manifest": "psalms/087.json",
+      "chapterUrl": "psalms/087/_chapter.mp3"
+    },
+    {
+      "chapter": 88,
+      "verseCount": 18,
+      "manifest": "psalms/088.json",
+      "chapterUrl": "psalms/088/_chapter.mp3"
+    },
+    {
+      "chapter": 89,
+      "verseCount": 52,
+      "manifest": "psalms/089.json",
+      "chapterUrl": "psalms/089/_chapter.mp3"
+    },
+    {
+      "chapter": 90,
+      "verseCount": 17,
+      "manifest": "psalms/090.json",
+      "chapterUrl": "psalms/090/_chapter.mp3"
+    },
+    {
+      "chapter": 91,
+      "verseCount": 16,
+      "manifest": "psalms/091.json",
+      "chapterUrl": "psalms/091/_chapter.mp3"
+    },
+    {
+      "chapter": 92,
+      "verseCount": 15,
+      "manifest": "psalms/092.json",
+      "chapterUrl": "psalms/092/_chapter.mp3"
+    },
+    {
+      "chapter": 93,
+      "verseCount": 5,
+      "manifest": "psalms/093.json",
+      "chapterUrl": "psalms/093/_chapter.mp3"
+    },
+    {
+      "chapter": 94,
+      "verseCount": 23,
+      "manifest": "psalms/094.json",
+      "chapterUrl": "psalms/094/_chapter.mp3"
+    },
+    {
+      "chapter": 95,
+      "verseCount": 11,
+      "manifest": "psalms/095.json",
+      "chapterUrl": "psalms/095/_chapter.mp3"
+    },
+    {
+      "chapter": 96,
+      "verseCount": 13,
+      "manifest": "psalms/096.json",
+      "chapterUrl": "psalms/096/_chapter.mp3"
+    },
+    {
+      "chapter": 97,
+      "verseCount": 12,
+      "manifest": "psalms/097.json",
+      "chapterUrl": "psalms/097/_chapter.mp3"
+    },
+    {
+      "chapter": 98,
+      "verseCount": 9,
+      "manifest": "psalms/098.json",
+      "chapterUrl": "psalms/098/_chapter.mp3"
+    },
+    {
+      "chapter": 99,
+      "verseCount": 9,
+      "manifest": "psalms/099.json",
+      "chapterUrl": "psalms/099/_chapter.mp3"
+    },
+    {
+      "chapter": 100,
+      "verseCount": 5,
+      "manifest": "psalms/100.json",
+      "chapterUrl": "psalms/100/_chapter.mp3"
+    },
+    {
+      "chapter": 101,
+      "verseCount": 8,
+      "manifest": "psalms/101.json",
+      "chapterUrl": "psalms/101/_chapter.mp3"
+    },
+    {
+      "chapter": 102,
+      "verseCount": 28,
+      "manifest": "psalms/102.json",
+      "chapterUrl": "psalms/102/_chapter.mp3"
+    },
+    {
+      "chapter": 103,
+      "verseCount": 22,
+      "manifest": "psalms/103.json",
+      "chapterUrl": "psalms/103/_chapter.mp3"
+    },
+    {
+      "chapter": 104,
+      "verseCount": 35,
+      "manifest": "psalms/104.json",
+      "chapterUrl": "psalms/104/_chapter.mp3"
+    },
+    {
+      "chapter": 105,
+      "verseCount": 45,
+      "manifest": "psalms/105.json",
+      "chapterUrl": "psalms/105/_chapter.mp3"
+    },
+    {
+      "chapter": 106,
+      "verseCount": 48,
+      "manifest": "psalms/106.json",
+      "chapterUrl": "psalms/106/_chapter.mp3"
+    },
+    {
+      "chapter": 107,
+      "verseCount": 43,
+      "manifest": "psalms/107.json",
+      "chapterUrl": "psalms/107/_chapter.mp3"
+    },
+    {
+      "chapter": 108,
+      "verseCount": 13,
+      "manifest": "psalms/108.json",
+      "chapterUrl": "psalms/108/_chapter.mp3"
+    },
+    {
+      "chapter": 109,
+      "verseCount": 31,
+      "manifest": "psalms/109.json",
+      "chapterUrl": "psalms/109/_chapter.mp3"
+    },
+    {
+      "chapter": 110,
+      "verseCount": 7,
+      "manifest": "psalms/110.json",
+      "chapterUrl": "psalms/110/_chapter.mp3"
+    },
+    {
+      "chapter": 111,
+      "verseCount": 10,
+      "manifest": "psalms/111.json",
+      "chapterUrl": "psalms/111/_chapter.mp3"
+    },
+    {
+      "chapter": 112,
+      "verseCount": 10,
+      "manifest": "psalms/112.json",
+      "chapterUrl": "psalms/112/_chapter.mp3"
+    },
+    {
+      "chapter": 113,
+      "verseCount": 9,
+      "manifest": "psalms/113.json",
+      "chapterUrl": "psalms/113/_chapter.mp3"
+    },
+    {
+      "chapter": 114,
+      "verseCount": 8,
+      "manifest": "psalms/114.json",
+      "chapterUrl": "psalms/114/_chapter.mp3"
+    },
+    {
+      "chapter": 115,
+      "verseCount": 18,
+      "manifest": "psalms/115.json",
+      "chapterUrl": "psalms/115/_chapter.mp3"
+    },
+    {
+      "chapter": 116,
+      "verseCount": 19,
+      "manifest": "psalms/116.json",
+      "chapterUrl": "psalms/116/_chapter.mp3"
+    },
+    {
+      "chapter": 117,
+      "verseCount": 2,
+      "manifest": "psalms/117.json",
+      "chapterUrl": "psalms/117/_chapter.mp3"
+    },
+    {
+      "chapter": 118,
+      "verseCount": 29,
+      "manifest": "psalms/118.json",
+      "chapterUrl": "psalms/118/_chapter.mp3"
+    },
+    {
+      "chapter": 119,
+      "verseCount": 176,
+      "manifest": "psalms/119.json",
+      "chapterUrl": "psalms/119/_chapter.mp3"
+    },
+    {
+      "chapter": 120,
+      "verseCount": 7,
+      "manifest": "psalms/120.json",
+      "chapterUrl": "psalms/120/_chapter.mp3"
+    },
+    {
+      "chapter": 121,
+      "verseCount": 8,
+      "manifest": "psalms/121.json",
+      "chapterUrl": "psalms/121/_chapter.mp3"
+    },
+    {
+      "chapter": 122,
+      "verseCount": 9,
+      "manifest": "psalms/122.json",
+      "chapterUrl": "psalms/122/_chapter.mp3"
+    },
+    {
+      "chapter": 123,
+      "verseCount": 4,
+      "manifest": "psalms/123.json",
+      "chapterUrl": "psalms/123/_chapter.mp3"
+    },
+    {
+      "chapter": 124,
+      "verseCount": 8,
+      "manifest": "psalms/124.json",
+      "chapterUrl": "psalms/124/_chapter.mp3"
+    },
+    {
+      "chapter": 125,
+      "verseCount": 5,
+      "manifest": "psalms/125.json",
+      "chapterUrl": "psalms/125/_chapter.mp3"
+    },
+    {
+      "chapter": 126,
+      "verseCount": 6,
+      "manifest": "psalms/126.json",
+      "chapterUrl": "psalms/126/_chapter.mp3"
+    },
+    {
+      "chapter": 127,
+      "verseCount": 5,
+      "manifest": "psalms/127.json",
+      "chapterUrl": "psalms/127/_chapter.mp3"
+    },
+    {
+      "chapter": 128,
+      "verseCount": 6,
+      "manifest": "psalms/128.json",
+      "chapterUrl": "psalms/128/_chapter.mp3"
+    },
+    {
+      "chapter": 129,
+      "verseCount": 8,
+      "manifest": "psalms/129.json",
+      "chapterUrl": "psalms/129/_chapter.mp3"
+    },
+    {
+      "chapter": 130,
+      "verseCount": 8,
+      "manifest": "psalms/130.json",
+      "chapterUrl": "psalms/130/_chapter.mp3"
+    },
+    {
+      "chapter": 131,
+      "verseCount": 3,
+      "manifest": "psalms/131.json",
+      "chapterUrl": "psalms/131/_chapter.mp3"
+    },
+    {
+      "chapter": 132,
+      "verseCount": 18,
+      "manifest": "psalms/132.json",
+      "chapterUrl": "psalms/132/_chapter.mp3"
+    },
+    {
+      "chapter": 133,
+      "verseCount": 3,
+      "manifest": "psalms/133.json",
+      "chapterUrl": "psalms/133/_chapter.mp3"
+    },
+    {
+      "chapter": 134,
+      "verseCount": 3,
+      "manifest": "psalms/134.json",
+      "chapterUrl": "psalms/134/_chapter.mp3"
+    },
+    {
+      "chapter": 135,
+      "verseCount": 21,
+      "manifest": "psalms/135.json",
+      "chapterUrl": "psalms/135/_chapter.mp3"
+    },
+    {
+      "chapter": 136,
+      "verseCount": 26,
+      "manifest": "psalms/136.json",
+      "chapterUrl": "psalms/136/_chapter.mp3"
+    },
+    {
+      "chapter": 137,
+      "verseCount": 9,
+      "manifest": "psalms/137.json",
+      "chapterUrl": "psalms/137/_chapter.mp3"
+    },
+    {
+      "chapter": 138,
+      "verseCount": 8,
+      "manifest": "psalms/138.json",
+      "chapterUrl": "psalms/138/_chapter.mp3"
+    },
+    {
+      "chapter": 139,
+      "verseCount": 24,
+      "manifest": "psalms/139.json",
+      "chapterUrl": "psalms/139/_chapter.mp3"
+    },
+    {
+      "chapter": 140,
+      "verseCount": 13,
+      "manifest": "psalms/140.json",
+      "chapterUrl": "psalms/140/_chapter.mp3"
+    },
+    {
+      "chapter": 141,
+      "verseCount": 10,
+      "manifest": "psalms/141.json",
+      "chapterUrl": "psalms/141/_chapter.mp3"
+    },
+    {
+      "chapter": 142,
+      "verseCount": 7,
+      "manifest": "psalms/142.json",
+      "chapterUrl": "psalms/142/_chapter.mp3"
+    },
+    {
+      "chapter": 143,
+      "verseCount": 12,
+      "manifest": "psalms/143.json",
+      "chapterUrl": "psalms/143/_chapter.mp3"
+    },
+    {
+      "chapter": 144,
+      "verseCount": 15,
+      "manifest": "psalms/144.json",
+      "chapterUrl": "psalms/144/_chapter.mp3"
+    },
+    {
+      "chapter": 145,
+      "verseCount": 21,
+      "manifest": "psalms/145.json",
+      "chapterUrl": "psalms/145/_chapter.mp3"
+    },
+    {
+      "chapter": 146,
+      "verseCount": 10,
+      "manifest": "psalms/146.json",
+      "chapterUrl": "psalms/146/_chapter.mp3"
+    },
+    {
+      "chapter": 147,
+      "verseCount": 20,
+      "manifest": "psalms/147.json",
+      "chapterUrl": "psalms/147/_chapter.mp3"
+    },
+    {
+      "chapter": 148,
+      "verseCount": 14,
+      "manifest": "psalms/148.json",
+      "chapterUrl": "psalms/148/_chapter.mp3"
+    },
+    {
+      "chapter": 149,
+      "verseCount": 9,
+      "manifest": "psalms/149.json",
+      "chapterUrl": "psalms/149/_chapter.mp3"
+    },
+    {
+      "chapter": 150,
+      "verseCount": 6,
+      "manifest": "psalms/150.json",
+      "chapterUrl": "psalms/150/_chapter.mp3"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 137,
+  "chapterUrl": "psalms/137/_chapter.mp3",
+  "verseCount": 9,
+  "verses": [
+    "psalms/137/001.mp3",
+    "psalms/137/002.mp3",
+    "psalms/137/003.mp3",
+    "psalms/137/004.mp3",
+    "psalms/137/005.mp3",
+    "psalms/137/006.mp3",
+    "psalms/137/007.mp3",
+    "psalms/137/008.mp3",
+    "psalms/137/009.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}

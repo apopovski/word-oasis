@@ -1,0 +1,24 @@
+{
+  "translation": "kjv",
+  "book": "psalms",
+  "bookName": "Psalms",
+  "chapter": 21,
+  "chapterUrl": "psalms/021/_chapter.mp3",
+  "verseCount": 13,
+  "verses": [
+    "psalms/021/001.mp3",
+    "psalms/021/002.mp3",
+    "psalms/021/003.mp3",
+    "psalms/021/004.mp3",
+    "psalms/021/005.mp3",
+    "psalms/021/006.mp3",
+    "psalms/021/007.mp3",
+    "psalms/021/008.mp3",
+    "psalms/021/009.mp3",
+    "psalms/021/010.mp3",
+    "psalms/021/011.mp3",
+    "psalms/021/012.mp3",
+    "psalms/021/013.mp3"
+  ],
+  "bookUrl": "psalms/_book.mp3"
+}
