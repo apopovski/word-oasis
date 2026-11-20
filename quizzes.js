@@ -1249,6 +1249,240 @@
           explanation: "Anna, a prophetess who worshiped in the temple, gave thanks and spoke of Jesus to all who awaited redemption."
         }
       ]
+    },
+    {
+      id: "psalms-and-proverbs",
+      title: "Psalms and Proverbs",
+      description: "Discover wisdom, worship, and practical counsel from two beloved Bible books.",
+      icon: "book",
+      questions: [
+        {
+          question: "Who is traditionally associated with writing many of the Psalms?",
+          options: ["David", "Solomon", "Asaph", "Moses"],
+          answer: 0,
+          reference: "Psalm 3:1",
+          explanation: "Many psalm titles identify David as the author, though others also wrote psalms."
+        },
+        {
+          question: "What is the shortest chapter in the Bible?",
+          options: ["Psalm 117", "Psalm 119", "Proverbs 3", "John 3"],
+          answer: 0,
+          reference: "Psalm 117",
+          explanation: "Psalm 117 has only two verses and is the shortest chapter in Scripture."
+        },
+        {
+          question: "What is the longest chapter in the Bible?",
+          options: ["Psalm 23", "Psalm 119", "Proverbs 31", "Isaiah 53"],
+          answer: 1,
+          reference: "Psalm 119:1",
+          explanation: "Psalm 119, with 176 verses, is the longest chapter in the Bible."
+        },
+        {
+          question: "According to Psalm 23, who is the shepherd?",
+          options: ["David", "Moses", "The Lord", "An angel"],
+          answer: 2,
+          reference: "Psalm 23:1",
+          explanation: "Psalm 23 begins, \"The Lord is my shepherd,\" showing God's care and guidance."
+        },
+        {
+          question: "What does Proverbs 1:7 call the beginning of knowledge?",
+          options: ["Riches", "The fear of the Lord", "Education", "Power"],
+          answer: 1,
+          reference: "Proverbs 1:7",
+          explanation: "Proverbs teaches that reverent fear of the Lord is foundational to true knowledge."
+        },
+        {
+          question: "In Proverbs 3:5, believers are told to trust in the Lord with how much of their heart?",
+          options: ["Half", "Most", "All", "A willing portion"],
+          answer: 2,
+          reference: "Proverbs 3:5",
+          explanation: "The verse says to trust in the Lord \"with all your heart\" and not rely on your own understanding."
+        },
+        {
+          question: "Which \"virtuous woman\" passage appears in Proverbs?",
+          options: ["Proverbs 11", "Proverbs 22", "Proverbs 31", "Proverbs 2"],
+          answer: 2,
+          reference: "Proverbs 31:10-31",
+          explanation: "Proverbs 31 describes a noble or virtuous woman and her godly character."
+        },
+        {
+          question: "According to Psalm 119:105, God's word is compared to what?",
+          options: ["A sword and shield", "A lamp and a light", "A river and rain", "Bread and water"],
+          answer: 1,
+          reference: "Psalm 119:105",
+          explanation: "God's word is called \"a lamp to my feet and a light to my path.\""
+        },
+        {
+          question: "What does Psalm 150 call God's people to do?",
+          options: ["Build a temple", "Praise the Lord", "Travel to Egypt", "Observe a fast of forty days"],
+          answer: 1,
+          reference: "Psalm 150:1-6",
+          explanation: "Psalm 150 repeatedly commands everything that has breath to praise the Lord."
+        },
+        {
+          question: "What does Proverbs 15:1 say about a soft answer?",
+          options: ["It stirs up anger", "It is ignored", "It turns away wrath", "It gains riches"],
+          answer: 2,
+          reference: "Proverbs 15:1",
+          explanation: "Proverbs contrasts gentle speech with harsh words, saying a soft answer turns away wrath."
+        }
+      ]
+    },
+    {
+      id: "pauls-letters",
+      title: "Paul's Letters",
+      description: "Test your knowledge of the apostle Paul's epistles, themes, and ministry teaching.",
+      icon: "scroll",
+      questions: [
+        {
+          question: "Which letter includes the \"love chapter\" in chapter 13?",
+          options: ["Romans", "1 Corinthians", "Galatians", "Philippians"],
+          answer: 1,
+          reference: "1 Corinthians 13:1-13",
+          explanation: "Paul's first letter to the Corinthians contains the well-known chapter on love."
+        },
+        {
+          question: "In Romans 1:16, what is described as the power of God for salvation?",
+          options: ["The law of Moses", "The gospel", "Temple sacrifices", "Wisdom sayings"],
+          answer: 1,
+          reference: "Romans 1:16",
+          explanation: "Paul declares he is not ashamed of the gospel because it is God's power for salvation."
+        },
+        {
+          question: "Which Pauline letter emphasizes salvation by grace through faith in Ephesians 2:8-9?",
+          options: ["Ephesians", "2 Timothy", "Titus", "Philemon"],
+          answer: 0,
+          reference: "Ephesians 2:8-9",
+          explanation: "Ephesians teaches that salvation is by grace through faith, not by works."
+        },
+        {
+          question: "To which church did Paul write about the \"armor of God\"?",
+          options: ["Corinth", "Ephesus", "Thessalonica", "Rome"],
+          answer: 1,
+          reference: "Ephesians 6:10-18",
+          explanation: "Paul describes the whole armor of God in his letter to the Ephesians."
+        },
+        {
+          question: "Which letter tells believers to rejoice always and pray without ceasing?",
+          options: ["2 Corinthians", "1 Thessalonians", "Colossians", "2 Thessalonians"],
+          answer: 1,
+          reference: "1 Thessalonians 5:16-18",
+          explanation: "In 1 Thessalonians, Paul gives short, practical commands about joy, prayer, and gratitude."
+        },
+        {
+          question: "Which letter includes the \"fruit of the Spirit\" list?",
+          options: ["Galatians", "Romans", "Philippians", "1 Timothy"],
+          answer: 0,
+          reference: "Galatians 5:22-23",
+          explanation: "Paul lists the fruit of the Spirit in Galatians as evidence of life led by the Spirit."
+        },
+        {
+          question: "What short personal letter did Paul write concerning Onesimus?",
+          options: ["Titus", "Philemon", "2 Timothy", "Colossians"],
+          answer: 1,
+          reference: "Philemon 1:10-16",
+          explanation: "Paul wrote Philemon to appeal for Onesimus to be received as a beloved brother."
+        },
+        {
+          question: "Which letter says, \"I can do all things through Christ who strengthens me\"?",
+          options: ["Philippians", "Romans", "Ephesians", "Galatians"],
+          answer: 0,
+          reference: "Philippians 4:13",
+          explanation: "Paul wrote this statement of contentment and strength in his letter to the Philippians."
+        },
+        {
+          question: "In 2 Timothy 3:16, what does Paul say about all Scripture?",
+          options: ["It is optional for believers", "It is inspired by God", "It is only historical", "It is for priests only"],
+          answer: 1,
+          reference: "2 Timothy 3:16",
+          explanation: "Paul teaches that all Scripture is God-breathed and useful for teaching and correction."
+        },
+        {
+          question: "Which church-focused image appears in 1 Corinthians 12?",
+          options: ["A vineyard", "A city on a hill", "The body with many members", "A temple curtain"],
+          answer: 2,
+          reference: "1 Corinthians 12:12-27",
+          explanation: "Paul compares the church to one body with many members, each serving an essential role."
+        }
+      ]
+    },
+    {
+      id: "genesis-and-exodus",
+      title: "Genesis and Exodus",
+      description: "Trace foundational events from creation and the patriarchs to deliverance and covenant.",
+      icon: "history",
+      questions: [
+        {
+          question: "In how many days did God create the heavens and the earth before resting?",
+          options: ["Three", "Six", "Seven", "Forty"],
+          answer: 1,
+          reference: "Genesis 1:31; Genesis 2:2",
+          explanation: "Genesis records six days of creation and a seventh day of rest."
+        },
+        {
+          question: "Who built an ark at God's command to survive the flood?",
+          options: ["Abraham", "Noah", "Moses", "Isaac"],
+          answer: 1,
+          reference: "Genesis 6:13-22",
+          explanation: "God instructed Noah to build the ark for his family and the animals."
+        },
+        {
+          question: "Which son of Jacob was sold by his brothers and later rose to power in Egypt?",
+          options: ["Benjamin", "Reuben", "Judah", "Joseph"],
+          answer: 3,
+          reference: "Genesis 37:23-28; Genesis 41:39-41",
+          explanation: "Joseph was sold into slavery but later became a ruler in Egypt under Pharaoh."
+        },
+        {
+          question: "What sign did God place in the sky as a covenant after the flood?",
+          options: ["A star", "A cloud pillar", "A rainbow", "A burning bush"],
+          answer: 2,
+          reference: "Genesis 9:13",
+          explanation: "God set the rainbow as a sign of His covenant never again to flood all the earth."
+        },
+        {
+          question: "At what location did God call Moses from a burning bush?",
+          options: ["Mount Carmel", "Mount Horeb", "Mount Tabor", "Mount Zion"],
+          answer: 1,
+          reference: "Exodus 3:1-4",
+          explanation: "Moses encountered God at Horeb, the mountain of God, where the bush burned but was not consumed."
+        },
+        {
+          question: "What event in Exodus involved lamb's blood on the doorposts?",
+          options: ["The crossing of the Jordan", "The Passover", "The Day of Atonement", "The dedication of the temple"],
+          answer: 1,
+          reference: "Exodus 12:7, 13",
+          explanation: "During Passover, Israel marked their doorposts with lamb's blood and the destroyer passed over."
+        },
+        {
+          question: "What sea did God part for Israel to cross on dry ground?",
+          options: ["Dead Sea", "Sea of Galilee", "Red Sea", "Mediterranean Sea"],
+          answer: 2,
+          reference: "Exodus 14:21-22",
+          explanation: "God opened a path through the Red Sea so Israel could escape Pharaoh's army."
+        },
+        {
+          question: "On which mountain did God give the Ten Commandments?",
+          options: ["Mount Sinai", "Mount Nebo", "Mount Gerizim", "Mount of Olives"],
+          answer: 0,
+          reference: "Exodus 19:20; Exodus 20:1-17",
+          explanation: "God gave His covenant law to Israel at Mount Sinai."
+        },
+        {
+          question: "What food did God provide from heaven in the wilderness?",
+          options: ["Quail only", "Manna", "Figs", "Olives"],
+          answer: 1,
+          reference: "Exodus 16:14-15",
+          explanation: "Israel called the bread from heaven \"manna,\" and God provided it daily."
+        },
+        {
+          question: "Who served as Moses' brother and spokesman before Pharaoh?",
+          options: ["Aaron", "Joshua", "Caleb", "Hur"],
+          answer: 0,
+          reference: "Exodus 4:14-16",
+          explanation: "God appointed Aaron, Moses' brother, to speak to Pharaoh on Moses' behalf."
+        }
+      ]
     }
   ];
 
@@ -1291,7 +1525,13 @@
       { id: "holy-spirit-helper", title: "Who Is the Holy Spirit?" },
       { id: "church-body-of-christ", title: "Why Belong to a Church?" }
     ],
-    "women-of-the-bible": [{ id: "does-god-love-you", title: "Does God Really Love You?" }]
+    "women-of-the-bible": [{ id: "does-god-love-you", title: "Does God Really Love You?" }],
+    "psalms-and-proverbs": [{ id: "how-can-i-pray", title: "How Should I Pray?" }],
+    "pauls-letters": [
+      { id: "how-can-i-be-saved", title: "How Can I Be Saved?" },
+      { id: "what-does-it-mean-to-walk-in-the-spirit", title: "What Does It Mean to Walk in the Spirit?" }
+    ],
+    "genesis-and-exodus": [{ id: "great-controversy", title: "Where Did Evil Come From?" }]
   };
 
   const directory = document.querySelector("[data-quiz-directory]");

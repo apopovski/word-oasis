@@ -52,6 +52,8 @@ const APP_SHELL = [
   "/bible-study-referral.js",
   "/site-analytics.js",
   "/tracking-preferences.js",
+  "/daily-devotional.js",
+  "/daily-devotional.json",
   "/site.webmanifest?v=20261048",
   "/word-oasis.svg",
   "/SVG/wordoasis-mark.svg",
